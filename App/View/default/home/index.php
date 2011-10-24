@@ -40,7 +40,7 @@
 						</div>
 					</div>
 					<div class="github item">
-						<a href="http://github.com/dragoonis"><img src="<?php echo $baseUrl; ?>images/icons-github.png" alt="github"></a>
+						<a href="http://github.com/ppi"><img src="<?php echo $baseUrl; ?>images/icons-github.png" alt="github"></a>
 						<div class="item-content">
 							<h3><a href="http://github.com/ppi" target="_blank" title="github">github</a></h3>
 							<p>Clone one of our projects, create a <a href="http://help.github.com/forking" target="_blank" title="fork">fork</a>, submit a <a href="http://help.github.com/pull-requests" target="_blank" title="pull request">pull request</a>, that's how we do it in github-land. Whether you're looking to just grab the latest version of the code, <a href="https://github.com/dragoonis/PPI-Framework/watchers" target="_blank" title="">follow the github project</a> or have a snoop about, you can find it all <a href="https://github.com/dragoonis" target="_blank" title="github">here</a>.</p>
