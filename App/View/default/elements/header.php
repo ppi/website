@@ -12,7 +12,7 @@
 					<a href="<?= $baseUrl; ?>downloads" title="Downloads" class="<?= $request['controller'] == 'downloads' ? 'active' : ''; ?>">Downloads</a>
 				</div>
 				<div class="docs">
-					<a href="<?= $baseUrl; ?>docs" title="Documentation">Documentation</a>
+					<a href="http://docs.ppiframework.com" title="Documentation">Documentation</a>
 				</div>
 				<div class="community">
 					<?php if($request['controller'] == 'community'): ?>
