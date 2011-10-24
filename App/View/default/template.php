@@ -5,26 +5,26 @@ else:
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if IE 7 ]>	<html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>	<html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>	<html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <?php include($viewDir . 'elements/head.php'); ?>
 <body>
 <?php include($viewDir . 'elements/header.php'); ?>
 <div id="wrapper">
-    <section class="main-content-container">
-	    <!-- .main-content-contrainer-inner -->
-        <div class="main-content-container-inner">
-            <div class="header-separator"><div class="fl green-2"></div><div class="fl green-3"></div><div class="fl green-4"></div></div>
-	        <!-- .main-content -->
-            <div class="fl main-content">
+	<section class="main-content-container">
+		<!-- .main-content-contrainer-inner -->
+		<div class="main-content-container-inner">
+			<div class="header-separator"><div class="fl green-2"></div><div class="fl green-3"></div><div class="fl green-4"></div></div>
+			<!-- .main-content -->
+			<div class="fl main-content">
 			<?php include_once($viewDir . $actionFile); ?>
-            </div>
-	        <!-- /.main-content -->
-        </div>
-	    <!-- /.main-content-container-inner -->
-    </section>
+			</div>
+			<!-- /.main-content -->
+		</div>
+		<!-- /.main-content-container-inner -->
+	</section>
 </div> <!-- #wrapper -->
 
 
@@ -37,9 +37,9 @@ else:
   _gaq.push(['_trackPageview']);
 
   (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
 <!--[if lt IE 7 ]>
@@ -49,9 +49,9 @@ else:
 
 <script type="text/javascript">
   (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	po.src = 'https://apis.google.com/js/plusone.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
 </script>
 
