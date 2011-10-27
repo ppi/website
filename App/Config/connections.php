@@ -1,10 +1,10 @@
 <?php
 $connections = array();
 
-$connections['mysql'] = array(
+$connections['main'] = array(
 	'type'   => 'pdo_mysql',
 	'host'   => 'localhost',
-	'dbname' => 'bb_ppi',
+	'dbname' => 'ppiwebsite',
 	'user'   => 'root',
 	'pass'   => ''
 );

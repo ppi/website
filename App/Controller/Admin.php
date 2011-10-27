@@ -135,8 +135,9 @@ class Admin extends Application {
         switch($sMode) {
 
             case 'create':
+				$this->blogInsert();
             case 'edit':
-                $this->blogAddEdit($sMode);
+                $this->blogUpdate();
                 break;
 
             case 'delete':
@@ -152,103 +153,91 @@ class Admin extends Application {
 
     }
 
-    /**
-     * Show the list of blogs
-     *
-     */
-    function blogList() {
+	/**
+	  * Show the list of blogs
+	  *
+	  */
+	 protected function blogList() {
 
-		$oBlog = new App\Model\Blog();
+		 $oBlog = new \App\Model\Blog();
 
-		// Get the pages
-		$posts = $oBlog->getPosts();
+		 // Get the pages
+		 $posts = $oBlog->getPosts();
 
-		// Load the template.
-		$this->adminLoad('admin/blog_list', compact('posts'));
+		 // Load the template.
+		 $this->adminLoad('admin/blog_list', compact('posts'));
 
-    }
+	 }
 
-    /**
-     * AdminController::pageAddEdit()
-     * Add or Edit a page
-     * @return void
-     */
-    protected function blogAddEdit($p_sMode = 'create') {
+	protected function blogAddEdit($mode = 'create') {
 
-        $oBlog    = new App\Model\Blog();
-        $bEdit     = ($p_sMode === 'edit');
-        $oForm     = new PPI\Model\Form();
-    	$checkCode = false;
-    	$iPageID  = $this->get($p_sMode, 0);
+		$blog = array();
+		$blogID = 0;
+		 
+		if($this->is('post')) {
+			$blogPost = $this->post();
+			$mode === 'create' ? $this->blogInsert($blogPost) : $this->blogUpdate($blogPost);
+			return;
+		}
+		
+		if($mode === 'update') {
+			$blogModel = new \App\Model\Blog();
+			$blog = $blogModel->find($this->get('update', 0));
+			if(empty($blog)) {
+				throw new CoreException('Unable to find blog data for blog id: ' . $blogID);
+			}
+		}
+		 
+		 $this->adminLoad('admin/blog_addedit', compact('blog', 'blogID'));
+	}
 
-        $oForm->init('admin_blog_addedit');
+	 protected function blogUpdate() {
 
-        $oForm->setFormStructure($oBlog->getAddEditFormStructure($p_sMode));
-
-        if($oForm->isSubmitted() && $oForm->isValidated()) {
-
-            $aSubmitValues = $oForm->getSubmitValues();
-            // Edit mode to set the primary key so that it performs an update
-            if($bEdit && $iPageID > 0) {
-                $aSubmitValues[$oBlog->getPrimaryKey()] = $iPageID;
-            }
-
-        	// We're in add mode lets make sure this permalink doesn't already exist
-        	if(!$bEdit) {
-				if( count($oBlog->getRecord('permalink = ' . $oBlog->quote($aSubmitValues['permalink']))) > 0) {
-					$oForm->setElementError('permalink', 'That permalink already exists');
+		$oForm     = new \PPI\Model\Form();
+		$oBlog     = new \App\Model\Blog();
+		$blogID    = $this->get('update');
+		$blog      = $oBlog->find($blogID);
+		if(empty($blog)) {
+			throw new CoreException('Unable to find blog data for blog id: ' . $blogID);
+		}
+		 
+		if($this->is('post')) {
+		
+			$submitValues = $this->post();
+			$record = $oBlog->find($blogID);
+			if(!empty($record)) {
+			
+				// If we changed the permalink, make sure it doesn't exist elsewhere
+				if($submitValues['permalink'] != $record['permalink']) {
+				
+					$permalinkRecord = $oBlog->getPostByPermalink($blog['permalink']);
+				
+					// Lets see if this modified code exists elsewhere.
+					if(!empty($permalinkRecord)) {
+						$formError = 'The permalink is already in use.';
+					}
 				}
+				
+			}
+			
+			if($formError === '') {
+				// Put the record (insert/update)
+				$submitValues['user_id'] = $this->getUser()->id;
+				$oBlog->putRecord($submitValues);
+				$this->setFlash('Blog successfully updated');
+				$this->redirect('admin/blog/list');
+			}
+		}
+		
+		$this->adminLoad('admin/blog_addedit', compact('blog', 'blogID'));
+	 }
 
-        	// We're in edit mode, but we still need to see if they have changed the 'permalink'
-        	} else {
-
-        		// Grab the existing DB info
-        		if( count($aPage = $oBlog->getRecord('id = ' . $iPageID)) > 0) {
-
-        			// Compare The DB info against the submitted into.
-					// If they're different then we need to make sure this doesn't exist elsewhere.
-        			if($aPage['permalink'] != $aSubmitValues['permalink']) {
-        				// Lets see if this modified code exists elsewhere.
-        				if(count($oBlog->getRecord('permalink = ' . $oBlog->quote($aSubmitValues['permalink']))) > 0) {
-        					$oForm->setElementError('permalink', 'That code already exists');
-        				}
-        			}
-        		}
-        	}
-
-        	if($oForm->isValidated()) {
-
-            	// Put the record (insert/update)
-            	$aSubmitValues['user_id'] = $this->getAuthData(false)->id;
-            	$oBlog->putRecord($aSubmitValues);
-            	$this->setFlashMessage('Blog successfully ' . ($bEdit ? 'updated' : 'created') . '.');
-        	    $this->redirect('admin/blog/list');
-        	}
-        }
-
-        if($bEdit === true) {
-            if( ($iBlogID = $this->get('edit', 0)) < 1) {
-                throw new CoreException('Invalid Blog Post ID: ' . $iBlogID);
-            }
-            // Set the defaults here
-            $oForm->setDefaults($oBlog->find($iPageID));
-        }
-        $aViewVars     = array(
-            'bEdit'       => $bEdit,
-            'formBuilder' => $oForm->getRenderInformation(),  // FB Infos
-            'leftMenu'    => true
-        );
-        $this->adminLoad('admin/blog_addedit', $aViewVars);
-
-    }
-
-    function blogDelete($p_iBlogID) {
-        $oBlog = new App\Model\Blog();
-	$oBlog->delete($p_iBlogID);
-	$this->setFlashMessage('Post successfully deleted');
-	$this->redirect('admin/blog');
-    }
-
+	 protected function blogDelete($blogID) {
+		 $oBlog = new \App\Model\Blog();
+		 $oBlog->delete($blogID);
+		 $this->setFlashMessage('Post successfully deleted');
+		 $this->redirect('admin/blog');
+	 }
 
 
     /**

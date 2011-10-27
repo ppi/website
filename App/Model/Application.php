@@ -1,9 +1,7 @@
 <?php
-
-/* This Model is used so that the developer can create
- * their own DB API that will be shared across the application
- */
-class APP_Model_Application extends PPI_Model {
+namespace App\Model;
+use PPI\Core\CoreException;
+class Application extends \PPI\Model {
 
 	function __construct($p_iTableName = "", $p_iTableIndex = "", $p_sBdbInfo = "", $p_iRecordID = 0) {
 		parent::__construct($p_iTableName, $p_iTableIndex, $p_sBdbInfo, $p_iRecordID);

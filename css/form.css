@@ -1,0 +1,62 @@
+
+.form input[type="text"]:hover, .form textarea:hover,
+.form input[type="text"]:focus, .form textarea:focus,
+.form input[type="password"]:hover, .form input[type="password"]:focus {
+	border: 1px solid #ACBCC7;
+}
+
+.form input[type="password"]:hover, .form textarea:hover,
+.form input[type="password"]:focus, .form textarea:focus {
+	border: 1px solid #ACBCC7;
+}
+
+.form input[type="text"], .form textarea, .form input[type="password"] {
+	background: white;
+	border: 1px solid #DFE6EC;
+	color: #888;
+	font: 11px/1.7 Tahoma, Helvetica, Arial, sans-serif;
+	padding: 8px 10px;
+}
+
+.form label:hover {
+	cursor: pointer;
+}
+
+.form hr {
+	background: #ACBCC7;
+	color: #ACBCC7;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-bottom: 1px solid #F5F8FA;
+	height: 2px;
+}
+
+.form .error-field {
+	background-color: #f8dbdb;
+	border: 1px solid #e77776;
+}
+
+.form .error {
+	padding: 12px;
+	background-color: #ec5454;
+}
+
+
+.form dl {
+
+}
+
+.form dt {
+	float: left;
+	margin-bottom: 5px;
+	margin-right: 12px;
+	font-size: 0.9em;
+	text-align: right;
+}
+
+.form dd {
+	font-size: 0.9em;
+	font-weight: normal;
+	margin-bottom: 5px;
+}

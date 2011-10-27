@@ -1,5 +1,6 @@
 <?php
-class APP_Model_User extends PPI_Model_User  {
+namespace App\Model;
+class User extends \PPI\Model\User {
 	public $_registerFormStructure = array(
         'fields' => array(
                 'first_name'            => array('type' => 'text', 'label' => 'First name', 'size' => 30),
@@ -49,25 +50,19 @@ class APP_Model_User extends PPI_Model_User  {
 	function getLoginFormStructure() {
 		return $this->_loginFormStructure;
 	}
-
+	
 	/**
-	 * Get the languages by the users id
+	 * Get the users authentication object.
 	 *
-	 * @param integer $iUserID
-	 * @return array
+	 * @return \App\Auth\Sql
 	 */
-	function getUserLanguages($iUserID) {
-		$oUserLang 	= new UserLanguageModel();
-		$oLang 		= new LanguageModel();
-		$aUserLanguages = $oUserLang->getList('user_id = '. $this->quote($iUserID));
-		foreach($aUserLanguages as $key => $aUserLang) {
-			$aLang = $oLang->getList('id = '.$this->quote($aUserLang['lang_id']));
-			if(count($aLang) > 0) {
-				$aUserLang['name'] = $aLang[0]['name'];
-			}
-			$aUserLanguages[$key] = $aUserLang;
-		}
-		return $aUserLanguages;
+	function getAuth() {
+			$config = $this->getConfig();
+			return new \App\Auth\Sql(array(
+					'salt'          => $config->system->userAuthSalt,
+					'usernameField' => $config->system->usernameField,
+					'model'         => $this,
+			));
 	}
 
     function getAdminAddEditFormStructure($p_sMode = 'create') {
@@ -158,20 +153,6 @@ class APP_Model_User extends PPI_Model_User  {
      */
     function massageUserRoles(&$role) {
         $role = ucwords(str_replace('_', ' ', $role));
-    }
-
-    function putRecord(array $p_aData) {
-    	$iUserID = parent::putRecord($p_aData);
-    	$bEdit   = isset($p_aData[$this->getPrimaryKey()]);
-    	$iInsertUserID = $bEdit ? $p_aData[$this->getPrimaryKey()] : $iUserID;
-    		// Add an audit trail
-    		$oAudit = new APP_Model_Audit();
-
-    		// Make an insert into the audit log.
-//    		$oAudit->insert(array(
-////    			''
-//    		));
-//    	}
     }
 
 }
