@@ -24,7 +24,7 @@
 						</div>
 					</div>
 					<div class="documentation item">
-						<a href="<?= $baseUrl; ?>docs" title=""><img src="<?= $baseUrl; ?>images/icons-documentation.png" alt="documentation"></a>
+						<a href="http://docs.ppi.io" title=""><img src="<?= $baseUrl; ?>images/icons-documentation.png" alt="documentation"></a>
 						<div class="item-content">
 							<h3><a href="http://docs.ppi.io">documentation</a></h3>
 							<p>Tutorials are the best way to get started with PPI. It explains everything you need to know; How to wield its many features to develop web applications faster and more efficiently, even if you only know a little bit of PHP.</p>
