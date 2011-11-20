@@ -25,6 +25,7 @@
 	left: 20px;
 	background-color: #F9F9F0;
 	top: 20px;
+	z-index: 10;
 }
 #page-content .top .get-ppi-now .heading {
 	color: #B63A3A;
@@ -84,7 +85,6 @@
 #page-content .top {
 	background-color: white;
 	position: relative;
-	border: 1px solid #7b7b7b;
 	height: 254px;
 	width: 965px;
 	margin-top: 20px;
@@ -135,12 +135,9 @@
 #page-content .middle {
 	width: 965px;
 	background-color: #F9F9F0;
-	border-top: none;
 	position: relative;
 	height: 375px;
-	border-left: 1px solid #7b7b7b;
-	border-right: 1px solid #7b7b7b;
-	border-bottom: 1px solid #7b7b7b;
+	border: 1px solid #7b7b7b;
 }
 #page-content .bottom .fork {
 	position: absolute;
@@ -174,7 +171,7 @@
 }
 #page-content .bottom .list {
 	position: absolute;
-	list-style-type: none;;
+	list-style-type: none;
 	margin-left: 0;
 	left: 100px;
 	top: 60px;
