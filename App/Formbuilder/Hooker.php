@@ -1,12 +1,9 @@
 <?php
-
 // As we extend the shared Controller, we have access to things such as $this->_redirect.
-class APP_Formbuilder_Hooker extends APP_Controller_Application {
+namespace App\Formbuilder;
+class Hooker extends \App\Controller\Application {
+	
 	private $_formName;
-	function __construct() {
-		parent::__construct();
-	}
-
 
 	/**
 	 * Here you can modify the data as its being brought back from getSubmitValues.

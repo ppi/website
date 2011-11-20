@@ -3,34 +3,24 @@ if(isset($isAjax) && $isAjax == false):
 	include_once($viewDir . $actionFile);
 else:
 ?>
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>	<html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>	<html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>	<html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!DOCTYPE>
+<html lang="en">
 <?php include($viewDir . 'elements/head.php'); ?>
 <body>
-<?php include($viewDir . 'elements/header.php'); ?>
+
 <div id="wrapper">
-	<section class="main-content-container">
-		<!-- .main-content-contrainer-inner -->
-		<div class="main-content-container-inner">
-			<div class="header-separator"><div class="fl green-2"></div><div class="fl green-3"></div><div class="fl green-4"></div></div>
-			<!-- .main-content -->
-			<div class="fl main-content">
-			<?php include_once($viewDir . $actionFile); ?>
-			</div>
-			<!-- /.main-content -->
-		</div>
-		<!-- /.main-content-container-inner -->
-	</section>
-</div> <!-- #wrapper -->
+	
+	<?php include($viewDir . 'elements/header.php'); ?>
+	
+	<div id="page-content">
+		<?php include_once($viewDir . $actionFile); ?>
+	</div>
+	<?php include_once($viewDir . 'elements/footer.php'); ?>
+</div>
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.js"></script>
 <script>!window.jQuery && document.write(unescape('%3Cscript src="scripts/jquery-1.6.1.js"%3E%3C/script%3E'))</script>
-<!--<script type="text/javascript" src="--><?//= $baseUrl; ?><!--scripts/common.js"></script>-->
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-20964741-1']);

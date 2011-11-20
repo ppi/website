@@ -3,8 +3,8 @@ namespace App\Controller;
 class Home extends Application {
 
 	function index() {
-		$allNews = $this->getNews();
-		$this->load('home/index', compact('allNews'));
+		$this->addCSS('light/home');
+		$this->load('home/index');
 	}
 
 	public function getNews() {

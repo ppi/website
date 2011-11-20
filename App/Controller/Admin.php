@@ -23,45 +23,45 @@ class Admin extends Application {
 	 */
 	function index() {
 		 $this->adminLoad('admin/dashboard', array(
-            'leftMenu' => true,
-            'pageTitle' => 'Admin Dashboard'
-        ));
+			'leftMenu' => true,
+			'pageTitle' => 'Admin Dashboard'
+		));
 	}
 
 
-    /**
-     * Email template CRUD handler
-     *
-     */
-    function emailtemplate() {
-
-        $sMode = $this->get('emailtemplate');
-        switch($sMode) {
-            case 'create':
-            case 'edit':
-                $this->etAddEdit($sMode);
-                break;
-
-            case 'delete':
-                $this->etDelete();
-                break;
-
-            case 'view':
-                $this->etView();
-                break;
-
-            case 'list':
-            default:
-                $this->etList();
-                break;
-        }
-
-    }
-
-    /**
-     * Email log CRUD handler
-     *
-     */
+	/**
+	 * Email template CRUD handler
+	 *
+	 */
+	function emailtemplate() {
+	
+		$sMode = $this->get('emailtemplate');
+		switch($sMode) {
+			case 'create':
+			case 'edit':
+				$this->etAddEdit($sMode);
+				break;
+	
+			case 'delete':
+				$this->etDelete();
+				break;
+	
+			case 'view':
+				$this->etView();
+				break;
+	
+			case 'list':
+			default:
+				$this->etList();
+				break;
+		}
+	
+	}
+	
+	/**
+	 * Email log CRUD handler
+	 *
+	 */
 	function emaillog() {
 
 
@@ -84,80 +84,80 @@ class Admin extends Application {
 
 	}
 
-    /**
-     * AdminController::user()
-     * Main method that chooses the appropriate method to handle the page request
-     * @return void
-     */
-    function user() {
+	/**
+	 * AdminController::user()
+	 * Main method that chooses the appropriate method to handle the page request
+	 * @return void
+	 */
+	function user() {
+	
+		$sMode = $this->get('user');
+		switch($sMode) {
+	
+			case 'roles':
+				$this->roleHandler($this->get('roles', 'list'));
+				break;
+	
+			case 'updatepassword':
+				$this->userUpdatePassword();
+				break;
+	
+			case 'create':
+			case 'edit':
+				$this->userAddEdit($sMode);
+				break;
+	
+			case 'delete':
+				$this->userDelete();
+				break;
+	
+			case 'view':
+				$this->userView();
+				break;
+	
+			case 'list':
+			default:
+				$this->userList();
+				break;
+		}
+	
+	}
 
-        $sMode = $this->get('user');
-        switch($sMode) {
-
-        	case 'roles':
-        		$this->roleHandler($this->get('roles', 'list'));
-        		break;
-
-        	case 'updatepassword':
-        		$this->userUpdatePassword();
-        		break;
-
-            case 'create':
-            case 'edit':
-                $this->userAddEdit($sMode);
-                break;
-
-            case 'delete':
-                $this->userDelete();
-                break;
-
-            case 'view':
-                $this->userView();
-                break;
-
-            case 'list':
-            default:
-                $this->userList();
-                break;
-        }
-
-    }
-
-
-    /**
-     * Admin Page CRUD
-     * Main method that chooses the appropriate method to handle the page request
-     * @return void
-     */
-    function blog() {
-
-        $sMode = $this->get(__FUNCTION__, 'list');
-        switch($sMode) {
-
-            case 'create':
+	
+	/**
+	 * Admin Page CRUD
+	 * Main method that chooses the appropriate method to handle the page request
+	 * @return void
+	 */
+	function blog() {
+	
+		$sMode = $this->get(__FUNCTION__, 'list');
+		switch($sMode) {
+	
+			case 'create':
 				$this->blogInsert();
-            case 'edit':
-                $this->blogUpdate();
-                break;
-
-            case 'delete':
-                $this->blogDelete($this->get($sMode));
-                break;
-
-            case 'view':
-            case 'list':
-            default:
-                $this->blogList();
-                break;
-        }
-
-    }
+			case 'edit':
+				$this->blogUpdate();
+				break;
+	
+			case 'delete':
+				$this->blogDelete($this->get($sMode));
+				break;
+	
+			case 'view':
+			case 'list':
+			default:
+				$this->blogList();
+				break;
+		}
+	
+	}
 
 	/**
 	  * Show the list of blogs
 	  *
 	  */
-	 protected function blogList() {
+	protected function blogList() {
 
 		 $oBlog = new \App\Model\Blog();
 
@@ -167,7 +167,7 @@ class Admin extends Application {
 		 // Load the template.
 		 $this->adminLoad('admin/blog_list', compact('posts'));
 
-	 }
+	}
 
 	protected function blogAddEdit($mode = 'create') {
 

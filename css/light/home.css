@@ -1,0 +1,181 @@
+#page-content .top .intro .buttons {
+	position: absolute;
+	bottom: 12px;
+	left: 90px;
+}
+#page-content .top .intro .desc {
+	font-size: 1.2em;
+	line-height: 22px;
+}
+#page-content .top .intro .heading {
+	font-size: 2.0em;
+	color: #406C6C;
+}
+#page-content .top .intro {
+	border: 1px solid #7b7b7b;
+	width: 470px;
+	padding: 20px 12px 12px 40px;
+	height: 183px;
+	position: absolute;
+	left: 20px;
+	background-color: #F7F7F7;
+	top: 20px;
+}
+#page-content .top .get-ppi-now .heading {
+	color: #B63A3A;
+	font-size: 1.6em;
+	font-weight: bold;
+	margin: 20px auto 0 auto;
+	width: 150px;
+}
+#page-content .top .get-ppi-now .icon {
+	display: block;
+	height: 110px;
+	width: 100px;
+	position: absolute;
+	left: 12px;
+	top: 50px;
+}
+#page-content .top .get-ppi-now .list a.framework {
+	font-weight: bold;
+}
+#page-content .top .get-ppi-now .list a {
+	color: #4C7F7F;
+	font-size: 1.8em;
+}
+#page-content .top .get-ppi-now .list {
+	list-style-type: none;
+	left: 140px;
+	top: 60px;
+	position: absolute;
+}
+#page-content .top .get-ppi-now .other a:first-child {
+	font-weight: bold;
+}
+#page-content .top .get-ppi-now .other a {
+	color: #6A6A6A;
+}
+#page-content .top .get-ppi-now .other {
+	position: absolute;
+	bottom: 60px;
+	left: 150px;
+}
+#page-content .top .get-ppi-now-inner {
+	position: relative;
+	height: 194px;
+}
+#page-content .top .get-ppi-now {
+	width: 385px; 
+	height: 214px;
+	position: absolute;
+	right: 12px;
+	top: 20px;
+}
+#page-content .top {
+	background-color: white;
+	position: relative;
+	border: 1px solid #7b7b7b;
+	height: 254px;
+	width: 965px;
+	margin-top: 20px;
+}
+#page-content .middle .heading {
+	font-size: 1.4em;
+	font-weight: bold;
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	color: #4C7F7F;
+}
+#page-content .middle .list li .desc {
+	color: #565656;
+	font-weight: bold;
+	font-size: 0.9em;
+	width: 220px;
+}
+#page-content .middle .list li .icon {
+	float: left;
+	margin-left: -94px;
+	margin-top: -5px;
+}
+#page-content .middle .list li .title {
+	color: #565656;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-bottom: 12px;
+	display: block;
+}
+#page-content .middle .list li {
+	float: left;
+	width: 212px;
+	height: 130px;
+	margin-right: 5px;
+	margin-bottom: 12px;
+	padding: 12px 0px 12px 95px;
+}
+#page-content .middle .list {
+	list-style-type: none;
+	height: 330px;
+	margin-left: 0;
+	position: absolute;
+	left: 12px;
+	top: 50px;
+}
+#page-content .middle {
+	width: 965px;
+	background-color: #F9F9F0;
+	border-top: none;
+	position: relative;
+	height: 375px;
+	border-left: 1px solid #7b7b7b;
+	border-right: 1px solid #7b7b7b;
+	border-bottom: 1px solid #7b7b7b;
+}
+#page-content .bottom .fork {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 104px;
+	height: 104px;
+}
+#page-content .bottom .list li .icon {
+	display: block;
+	float: left;
+	margin-left: -70px;
+	margin-top: -5px;
+}
+#page-content .bottom .list li .title {
+	color: #FFFFFF;
+	font-size: 1.3em;
+}
+#page-content .bottom .list li .desc {
+	color: #FFFFFF;
+	line-height: 18px;
+	font-size: 0.9em;
+}
+#page-content .bottom .list li {
+	width: 167px;
+	float: left;
+	margin-right: 30px;
+	padding: 12px 0px 12px 70px;
+}
+#page-content .bottom .list {
+	position: absolute;
+	margin-left: 0;
+	left: 100px;
+	top: 60px;
+}
+#page-content .bottom .header {
+	font-size: 2.3em;
+	top: 20px;
+	color: #FFFFFF;
+	left: 110px;
+	position: absolute;
+}
+#page-content .bottom {
+	width: 967px;
+	height: 180px;
+	position: relative;
+	background-color: #406C6C;
+}
