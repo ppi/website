@@ -1,8 +1,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>PPI Framework</title>
-	<meta name="description" content="PPI, MVC, PHP, Framework, PHP Framework, PPI Documentation, PPI Sessions, PPI Cache, PPI Input, PPI Controllers, PPI Views, PPI Models, Models, Views, Input, Cache, Controllers, Sessions, AJAX">
-	<meta name="keywords" content="PPI, MVC, PHP, Framework, PHP Framework, PPI Documentation, PPI Sessions, PPI Cache, PPI Input, PPI Controllers, PPI Views, PPI Models, Models, Views, Input, Cache, Controllers, Sessions, AJAX">
+	<meta name="description" content=PPI is an Open Source Framework that streamlines development; both individual and enterprise. Providing you with the essentials you need, the things you want, and the freedom to work your own way. Leveraging PPI is fast, easy, and tuned for everything from Microblogging to E-Commerce and more.">
+	<meta name="keywords" content="PPI is an Open Source Framework that streamlines development; both individual and enterprise. Providing you with the essentials you need, the things you want, and the freedom to work your own way. Leveraging PPI is fast, easy, and tuned for everything from Microblogging to E-Commerce and more.">
 	<meta name="author" content="Paul Dragoonis">
 	<meta name="google-site-verification" content="a1rxyoMv_U3udQdSavKyu88mnxocX0gIwJE9DBylyqo" />
 
