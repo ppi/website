@@ -42,7 +42,6 @@
 			<a class="title" href="#" title="">Dev never was so easy</a>
 			<p class="desc">PPI helps you develop clean and reusable code. It follows the MVC pattern, ensuring a clear separation of logic and presentation.</p>
 		</li>
-		
 		<li>
 			<a class="icon" href="" title="" style="margin-top: -12px;"><img src="<?= $baseUrl; ?>images/light/performance.png" alt="Icon"></a>
 			<a class="title" href="#" title="">Performance, first!</a>
