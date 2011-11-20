@@ -2,7 +2,7 @@
 	
 	<div class="intro">
 		<p class="heading">PPI is awesome!</p>
-		<p class="desc">PPI is an <b>Open Source Framework</b> that streamlines development; both individual and enterprise. Providing you with the essentials you need, the things, you want, and the freedom to work your own way. Leveraging PPI is fast, easy, and tuned for everything from Microblogging to E-Commerce and more.</p>
+		<p class="desc">PPI is an <b>Open Source Framework</b> that streamlines development; both individual and enterprise. Providing you with the essentials you need, the things you want, and the freedom to work your own way. Leveraging PPI is fast, easy, and tuned for everything from Microblogging to E-Commerce and more.</p>
 		<div class="buttons">
 			<button class="btn success large">Get Started Now!</button>&nbsp;&nbsp;&nbsp;&nbsp;
 			<button class="btn large">Start Contributing</button>
