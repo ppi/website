@@ -67,3 +67,34 @@
 	margin: 0 auto;
 }
 
+footer a {
+	color: #E5E5DD;
+}
+footer .links a:hover {
+	color: white;
+}
+footer .links a {
+	margin-right: 12px;
+}
+footer .content {
+	margin-left: 12px;
+}
+footer .links {
+	float: left;
+}
+footer .desc {
+	color: #E5E5DD;
+	margin-top: 5px;
+}
+footer .logo {
+	float: left;
+}
+footer {
+	padding-left: 30px;
+	padding-top: 16px;
+	height: 60px;
+	margin: 0;
+	border-top: 1px solid #757575;
+	background-color: #626262;
+	
+}

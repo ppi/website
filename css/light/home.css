@@ -50,6 +50,9 @@
 	font-size: 1.8em;
 	font-family: "Museo_Slab_500";
 }
+#page-content .top .get-ppi-now .list li:first-child {
+	margin-bottom: 5px;
+}
 #page-content .top .get-ppi-now .list {
 	list-style-type: none;
 	left: 140px;
@@ -186,7 +189,7 @@
 }
 #page-content .bottom {
 	width: 967px;
-	height: 180px;
+	height: 180px; 
 	position: relative;
 	background-color: #406C6C;
 }

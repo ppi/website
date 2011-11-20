@@ -14,8 +14,9 @@ else:
 	
 	<div id="page-content">
 		<?php include_once($viewDir . $actionFile); ?>
+		<?php include_once($viewDir . 'elements/footer.php'); ?>
 	</div>
-	<?php include_once($viewDir . 'elements/footer.php'); ?>
+	
 </div>
 
 
