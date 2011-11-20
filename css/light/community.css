@@ -1,0 +1,138 @@
+/*.community-page .left-side {*/
+/*.community-page .left-side {*/
+/*.community-page .left-side {*/
+.community-page .left-side {
+	width: 250px;
+}
+.community-page .left-side nav li a.first {
+	background-color: #F9F9F9;
+	display: block;
+	height: 30px;
+	color: #8E8E8E;
+	font-size: 1.2em;
+	padding-left: 12px;
+	padding-top: 9px;
+}
+.community-page .left-side nav li:first-child {
+	border-top: 1px solid #C7C7C7
+}
+.community-page .left-side nav li.box .title {
+	font-size: 1.2em;
+}
+.community-page .left-side nav li.box .details a {
+	width: 64px;
+	color: white;
+	height: 18px;
+	text-align: center;
+	padding-top: 8px;
+	padding-left: 10px;
+	margin: 0;
+}
+.community-page .left-side nav li.box .details {
+	font-size: 1.1em;
+	height: 40px;
+	position: relative;
+}
+.community-page .left-side nav li.box input {
+	height: 30px;
+}
+.community-page .left-side nav li.box.newsletter-box .form #newsletter-email {
+	float: left;
+	width: 173px;
+	margin-left: 12px;
+}
+.community-page .left-side nav li.box.newsletter-box .submit {
+	margin-top: 12px;
+}
+.community-page .left-side nav li.box.newsletter-box .form p {
+	float: left;
+	margin-top: 7px;
+}
+.community-page .left-side nav li.box {
+	background-color: #F9F9F9;
+	padding-left: 12px;
+	height: 120px;
+	padding-top: 5px;
+}
+.community-page .left-side nav li {
+	border: 1px solid #C7C7C7;
+	border-top:  none;
+}
+.community-page .left-side nav ul {
+	list-style-type: none;
+	margin-left: 0;
+}
+.community-page .left-side {
+	float: left;
+	
+}
+.community-page {
+	margin-top: 20px;
+}
+
+.community-page .content-box .breadcrumb {
+	background: none;
+	border-radius: 0;
+	-webkit-border-radius: none;
+	-moz-border-radius: none;
+	border-top:  none;
+	border-right: none;
+	margin-left: -5px;
+}
+.community-page .content-box h1 {
+	color: #6F6F6F;
+	font-size: 2.0em;
+	font-family: "Museo_Slab_500"; 
+}
+.community-page .content-box .activity-stream .feeds .feed:first-child {
+	border-top: 1px solid #C7C7C7;
+}
+.community-page .content-box .activity-stream .feed .actions a {
+	text-align: center;
+	color: white;
+	font-size: 0.9em;
+	display: block;
+	padding-top: 6px;
+	width: 100px;
+	height: 22px;
+}
+.community-page .content-box .activity-stream .feed .actions {
+	top: 0;
+	right: 0;
+	border-radius: 0;
+	-webkit-border-radius: none;
+	-moz-border-radius: none;
+	position: absolute;
+	background-color: #406C6C;
+	margin-top: 0;
+	border: 0;
+	padding: 0;
+}
+.community-page .content-box .activity-stream .feeds .feed .content {
+	float: left;
+	width: 500px;
+}
+.community-page .content-box .activity-stream .feeds .feed .image {
+	float: left;
+	margin-right: 12px;
+	margin-left: 12px;
+}
+.community-page .content-box .activity-stream .feeds .feed {
+	border: 1px solid #C7C7C7;
+	border-top: none;
+	border-right: none;
+	height: 68px;
+	padding-top: 12px;
+	position: relative;
+}
+.community-page .content-box .activity-stream {
+	
+}
+.community-page .content-box {
+	float: left;
+	width: 697px;
+	border: 1px solid #C7C7C7;
+	padding-left: 18px;
+	border-left: none;
+	position: relative;
+}

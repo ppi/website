@@ -30,8 +30,8 @@ class Community extends Application {
 
 		krsort($activity);
 
-		$this->addCSS('community');
-		$this->addJS('community');
+		$this->addCSS('light/community');
+		$this->addJS('light/community');
 		$this->render('community/index', compact('activity', 'filtered'));
 
 	}
