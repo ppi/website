@@ -10,6 +10,7 @@
 }
 #page-content .top .intro .heading {
 	font-size: 2.0em;
+	font-family: "Museo_Slab_500";
 	color: #406C6C;
 }
 #page-content .top .intro {
@@ -30,6 +31,7 @@
 	font-size: 1.6em;
 	font-weight: bold;
 	margin: 20px auto 0 auto;
+	font-family: "Museo_Slab_500";
 	width: 150px;
 }
 #page-content .top .get-ppi-now .icon {
@@ -46,6 +48,7 @@
 #page-content .top .get-ppi-now .list a {
 	color: #4C7F7F;
 	font-size: 1.8em;
+	font-family: "Museo_Slab_500";
 }
 #page-content .top .get-ppi-now .list {
 	list-style-type: none;
@@ -87,8 +90,9 @@
 	font-size: 1.4em;
 	font-weight: bold;
 	position: absolute;
-	top: 12px;
-	left: 12px;
+	top: 20px;
+	font-family: "Museo_Slab_500";
+	left: 20px;
 	color: #4C7F7F;
 }
 #page-content .middle .list li .desc {
@@ -106,6 +110,7 @@
 	color: #565656;
 	font-weight: bold;
 	font-size: 1.2em;
+	font-family: "Museo_Slab_500";
 	margin-bottom: 12px;
 	display: block;
 }
@@ -151,6 +156,7 @@
 }
 #page-content .bottom .list li .title {
 	color: #FFFFFF;
+	font-family: "Museo_Slab_500";
 	font-size: 1.3em;
 }
 #page-content .bottom .list li .desc {
@@ -173,6 +179,7 @@
 #page-content .bottom .header {
 	font-size: 2.3em;
 	top: 20px;
+	font-family: "Museo_Slab_500";
 	color: #FFFFFF;
 	left: 110px;
 	position: absolute;

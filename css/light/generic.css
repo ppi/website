@@ -1,6 +1,11 @@
 
 .clear { clear: both; }
 
+@font-face {
+	font-family: 'Museo_Slab_500';
+	src: url('fonts/Museo_Slab_500.ttf') format('truetype');
+}
+
 #wrapper {
 	margin: 0 auto;
 }
