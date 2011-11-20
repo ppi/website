@@ -22,7 +22,7 @@
 	padding: 20px 12px 12px 20px;
 	height: 202px;
 	position: absolute;
-	left: 20px;
+	left: 35px;
 	background-color: #F9F9F0;
 	top: 20px;
 	z-index: 10;
@@ -95,7 +95,7 @@
 	position: absolute;
 	top: 20px;
 	font-family: "Museo_Slab_500";
-	left: 20px;
+	left: 35px;
 	color: #4C7F7F;
 }
 #page-content .middle .list li .desc {
