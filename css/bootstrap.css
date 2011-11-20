@@ -760,7 +760,7 @@ form .clearfix.success > label, form .clearfix.success .help-block, form .clearf
 }
 form .clearfix.success input, form .clearfix.success textarea {
   color: #468847;
-  border-color: #57a957;
+  border-color: #406C6C;
 }
 form .clearfix.success input:focus, form .clearfix.success textarea:focus {
   border-color: #458845;
@@ -1841,19 +1841,20 @@ footer {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 .btn.success, .alert-message.success {
-  background-color: #57a957;
+  background-color: #406C6C;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#62c462), to(#57a957));
-  background-image: -moz-linear-gradient(top, #62c462, #57a957);
-  background-image: -ms-linear-gradient(top, #62c462, #57a957);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #62c462), color-stop(100%, #57a957));
-  background-image: -webkit-linear-gradient(top, #62c462, #57a957);
-  background-image: -o-linear-gradient(top, #62c462, #57a957);
-  background-image: linear-gradient(top, #62c462, #57a957);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#57a957', GradientType=0);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#6BB2B2), to(#406C6C));
+  background-image: -moz-linear-gradient(top, #6BB2B2, #406C6C);
+  background-image: -ms-linear-gradient(top, #6BB2B2, #406C6C);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6BB2B2), color-stop(100%, #406C6C));
+  background-image: -webkit-linear-gradient(top, #6BB2B2, #406C6C);
+  background-image: -o-linear-gradient(top, #6BB2B2, #406C6C);
+  background-image: linear-gradient(top, #6BB2B2, #406C6C);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6BB2B2', endColorstr='#406C6C', GradientType=0);
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  border-color: #57a957 #57a957 #3d773d;
+  border-color: #406C6C #406C6C #4A7A7A;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-top: none;
 }
 .btn.info, .alert-message.info {
   background-color: #339bb9;
