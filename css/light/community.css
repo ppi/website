@@ -98,6 +98,12 @@
 	width: 100px;
 	height: 22px;
 }
+
+.community-page .content-box .activity-stream .feed .actions a:hover {
+    text-decoration: none;
+    background: #345958;
+}
+
 .community-page .content-box .activity-stream .feed .actions {
 	top: 0;
 	right: 0;
