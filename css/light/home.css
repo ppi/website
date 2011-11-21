@@ -1,3 +1,7 @@
+#wrapper {
+	background-color: #AFD0D0;
+}
+
 #page-content .top .intro .buttons {
 	position: absolute;
 	bottom: 20px;
@@ -83,7 +87,7 @@
 	top: 20px;
 }
 #page-content .top {
-	background-color: white;
+	background-color: #AFD0D0;
 	position: relative;
 	height: 254px;
 	width: 965px;
