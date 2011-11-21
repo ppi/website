@@ -1,5 +1,5 @@
 <?php
-$coreJSFiles = array('jquery1.4.2.min', 'modernizr-1.6.min.js');
+$coreJSFiles = array('modernizr-1.6.min', 'bootstrap/dropdown', 'bootstrap/scrollspy');
 if (!empty($coreJSFiles)) {
 	$javascriptFiles = array_unique(array_merge($coreJSFiles, $core['files']['js']));
 	?>

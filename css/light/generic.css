@@ -39,13 +39,7 @@ a, p {
 	margin: 0 auto;
 }
 
-#header {
-	width: 100%;
-	text-align: center;
-	background-color: #406C6C;
-	position: relative;
-	height: 40px;
-}
+
 #header #header-inner .logo {
 	display: block;
 	width: 50px;
@@ -54,6 +48,31 @@ a, p {
 	left: 0;
 	top: 0;
 }
+
+#header .container {
+	width: 1024px;
+}
+
+#header div.topbar-inner {
+	background-color: #406C6C;
+	background-image: none;
+}
+
+#header .topbar-inner h3 a {
+	padding: 8px 5px 6px 9px;
+	margin-left: 0px;
+	
+}
+
+#header .dropdown-menu {
+	background-color: #406C6C;
+}
+
+#header .dropdown-menu li a {
+	background-color: #406C6C;
+	color: white;
+}
+
 #header #header-inner {
 	width: 1024px;
 	height: 40px;
@@ -93,6 +112,7 @@ a, p {
 #header .search input {
 	height: 29px;
 	width: 250px;
+	margin-left: 80px;
 }
 #header .search {
 	position: absolute;
@@ -110,6 +130,7 @@ a, p {
 	top: 5px;
 }
 #page-content {
+	padding-top: 60px;
 	width: 1024px;
 	margin: 0 auto;
 }

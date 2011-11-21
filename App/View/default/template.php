@@ -20,8 +20,11 @@ else:
 </div>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="scripts/jquery-1.6.1.js"%3E%3C/script%3E'))</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script>
+!window.jQuery && document.write(unescape('%3Cscript src="scripts/jquery.1.7.0.min.js"%3E%3C/script%3E'))
+</script>
+<?php include_once($viewDir . 'framework/javascript.php'); ?>
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-20964741-1']);

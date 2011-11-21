@@ -12,8 +12,6 @@
 	<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-	<?php include_once($viewDir . 'framework/javascript.php'); ?>
 	<?php include_once($viewDir . 'framework/stylesheet.php'); ?>
 
 </head>
