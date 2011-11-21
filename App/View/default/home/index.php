@@ -61,22 +61,22 @@
 	</ul>
 </div>
 <div class="bottom">
-	<a class="fork" href="" title="Fork me on github"><img src="<?= $baseUrl; ?>images/light/fork-me.png" alt="Fork me on github"></a>
+	<a class="fork" href="http://www.github.com/ppi" title="Fork me on github"><img src="<?= $baseUrl; ?>images/light/fork-me.png" alt="Fork me on github"></a>
 	<p class="header">Community</p>
 	<ul class="list">
 		<li>
 			<a class="icon" href="" title="" style="margin-top: -12px;"><img src="<?= $baseUrl; ?>images/light/IRC.png" alt="Icon"></a>
-			<a class="title" href="#" title="">IRC</a>
+			<a class="title" href="<?= $baseUrl; ?>live-chat" title="IRC Live Chat">IRC</a>
 			<p class="desc">Chat with the ppi guys at #ppi on freenode.</p>
 		</li>
 		<li>
 			<a class="icon" href="" title="" style="margin-top: -12px;"><img src="<?= $baseUrl; ?>images/light/github.png" alt="Icon"></a>
-			<a class="title" href="#" title="">GitHub</a>
+			<a class="title" href="http://www.github.com/ppi" title="GitHub">GitHub</a>
 			<p class="desc">The easiest way to contribute to ppi is to fork us on GitHub</p>
 		</li>
 		<li>
 			<a class="icon" href="" title="" style="margin-top: -12px;"><img src="<?= $baseUrl; ?>images/light/stackoverflow.png" alt="Icon"></a>
-			<a class="title" href="#" title="">Stackoverflow</a>
+			<a class="title" href="http://stackoverflow.com/questions/tagged/ppi" title="StackOverflow">StackOverflow</a>
 			<p class="desc">Share your knowledge by answering user questions about ppi.</p>
 		</li>
 	</ul>
