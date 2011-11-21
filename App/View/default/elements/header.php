@@ -5,7 +5,7 @@
 			<ul>
 				<li><a href="" title="Get Started">Get Started</a></li>
 				<li><a href="" title="Documentation">Documentation</a></li>
-				<li><a href="" title="Community">Community</a></li>
+				<li><a href="<?= $baseUrl; ?>community" title="Community">Community</a></li>
 				<li><a href="<?= $baseUrl; ?>projects" title="Projects">Projects</a></li>
 			</ul>
 		</nav>

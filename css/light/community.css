@@ -7,6 +7,7 @@
 	height: 30px;
 	color: #8E8E8E;
 	font-size: 1.2em;
+	font-family: 'Museo_Slab_500';
 	padding-left: 12px;
 	padding-top: 9px;
 }
@@ -15,6 +16,7 @@
 }
 .community-page .left-side nav li.box .title {
 	font-size: 1.2em;
+	font-family: 'Museo_Slab_500';
 }
 .community-page .left-side nav li.box .details a {
 	width: 64px;
@@ -100,7 +102,7 @@
 	-webkit-border-radius: none;
 	-moz-border-radius: none;
 	position: absolute;
-	background-color: #406C6C;
+	background-color: #518787;
 	margin-top: 0;
 	border: 0;
 	padding: 0;

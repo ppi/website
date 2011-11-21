@@ -4,6 +4,7 @@
 .projects-page .left-side nav li a.first {
 	background-color: #F9F9F9;
 	display: block;
+	font-family: 'Museo_Slab_500';
 	height: 30px;
 	color: #8E8E8E;
 	font-size: 1.2em;
@@ -15,6 +16,7 @@
 }
 .projects-page .left-side nav li.box .title {
 	font-size: 1.2em;
+	font-family: 'Museo_Slab_500';
 }
 .projects-page .left-side nav li.box .details a {
 	width: 64px;
@@ -102,16 +104,14 @@
 	-webkit-border-radius: none;
 	-moz-border-radius: none;
 	position: absolute;
-	background-color: #406C6C;
+	background-color: #518787;
 	margin-top: 0;
 	border: 0;
 	padding: 0;
 }
 .projects-page .content-box .projects-list .project {
 	border: 1px solid #C7C7C7;
-	padding-top: 12px;
-	padding-left: 12px;
-	padding-bottom: 12px;
+	padding: 12px;
 	min-height: 75px;
 	position: relative;
 	margin-bottom: 12px;
