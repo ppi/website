@@ -19,7 +19,7 @@
 				<li><a href="" title="Skeleton App">- Skeleton App</a></li>
 			</ul>
 			<div class="other">
-				<a href="#" title="">Other Projects</a>&nbsp;|&nbsp;<a href="#" title="">Other releases</a>
+				<a href="#" title="">More Projects</a>
 			</div>
 		</div>
 	</div>

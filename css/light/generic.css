@@ -35,6 +35,12 @@
 	list-style-type: none;
 }
 
+#header nav li a:hover {
+	color: white;
+}
+#header nav li a {
+	color: #E1E1E1;
+}
 #header nav li {
 	float: left;
 	height: 29px;
@@ -45,11 +51,11 @@
 
 #header .search input {
 	height: 29px;
-	width: 240px;
+	width: 350px;
 }
 #header .search {
 	position: absolute;
-	left: 500px;
+	left: 370px;
 	top: 5px;
 }
 

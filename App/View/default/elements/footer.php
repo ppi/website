@@ -5,7 +5,7 @@
 		<a href="#" title="">Documentation</a>
 		<a href="#" title="">Videos</a>
 		<a href="#" title="">Community</a>
-		<a href="#" title="">Projects</a>
+		<a href="<?= $baseUrl; ?>projects" title="">Projects</a>
 		<a href="#" title="">Blog</a>
 		
 		<p class="desc">PPI is an Open Source Project under the MIT license.</p>

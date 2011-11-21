@@ -72,17 +72,12 @@
 	border-radius: 0;
 	-webkit-border-radius: none;
 	-moz-border-radius: none;
-	border-top:  none;
-	border-right: none;
 	margin-left: -5px;
 }
 .projects-page .content-box h1 {
 	color: #6F6F6F;
 	font-size: 2.0em;
 	font-family: "Museo_Slab_500"; 
-}
-.projects-page .content-box .projects-list .project:first-child {
-	border-top: 1px solid #C7C7C7;
 }
 .projects-page .content-box .projects-list .project .actions a {
 	text-align: center;
@@ -98,6 +93,7 @@
 	font-size: 1.3em;
 	color: #406C6C;
 	margin-bottom: 5px;
+	font-family: 'Museo_Slab_500';
 }
 .projects-page .content-box .projects-list .project .actions {
 	top: 0;
@@ -113,7 +109,6 @@
 }
 .projects-page .content-box .projects-list .project {
 	border: 1px solid #C7C7C7;
-	border-right: none;
 	padding-top: 12px;
 	padding-left: 12px;
 	padding-bottom: 12px;
@@ -127,7 +122,6 @@
 .projects-page .content-box {
 	float: left;
 	width: 697px;
-	border: 1px solid #C7C7C7;
 	padding-left: 18px;
 	border-left: none;
 	position: relative;
