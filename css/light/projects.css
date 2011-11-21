@@ -104,6 +104,7 @@
 .projects-page .content-box .projects-list .project .actions {
 	top: 0;
 	right: 0;
+	width: 400px;
 	border-radius: 0;
 	-webkit-border-radius: none;
 	-moz-border-radius: none;
