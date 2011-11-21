@@ -10,12 +10,12 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle">Documentation</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Getting Started</a></li>
-            <li><a href="#">Controllers</a></li>
-            <li><a href="#">DataSource</a></li>
-            <li><a href="#">Views</a></li>
-            <li><a href="#">Cache</a></li>
-            <li><a href="#">Sessions</a></li>
+            <li><a href="<?= $baseUrl; ?>docs/getting-started.html">Getting Started</a></li>
+            <li><a href="<?= $baseUrl; ?>docs/controller.html">Controllers</a></li>
+            <li><a href="<?= $baseUrl; ?>docs/datasource.html">DataSource</a></li>
+            <li><a href="<?= $baseUrl; ?>docs/views.html">Views</a></li>
+            <li><a href="<?= $baseUrl; ?>docs/cache.html">Cache</a></li>
+            <li><a href="<?= $baseUrl; ?>docs/session.html">Sessions</a></li>
             <!-- <li class="divider"></li> -->
           </ul>
         </li>

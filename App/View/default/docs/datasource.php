@@ -102,6 +102,7 @@ $connection = Core::getDataSource()->getConnection('my_conn_key');
 
 // or
 $connection = Core::getDataSourceConnection('my_conn_key');</code></pre>
+
 </article>
 
 	

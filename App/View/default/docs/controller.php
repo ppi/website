@@ -192,4 +192,5 @@ $routes['__default__'] = 'home/index';
 http://localhost/myapp/home
 http://localhost/myapp/home/index
 	</code></pre>
-</div>
+	
+</article>

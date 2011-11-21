@@ -29,3 +29,11 @@
 	line-height: 22px;
 	background-color: transparent;
 }
+
+.docs-page h1, .docs-page h2, .docs-page h3 {
+	font-family: "Museo_Slab_500";
+}
+
+.docs-page .anchor {
+	font-size: 0.5em;
+}
