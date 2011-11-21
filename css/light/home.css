@@ -106,8 +106,7 @@ top: 28px;
 }
 #page-content .middle .list li .icon {
 	float: left;
-	margin-left: -83px;
-	margin-top: -5px;
+	margin-left: -50px;
 }
 #page-content .middle .list li .title {
 	color: #565656;
@@ -118,11 +117,11 @@ top: 28px;
 }
 #page-content .middle .list li {
 	float: left;
-	width: 212px;
+	width: 245px;
 	height: 130px;
 	margin-right: 5px;
 	margin-bottom: 12px;
-	padding: 12px 0px 12px 95px;
+	padding: 12px 0px 12px 67px;
 }
 #page-content .middle .list {
 	list-style-type: none;
@@ -149,7 +148,7 @@ top: 28px;
 #page-content .bottom .list li .icon {
 	display: block;
 	float: left;
-	margin-left: -70px;
+	margin-left: -50px;
 	margin-top: -5px;
 }
 #page-content .bottom .list li .title {
