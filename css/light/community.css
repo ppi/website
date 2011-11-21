@@ -72,10 +72,9 @@
 .community-page .content-box .breadcrumb {
 	background: none;
 	border-radius: 0;
+	border: 1px solid #C7C7C7;
 	-webkit-border-radius: none;
 	-moz-border-radius: none;
-	border-top:  none;
-	border-right: none;
 	margin-left: -5px;
 }
 .community-page .content-box h1 {
@@ -119,7 +118,6 @@
 .community-page .content-box .activity-stream .feeds .feed {
 	border: 1px solid #C7C7C7;
 	border-top: none;
-	border-right: none;
 	height: 68px;
 	padding-top: 12px;
 	position: relative;
@@ -130,7 +128,6 @@
 .community-page .content-box {
 	float: left;
 	width: 697px;
-	border: 1px solid #C7C7C7;
 	padding-left: 18px;
 	border-left: none;
 	position: relative;

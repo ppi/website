@@ -1,6 +1,7 @@
 <div id="header">
 	
 	<div id="header-inner">
+		<a class="logo" href="<?= $baseUrl; ?>" title="PPI"><img src="<?= $baseUrl; ?>images/light/ppi-white.png" alt="Logo" height="38"></a>
 		<nav>
 			<ul>
 				<li><a href="" title="Get Started">Get Started</a></li>
