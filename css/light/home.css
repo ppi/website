@@ -46,24 +46,26 @@
 	font-family: "Museo_Slab_500";
 	padding-top: 15px;
 	position: absolute;
-	left: 0px;
-	top: 50px;
+left: 63px;
+top: 28px;
 }
-#page-content .top .get-ppi-now .list a.framework {
-	font-weight: bold;
-}
+
 #page-content .top .get-ppi-now .list a {
 	color: #4C7F7F;
-	font-size: 1.8em;
+	font-size: 1.3em;
 	font-family: "Museo_Slab_500";
 }
 #page-content .top .get-ppi-now .list li:first-child {
 	margin-bottom: 5px;
+	margin-right: 12px;
+}
+#page-content .top .get-ppi-now .list li {
+	float: left;
 }
 #page-content .top .get-ppi-now .list {
 	list-style-type: none;
-	left: 140px;
-	top: 60px;
+	left: 55px;
+	top: 120px;
 	position: absolute;
 }
 #page-content .top .get-ppi-now .other a:first-child {
@@ -74,8 +76,8 @@
 }
 #page-content .top .get-ppi-now .other {
 	position: absolute;
-	bottom: 60px;
-	left: 150px;
+	bottom: 32px;
+	left: 137px;
 }
 #page-content .top .get-ppi-now-inner {
 	position: relative;
