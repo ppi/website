@@ -6,6 +6,23 @@
 	src: url('fonts/Museo_Slab_500.ttf') format('truetype');
 }
 
+
+@font-face {
+	font-family: "Bebas Neue";
+	src: url('fonts/BebasNeue-webfont.eot?'); /* IE9 */
+ 	src: url('fonts/BebasNeue-webfont.eot?') format('eot'), /* IE6-8 */
+ 	     url('fonts/BebasNeue-webfont.woff') format('woff'), /* Modern browsers */
+	     url('fonts/BebasNeue-webfont.ttf') format('truetype'), /* Older Webkits */
+	     url('fonts/BebasNeue-webfont.svg#webfont') format('svg'); /* Opera */
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+a, p {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+}
+
 #wrapper {
 	margin: 0 auto;
 }

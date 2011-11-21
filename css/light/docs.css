@@ -1,0 +1,21 @@
+.docs-page p {
+	font-size: 1.1em;
+	font-weight: normal;
+}
+
+.docs-page {
+	margin-top: 30px;
+}
+
+.docs-page .toc {
+	float: right;
+	padding: 5px;
+	margin: 12px;
+	width: 200px;
+	background-color: #AFD0D0;
+	height: 200px;
+}
+
+.docs-page .toc .heading {
+	
+}
