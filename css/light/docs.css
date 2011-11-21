@@ -18,10 +18,14 @@
 	margin: 12px;
 	width: 200px;
 	background-color: #AFD0D0;
-	height: 200px;
 }
 
 .docs-page .toc .heading {
 	font-family: "Museo_Slab_500";
 	font-size: 1.3em;
+}
+
+.docs-page code {
+	line-height: 22px;
+	background-color: transparent;
 }
