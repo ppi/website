@@ -13,7 +13,6 @@
 	<div class="get-ppi-now">
 		<div class="get-ppi-now-inner">
 			<a class="icon" href="#"><img src="<?= $baseUrl; ?>images/light/ppi-download.png" height="70" alt="Download"></a>
-			<p class="heading">Get PPI Now!</p>
 			<ul class="list">
 				<li><a class="framework" href="" title="Framework">Framework</a></li>
 				<li><a href="" title="Skeleton App">Skeleton App</a></li>

@@ -30,14 +30,7 @@
 	top: 20px;
 	z-index: 10;
 }
-#page-content .top .get-ppi-now .heading {
-	color: #B63A3A;
-	font-size: 1.6em;
-	font-weight: bold;
-	margin: 20px auto 0 auto;
-	font-family: "Museo_Slab_500";
-	width: 150px;
-}
+
 #page-content .top .get-ppi-now .icon {
 	display: block;
 	height: 30px;
