@@ -11,7 +11,7 @@
 		</ul>
 	</aside>
 
-	<h1>DataSources<span class="subtitle"> - So you want datas?</span></h1>
+	<h1>DataSources<span class="subtitle"> - So you want data?</span></h1>
 	
 	<p>Lets recap why we're here. We're here because we have data and we want to give it a home. A home that you can organise your data well enough to get it back out effectively at a later date.</p>
 	<br>
