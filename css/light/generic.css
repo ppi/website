@@ -2,8 +2,20 @@
 .clear { clear: both; }
 
 @font-face {
-	font-family: 'Museo_Slab_500';
+	font-family: '';
 	src: url('fonts/Museo_Slab_500.ttf') format('truetype');
+}
+
+
+@font-face {
+	font-family: "Museo_Slab_500";
+	src: url('fonts/Museo_Slab_500-webfont.eot?'); /* IE9 */
+ 	src: url('fonts/Museo_Slab_500-webfont.eot?') format('eot'), /* IE6-8 */
+ 	     url('fonts/Museo_Slab_500-webfont.woff') format('woff'), /* Modern browsers */
+	     url('fonts/Museo_Slab_500-webfont.ttf') format('truetype'), /* Older Webkits */
+	     url('fonts/Museo_Slab_500-webfont.svg#webfont') format('svg'); /* Opera */
+	font-weight: normal;
+	font-style: normal;
 }
 
 
