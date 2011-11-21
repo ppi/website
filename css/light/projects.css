@@ -1,7 +1,7 @@
-.community-page .left-side {
+.projects-page .left-side {
 	width: 250px;
 }
-.community-page .left-side nav li a.first {
+.projects-page .left-side nav li a.first {
 	background-color: #F9F9F9;
 	display: block;
 	height: 30px;
@@ -10,13 +10,13 @@
 	padding-left: 12px;
 	padding-top: 9px;
 }
-.community-page .left-side nav li:first-child {
+.projects-page .left-side nav li:first-child {
 	border-top: 1px solid #C7C7C7
 }
-.community-page .left-side nav li.box .title {
+.projects-page .left-side nav li.box .title {
 	font-size: 1.2em;
 }
-.community-page .left-side nav li.box .details a {
+.projects-page .left-side nav li.box .details a {
 	width: 64px;
 	color: white;
 	height: 18px;
@@ -25,49 +25,49 @@
 	padding-left: 10px;
 	margin: 0;
 }
-.community-page .left-side nav li.box .details {
+.projects-page .left-side nav li.box .details {
 	font-size: 1.1em;
 	height: 40px;
 	position: relative;
 }
-.community-page .left-side nav li.box input {
+.projects-page .left-side nav li.box input {
 	height: 30px;
 }
-.community-page .left-side nav li.box.newsletter-box .form #newsletter-email {
+.projects-page .left-side nav li.box.newsletter-box .form #newsletter-email {
 	float: left;
 	width: 173px;
 	margin-left: 12px;
 }
-.community-page .left-side nav li.box.newsletter-box .submit {
+.projects-page .left-side nav li.box.newsletter-box .submit {
 	margin-top: 12px;
 }
-.community-page .left-side nav li.box.newsletter-box .form p {
+.projects-page .left-side nav li.box.newsletter-box .form p {
 	float: left;
 	margin-top: 7px;
 }
-.community-page .left-side nav li.box {
+.projects-page .left-side nav li.box {
 	background-color: #F9F9F9;
 	padding-left: 12px;
 	height: 120px;
 	padding-top: 5px;
 }
-.community-page .left-side nav li {
+.projects-page .left-side nav li {
 	border: 1px solid #C7C7C7;
 	border-top:  none;
 }
-.community-page .left-side nav ul {
+.projects-page .left-side nav ul {
 	list-style-type: none;
 	margin-left: 0;
 }
-.community-page .left-side {
+.projects-page .left-side {
 	float: left;
 	
 }
-.community-page {
+.projects-page {
 	margin-top: 20px;
 }
 
-.community-page .content-box .breadcrumb {
+.projects-page .content-box .breadcrumb {
 	background: none;
 	border-radius: 0;
 	-webkit-border-radius: none;
@@ -76,24 +76,30 @@
 	border-right: none;
 	margin-left: -5px;
 }
-.community-page .content-box h1 {
+.projects-page .content-box h1 {
 	color: #6F6F6F;
 	font-size: 2.0em;
 	font-family: "Museo_Slab_500"; 
 }
-.community-page .content-box .activity-stream .feeds .feed:first-child {
+.projects-page .content-box .projects-list .project:first-child {
 	border-top: 1px solid #C7C7C7;
 }
-.community-page .content-box .activity-stream .feed .actions a {
+.projects-page .content-box .projects-list .project .actions a {
 	text-align: center;
 	color: white;
 	font-size: 0.9em;
 	display: block;
+	float: left;
 	padding-top: 6px;
 	width: 100px;
 	height: 22px;
 }
-.community-page .content-box .activity-stream .feed .actions {
+.projects-page .content-box .projects-list .project .title {
+	font-size: 1.3em;
+	color: #406C6C;
+	margin-bottom: 5px;
+}
+.projects-page .content-box .projects-list .project .actions {
 	top: 0;
 	right: 0;
 	border-radius: 0;
@@ -105,27 +111,20 @@
 	border: 0;
 	padding: 0;
 }
-.community-page .content-box .activity-stream .feeds .feed .content {
-	float: left;
-	width: 500px;
-}
-.community-page .content-box .activity-stream .feeds .feed .image {
-	float: left;
-	margin-right: 12px;
-	margin-left: 12px;
-}
-.community-page .content-box .activity-stream .feeds .feed {
+.projects-page .content-box .projects-list .project {
 	border: 1px solid #C7C7C7;
-	border-top: none;
 	border-right: none;
-	height: 68px;
 	padding-top: 12px;
+	padding-left: 12px;
+	padding-bottom: 12px;
+	min-height: 75px;
 	position: relative;
+	margin-bottom: 12px;
 }
-.community-page .content-box .activity-stream {
+.projects-page .content-box .projects-list {
 	
 }
-.community-page .content-box {
+.projects-page .content-box {
 	float: left;
 	width: 697px;
 	border: 1px solid #C7C7C7;

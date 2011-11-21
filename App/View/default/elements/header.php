@@ -3,7 +3,6 @@
 	<div id="header-inner">
 		<nav>
 			<ul>
-				<li>What's PPI?</li>
 				<li>Get Started</li>
 				<li>Documentation</li>
 				<li>Community</li>
