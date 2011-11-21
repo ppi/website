@@ -7,9 +7,14 @@
 	margin-top: 30px;
 }
 
+.docs-page .toc ul {
+	list-style-type: none;
+	margin-left: 0px;
+}
+
 .docs-page .toc {
 	float: right;
-	padding: 5px;
+	padding: 12px;
 	margin: 12px;
 	width: 200px;
 	background-color: #AFD0D0;
@@ -17,5 +22,6 @@
 }
 
 .docs-page .toc .heading {
-	
+	font-family: "Museo_Slab_500";
+	font-size: 1.3em;
 }
