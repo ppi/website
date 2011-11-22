@@ -8,7 +8,7 @@ class Home extends Application {
 	}
 
 	public function getNews() {
-
+return array();
 		$cache = $this->getCache();
 		$cacheName = 'homepage-news';
 		if($cache->exists($cacheName)) {

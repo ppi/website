@@ -19,13 +19,13 @@
 }
 #page-content .top .intro {
 	border-bottom: none;
-	width: 470px;
+	width: 500px;
 	height: 200px;
 	margin-bottom: 0;
 	padding: 20px 12px 12px 20px;
 	height: 202px;
 	position: absolute;
-	left: 35px;
+	left: 0px;
 	background-color: #F9F9F0;
 	top: 20px;
 	z-index: 10;

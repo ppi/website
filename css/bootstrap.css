@@ -1451,6 +1451,8 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   right: 0;
   border: 0;
 }
+
+.topbar ul li a:hover,
 .topbar div > ul a.menu:hover,
 .nav a.menu:hover,
 .topbar div > ul li.open .menu,

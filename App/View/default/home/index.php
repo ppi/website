@@ -4,18 +4,18 @@
 		<p class="heading">PPI is awesome!</p>
 		<p class="desc">PPI is an <b>Open Source Framework</b> that streamlines development; both individual and enterprise. Providing you with the essentials you need, the things you want, and the freedom to work your own way. Leveraging PPI is fast, easy, and tuned for everything from Microblogging to E-Commerce and more.</p>
 		<div class="buttons">
-			<button class="btn success large">Get Started Now!</button>&nbsp;&nbsp;&nbsp;&nbsp;
-			<button class="btn large">Start Contributing</button>
+			<a class="btn success large" href="<?= $baseUrl; ?>projects">Get Started Now!</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a class="btn large">Start Contributing</a>
 		</div>
 		
 		
 	</div>
 	<div class="get-ppi-now">
 		<div class="get-ppi-now-inner">
-			<a class="icon" href="#"><img src="<?= $baseUrl; ?>images/light/ppi-download.png" height="70" alt="Download"></a>
+			<a class="icon" href="<?= $baseUrl; ?>projects"><img src="<?= $baseUrl; ?>images/light/ppi-download.png" height="70" alt="Download"></a>
 			<ul class="list">
-				<li><a class="framework" href="" title="Framework">Framework</a></li>
-				<li><a href="" title="Skeleton App">Skeleton App</a></li>
+				<li><a class="framework" href="<?= $baseUrl; ?>projects" title="Framework">Framework</a></li>
+				<li><a href="<?= $baseUrl; ?>projects" title="Skeleton App">Skeleton App</a></li>
 			</ul>
 			<div class="other">
 				<a href="#" title="">More Projects</a>
@@ -55,7 +55,7 @@
 		<li style="margin-right: 0;">
 			<a class="icon" href="" title=""><img src="<?= $baseUrl; ?>images/light/community2.png" alt="Icon"></a>
 			<a class="title" href="#" title="">Our community rocks</a>
-			<p class="desc">Many common components are included: translation tools, database access (including PDO, MongoDB, CouchDB), Cache tools, many templating systems and much more.</p>
+			<p class="desc">Our <a href="<?= $baseUrl; ?>community" title="Community">Community</a> page gives you access to what's going on in the PPI eco-system. Wether you're looking to contribute to, or be part of, PPI or not; check our <a href="<?= $baseUrl; ?>projects" title="">Projects</a> page for ways to interact in <strong>Discussions</strong></p>
 		</li>
 		
 	</ul>
@@ -65,18 +65,18 @@
 	<p class="header">Community</p>
 	<ul class="list">
 		<li>
-			<a class="icon" href="" title=""><img src="<?= $baseUrl; ?>images/light/chat.png" alt="Icon"></a>
-			<a class="title" href="<?= $baseUrl; ?>live-chat" title="IRC Live Chat">IRC</a>
-			<p class="desc">Chat with the ppi guys at #ppi on freenode.</p>
+			<a class="icon" target="_blank" href="<?= $baseUrl; ?>live-chat" title=""><img src="<?= $baseUrl; ?>images/light/chat.png" alt="Icon"></a>
+			<a class="title" target="_blank" href="<?= $baseUrl; ?>live-chat" title="IRC Live Chat">IRC</a>
+			<p class="desc">Chat with the ppi community at #ppi on freenode.</p>
 		</li>
 		<li>
-			<a class="icon" href="" title="" style="margin-top: -12px;"><img src="<?= $baseUrl; ?>images/light/github.png" alt="Icon"></a>
-			<a class="title" href="http://www.github.com/ppi" title="GitHub">GitHub</a>
+			<a class="icon" target="_blank" href="http://www.github.com/ppi" title="" style="margin-top: -12px;"><img src="<?= $baseUrl; ?>images/light/github.png" alt="Icon"></a>
+			<a class="title" target="_blank" href="http://www.github.com/ppi" title="GitHub">GitHub</a>
 			<p class="desc">The easiest way to contribute to ppi is to fork us on GitHub</p>
 		</li>
 		<li>
-			<a class="icon" href="" title="" style="margin-top: -12px;"><img src="<?= $baseUrl; ?>images/light/stackoverflow.png" alt="Icon"></a>
-			<a class="title" href="http://stackoverflow.com/questions/tagged/ppi" title="StackOverflow">StackOverflow</a>
+			<a class="icon" target="_blank" href="http://stackoverflow.com/questions/tagged/ppi" title="StackOverflow" style="margin-top: -12px;"><img src="<?= $baseUrl; ?>images/light/stackoverflow.png" alt="Icon"></a>
+			<a class="title" target="_blank" href="http://stackoverflow.com/questions/tagged/ppi" title="StackOverflow">StackOverflow</a>
 			<p class="desc">Share your knowledge by answering user questions about ppi.</p>
 		</li>
 	</ul>

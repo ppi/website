@@ -49,6 +49,13 @@ a, p {
 	top: 0;
 }
 
+#header .container .nav li a[title="Community"] {
+	width: 70px;
+}
+#header .container .nav li a[title="Projects"] {
+	width: 50px;	
+}
+
 #header .container {
 	width: 1024px;
 }
