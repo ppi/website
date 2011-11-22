@@ -33,7 +33,7 @@ $this->render('user/profile', array(
 // Passing data with compact
 $firstname = 'ppi;
 $lastname  = 'master';
-$this->render('user/profile', compact('firstname', 'lastname');</code></pre>
+$this->render('user/profile', compact('firstname', 'lastname'));</code></pre>
 	
 	<p>Now that we have chosen to render our user profile view. We must now learn the path of the view file that's being rendered here.</p>
 	<p>In our configuration file we have the following value.</p>
@@ -69,7 +69,7 @@ if($isAjax) {
 $settings = $this->getSettings();
 $userInfoAreaContent = $this->render('user/elements/info-area', compact('user', 'settings'), array('partial' => true));
 		
-$this->render('user/profile', compact('userInfoAreaContent');</code></pre>
+$this->render('user/profile', compact('userInfoAreaContent'));</code></pre>
 	
 	<h3>Loading a cached view</h3>
 	<p>When loading a cached view, you're typically looking to generate some HTML that won't change until your data next changes; such as a navigation menu that's generated from the database.</p>
