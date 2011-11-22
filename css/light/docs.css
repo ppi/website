@@ -17,7 +17,16 @@
 	padding: 12px;
 	margin: 12px;
 	width: 200px;
-	background-color: #AFD0D0;
+	background-color: #e1eded;
+	color: #244d4d;
+	border: 1px solid #244d4d;
+
+	border-radius: 0 0 35px 0;
+	-webkit-border-radius: 0 0 35px 0;
+	-moz-border-radius: 0 0 35px 0;
+	-moz-box-shadow: 3px 3px 5px #bebebe;
+	-webkit-box-shadow: 3px 3px 5px #bebebe;
+	box-shadow: 3px 3px 5px #bebebe;
 }
 
 .docs-page .toc .heading {

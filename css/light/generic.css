@@ -113,10 +113,16 @@ a, p {
 	height: 29px;
 	width: 250px;
 }
+
+#header .search input:hover, #header .search input:active {
+	background: #97bbbb;
+}
+
 #header .search {
 	position: absolute;
 	left: 548px;
 	top: 5px;
+	margin-left: 35px;
 }
 
 #header .social .item {
