@@ -1,5 +1,5 @@
 #wrapper {
-	background-color: #AFD0D0;
+	background-color: #d9d9d9;
 }
 
 #page-content .top .intro .buttons {
@@ -84,7 +84,7 @@ top: 28px;
 	top: 20px;
 }
 #page-content .top {
-	background-color: #AFD0D0;
+	/*background-color: #eaeaea;*/
 	position: relative;
 	height: 254px;
 	width: 965px;
@@ -187,4 +187,10 @@ top: 28px;
 	height: 180px; 
 	position: relative;
 	background-color: #406C6C;
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#406C6C', endColorstr='#305050'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#406C6C), to(#305050)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #406C6C,  #305050); /* for firefox 3.6+ */
+
+	border-bottom: 1px solid #202020;
 }
