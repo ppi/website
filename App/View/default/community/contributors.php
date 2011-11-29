@@ -2,11 +2,11 @@
 	<div class="left-side">
 		<nav>
 		<ul>
-			<li><a class="first" href="<?= $baseUrl; ?>contributors" target="_blank">Contributors</a></li>
+			<li><a class="first" href="<?= $baseUrl; ?>contributors">Contributors</a></li>
 			<li><a class="first" href="http://www.github.com/ppi" target="_blank">GitHub</a></li>
 			<li><a class="first" href="http://www.twitter.com/#!/ppi_framework" target="_blank">Twitter Feed</a></li>
 			<li><a class="first" href="<?= $baseUrl; ?>live-chat" target="_blank">Live Chat</a></li>
-			<li><a class="first" href="" target="_blank">How to get involved?</a></li>
+			<li><a class="first" href="">How to get involved?</a></li>
 			<li class="box">
 				<p class="title">PPI IRC Network</p>
 				<p class="details">
@@ -64,6 +64,7 @@
 					<p>Daniel Egeberg (degeberg@php.net)</p>
 					<p>Johnny Mast (mastjohnny@gmail.com)</p>
 					<p>Alexandre Gaigalas (alexandre@gaigalas.net) - <a href="http://twitter.com/#!/alganet" title="Twitter" target="_blank">Twitter</a> - <a target="_blank" title="Github" href="http://github.com/alganet">Github</a> - <a target="_blank" href="http://about.me/alganet" title="about.me">Website</a></p>
+					<p>Ben Tadiar (ben@handcraftedbyben.co.uk) - <a href="http://twitter.com/#!/benthedesigner" title="Twitter" target="_blank">Twitter</a> - <a target="_blank" title="Github" href="http://github.com/benthedesigner">Github</a></p>
 			</div>
 			
 			<div class="project">
