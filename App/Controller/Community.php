@@ -46,6 +46,11 @@ class Community extends Application {
 		$this->render('community/contributors');
 	}
 
+	function contribute() {
+		$this->addCSS('light/contribute');
+		$this->render('community/contribute');
+	}
+
 	protected function getTwits() {
 
 		$config = Core::getConfig();

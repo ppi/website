@@ -1,0 +1,101 @@
+.contribute-page .left-side {
+	width: 250px;
+}
+.contribute-page .left-side nav li a.first:hover {
+	background-color: #ebebeb;
+	text-decoration: none;
+}
+.contribute-page .left-side nav li a.first {
+	background-color: #F9F9F9;
+	display: block;
+	height: 30px;
+	color: #8E8E8E;
+	font-size: 1.2em;
+	font-family: 'Museo_Slab_500';
+	padding-left: 12px;
+	padding-top: 9px;
+}
+.contribute-page .left-side nav li:first-child {
+	border-top: 1px solid #C7C7C7
+}
+.contribute-page .left-side nav li.box .title {
+	font-size: 1.2em;
+	font-family: 'Museo_Slab_500';
+}
+.contribute-page .left-side nav li.box .details a {
+	width: 64px;
+	color: white;
+	height: 18px;
+	text-align: center;
+	padding-top: 8px;
+	padding-left: 10px;
+	margin: 0;
+}
+.contribute-page .left-side nav li.box .details {
+	font-size: 1.1em;
+	height: 40px;
+	position: relative;
+}
+.contribute-page .left-side nav li.box input {
+	height: 30px;
+}
+.contribute-page .left-side nav li.box.newsletter-box .form #newsletter-email {
+	float: left;
+	width: 173px;
+	margin-left: 12px;
+}
+.contribute-page .left-side nav li.box.newsletter-box .submit {
+	margin-top: 12px;
+}
+.contribute-page .left-side nav li.box.newsletter-box .form p {
+	float: left;
+	margin-top: 7px;
+}
+.contribute-page .left-side nav li.box {
+	background-color: #F9F9F9;
+	padding-left: 12px;
+	height: 120px;
+	padding-top: 5px;
+}
+.contribute-page .left-side nav li {
+	border: 1px solid #C7C7C7;
+	border-top:  none;
+}
+.contribute-page .left-side nav ul {
+	list-style-type: none;
+	margin-left: 0;
+}
+.contribute-page .left-side {
+	float: left;
+
+}
+.contribute-page {
+	margin-top: 20px;
+}
+
+.contribute-page .content-box .breadcrumb {
+	background: none;
+	border-radius: 0;
+	border: 1px solid #C7C7C7;
+	-webkit-border-radius: none;
+	-moz-border-radius: none;
+	margin-left: -5px;
+}
+.contribute-page .content-box h1 {
+	color: #6F6F6F;
+	font-size: 2.0em;
+	font-family: "Museo_Slab_500";
+}
+.contribute-page .content-box h2 {
+	color: #6F6F6F;
+	font-size: 1.5em;
+	font-family: "Museo_Slab_500";
+}
+
+.contribute-page .content-box {
+	float: left;
+	width: 697px;
+	padding-left: 18px;
+	border-left: none;
+	position: relative;
+}
