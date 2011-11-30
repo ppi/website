@@ -158,4 +158,4 @@ layout.renderer = smarty
 layout.renderer = twig</code></pre>
 
 	<p>Your app's API does not change at all, you still load your template using $this->render()</p>
-</div>
+</article>
