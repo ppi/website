@@ -114,6 +114,12 @@
 	border: 0;
 	padding: 0;
 }
+
+.projects-page .content-box .projects-list .project .actions a:hover {
+	background: #477575;
+	text-decoration: none;
+}
+
 .projects-page .content-box .projects-list .project {
 	border: 1px solid #C7C7C7;
 	padding: 12px;
