@@ -78,6 +78,7 @@
 	border-radius: 0;
 	-webkit-border-radius: none;
 	-moz-border-radius: none;
+	background-color: white;
 	margin-left: -5px;
 }
 .projects-page .content-box h1 {
@@ -126,6 +127,7 @@
 	min-height: 75px;
 	position: relative;
 	margin-bottom: 12px;
+	background-color: #FFF;
 }
 .projects-page .content-box .projects-list {
 	
