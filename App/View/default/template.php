@@ -3,7 +3,7 @@ if(isset($isAjax) && $isAjax == false):
 	include_once($viewDir . $actionFile);
 else:
 ?>
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="en">
 <?php include($viewDir . 'elements/head.php'); ?>
 <body>
