@@ -1,11 +1,11 @@
 		<nav>
 		<ul>
-			<li><a class="first" href="<?= $baseUrl; ?>contributors" target="_blank">Contributors</a></li>
+			<li><a class="first" href="<?= $baseUrl; ?>contributors">Contributors</a></li>
 			<li><a class="first" href="<?= $baseUrl; ?>live-chat" target="_blank">Live Chat</a></li>
 			<li><a class="first" href="http://www.github.com/ppi" target="_blank">GitHub</a></li>
 			<li><a class="first" href="http://www.twitter.com/#!/ppi_framework" target="_blank">Twitter Feed</a></li>
-			<li><a class="first" href="<?= $baseUrl; ?>docs/coding-standards.html" target="_blank">Coding Standards</a></li>
-			<li><a class="first" href="" target="_blank">How to get involved?</a></li>
+			<li><a class="first" href="<?= $baseUrl; ?>docs/coding-standards.html">Coding Standards</a></li>
+			<li><a class="first" href="<?= $baseUrl; ?>contribute">How to get involved?</a></li>
 			<li class="box">
 				<p class="title">PPI IRC Network</p>
 				<p class="details">
