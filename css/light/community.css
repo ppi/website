@@ -78,6 +78,7 @@
 	border-radius: 0;
 	border: 1px solid #C7C7C7;
 	-webkit-border-radius: none;
+	background-color: white;
 	-moz-border-radius: none;
 	margin-left: -5px;
 }
@@ -129,6 +130,7 @@
 	border: 1px solid #C7C7C7;
 	border-top: none;
 	height: 68px;
+	background-color: white;
 	padding-top: 12px;
 	position: relative;
 }
