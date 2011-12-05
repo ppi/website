@@ -26,7 +26,7 @@
 						<img class="fl <?= $item['source']; ?>" src="<?= $feedImage; ?>" alt="<?= $item['source']; ?>" />
 					</div>
 					<div class="content">
-						<div class="description"><a href="<?= $item['url']; ?>" title="<?= $feedDesc; ?>"><?= $feedDesc; ?></a></div>
+						<div class="description"><?= $feedDesc; ?></div>
 
 						<div class="actions">
 							<a href="<?= $item["url"];?>" target="_blank" class="readmore">Learn More...</a>
