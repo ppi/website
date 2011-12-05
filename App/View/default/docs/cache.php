@@ -13,7 +13,7 @@
 	</aside>
 
 	<h1>Using the Cache</h1>
-	<h1 id="anchor-introduction">Introduction</h1>
+	<h5 id="anchor-introduction">Introduction</h5>
 	<p>PPI\Cache lets you abstract the cache driver from your PPI application's configuration file. The default driver if you don't specify one is 'disk' aka PPI\Cache\Disk.</p>
 	<br>
 	<p>This is useful so that in future if you are in a different environment and wish to change driver from disk to memcached or to redis or to APC, then you can easily do that by setting either of the following in your configuration file.</p>
@@ -24,7 +24,7 @@ cache.hander = memcached</code></pre>
 
 	<p>Memcache and memcached have been aliased to one another, so if you type memcache, and it's not available but memcached is available it will use that, and vice versa.</p>
 
-	<h1 id="anchor-accessing-the-cache">Accessing The Cache</h1>
+	<h5 id="anchor-accessing-the-cache">Accessing The Cache</h5>
 	<p>To access the cache from anywhere in your PPI application, you can easily do:</p>
 	<pre><code class="php">
 $cache = \PPI\Core::getCache();
@@ -47,22 +47,22 @@ $cache = Core::getCache()('memcached');
 	<pre><code class="php">\PPI\Core::getCache()->set('foo', $bar);</code></pre>
 
 
-	<h1 id="anchor-setting-cache-data">Setting cache data</h1>
+	<h5 id="anchor-setting-cache-data">Setting cache data</h5>
 	<pre><code class="php">
 \PPI\Core::getCache()->set('foo', $bar, $ttl);
 	</code></pre>
 
-	<h1 id="anchor-getting-cache-data">Getting cache data</h1>
+	<h5 id="anchor-getting-cache-data">Getting cache data</h5>
 	<pre><code class="php">
 $bar = \PPI\Core::getCache()->get('foo');
 	</code></pre>
 
-	<h1 id="anchor-checking-if-data-exists">Checking if data exists</h1>
+	<h5 id="anchor-checking-if-data-exists">Checking if data exists</h5>
 	<pre><code class="php">
 $bar = \PPI\Core::getCache()->exists('foo');
 	</code></pre>
 
-	<h1 id="anchor-removing-data">Removing data</h1>
+	<h5 id="anchor-removing-data">Removing data</h5>
 	<pre><code class="php">
 $bar = \PPI\Core::getCache()->remove('foo');
 	</code></pre>
