@@ -18,7 +18,7 @@
 				<li><a href="<?= $baseUrl; ?>projects" title="Skeleton App">Skeleton App</a></li>
 			</ul>
 			<div class="other">
-				<a href="#" title="">More Projects</a>
+				<a href="<?= $baseUrl; ?>projects" title="">More Projects</a>
 			</div>
 		</div>
 	</div>
