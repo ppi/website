@@ -25,7 +25,7 @@
 	<pre><code class="php">&lt;?php
 // File: App/Controller/Home.php
 namespace App\Controller;
-class \App\Controller\Home extends \App\Contrlller\Application {
+class Home extends Application {
 
 	function index() {
 		echo 'Hello world';
@@ -44,7 +44,7 @@ http://hostname/controller/method
 	<pre><code class="php">&lt;?php
 // File: App/Controller/User.php
 namespace App\Controller;
-class \App\Controller\User extends \App\Contrlller\Application {
+class User extends Application {
 
 	function index() {
 		echo 'Hello Index';
@@ -64,15 +64,11 @@ http://localhost/myapp/user/index
 	</code></pre>
 
 	<p>To get the output of "Hello Profile" your URL would be:</p>
-	<pre><code>
-http://localhost/myapp/user/profile
-	</code></pre>
+	<pre><code>http://localhost/myapp/user/profile</code></pre>
 
 	<h5 id="anchor-controllers-with-arguments">Controllers with arguments</h5>
 	<p>To pass arguments aka "parameters" you can send the via the URI. Here is an example:</p>
-	<pre><code>
-http://localhost/myapp/user/profile/23
-	</code></pre>
+	<pre><code>http://localhost/myapp/user/profile/23</code></pre>
 
 	<p>To obtain the ID from the URI we can use the get() method.</p>
 	<pre><code class="php">&lt;?php
@@ -90,7 +86,7 @@ class \App\Controller\User extends \App\Contrlller\Application {
 	<h5 id="anchor-loading-a-view">Loading a view</h5>
 	<p>We use the load() method to load up a view file, for the homepage, from your application's view folder.</p>
 	<pre><code class="php">namespace App\Controller;
-class \App\Controller\Home extends \App\Contrlller\Application {
+class Home extends Application {
 
 	// Url: http://localhost/myapp/
 	function index() {
@@ -105,7 +101,7 @@ class \App\Controller\Home extends \App\Contrlller\Application {
 
 	<pre><code class="php">&lt;?php
 namespace App\Controller;
-class \App\Controller\User extends \App\Contrlller\Application {
+class User extends Application {
 
 	// Url: http://localhost/myapp/user/ajax_followers/userid/13
 	function ajax_followers() {
@@ -122,15 +118,15 @@ class \App\Controller\User extends \App\Contrlller\Application {
 	<p>You can submit forms to controller methods and obtain the POST information using the post() method. Here we display a create user page and also handle the form submit in the create() method.</p>
 	<pre><code class="php">&lt;?php
 namespace App\Controller;
-class \App\Controller\User extends \App\Contrlller\Application {
+class User extends Application {
 
 
 	// Url: http://localhost/myapp/user/create
 	function create() {
 
 		// Has the form been submitted ?
-		if($this->isPost()) {
-			$userModel = new APP_Model_User();
+		if($this->is('post')) {
+			$userModel = new \App\Model\User();
 			$userInfo  = $this->post();
 			$userModel->insert($userInfo);
 			$this->load('user/createsuccess');
@@ -148,12 +144,12 @@ class \App\Controller\User extends \App\Contrlller\Application {
 
 	<pre><code class="php">&lt;?php
 namespace App\Controller;
-class \App\Controller\User extends \App\Contrlller\Application {
+class User extends Application {
 
 	// Url: http://localhost/myapp/user/profile/23
 	function profile() {
 		$userID    = $this->get('profile', 0);
-		$userModel = new APP_Model_User();
+		$userModel = new \App\Model\User();
 		$user      = $userModel->find($userID);
 		$this->load('user/profile', compact('user'));
 	}
@@ -163,7 +159,7 @@ class \App\Controller\User extends \App\Contrlller\Application {
 
 <pre><code class="php">&lt;?php
 namespace App\Controller;
-class \App\Controller\User extends \App\Contrlller\Application {
+class User extends Application {
 
 	// Url: http://localhost/myapp/user/profile/23/usecompact/yes
 	function profile() {
