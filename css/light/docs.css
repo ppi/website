@@ -63,10 +63,10 @@
 	border-bottom: 1px solid #000;
 }
 
-code {
+#page-content code {
 	background-color: none;
 }
 
-pre, code {
+#page-content pre, #page-content code {
 	line-height: 15px;
 }
