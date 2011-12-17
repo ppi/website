@@ -57,9 +57,16 @@
 
 .docs-page {
 	width: 933px;
-
 	padding: 15px;
 	border: 1px solid #9f9f9f;
 	background: #f8f8f8;
 	border-bottom: 1px solid #000;
+}
+
+code {
+	background-color: none;
+}
+
+pre, code {
+	line-height: 15px;
 }
