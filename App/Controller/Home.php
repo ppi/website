@@ -4,7 +4,7 @@ class Home extends Application {
 
 	function index() {
 		$this->addCSS('light/home');
-		$this->load('home/index');
+		$this->render('home/index');
 	}
 
 	public function getNews() {
