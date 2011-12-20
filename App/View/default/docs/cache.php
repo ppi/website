@@ -17,10 +17,12 @@
 	<p>PPI\Cache lets you abstract the cache driver from your PPI application's configuration file. The default driver if you don't specify one is 'disk' aka PPI\Cache\Disk.</p>
 	<br>
 	<p>This is useful so that in future if you are in a different environment and wish to change driver from disk to memcached or to redis or to APC, then you can easily do that by setting either of the following in your configuration file.</p>
-	<pre><code class="php">cache.hander = redis
-cache.hander = apc
-cache.hander = memcache
-cache.hander = memcached</code></pre>
+	<pre><code class="php">
+cache.handler = disk
+cache.handler = redis
+cache.handler = apc
+cache.handler = memcache
+cache.handler = memcached</code></pre>
 
 	<p>Memcache and memcached have been aliased to one another, so if you type memcache, and it's not available but memcached is available it will use that, and vice versa.</p>
 
