@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="9" namespace="PPI\DataSource" package="Default">
+      <name>ActiveRecord</name>
+      <extends link="db_DataSource_ActiveQuery.html#\PPI\DataSource\ActiveQuery">\PPI\DataSource\ActiveQuery</extends>
+      <full_name>\PPI\DataSource\ActiveRecord</full_name>
+      <property final="false" static="false" visibility="protected" line="11" package="Default">
+        <name>$_identifier</name>
+        <default>null</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="13" package="Default">
+        <name>$_data</name>
+        <default>array()</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="21" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description/>
+          <long-description/>
+          <tag line="15" name="todo" description="maybe throw an exception if $id is passed but the record is blank"/>
+          <tag line="15" name="param" description="" type="null|integer" variable="$id">
+            <type by_reference="false">null</type>
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="15" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="21">
+          <name>$id</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="21">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      <override_from>\PPI\DataSource\ActiveRecord</override_from></method>
+      <method final="false" abstract="false" static="false" visibility="public" line="35" package="Default">
+        <name>save</name>
+        <docblock>
+          <description>Save the users record. If there is an identifier set, then it's update mode, else back to insert mode.</description>
+          <long-description/>
+          <tag line="30" name="return" description="(If insert, the new insert ID, If update, the num of rows affected (should be 1));" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="43" package="Default">
+        <name>__set</name>
+        <argument line="43">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="43">
+          <name>$val</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="47" package="Default">
+        <name>__get</name>
+        <argument line="47">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    <docblock/><property final="false" static="false" visibility="protected" line="16" package="Default">
+        <name>$_handler</name>
+        <default>null</default>
+        <docblock>
+          <description>The table name</description>
+          <long-description/>
+          <tag line="11" name="var" description="" type="null">
+            <type by_reference="false">null</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\DataSource\ActiveQuery::$$_handler" description="\PPI\DataSource\ActiveQuery::$$_handler" link="db_DataSource_ActiveQuery.html#\PPI\DataSource\ActiveQuery::$$_handler"/></docblock>
+      <inherited_from>\PPI\DataSource\ActiveQuery</inherited_from></property><property final="false" static="false" visibility="protected" line="23" package="Default">
+        <name>$_meta</name>
+        <default>array(
+		'conn'    =&gt; null</default>
+        <docblock>
+          <description>The meta data for this instantiation</description>
+          <long-description/>
+          <tag line="18" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\DataSource\ActiveQuery::$$_meta" description="\PPI\DataSource\ActiveQuery::$$_meta" link="db_DataSource_ActiveQuery.html#\PPI\DataSource\ActiveQuery::$$_meta"/></docblock>
+      <inherited_from>\PPI\DataSource\ActiveQuery</inherited_from></property><property final="false" static="false" visibility="protected" line="34" package="Default">
+        <name>$_options</name>
+        <default>array()</default>
+        <docblock>
+          <description>The options for this instantiation</description>
+          <long-description/>
+          <tag line="29" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\DataSource\ActiveQuery::$$_options" description="\PPI\DataSource\ActiveQuery::$$_options" link="db_DataSource_ActiveQuery.html#\PPI\DataSource\ActiveQuery::$$_options"/></docblock>
+      <inherited_from>\PPI\DataSource\ActiveQuery</inherited_from></property><method final="false" abstract="false" static="false" visibility="public" line="65" package="Default">
+        <name>fetchAll</name>
+        <docblock>
+          <description>Fetch all rows based on the $criteria</description>
+          <long-description/>
+          <tag line="59" name="param" description="" type="null|object" variable="$criteria">
+            <type by_reference="false">null</type>
+            <type by_reference="false">object</type>
+          </tag>
+          <tag line="59" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\DataSource\ActiveQuery::fetchAll()" description="\PPI\DataSource\ActiveQuery::fetchAll()" link="db_DataSource_ActiveQuery.html#\PPI\DataSource\ActiveQuery::fetchAll()"/></docblock>
+        <argument line="65">
+          <name>$criteria</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\DataSource\ActiveQuery</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="75" package="Default">
+        <name>find</name>
+        <docblock>
+          <description>Find a row by its primary key</description>
+          <long-description/>
+          <tag line="69" name="param" description="" type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="69" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\DataSource\ActiveQuery::find()" description="\PPI\DataSource\ActiveQuery::find()" link="db_DataSource_ActiveQuery.html#\PPI\DataSource\ActiveQuery::find()"/></docblock>
+        <argument line="75">
+          <name>$id</name>
+          <default/>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\DataSource\ActiveQuery</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="86" package="Default">
+        <name>fetch</name>
+        <docblock>
+          <description>Fetch records from the datasource by a $where clause</description>
+          <long-description/>
+          <tag line="79" name="param" description="" type="array" variable="$where">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="79" name="param" description="" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="79" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\DataSource\ActiveQuery::fetch()" description="\PPI\DataSource\ActiveQuery::fetch()" link="db_DataSource_ActiveQuery.html#\PPI\DataSource\ActiveQuery::fetch()"/></docblock>
+        <argument line="86">
+          <name>$where</name>
+          <default/>
+          <type>array</type>
+        </argument>
+        <argument line="86">
+          <name>$params</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      <inherited_from>\PPI\DataSource\ActiveQuery</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="96" package="Default">
+        <name>insert</name>
+        <docblock>
+          <description>Insert data into the table</description>
+          <long-description/>
+          <tag line="90" name="param" description="" type="" variable="$data"/>
+          <tag line="90" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\DataSource\ActiveQuery::insert()" description="\PPI\DataSource\ActiveQuery::insert()" link="db_DataSource_ActiveQuery.html#\PPI\DataSource\ActiveQuery::insert()"/></docblock>
+        <argument line="96">
+          <name>$data</name>
+          <default/>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\DataSource\ActiveQuery</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="106" package="Default">
+        <name>delete</name>
+        <docblock>
+          <description>Delete a record by a where clause</description>
+          <long-description/>
+          <tag line="100" name="param" description="" type="array" variable="$where">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="100" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\DataSource\ActiveQuery::delete()" description="\PPI\DataSource\ActiveQuery::delete()" link="db_DataSource_ActiveQuery.html#\PPI\DataSource\ActiveQuery::delete()"/></docblock>
+        <argument line="106">
+          <name>$where</name>
+          <default/>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\DataSource\ActiveQuery</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="117" package="Default">
+        <name>update</name>
+        <docblock>
+          <description>Update a record by where clause</description>
+          <long-description/>
+          <tag line="110" name="param" description="&lt;p&gt;The fields and values&lt;/p&gt;" type="array" variable="$data">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="110" name="param" description="&lt;p&gt;The clause&lt;/p&gt;" type="array" variable="$where">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="110" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\DataSource\ActiveQuery::update()" description="\PPI\DataSource\ActiveQuery::update()" link="db_DataSource_ActiveQuery.html#\PPI\DataSource\ActiveQuery::update()"/></docblock>
+        <argument line="117">
+          <name>$data</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="117">
+          <name>$where</name>
+          <default/>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\DataSource\ActiveQuery</inherited_from></method></class>

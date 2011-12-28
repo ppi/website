@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface namespace="PPI\Router" line="12" package="Default">
+      <name>RouterInterface</name>
+      <extends/>
+      <full_name>\PPI\Router\RouterInterface</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" line="20" package="Default">
+        <name>init</name>
+        <docblock>
+          <description>Just run the init() of the driver to embed this routing driver in the page life-cycle</description>
+          <long-description/>
+          <tag line="14" name="abstract" description=""/>
+          <tag line="14" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+    </interface>

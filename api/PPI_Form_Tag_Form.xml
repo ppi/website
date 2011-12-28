@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="12" namespace="PPI\Form\Tag" package="Default">
+      <name>Form</name>
+      <extends link="db_Form_Tag.html#\PPI\Form\Tag">\PPI\Form\Tag</extends>
+      <full_name>\PPI\Form\Tag\Form</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" line="19" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>The constructor</description>
+          <long-description/>
+          <tag line="14" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="19">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="29" package="Default">
+        <name>render</name>
+        <docblock>
+          <description>Render this tag</description>
+          <long-description/>
+          <tag line="24" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="39" package="Default">
+        <name>__toString</name>
+        <docblock>
+          <description>When echo'ing this tag class, we call render</description>
+          <long-description/>
+          <tag line="34" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

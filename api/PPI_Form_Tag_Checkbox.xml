@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="13" namespace="PPI\Form\Tag" package="Default">
+      <name>Checkbox</name>
+      <extends link="db_Form_Tag.html#\PPI\Form\Tag">\PPI\Form\Tag</extends>
+      <full_name>\PPI\Form\Tag\Checkbox</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" line="20" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>The constructor</description>
+          <long-description/>
+          <tag line="15" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="20">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="30" package="Default">
+        <name>setValue</name>
+        <docblock>
+          <description>Set the value of this field</description>
+          <long-description/>
+          <tag line="24" name="param" description="" type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="24" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="30">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="39" package="Default">
+        <name>getValue</name>
+        <docblock>
+          <description>Get the value of this field.</description>
+          <long-description/>
+          <tag line="34" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="48" package="Default">
+        <name>render</name>
+        <docblock>
+          <description>Render this tag</description>
+          <long-description/>
+          <tag line="43" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

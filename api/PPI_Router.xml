@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="14" namespace="PPI" package="Default">
+      <name>Router</name>
+      <extends/>
+      <full_name>\PPI\Router</full_name>
+      <implements>\Router\RouterInterface</implements>
+      <property final="false" static="false" visibility="protected" line="21" package="Default">
+        <name>$_allRoutes</name>
+        <default>null</default>
+        <docblock>
+          <description>An array of all the routes to be used</description>
+          <long-description/>
+          <tag line="16" name="var" description="" type="null|array">
+            <type by_reference="false">null</type>
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="28" package="Default">
+        <name>$_matchedRoute</name>
+        <default>null</default>
+        <docblock>
+          <description>The matched route</description>
+          <long-description/>
+          <tag line="23" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="34" package="Default">
+        <name>$_routingFile</name>
+        <default>null</default>
+        <docblock>
+          <description>The file to get the routes from</description>
+          <long-description/>
+          <tag line="29" name="var" description="" type="null|string">
+            <type by_reference="false">null</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="41" package="Default">
+        <name>$_ranInit</name>
+        <default>false</default>
+        <docblock>
+          <description>Check if we have ran the init() function before or not.</description>
+          <long-description/>
+          <tag line="36" name="var" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="48" package="Default">
+        <name>$_foundMatch</name>
+        <default>false</default>
+        <docblock>
+          <description>Check if we have found a match or not from our custom routes.</description>
+          <long-description/>
+          <tag line="43" name="var" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="55" package="Default">
+        <name>$_uri</name>
+        <default>null</default>
+        <docblock>
+          <description>The URI to be used for routing matches</description>
+          <long-description/>
+          <tag line="50" name="var" description="" type="null|string">
+            <type by_reference="false">null</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="61" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>The constructor</description>
+          <long-description/>
+        </docblock>
+        <argument line="61">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="68" package="Default">
+        <name>match</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="80" package="Default">
+        <name>init</name>
+        <docblock>
+          <description>Initialise the router and start grabbing routes</description>
+          <long-description/>
+          <tag line="75" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="125" package="Default">
+        <name>getMatchedRoute</name>
+        <docblock>
+          <description>Get the route currently matched</description>
+          <long-description/>
+          <tag line="120" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="135" package="Default">
+        <name>setMatchedRoute</name>
+        <docblock>
+          <description>Set the route currently matched</description>
+          <long-description/>
+          <tag line="129" name="param" description="" type="string" variable="$route">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="129" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="135">
+          <name>$route</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="144" package="Default">
+        <name>getRoutingFile</name>
+        <docblock>
+          <description>Get the routing file</description>
+          <long-description/>
+          <tag line="139" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="158" package="Default">
+        <name>setUri</name>
+        <docblock>
+          <description>Set the uri</description>
+          <long-description/>
+          <tag line="152" name="param" description="" type="" variable="$uri"/>
+          <tag line="152" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="158">
+          <name>$uri</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="167" package="Default">
+        <name>getUri</name>
+        <docblock>
+          <description>Get the uri</description>
+          <long-description/>
+          <tag line="162" name="return" description="" type="\PPI\"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="171" package="Default">
+        <name>getDefaultRoute</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="175" package="Default">
+        <name>get404Route</name>
+      </method>
+    </class>

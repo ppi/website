@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="10" namespace="PPI\Model" package="Default">
+      <name>Resultset</name>
+      <extends/>
+      <full_name>\PPI\Model\Resultset</full_name>
+      <implements>\Iterator</implements>
+      <implements>\ArrayAccess</implements>
+      <implements>\Countable</implements>
+      <property final="false" static="false" visibility="private" line="15" package="Default">
+        <name>$_statement</name>
+        <default/>
+        <docblock>
+          <description>The instance of PDOStatement</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="20" package="Default">
+        <name>$_fetchMode</name>
+        <default>\PDO::FETCH_ASSOC</default>
+        <docblock>
+          <description>The default fetch mode</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="27" package="Default">
+        <name>$_countResult</name>
+        <default>null</default>
+        <docblock>
+          <description>The number of rows returned from this query.</description>
+          <long-description/>
+          <tag line="22" name="var" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="32" package="Default">
+        <name>$_fetchModes</name>
+        <default>array(
+		'assoc'   =&gt; \PDO::FETCH_ASSOC</default>
+        <docblock>
+          <description>List of the acceptable fetch modes</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="39" package="Default">
+        <name>$_dataPointer</name>
+        <default>0</default>
+      </property>
+      <property final="false" static="false" visibility="private" line="40" package="Default">
+        <name>$_rows</name>
+        <default>array()</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="42" package="Default">
+        <name>__construct</name>
+        <argument line="42">
+          <name>$statement</name>
+          <default/>
+          <type>PDOStatement</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="58" package="Default">
+        <name>fetch</name>
+        <docblock>
+          <description>Fetch the next row from the statement class</description>
+          <long-description/>
+          <tag line="51" name="param" description="" type="string" variable="$p_sFetchMode">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="51" name="todo" description="Make this an isset() lookup instead of in_array()"/>
+          <tag line="51" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="58">
+          <name>$p_sFetchMode</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="73" package="Default">
+        <name>fetchAll</name>
+        <docblock>
+          <description>Fetch all the records from the statement class</description>
+          <long-description/>
+          <tag line="66" name="param" description="" type="string" variable="$p_sFetchMode">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="66" name="todo" description="Make this an isset() lookup instead of in_array()"/>
+          <tag line="66" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="73">
+          <name>$p_sFetchMode</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="83" package="Default">
+        <name>countRows</name>
+        <docblock>
+          <description>Count the number of rows returned from the query</description>
+          <long-description/>
+          <tag line="79" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="92" package="Default">
+        <name>offsetExists</name>
+        <docblock>
+          <description>Check if an offset exists From the SPL Interface: ArrayAccess</description>
+          <long-description/>
+          <tag line="87" name="param" description="" type="integer" variable="$offset">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="87" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="92">
+          <name>$offset</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="102" package="Default">
+        <name>offsetGet</name>
+        <docblock>
+          <description>Get a row from the offset</description>
+          <long-description/>
+          <tag line="97" name="param" description="&lt;p&gt;The Offset&lt;/p&gt;" type="integer" variable="$offset">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="97" name="reurn" description="mixed"/>
+        </docblock>
+        <argument line="102">
+          <name>$offset</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="111" package="Default">
+        <name>offsetUnset</name>
+        <docblock>
+          <description>Remove a record by offset</description>
+          <long-description/>
+          <tag line="107" name="param" description="" type="integer" variable="$offset">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+        <argument line="111">
+          <name>$offset</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="120" package="Default">
+        <name>offsetSet</name>
+        <docblock>
+          <description>Set a row's data by offset</description>
+          <long-description/>
+          <tag line="115" name="param" description="&lt;p&gt;The Offset&lt;/p&gt;" type="integer" variable="$offset">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="115" name="param" description="&lt;p&gt;The Value&lt;/p&gt;" type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="120">
+          <name>$offset</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="120">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="129" package="Default">
+        <name>count</name>
+        <docblock>
+          <description>Internal count function from the Countable interface.</description>
+          <long-description/>
+          <tag line="124" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="140" package="Default">
+        <name>getStatement</name>
+        <docblock>
+          <description>Get the saved statement object</description>
+          <long-description/>
+          <tag line="136" name="return" description="" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="148" package="Default">
+        <name>current</name>
+        <docblock>
+          <description>Get the row from the current pointer offset. If not encountered before, fetches it</description>
+          <long-description/>
+          <tag line="144" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="160" package="Default">
+        <name>key</name>
+        <docblock>
+          <description>Get the current pointer set - From the SPL Interface: Iterator</description>
+          <long-description/>
+          <tag line="155" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="168" package="Default">
+        <name>next</name>
+        <docblock>
+          <description>Increment the pointer - From the SPL Interface: Iterator</description>
+          <long-description/>
+          <tag line="164" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="176" package="Default">
+        <name>rewind</name>
+        <docblock>
+          <description>Rewind the pointer - From the SPL Interface: Iterator</description>
+          <long-description/>
+          <tag line="172" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="184" package="Default">
+        <name>valid</name>
+        <docblock>
+          <description>Verify if there is another pointer next or we are at the end - From the SPL Interface: Iterator</description>
+          <long-description/>
+          <tag line="180" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="193" package="Default">
+        <name>__toString</name>
+        <docblock>
+          <description>Convert this object to a string, returning the query used to generate this resultset.</description>
+          <long-description/>
+          <tag line="188" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

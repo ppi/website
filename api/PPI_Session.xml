@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="10" namespace="PPI" package="Default">
+      <name>Session</name>
+      <extends/>
+      <full_name>\PPI\Session</full_name>
+      <property final="false" static="false" visibility="protected" line="17" package="Default">
+        <name>$_config</name>
+        <default>null</default>
+        <docblock>
+          <description>The config object, optionally passed.</description>
+          <long-description/>
+          <tag line="12" name="var" description="" type="null|object">
+            <type by_reference="false">null</type>
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="23" package="Default">
+        <name>$_defaults</name>
+        <default>array(
+		'userAuthKey'               =&gt; 'userAuthInfo'</default>
+        <docblock>
+          <description>The session defaults</description>
+          <long-description/>
+          <tag line="18" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="34" package="Default">
+        <name>$_isCollected</name>
+        <default>true</default>
+        <docblock>
+          <description>This detemines if this class auto collects data from $_SESSION or it has been given its own mock data directly.</description>
+          <long-description/>
+          <tag line="29" name="var" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="42" package="Default">
+        <name>$_data</name>
+        <default>array()</default>
+        <docblock>
+          <description>The actual data we're manipulating this is only used for mock data.</description>
+          <long-description/>
+          <tag line="37" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="48" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>Constructor to optionally pass in session default options</description>
+          <long-description/>
+        </docblock>
+        <argument line="48">
+          <name>$p_aOptions</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="71" package="Default">
+        <name>defaults</name>
+        <argument line="71">
+          <name>$options</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="87" package="Default">
+        <name>exists</name>
+        <docblock>
+          <description>Check if a key exists</description>
+          <long-description/>
+          <tag line="81" name="param" description="&lt;p&gt;The key&lt;/p&gt;" type="string" variable="$p_sKey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="81" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="87">
+          <name>$p_sKey</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="99" package="Default">
+        <name>removeAll</name>
+        <docblock>
+          <description>Remove all set keys from the session</description>
+          <long-description/>
+          <tag line="94" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="122" package="Default">
+        <name>remove</name>
+        <docblock>
+          <description>Remove a specific key, or just data within that key.</description>
+          <long-description/>
+          <tag line="112" name="example" description="$session-&gt;remove('userInfo');&#10;$session-&gt;remove('userInfo', 'email');"/>
+          <tag line="112" name="param" description="&lt;p&gt;The initial key set&lt;/p&gt;" type="string" variable="$p_sKey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="112" name="param" description="&lt;p&gt;A key within the initial key set.&lt;/p&gt;" type="string" variable="$p_sName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="112" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="122">
+          <name>$p_sKey</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="122">
+          <name>$p_sName</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="147" package="Default">
+        <name>get</name>
+        <docblock>
+          <description>Get information from the session by key</description>
+          <long-description/>
+          <tag line="140" name="param" description="" type="string" variable="$p_sNamespace">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="140" name="param" description="&lt;p&gt;Optional. Default is null&lt;/p&gt;" type="mixed" variable="$p_mDefault">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="140" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="147">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="147">
+          <name>$default</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="168" package="Default">
+        <name>set</name>
+        <docblock>
+          <description>Set data into the session by key</description>
+          <long-description/>
+          <tag line="161" name="param" description="" type="string" variable="$p_sNamespace">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="161" name="param" description="" type="mixed" variable="$p_mData">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="161" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="168">
+          <name>$p_sKey</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="168">
+          <name>$p_mData</name>
+          <default>true</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="183" package="Default">
+        <name>setAuthData</name>
+        <docblock>
+          <description>Set the authentication information for the current user</description>
+          <long-description/>
+          <tag line="177" name="param" description="&lt;p&gt;The data to be set&lt;/p&gt;" type="mixed" variable="$aData">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="177" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="183">
+          <name>$mData</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="192" package="Default">
+        <name>clearAuthData</name>
+        <docblock>
+          <description>Clear the set authentication information</description>
+          <long-description/>
+          <tag line="187" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="202" package="Default">
+        <name>getAuthData</name>
+        <docblock>
+          <description>Get the auth data, if it doesn't exist we return a blank array</description>
+          <long-description/>
+          <tag line="196" name="param" description="&lt;p&gt;Default is true. If true returns array, else object.&lt;/p&gt;" type="boolean" variable="$p_bUseArray">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="196" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="202">
+          <name>$p_bUseArray</name>
+          <default>true</default>
+          <type/>
+        </argument>
+      </method>
+    </class>

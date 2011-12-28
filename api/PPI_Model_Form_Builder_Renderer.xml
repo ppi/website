@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="12" namespace="default" package="Default">
+      <name>PPI_Model_Form_Builder_Renderer</name>
+      <extends/>
+      <full_name>\PPI_Model_Form_Builder_Renderer</full_name>
+      <docblock>
+        <description/>
+        <long-description/>
+        <tag line="4" name="license" description="MIT" link="http://opensource.org/licenses/mit-license.php"/>
+        <tag line="4" name="copyright" description="(c) Digiflex Development Team 2008"/>
+        <tag line="4" name="version" description="1.0"/>
+        <tag line="4" name="author" description="Paul Dragoonis" link="mailto:paul@digiflex.org"/>
+        <tag line="4" name="since" description="Version 1.0"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="14" package="Default">
+        <name>$_formStructure</name>
+        <default>array()</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="15" package="Default">
+        <name>$_formFields</name>
+        <default>array()</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="16" package="Default">
+        <name>$_elementErrors</name>
+        <default>array()</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="17" package="Default">
+        <name>$_formAction</name>
+        <default>''</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="18" package="Default">
+        <name>$_formName</name>
+        <default>''</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="19" package="Default">
+        <name>$_formMethod</name>
+        <default>''</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="21" package="Default">
+        <name>drawForm</name>
+      </method>
+    </class>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface namespace="PPI\View\Renderers" line="4" package="Default">
+      <name>RendererInterface</name>
+      <extends/>
+      <full_name>\PPI\View\Renderers\RendererInterface</full_name>
+    </interface>

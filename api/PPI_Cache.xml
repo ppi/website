@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="11" namespace="PPI" package="Default">
+      <name>Cache</name>
+      <extends/>
+      <full_name>\PPI\Cache</full_name>
+      <property final="false" static="false" visibility="protected" line="18" package="Default">
+        <name>$_defaults</name>
+        <default>array(
+		'handler'  =&gt; 'disk'
+	)</default>
+        <docblock>
+          <description>Defaults for the handler</description>
+          <long-description/>
+          <tag line="13" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="27" package="Default">
+        <name>$_handler</name>
+        <default>null</default>
+        <docblock>
+          <description>The handler in use</description>
+          <long-description/>
+          <tag line="22" name="var" description="" type="null|\PPI\Cache\CacheInterface">
+            <type by_reference="false">null</type>
+            <type by_reference="false" link="db_Cache_CacheInterface.html#\PPI\Cache\CacheInterface">\PPI\Cache\CacheInterface</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="35" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>The options to the cache layer. This can be an array of options
+or a string of the driver name eg: new PPI_Cache('apc');</description>
+          <long-description/>
+          <tag line="29" name="param" description="" type="array|string" variable="$options">
+            <type by_reference="false">array</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="35">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="65" package="Default">
+        <name>setupHandler</name>
+        <docblock>
+          <description>Initialise the cache handler</description>
+          <long-description/>
+          <tag line="58" name="param" description="&lt;p&gt;The handler name&lt;/p&gt;" type="string" variable="$handler">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="58" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+          <tag line="58" name="throws" description="" type="\PPI\Core\CoreException">
+            <type by_reference="false" link="db_Core_CoreException.html#\PPI\Core\CoreException">\PPI\Core\CoreException</type>
+          </tag>
+        </docblock>
+        <argument line="65">
+          <name>$handler</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="81" package="Default">
+        <name>get</name>
+        <docblock>
+          <description>Get a key value from the cache</description>
+          <long-description/>
+          <tag line="75" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="75" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="81">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="93" package="Default">
+        <name>set</name>
+        <docblock>
+          <description>Set a value in the cache</description>
+          <long-description/>
+          <tag line="85" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="85" name="param" description="&lt;p&gt;The Value&lt;/p&gt;" type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="85" name="param" description="&lt;p&gt;The TTL&lt;/p&gt;" type="integer" variable="$ttl">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="85" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="93">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="93">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="93">
+          <name>$ttl</name>
+          <default>0</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="103" package="Default">
+        <name>exists</name>
+        <docblock>
+          <description>Check if a key exists in the cache</description>
+          <long-description/>
+          <tag line="97" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="97" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="103">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="113" package="Default">
+        <name>remove</name>
+        <docblock>
+          <description>Remove a value from the cache by key</description>
+          <long-description/>
+          <tag line="107" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="107" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="113">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="122" package="Default">
+        <name>getHandler</name>
+        <docblock>
+          <description>Get the current registered handler</description>
+          <long-description/>
+          <tag line="117" name="return" description="" type="null|\PPI\PPI_Cache_Interface">
+            <type by_reference="false">null</type>
+            <type by_reference="false">\PPI\PPI_Cache_Interface</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="133" package="Default">
+        <name>setHandler</name>
+        <docblock>
+          <description>Set the current handler.</description>
+          <long-description/>
+          <tag line="126" name="throws" description="" type="\PPI\Core\CoreException">
+            <type by_reference="false" link="db_Core_CoreException.html#\PPI\Core\CoreException">\PPI\Core\CoreException</type>
+          </tag>
+          <tag line="126" name="param" description="" type="\PPI\Cache\CacheInterface" variable="$handler">
+            <type by_reference="false" link="db_Cache_CacheInterface.html#\PPI\Cache\CacheInterface">\PPI\Cache\CacheInterface</type>
+          </tag>
+          <tag line="126" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="133">
+          <name>$handler</name>
+          <default/>
+          <type>CacheInterface</type>
+        </argument>
+      </method>
+    </class>

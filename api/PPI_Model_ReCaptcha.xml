@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="11" namespace="PPI\Model" package="Default">
+      <name>ReCaptcha</name>
+      <extends/>
+      <full_name>\PPI\Model\ReCaptcha</full_name>
+      <constant namespace="PPI\Model" line="16" package="Default">
+        <name>API_SERVER</name>
+        <value>'http://api.recaptcha.net'</value>
+        <docblock>
+          <description>URI to the regular API</description>
+          <long-description/>
+          <tag line="12" name="var" description="API Server" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="PPI\Model" line="22" package="Default">
+        <name>API_SERVER_SECURE</name>
+        <value>'https://api-secure.recaptcha.net'</value>
+        <docblock>
+          <description>URI to the secure API</description>
+          <long-description/>
+          <tag line="18" name="var" description="API Server Secure" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="PPI\Model" line="28" package="Default">
+        <name>VERIFY_SERVER</name>
+        <value>'api-verify.recaptcha.net'</value>
+        <docblock>
+          <description>URI to the verify server</description>
+          <long-description/>
+          <tag line="24" name="var" description="Verify Server" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <property final="false" static="false" visibility="protected" line="34" package="Default">
+        <name>$_publicKey</name>
+        <default>null</default>
+        <docblock>
+          <description>Public key used when displaying the captcha</description>
+          <long-description/>
+          <tag line="30" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="40" package="Default">
+        <name>$_privateKey</name>
+        <default>null</default>
+        <docblock>
+          <description>Private key used when verifying user input</description>
+          <long-description/>
+          <tag line="36" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="46" package="Default">
+        <name>$_ip</name>
+        <default>null</default>
+        <docblock>
+          <description>Ip address used when verifying user input</description>
+          <long-description/>
+          <tag line="42" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="53" package="Default">
+        <name>$_params</name>
+        <default>array(
+        'ssl' =&gt; false</default>
+        <docblock>
+          <description>Parameters for the object</description>
+          <long-description/>
+          <tag line="49" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="66" package="Default">
+        <name>$_options</name>
+        <default>array(
+        'theme' =&gt; 'red'</default>
+        <docblock>
+          <description>Options for tailoring reCaptcha
+See the different options on http://recaptcha.net/apidocs/captcha/client.html</description>
+          <long-description/>
+          <tag line="61" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="71" package="Default">
+        <name>__construct</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="86" package="Default">
+        <name>getHTML</name>
+        <argument line="86">
+          <name>$error</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="86">
+          <name>$use_ssl</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="115" package="Default">
+        <name>verify</name>
+        <docblock>
+          <description>Verify the user input</description>
+          <long-description>&lt;p&gt;This method calls up the post method and returns a&lt;/p&gt;</long-description>
+          <tag line="106" name="param" description="" type="string" variable="$challengeField">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="106" name="param" description="" type="string" variable="$responseField">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="106" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="115">
+          <name>$challenge</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="115">
+          <name>$response</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="160" package="Default">
+        <name>queryStringEncode</name>
+        <docblock>
+          <description>Encodes the given data into a query string format</description>
+          <long-description/>
+          <tag line="155" name="param" description="&lt;p&gt;array of string elements to be encoded&lt;/p&gt;" type="array" variable="$data">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="155" name="return" description="encoded request" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="160">
+          <name>$data</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="174" package="Default">
+        <name>setIp</name>
+        <docblock>
+          <description>Set the ip property</description>
+          <long-description/>
+          <tag line="169" name="param" description="" type="string" variable="$ip">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="169" name="return" description="" type="\PPI\Model\PPI_Model_ReCaptcha">
+            <type by_reference="false">\PPI\Model\PPI_Model_ReCaptcha</type>
+          </tag>
+        </docblock>
+        <argument line="174">
+          <name>$ip</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="183" package="Default">
+        <name>getIp</name>
+        <docblock>
+          <description>Get the ip property</description>
+          <long-description/>
+          <tag line="179" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="191" package="Default">
+        <name>getPublicKey</name>
+        <docblock>
+          <description>Get the public key</description>
+          <long-description/>
+          <tag line="187" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="200" package="Default">
+        <name>setPublicKey</name>
+        <docblock>
+          <description>Set the public key</description>
+          <long-description/>
+          <tag line="195" name="param" description="" type="string" variable="$publicKey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="195" name="return" description="" type="\PPI\Model\PPI_Model_ReCaptcha">
+            <type by_reference="false">\PPI\Model\PPI_Model_ReCaptcha</type>
+          </tag>
+        </docblock>
+        <argument line="200">
+          <name>$publicKey</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="209" package="Default">
+        <name>getPrivateKey</name>
+        <docblock>
+          <description>Get the private key</description>
+          <long-description/>
+          <tag line="205" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="218" package="Default">
+        <name>setPrivateKey</name>
+        <docblock>
+          <description>Set the private key</description>
+          <long-description/>
+          <tag line="213" name="param" description="" type="string" variable="$privateKey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="213" name="return" description="" type="\PPI\Model\PPI_Model_ReCaptcha">
+            <type by_reference="false">\PPI\Model\PPI_Model_ReCaptcha</type>
+          </tag>
+        </docblock>
+        <argument line="218">
+          <name>$privateKey</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

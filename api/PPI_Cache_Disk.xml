@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="11" namespace="PPI\Cache" package="Default">
+      <name>Disk</name>
+      <extends/>
+      <full_name>\PPI\Cache\Disk</full_name>
+      <implements link="db_Cache_CacheInterface.html#\PPI\Cache\CacheInterface">\PPI\Cache\CacheInterface</implements>
+      <property final="false" static="false" visibility="protected" line="18" package="Default">
+        <name>$_cacheDir</name>
+        <default>null</default>
+        <docblock>
+          <description>The folder where the cache contents will be placed</description>
+          <long-description/>
+          <tag line="13" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="25" package="Default">
+        <name>$_options</name>
+        <default>array()</default>
+        <docblock>
+          <description>The options passed in upon instantiation</description>
+          <long-description/>
+          <tag line="20" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="27" package="Default">
+        <name>__construct</name>
+        <argument line="27">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="32" package="Default">
+        <name>init</name>
+      <docblock><description>Perform any initialisation steps on the driver. (such as -&gt;connect())</description><long-description/><tag line="" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag></docblock><override_from>\PPI\Cache\Disk</override_from></method>
+      <method final="false" abstract="false" static="false" visibility="public" line="40" package="Default">
+        <name>remove</name>
+        <docblock>
+          <description>Remove a key from the cache</description>
+          
+          <tag line="34" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="34" name="param" description="&lt;p&gt;flag if we know of the existence&lt;/p&gt;" type="bool" variable="$exists">
+            <type by_reference="false">bool</type>
+          </tag>
+          <tag line="34" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        <long-description/></docblock>
+        <argument line="40">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="40">
+          <name>$exists</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      <override_from>\PPI\Cache\Disk</override_from></method>
+      <method final="false" abstract="false" static="false" visibility="protected" line="57" package="Default">
+        <name>getKeyCachePath</name>
+        <docblock>
+          <description>Get the full path to a cache item</description>
+          <long-description/>
+          <tag line="52" name="param" description="" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="52" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="57">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" line="68" package="Default">
+        <name>getKeyMetaCachePath</name>
+        <docblock>
+          <description>Get the full path to a cache item's metadata file</description>
+          <long-description/>
+          <tag line="62" name="param" description="" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="62" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="68">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="77" package="Default">
+        <name>exists</name>
+        <docblock>
+          <description>Check if a key exists in the cache</description>
+          
+          <tag line="72" name="param" description="&lt;p&gt;The Key(s)&lt;/p&gt;&#10;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="72" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        <long-description/></docblock>
+        <argument line="77">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      <override_from>\PPI\Cache\Disk</override_from></method>
+      <method final="false" abstract="false" static="false" visibility="public" line="100" package="Default">
+        <name>set</name>
+        <docblock>
+          <description>Set a value in the cache</description>
+          
+          <tag line="92" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="92" name="param" description="&lt;p&gt;The Data&lt;/p&gt;" type="mixed" variable="$data">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="92" name="param" description="&lt;p&gt;The Time To Live&lt;/p&gt;" type="integer" variable="$ttl">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="92" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        <long-description/></docblock>
+        <argument line="100">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="100">
+          <name>$data</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="100">
+          <name>$ttl</name>
+          <default>0</default>
+          <type/>
+        </argument>
+      <override_from>\PPI\Cache\Disk</override_from></method>
+      <method final="false" abstract="false" static="false" visibility="public" line="142" package="Default">
+        <name>get</name>
+        <docblock>
+          <description>Get a value from cache</description>
+          
+          <tag line="135" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="135" name="param" description="&lt;p&gt;The Default Value&lt;/p&gt;" type="mixed" variable="$default">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="135" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <long-description/></docblock>
+        <argument line="142">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="142">
+          <name>$default</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      <override_from>\PPI\Cache\Disk</override_from></method>
+      <method final="false" abstract="false" static="false" visibility="public" line="156" package="Default">
+        <name>enabled</name>
+        <docblock>
+          <description>Check if this adapter is enabled or not.</description>
+          
+          <tag line="151" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        <long-description/></docblock>
+      <override_from>\PPI\Cache\Disk</override_from></method>
+      <method final="false" abstract="false" static="false" visibility="public" line="165" package="Default">
+        <name>increment</name>
+        <docblock>
+          <description>Increment the value in the cache</description>
+          
+          <tag line="158" name="param" description="&lt;p&gt;The key&lt;/p&gt;" type="\PPI\Cache\$key" variable="$key">
+            <type by_reference="false">\PPI\Cache\$key</type>
+          </tag>
+          <tag line="158" name="param" description="&lt;p&gt;The value to increment by&lt;/p&gt;" type="\PPI\Cache\$inc" variable="$inc">
+            <type by_reference="false">\PPI\Cache\$inc</type>
+          </tag>
+          <tag line="158" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        <long-description/></docblock>
+        <argument line="165">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="165">
+          <name>$inc</name>
+          <default/>
+          <type/>
+        </argument>
+      <override_from>\PPI\Cache\Disk</override_from></method>
+      <method final="false" abstract="false" static="false" visibility="public" line="174" package="Default">
+        <name>decrement</name>
+        <docblock>
+          <description>Decrement the value in the cache</description>
+          
+          <tag line="167" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="\PPI\Cache\$key" variable="$key">
+            <type by_reference="false">\PPI\Cache\$key</type>
+          </tag>
+          <tag line="167" name="param" description="&lt;p&gt;The value to decrement by&lt;/p&gt;" type="\PPI\Cache\$dec" variable="$dec">
+            <type by_reference="false">\PPI\Cache\$dec</type>
+          </tag>
+          <tag line="167" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        <long-description/></docblock>
+        <argument line="174">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="174">
+          <name>$dec</name>
+          <default/>
+          <type/>
+        </argument>
+      <override_from>\PPI\Cache\Disk</override_from></method>
+    </class>

@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="true" line="14" namespace="PPI" package="Default">
+      <name>Model</name>
+      <extends/>
+      <full_name>\PPI\Model</full_name>
+      <property final="false" static="false" visibility="protected" line="21" package="Default">
+        <name>$sLastQuery</name>
+        <default/>
+        <docblock>
+          <description>The last query executed</description>
+          <long-description/>
+          <tag line="16" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="27" package="Default">
+        <name>$sLastError</name>
+        <default/>
+        <docblock>
+          <description>The last database error reported</description>
+          <long-description/>
+          <tag line="22" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="33" package="Default">
+        <name>$sTableName</name>
+        <default/>
+        <docblock>
+          <description>The current table's name</description>
+          <long-description/>
+          <tag line="28" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="39" package="Default">
+        <name>$sTableIndex</name>
+        <default/>
+        <docblock>
+          <description>The current table's primary key field name</description>
+          <long-description/>
+          <tag line="34" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="40" package="Default">
+        <name>$sDbConnection</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="protected" line="41" package="Default">
+        <name>$parent_name</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="protected" line="47" package="Default">
+        <name>$sHostName</name>
+        <default/>
+        <docblock>
+          <description>The currently in use database hostname</description>
+          <long-description/>
+          <tag line="42" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="53" package="Default">
+        <name>$sUserName</name>
+        <default/>
+        <docblock>
+          <description>The currently in use database username</description>
+          <long-description/>
+          <tag line="48" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="59" package="Default">
+        <name>$sPassword</name>
+        <default/>
+        <docblock>
+          <description>The currently in use database password</description>
+          <long-description/>
+          <tag line="54" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="65" package="Default">
+        <name>$sDataBase</name>
+        <default/>
+        <docblock>
+          <description>The currently in use database name</description>
+          <long-description/>
+          <tag line="60" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="71" package="Default">
+        <name>$sFetchMode</name>
+        <default>\PDO::FETCH_ASSOC</default>
+        <docblock>
+          <description>The default and current fetch mode for PDO</description>
+          <long-description/>
+          <tag line="66" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="77" package="Default">
+        <name>$metaAttributes</name>
+        <default>array()</default>
+        <docblock>
+          <description>Attributes storing the users meta data if you use __get(),__set() stuff</description>
+          <long-description/>
+          <tag line="72" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="83" package="Default">
+        <name>$rHandler</name>
+        <default>null</default>
+        <docblock>
+          <description>The PDO Instance</description>
+          <long-description/>
+          <tag line="78" name="var" description="" type="null|\PPI\PDO">
+            <type by_reference="false">null</type>
+            <type by_reference="false">\PPI\PDO</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="95" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>Constructor for the SQL API.</description>
+          <long-description>&lt;p&gt;Used for making connections and setting up instance information.
+This information is used throughout this class's lifecycle&lt;/p&gt;</long-description>
+          <tag line="85" name="param" description="&lt;p&gt;The name of the DB Table&lt;/p&gt;" type="string" variable="$p_sTableName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="85" name="param" description="&lt;p&gt;The index of the primary key&lt;/p&gt;" type="string" variable="$p_sTableIndex">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="85" name="param" description="&lt;p&gt;The database section to use for the DSN&lt;/p&gt;" type="string" variable="$p_sDBKey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="85" name="param" description="&lt;p&gt;To obtain the record and set it as meta data&lt;/p&gt;" type="integer" variable="$p_iRecord">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="85" name="throws" description="" type="\PPI\Model\ModelException">
+            <type by_reference="false" link="db_Model_ModelException.html#\PPI\Model\ModelException">\PPI\Model\ModelException</type>
+          </tag>
+        </docblock>
+        <argument line="95">
+          <name>$p_sTableName</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="95">
+          <name>$p_sTableIndex</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="95">
+          <name>$p_sDBKey</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="95">
+          <name>$p_iRecordID</name>
+          <default>0</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="186" package="Default">
+        <name>makeDSN</name>
+        <docblock>
+          <description>Create a DSN string</description>
+          <long-description/>
+          <tag line="180" name="todo" description="Have this accept params"/>
+          <tag line="180" name="return" description="The DSN" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="195" package="Default">
+        <name>select</name>
+        <docblock>
+          <description>Returns the PPI Select object to allow object-oriented query selecting</description>
+          <long-description/>
+          <tag line="190" name="return" description="" type="\PPI\PPI_Model_Select">
+            <type by_reference="false">\PPI\PPI_Model_Select</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" line="205" package="Default">
+        <name>appendQueryList</name>
+        <docblock>
+          <description>Append to a list of queries in the registry</description>
+          <long-description/>
+          <tag line="199" name="param" description="&lt;p&gt;The Query&lt;/p&gt;" type="string" variable="$p_sQuery">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="199" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="205">
+          <name>$query</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="218" package="Default">
+        <name>query</name>
+        <docblock>
+          <description>Performs the actual query with some error handling.</description>
+          <long-description>&lt;p&gt;Returns what mysql_query() returns on success, else false.&lt;/p&gt;</long-description>
+          <tag line="209" name="param" description="&lt;p&gt;The Query&lt;/p&gt;" type="string" variable="$p_sQuery">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="209" name="param" description="&lt;p&gt;Default is true. If true will log the query.&lt;/p&gt;" type="boolean" variable="$p_bLogQuery">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="209" name="throws" description="" type="\PPI\Model\ModelException">
+            <type by_reference="false" link="db_Model_ModelException.html#\PPI\Model\ModelException">\PPI\Model\ModelException</type>
+          </tag>
+          <tag line="209" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="218">
+          <name>$p_sQuery</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="218">
+          <name>$p_bLogQuery</name>
+          <default>true</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="239" package="Default">
+        <name>delete</name>
+        <docblock>
+          <description>Deletes a record by primary key</description>
+          <long-description/>
+          <tag line="232" name="param" description="&lt;p&gt;Optional Record ID to delete. If nothing passed then will look for record ID in meta data&lt;/p&gt;" type="integer" variable="$p_iRecordID">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="232" name="throws" description="" type="\PPI\Model\ModelException">
+            <type by_reference="false" link="db_Model_ModelException.html#\PPI\Model\ModelException">\PPI\Model\ModelException</type>
+          </tag>
+          <tag line="232" name="return" description="The affected rows" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+        <argument line="239">
+          <name>$p_iRecordID</name>
+          <default>0</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="257" package="Default">
+        <name>rawQuery</name>
+        <docblock>
+          <description>Wrapper for PDO::exec. This will execute a query such as a DELETE or UPDATE.</description>
+          <long-description/>
+          <tag line="251" name="param" description="&lt;p&gt;The Query&lt;/p&gt;" type="string" variable="$p_sQuery">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="251" name="return" description="The affected rows" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+        <argument line="257">
+          <name>$p_sQuery</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="267" package="Default">
+        <name>exec</name>
+        <docblock>
+          <description>Wrapper for PDO::exec. This will execute a query such as a DELETE or UPDATE.</description>
+          <long-description/>
+          <tag line="261" name="param" description="&lt;p&gt;The Query&lt;/p&gt;" type="string" variable="$p_sQuery">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="261" name="return" description="The affected rows" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+        <argument line="267">
+          <name>$p_sQuery</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="267">
+          <name>$p_bLogQuery</name>
+          <default>true</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="286" package="Default">
+        <name>__set</name>
+        <docblock>
+          <description>Set a piece of meta data</description>
+          <long-description/>
+          <tag line="279" name="param" description="&lt;p&gt;The name of the meta data&lt;/p&gt;" type="string" variable="$p_sName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="279" name="param" description="&lt;p&gt;The value of the meta data&lt;/p&gt;" type="mixed" variable="$p_mValue">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="279" name="return" description="the current class, useful for method chaining" type="\PPI\Return">
+            <type by_reference="false">\PPI\Return</type>
+          </tag>
+        </docblock>
+        <argument line="286">
+          <name>$p_sName</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="286">
+          <name>$p_mValue</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="300" package="Default">
+        <name>__isset</name>
+        <docblock>
+          <description>Checks if meta data has been set</description>
+          <long-description/>
+          <tag line="294" name="param" description="&lt;p&gt;The field name&lt;/p&gt;" type="string" variable="$p_sName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="294" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="300">
+          <name>$p_sName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="310" package="Default">
+        <name>__unset</name>
+        <docblock>
+          <description>Unset meta handler so you can unset the meta data</description>
+          <long-description/>
+          <tag line="304" name="param" description="&lt;p&gt;The field name&lt;/p&gt;" type="string" variable="$p_sName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="304" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="310">
+          <name>$p_sName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="320" package="Default">
+        <name>__get</name>
+        <docblock>
+          <description>Obtain the value of the meta data set</description>
+          <long-description/>
+          <tag line="314" name="param" description="&lt;p&gt;The Property Name&lt;/p&gt;" type="string" variable="$p_sName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="314" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="320">
+          <name>$p_sName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="330" package="Default">
+        <name>save</name>
+        <docblock>
+          <description>Fire off the meta attributes to putRecord and clear the attributes</description>
+          <long-description/>
+          <tag line="324" name="param" description="&lt;p&gt;True will clear the meta data after saving&lt;/p&gt;" type="boolean" variable="$p_bClear">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="324" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="330">
+          <name>$p_bClear</name>
+          <default>true</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="340" package="Default">
+        <name>setMetaAttributes</name>
+        <docblock>
+          <description>Go through each attribute and add it as meta data</description>
+          <long-description/>
+          <tag line="334" name="param" description="&lt;p&gt;The attributes to be set&lt;/p&gt;" type="array" variable="$p_aAttributes">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="334" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="340">
+          <name>$p_aAttributes</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="353" package="Default">
+        <name>getMetaAttributes</name>
+        <docblock>
+          <description>Obtain the metaAttributes that have been set. Optionally clear them at the same time.</description>
+          <long-description/>
+          <tag line="347" name="param" description="&lt;p&gt;Whether to clean the attributes before returning them&lt;/p&gt;" type="boolean" variable="$p_bClearAttrs">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="347" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="353">
+          <name>$p_bClearAttrs</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="374" package="Default">
+        <name>putRecord</name>
+        <docblock>
+          <description>If the record exists, then we will perform the update function
+This will be called unless the update function has been overloaded by the applications model
+If the record doesn't exist, then we will perform the insert function
+This will be called unless the insert function has been overloaded by the applications model</description>
+          <long-description/>
+          <tag line="363" name="param" description="" type="array" variable="$p_aRecord">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="363" name="param" description="" type="array" variable="$p_aOptions">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="363" name="throws" description="" type="\PPI\PDO_Exception">
+            <type by_reference="false">\PPI\PDO_Exception</type>
+          </tag>
+          <tag line="363" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+        <argument line="374">
+          <name>$p_aRecord</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="391" package="Default">
+        <name>insert</name>
+        <docblock>
+          <description>Insert a record into the current table</description>
+          <long-description/>
+          <tag line="385" name="param" description="" type="array" variable="$p_aRecord">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="385" name="return" description="Last Insert ID" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+        <argument line="391">
+          <name>$p_aRecord</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="411" package="Default">
+        <name>insertMultiple</name>
+        <docblock>
+          <description>Performs extended inserts</description>
+          <long-description/>
+          <tag line="405" name="param" description="&lt;p&gt;Multi Dimensional array of records to insert&lt;/p&gt;" type="array" variable="$p_aRecords">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="405" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+        <argument line="411">
+          <name>$p_aRecords</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="465" package="Default">
+        <name>update</name>
+        <docblock>
+          <description>Update a record</description>
+          <long-description/>
+          <tag line="457" name="param" description="&lt;p&gt;Record Data&lt;/p&gt;" type="array" variable="$p_aRecord">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="457" name="param" description="&lt;p&gt;Optional where clause&lt;/p&gt;" type="string" variable="$p_mWhere">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="457" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="457" name="throws" description="" type="\PPI\Model\ModelException">
+            <type by_reference="false" link="db_Model_ModelException.html#\PPI\Model\ModelException">\PPI\Model\ModelException</type>
+          </tag>
+        </docblock>
+        <argument line="465">
+          <name>$p_aRecord</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="465">
+          <name>$p_mWhere</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="492" package="Default">
+        <name>parse_reserved_keys</name>
+        <docblock>
+          <description>This function is used to backtick all fields</description>
+          <long-description/>
+          <tag line="486" name="param" description="&lt;p&gt;The array of key names&lt;/p&gt;" type="array" variable="$p_aKeys">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="486" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="492">
+          <name>$p_aKeys</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="511" package="Default">
+        <name>getRecord</name>
+        <docblock>
+          <description>This function is the same as getList() however it will return you its first row directly as an array</description>
+          <long-description/>
+          <tag line="500" name="see" description="\PPI\$this-&gt;getList()" refers="\PPI\$this-&gt;getList()"/>
+          <tag line="500" name="todo" description="Perform a fetchMode check to check the return type"/>
+          <tag line="500" name="param" description="&lt;p&gt;The filter.&lt;/p&gt;" type="mixed" variable="$p_mFilter">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="500" name="param" description="&lt;p&gt;The order clause&lt;/p&gt;" type="string" variable="$p_sOrder">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="500" name="param" description="&lt;p&gt;The limit clause&lt;/p&gt;" type="integer" variable="$p_iLimit">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="500" name="param" description="" type="array" variable="$p_aExtras">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="500" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="511">
+          <name>$p_mFilter</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="511">
+          <name>$p_sOrder</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="511">
+          <name>$p_iLimit</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="511">
+          <name>$p_sGroup</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="528" package="Default">
+        <name>getList</name>
+        <docblock>
+          <description>From the instance information, retreives information from the table.</description>
+          <long-description>&lt;p&gt;Building up query of orders, limits and clauses it returns a data structure of the records found.
+If you do not have instance information, or would like to access another table then $p_aExtras should be populated.&lt;/p&gt;</long-description>
+          <tag line="515" name="param" description="&lt;p&gt;WHERE&lt;/p&gt;" type="string" variable="$p_mFilter">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="515" name="param" description="&lt;p&gt;ORDER BY&lt;/p&gt;" type="string" variable="$p_sOrder">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="515" name="param" description="&lt;p&gt;LIMIT&lt;/p&gt;" type="string" variable="$p_iLimit">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="515" name="param" description="&lt;p&gt;GROUP BY&lt;/p&gt;" type="string" variable="$p_sGroup">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="515" name="throws" description="" type="\PPI\Model\ModelException">
+            <type by_reference="false" link="db_Model_ModelException.html#\PPI\Model\ModelException">\PPI\Model\ModelException</type>
+          </tag>
+          <tag line="515" name="throws" description="" type="\PPI\PDO_Exception">
+            <type by_reference="false">\PPI\PDO_Exception</type>
+          </tag>
+          <tag line="515" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="528">
+          <name>$p_mFilter</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="528">
+          <name>$p_sOrder</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="528">
+          <name>$p_iLimit</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="528">
+          <name>$p_sGroup</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="573" package="Default">
+        <name>findByField</name>
+        <docblock>
+          <description>Find a value by its field name. eg: username = paul</description>
+          <long-description/>
+          <tag line="566" name="param" description="" type="string" variable="$field">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="566" name="param" description="" type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="566" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="573">
+          <name>$field</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="573">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="582" package="Default">
+        <name>fetch</name>
+        <docblock>
+          <description>Fetch a singular row from the getList()</description>
+          <long-description/>
+          <tag line="577" name="see" description="\PPI\PPI_Model-&gt;getList()" refers="\PPI\PPI_Model-&gt;getList()"/>
+        </docblock>
+        <argument line="582">
+          <name>$p_mFilter</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="582">
+          <name>$p_sOrder</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="582">
+          <name>$p_iLimit</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="582">
+          <name>$p_sGroup</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="593" package="Default">
+        <name>find</name>
+        <docblock>
+          <description>This will return you one row by getting a record by its primary key.</description>
+          <long-description/>
+          <tag line="586" name="param" description="" type="integer" variable="$search">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="586" name="param" description="&lt;p&gt;Default is false. If true will set the meta data upon successfull fetch() of the record&lt;/p&gt;&#10;" type="boolean" variable="$p_bSetMetaData">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="586" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="593">
+          <name>$search</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="593">
+          <name>$p_bSetMetaData</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="621" package="Default">
+        <name>isExist</name>
+        <docblock>
+          <description>Identify if a record exists or not, specified by the primary key</description>
+          <long-description/>
+          <tag line="615" name="param" description="" type="integer" variable="$p_iPrimaryKey">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="615" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="621">
+          <name>$p_iPrimaryKey</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="631" package="Default">
+        <name>setFetchMode</name>
+        <docblock>
+          <description>This sets the fetch mode for PDO to retreive records</description>
+          <long-description/>
+          <tag line="625" name="param" description="" type="string" variable="$p_sMode">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="625" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="631">
+          <name>$p_sMode</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="658" package="Default">
+        <name>makeIN</name>
+        <docblock>
+          <description>Create an IN statement from an input such as a string or an array</description>
+          <long-description/>
+          <tag line="652" name="param" description="&lt;p&gt;The values to be added to the IN()&lt;/p&gt;&#10;" type="mixed" variable="$p_mValues">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="652" name="return" description="On error return false. On sucess return the IN() filled string" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="658">
+          <name>$p_mValues</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="684" package="Default">
+        <name>findMax</name>
+        <docblock>
+          <description>Perform a MySQL MAX() lookup on the current table.</description>
+          <long-description/>
+          <tag line="677" name="param" description="&lt;p&gt;The field name you wish to perform the max() on&lt;/p&gt;&#10;" type="string" variable="$p_sField">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="677" name="param" description="&lt;p&gt;The optional clause for the query&lt;/p&gt;" type="string" variable="$p_sClause">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="677" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+        <argument line="684">
+          <name>$p_sField</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="684">
+          <name>$p_sClause</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="695" package="Default">
+        <name>findMin</name>
+        <docblock>
+          <description>Perform a MySQL MAX() lookup on the current table.</description>
+          <long-description/>
+          <tag line="688" name="param" description="&lt;p&gt;The field name you wish to perform the min() on&lt;/p&gt;&#10;" type="string" variable="$p_sField">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="688" name="param" description="&lt;p&gt;The optional clause for the query&lt;/p&gt;" type="string" variable="$p_sClause">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="688" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+        <argument line="695">
+          <name>$p_sField</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="695">
+          <name>$p_sClause</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" line="707" package="Default">
+        <name>findMinMax</name>
+        <docblock>
+          <description>Handler function for MIN() and MAX()</description>
+          <long-description/>
+          <tag line="699" name="param" description="&lt;p&gt;Type ('MIN' or 'MAX')&lt;/p&gt;&#10;" type="string" variable="$p_sType">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="699" name="param" description="&lt;p&gt;The field to perform the minmax on&lt;/p&gt;" type="string" variable="$p_sField">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="699" name="param" description="&lt;p&gt;Optional clause to apply to the query&lt;/p&gt;" type="string" variable="$p_sClause">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="699" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+        <argument line="707">
+          <name>$p_sType</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="707">
+          <name>$p_sField</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="707">
+          <name>$p_sClause</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="725" package="Default">
+        <name>isRecordExist</name>
+        <docblock>
+          <description>Check if record(s) exist</description>
+          <long-description/>
+          <tag line="718" name="param" description="" type="mixed" variable="$p_sRecordName">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="718" name="param" description="" type="mixed" variable="$p_sRecordValue">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="718" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="725">
+          <name>$p_sRecordName</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="725">
+          <name>$p_sRecordValue</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="740" package="Default">
+        <name>isTableExist</name>
+        <docblock>
+          <description>This checks if the table for your model exists</description>
+          <long-description/>
+          <tag line="734" name="param" description="" type="string" variable="$p_sTableName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="734" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="740">
+          <name>$p_sTableName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="750" package="Default">
+        <name>isDBExist</name>
+        <docblock>
+          <description>This checks if a DB exists or not.</description>
+          <long-description/>
+          <tag line="744" name="param" description="" type="string" variable="$p_sDBName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="744" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="750">
+          <name>$p_sDBName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="761" package="Default">
+        <name>getRandom</name>
+        <docblock>
+          <description>Obtain a random record from the table, with optional where clause and ability to specify the amount of random items.</description>
+          <long-description/>
+          <tag line="754" name="param" description="&lt;p&gt;Where clause&lt;/p&gt;" type="string" variable="$p_sWhere">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="754" name="param" description="&lt;p&gt;Amount of rows to return&lt;/p&gt;" type="integer" variable="$p_iAmount">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="754" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="761">
+          <name>$p_sWhere</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="761">
+          <name>$p_iAmount</name>
+          <default>1</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="775" package="Default">
+        <name>countRecords</name>
+        <docblock>
+          <description>Counts the number of records returned from your table</description>
+          <long-description/>
+          <tag line="767" name="param" description="&lt;p&gt;The Clause&lt;/p&gt;" type="string" variable="$p_sFilter">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="767" name="param" description="&lt;p&gt;The Limit&lt;/p&gt;" type="string" variable="$p_iLimit">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="767" name="param" description="&lt;p&gt;The Group By&lt;/p&gt;" type="string" variable="$p_sGroup">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="767" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+        <argument line="775">
+          <name>$p_sFilter</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="775">
+          <name>$p_iLimit</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="775">
+          <name>$p_sGroup</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="792" package="Default">
+        <name>delRecord</name>
+        <docblock>
+          <description>Delete a record by clause</description>
+          <long-description/>
+          <tag line="786" name="param" description="&lt;p&gt;The where clause&lt;/p&gt;" type="mixed" variable="$p_mClause">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="786" name="return" description="The number of rows affected" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+        <argument line="792">
+          <name>$p_mClause</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="806" package="Default">
+        <name>truncate</name>
+        <docblock>
+          <description>Truncate the table assigned to this model</description>
+          <long-description/>
+          <tag line="801" name="return" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="817" package="Default">
+        <name>getOrder</name>
+        <docblock>
+          <description>Returns the string representation for an ORDER BY</description>
+          <long-description/>
+          <tag line="810" name="param" description="" type="string" variable="$p_sFieldID">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="810" name="param" description="" type="string" variable="$p_sDirection">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="810" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="817">
+          <name>$p_sFieldID</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="817">
+          <name>$p_sDirection</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="828" package="Default">
+        <name>getLimit</name>
+        <docblock>
+          <description>Returns the string representation for a LIMIT</description>
+          <long-description/>
+          <tag line="821" name="param" description="" type="string" variable="$p_iStart">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="821" name="param" description="" type="string" variable="$p_iEnd">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="821" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="828">
+          <name>$p_iStart</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="828">
+          <name>$p_iEnd</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="837" package="Default">
+        <name>getLastQuery</name>
+        <docblock>
+          <description>Return the last query performed</description>
+          <long-description/>
+          <tag line="832" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="846" package="Default">
+        <name>getLastError</name>
+        <docblock>
+          <description>Return the last mysql_error() generated</description>
+          <long-description/>
+          <tag line="841" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="855" package="Default">
+        <name>getHandler</name>
+        <docblock>
+          <description>return the connection handler generated from mysql_connect()</description>
+          <long-description/>
+          <tag line="850" name="return" description="" type="\PPI\PDO">
+            <type by_reference="false">\PPI\PDO</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="864" package="Default">
+        <name>getPrimaryKey</name>
+        <docblock>
+          <description>Get the primary key assigned to this Model</description>
+          <long-description/>
+          <tag line="859" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="873" package="Default">
+        <name>getTableName</name>
+        <docblock>
+          <description>Get the table name assigned to this Model</description>
+          <long-description/>
+          <tag line="868" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="883" package="Default">
+        <name>quote</name>
+        <docblock>
+          <description>Sanitize DB input</description>
+          <long-description/>
+          <tag line="877" name="param" description="" type="mixed" variable="$var">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="877" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="883">
+          <name>$var</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="897" package="Default">
+        <name>getConfig</name>
+        <docblock>
+          <description>Get the config object</description>
+          <long-description/>
+          <tag line="892" name="return" description="" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="906" package="Default">
+        <name>getRegistry</name>
+        <docblock>
+          <description>Get the registry object</description>
+          <long-description/>
+          <tag line="901" name="return" description="" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="915" package="Default">
+        <name>getSession</name>
+        <docblock>
+          <description>Get the session object</description>
+          <long-description/>
+          <tag line="910" name="return" description="" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="925" package="Default">
+        <name>isCharsetExists</name>
+        <docblock>
+          <description>Check if a charset exists</description>
+          <long-description/>
+          <tag line="919" name="param" description="&lt;p&gt;The Charset&lt;/p&gt;" type="string" variable="$charset">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="919" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="925">
+          <name>$charset</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="935" package="Default">
+        <name>isValidCharset</name>
+        <docblock>
+          <description>Check if a charset exists in the current database</description>
+          <long-description/>
+          <tag line="929" name="param" description="&lt;p&gt;The Charset&lt;/p&gt;" type="string" variable="$charset">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="929" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="935">
+          <name>$charset</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="959" package="Default">
+        <name>getSystemVar</name>
+        <docblock>
+          <description>Return a systemvar from the MySQLd</description>
+          <long-description/>
+          <tag line="953" name="param" description="&lt;p&gt;Var Name&lt;/p&gt;" type="string" variable="$p_sVar">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="953" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="959">
+          <name>$p_sVar</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

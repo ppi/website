@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="12" namespace="default" package="Model">
+      <name>PPI_Model_Auth</name>
+      <extends>\PPI_Model</extends>
+      <full_name>\PPI_Model_Auth</full_name>
+      <docblock>
+        <description/>
+        <long-description/>
+        <tag line="3" name="version" description="1.0"/>
+        <tag line="3" name="author" description="Paul Dragoonis" link="mailto:dragoonis@php.net"/>
+        <tag line="3" name="license" description="MIT" link="http://opensource.org/licenses/mit-license.php"/>
+        <tag line="3" name="copyright" description="Digiflex Development"/>
+        <tag line="3" name="package" description="Model"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="13" package="Default">
+        <name>$_name</name>
+        <default>'ppi_auth'</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="14" package="Default">
+        <name>$_primary</name>
+        <default>'id'</default>
+      </property>
+      <property final="false" static="false" visibility="public" line="15" package="Default">
+        <name>$_addEditFormStructure</name>
+        <default>array(
+			'fields' =&gt; array(
+				'controller'    =&gt; array('type' =&gt; 'dropdown'</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="27" package="Default">
+        <name>__construct</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="37" package="Default">
+        <name>getAuths</name>
+        <docblock>
+          <description>Build up a data structure of all the auth rules defined</description>
+          <long-description/>
+          <tag line="31" name="param" description="" type="string" variable="$p_sController">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="31" name="param" description="" type="string" variable="$p_sMethod">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="31" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="37">
+          <name>$p_sController</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="60" package="Default">
+        <name>verifyUrlAuth</name>
+        <docblock>
+          <description>It will check the data structure from self::getAuths and try to find a rule for this scenario
+Depending if its allow or deny, it will return a boolean.</description>
+          <long-description>&lt;p&gt;By default, access is denied, so if what it's looking for isn't found, then it will be denied.&lt;/p&gt;</long-description>
+          <tag line="51" name="param" description="" type="string" variable="$p_sController">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="51" name="param" description="" type="string" variable="$p_sMethod">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="51" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="60">
+          <name>$p_sController</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="60">
+          <name>$p_sMethod</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="92" package="Default">
+        <name>deleteRecord</name>
+        <argument line="92">
+          <name>$p_iAuthID</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

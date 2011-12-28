@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="10" namespace="PPI\View\Renderers" package="Default">
+      <name>PHP</name>
+      <extends/>
+      <full_name>\PPI\View\Renderers\PHP</full_name>
+      <implements link="db_View_Renderers_RendererInterface.html#\PPI\View\Renderers\RendererInterface">\PPI\View\Renderers\RendererInterface</implements>
+      <property final="false" static="false" visibility="protected" line="17" package="Default">
+        <name>$_viewVars</name>
+        <default>array()</default>
+        <docblock>
+          <description>The variables that are to be rendered in the View file</description>
+          <long-description/>
+          <tag line="12" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="24" package="Default">
+        <name>$_config</name>
+        <default>null</default>
+        <docblock>
+          <description>The config object</description>
+          <long-description/>
+          <tag line="19" name="var" description="" type="null|object">
+            <type by_reference="false">null</type>
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="31" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>The constructor</description>
+          <long-description/>
+          <tag line="26" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="31">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="41" package="Default">
+        <name>render</name>
+        <docblock>
+          <description>Actually load in the view and render it.</description>
+          <long-description/>
+          <tag line="35" name="param" description="&lt;p&gt;The filename to load, such as the master template&lt;/p&gt;" type="string" variable="$templateName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="35" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="41">
+          <name>$templateName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="59" package="Default">
+        <name>getTemplatePath</name>
+        <docblock>
+          <description>Get the full path to the template file by providing the template name</description>
+          <long-description/>
+          <tag line="50" name="param" description="" type="string" variable="$templateName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="50" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="50" name="todo" description="Have a hashmap class property to store $templateName =&gt; path for caching.&#10;This means we don't need to lookup the config or check if an extension persists."/>
+        </docblock>
+        <argument line="59">
+          <name>$templateName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="72" package="Default">
+        <name>templateExists</name>
+        <docblock>
+          <description>Check if a template exists</description>
+          <long-description/>
+          <tag line="66" name="param" description="&lt;p&gt;The Template Name&lt;/p&gt;" type="string" variable="$templateName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="66" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="72">
+          <name>$templateName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" line="83" package="Default">
+        <name>checkTemplateExists</name>
+        <docblock>
+          <description>Check if a template exists. If it does not, throw an exception</description>
+          <long-description/>
+          <tag line="76" name="throws" description="" type="\PPI\Core\CoreException">
+            <type by_reference="false" link="db_Core_CoreException.html#\PPI\Core\CoreException">\PPI\Core\CoreException</type>
+          </tag>
+          <tag line="76" name="param" description="&lt;p&gt;The Template Name&lt;/p&gt;" type="string" variable="$templateName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="76" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="83">
+          <name>$templateName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="96" package="Default">
+        <name>assign</name>
+        <docblock>
+          <description>Assign a value for this current view</description>
+          <long-description/>
+          <tag line="89" name="param" description="&lt;p&gt;The variable name&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="89" name="param" description="&lt;p&gt;The variable value&lt;/p&gt;" type="string" variable="$val">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="89" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="96">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="96">
+          <name>$val</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="105" package="Default">
+        <name>getTemplateExtension</name>
+        <docblock>
+          <description>Get the default extension for our view files, config override or defaulting to .php</description>
+          <long-description/>
+          <tag line="100" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="114" package="Default">
+        <name>getDefaultMasterTemplate</name>
+        <docblock>
+          <description>Get the default master template filename</description>
+          <long-description/>
+          <tag line="109" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="123" package="Default">
+        <name>getDefaultExtension</name>
+        <docblock>
+          <description>Get the default file extension for templates on this renderer</description>
+          <long-description/>
+          <tag line="118" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

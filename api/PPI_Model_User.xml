@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="12" namespace="PPI\Model" package="Default">
+      <name>User</name>
+      <extends>\App\Model\Application</extends>
+      <full_name>\PPI\Model\User</full_name>
+      <property final="false" static="false" visibility="public" line="13" package="Default">
+        <name>$_encryptionAlgorithm</name>
+        <default>'sha1'</default>
+      </property>
+      <property final="false" static="false" visibility="private" line="15" package="Default">
+        <name>$_usernameField</name>
+        <default>'email'</default>
+      </property>
+      <property final="false" static="false" visibility="private" line="17" package="Default">
+        <name>$_passwordField</name>
+        <default>'password'</default>
+      </property>
+      <property final="false" static="false" visibility="private" line="18" package="Default">
+        <name>$_iTableName</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="private" line="19" package="Default">
+        <name>$_iTableIndex</name>
+        <default/>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="21" package="Default">
+        <name>__construct</name>
+        <argument line="21">
+          <name>$p_iTableName</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="21">
+          <name>$p_iTableIndex</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="21">
+          <name>$p_sBdbInfo</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="21">
+          <name>$p_iUserID</name>
+          <default>0</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="34" package="Default">
+        <name>putRecord</name>
+        <argument line="34">
+          <name>$aData</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="87" package="Default">
+        <name>activate</name>
+        <argument line="87">
+          <name>$iUserID</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="87">
+          <name>$sActivationCode</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="97" package="Default">
+        <name>updatePassword</name>
+        <docblock>
+          <description>Update a users password</description>
+          <long-description/>
+          <tag line="91" name="param" description="&lt;p&gt;The User ID we wish to update&lt;/p&gt;" type="integer" variable="$p_iUserID">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="91" name="param" description="&lt;p&gt;The plaintext password to update&lt;/p&gt;" type="string" variable="$p_sPassword">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="91" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="97">
+          <name>$p_iUserID</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="97">
+          <name>$p_sPassword</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="133" package="Default">
+        <name>login</name>
+        <docblock>
+          <description>Login function for the user, passing the username and password.</description>
+          <long-description/>
+          <tag line="127" name="param" description="&lt;p&gt;The username (the value of the usernameField from the config)&lt;/p&gt;&#10;" type="string" variable="$username">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="127" name="param" description="&lt;p&gt;The plaintext password&lt;/p&gt;" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="127" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="133">
+          <name>$username</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="133">
+          <name>$password</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="153" package="Default">
+        <name>logout</name>
+        <docblock>
+          <description>Log the user out. Wipe all the session data</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="161" package="Default">
+        <name>isLoggedIn</name>
+        <docblock>
+          <description>Verify if the user is logged in or not</description>
+          <long-description/>
+          <tag line="157" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="165" package="Default">
+        <name>getRoleGroups</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="174" package="Default">
+        <name>getRoleType</name>
+        <argument line="174">
+          <name>$p_iRoleID</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="185" package="Default">
+        <name>getRoleID</name>
+        <argument line="185">
+          <name>$p_sRoleType</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="197" package="Default">
+        <name>getID</name>
+        <argument line="197">
+          <name>$where</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="211" package="Default">
+        <name>encryptNewPassword</name>
+        <docblock>
+          <description>Generate a new password</description>
+          <long-description/>
+          <tag line="205" name="param" description="&lt;p&gt;The plaintext password&lt;/p&gt;" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="205" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="211">
+          <name>$password</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="234" package="Default">
+        <name>encryptPassword</name>
+        <docblock>
+          <description>Encrypt + salt the users password.</description>
+          <long-description/>
+          <tag line="229" name="param" description="&lt;p&gt;The salt&lt;/p&gt;" type="string" variable="$salt">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="229" name="param" description="&lt;p&gt;The plaintext password&lt;/p&gt;" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="234">
+          <name>$salt</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="234">
+          <name>$password</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="245" package="Default">
+        <name>checkPassword</name>
+        <docblock>
+          <description>Verify the username against the password</description>
+          <long-description/>
+          <tag line="238" name="param" description="&lt;p&gt;The username&lt;/p&gt;" type="string" variable="$username">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="238" name="param" description="&lt;p&gt;The password&lt;/p&gt;" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="238" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="245">
+          <name>$username</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="245">
+          <name>$password</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="257" package="Default">
+        <name>setAlgorithm</name>
+        <docblock>
+          <description>Setter for the algorithm</description>
+          <long-description/>
+          <tag line="253" name="param" description="&lt;p&gt;The algorithm function&lt;/p&gt;" type="string" variable="$algorithm">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="257">
+          <name>$algorithm</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="265" package="Default">
+        <name>getAlgorithm</name>
+        <docblock>
+          <description>Get the current algorithm set</description>
+          <long-description/>
+          <tag line="261" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="276" package="Default">
+        <name>sendRecoverEmail</name>
+        <docblock>
+          <description>Send the password recovery email to the user.</description>
+          <long-description/>
+          <tag line="269" name="param" description="&lt;p&gt;The Email Address&lt;/p&gt;" type="string" variable="$p_sEmail">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="269" name="param" description="&lt;p&gt;The Subject&lt;/p&gt;" type="string" variable="$p_sSubject">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="269" name="param" description="&lt;p&gt;The Message&lt;/p&gt;" type="string" variable="$p_sMessage">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="269" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="276">
+          <name>$p_aUser</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="276">
+          <name>$p_sSubject</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="276">
+          <name>$p_sMessage</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="311" package="Default">
+        <name>verifyRecoverCode</name>
+        <docblock>
+          <description>Incomplete</description>
+          <long-description/>
+          <tag line="306" name="todo" description="everything"/>
+          <tag line="306" name="param" description="&lt;p&gt;Recovery code&lt;/p&gt;" type="string" variable="$p_sRecoverCode">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="311">
+          <name>$p_sRecoverCode</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="319" package="Default">
+        <name>getRecoverFormStructure</name>
+        <docblock>
+          <description>The formbuilder structure for the Password Recovery module.</description>
+          <long-description/>
+          <tag line="315" name="return" description="The form structure" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

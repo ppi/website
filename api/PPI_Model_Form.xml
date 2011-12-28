@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="13" namespace="PPI\Model" package="Default">
+      <name>Form</name>
+      <extends/>
+      <full_name>\PPI\Model\Form</full_name>
+      <property final="false" static="false" visibility="private" line="18" package="Default">
+        <name>$_formStructure</name>
+        <default>array()</default>
+        <docblock>
+          <description>The FormBuilder internal formStructure. This consists of the field and their rules</description>
+          <long-description/>
+          <tag line="14" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="25" package="Default">
+        <name>$_formFields</name>
+        <default>array()</default>
+        <docblock>
+          <description/>
+          <long-description/>
+          <tag line="20" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="31" package="Default">
+        <name>$_elementErrors</name>
+        <default>array()</default>
+        <docblock>
+          <description>The list of errors assigned against a form field</description>
+          <long-description/>
+          <tag line="27" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="37" package="Default">
+        <name>$_formAction</name>
+        <default>''</default>
+        <docblock>
+          <description>The action attribute of the &lt;form&gt; tag</description>
+          <long-description/>
+          <tag line="32" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="44" package="Default">
+        <name>$oHooker</name>
+        <default>null</default>
+        <docblock>
+          <description>The hooker object to allow user control over the behaviour of FormBuilder</description>
+          <long-description/>
+          <tag line="39" name="var" description="The FormBuilder Hooker" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="51" package="Default">
+        <name>$_formName</name>
+        <default>''</default>
+        <docblock>
+          <description>The symbolic name assigned to this current form.</description>
+          <long-description/>
+          <tag line="46" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="58" package="Default">
+        <name>$_formMethod</name>
+        <default>''</default>
+        <docblock>
+          <description>The method attribute on the &lt;form&gt; tag</description>
+          <long-description/>
+          <tag line="53" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="65" package="Default">
+        <name>$_defaultsApplied</name>
+        <default>false</default>
+        <docblock>
+          <description>Whether or not the setDefaults() function has been called</description>
+          <long-description/>
+          <tag line="60" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="72" package="Default">
+        <name>$_renderFormTag</name>
+        <default>true</default>
+        <docblock>
+          <description>Whether or not to render the &lt;form&gt; tag</description>
+          <long-description/>
+          <tag line="67" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="79" package="Default">
+        <name>$_renderSubmitTag</name>
+        <default>true</default>
+        <docblock>
+          <description>Whether or not to render the submit button on the form</description>
+          <long-description/>
+          <tag line="74" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="86" package="Default">
+        <name>$_renderJSValidation</name>
+        <default>true</default>
+        <docblock>
+          <description>Whether or not to perform JS validation when rendering the form.</description>
+          <long-description/>
+          <tag line="81" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="95" package="Default">
+        <name>$_reservedKeys</name>
+        <default>array('type'</default>
+        <docblock>
+          <description>We use this variable to determine the predefined amount of keys against a field
+This means any fields not in this list will be added to the fields declaration
+EG: 'class' =&gt; 'myClass' will be converted to class="myClass"</description>
+          <long-description/>
+          <tag line="88" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="102" package="Default">
+        <name>$_isReCaptcha</name>
+        <default>false</default>
+        <docblock>
+          <description>To determine if recaptcha has been set on one of the fields</description>
+          <long-description/>
+          <tag line="97" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="109" package="Default">
+        <name>$_captchaFields</name>
+        <default>array()</default>
+        <docblock>
+          <description>Not sure what this is need to identify but i think it's the field name that's been assigned a recaptcha type</description>
+          <long-description/>
+          <tag line="104" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="116" package="Default">
+        <name>$_isTinyMCEEnabled</name>
+        <default>false</default>
+        <docblock>
+          <description>To determine whether or not tineMCE has been initiated on one of the fields</description>
+          <long-description/>
+          <tag line="111" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="122" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>The constructor
+Setup the hooker object</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="133" package="Default">
+        <name>init</name>
+        <docblock>
+          <description>Initialise the form with name,action and method.</description>
+          <long-description/>
+          <tag line="125" name="param" description="" type="string" variable="$formName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="125" name="param" description="" type="string" variable="$formAction">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="125" name="param" description="" type="string" variable="$formMethod">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="125" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="133">
+          <name>$formName</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="133">
+          <name>$formAction</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="133">
+          <name>$formMethod</name>
+          <default>'post'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="148" package="Default">
+        <name>setElementError</name>
+        <docblock>
+          <description>Add an error against a specific field.</description>
+          <long-description/>
+          <tag line="141" name="param" description="" type="string" variable="$elementName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="141" name="param" description="" type="string" variable="$errorMessage">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="141" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="148">
+          <name>$elementName</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="148">
+          <name>$errorMessage</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="161" package="Default">
+        <name>isValidated</name>
+        <docblock>
+          <description>Checks if the form is validated</description>
+          <long-description/>
+          <tag line="156" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="181" package="Default">
+        <name>isSubmitted</name>
+        <docblock>
+          <description>Checks if the form has been submitted or not.</description>
+          <long-description/>
+          <tag line="176" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="205" package="Default">
+        <name>setSubmitLabel</name>
+        <docblock>
+          <description>Overwrites the submit label for the form</description>
+          <long-description/>
+          <tag line="199" name="param" description="&lt;p&gt;The Label&lt;/p&gt;" type="string" variable="$sLabel">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="199" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="205">
+          <name>$sLabel</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="217" package="Default">
+        <name>disableForm</name>
+        <docblock>
+          <description>This disables the &lt;form&gt;&lt;/form&gt; tags from being renered</description>
+          <long-description/>
+          <tag line="212" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="226" package="Default">
+        <name>disableSubmit</name>
+        <docblock>
+          <description>Disables the submit button from being rendered</description>
+          <long-description/>
+          <tag line="221" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="235" package="Default">
+        <name>enableSubmit</name>
+        <docblock>
+          <description>Enables the submit button from being rendered</description>
+          <long-description/>
+          <tag line="230" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="244" package="Default">
+        <name>enableForm</name>
+        <docblock>
+          <description>This enables the &lt;form&gt;&lt;/form&gt; tags from being renered</description>
+          <long-description/>
+          <tag line="239" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="255" package="Default">
+        <name>getSubmitValues</name>
+        <docblock>
+          <description>This gets the submitted values from the form.</description>
+          <long-description>&lt;p&gt;If $fields is submitted then it only returns the fields specified. Otherwise gets all fields&lt;/p&gt;</long-description>
+          <tag line="248" name="param" description="&lt;p&gt;[$fields] Key =&gt; Value result of the form&lt;/p&gt;&#10;" type="array" variable="$fields">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="248" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="255">
+          <name>$fields</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="306" package="Default">
+        <name>setFormStructure</name>
+        <docblock>
+          <description>Setting the form structure for formBuilder, this can come from a pre-created array.</description>
+          <long-description>&lt;p&gt;If the $structure parameter isn't passed it knows to get this form from the DB.&lt;/p&gt;</long-description>
+          <tag line="297" name="todo" description="If a recaptcha form element is found, then we automatically set a rule for it."/>
+          <tag line="297" name="param" description="&lt;p&gt;The structure, if this is false then it tries to get the structure from the DB&lt;/p&gt;" type="false|array" variable="$structure">
+            <type by_reference="false">false</type>
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="297" name="throws" description="" type="\PPI\Core\CoreException">
+            <type by_reference="false" link="db_Core_CoreException.html#\PPI\Core\CoreException">\PPI\Core\CoreException</type>
+          </tag>
+          <tag line="297" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="306">
+          <name>$structure</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="389" package="Default">
+        <name>setDefaults</name>
+        <docblock>
+          <description>Sets the default values for the form fields specified</description>
+          <long-description/>
+          <tag line="383" name="param" description="" type="array" variable="$defaults">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="383" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="389">
+          <name>$defaults</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="409" package="Default">
+        <name>refreshDefaults</name>
+        <docblock>
+          <description>This is used to update the form defaults. Performs a hook to FormHooker-&gt;dataModify</description>
+          <long-description/>
+          <tag line="404" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="430" package="Default">
+        <name>validateForm</name>
+        <docblock>
+          <description>Validates an error or an array of errors against one field at a time.</description>
+          <long-description/>
+          <tag line="425" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="559" package="Default">
+        <name>getFormDetails</name>
+        <docblock>
+          <description>Get the options for the form</description>
+          <long-description/>
+          <tag line="554" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="576" package="Default">
+        <name>getFormStructure</name>
+        <docblock>
+          <description>Get the form structure</description>
+          <long-description/>
+          <tag line="571" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="585" package="Default">
+        <name>getRenderInformation</name>
+        <docblock>
+          <description>Get the combined information to be passed to the view renderer</description>
+          <long-description/>
+          <tag line="580" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="600" package="Default">
+        <name>getFormErrors</name>
+        <docblock>
+          <description>Get the form errors</description>
+          <long-description/>
+          <tag line="594" name="param" description="&lt;p&gt;Default is false. If false will give the errors, else a count of the errors&lt;/p&gt;" type="boolean" variable="$count">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="594" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="600">
+          <name>$count</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="609" package="Default">
+        <name>getFormName</name>
+        <docblock>
+          <description>Get the form name</description>
+          <long-description/>
+          <tag line="604" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="618" package="Default">
+        <name>getFormID</name>
+        <docblock>
+          <description>Get the form ID</description>
+          <long-description/>
+          <tag line="613" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="628" package="Default">
+        <name>setTinyMCE</name>
+        <docblock>
+          <description>Enable tinyMCE rendering</description>
+          <long-description/>
+          <tag line="622" name="param" description="" type="boolean" variable="$p_sType">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="622" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="628">
+          <name>$p_sType</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="641" package="Default">
+        <name>getTinyMCE</name>
+        <docblock>
+          <description>Get if tinyMCE is enabled</description>
+          <long-description/>
+          <tag line="636" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

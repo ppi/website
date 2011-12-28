@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="11" namespace="PPI\Model" package="Default">
+      <name>Shared</name>
+      <extends link="db_Model.html#\PPI\Model">\PPI\Model</extends>
+      <full_name>\PPI\Model\Shared</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" line="19" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>The shared model you can pass in a dynamic table name, primary key into</description>
+          <long-description/>
+          <tag line="13" name="param" description="&lt;p&gt;The table name&lt;/p&gt;" type="string" variable="$p_sTableName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="13" name="param" description="&lt;p&gt;The primary key&lt;/p&gt;" type="string" variable="$p_sPrimaryKey">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="19">
+          <name>$p_sTableName</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="19">
+          <name>$p_sPrimaryKey</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+    </class>

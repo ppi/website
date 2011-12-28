@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="9" namespace="PPI" package="Default">
+      <name>Crud</name>
+      <extends/>
+      <full_name>\PPI\Crud</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" line="17" package="Default">
+        <name>getFormStructure</name>
+        <docblock>
+          <description>This function is used to parse/load a yaml file.</description>
+          <long-description/>
+          <tag line="11" name="param" description="" type="string" variable="$formName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="11" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="17">
+          <name>$formName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

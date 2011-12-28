@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="11" namespace="PPI\Controller" package="Default">
+      <name>User</name>
+      <extends>\App\Controller\Application</extends>
+      <full_name>\PPI\Controller\User</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" line="16" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>The constructor</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" line="26" package="Default">
+        <name>postLoginRedirect</name>
+        <docblock>
+          <description>This method is called after the user logs in successfully, it will determine the location
+where they are redirected to.</description>
+          <long-description/>
+          <tag line="20" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" line="42" package="Default">
+        <name>login</name>
+        <docblock>
+          <description>This function cannot be called directly, it must be extended by a child class and then called.</description>
+          <long-description/>
+          <tag line="37" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" line="79" package="Default">
+        <name>recover</name>
+        <docblock>
+          <description>This function cannot be called directly, it must be extended by a child class and then called.</description>
+          <long-description/>
+          <tag line="74" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" line="176" package="Default">
+        <name>register</name>
+        <docblock>
+          <description>This function cannot be called directly, it must be extended by a child class and then called.</description>
+          <long-description/>
+          <tag line="171" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

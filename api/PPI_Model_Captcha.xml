@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="21" namespace="default" package="Default">
+      <name>PPI_Model_Captcha</name>
+      <extends/>
+      <full_name>\PPI_Model_Captcha</full_name>
+      <docblock>
+        <description>Securimage CAPTCHA Class.</description>
+        <long-description/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="28" package="Default">
+        <name>$image_width</name>
+        <default>175</default>
+        <docblock>
+          <description>The desired width of the CAPTCHA image.</description>
+          <long-description/>
+          <tag line="23" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="35" package="Default">
+        <name>$image_height</name>
+        <default>45</default>
+        <docblock>
+          <description>The desired width of the CAPTCHA image.</description>
+          <long-description/>
+          <tag line="30" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="43" package="Default">
+        <name>$image_type</name>
+        <default>SI_IMAGE_PNG</default>
+        <docblock>
+          <description>The image format for output.&lt;br /&gt;
+Valid options: SI_IMAGE_PNG, SI_IMAGE_JPG, SI_IMAGE_GIF</description>
+          <long-description/>
+          <tag line="37" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="50" package="Default">
+        <name>$code_length</name>
+        <default>4</default>
+        <docblock>
+          <description>The length of the code to generate.</description>
+          <long-description/>
+          <tag line="45" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="59" package="Default">
+        <name>$charset</name>
+        <default>'ABCDEFGHKLMNPRSTUVWYZ23456789'</default>
+        <docblock>
+          <description>The character set for individual characters in the image.&lt;br /&gt;
+Letters are converted to uppercase.&lt;br /&gt;
+The font must support the letters or there may be problematic substitutions.</description>
+          <long-description/>
+          <tag line="52" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="67" package="Default">
+        <name>$wordlist_file</name>
+        <default>'words.txt'</default>
+        <docblock>
+          <description>Create codes using this word list</description>
+          <long-description/>
+          <tag line="62" name="var" description="The path to the word list to use for creating CAPTCHA codes" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="74" package="Default">
+        <name>$use_wordlist</name>
+        <default>true</default>
+        <docblock>
+          <description>True to use a word list file instead of a random code</description>
+          <long-description/>
+          <tag line="69" name="var" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="82" package="Default">
+        <name>$use_gd_font</name>
+        <default>false</default>
+        <docblock>
+          <description>Whether to use a GD font instead of a TTF font.&lt;br /&gt;
+TTF offers more support and options, but use this if your PHP doesn't support TTF.&lt;br /&gt;</description>
+          <long-description/>
+          <tag line="76" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="91" package="Default">
+        <name>$gd_font_file</name>
+        <default>'captcha-font-bubblebath.gdf'</default>
+        <docblock>
+          <description>The GD font to use.&lt;br /&gt;
+Internal gd fonts can be loaded by their number.&lt;br /&gt;
+Alternatively, a file path can be given and the font will be loaded from file.</description>
+          <long-description/>
+          <tag line="84" name="var" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="100" package="Default">
+        <name>$gd_font_size</name>
+        <default>20</default>
+        <docblock>
+          <description>The approximate size of the font in pixels.&lt;br /&gt;
+This does not control the size of the font because that is determined by the GD font itself.&lt;br /&gt;
+This is used to aid the calculations of positioning used by this class.&lt;br /&gt;</description>
+          <long-description/>
+          <tag line="93" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="109" package="Default">
+        <name>$ttf_file</name>
+        <default>"captcha-font-elephant.ttf"</default>
+        <docblock>
+          <description>The path to the TTF font file to load.</description>
+          <long-description/>
+          <tag line="104" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="117" package="Default">
+        <name>$font_size</name>
+        <default>24</default>
+        <docblock>
+          <description>The font size.&lt;br /&gt;
+Depending on your version of GD, this should be specified as the pixel size (GD1) or point size (GD2)&lt;br /&gt;</description>
+          <long-description/>
+          <tag line="111" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="126" package="Default">
+        <name>$text_angle_minimum</name>
+        <default>-20</default>
+        <docblock>
+          <description>The minimum angle in degrees, with 0 degrees being left-to-right reading text.&lt;br /&gt;
+Higher values represent a counter-clockwise rotation.&lt;br /&gt;
+For example, a value of 90 would result in bottom-to-top reading text.</description>
+          <long-description/>
+          <tag line="119" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="135" package="Default">
+        <name>$text_angle_maximum</name>
+        <default>20</default>
+        <docblock>
+          <description>The minimum angle in degrees, with 0 degrees being left-to-right reading text.&lt;br /&gt;
+Higher values represent a counter-clockwise rotation.&lt;br /&gt;
+For example, a value of 90 would result in bottom-to-top reading text.</description>
+          <long-description/>
+          <tag line="128" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="143" package="Default">
+        <name>$text_x_start</name>
+        <default>8</default>
+        <docblock>
+          <description>The X-Position on the image where letter drawing will begin.&lt;br /&gt;
+This value is in pixels from the left side of the image.</description>
+          <long-description/>
+          <tag line="137" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="153" package="Default">
+        <name>$text_minimum_distance</name>
+        <default>30</default>
+        <docblock>
+          <description>Letters can be spaced apart at random distances.&lt;br /&gt;
+This is the minimum distance between two letters.&lt;br /&gt;
+This should be &lt;i&gt;at least&lt;/i&gt; as wide as a font character.&lt;br /&gt;
+Small values can cause letters to be drawn over eachother.&lt;br /&gt;</description>
+          <long-description/>
+          <tag line="145" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="163" package="Default">
+        <name>$text_maximum_distance</name>
+        <default>33</default>
+        <docblock>
+          <description>Letters can be spaced apart at random distances.&lt;br /&gt;
+This is the maximum distance between two letters.&lt;br /&gt;
+This should be &lt;i&gt;at least&lt;/i&gt; as wide as a font character.&lt;br /&gt;
+Small values can cause letters to be drawn over eachother.&lt;br /&gt;</description>
+          <long-description/>
+          <tag line="155" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="172" package="Default">
+        <name>$image_bg_color</name>
+        <default>"#e3daed"</default>
+        <docblock>
+          <description>The background color for the image.&lt;br /&gt;
+This should be specified in HTML hex format.&lt;br /&gt;
+Make sure to include the preceding # sign!</description>
+          <long-description/>
+          <tag line="165" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="183" package="Default">
+        <name>$text_color</name>
+        <default>"#ff0000"</default>
+        <docblock>
+          <description>The text color to use for drawing characters.&lt;br /&gt;
+This value is ignored if $use_multi_text is set to true.&lt;br /&gt;
+Make sure this contrasts well with the background color.&lt;br /&gt;
+Specify the color in HTML hex format with preceding # sign</description>
+          <long-description/>
+          <tag line="174" name="see" description="\Securimage::$use_multi_text" refers="\Securimage::$use_multi_text"/>
+          <tag line="174" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="191" package="Default">
+        <name>$use_multi_text</name>
+        <default>true</default>
+        <docblock>
+          <description>Set to true to use multiple colors for each character.</description>
+          <long-description/>
+          <tag line="185" name="see" description="\Securimage::$multi_text_color" refers="\Securimage::$multi_text_color"/>
+          <tag line="185" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="200" package="Default">
+        <name>$multi_text_color</name>
+        <default>"#0a68dd,#f65c47,#8d32fd"</default>
+        <docblock>
+          <description>String of HTML hex colors to use.&lt;br /&gt;
+Separate each possible color with commas.&lt;br /&gt;
+Be sure to precede each value with the # sign.</description>
+          <long-description/>
+          <tag line="193" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="208" package="Default">
+        <name>$use_transparent_text</name>
+        <default>true</default>
+        <docblock>
+          <description>Set to true to make the characters appear transparent.</description>
+          <long-description/>
+          <tag line="202" name="see" description="\Securimage::$text_transparency_percentage" refers="\Securimage::$text_transparency_percentage"/>
+          <tag line="202" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="217" package="Default">
+        <name>$text_transparency_percentage</name>
+        <default>15</default>
+        <docblock>
+          <description>The percentage of transparency, 0 to 100.&lt;br /&gt;
+A value of 0 is completely opaque, 100 is completely transparent (invisble)</description>
+          <long-description/>
+          <tag line="210" name="see" description="\Securimage::$use_transparent_text" refers="\Securimage::$use_transparent_text"/>
+          <tag line="210" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="230" package="Default">
+        <name>$draw_lines</name>
+        <default>true</default>
+        <docblock>
+          <description>Draw vertical and horizontal lines on the image.</description>
+          <long-description/>
+          <tag line="221" name="see" description="\Securimage::$line_color" refers="\Securimage::$line_color"/>
+          <tag line="221" name="see" description="\Securimage::$line_distance" refers="\Securimage::$line_distance"/>
+          <tag line="221" name="see" description="\Securimage::$line_thickness" refers="\Securimage::$line_thickness"/>
+          <tag line="221" name="see" description="\Securimage::$draw_lines_over_text" refers="\Securimage::$draw_lines_over_text"/>
+          <tag line="221" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="239" package="Default">
+        <name>$line_color</name>
+        <default>"#80BFFF"</default>
+        <docblock>
+          <description>The color of the lines drawn on the image.&lt;br /&gt;
+Use HTML hex format with preceding # sign.</description>
+          <long-description/>
+          <tag line="232" name="see" description="\Securimage::$draw_lines" refers="\Securimage::$draw_lines"/>
+          <tag line="232" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="247" package="Default">
+        <name>$line_distance</name>
+        <default>5</default>
+        <docblock>
+          <description>How far apart to space the lines from eachother in pixels.</description>
+          <long-description/>
+          <tag line="241" name="see" description="\Securimage::$draw_lines" refers="\Securimage::$draw_lines"/>
+          <tag line="241" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="257" package="Default">
+        <name>$line_thickness</name>
+        <default>1</default>
+        <docblock>
+          <description>How thick to draw the lines in pixels.&lt;br /&gt;
+1-3 is ideal depending on distance</description>
+          <long-description/>
+          <tag line="249" name="see" description="\Securimage::$draw_lines" refers="\Securimage::$draw_lines"/>
+          <tag line="249" name="see" description="\Securimage::$line_distance" refers="\Securimage::$line_distance"/>
+          <tag line="249" name="var" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="265" package="Default">
+        <name>$draw_angled_lines</name>
+        <default>false</default>
+        <docblock>
+          <description>Set to true to draw angled lines on the image in addition to the horizontal and vertical lines.</description>
+          <long-description/>
+          <tag line="259" name="see" description="\Securimage::$draw_lines" refers="\Securimage::$draw_lines"/>
+          <tag line="259" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="274" package="Default">
+        <name>$draw_lines_over_text</name>
+        <default>false</default>
+        <docblock>
+          <description>Draw the lines over the text.&lt;br /&gt;
+If fales lines will be drawn before putting the text on the image.&lt;br /&gt;
+This can make the image hard for humans to read depending on the line thickness and distance.</description>
+          <long-description/>
+          <tag line="267" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="283" package="Default">
+        <name>$arc_linethrough</name>
+        <default>true</default>
+        <docblock>
+          <description>For added security, it is a good idea to draw arced lines over the letters to make it harder for bots to segment the letters.&lt;br /&gt;
+Two arced lines will be drawn over the text on each side of the image.&lt;br /&gt;
+This is currently expirimental and may be off in certain configurations.</description>
+          <long-description/>
+          <tag line="276" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="292" package="Default">
+        <name>$arc_line_colors</name>
+        <default>"#8080ff"</default>
+        <docblock>
+          <description>The colors or color of the arced lines.&lt;br /&gt;
+Use HTML hex notation with preceding # sign, and separate each value with a comma.&lt;br /&gt;
+This should be similar to your font color for single color images.</description>
+          <long-description/>
+          <tag line="285" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="301" package="Default">
+        <name>$audio_path</name>
+        <default>'./audio/'</default>
+        <docblock>
+          <description>Full path to the WAV files to use to make the audio files, include trailing /.&lt;br /&gt;
+Name Files  [A-Z0-9].wav</description>
+          <long-description/>
+          <tag line="294" name="since" description="1.0.1"/>
+          <tag line="294" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="313" package="Default">
+        <name>$im</name>
+        <default/>
+        <docblock>
+          <description>The gd image resource.</description>
+          <long-description/>
+          <tag line="307" name="access" description="private"/>
+          <tag line="307" name="var" description="" type="resource">
+            <type by_reference="false">resource</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="321" package="Default">
+        <name>$bgimg</name>
+        <default/>
+        <docblock>
+          <description>The background image resource</description>
+          <long-description/>
+          <tag line="315" name="access" description="private"/>
+          <tag line="315" name="var" description="" type="resource">
+            <type by_reference="false">resource</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="329" package="Default">
+        <name>$code</name>
+        <default/>
+        <docblock>
+          <description>The code generated by the script</description>
+          <long-description/>
+          <tag line="323" name="access" description="private"/>
+          <tag line="323" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="337" package="Default">
+        <name>$code_entered</name>
+        <default/>
+        <docblock>
+          <description>The code that was entered by the user</description>
+          <long-description/>
+          <tag line="331" name="access" description="private"/>
+          <tag line="331" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="345" package="Default">
+        <name>$correct_code</name>
+        <default/>
+        <docblock>
+          <description>Whether or not the correct code was entered</description>
+          <long-description/>
+          <tag line="339" name="access" description="private"/>
+          <tag line="339" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="358" package="Default">
+        <name>CaptchaModel</name>
+        <docblock>
+          <description>Class constructor.&lt;br /&gt;
+Because the class uses sessions, this will attempt to start a session if there is no previous one.&lt;br /&gt;
+If you do not start a session before calling the class, the constructor must be called before any
+output is sent to the browser.</description>
+          <long-description>&lt;pre&gt;&lt;code&gt;  $securimage = new Securimage();
+&lt;/code&gt;&lt;/pre&gt;</long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="378" package="Default">
+        <name>show</name>
+        <docblock>
+          <description>Generate a code and output the image to the browser.</description>
+          <long-description>&lt;pre&gt;&lt;code&gt;  &lt;?php
+  include 'securimage.php';
+  $securimage = new Securimage();
+  $securimage-&gt;show('bg.jpg');
+  ?&gt;
+&lt;/code&gt;&lt;/pre&gt;</long-description>
+          <tag line="365" name="param" description="&lt;p&gt;The path to an image to use as the background for the CAPTCHA&lt;/p&gt;" type="string" variable="$background_image">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="378">
+          <name>$background_image</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="378">
+          <name>$gdf_font</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="378">
+          <name>$ttf_font</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="404" package="Default">
+        <name>check</name>
+        <docblock>
+          <description>Validate the code entered by the user.</description>
+          <long-description>&lt;pre&gt;&lt;code&gt;  $code = $_POST['code'];
+  if ($securimage-&gt;check($code) == false) {
+    die("Sorry, the code entered did not match.");
+  } else {
+    $valid = true;
+  }
+&lt;/code&gt;&lt;/pre&gt;</long-description>
+          <tag line="390" name="param" description="&lt;p&gt;The code the user entered&lt;/p&gt;" type="string" variable="$code">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="390" name="return" description="true if the code was correct, false if not" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="404">
+          <name>$code</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="417" package="Default">
+        <name>doImage</name>
+        <docblock>
+          <description>Generate and output the image</description>
+          <long-description/>
+          <tag line="411" name="access" description="private"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="450" package="Default">
+        <name>setBackground</name>
+        <docblock>
+          <description>Set the background of the CAPTCHA image</description>
+          <long-description/>
+          <tag line="444" name="access" description="private"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="475" package="Default">
+        <name>arcLines</name>
+        <docblock>
+          <description>Draw arced lines over the text</description>
+          <long-description/>
+          <tag line="469" name="access" description="private"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="523" package="Default">
+        <name>drawLines</name>
+        <docblock>
+          <description>Draw lines on the image</description>
+          <long-description/>
+          <tag line="517" name="access" description="private"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="555" package="Default">
+        <name>drawWord</name>
+        <docblock>
+          <description>Draw the CAPTCHA code over the image</description>
+          <long-description/>
+          <tag line="549" name="access" description="private"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="612" package="Default">
+        <name>createCode</name>
+        <docblock>
+          <description>Create a code and save to the session</description>
+          <long-description/>
+          <tag line="606" name="since" description="1.0.1"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="634" package="Default">
+        <name>generateCode</name>
+        <docblock>
+          <description>Generate a code</description>
+          <long-description/>
+          <tag line="627" name="access" description="private"/>
+          <tag line="627" name="param" description="&lt;p&gt;The code length&lt;/p&gt;" type="int" variable="$len">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="627" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="634">
+          <name>$len</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="651" package="Default">
+        <name>readCodeFromFile</name>
+        <docblock>
+          <description>Reads a word list file to get a code</description>
+          <long-description/>
+          <tag line="644" name="access" description="private"/>
+          <tag line="644" name="since" description="1.0.2"/>
+          <tag line="644" name="return" description="false on failure, a word on success" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="682" package="Default">
+        <name>output</name>
+        <docblock>
+          <description>Output image to the browser</description>
+          <long-description/>
+          <tag line="676" name="access" description="private"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="719" package="Default">
+        <name>getAudibleCode</name>
+        <docblock>
+          <description>Get WAV file data of the spoken code.&lt;br /&gt;
+This is appropriate for output to the browser as audio/x-wav</description>
+          <long-description/>
+          <tag line="711" name="since" description="1.0.1"/>
+          <tag line="711" name="return" description="WAV data" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="742" package="Default">
+        <name>saveData</name>
+        <docblock>
+          <description>Save the code in the session</description>
+          <long-description/>
+          <tag line="736" name="access" description="private"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="753" package="Default">
+        <name>validate</name>
+        <docblock>
+          <description>Validate the code to the user code</description>
+          <long-description/>
+          <tag line="747" name="access" description="private"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="773" package="Default">
+        <name>getCode</name>
+        <docblock>
+          <description>Get the captcha code</description>
+          <long-description/>
+          <tag line="767" name="since" description="1.0.1"/>
+          <tag line="767" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="788" package="Default">
+        <name>checkCode</name>
+        <docblock>
+          <description>Check if the user entered code was correct</description>
+          <long-description/>
+          <tag line="782" name="access" description="private"/>
+          <tag line="782" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="800" package="Default">
+        <name>generateWAV</name>
+        <docblock>
+          <description>Generate a wav file by concatenating individual files</description>
+          <long-description/>
+          <tag line="793" name="since" description="1.0.1"/>
+          <tag line="793" name="access" description="private"/>
+          <tag line="793" name="param" description="&lt;p&gt;Array of letters to build a file from&lt;/p&gt;" type="array" variable="$letters">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="793" name="return" description="WAV file data" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="800">
+          <name>$letters</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

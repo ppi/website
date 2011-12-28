@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="11" namespace="PPI\Cache" package="Default">
+      <name>Apc</name>
+      <extends/>
+      <full_name>\PPI\Cache\Apc</full_name>
+      <implements link="db_Cache_CacheInterface.html#\PPI\Cache\CacheInterface">\PPI\Cache\CacheInterface</implements>
+      <method final="false" abstract="false" static="false" visibility="public" line="18" package="Default">
+        <name>get</name>
+        <docblock>
+          <description>Get a value from cache</description>
+          <long-description/>
+          <tag line="13" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="13" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="18">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="20" package="Default">
+        <name>init</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="29" package="Default">
+        <name>set</name>
+        <docblock>
+          <description>Set a value in the cache</description>
+          <long-description/>
+          <tag line="22" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="22" name="param" description="&lt;p&gt;The Value&lt;/p&gt;" type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="22" name="param" description="&lt;p&gt;The Time To Live. Integer or String (strtotime)&lt;/p&gt;&#10;" type="mixed" variable="$ttl">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="22" name="return" description="True on succes, False on failure." type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="29">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="29">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="29">
+          <name>$ttl</name>
+          <default>0</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="38" package="Default">
+        <name>exists</name>
+        <docblock>
+          <description>Check if a key exists in the cache</description>
+          <long-description/>
+          <tag line="33" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="33" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="38">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="45" package="Default">
+        <name>remove</name>
+        <docblock>
+          <description>Remove a key from the cache</description>
+          <long-description/>
+          <tag line="40" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="40" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="45">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="52" package="Default">
+        <name>clear</name>
+        <docblock>
+          <description>Wipe the cache contents</description>
+          <long-description/>
+          <tag line="47" name="return" description="" type="\PPI\Cache\unknown">
+            <type by_reference="false">\PPI\Cache\unknown</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="61" package="Default">
+        <name>increment</name>
+        <docblock>
+          <description>Increment a numerical value</description>
+          <long-description/>
+          <tag line="54" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="54" name="param" description="&lt;p&gt;The incremental value&lt;/p&gt;" type="\PPI\Cache\numeric" variable="$inc">
+            <type by_reference="false">\PPI\Cache\numeric</type>
+          </tag>
+          <tag line="54" name="return" description="" type="\PPI\Cache\numeric">
+            <type by_reference="false">\PPI\Cache\numeric</type>
+          </tag>
+        </docblock>
+        <argument line="61">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="61">
+          <name>$inc</name>
+          <default>1</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="70" package="Default">
+        <name>decrement</name>
+        <docblock>
+          <description>Enter description here...</description>
+          <long-description/>
+          <tag line="63" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="63" name="param" description="&lt;p&gt;The decremental value&lt;/p&gt;" type="\PPI\Cache\numeric" variable="$dec">
+            <type by_reference="false">\PPI\Cache\numeric</type>
+          </tag>
+          <tag line="63" name="return" description="" type="\PPI\Cache\numeric">
+            <type by_reference="false">\PPI\Cache\numeric</type>
+          </tag>
+        </docblock>
+        <argument line="70">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="70">
+          <name>$dec</name>
+          <default>1</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="77" package="Default">
+        <name>enabled</name>
+        <docblock>
+          <description>Check if the APC extension has been loaded and is enabled in its configuration.</description>
+          <long-description/>
+          <tag line="72" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

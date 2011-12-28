@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="3" namespace="PPI\Request" package="Default">
+      <name>Cookie</name>
+      <extends link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract">\PPI\Request\RequestAbstract</extends>
+      <full_name>\PPI\Request\Cookie</full_name>
+      <property final="false" static="false" visibility="protected" line="5" package="Default">
+        <name>$_defaults</name>
+        <default>array(
+		'expire'   =&gt; 0</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="22" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>Constructor</description>
+          <long-description>&lt;p&gt;Stores the given cookies or tries to fetch
+cookies if the given array is empty or not
+given&lt;/p&gt;</long-description>
+          <tag line="13" name="param" description="" type="array" variable="$cookies">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="22">
+          <name>$cookies</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" line="38" package="Default">
+        <name>resetSettings</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="54" package="Default">
+        <name>setSetting</name>
+        <docblock>
+          <description>Changes object settings</description>
+          <long-description/>
+          <tag line="46" name="param" description="&lt;p&gt;Option to update&lt;/p&gt;" type="string" variable="$option">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="46" name="param" description="&lt;p&gt;Value to set option&lt;/p&gt;" type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="46" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="54">
+          <name>$option</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="54">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="70" package="Default">
+        <name>offsetSet</name>
+        <docblock>
+          <description>Set an offset</description>
+          <long-description>&lt;p&gt;Required by ArrayAccess interface&lt;/p&gt;</long-description>
+          <tag line="60" name="param" description="" type="string" variable="$offset">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="60" name="param" description="" type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="60" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="70">
+          <name>$offset</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="70">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="94" package="Default">
+        <name>offsetUnset</name>
+        <docblock>
+          <description>Unset an offset</description>
+          <long-description>&lt;p&gt;Reqired by ArrayAccess interface&lt;/p&gt;</long-description>
+          <tag line="86" name="param" description="" type="string" variable="$offset">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="86" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="94">
+          <name>$offset</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="111" package="Default">
+        <name>setCookie</name>
+        <docblock>
+          <description>Fully usable setCookie function.</description>
+          <long-description/>
+          <tag line="103" name="todo" description="review the override order."/>
+          <tag line="103" name="param" description="" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="103" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="103" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="111">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="111">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="133" package="Default">
+        <name>getCookie</name>
+        <docblock>
+          <description>Cookie getter to return the raw array of cookie data</description>
+          <long-description/>
+          <tag line="127" name="param" description="" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="127" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="133">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

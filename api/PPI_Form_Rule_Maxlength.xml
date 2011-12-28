@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="11" namespace="PPI\Form\Rule" package="Default">
+      <name>Maxlength</name>
+      <extends link="db_Form_Rule.html#\PPI\Form\Rule">\PPI\Form\Rule</extends>
+      <full_name>\PPI\Form\Rule\Maxlength</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" line="19" package="Default">
+        <name>validate</name>
+        <docblock>
+          <description>Validate our maxlength rule</description>
+          <long-description/>
+          <tag line="13" name="param" description="" type="string" variable="$data">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="13" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="19">
+          <name>$data</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

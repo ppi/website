@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="9" namespace="default" package="Email">
+      <name>PPI_Email_Template</name>
+      <extends>\PPI_Model</extends>
+      <full_name>\PPI_Email_Template</full_name>
+      <docblock>
+        <description/>
+        <long-description/>
+        <tag line="2" name="author" description="Paul Dragoonis" link="mailto:dragoonis@php.net"/>
+        <tag line="2" name="license" description="MIT" link="http://opensource.org/licenses/mit-license.php"/>
+        <tag line="2" name="package" description="Email"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="11" package="Default">
+        <name>$_sender</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="private" line="12" package="Default">
+        <name>$_recipient</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="private" line="13" package="Default">
+        <name>$_recipientName</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="private" line="14" package="Default">
+        <name>$_body</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="private" line="15" package="Default">
+        <name>$_subject</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="private" line="16" package="Default">
+        <name>$_replacerData</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="private" line="17" package="Default">
+        <name>$_templateName</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="private" line="18" package="Default">
+        <name>$_headers</name>
+        <default/>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="20" package="Default">
+        <name>__construct</name>
+        <argument line="20">
+          <name>$template</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="20">
+          <name>$data</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="34" package="Default">
+        <name>setTemplate</name>
+        <docblock>
+          <description>Set the template to be used</description>
+          <long-description/>
+          <tag line="28" name="param" description="&lt;p&gt;Template Name&lt;/p&gt;" type="string" variable="$p_sTemplate">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="28" name="param" description="&lt;p&gt;Replacer Tags&lt;/p&gt;" type="array" variable="$p_aReplacerData">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="28" name="return" description="(fluent interface)" type="\PPI_Email_Template">
+            <type by_reference="false" link="db_Email_Template.html#\PPI_Email_Template">\PPI_Email_Template</type>
+          </tag>
+        <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/></docblock>
+        <argument line="34">
+          <name>$p_sTemplate</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="34">
+          <name>$p_aReplacerData</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="59" package="Default">
+        <name>replaceData</name>
+        <docblock>
+          <description>Replace the data from the templates</description>
+          <long-description/>
+          <tag line="54" name="todo" description="build up 2 arrays to go into a singular str_ireplace() call"/>
+          <tag line="54" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="79" package="Default">
+        <name>sendMail</name>
+        <docblock>
+          <description>Send the email out</description>
+          <long-description/>
+          <tag line="74" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="112" package="Default">
+        <name>setSender</name>
+        <docblock>
+          <description>Set the Sender</description>
+          <long-description/>
+          <tag line="107" name="param" description="&lt;p&gt;The Sender&lt;/p&gt;" type="string" variable="$p_sSender">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="107" name="return" description="(fluent interface)" type="\PPI_Email_Template">
+            <type by_reference="false" link="db_Email_Template.html#\PPI_Email_Template">\PPI_Email_Template</type>
+          </tag>
+        <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/></docblock>
+        <argument line="112">
+          <name>$p_sSender</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="122" package="Default">
+        <name>setRecipient</name>
+        <docblock>
+          <description>Set the Recipient</description>
+          <long-description/>
+          <tag line="117" name="param" description="&lt;p&gt;The Recipient(s)&lt;/p&gt;&#10;" type="mixed" variable="$p_mRecipient">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="117" name="return" description="(fluent interface)" type="\PPI_Email_Template">
+            <type by_reference="false" link="db_Email_Template.html#\PPI_Email_Template">\PPI_Email_Template</type>
+          </tag>
+        <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/></docblock>
+        <argument line="122">
+          <name>$p_mRecipient</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="141" package="Default">
+        <name>setSubject</name>
+        <docblock>
+          <description>Set the Subject</description>
+          <long-description/>
+          <tag line="136" name="param" description="&lt;p&gt;The Subject&lt;/p&gt;" type="string" variable="$p_sSubject">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="136" name="return" description="(fluent interface)" type="\PPI_Email_Template">
+            <type by_reference="false" link="db_Email_Template.html#\PPI_Email_Template">\PPI_Email_Template</type>
+          </tag>
+        <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/></docblock>
+        <argument line="141">
+          <name>$p_sSubject</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="150" package="Default">
+        <name>setReplacerData</name>
+        <docblock>
+          <description>Set the replacer data</description>
+          <long-description/>
+          <tag line="145" name="param" description="&lt;p&gt;The replacer tags&lt;/p&gt;" type="array" variable="$p_aData">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="145" name="return" description="(fluent interface)" type="\PPI_Email_Template">
+            <type by_reference="false" link="db_Email_Template.html#\PPI_Email_Template">\PPI_Email_Template</type>
+          </tag>
+        <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/></docblock>
+        <argument line="150">
+          <name>$p_aData</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="160" package="Default">
+        <name>getAddEditFormStructure</name>
+        <docblock>
+          <description>Get the addedit structure for Formbuilder</description>
+          <long-description/>
+          <tag line="155" name="param" description="&lt;p&gt;The Mode&lt;/p&gt;" type="string" variable="$p_sMode">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="155" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="160">
+          <name>$p_sMode</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

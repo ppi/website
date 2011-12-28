@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="3" namespace="PPI\Request" package="Default">
+      <name>Server</name>
+      <extends link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract">\PPI\Request\RequestAbstract</extends>
+      <full_name>\PPI\Request\Server</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" line="11" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>Constructor</description>
+          <long-description>&lt;p&gt;Takes in an optional $server variable otherwise defaulting to $_SERVER&lt;/p&gt;</long-description>
+          <tag line="4" name="param" description="" type="array" variable="$server">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="11">
+          <name>$server</name>
+          <default>null</default>
+          <type>array</type>
+        </argument>
+      </method>
+    <docblock/><property final="false" static="false" visibility="protected" line="10" package="Default">
+        <name>$_array</name>
+        <default>array()</default>
+        <docblock>
+          <description>The actual data we're dealing with</description>
+          <long-description/>
+          <tag line="5" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::$$_array" description="\PPI\Request\RequestAbstract::$$_array" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::$$_array"/></docblock>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></property><property final="false" static="false" visibility="protected" line="17" package="Default">
+        <name>$_isCollected</name>
+        <default>true</default>
+        <docblock>
+          <description>Has the data for this instantiated class been provided? or automatically collected</description>
+          <long-description/>
+          <tag line="12" name="var" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::$$_isCollected" description="\PPI\Request\RequestAbstract::$$_isCollected" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::$$_isCollected"/></docblock>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></property><method final="false" abstract="false" static="false" visibility="public" line="28" package="Default">
+        <name>isCollected</name>
+        <docblock>
+          <description>Checks if the data was collected or manual set</description>
+          <long-description>&lt;p&gt;Returns true if all data is collected
+from php's environment, false if the current
+data is set manuals&lt;/p&gt;</long-description>
+          <tag line="19" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::isCollected()" description="\PPI\Request\RequestAbstract::isCollected()" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::isCollected()"/></docblock>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="39" package="Default">
+        <name>offsetExists</name>
+        <docblock>
+          <description>ArrayAccess implementation for offsetExists</description>
+          <long-description/>
+          <tag line="32" name="param" description="" type="string" variable="$offset">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="32" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::offsetExists()" description="\PPI\Request\RequestAbstract::offsetExists()" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::offsetExists()"/></docblock>
+        <argument line="39">
+          <name>$offset</name>
+          <default/>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="50" package="Default">
+        <name>offsetGet</name>
+        <docblock>
+          <description>ArrayAccess implementation for offsetGet</description>
+          <long-description/>
+          <tag line="43" name="param" description="" type="string" variable="$offset">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="43" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::offsetGet()" description="\PPI\Request\RequestAbstract::offsetGet()" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::offsetGet()"/></docblock>
+        <argument line="50">
+          <name>$offset</name>
+          <default/>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="65" package="Default">
+        <name>offsetSet</name>
+        <docblock>
+          <description>ArrayAccess implementation for offsetSet</description>
+          <long-description/>
+          <tag line="57" name="param" description="" type="string" variable="$offset">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="57" name="param" description="" type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="57" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::offsetSet()" description="\PPI\Request\RequestAbstract::offsetSet()" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::offsetSet()"/></docblock>
+        <argument line="65">
+          <name>$offset</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="65">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="80" package="Default">
+        <name>offsetUnset</name>
+        <docblock>
+          <description>ArrayAccess implementation for offsetUnset</description>
+          <long-description/>
+          <tag line="73" name="param" description="" type="string" variable="$offset">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="73" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::offsetUnset()" description="\PPI\Request\RequestAbstract::offsetUnset()" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::offsetUnset()"/></docblock>
+        <argument line="80">
+          <name>$offset</name>
+          <default/>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="89" package="Default">
+        <name>current</name>
+        <docblock>
+          <description>Iterator implementation for current</description>
+          <long-description/>
+          <tag line="84" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::current()" description="\PPI\Request\RequestAbstract::current()" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::current()"/></docblock>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="98" package="Default">
+        <name>key</name>
+        <docblock>
+          <description>Iterator implementation for key</description>
+          <long-description/>
+          <tag line="93" name="return" description="" type="\PPI\Request\scalar">
+            <type by_reference="false">\PPI\Request\scalar</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::key()" description="\PPI\Request\RequestAbstract::key()" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::key()"/></docblock>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="107" package="Default">
+        <name>next</name>
+        <docblock>
+          <description>Iterator implementation for next</description>
+          <long-description/>
+          <tag line="102" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::next()" description="\PPI\Request\RequestAbstract::next()" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::next()"/></docblock>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="116" package="Default">
+        <name>rewind</name>
+        <docblock>
+          <description>Iterator implementation for rewind</description>
+          <long-description/>
+          <tag line="111" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::rewind()" description="\PPI\Request\RequestAbstract::rewind()" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::rewind()"/></docblock>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="125" package="Default">
+        <name>valid</name>
+        <docblock>
+          <description>Iterator implementation for valid</description>
+          <long-description/>
+          <tag line="120" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::valid()" description="\PPI\Request\RequestAbstract::valid()" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::valid()"/></docblock>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="134" package="Default">
+        <name>count</name>
+        <docblock>
+          <description>Countable implementation for count</description>
+          <long-description/>
+          <tag line="129" name="return" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::count()" description="\PPI\Request\RequestAbstract::count()" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::count()"/></docblock>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="143" package="Default">
+        <name>all</name>
+        <docblock>
+          <description>Return all the array elements</description>
+          <long-description/>
+          <tag line="138" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Request\RequestAbstract::all()" description="\PPI\Request\RequestAbstract::all()" link="db_Request_RequestAbstract.html#\PPI\Request\RequestAbstract::all()"/></docblock>
+      <inherited_from>\PPI\Request\RequestAbstract</inherited_from></method></class>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="9" namespace="PPI\Core" package="Default">
+      <name>ExceptionHandler</name>
+      <extends/>
+      <full_name>\PPI\Core\ExceptionHandler</full_name>
+      <method final="false" abstract="false" static="true" visibility="public" line="17" package="Default">
+        <name>handle</name>
+        <docblock>
+          <description>PPI Exception handler
+The try/catch block will prevent a fatal error if an exception is thrown within the handler itself</description>
+          <long-description/>
+          <tag line="11" name="param" description="&lt;p&gt;Exception object&lt;/p&gt;" type="object" variable="$e">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+        <argument line="17">
+          <name>$e</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

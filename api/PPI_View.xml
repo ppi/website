@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="21" namespace="PPI" package="Default">
+      <name>View</name>
+      <extends/>
+      <full_name>\PPI\View</full_name>
+      <property final="false" static="false" visibility="protected" line="28" package="Default">
+        <name>$_viewParams</name>
+        <default>array()</default>
+        <docblock>
+          <description>The variables to be rendered into the view file</description>
+          <long-description/>
+          <tag line="23" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="35" package="Default">
+        <name>$_viewTheme</name>
+        <default>null</default>
+        <docblock>
+          <description>The current set view theme</description>
+          <long-description/>
+          <tag line="30" name="var" description="" type="null|string">
+            <type by_reference="false">null</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="42" package="Default">
+        <name>$_masterTemplateFile</name>
+        <default>null</default>
+        <docblock>
+          <description>The master template file</description>
+          <long-description/>
+          <tag line="37" name="var" description="" type="null|string">
+            <type by_reference="false">null</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="49" package="Default">
+        <name>$_defaultRenderer</name>
+        <default>'php'</default>
+        <docblock>
+          <description>Default renderer, PHP helper</description>
+          <long-description/>
+          <tag line="44" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="57" package="Default">
+        <name>$_activeRenderer</name>
+        <default>null</default>
+        <docblock>
+          <description>The active renderer.</description>
+          <long-description>&lt;p&gt;This variable is used so we don't have to instantiate the renderer multuple times.&lt;/p&gt;</long-description>
+          <tag line="51" name="var" description="" type="null|object">
+            <type by_reference="false">null</type>
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="64" package="Default">
+        <name>$_cssFiles</name>
+        <default>array()</default>
+        <docblock>
+          <description>CSS Files to be rendered</description>
+          <long-description/>
+          <tag line="59" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="70" package="Default">
+        <name>$_jsFiles</name>
+        <default>array()</default>
+        <docblock>
+          <description>Javascript files to be rendered</description>
+          <long-description/>
+          <tag line="65" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="79" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>The constructor</description>
+          <long-description/>
+          <tag line="72" name="todo" description="- When this is instantiated, pass it an options array,"/>
+          <tag line="72" name="todo" description="- Get the skeleton app to pass $config-&gt;layout-&gt;toArray()"/>
+          <tag line="72" name="param" description="&lt;p&gt;The options&lt;/p&gt;" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="79">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="94" package="Default">
+        <name>load</name>
+        <docblock>
+          <description>Load function called from controllers</description>
+          <long-description/>
+          <tag line="87" name="param" description="&lt;p&gt;The template filename&lt;/p&gt;" type="string" variable="$p_tplFile">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="87" name="param" description="&lt;p&gt;Optional user defined params&lt;/p&gt;" type="array" variable="$p_tplParams">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="87" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="94">
+          <name>$p_tplFile</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="94">
+          <name>$p_tplParams</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="105" package="Default">
+        <name>set</name>
+        <docblock>
+          <description>Add a var to the view params</description>
+          <long-description/>
+          <tag line="98" name="param" description="" type="string" variable="$p_sKey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="98" name="param" description="" type="mixed" variable="$p_mVal">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="98" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="105">
+          <name>$p_sKey</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="105">
+          <name>$p_mVal</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="116" package="Default">
+        <name>setByRef</name>
+        <docblock>
+          <description>Add a var to the view params by ref</description>
+          <long-description/>
+          <tag line="109" name="param" description="" type="string" variable="$p_sKey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="109" name="param" description="&lt;p&gt;&amp;$p_mVal&lt;/p&gt;&#10;" type="mixed" variable="$p_mVal">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="109" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="116">
+          <name>$p_sKey</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="116">
+          <name>$p_mVal</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="127" package="Default">
+        <name>setByArray</name>
+        <docblock>
+          <description>Add multiple vars to the view params</description>
+          <long-description/>
+          <tag line="120" name="param" description="" type="string" variable="$p_sKey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="120" name="param" description="" type="array" variable="$p_mVal">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="120" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="127">
+          <name>$p_sKey</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="127">
+          <name>$p_mVal</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="137" package="Default">
+        <name>theme</name>
+        <docblock>
+          <description>Override the current set theme</description>
+          <long-description/>
+          <tag line="131" name="param" description="" type="string" variable="$p_sThemeName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="131" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="137">
+          <name>$p_sThemeName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" line="146" package="Default">
+        <name>getViewTheme</name>
+        <docblock>
+          <description>Get the currently set view theme</description>
+          <long-description/>
+          <tag line="141" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="167" package="Default">
+        <name>setupRenderer</name>
+        <docblock>
+          <description>Initialisation for the renderer, assignment of default values, boot up of the master template</description>
+          <long-description/>
+          <tag line="158" name="param" description="&lt;p&gt;Templating renderer. Instance of PPI_Interface_Template&lt;/p&gt;" type="\PPI\PPI_Interface_Template" variable="$oTpl">
+            <type by_reference="false">\PPI\PPI_Interface_Template</type>
+          </tag>
+          <tag line="158" name="param" description="&lt;p&gt;The template file to render&lt;/p&gt;" type="string" variable="$p_tplFile">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="158" name="param" description="&lt;p&gt;Optional user defined parameres&lt;/p&gt;" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="158" name="param" description="&lt;p&gt;Optional user defined parameres&lt;/p&gt;" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="158" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="167">
+          <name>$oTpl</name>
+          <default/>
+          <type>RendererInterface</type>
+        </argument>
+        <argument line="167">
+          <name>$p_tplFile</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="167">
+          <name>$params</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+        <argument line="167">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="254" package="Default">
+        <name>getViewDir</name>
+        <docblock>
+          <description>Get the path to the view file dir</description>
+          <long-description/>
+          <tag line="249" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="264" package="Default">
+        <name>getDefaultRenderValues</name>
+        <docblock>
+          <description>Obtain the list of default view variables</description>
+          <long-description/>
+          <tag line="258" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="258" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="264">
+          <name>$options</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="303" package="Default">
+        <name>get</name>
+        <docblock>
+          <description>To get a view variable that is set to get rendered. (TBC)</description>
+          <long-description/>
+          <tag line="297" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="297" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="303">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="317" package="Default">
+        <name>setTemplateFile</name>
+        <docblock>
+          <description>Override the default template file, with optional include for the .php or .tpl extension</description>
+          <long-description/>
+          <tag line="311" name="param" description="&lt;p&gt;New Template Filename&lt;/p&gt;" type="string" variable="$p_sNewTemplateFile">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="311" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="317">
+          <name>$p_sNewTemplateFile</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="329" package="Default">
+        <name>render</name>
+        <docblock>
+          <description>The internal render function, this is called by $this-&gt;load('template');</description>
+          <long-description/>
+          <tag line="321" name="param" description="&lt;p&gt;The template name to render&lt;/p&gt;" type="string" variable="$template">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="321" name="param" description="&lt;p&gt;Optional Parameters&lt;/p&gt;" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="321" name="param" description="&lt;p&gt;Optional Options&lt;/p&gt;" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="321" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="329">
+          <name>$template</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="329">
+          <name>$params</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+        <argument line="329">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" line="341" package="Default">
+        <name>getRenderer</name>
+        <docblock>
+          <description>Get the active renderer</description>
+          <long-description/>
+          <tag line="335" name="param" description="&lt;p&gt;The renderer name&lt;/p&gt;" type="string" variable="$rendererName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="335" name="return" description="" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+        <argument line="341">
+          <name>$rendererName</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="371" package="Default">
+        <name>templateExists</name>
+        <docblock>
+          <description>Check if a template exists</description>
+          <long-description/>
+          <tag line="365" name="param" description="&lt;p&gt;The template Name&lt;/p&gt;" type="string" variable="$templateName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="365" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="371">
+          <name>$templateName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="383" package="Default">
+        <name>cachedRenderExists</name>
+        <docblock>
+          <description>Check if a cachedRender item exists in the cache</description>
+          <long-description/>
+          <tag line="376" name="param" description="" type="string" variable="$template">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="376" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="376" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="383">
+          <name>$template</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="383">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="395" package="Default">
+        <name>getCachedRender</name>
+        <docblock>
+          <description>Get the cached render file from the cache</description>
+          <long-description/>
+          <tag line="388" name="param" description="" type="" variable="$template"/>
+          <tag line="388" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="388" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="395">
+          <name>$template</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="395">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="412" package="Default">
+        <name>createCachedRenderKey</name>
+        <docblock>
+          <description>Create a cache key for our cached template</description>
+          <long-description/>
+          <tag line="405" name="param" description="" type="string" variable="$template">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="405" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="405" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="412">
+          <name>$template</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="412">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="11" namespace="PPI" package="Default">
+      <name>Autoload</name>
+      <extends/>
+      <full_name>\PPI\Autoload</full_name>
+      <property final="false" static="true" visibility="protected" line="18" package="Default">
+        <name>$_classes</name>
+        <default>array()</default>
+        <docblock>
+          <description>The cache list of classes</description>
+          <long-description/>
+          <tag line="13" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="true" visibility="protected" line="25" package="Default">
+        <name>$_namespaceSeparator</name>
+        <default>'\\'</default>
+        <docblock>
+          <description>The separator characters for namespacing</description>
+          <long-description/>
+          <tag line="20" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="true" visibility="protected" line="33" package="Default">
+        <name>$_libraries</name>
+        <default>array()</default>
+        <docblock>
+          <description>The base list of libraries to check in the autoloader, these are the base two ones required
+for the framework and the skeleton app classes to be autoloaded</description>
+          <long-description/>
+          <tag line="27" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="36" package="Default">
+        <name>__construct</name>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="43" package="Default">
+        <name>register</name>
+        <docblock>
+          <description>Register The PPI Autoload Function</description>
+          <long-description/>
+          <tag line="38" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="53" package="Default">
+        <name>loadClass</name>
+        <docblock>
+          <description>The actual autoloading function</description>
+          <long-description/>
+          <tag line="47" name="param" description="&lt;p&gt;The Class Name To Be Autoloaded&lt;/p&gt;" type="string" variable="$className">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="47" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="53">
+          <name>$className</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="82" package="Default">
+        <name>unregister</name>
+        <docblock>
+          <description>Unregister The PPI Autoload Function</description>
+          <long-description/>
+          <tag line="77" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="97" package="Default">
+        <name>add</name>
+        <docblock>
+          <description>Add a library to the autoloader</description>
+          <long-description/>
+          <tag line="86" name="example" description="PPI_Autoload::add('Zend', array(&#10;'path' =&gt; SYSTEMPATH . 'Vendor/',&#10;));"/>
+          <tag line="86" name="param" description="&lt;p&gt;The Key, This is used for exists() and remove()&lt;/p&gt;&#10;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="86" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="97">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="97">
+          <name>$options</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="110" package="Default">
+        <name>remove</name>
+        <docblock>
+          <description>Remove a library from the autoloader</description>
+          <long-description/>
+          <tag line="104" name="param" description="&lt;p&gt;The key&lt;/p&gt;" type="string" variable="$p_sKey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="104" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="110">
+          <name>$p_sKey</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="120" package="Default">
+        <name>exists</name>
+        <docblock>
+          <description>Checks if a library has been added</description>
+          <long-description/>
+          <tag line="114" name="param" description="&lt;p&gt;The key&lt;/p&gt;" type="string" variable="$p_sKey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="114" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="120">
+          <name>$p_sKey</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

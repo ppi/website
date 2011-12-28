@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="14" namespace="PPI" package="Default">
+      <name>Request</name>
+      <extends/>
+      <full_name>\PPI\Request</full_name>
+      <property final="false" static="false" visibility="protected" line="21" package="Default">
+        <name>$_cookie</name>
+        <default>null</default>
+        <docblock>
+          <description>The COOKIE data</description>
+          <long-description/>
+          <tag line="16" name="var" description="" type="null|object">
+            <type by_reference="false">null</type>
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="28" package="Default">
+        <name>$_get</name>
+        <default>null</default>
+        <docblock>
+          <description>The URI variables. eg: www.domain.com/some/uri/variables/here</description>
+          <long-description/>
+          <tag line="23" name="var" description="" type="null|object">
+            <type by_reference="false">null</type>
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="35" package="Default">
+        <name>$_post</name>
+        <default>null</default>
+        <docblock>
+          <description>The POST data</description>
+          <long-description/>
+          <tag line="30" name="var" description="" type="null|object">
+            <type by_reference="false">null</type>
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="42" package="Default">
+        <name>$_session</name>
+        <default>null</default>
+        <docblock>
+          <description>The SESSION data</description>
+          <long-description/>
+          <tag line="37" name="var" description="" type="null|object">
+            <type by_reference="false">null</type>
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="49" package="Default">
+        <name>$_server</name>
+        <default>null</default>
+        <docblock>
+          <description>The SERVER data</description>
+          <long-description/>
+          <tag line="44" name="var" description="" type="null|object">
+            <type by_reference="false">null</type>
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="57" package="Default">
+        <name>$_getQuery</name>
+        <default>null</default>
+        <docblock>
+          <description>The query string data. eg: www.domain.com?query=string&amp;data=here</description>
+          <long-description/>
+          <tag line="51" name="var" description="" type="null|object">
+            <type by_reference="false">null</type>
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="63" package="Default">
+        <name>$_remoteVars</name>
+        <default>array(
+		'ip'                 =&gt; ''</default>
+        <docblock>
+          <description>Remote vars cache for the getRemove() function</description>
+          <long-description/>
+          <tag line="58" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="75" package="Default">
+        <name>$_isVars</name>
+        <default>array(
+		'ajax'     =&gt; null</default>
+        <docblock>
+          <description>Vars cache for the is() function</description>
+          <long-description/>
+          <tag line="70" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="85" package="Default">
+        <name>$_userAgentMap</name>
+        <default>array(
+		'browser'             =&gt; 'browser'</default>
+        <docblock>
+          <description>Mapping fields for get_browser()</description>
+          <long-description/>
+          <tag line="80" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="95" package="Default">
+        <name>$_userAgentInfo</name>
+        <default>null</default>
+        <docblock>
+          <description>The browser data from</description>
+          <long-description/>
+          <tag line="90" name="var" description="" type="array|null">
+            <type by_reference="false">array</type>
+            <type by_reference="false">null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="101" package="Default">
+        <name>$_requestMethod</name>
+        <default>null</default>
+        <docblock>
+          <description>The request method</description>
+          <long-description/>
+          <tag line="96" name="var" description="" type="null|string">
+            <type by_reference="false">null</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="107" package="Default">
+        <name>$_protocol</name>
+        <default>null</default>
+        <docblock>
+          <description>The protocol being used</description>
+          <long-description/>
+          <tag line="102" name="var" description="" type="null|string">
+            <type by_reference="false">null</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="113" package="Default">
+        <name>$_url</name>
+        <default>null</default>
+        <docblock>
+          <description>The full url including the protocol</description>
+          <long-description/>
+          <tag line="108" name="var" description="" type="null|string">
+            <type by_reference="false">null</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="119" package="Default">
+        <name>$_uri</name>
+        <default>null</default>
+        <docblock>
+          <description>The URI after the base url</description>
+          <long-description/>
+          <tag line="114" name="var" description="" type="null|string">
+            <type by_reference="false">null</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="125" package="Default">
+        <name>$_uriParams</name>
+        <default>array()</default>
+        <docblock>
+          <description>The quick keyval lookup array for URI parameters</description>
+          <long-description/>
+          <tag line="120" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="138" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>Constructor</description>
+          <long-description>&lt;p&gt;By default, it takes environment variables cookie, env, get, post, server and session
+from data collectors (PPI_Request_*)&lt;/p&gt;
+
+&lt;p&gt;However, any of these can be overriden by an array or by an object that extends their
+representing PPI_Request_* class&lt;/p&gt;</long-description>
+          <tag line="127" name="param" description="&lt;p&gt;Change environment variables&lt;/p&gt;" type="array" variable="$env">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="138">
+          <name>$env</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="186" package="Default">
+        <name>get</name>
+        <docblock>
+          <description>Obtain a url segments value pair by specifying the key.</description>
+          <long-description>&lt;p&gt;eg: /key/val/key2/val2 - by specifying key, you get val, by specifying key2, you get val2.&lt;/p&gt;</long-description>
+          <tag line="178" name="param" description="" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="178" name="param" description="" type="mixed" variable="$default">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="178" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="186">
+          <name>$key</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="186">
+          <name>$default</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="202" package="Default">
+        <name>getQuery</name>
+        <docblock>
+          <description>Get variables from the Query String.</description>
+          <long-description>&lt;p&gt;eg: www.domain.com?foo=bar. Asking for 'foo' will return you 'bar'&lt;/p&gt;</long-description>
+          <tag line="194" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="194" name="param" description="&lt;p&gt;The default value is $key doesn't exist.&lt;/p&gt;&#10;" type="null" variable="$default">
+            <type by_reference="false">null</type>
+          </tag>
+          <tag line="194" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="202">
+          <name>$key</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="202">
+          <name>$default</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="217" package="Default">
+        <name>post</name>
+        <docblock>
+          <description>Retrieve information passed via the $_POST array.</description>
+          <long-description>&lt;p&gt;Can specify a key and return that, else return the whole $_POST array&lt;/p&gt;</long-description>
+          <tag line="209" name="param" description="&lt;p&gt;Specific $_POST key&lt;/p&gt;&#10;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="209" name="param" description="&lt;p&gt;null if not specified, mixed otherwise&lt;/p&gt;" type="mixed" variable="$default">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="209" name="return" description="Depending if you passed in a value for $p_sIndex" type="string|array">
+            <type by_reference="false">string</type>
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="217">
+          <name>$key</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="217">
+          <name>$default</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="232" package="Default">
+        <name>server</name>
+        <docblock>
+          <description>Get a value from the SERVER.</description>
+          <long-description/>
+          <tag line="225" name="param" description="" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="225" name="param" description="" type="mixed" variable="$default">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="225" name="return" description="" type="array|null">
+            <type by_reference="false">array</type>
+            <type by_reference="false">null</type>
+          </tag>
+        </docblock>
+        <argument line="232">
+          <name>$key</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="232">
+          <name>$default</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="246" package="Default">
+        <name>stripPost</name>
+        <docblock>
+          <description>Retrieve all $_POST elements that have a specific prefix</description>
+          <long-description/>
+          <tag line="240" name="param" description="&lt;p&gt;The prefix to get values with&lt;/p&gt;" type="string" variable="$sPrefix">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="240" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="246">
+          <name>$p_sPrefix</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="265" package="Default">
+        <name>hasPost</name>
+        <docblock>
+          <description>Check whether a value has been submitted via post</description>
+          <long-description/>
+          <tag line="259" name="param" description="&lt;p&gt;The $_POST key&lt;/p&gt;&#10;" type="string" variable="$p_sKey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="259" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="265">
+          <name>$p_sKey</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="275" package="Default">
+        <name>removePost</name>
+        <docblock>
+          <description>Remove a value from the $_POST superglobal.</description>
+          <long-description/>
+          <tag line="269" name="param" description="&lt;p&gt;The key to remove&lt;/p&gt;" type="string" variable="$p_sKey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="269" name="return" description="True if the value existed, false if not." type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="275">
+          <name>$p_sKey</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="291" package="Default">
+        <name>addPost</name>
+        <docblock>
+          <description>Add a value to the $_POST superglobal</description>
+          <long-description/>
+          <tag line="284" name="param" description="&lt;p&gt;The key&lt;/p&gt;" type="string" variable="$p_sKey">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="284" name="param" description="&lt;p&gt;The value to set the key with&lt;/p&gt;" type="mixed" variable="$p_mValue">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="284" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="291">
+          <name>$p_sKey</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="291">
+          <name>$p_mValue</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="300" package="Default">
+        <name>emptyPost</name>
+        <docblock>
+          <description>Wipe the $_POST superglobal</description>
+          <long-description/>
+          <tag line="295" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="309" package="Default">
+        <name>cookie</name>
+        <docblock>
+          <description>The main getter/setter function for cookies</description>
+          <long-description/>
+          <tag line="304" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="309">
+          <name>$key</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="309">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="331" package="Default">
+        <name>is</name>
+        <docblock>
+          <description>Series of request related boolean checks</description>
+          <long-description/>
+          <tag line="325" name="param" description="" type="string" variable="$var">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="325" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="331">
+          <name>$var</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="371" package="Default">
+        <name>getRemote</name>
+        <docblock>
+          <description>Get a value from the remote requesting user/browser</description>
+          <long-description/>
+          <tag line="365" name="param" description="" type="string" variable="$var">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="365" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="371">
+          <name>$var</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="409" package="Default">
+        <name>getUri</name>
+        <docblock>
+          <description>Get the current request uri</description>
+          <long-description/>
+          <tag line="403" name="todo" description="substr the baseurl"/>
+          <tag line="403" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="423" package="Default">
+        <name>setUri</name>
+        <docblock>
+          <description>Set the uri</description>
+          <long-description/>
+          <tag line="417" name="param" description="" type="string" variable="$uri">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="417" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="423">
+          <name>$uri</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="432" package="Default">
+        <name>getProtocol</name>
+        <docblock>
+          <description>Get the current protocol</description>
+          <long-description/>
+          <tag line="427" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="445" package="Default">
+        <name>getUrl</name>
+        <docblock>
+          <description>Get the current url</description>
+          <long-description/>
+          <tag line="440" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" line="459" package="Default">
+        <name>isRequestMobile</name>
+        <docblock>
+          <description>Is the current request a mobile request</description>
+          <long-description/>
+          <tag line="453" name="todo" description="see if there is an array based func to do the foreach and strpos"/>
+          <tag line="453" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" line="480" package="Default">
+        <name>getRequestMethod</name>
+        <docblock>
+          <description>Get the current request method</description>
+          <long-description/>
+          <tag line="475" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="493" package="Default">
+        <name>getIsVars</name>
+        <docblock>
+          <description>Get the is vars</description>
+          <long-description/>
+          <tag line="488" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="503" package="Default">
+        <name>getFullUrl</name>
+        <docblock>
+          <description>Get the current full url</description>
+          <long-description/>
+          <tag line="497" name="todo" description="match this with $this-&gt;getCurrUrl()"/>
+          <tag line="497" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="508" package="Default">
+        <name>getCurrUrl</name>
+      </method>
+    </class>

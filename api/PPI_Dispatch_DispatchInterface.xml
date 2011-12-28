@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface namespace="PPI\Dispatch" line="3" package="Default">
+      <name>DispatchInterface</name>
+      <extends/>
+      <full_name>\PPI\Dispatch\DispatchInterface</full_name>
+    </interface>

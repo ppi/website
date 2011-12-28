@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="12" namespace="PPI\Form\Tag" package="Default">
+      <name>Select</name>
+      <extends link="db_Form_Tag.html#\PPI\Form\Tag">\PPI\Form\Tag</extends>
+      <full_name>\PPI\Form\Tag\Select</full_name>
+      <constant namespace="PPI\Form\Tag" line="14" package="Default">
+        <name>optionsFormat</name>
+        <value>'&lt;option %svalue="%s"&gt;%s&lt;/option&gt;'</value>
+      </constant>
+      <constant namespace="PPI\Form\Tag" line="15" package="Default">
+        <name>selectFormat</name>
+        <value>'&lt;select %s&gt;%s&lt;/select&gt;'</value>
+      </constant>
+      <property final="false" static="false" visibility="protected" line="22" package="Default">
+        <name>$_options</name>
+        <default>array()</default>
+        <docblock>
+          <description>Dropdown Options</description>
+          <long-description/>
+          <tag line="17" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="29" package="Default">
+        <name>$_selected</name>
+        <default>null</default>
+        <docblock>
+          <description>Selected Dropdown Option</description>
+          <long-description/>
+          <tag line="24" name="var" description="" type="null">
+            <type by_reference="false">null</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="36" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>The constructor</description>
+          <long-description/>
+          <tag line="31" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="36">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="57" package="Default">
+        <name>setValues</name>
+        <docblock>
+          <description>Set the values of this field</description>
+          <long-description/>
+          <tag line="51" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="51" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="57">
+          <name>$options</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="67" package="Default">
+        <name>setValue</name>
+        <docblock>
+          <description>Set the selected value</description>
+          <long-description/>
+          <tag line="61" name="param" description="" type="" variable="$value"/>
+          <tag line="61" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="67">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="76" package="Default">
+        <name>buildOptions</name>
+        <docblock>
+          <description>Build the dropdown options</description>
+          <long-description/>
+          <tag line="71" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="93" package="Default">
+        <name>render</name>
+        <docblock>
+          <description>Render this tag</description>
+          <long-description/>
+          <tag line="88" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

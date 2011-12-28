@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="13" namespace="PPI\Form\Tag" package="Default">
+      <name>Textarea</name>
+      <extends link="db_Form_Tag.html#\PPI\Form\Tag">\PPI\Form\Tag</extends>
+      <full_name>\PPI\Form\Tag\Textarea</full_name>
+      <property final="false" static="false" visibility="protected" line="20" package="Default">
+        <name>$_value</name>
+        <default>''</default>
+        <docblock>
+          <description>The textarea value</description>
+          <long-description/>
+          <tag line="15" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="27" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>The constructor</description>
+          <long-description/>
+          <tag line="22" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="27">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="43" package="Default">
+        <name>setValue</name>
+        <docblock>
+          <description>Set the value of this field</description>
+          <long-description/>
+          <tag line="37" name="param" description="" type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="37" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="43">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="52" package="Default">
+        <name>getValue</name>
+        <docblock>
+          <description>Get the value of this field.</description>
+          <long-description/>
+          <tag line="47" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="61" package="Default">
+        <name>render</name>
+        <docblock>
+          <description>Render this tag</description>
+          <long-description/>
+          <tag line="56" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

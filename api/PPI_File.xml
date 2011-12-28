@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="3" namespace="PPI" package="Default">
+      <name>File</name>
+      <extends/>
+      <full_name>\PPI\File</full_name>
+      <property final="false" static="true" visibility="protected" line="8" package="Default">
+        <name>$defaultExtensions</name>
+        <default>array(
+	    'application/andrew-inset' =&gt; 'ez'</default>
+        <docblock>
+          <description>Assignment of mime types to their default extensions</description>
+          <long-description/>
+          <tag line="4" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="427" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>Constructs a new file from the given path.</description>
+          <long-description/>
+          <tag line="421" name="param" description="&lt;p&gt;The path to the file&lt;/p&gt;" type="string" variable="$path">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="421" name="throws" description="If the given path is no file" type="\PPI\FileNotFoundException">
+            <type by_reference="false">\PPI\FileNotFoundException</type>
+          </tag>
+        </docblock>
+        <argument line="427">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="437" package="Default">
+        <name>getFileExtension</name>
+        <docblock>
+          <description>Obtain the extension from a filename</description>
+          <long-description/>
+          <tag line="430" name="todo" description="Convert to pathinfo"/>
+          <tag line="430" name="param" description="&lt;p&gt;The file's filename&lt;/p&gt;&#10;" type="string" variable="$fileName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="430" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="437">
+          <name>$fileName</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="437">
+          <name>$includeDot</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="453" package="Default">
+        <name>checkExtension</name>
+        <docblock>
+          <description>Check if a file has a particular extension. If it does not have the extension then we add it.</description>
+          <long-description/>
+          <tag line="446" name="param" description="&lt;p&gt;Filename&lt;/p&gt;" type="string" variable="$templateFile">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="446" name="param" description="&lt;p&gt;Extension&lt;/p&gt;" type="string" variable="$ext">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="446" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="453">
+          <name>$templateFile</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="453">
+          <name>$ext</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="468" package="Default">
+        <name>getFileType</name>
+        <docblock>
+          <description>Get the type of file from the filename.</description>
+          <long-description/>
+          <tag line="461" name="static" description=""/>
+          <tag line="461" name="param" description="" type="string" variable="$fileName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="461" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="468">
+          <name>$fileName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

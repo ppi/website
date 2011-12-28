@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="10" namespace="PPI\Model" package="Default">
+      <name>Helper</name>
+      <extends/>
+      <full_name>\PPI\Model\Helper</full_name>
+      <property final="false" static="true" visibility="protected" line="17" package="Default">
+        <name>$_instance</name>
+        <default>null</default>
+        <docblock>
+          <description>The singleton instance variable</description>
+          <long-description/>
+          <tag line="12" name="var" description="" type="null|\PPI\Model\Helper">
+            <type by_reference="false">null</type>
+            <type by_reference="false" link="db_Model_Helper.html#\PPI\Model\Helper">\PPI\Model\Helper</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="20" package="Default">
+        <name>__construct</name>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" line="30" package="Default">
+        <name>init</name>
+        <docblock>
+          <description>The initialise function to create the instance</description>
+          <long-description/>
+          <tag line="26" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="41" package="Default">
+        <name>setInstance</name>
+        <docblock>
+          <description>The function used to initially set the instance</description>
+          <long-description/>
+          <tag line="34" name="param" description="" type="\PPI\Model\Helper" variable="$instance">
+            <type by_reference="false" link="db_Model_Helper.html#\PPI\Model\Helper">\PPI\Model\Helper</type>
+          </tag>
+          <tag line="34" name="throws" description="" type="\PPI\Model\PPI_Exception">
+            <type by_reference="false">\PPI\Model\PPI_Exception</type>
+          </tag>
+          <tag line="34" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="41">
+          <name>$instance</name>
+          <default/>
+          <type>Helper</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="53" package="Default">
+        <name>getInstance</name>
+        <docblock>
+          <description>Obtain the instance if it exists, if not create it</description>
+          <long-description/>
+          <tag line="48" name="return" description="" type="\PPI\Model\Helper">
+            <type by_reference="false" link="db_Model_Helper.html#\PPI\Model\Helper">\PPI\Model\Helper</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="65" package="Default">
+        <name>getRoleType</name>
+        <docblock>
+          <description>This function returns the role name of the user</description>
+          <long-description/>
+          <tag line="60" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="77" package="Default">
+        <name>getRoleID</name>
+        <docblock>
+          <description>This function returns the role number of the user</description>
+          <long-description/>
+          <tag line="71" name="todo" description="Do a lookup for the guest user ID instead of defaulting to 1"/>
+          <tag line="71" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="90" package="Default">
+        <name>getRoleNameFromID</name>
+        <docblock>
+          <description>Convert the role name by specifying the role id</description>
+          <long-description/>
+          <tag line="82" name="static" description=""/>
+          <tag line="82" name="throws" description="" type="\PPI\Model\PPI_Exception">
+            <type by_reference="false">\PPI\Model\PPI_Exception</type>
+          </tag>
+          <tag line="82" name="param" description="&lt;p&gt;The Role ID&lt;/p&gt;" type="integer" variable="$p_iRoleID">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="82" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="90">
+          <name>$p_iRoleID</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="108" package="Default">
+        <name>getRoleIDFromName</name>
+        <docblock>
+          <description>Convert the role ID by specifying the role name</description>
+          <long-description/>
+          <tag line="100" name="static" description=""/>
+          <tag line="100" name="throws" description="" type="\PPI\Model\PPI_Exception">
+            <type by_reference="false">\PPI\Model\PPI_Exception</type>
+          </tag>
+          <tag line="100" name="param" description="&lt;p&gt;The role name&lt;/p&gt;" type="string" variable="$p_sRoleName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="100" name="return" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+        <argument line="108">
+          <name>$p_sRoleName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="123" package="Default">
+        <name>arrayTrim</name>
+        <docblock>
+          <description>Function to recursively trim strings</description>
+          <long-description/>
+          <tag line="117" name="param" description="&lt;p&gt;The input to be trimmed&lt;/p&gt;" type="mixed" variable="$input">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="117" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="123">
+          <name>$input</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="140" package="Default">
+        <name>sendMail</name>
+        <docblock>
+          <description>PPI Mail Sending Function</description>
+          <long-description/>
+          <tag line="132" name="param" description="&lt;p&gt;The options for sending to the mail library&lt;/p&gt;" type="array" variable="$p_aOptions">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="132" name="uses" description="\PPI\Model\$p_aOptions[subject," refers="\PPI\Model\$p_aOptions[subject,"/>
+          <tag line="132" name="uses" description="\PPI\Model\Options" refers="\PPI\Model\Options"/>
+          <tag line="132" name="return" description="The result of the mail sending process" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="140">
+          <name>$p_aOptions</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>

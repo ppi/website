@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="9" namespace="PPI" package="Default">
+      <name>Helper</name>
+      <extends/>
+      <full_name>\PPI\Helper</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" line="17" package="Default">
+        <name>arrayTrim</name>
+        <docblock>
+          <description>Function to recursively trim strings</description>
+          <long-description/>
+          <tag line="11" name="param" description="&lt;p&gt;The input to be trimmed&lt;/p&gt;" type="mixed" variable="$input">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="11" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="17">
+          <name>$input</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="29" package="Default">
+        <name>getRouter</name>
+        <docblock>
+          <description>Get the router object</description>
+          <long-description/>
+          <tag line="24" name="return" description="" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="38" package="Default">
+        <name>getSecurity</name>
+        <docblock>
+          <description>Get the router object</description>
+          <long-description/>
+          <tag line="33" name="return" description="" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="42" package="Default">
+        <name>getObjectFromRegistry</name>
+        <argument line="42">
+          <name>$class</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="57" package="Default">
+        <name>getRequest</name>
+        <docblock>
+          <description>Get the PPI_Request object cached from the registry</description>
+          <long-description/>
+          <tag line="51" name="static" description=""/>
+          <tag line="51" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="68" package="Default">
+        <name>getResponse</name>
+        <docblock>
+          <description>Get the PPI_Response object cached from the registry</description>
+          <long-description/>
+          <tag line="62" name="static" description=""/>
+          <tag line="62" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

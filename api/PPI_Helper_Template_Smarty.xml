@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="10" namespace="default" package="View">
+      <name>PPI_Helper_Template_Smarty</name>
+      <extends/>
+      <full_name>\PPI_Helper_Template_Smarty</full_name>
+      <docblock>
+        <description/>
+        <long-description/>
+        <tag line="4" name="author" description="Paul Dragoonis" link="mailto:dragoonis@php.net"/>
+        <tag line="4" name="license" description="MIT" link="http://opensource.org/licenses/mit-license.php"/>
+        <tag line="4" name="package" description="View"/>
+        <tag line="4" name="link" description="www.ppiframework.com" link="www.ppiframework.com"/>
+      </docblock>
+      <implements link="db_Interface_Template.html#\PPI_Interface_Template">\PPI_Interface_Template</implements>
+      <property final="false" static="false" visibility="protected" line="16" package="Default">
+        <name>$_renderer</name>
+        <default>null</default>
+        <docblock>
+          <description>Rendering engine, in this case it's Smarty</description>
+          <long-description/>
+          <tag line="12" name="var" description="" type="null|\Smarty">
+            <type by_reference="false">null</type>
+            <type by_reference="false">\Smarty</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="22" package="Default">
+        <name>$_viewPath</name>
+        <default>null</default>
+        <docblock>
+          <description>The path of the /App/View/ folder</description>
+          <long-description/>
+          <tag line="18" name="var" description="" type="null|string">
+            <type by_reference="false">null</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="28" package="Default">
+        <name>$_smartyPath</name>
+        <default>null</default>
+        <docblock>
+          <description>The path to the Smarty library i.e: /Vendor/Smarty/</description>
+          <long-description/>
+          <tag line="24" name="var" description="" type="null|string">
+            <type by_reference="false">null</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="35" package="Default">
+        <name>$_rendererExt</name>
+        <default>null</default>
+        <docblock>
+          <description>The file extension to associate with smarty template files</description>
+          <long-description/>
+          <tag line="30" name="var" description="" type="null|string">
+            <type by_reference="false">null</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="41" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>Setup all the rendering variables</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="72" package="Default">
+        <name>render</name>
+        <docblock>
+          <description>Render the actual view file.</description>
+          <long-description/>
+          <tag line="65" name="param" description="&lt;p&gt;The template to load up. For example the master template.&lt;/p&gt;" type="string" variable="$p_sTplFile">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="65" name="throws" description="" type="\PPI_Exception">
+            <type by_reference="false" link="db_Exception.html#\PPI_Exception">\PPI_Exception</type>
+          </tag>
+          <tag line="65" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="72">
+          <name>$p_sTplFile</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="90" package="Default">
+        <name>assign</name>
+        <docblock>
+          <description>Assign a variable to the view</description>
+          <long-description/>
+          <tag line="83" name="param" description="&lt;p&gt;The variable name&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="83" name="param" description="&lt;p&gt;The variable value&lt;/p&gt;" type="string" variable="$val">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="83" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="90">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="90">
+          <name>$val</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="99" package="Default">
+        <name>getTemplateExtension</name>
+        <docblock>
+          <description>Get the view file extension. Config override or defaulting to .tpl</description>
+          <long-description/>
+          <tag line="94" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="113" package="Default">
+        <name>getDefaultMasterTemplate</name>
+        <docblock>
+          <description>Get the default master template</description>
+          <long-description/>
+          <tag line="108" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="123" package="Default">
+        <name>templateExists</name>
+        <docblock>
+          <description>This is yet to be developed</description>
+          <long-description/>
+          <tag line="117" name="param" description="&lt;p&gt;The Template Name&lt;/p&gt;" type="string" variable="$templateName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="117" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="123">
+          <name>$templateName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

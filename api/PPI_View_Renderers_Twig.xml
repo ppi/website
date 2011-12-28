@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="4" namespace="PPI\View\Renderers" package="Default">
+      <name>Twig</name>
+      <extends/>
+      <full_name>\PPI\View\Renderers\Twig</full_name>
+    </class>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="10" namespace="default" package="Model">
+      <name>PPI_Model_Schema</name>
+      <extends>\PPI_Model</extends>
+      <full_name>\PPI_Model_Schema</full_name>
+      <docblock>
+        <description/>
+        <long-description/>
+        <tag line="2" name="author" description="Paul Dragoonis" link="mailto:dragoonis@php.net"/>
+        <tag line="2" name="license" description="MIT" link="http://opensource.org/licenses/mit-license.php"/>
+        <tag line="2" name="copyright" description="Digiflex Development"/>
+        <tag line="2" name="package" description="Model"/>
+        <tag line="2" name="link" description="www.ppiframework.com" link="www.ppiframework.com"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="11" package="Default">
+        <name>$_primary</name>
+        <default>''</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="12" package="Default">
+        <name>$_name</name>
+        <default>''</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="14" package="Default">
+        <name>__construct</name>
+        <argument line="14">
+          <name>$tableName</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="14">
+          <name>$primaryKey</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="26" package="Default">
+        <name>getTableColumns</name>
+        <docblock>
+          <description>This function is used to get the columns of a given table.</description>
+          <long-description/>
+          <tag line="20" name="param" description="" type="" variable="$tableName"/>
+          <tag line="20" name="return" description="with columns." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="26">
+          <name>$tableName</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="49" package="Default">
+        <name>createYAML</name>
+        <docblock>
+          <description>Take the table schema and convert that into a .yaml file</description>
+          <long-description/>
+          <tag line="43" name="param" description="" type="string" variable="$file">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="43" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="49">
+          <name>$file</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

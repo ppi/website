@@ -1,0 +1,56 @@
+<file path="PPI/Test/Form/RadioTagTest.php" hash="55cde81d63af49459fe5398d1c631b23" package="DocBlox">
+    <parse_markers>
+      <error line="6">No DocBlock was found for Method setUp</error>
+      <error line="10">No DocBlock was found for Method tearDown</error>
+      <error line="14">No DocBlock was found for Method testCreate</error>
+      <error line="19">No DocBlock was found for Method testCreateWithAttrs</error>
+      <error line="24">No DocBlock was found for Method testDirectClass</error>
+      <error line="34">No DocBlock was found for Method testDirectClass__toString</error>
+      <error line="44">No DocBlock was found for Method testHasAttr</error>
+      <error line="54">No DocBlock was found for Method testGetAttr</error>
+      <error line="63">No DocBlock was found for Method testSetAttr</error>
+      <error line="71">No DocBlock was found for Method testGetValues</error>
+      <error line="79">No DocBlock was found for Method testSetValue</error>
+      <error line="4">No DocBlock was found for Class RadioboxTagTest</error>
+      <error line="1">No DocBlock was found for File PPI/Test/Form/RadioTagTest.php</error>
+    </parse_markers>
+    <namespace-alias name="Radio">PPI\Form\Tag\Radio</namespace-alias>
+    <class final="false" abstract="false" line="4" namespace="PPI\Test\Form" package="DocBlox">
+      <name>RadioboxTagTest</name>
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <full_name>\PPI\Test\Form\RadioboxTagTest</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" line="6" package="DocBlox">
+        <name>setUp</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="10" package="DocBlox">
+        <name>tearDown</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="14" package="DocBlox">
+        <name>testCreate</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="19" package="DocBlox">
+        <name>testCreateWithAttrs</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="24" package="DocBlox">
+        <name>testDirectClass</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="34" package="DocBlox">
+        <name>testDirectClass__toString</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="44" package="DocBlox">
+        <name>testHasAttr</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="54" package="DocBlox">
+        <name>testGetAttr</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="63" package="DocBlox">
+        <name>testSetAttr</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="71" package="DocBlox">
+        <name>testGetValues</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="79" package="DocBlox">
+        <name>testSetValue</name>
+      </method>
+    </class>
+  </file>

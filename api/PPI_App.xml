@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="12" namespace="PPI" package="Default">
+      <name>App</name>
+      <extends/>
+      <full_name>\PPI\App</full_name>
+      <property final="false" static="false" visibility="protected" line="19" package="Default">
+        <name>$_envOptions</name>
+        <default>array(
+		'siteMode'          =&gt; 'development'</default>
+        <docblock>
+          <description>The Environment Options for the PPI Application</description>
+          <long-description/>
+          <tag line="14" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="42" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>The constructor.</description>
+          <long-description/>
+          <tag line="36" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="42">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="58" package="Default">
+        <name>setEnv</name>
+        <docblock>
+          <description>Setter for the environment, passing in options determining how the app will behave</description>
+          <long-description/>
+          <tag line="52" name="param" description="&lt;p&gt;The options&lt;/p&gt;" type="array" variable="$p_aOptions">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="52" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="58">
+          <name>$options</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="80" package="Default">
+        <name>__set</name>
+        <docblock>
+          <description>Magic setter function, this is an alias of setEnv()</description>
+          <long-description/>
+          <tag line="73" name="param" description="&lt;p&gt;The Option&lt;/p&gt;" type="string" variable="$option">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="73" name="param" description="&lt;p&gt;The Value&lt;/p&gt;" type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="73" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="80">
+          <name>$option</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="80">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="91" package="Default">
+        <name>getEnv</name>
+        <docblock>
+          <description>Obtain the value of an environment option</description>
+          <long-description/>
+          <tag line="84" name="param" description="&lt;p&gt;The Environment Option&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="84" name="param" description="&lt;p&gt;The default value to return if the key is not found&lt;/p&gt;" type="mixed" variable="$default">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="84" name="return" description="If your key is not found, then NULL is returned" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="91">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="91">
+          <name>$default</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="101" package="Default">
+        <name>__get</name>
+        <docblock>
+          <description>Magic getter function, this is an alias of getEnv()</description>
+          <long-description/>
+          <tag line="95" name="param" description="&lt;p&gt;The Option&lt;/p&gt;" type="string" variable="$option">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="95" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="101">
+          <name>$option</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="111" package="Default">
+        <name>setRouter</name>
+        <docblock>
+          <description>Set the router object for the app bootup</description>
+          <long-description/>
+          <tag line="105" name="param" description="&lt;p&gt;The router object&lt;/p&gt;" type="\PPI\PPI_Router_Interface" variable="$router">
+            <type by_reference="false">\PPI\PPI_Router_Interface</type>
+          </tag>
+          <tag line="105" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="111">
+          <name>$router</name>
+          <default/>
+          <type>RouterInterface</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="121" package="Default">
+        <name>setDispatcher</name>
+        <docblock>
+          <description>Set the dispatch object for the app bootup</description>
+          <long-description/>
+          <tag line="115" name="param" description="&lt;p&gt;The dispatch object&lt;/p&gt;" type="\PPI\PPI_Dispatch_Interface" variable="$dispatch">
+            <type by_reference="false">\PPI\PPI_Dispatch_Interface</type>
+          </tag>
+          <tag line="115" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="121">
+          <name>$dispatch</name>
+          <default/>
+          <type>DispatchInterface</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="131" package="Default">
+        <name>setRequest</name>
+        <docblock>
+          <description>Set the request object for the app bootup</description>
+          <long-description/>
+          <tag line="125" name="param" description="" type="object" variable="$request">
+            <type by_reference="false">object</type>
+          </tag>
+          <tag line="125" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="131">
+          <name>$request</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="141" package="Default">
+        <name>setSession</name>
+        <docblock>
+          <description>Set the session object for the app bootup</description>
+          <long-description/>
+          <tag line="135" name="param" description="&lt;p&gt;The session object&lt;/p&gt;" type="\PPI\PPI_Session_Interface" variable="$session">
+            <type by_reference="false">\PPI\PPI_Session_Interface</type>
+          </tag>
+          <tag line="135" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="141">
+          <name>$session</name>
+          <default/>
+          <type>PPI_Session_Interface</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="151" package="Default">
+        <name>boot</name>
+        <docblock>
+          <description>Run the boot process, boot up our app. Call the relevant classes such as:
+config, registry, session, dispatch, router.</description>
+          <long-description/>
+          <tag line="145" name="return" description="Fluent interface" type="\PPI\$this">
+            <type by_reference="false">\PPI\$this</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="259" package="Default">
+        <name>dispatch</name>
+        <docblock>
+          <description>Call the dispatch process. Running the dispatcher and dispatching</description>
+          <long-description/>
+          <tag line="254" name="return" description="Fluent interface" type="\PPI\$this">
+            <type by_reference="false">\PPI\$this</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="317" package="Default">
+        <name>loadDSConnections</name>
+        <docblock>
+          <description>Load the connections from $path</description>
+          <long-description/>
+          <tag line="312" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="329" package="Default">
+        <name>getSiteMode</name>
+        <docblock>
+          <description>Get the current site mode set, such as 'development' or 'production'</description>
+          <long-description/>
+          <tag line="324" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="338" package="Default">
+        <name>getConfig</name>
+        <docblock>
+          <description>Get the config</description>
+          <long-description/>
+          <tag line="333" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

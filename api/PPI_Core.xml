@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="6" namespace="PPI" package="Default">
+      <name>Core</name>
+      <extends/>
+      <full_name>\PPI\Core</full_name>
+      <method final="false" abstract="false" static="true" visibility="public" line="15" package="Default">
+        <name>getDataSource</name>
+        <docblock>
+          <description>Get the data source object from the registry</description>
+          <long-description/>
+          <tag line="8" name="static" description=""/>
+          <tag line="8" name="throws" description="" type="\Registry\Exception\EntryNotFound">
+            <type by_reference="false">\Registry\Exception\EntryNotFound</type>
+          </tag>
+          <tag line="8" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="30" package="Default">
+        <name>getDataSourceConnection</name>
+        <docblock>
+          <description>Get a data source connection</description>
+          <long-description/>
+          <tag line="23" name="static" description=""/>
+          <tag line="23" name="param" description="" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="23" name="return" description="" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+        <argument line="30">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="41" package="Default">
+        <name>getSession</name>
+        <docblock>
+          <description>Get the session object</description>
+          <long-description/>
+          <tag line="34" name="static" description=""/>
+          <tag line="34" name="param" description="" type="null" variable="$options">
+            <type by_reference="false">null</type>
+          </tag>
+          <tag line="34" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="41">
+          <name>$options</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="62" package="Default">
+        <name>getCache</name>
+        <docblock>
+          <description>Get the cache object</description>
+          <long-description/>
+          <tag line="55" name="static" description=""/>
+          <tag line="55" name="param" description="" type="null" variable="$options">
+            <type by_reference="false">null</type>
+          </tag>
+          <tag line="55" name="return" description="" type="\PPI\Cache">
+            <type by_reference="false" link="db_Cache.html#\PPI\Cache">\PPI\Cache</type>
+          </tag>
+        </docblock>
+        <argument line="62">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="86" package="Default">
+        <name>getConfig</name>
+        <docblock>
+          <description>Get the config object from the registry</description>
+          <long-description/>
+          <tag line="79" name="static" description=""/>
+          <tag line="79" name="throws" description="" type="\Registry\Exception\EntryNotFound">
+            <type by_reference="false">\Registry\Exception\EntryNotFound</type>
+          </tag>
+          <tag line="79" name="return" description="" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="101" package="Default">
+        <name>getObjectFromRegistry</name>
+        <docblock>
+          <description>Get an object from the registry if it exists, if it does not then we set it for next time.</description>
+          <long-description/>
+          <tag line="94" name="static" description=""/>
+          <tag line="94" name="param" description="" type="" variable="$class"/>
+          <tag line="94" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="101">
+          <name>$class</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="117" package="Default">
+        <name>getDispatcher</name>
+        <docblock>
+          <description>Get the dispatcher object</description>
+          <long-description/>
+          <tag line="112" name="return" description="" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="127" package="Default">
+        <name>getRouter</name>
+        <docblock>
+          <description>Get the router object.</description>
+          <long-description/>
+          <tag line="121" name="static" description=""/>
+          <tag line="121" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

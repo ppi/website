@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="11" namespace="PPI" package="Default">
+      <name>Form</name>
+      <extends/>
+      <full_name>\PPI\Form</full_name>
+      <property final="false" static="false" visibility="protected" line="18" package="Default">
+        <name>$_bindData</name>
+        <default>array()</default>
+        <docblock>
+          <description>The bind data for the form.</description>
+          <long-description/>
+          <tag line="13" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="20" package="Default">
+        <name>__construct</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="30" package="Default">
+        <name>create</name>
+        <docblock>
+          <description>Create our form</description>
+          <long-description/>
+          <tag line="22" name="param" description="" type="string" variable="$action">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="22" name="param" description="" type="string" variable="$method">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="22" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="22" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="30">
+          <name>$action</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="30">
+          <name>$method</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="30">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="41" package="Default">
+        <name>text</name>
+        <docblock>
+          <description>Add a text field to our form</description>
+          <long-description/>
+          <tag line="34" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="34" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="34" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="41">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="41">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="55" package="Default">
+        <name>textarea</name>
+        <docblock>
+          <description>Add a textarea field to our form</description>
+          <long-description/>
+          <tag line="48" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="48" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="48" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="55">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="55">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="69" package="Default">
+        <name>password</name>
+        <docblock>
+          <description>Add a password field to our form</description>
+          <long-description/>
+          <tag line="62" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="62" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="62" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="69">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="69">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="83" package="Default">
+        <name>checkbox</name>
+        <docblock>
+          <description>Add a checkbox field to our form</description>
+          <long-description/>
+          <tag line="76" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="76" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="76" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="83">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="83">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="97" package="Default">
+        <name>radio</name>
+        <docblock>
+          <description>Add a radio field to our form</description>
+          <long-description/>
+          <tag line="90" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="90" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="90" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="97">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="97">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="111" package="Default">
+        <name>submit</name>
+        <docblock>
+          <description>Add a submit field</description>
+          <long-description/>
+          <tag line="104" name="param" description="" type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="104" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="104" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="111">
+          <name>$value</name>
+          <default>'Submit'</default>
+          <type/>
+        </argument>
+        <argument line="111">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="122" package="Default">
+        <name>hidden</name>
+        <docblock>
+          <description>Add a hidden field</description>
+          <long-description/>
+          <tag line="115" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="115" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="115" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="122">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="122">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="134" package="Default">
+        <name>select</name>
+        <docblock>
+          <description>Add a select (dropdown) field</description>
+          <long-description/>
+          <tag line="126" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="126" name="param" description="" type="array" variable="$dropdownValues">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="126" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="126" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="134">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="134">
+          <name>$dropdownValues</name>
+          <default/>
+          <type>array</type>
+        </argument>
+        <argument line="134">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="149" package="Default">
+        <name>dropdown</name>
+        <docblock>
+          <description>Add a dropdown field. This is just an alias to $this-&gt;select()</description>
+          <long-description/>
+          <tag line="141" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="141" name="param" description="" type="array" variable="$dropdownValues">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="141" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="141" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="149">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="149">
+          <name>$dropdownValues</name>
+          <default/>
+          <type>array</type>
+        </argument>
+        <argument line="149">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="160" package="Default">
+        <name>add</name>
+        <docblock>
+          <description>Add a field to our form.</description>
+          <long-description/>
+          <tag line="153" name="param" description="" type="string" variable="$fieldType">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="153" name="param" description="" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="153" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="160">
+          <name>$fieldType</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="160">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="237" package="Default">
+        <name>bind</name>
+        <docblock>
+          <description>Apply some bind data to this form.</description>
+          <long-description/>
+          <tag line="231" name="param" description="" type="array" variable="$data">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="231" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="237">
+          <name>$data</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="241" package="Default">
+        <name>end</name>
+      </method>
+    </class>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="11" namespace="default" package="Model">
+      <name>PPI_Model_Exception</name>
+      <extends>\PPI_Model</extends>
+      <full_name>\PPI_Model_Exception</full_name>
+      <docblock>
+        <description/>
+        <long-description/>
+        <tag line="2" name="version" description="1.0"/>
+        <tag line="2" name="author" description="Paul Dragoonis" link="mailto:dragoonis@php.net"/>
+        <tag line="2" name="license" description="MIT" link="http://opensource.org/licenses/mit-license.php"/>
+        <tag line="2" name="copyright" description="Digiflex Development"/>
+        <tag line="2" name="package" description="Model"/>
+        <tag line="2" name="link" description="www.ppiframework.com" link="www.ppiframework.com"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" line="14" package="Default">
+        <name>__construct</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="23" package="Default">
+        <name>deleteRecord</name>
+        <docblock>
+          <description>Delete an exception fromt he lgo</description>
+          <long-description/>
+          <tag line="19" name="param" description="" type="\unknown_type" variable="$p_iRecordID">
+            <type by_reference="false">\unknown_type</type>
+          </tag>
+        </docblock>
+        <argument line="23">
+          <name>$p_iRecordID</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+    </class>

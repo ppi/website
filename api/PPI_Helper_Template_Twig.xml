@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="12" namespace="default" package="Default">
+      <name>PPI_Helper_Template_Twig</name>
+      <extends/>
+      <full_name>\PPI_Helper_Template_Twig</full_name>
+      <implements link="db_Interface_Template.html#\PPI_Interface_Template">\PPI_Interface_Template</implements>
+      <property final="false" static="false" visibility="private" line="19" package="Default">
+        <name>$_renderer</name>
+        <default>null</default>
+        <docblock>
+          <description>The renderer</description>
+          <long-description/>
+          <tag line="14" name="var" description="" type="null|\Twig_Environment">
+            <type by_reference="false">null</type>
+            <type by_reference="false">\Twig_Environment</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="26" package="Default">
+        <name>$_viewVars</name>
+        <default>array()</default>
+        <docblock>
+          <description>The render variables</description>
+          <long-description/>
+          <tag line="21" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="28" package="Default">
+        <name>__construct</name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="50" package="Default">
+        <name>render</name>
+        <docblock>
+          <description>Render the twig view</description>
+          <long-description/>
+          <tag line="43" name="throws" description="" type="\PPI_Exception">
+            <type by_reference="false" link="db_Exception.html#\PPI_Exception">\PPI_Exception</type>
+          </tag>
+          <tag line="43" name="param" description="&lt;p&gt;The Template Name&lt;/p&gt;" type="string" variable="$templateName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="43" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="50">
+          <name>$templateName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="70" package="Default">
+        <name>assign</name>
+        <docblock>
+          <description>Assign a variable to the render process</description>
+          <long-description/>
+          <tag line="63" name="param" description="&lt;p&gt;The Key&lt;/p&gt;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="63" name="param" description="&lt;p&gt;The Value&lt;/p&gt;" type="mixed" variable="$val">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="63" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="70">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="70">
+          <name>$val</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="79" package="Default">
+        <name>getTemplateExtension</name>
+        <docblock>
+          <description>Get the file extension for the twig view.</description>
+          <long-description/>
+          <tag line="74" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="88" package="Default">
+        <name>getDefaultMasterTemplate</name>
+        <docblock>
+          <description>Get the default filename for the master template for this template engine</description>
+          <long-description/>
+          <tag line="83" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="98" package="Default">
+        <name>templateExists</name>
+        <docblock>
+          <description>This is yet to be developed</description>
+          <long-description/>
+          <tag line="92" name="param" description="&lt;p&gt;The Template Name&lt;/p&gt;" type="string" variable="$templateName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="92" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="98">
+          <name>$templateName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>

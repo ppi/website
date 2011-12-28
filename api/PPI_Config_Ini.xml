@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="10" namespace="PPI\Config" package="Default">
+      <name>Ini</name>
+      <extends link="db_Config_Generic.html#\PPI\Config\Generic">\PPI\Config\Generic</extends>
+      <full_name>\PPI\Config\Ini</full_name>
+      <property final="false" static="false" visibility="protected" line="16" package="Default">
+        <name>$_nestChar</name>
+        <default>'.'</default>
+        <docblock>
+          <description>String that separates nesting levels of configuration data</description>
+          <long-description/>
+          <tag line="11" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" line="26" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>Loads the section $section from the config file for
+access facilitated by nested object properties.</description>
+          
+          <tag line="18" name="param" description="" type="string" variable="$filename">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="18" name="param" description="" type="string|null" variable="$section">
+            <type by_reference="false">string</type>
+            <type by_reference="false">null</type>
+          </tag>
+          <tag line="18" name="throws" description="" type="\PPI\Core\CoreException">
+            <type by_reference="false" link="db_Core_CoreException.html#\PPI\Core\CoreException">\PPI\Core\CoreException</type>
+          </tag>
+        <long-description>&lt;p&gt;PPI_Config also implements Countable and Iterator to
+facilitate easy access to the data.&lt;/p&gt;</long-description><tag line="" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag></docblock>
+        <argument line="26">
+          <name>$iniArray</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="26">
+          <name>$section</name>
+          <default/>
+          <type/>
+        </argument>
+      <override_from>\PPI\Config\Ini</override_from></method>
+      <method final="false" abstract="false" static="false" visibility="protected" line="52" package="Default">
+        <name>_processKey</name>
+        <docblock>
+          <description>Assign the key's value to the property list. Handle the "dot"
+notation for sub-properties by passing control to
+processLevelsInKey().</description>
+          <long-description/>
+          <tag line="41" name="param" description="" type="array" variable="$config">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="41" name="param" description="" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="41" name="param" description="" type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="41" name="throws" description="" type="\PPI\Core\CoreException">
+            <type by_reference="false" link="db_Core_CoreException.html#\PPI\Core\CoreException">\PPI\Core\CoreException</type>
+          </tag>
+          <tag line="41" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="52">
+          <name>$config</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="52">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="52">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    <docblock/><property final="false" static="false" visibility="protected" line="18" package="Default">
+        <name>$_index</name>
+        <default/>
+        <docblock>
+          <description>Iteration index</description>
+          <long-description/>
+          <tag line="13" name="var" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::$$_index" description="\PPI\Config\Generic::$$_index" link="db_Config_Generic.html#\PPI\Config\Generic::$$_index"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></property><property final="false" static="false" visibility="protected" line="25" package="Default">
+        <name>$_count</name>
+        <default/>
+        <docblock>
+          <description>Number of elements in configuration data</description>
+          <long-description/>
+          <tag line="20" name="var" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::$$_count" description="\PPI\Config\Generic::$$_count" link="db_Config_Generic.html#\PPI\Config\Generic::$$_count"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></property><property final="false" static="false" visibility="protected" line="32" package="Default">
+        <name>$_data</name>
+        <default/>
+        <docblock>
+          <description>Contains array of configuration data</description>
+          <long-description/>
+          <tag line="27" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::$$_data" description="\PPI\Config\Generic::$$_data" link="db_Config_Generic.html#\PPI\Config\Generic::$$_data"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></property><property final="false" static="false" visibility="protected" line="42" package="Default">
+        <name>$_loadedSection</name>
+        <default/>
+        <docblock>
+          <description>Contains which config file sections were loaded. This is null
+if all sections were loaded, a string name if one section is loaded
+and an array of string names if multiple sections were loaded.</description>
+          <long-description/>
+          <tag line="35" name="var" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::$$_loadedSection" description="\PPI\Config\Generic::$$_loadedSection" link="db_Config_Generic.html#\PPI\Config\Generic::$$_loadedSection"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></property><method final="false" abstract="false" static="false" visibility="public" line="78" package="Default">
+        <name>get</name>
+        <docblock>
+          <description>Retrieve a value and return $default if there is no element set.</description>
+          <long-description/>
+          <tag line="71" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="71" name="param" description="" type="mixed" variable="$default">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="71" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::get()" description="\PPI\Config\Generic::get()" link="db_Config_Generic.html#\PPI\Config\Generic::get()"/></docblock>
+        <argument line="78">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="78">
+          <name>$default</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="92" package="Default">
+        <name>__get</name>
+        <docblock>
+          <description>Magic function so that $obj-&gt;value will work.</description>
+          <long-description/>
+          <tag line="86" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="86" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::__get()" description="\PPI\Config\Generic::__get()" link="db_Config_Generic.html#\PPI\Config\Generic::__get()"/></docblock>
+        <argument line="92">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="105" package="Default">
+        <name>__set</name>
+        <docblock>
+          <description>Only allow setting of a property if $allowModifications
+was set to true on construction. Otherwise, throw an exception.</description>
+          <long-description/>
+          <tag line="96" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="96" name="param" description="" type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="96" name="throws" description="" type="\PPI\Config\PPI_Exception">
+            <type by_reference="false">\PPI\Config\PPI_Exception</type>
+          </tag>
+          <tag line="96" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::__set()" description="\PPI\Config\Generic::__set()" link="db_Config_Generic.html#\PPI\Config\Generic::__set()"/></docblock>
+        <argument line="105">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="105">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="115" package="Default">
+        <name>__clone</name>
+        <docblock>
+          <description>Deep clone of this instance to ensure that nested PPI_Configs
+are also cloned.</description>
+          <long-description/>
+          <tag line="109" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::__clone()" description="\PPI\Config\Generic::__clone()" link="db_Config_Generic.html#\PPI\Config\Generic::__clone()"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="132" package="Default">
+        <name>toArray</name>
+        <docblock>
+          <description>Return an associative array of the stored data.</description>
+          <long-description/>
+          <tag line="127" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::toArray()" description="\PPI\Config\Generic::toArray()" link="db_Config_Generic.html#\PPI\Config\Generic::toArray()"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="150" package="Default">
+        <name>__isset</name>
+        <docblock>
+          <description>Support isset() overloading on PHP 5.1</description>
+          <long-description/>
+          <tag line="144" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="144" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::__isset()" description="\PPI\Config\Generic::__isset()" link="db_Config_Generic.html#\PPI\Config\Generic::__isset()"/></docblock>
+        <argument line="150">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="161" package="Default">
+        <name>__unset</name>
+        <docblock>
+          <description>Support unset() overloading on PHP 5.1</description>
+          <long-description/>
+          <tag line="154" name="param" description="" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="154" name="throws" description="" type="\PPI\Config\PPI_Exception">
+            <type by_reference="false">\PPI\Config\PPI_Exception</type>
+          </tag>
+          <tag line="154" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::__unset()" description="\PPI\Config\Generic::__unset()" link="db_Config_Generic.html#\PPI\Config\Generic::__unset()"/></docblock>
+        <argument line="161">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="172" package="Default">
+        <name>count</name>
+        <docblock>
+          <description>Defined by Countable interface</description>
+          <long-description/>
+          <tag line="167" name="return" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::count()" description="\PPI\Config\Generic::count()" link="db_Config_Generic.html#\PPI\Config\Generic::count()"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="181" package="Default">
+        <name>current</name>
+        <docblock>
+          <description>Defined by Iterator interface</description>
+          <long-description/>
+          <tag line="176" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::current()" description="\PPI\Config\Generic::current()" link="db_Config_Generic.html#\PPI\Config\Generic::current()"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="190" package="Default">
+        <name>key</name>
+        <docblock>
+          <description>Defined by Iterator interface</description>
+          <long-description/>
+          <tag line="185" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::key()" description="\PPI\Config\Generic::key()" link="db_Config_Generic.html#\PPI\Config\Generic::key()"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="198" package="Default">
+        <name>next</name>
+        <docblock>
+          <description>Defined by Iterator interface</description>
+          <long-description/>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::next()" description="\PPI\Config\Generic::next()" link="db_Config_Generic.html#\PPI\Config\Generic::next()"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="207" package="Default">
+        <name>rewind</name>
+        <docblock>
+          <description>Defined by Iterator interface</description>
+          <long-description/>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::rewind()" description="\PPI\Config\Generic::rewind()" link="db_Config_Generic.html#\PPI\Config\Generic::rewind()"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="217" package="Default">
+        <name>valid</name>
+        <docblock>
+          <description>Defined by Iterator interface</description>
+          <long-description/>
+          <tag line="212" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::valid()" description="\PPI\Config\Generic::valid()" link="db_Config_Generic.html#\PPI\Config\Generic::valid()"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="226" package="Default">
+        <name>getSectionName</name>
+        <docblock>
+          <description>Returns the section name(s) loaded.</description>
+          <long-description/>
+          <tag line="221" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::getSectionName()" description="\PPI\Config\Generic::getSectionName()" link="db_Config_Generic.html#\PPI\Config\Generic::getSectionName()"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="public" line="235" package="Default">
+        <name>areAllSectionsLoaded</name>
+        <docblock>
+          <description>Returns true if all sections were loaded</description>
+          <long-description/>
+          <tag line="230" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::areAllSectionsLoaded()" description="\PPI\Config\Generic::areAllSectionsLoaded()" link="db_Config_Generic.html#\PPI\Config\Generic::areAllSectionsLoaded()"/></docblock>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method><method final="false" abstract="false" static="false" visibility="protected" line="249" package="Default">
+        <name>_loadFileErrorHandler</name>
+        <docblock>
+          <description>Handle any errors from simplexml_load_file or parse_ini_file</description>
+          <long-description/>
+          <tag line="241" name="param" description="" type="integer" variable="$errno">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="241" name="param" description="" type="string" variable="$errstr">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="241" name="param" description="" type="string" variable="$errfile">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="241" name="param" description="" type="integer" variable="$errline">
+            <type by_reference="false">integer</type>
+          </tag>
+        <tag name="inherited_from" refers="\PPI\Config\Generic::_loadFileErrorHandler()" description="\PPI\Config\Generic::_loadFileErrorHandler()" link="db_Config_Generic.html#\PPI\Config\Generic::_loadFileErrorHandler()"/></docblock>
+        <argument line="249">
+          <name>$errno</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="249">
+          <name>$errstr</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="249">
+          <name>$errfile</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="249">
+          <name>$errline</name>
+          <default/>
+          <type/>
+        </argument>
+      <inherited_from>\PPI\Config\Generic</inherited_from></method></class>

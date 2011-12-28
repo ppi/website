@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="true" line="9" namespace="PPI\Form" package="Default">
+      <name>Rule</name>
+      <extends/>
+      <full_name>\PPI\Form\Rule</full_name>
+      <property final="false" static="false" visibility="protected" line="16" package="Default">
+        <name>$_ruleData</name>
+        <default>null</default>
+        <docblock>
+          <description>The abritary param</description>
+          <long-description/>
+          <tag line="11" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="23" package="Default">
+        <name>$_ruleMessage</name>
+        <default>null</default>
+        <docblock>
+          <description>The message for this rule</description>
+          <long-description/>
+          <tag line="18" name="var" description="" type="null">
+            <type by_reference="false">null</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="true" static="false" visibility="public" line="31" package="Default">
+        <name>validate</name>
+        <docblock>
+          <description>Validates data by this rule</description>
+          <long-description/>
+          <tag line="25" name="param" description="" type="mixed" variable="$data">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="25" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="31">
+          <name>$data</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="38" package="Default">
+        <name>__construct</name>
+        <docblock>
+          <description>The Constructor</description>
+          <long-description/>
+          <tag line="33" name="param" description="" type="mixed" variable="$param">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="38">
+          <name>$ruleData</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="50" package="Default">
+        <name>getRuleData</name>
+        <docblock>
+          <description>Get the rule param</description>
+          <long-description/>
+          <tag line="45" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="60" package="Default">
+        <name>setRuleData</name>
+        <docblock>
+          <description>Sets the rules value</description>
+          <long-description/>
+          <tag line="54" name="param" description="" type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="54" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="60">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="70" package="Default">
+        <name>setRuleMessage</name>
+        <docblock>
+          <description>Set the rule message</description>
+          <long-description/>
+          <tag line="64" name="param" description="" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="64" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="70">
+          <name>$message</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" line="79" package="Default">
+        <name>getRuleMessage</name>
+        <docblock>
+          <description>Get the rule message</description>
+          <long-description/>
+          <tag line="74" name="return" description="" type="string|null">
+            <type by_reference="false">string</type>
+            <type by_reference="false">null</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>

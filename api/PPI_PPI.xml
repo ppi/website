@@ -1,0 +1,24 @@
+<file path="PPI/PPI.php" hash="0f8b64d98d5cecd6b66bee361a099050" package="DocBlox">
+    <parse_markers>
+      <error line="4">No DocBlock was found for Method getDataSource</error>
+      <error line="8">No DocBlock was found for Method getDataSourceConnection</error>
+      <error line="2">No DocBlock was found for Class PPI</error>
+      <error line="1">No DocBlock was found for File PPI/PPI.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" line="2" namespace="default" package="DocBlox">
+      <name>PPI</name>
+      <extends/>
+      <full_name>\PPI</full_name>
+      <method final="false" abstract="false" static="true" visibility="public" line="4" package="DocBlox">
+        <name>getDataSource</name>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="8" package="DocBlox">
+        <name>getDataSourceConnection</name>
+        <argument line="8">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>

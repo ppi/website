@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class final="false" abstract="false" line="2" namespace="default" package="Default">
+      <name>PPI</name>
+      <extends/>
+      <full_name>\PPI</full_name>
+      <method final="false" abstract="false" static="true" visibility="public" line="4" package="Default">
+        <name>getDataSource</name>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" line="8" package="Default">
+        <name>getDataSourceConnection</name>
+        <argument line="8">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
