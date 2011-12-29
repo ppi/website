@@ -1,6 +1,7 @@
 <div class="api-show-page">
 	<div class="title"><?= $apiObject->getName(); ?></div>
 	
+	<?php if($apiObject->hasProperties()): ?>
 	<div class="properties">
 		<p class="properties-title">Properties</p>
 		<ul>
@@ -13,7 +14,9 @@
 		?>
 		</ul>
 	</div>
+	<?php endif; ?>
 	
+	<?php if($apiObject->hasMethods()): ?>
 	<div class="methods">
 		<p class="methods-title">Methods</p>
 		<ul>
@@ -41,6 +44,5 @@
 		?>
 		</ul>
 	</div>
-	
-
+	<?php endif; ?>
 </div>
