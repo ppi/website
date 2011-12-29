@@ -18,6 +18,7 @@
 				<!-- <li class="divider"></li> -->
 			  </ul>
 			</li>
+			<li><a href="<?= $baseUrl; ?>api" title="Manual">Manual</a></li>
 		</ul>
 		  <div class="search">
 			<input type="text" placeholder="Type, press enter">
