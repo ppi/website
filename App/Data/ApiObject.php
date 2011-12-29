@@ -7,52 +7,53 @@ class ApiObject {
 	
 	protected $_methods = array();
 	protected $_properties = array();
+	protected $_consts = array();
+	protected $_final = false;
+	protected $_abstract = false;
+	protected $_name = '';
+	protected $_interface = false;
+	protected $_class = false;
 	
-	/**
-	 * Constructor, lets take some XML and make magical objects out of it.
-	 * 
-	 * @param string $xml
-	 */
-	function __construct($xml) {
-		
-		$doc = new \DOMDocument();
-		$doc->loadXML($xml);
-		$xpath = new \DOMXPath($doc);
-		print_r($xml); exit;
-		var_dump($xpath->query('//class|//interface')); exit;
-		
+	function __construct() {
+
 	}
 	
-	/**
-	 * 
-	 * Lets create method objects from our XML
-	 * 
-	 * @todo lets check what object type the xpath code above in construct give us back and typehint this function
-	 * @param $param
-	 * @return boolean
-	 */
-	function createMethods($param) {
+	function getName() {
+		return $this->_name;
+	}
+	
+	function isInterface() {
+		return $this->_interface;
+	}
+	
+	function isClass() {
+		return $this->_class;
+	}
+	
+	function isAbstract() {
+		return $this->_abstract;
+	}
+	
+	function set($var, $value) {
 		
-		foreach($var as $method) {
-			$this->_methods[] = new Methods();
+		if(property_exists($this, '_' . $var)) {
+			$this->{'_' . $var} = $value;
 		}
-		return $count > 0;
 	}
 	
-	/**
-	 * 
-	 * Lets create property objects from our XML
-	 * 
-	 * @todo lets check what object type the xpath code above in construct give us back and typehint this function
-	 * @param $param
-	 * @return boolean
-	 */
-	function createProperties($param) {
-		
-		foreach($var as $method) {
-			$this->_methods[] = new Property();
-		}
-		return $count > 0;
+	function addMethod(Method $method) {
+		$this->_methods[] = $method;
 	}
 	
+	function addProperty(Property $property) {
+		$this->_properties[] = $property;
+	}
+	
+	function getMethods() {
+		return $this->_methods;
+	}
+	
+	function getProperties() {
+		return $this->_properties;
+	}
 }

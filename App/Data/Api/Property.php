@@ -1,6 +1,6 @@
 <?php
 namespace App\Data\Api;
-class Method {
+class Property {
 	
 	/**
 	 * Method name
@@ -16,12 +16,13 @@ class Method {
 	 */
 	protected $_visibility = '';
 	
-	/**
-	 * Keywords
-	 * 
-	 * @var string
-	 */
-	protected $_keywords = '';
+	protected $_static = false;
+	
+	protected $_final = false;
+	
+	protected $_abstract = false;
+	
+	protected $_line = 0;
 	
 	/**
 	 * Get the name of the method
@@ -41,13 +42,11 @@ class Method {
 		return $this->_visibility;
 	}
 	
-	/**
-	 * Get any keywords for this method such as 'final' and 'static'
-	 * 
-	 * @todo revise the name of this function
-	 * @return string
-	 */
-	function getKeywords() {
+	function set($var, $value) {
+		
+		if(property_exists($this, '_' . $var)) {
+			$this->{'_' . $var} = $value;
+		}
 		
 	}
 	

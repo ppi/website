@@ -1,6 +1,6 @@
 <?php
 namespace App\Data\Api;
-class Property {
+class Method {
 	
 	protected $_static = false;
 	
@@ -8,8 +8,18 @@ class Property {
 	
 	protected $_abstract = false;
 	
-	function __construct($xml) {
+	protected $_visibility = 'public';
+	
+	protected $_name = '';
+	
+	protected $_line = 0;
+	
+	function __construct() {
 		
+	}
+	
+	function getName() {
+		return $this->_name;
 	}
 	
 	function isStatic() {
@@ -24,5 +34,11 @@ class Property {
 		return $this->_abstract;
 	}
 	
+	function set($var, $value) {
+		
+		if(property_exists($this, '_' . $var)) {
+			$this->{'_' . $var} = $value;
+		}
+	}	
 	
 }
