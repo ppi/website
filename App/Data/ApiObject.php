@@ -49,6 +49,14 @@ class ApiObject {
 		$this->_properties[] = $property;
 	}
 	
+	function hasMethods() {
+		return count($this->_methods) > 0;
+	}
+	
+	function hasProperties() {
+		return count($this->_properties) > 0;
+	}
+	
 	function getMethods() {
 		return $this->_methods;
 	}
