@@ -6,7 +6,9 @@ class Api extends Application {
 		$this->addCSS('light/api');
 	}
 	
-	// List the entire project API.
+	/**
+	 * List the entire project API.
+	 */
 	function index() {
 		
 		$files = glob(ROOTPATH . 'api' . DS . '*.xml');
@@ -46,42 +48,70 @@ class Api extends Application {
 	 * 
 	 * @todo get the description from docblock->description
 	 * @param string $xml
+	 * @return \App\Data\ApiObject
 	 */
 	protected function getAPIObject($xml) {
 
 		$apiObject = new \App\Data\ApiObject();
-		$doc = new \DOMDocument();
-		$doc->loadXML($xml);
-		$class = $doc->getElementsByTagName('class')->item(0);
+		$class = simplexml_load_string($xml);
 
 		// Class Options
-		$className = $name = ltrim($class->getElementsByTagName('full_name')->item(0)->nodeValue, '\\');
-		$apiObject->set('name', $className);
-		$apiObject->set('final', $class->getAttribute('final') == 'true');
-		$apiObject->set('abstract', $class->getAttribute('abstract') == 'true');
+		$apiObject->set('name', ltrim( (string) $class->full_name, '\\'));
+		$apiObject->set('final', (string) $class['final'] == 'true');
+		$apiObject->set('abstract', (string) $class['abstract'] == 'true');
 
 		// Properties
-		$properties = $class->getElementsByTagName('property');
-		foreach($properties as $property) {
+		foreach($class->property as $property) {
 			$prop = new \App\Data\Api\Property();
-			$prop->set('name', $property->getElementsByTagName('name')->item(0)->nodeValue);
-			$prop->set('visibility', $property->getAttribute('visibility'));
-			$prop->set('final', $property->getAttribute('final') == 'true');
-			$prop->set('static', $property->getAttribute('static') == 'true');
-			$prop->set('line', $property->getAttribute('line'));
+			$prop->set('name', (string) $property->name);
+			$prop->set('visibility', (string) $property->visibility);
+			$prop->set('final', (string) $property['final'] == 'true');
+			$prop->set('static', (string) $property['static'] == 'true');
+			$prop->set('line', (string) $property['line']);
 			$apiObject->addProperty($prop);
 		}
 		
 		// Methods
-		$methods = $class->getElementsByTagName('method');
-		foreach($methods as $method) {
+		foreach($class->method as $method) {
+
 			$m = new \App\Data\Api\Method();
-			$m->set('name', $method->getElementsByTagName('name')->item(0)->nodeValue);
-			$m->set('visibility', $method->getAttribute('visibility'));
-			$m->set('final', $method->getAttribute('final') == 'true');
-			$m->set('static', $method->getAttribute('static') == 'true');
-			$m->set('abstract', $method->getAttribute('abstract') == 'true');
-			$m->set('line', $method->getAttribute('line'));
+			$m->set('name', (string) $method->name);
+			$m->set('final', (string) $method['final'] == 'true');
+			$m->set('static', (string) $method['static'] == 'true');
+			$m->set('visibility', (string) $method['visibility']);
+			$m->set('abstract', (string) $method['abstract'] == 'true');
+			$m->set('line', (string) $method['line']);
+			
+			if(isset($method->docblock)) {
+	
+				$m->set('description', (string) $method->docblock->description);
+
+				if(isset($method->docblock->tag)) {
+
+					foreach($method->docblock->tag as $tag) {
+						
+						if($tag['name'] == 'param') {
+							
+							$m->addArgument(array(
+								'name' => (string) $tag['variable'],
+								'type' => (string) $tag['type'],
+								'desc' => (string) $tag['description'],
+								'line' => (string) $tag['line']
+							));
+							
+						} elseif($tag['name'] == 'return') {
+							
+							$m->addReturnValue(array(
+								'type' => (string) $tag['type'],
+								'line' => (string) $tag['line']
+							));
+						}
+					}
+				}
+				
+			}
+
+			
 			$apiObject->addMethod($m);
 		}
 		

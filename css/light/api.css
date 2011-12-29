@@ -22,3 +22,66 @@
 .content-box .api-list {
 	list-style-type: none;
 }
+
+
+
+.api-show-page .title {
+	font-size: 1.6em;
+	font-family: "Museo_Slab_500";
+	margin-bottom: 12px;
+}
+
+.api-show-page .properties-title,
+.api-show-page .methods-title {
+	font-size: 1.3em;
+	font-family: "Museo_Slab_500"
+}
+
+.api-show-page .methods a .arguments {
+	font-size: 1.1em;
+	color: #000;
+}
+.api-show-page .methods a .method-name {
+	font-size: 1.1em;
+}
+.api-show-page .methods a .return {
+	font-size: 1.0em;
+	color: #000;
+}
+.api-show-page .methods ul li a {
+	
+}
+.api-show-page .methods ul li {
+	
+}
+.api-show-page .methods ul {
+	list-style-type: none;
+}
+.api-show-page .methods {
+	width: 933px;
+	padding: 15px;
+	border: 1px solid #9F9F9F;
+	background: #F8F8F8;
+	border-bottom: 1px solid black;
+	border-image: initial;
+}
+.api-show-page .properties ul li a {
+	
+}
+.api-show-page .properties ul li {
+	
+}
+.api-show-page .properties ul {
+	list-style-type: none;
+}
+.api-show-page .properties {
+	width: 933px;
+	padding: 15px;
+	border: 1px solid #9F9F9F;
+	background: #F8F8F8;
+	border-image: initial;
+	margin-bottom: 12px;
+}
+.api-show-page {
+	
+}
