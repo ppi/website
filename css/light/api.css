@@ -48,6 +48,21 @@
 	font-size: 1.0em;
 	color: #000;
 }
+
+.api-show-page .properties a .visibility {
+	font-size: 1.0em;
+	color: #000;
+}
+
+.api-show-page .properties a .property-name {
+	font-size: 1.1em;
+}
+
+.api-show-page .properties a .default {
+	font-size: 1.1em;
+	color: #000;
+}
+
 .api-show-page .methods ul li a {
 	
 }

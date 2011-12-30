@@ -8,7 +8,14 @@
 		<?php
 		foreach($apiObject->getProperties() as $property):
 		?>
-			<li><a href="" title=""><?= $property->getName(); ?></a></li>
+			<li>
+				<a href="" title="">
+					<span class="visibility"><?= $property->getVisibility(); ?></span>
+					<span class="property-name"><?= $property->getName(); ?></span>
+					<span class="default">= <?= $property->getDefault(); ?></span>
+				</a>
+				<p class="desc"><?= $property->getDesc(); ?></p>
+			</li>
 		<?php
 		endforeach;
 		?>

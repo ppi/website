@@ -14,7 +14,7 @@ class Property {
 	 * 
 	 * @var string
 	 */
-	protected $_visibility = '';
+	protected $_visibility = 'public';
 	
 	protected $_static = false;
 	
@@ -22,7 +22,13 @@ class Property {
 	
 	protected $_abstract = false;
 	
-	protected $_line = 0;
+	protected $_description = '';
+	
+	protected $_type = '';
+	
+	protected $_line = 1;
+	
+	protected $_default = 'null';
 	
 	/**
 	 * Get the name of the method
@@ -40,6 +46,18 @@ class Property {
 	 */
 	function getVisibility() {
 		return $this->_visibility;
+	}
+	
+	function getDesc() {
+		return $this->_description;
+	}
+	
+	function hasDesc() {
+		return $this->_description !== '';
+	}
+	
+	function getDefault() {
+		return $this->_default;
 	}
 	
 	function set($var, $value) {

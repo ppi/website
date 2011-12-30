@@ -25,7 +25,7 @@ class Api extends Application {
 		$file      = $this->get('show', '');
 		$cache     = $this->getCache();
 		$cacheName = 'api__' . $file;
-		if($cache->exists($cacheName)) {
+		if(!$cache->exists($cacheName)) {
 			$apiObject = $cache->get($cacheName);
 		} else {
 			$apiParser = new ApiParser();
@@ -35,17 +35,5 @@ class Api extends Application {
 		$this->render('api/show', compact('apiObject'));
 	}
 	
-	/**
-	 * Lets take some XML and make magical objects out of it.
-	 * 
-	 * @todo get the description from docblock->description
-	 * @param string $xml
-	 * @return \App\Data\ApiObject
-	 */
-	protected function getAPIObject($xml) {
 
-
-
-	}
-	
 }

@@ -31,10 +31,23 @@ class ApiParser {
 
 			$prop = new Property();
 			$prop->set('name',        (string) $property->name);
-			$prop->set('visibility',  (string) $property->visibility);
+			$prop->set('visibility',  (string) $property['visibility']);
 			$prop->set('final',       (string) $property['final'] == 'true');
 			$prop->set('static',      (string) $property['static'] == 'true');
 			$prop->set('line',        (string) $property['line']);
+			$prop->set('default',     (string) $property->default);
+			
+			if(isset($property->docblock)) {
+				$prop->set('description', (string) $property->docblock->description);
+				if(isset($prop->docblock->tag)) {
+					foreach($prop->docblock->tag as $tag) {
+						if($tag['name'] == 'var') {
+							$prop->set('type', (string) $prop->docblock->tag['type']);
+						}
+					}
+				}
+				
+			}
 			$apiObject->addProperty($prop);
 		}
 		
@@ -50,24 +63,17 @@ class ApiParser {
 			$m->set('line',       (string) $method['line']);
 			
 			if(isset($method->docblock)) {
-	
 				$m->set('description', (string) $method->docblock->description);
-
 				if(isset($method->docblock->tag)) {
-
 					foreach($method->docblock->tag as $tag) {
-
 						if($tag['name'] == 'param') {
-							
 							$m->addArgument(array(
 								'name' => (string) $tag['variable'],
 								'type' => (string) $tag['type'],
 								'desc' => (string) $tag['description'],
 								'line' => (string) $tag['line']
 							));
-
 						} elseif($tag['name'] == 'return') {
-
 							$m->addReturnValue(array(
 								'type' => (string) $tag['type'],
 								'line' => (string) $tag['line']
