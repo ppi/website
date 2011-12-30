@@ -11,13 +11,8 @@ class Api extends Application {
 	 * List the entire project API.
 	 */
 	function index() {
-
 		$files = glob(ROOTPATH . 'api' . DS . '*.xml');
-		foreach($files as $file) {
-			$pathinfo = pathinfo($file);
-			$filenames[] = str_replace(array('.xml', '_'), array('', '\\'), $pathinfo['filename']);
-		}
-		$this->render('api/index', compact('filenames'));
+		$this->render('api/index', compact('files'));
 	}
 	
 	function show() {
