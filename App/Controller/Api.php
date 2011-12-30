@@ -15,7 +15,7 @@ class Api extends Application {
 		$files = glob(ROOTPATH . 'api' . DS . '*.xml');
 		foreach($files as $file) {
 			$pathinfo = pathinfo($file);
-			$filenames[] = str_replace('.xml', '', $pathinfo['filename']);
+			$filenames[] = str_replace(array('.xml', '_'), array('', '\\'), $pathinfo['filename']);
 		}
 		$this->render('api/index', compact('filenames'));
 	}
