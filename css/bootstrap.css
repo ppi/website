@@ -1389,8 +1389,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 .topbar input:focus, .topbar input.focused {
   outline: 0;
   background-color: #ffffff;
-  color: #404040;
-  text-shadow: 0 1px 0 #ffffff;
+  color: #fff;
   border: 0;
   padding: 5px 10px;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
