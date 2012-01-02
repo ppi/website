@@ -20,9 +20,11 @@
 			</li>
 			<li><a href="<?= $baseUrl; ?>api" title="Manual">Manual</a></li>
 		</ul>
-		  <div class="search">
-			<input type="text" placeholder="Type, press enter" id="header-search-input">
-		  </div>
+		<div class="search">
+			<form action="<?= $baseUrl; ?>search/results" method="get">
+				<input type="text" name="keyword" placeholder="Type, press enter" id="header-search-input">
+			</form>
+		</div>
     </div>
   </div>
 </div>
