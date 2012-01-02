@@ -61,7 +61,7 @@ class Search extends Application {
 			if(stripos($class, $keyword) !== false) {
 
 				$response['suggestions'][] = $class;
-				$response['data'][] = $baseUrl . 'api/show/' . str_replace('\\', '_', $method['class']);
+				$response['data'][] = $baseUrl . 'api/show/' . str_replace('\\', '_', $class);
 				$response['numResults']++;
 				
 				// Threshold bailout
