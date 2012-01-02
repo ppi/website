@@ -21,7 +21,7 @@
 			<li><a href="<?= $baseUrl; ?>api" title="Manual">Manual</a></li>
 		</ul>
 		  <div class="search">
-			<input type="text" placeholder="Type, press enter">
+			<input type="text" placeholder="Type, press enter" id="header-search-input">
 		  </div>
     </div>
   </div>
