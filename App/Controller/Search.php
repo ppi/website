@@ -46,7 +46,10 @@ class Search extends Application {
 			if(stripos($method['title'], $keyword) !== false) {
 				// Make something like: PPI\Cache->set()
 				$response['suggestions'][] = $method['class'] . '->' . $method['title'] . '()';
-				$response['data'][] = $baseUrl . 'api/show/' . str_replace('\\', '_', $method['class']);
+				$response['data'][] = $baseUrl . 'api/show/' . 
+										str_replace('\\', '_', $method['class']) .
+										'#m-' . $method['title'];
+				
 				$response['numResults']++;
 				
 				// Threshold bailout

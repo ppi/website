@@ -27,6 +27,8 @@ class Api extends Application {
 			$apiObject = $apiParser->parseDocBloxXML($apiParser->getXMLFromFile($file));
 			$cache->set($cacheName, $apiObject);
 		}
+		
+		$this->addJS('jquery.scrollto.min', 'api');
 		$this->render('api/show', compact('apiObject'));
 	}
 	

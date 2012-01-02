@@ -40,7 +40,7 @@
 			$argStr .= ')';
 		?>
 			<li>
-				<a href="" title="">
+				<a href="" title="" id="m-<?=$method->getName(); ?>">
 					<span class="return"><?= $method->getReturnType(); ?>&nbsp;</span>
 					<span class="method-name"><?= $method->getName(); ?></span><span class="arguments"><?= $argStr; ?></span>
 				</a>
