@@ -362,7 +362,7 @@
       } else if (offsetTop > lowerBound) {
         this.container.scrollTop(offsetTop - this.options.maxHeight + 25);
       }
-      this.el.val(this.getValue(this.suggestions[i]));
+//      this.el.val(this.getValue(this.suggestions[i]));
     },
 
     onSelect: function(i) {
