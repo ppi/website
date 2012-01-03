@@ -21,7 +21,8 @@
 	<p>Loading views is very simple, by calling $this->render() you're invoking a file to handle presentation logic. This view has values passed to it from your controller and it renders the appropriate output type, most commonly HTML.</p>
 	<p>This will load your little template file specified into the master template (default template.php)</p>
 	<p>PPI renders a "master template" which is basically your site "shell". A part of this master template there is a dynamic part of it, this dynamic part is the actual view that you choose to render from your controller by doing:</p>
-	<pre><code class="php">// No data to pass, just render raw HTML
+	<pre><code class="php">&lt;?php
+// No data to pass, just render raw HTML
 $this->render('user/profile');
 		
 // Passing data
@@ -107,8 +108,7 @@ $this->render('user/projects', compact('projectData', 'user'));</code></pre>
 	<p><strong>$baseUrl - The config setting</strong></p>
 	<pre><code class="ini">system.base_url = http://localhost/myapp/</code></pre>
 	<pre><code class="php">&lt;a href="&lt;?php echo $baseUrl; ?&gt;user/login">Link&lt;/a></code></pre>
-<!--	<p><strong>currUr</strong> - Current URI</p>-->
-	<p><strong>fullUrl</strong> - The full URL. protocol://host/uri, eg: https://localhost/mysite/user/profile/ppi_master</p>
+	<p><strong>fullUrl</strong> - The full URL. hostname:protocol://host/uri, eg: https://localhost/mysite/user/profile/ppi_master</p>
 
 	<p><strong>request</strong> The request array containing controller and method from the dispatcher.</p>
 	<p><strong>request.controller</strong> - If we are on user/login then controller will be 'user'</p>
@@ -153,7 +153,7 @@ if($request['controller'] === 'user' && $request['method'] === 'login') { .. }</
 	<h3 id="anchor-rendering-engines">Rendering engines</h3>
 	<p>PPI supports pluggable rendering engines so you can use raw .php template files but you can also use the Smarty templating engine and Twig templating engine.</p>
 	<p>To switch rendering engines for your application you modify the following config setting.</p>
-	<pre><code class="php">layout.renderer = php
+	<pre><code class="ini">layout.renderer = php
 layout.renderer = smarty
 layout.renderer = twig</code></pre>
 

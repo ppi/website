@@ -3,12 +3,17 @@ namespace App\Controller;
 class Docs extends Application {
 	
 	function index() {
-		$template = $this->get('index');
-		if(!$this->templateExists('docs/' . $template)) {
-			$template = 'getting-started';
+
+		$section = $this->get('index');
+		if(!$this->templateExists('docs/' . $section)) {
+			$section = 'getting-started';
 		}
-		$this->addCSS('light/docs');
-		$this->render('docs/' . $template);
+		$template = 'docs/' . $section;
+
+		$this->addCSS('light/docs', 'highlight/github');
+		$this->addJS('highlight', 'docs');
+		
+		$this->render($template, compact('content'));
 	}
 	
 }

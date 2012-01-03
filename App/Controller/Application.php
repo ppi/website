@@ -62,7 +62,7 @@ abstract class Application extends \PPI\Controller {
 	/**
 	 * Override for all rendering of views.
 	 *
-	 * @param sting $template
+	 * @param string $template
 	 * @param array $params
 	 * @param array $options
 	 * @return mixed
