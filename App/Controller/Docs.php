@@ -8,6 +8,7 @@ class Docs extends Application {
 			$template = 'getting-started';
 		}
 		$this->addCSS('light/docs');
+		$this->addJS('docs');
 		$this->render('docs/' . $template);
 	}
 	

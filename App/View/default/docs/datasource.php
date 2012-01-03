@@ -39,7 +39,9 @@
 		<br>
 		For a list of the connection properties for each individual driver, go <a target="_blank" href="http://www.doctrine-project.org/docs/dbal/2.0/en/reference/configuration.html#connection-details" title="Supported Driver Properties">here</a>.
 	</p>
-	<pre><code class="php">$connections['my_connection_key'] = array(
+	<pre>
+<?php highlight_string("<?php
+	\$connections['my_connection_key'] = array(
     'type'   => 'pdo_mysql',
     'host'   => 'localhost',
     'dbname' => 'my_db_name',
@@ -47,37 +49,44 @@
     'pass'   => 'my_db_pass'
 );
 
-$connections['sessions'] = array(
+\$connections['sessions'] = array(
 	'type'       => 'pdo_pgsql',
 	'hostname'   => 'localhost',
 	'database'   => 'my_db_name',
 	'username'   => 'my_db_user',
 	'password'   => 'my_db_pass'
-);</code></pre>
+);");?></pre>
 	
 	<p>Now we have to take these connections and pass them into the DataSource component. There are two ways in which you can do this, both are identical</p>
-	<pre><code class="php">$ds = new \PPI\DataSource($connections);
+	<pre>
+<?php
+highlight_string("<?php
+\$ds = new \PPI\DataSource(\$connections);
 // or
-$ds = \PPI\DataSource::create($connections);</code></pre>
+\$ds = \PPI\DataSource::create(\$connections);");?></pre>
 	
 	<h2 id="loading-your-connection">Loading your connection <a class="anchor" href="#loading-your-connection" title="Loading Your Connection">¶</a></h2>
 	<p>You can call up your respective connection using the key you defined in the above code example. In our case we called it 'my_connection_key' however a more appropriate name in a live application may be something like: 'sessions' or 'user_cache'.</p>
-	<pre><code class="php">$connection = $ds->getConnection('my_connection_key');</code></pre>
+	<pre>$connection = $ds->getConnection('my_connection_key');</pre>
 
 	<h2 id="ds-recap1">Recap</h2>
 	<p>Now we will recap on learning how to use the DataSource component standalone, not within the PPI Application</p>
-	<pre><code class="php">// File: my_ds_test.php
+	<pre>
+<?php
+highlight_string("<?php
+// File: my_ds_test.php
 include 'PPI/PPI/init.php';
-$connections = array();
-$connections['main'] = array(
+\$connections = array();
+\$connections['main'] = array(
 	'type'       => 'pdo_mysql',
 	'hostname'   => 'localhost',
 	'database'   => 'my_db_name',
 	'username'   => 'my_db_user',
 	'password'   => 'my_db_pass'
 );
-$ds = new \PPI\DataSource($connections);
-$connection = $ds->getConnection('main');</code></pre>
+\$ds = new \PPI\DataSource(\$connections);
+\$connection = \$ds->getConnection('main');"); ?>
+</pre>
 	
 	<h2 id="skeleton-application">The PPI Skeleton Application <a class="anchor" href="#skeleton-application" title="The PPI Skeleton Application">¶</a></h2>
 	<p>The PPI skeleton application has some extra goodness for you to make your job much easier. All of the above code is pretty much done for you and you just need to focus making your app work.</p>
@@ -85,33 +94,24 @@ $connection = $ds->getConnection('main');</code></pre>
 	<p>Firstly the default path that PPI\App will look for your connections is App/Config/connections.php, you can change this default path by setting the '$app->dsConnectionsPath' property</p>
 	<br>
 	<p>In your index.php bootstrap file you have an option called 'ds' by setting this to true, you are allowing PPI to load up your pre-set connections and let you get your connection out of there whenever required.</p>
-	<pre><code class="php">&lt;?php
+	<pre>
+<?php highlight_string("<?php
 include 'PPI/PPI/init.php';
-$app = new \PPI\App();
-$app->ds = true;
-$app->boot();</code></pre>
+\$app = new \PPI\App();
+\$app->ds = true;
+\$app->boot();"); ?></pre>
 	<p>Connections now auto-parsed from App/Config/connections.php and PPI\DataSource is now in the registry with your connections set into it.</p>
-	<pre><code class="php">var_dump(\PPI\Registry::exists('DataSource')); // bool(true)</code></pre>
+	<pre><?php highlight_string("<?php var_dump(\PPI\Registry::exists('DataSource')); // bool(true)"); ?></pre>
 	<p>It's recommended you use Core here instead of directly accessing the registry.</p>
-	<pre><code class="php">use PPI\Core;
-$ds = Core::getDataSource();
-$connection = $ds->getConnection('my_conn_key');
+	<pre>
+<?php highlight_string("<?php
+use PPI\Core;
+\$ds = Core::getDataSource();
+\$connection = \$ds->getConnection('my_conn_key');
 
 // or
-$connection = Core::getDataSource()->getConnection('my_conn_key');
+\$connection = Core::getDataSource()->getConnection('my_conn_key');
 
 // or
-$connection = Core::getDataSourceConnection('my_conn_key');</code></pre>
-
+\$connection = Core::getDataSourceConnection('my_conn_key');"); ?></pre>
 </article>
-
-	
-
-	
-
-
-
-	
-
-	
-

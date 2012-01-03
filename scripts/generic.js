@@ -7,4 +7,8 @@ jQuery(document).ready(function() {
 		}
 	});
 	
+	$('#header-search-input').focus(function() {
+		// tbc, re-display the autocomplete
+	});
+	
 });
