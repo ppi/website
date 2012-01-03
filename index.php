@@ -5,4 +5,6 @@ require_once 'PPI/PPI/init.php';
 $app = new PPI\App();
 $app->ds = true;
 $app->boot();
+error_reporting(-1);
+ini_set('display_errors', 'on');
 $app->dispatch();

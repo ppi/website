@@ -47,18 +47,18 @@
     'pass'   => 'my_db_pass'
 );
 
-$connections['sessions'] = array(
+\$connections['sessions'] = array(
 	'type'       => 'pdo_pgsql',
 	'hostname'   => 'localhost',
 	'database'   => 'my_db_name',
 	'username'   => 'my_db_user',
 	'password'   => 'my_db_pass'
-);</code></pre>
+);");?></pre>
 	
 	<p>Now we have to take these connections and pass them into the DataSource component. There are two ways in which you can do this, both are identical</p>
 	<pre class="php"><code class="php">$ds = new \PPI\DataSource($connections);
 // or
-$ds = \PPI\DataSource::create($connections);</code></pre>
+\$ds = \PPI\DataSource::create(\$connections);");?></pre>
 	
 	<h2 id="loading-your-connection">Loading your connection <a class="anchor" href="#loading-your-connection" title="Loading Your Connection">¶</a></h2>
 	<p>You can call up your respective connection using the key you defined in the above code example. In our case we called it 'my_connection_key' however a more appropriate name in a live application may be something like: 'sessions' or 'user_cache'.</p>
@@ -89,10 +89,11 @@ $connection = $ds->getConnection('main');
 	<p>In your index.php bootstrap file you have an option called 'ds' by setting this to true, you are allowing PPI to load up your pre-set connections and let you get your connection out of there whenever required.</p>
 	<pre class="php"><code class="php">&lt;?php
 include 'PPI/PPI/init.php';
-$app = new \PPI\App();
-$app->ds = true;
-$app->boot();</code></pre>
+\$app = new \PPI\App();
+\$app->ds = true;
+\$app->boot();"); ?></pre>
 	<p>Connections now auto-parsed from App/Config/connections.php and PPI\DataSource is now in the registry with your connections set into it.</p>
+
 	<pre class="php"><code class="php">var_dump(\PPI\Registry::exists('DataSource')); // bool(true)</code></pre>
 	<p>It's recommended you use Core here instead of directly accessing the registry.</p>
 	<pre class="php"><code class="php">use PPI\Core;

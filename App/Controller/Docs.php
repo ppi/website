@@ -8,6 +8,7 @@ class Docs extends Application {
 		if(!$this->templateExists('docs/' . $section)) {
 			$section = 'getting-started';
 		}
+
 		$template = 'docs/' . $section;
 
 		$this->addCSS('light/docs', 'highlight/github');
