@@ -3,10 +3,10 @@
     <div class="container">
 		<h3><a class="logo" href="<?= $baseUrl; ?>" title="PPI"><img src="<?= $baseUrl; ?>images/light/ppi-white.png" alt="Logo" height="25"></a></h3>
 		<ul class="nav">
-			<li class="active"><a href="<?= $baseUrl; ?>">Home</a></li>
-			<li><a href="<?= $baseUrl; ?>community" title="Community">Community</a></li>
-			<li><a href="<?= $baseUrl; ?>projects" title="Projects">Projects</a></li>
-			<li class="dropdown">
+			<li class="<?=$request['controller'] == 'home' ? 'active' : '';?>"><a href="<?= $baseUrl; ?>">Home</a></li>
+			<li class="<?=$request['controller'] == 'community' ? 'active' : '';?>"><a href="<?= $baseUrl; ?>community" title="Community">Community</a></li>
+			<li class="<?=$request['controller'] == 'projects' ? 'active' : '';?>"><a href="<?= $baseUrl; ?>projects" title="Projects">Projects</a></li>
+			<li class="dropdown <?=$request['controller'] == 'docs' ? 'active' : '';?>">
 			  <a href="#" class="dropdown-toggle">Documentation</a>
 			  <ul class="dropdown-menu">
 				<li><a href="<?= $baseUrl; ?>docs/getting-started.html">Getting Started</a></li>
@@ -18,7 +18,7 @@
 				<!-- <li class="divider"></li> -->
 			  </ul>
 			</li>
-			<li><a href="<?= $baseUrl; ?>api" title="Manual">Manual</a></li>
+			<li class="<?=$request['controller'] == 'api' ? 'active' : '';?>"><a href="<?= $baseUrl; ?>api" title="Manual">Manual</a></li>
 		</ul>
 		<div class="search">
 			<form action="<?= $baseUrl; ?>search/results" method="get">
