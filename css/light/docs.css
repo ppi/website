@@ -1,10 +1,7 @@
 .docs-page p {
+	font-family: Helvetica;
 	font-size: 1.1em;
 	font-weight: normal;
-}
-
-.docs-page {
-	margin-top: 30px;
 }
 
 .docs-page .toc ul {
@@ -15,8 +12,8 @@
 .docs-page .toc {
 	float: right;
 	padding: 12px;
-	margin: 12px;
-	width: 200px;
+	margin: 12px 0 12px 12px;
+	width: 230px;
 	background-color: #e1eded;
 	color: #244d4d;
 	border: 1px solid #244d4d;
@@ -56,11 +53,23 @@
 }
 
 .docs-page {
+	position: relative;
 	width: 933px;
-	padding: 15px;
+	padding: 15px 15px 30px 15px;
 	border: 1px solid #9f9f9f;
-	background: #f8f8f8;
+	background: white;
 	border-bottom: 1px solid #000;
+	margin-top: 30px;
+}
+
+article.docs-page a.next-article i {
+	margin-top: 3px;
+}
+article.docs-page a.next-article {
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+	font-size: 1.2em;
 }
 
 #page-content pre {
@@ -68,11 +77,19 @@
 	margin: 5px 5px 5px 0;
 }
 #page-content code {
-	background-color: none;
+	background: none;
 	padding: 0;
 	margin: 0;
 }
 
 #page-content pre, #page-content code {
 	line-height: 15px;
+}
+
+p.section-title {
+	font-size: 1.3em;
+	/*background-color: #404040;*/
+	background-color: #E1EDED;
+	color: #244D4D;
+	padding: 5px;
 }
