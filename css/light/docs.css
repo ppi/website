@@ -55,7 +55,7 @@
 .docs-page {
 	position: relative;
 	width: 933px;
-	padding: 15px 15px 30px 15px;
+	padding: 15px 15px 50px 15px;
 	border: 1px solid #9f9f9f;
 	background: white;
 	border-bottom: 1px solid #000;
@@ -63,12 +63,22 @@
 }
 
 article.docs-page a.next-article i {
-	margin-top: 3px;
+	margin-top: 2px;
 }
 article.docs-page a.next-article {
 	position: absolute;
 	bottom: 12px;
 	right: 12px;
+	font-size: 1.2em;
+}
+
+article.docs-page a.prev-article i {
+	margin-top: 2px;
+}
+article.docs-page a.prev-article {
+	position: absolute;
+	bottom: 12px;
+	left: 12px;
 	font-size: 1.2em;
 }
 
