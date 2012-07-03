@@ -37,7 +37,6 @@ a, p {
 
 #wrapper {
 	margin: 0 auto;
-    background: url(../images/bg.png) repeat;
 }
 
 
@@ -58,7 +57,8 @@ a, p {
 }
 
 #header .container {
-	width: 1024px;
+	width: !important;
+	margin-left: 20px;
 }
 
 #header div.navbar-inner {
@@ -156,7 +156,6 @@ a, p {
 }
 #page-content {
 	padding-top: 60px;
-	width: 1024px;
 	margin: 0 auto;
 }
 
@@ -186,7 +185,6 @@ footer {
 	padding-left: 30px;
 	padding-top: 16px;
 	height: 60px;
-	width: 935px;
 	margin: 0;
 	border-top: 1px solid #757575;
 	background-color: #626262;

@@ -1,3 +1,10 @@
+.docs-page {
+	position: relative;
+	background: white;
+	border-bottom: 1px solid #000;
+	margin-top: 30px;
+}
+
 .docs-page p {
 	font-family: Helvetica;
 	font-size: 1.1em;
@@ -10,20 +17,26 @@
 }
 
 .docs-page .toc {
-	float: right;
+	position: absolute;
+	right: 0px;
 	padding: 12px;
-	margin: 12px 0 12px 12px;
-	width: 230px;
+	width: 210px;
 	background-color: #e1eded;
 	color: #244d4d;
 	border: 1px solid #244d4d;
+	border-right: none;
 
-	border-radius: 0 0 35px 0;
-	-webkit-border-radius: 0 0 35px 0;
-	-moz-border-radius: 0 0 35px 0;
-	-moz-box-shadow: 3px 3px 5px #bebebe;
-	-webkit-box-shadow: 3px 3px 5px #bebebe;
+	/*border-radius: 0 0 35px 0;*/
+	/*-webkit-border-radius: 0 0 35px 0;*/
+	/*-moz-border-radius: 0 0 35px 0;*/
+	/*-moz-box-shadow: 3px 3px 5px #bebebe;*/
+	/*-webkit-box-shadow: 3px 3px 5px #bebebe;*/
 	box-shadow: 3px 3px 5px #bebebe;
+}
+
+.docs-page .toc.sticky {
+	position: fixed;
+	top: 30px;
 }
 
 .docs-page .toc .heading {
@@ -52,30 +65,29 @@
 	margin-bottom: 5px;
 }
 
-.docs-page {
-	position: relative;
-	width: 933px;
+
+
+.docs-page article {
 	padding: 15px 15px 50px 15px;
+	margin-left: 20px;
 	border: 1px solid #9f9f9f;
-	background: white;
-	border-bottom: 1px solid #000;
-	margin-top: 30px;
 }
 
-article.docs-page a.next-article i {
+.docs-page article a.next-article i {
 	margin-top: 2px;
 }
-article.docs-page a.next-article {
+.docs-page article a.next-article {
 	position: absolute;
 	bottom: 12px;
 	right: 12px;
 	font-size: 1.2em;
 }
 
-article.docs-page a.prev-article i {
+.docs-page article a.prev-article i {
 	margin-top: 2px;
 }
-article.docs-page a.prev-article {
+
+.docs-page article a.prev-article {
 	position: absolute;
 	bottom: 12px;
 	left: 12px;
@@ -102,4 +114,25 @@ p.section-title {
 	background-color: #E1EDED;
 	color: #244D4D;
 	padding: 5px;
+}
+
+.toc-container {
+	right: 0px;
+	top: 90px;
+	/*margin: 12px 180px 0 0;*/
+	margin-left: 0 !important;
+	position: fixed !important;
+}
+
+@media only screen and (max-width: 999px) {
+	
+	/* Hide the TOC when your screen is smaller than the TOC width. */
+	.toc {
+		display: none;
+	}
+	
+	#page-content .docs-page article {
+		width: 95%;
+	}
+	
 }

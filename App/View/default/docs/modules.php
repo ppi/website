@@ -32,4 +32,7 @@
 	<p class="section-title">Your modules resources</p>
 	<p>/Application/resources/ is where non-PHP-class files live such as config files (resources/config) and views (resources/views). We encourage you to put your own custom config files in /resources/config/ too.</p>
 	
+	<a class="prev-article btn btn-success" href="application.html"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
+	<a class="next-article btn btn-success" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
+	
 </article>
