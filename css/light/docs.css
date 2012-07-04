@@ -55,22 +55,14 @@
     top: 7px;
 }
 
-.toc-mobile .toc-heading:hover > i {
-    background-image: url(../images/glyphicons-halflings-white.png);
-}
-
 .toc-mobile .toc-heading:hover {
     cursor: pointer;
-    background-color: #244D4D;
-    color: white;
-    border: 1px solid #244D4D;
-    border-bottom: none;
 }
 
 .toc-mobile .toc-heading {
 
-    background-color: #E1EDED;
-    color: #244D4D;
+    background-color: #244D4D;
+    color: white;
     border: 1px solid #244D4D;
     border-bottom: none;
 
