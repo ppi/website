@@ -30,30 +30,30 @@
 
 www/ <- your web root directory
 
-skeleton/ <- the unpacked archive
-	app/
-		app.config.php
-		cache/
-		views/
-		...
+    skeleton/ <- the unpacked archive
+        app/
+            app.config.php
+            cache/
+            views/
+            ...
 
-	public/
-		index.php
-		css/
-		js/
-		images/
-		...
+        public/
+            index.php
+            css/
+            js/
+            images/
+            ...
 
-	modules/
-		Application/
-			Module.php
-			Controller/
-			resources/
-				config/
-				views/
-				...
+        modules/
+            Application/
+                Module.php
+                Controller/
+                resources/
+                    config/
+                    views/
+                    ...
 
-	PPI/ <- the ppi framework and vendors
+        PPI/ <- the ppi framework and vendors
 		  </pre></p>
 			
 			<p>Lets break it down into parts:</p>
@@ -64,26 +64,26 @@ skeleton/ <- the unpacked archive
 			<p class="section-title">The public index.php file</p>
 			<p>The <b>/public/index.php</b> is also known are your bootstrap file, or front controller is explained in-depth below</p>
 			<p><pre><code>
-	&lt;?php
-	
-	// All relative paths start from the main directory, not from /public/
-	chdir(dirname(__DIR__));
-	
-	// Lets include PPI
-	include('PPI/init.php');
-	
-	// Initialise our PPI App
-	$app               = new PPI\App();
-	$app->moduleConfig = include 'app/modules.config.php';
-	$app->config       = include 'app/app.config.php';
-	
-	// Do you want twig engine enabled?
-	//$app->templatingEngine = 'twig';
-	
-	// If you are using the DataSource component, enable this
-	//$app->useDataSource = true;
-	
-	$app->boot()->dispatch();
+&lt;?php
+
+// All relative paths start from the main directory, not from /public/
+chdir(dirname(__DIR__));
+
+// Lets include PPI
+include('PPI/init.php');
+
+// Initialise our PPI App
+$app               = new PPI\App();
+$app->moduleConfig = include 'app/modules.config.php';
+$app->config       = include 'app/app.config.php';
+
+// Do you want twig engine enabled?
+//$app->templatingEngine = 'twig';
+
+// If you are using the DataSource component, enable this
+//$app->useDataSource = true;
+
+$app->boot()->dispatch();
 			</code></pre></p>
 			
 			<p>If you uncomment the useDataSource line, it is going to look for your <b>/app/datasource.config.php</b> and load that into the DataSource component for you. Databases are not a requirement in PPI so if you dont need one then you wont need to bother about this. More in-depth documentation about this in the DataSource chapter.</p>
@@ -94,49 +94,49 @@ skeleton/ <- the unpacked archive
 			<p class="section-title">The app.config.php file</p>
 			<p>Looking at the example config file below, you can control things here such as the environment, templating engine and datasource connection.</p>
 			<p><pre><code>
-	&lt;?php
-	$config = array(
-		'environment'            => 'development', // <-- Change this depending on your environment
-		'templating.engine'      => 'php', // <-- The default templating engine
-		'datasource.connections' => include (__DIR__ . '/datasource.config.php')
-	);
-	
-	// Are we in debug mode ?
-	if($config['environment'] !== 'development') { // <-- You can also check the env from your controller using $this->getEnv()
-		$config['debug']     = $config['environment'] === 'development';
-		$config['cache_dir'] = __DIR__ . '/cache';
-	}
-	return $config; // Very important
-			</code></pre></p>
-			<p>The 'return $config' line gets pulled into your index.php's <b>$app->config</b> variable.</p>
-			
-			<p class="section-title">The modules.config.php file</p>
-			<p>The example below shows that you can control which modules are active and a list of directories <b>module_paths</b> that PPI will scan for your modules. Pay close attention to the <b>order</b> in which your modules are loaded. If one of your modules relies on resources loaded by another module. Make sure the module loading the resources is loaded <b>before</b> the others that depend upon it.</p>
-			<p><pre><code>
-		&lt;?php
-	return array(
-		'activeModules'   => array('Application', 'User'),
-		'listenerOptions' => array('module_paths' => array('./modules'), 'routingEnabled' => true),
-	);
+&lt;?php
+$config = array(
+    'environment'            => 'development', // <-- Change this depending on your environment
+    'templating.engine'      => 'php', // <-- The default templating engine
+    'datasource.connections' => include (__DIR__ . '/datasource.config.php')
+);
+
+// Are we in debug mode ?
+if($config['environment'] !== 'development') { // <-- You can also check the env from your controller using $this->getEnv()
+    $config['debug']     = $config['environment'] === 'development';
+    $config['cache_dir'] = __DIR__ . '/cache';
+}
+return $config; // Very important
+        </code></pre></p>
+        <p>The 'return $config' line gets pulled into your index.php's <b>$app->config</b> variable.</p>
+
+        <p class="section-title">The modules.config.php file</p>
+        <p>The example below shows that you can control which modules are active and a list of directories <b>module_paths</b> that PPI will scan for your modules. Pay close attention to the <b>order</b> in which your modules are loaded. If one of your modules relies on resources loaded by another module. Make sure the module loading the resources is loaded <b>before</b> the others that depend upon it.</p>
+        <p><pre><code>
+&lt;?php
+return array(
+    'activeModules'   => array('Application', 'User'),
+    'listenerOptions' => array('module_paths' => array('./modules'), 'routingEnabled' => true),
+);
 			</code></pre></p>
 			<p>Note that this file returns an array too, which is assigned against your index.php's <b>$app->moduleConfig</b> variable</p>
 			
 			<p class="section-title">The app/views folder</p>
 			<p>This folder is your applications global views folder. A global view is one that a multitude of other module views extend from. A good example of this is your website's template file. The following is an example of <b>/app/views/base.html.php</b></p>
 			<p><pre><code>
-	&lt;html&gt;
-		&lt;body&gt;
-			&lt;h1&gt;My website&lt;/h1&gt;
-			&lt;div class="content"&gt;
-				&lt;?php $view['slots']-&gt;output('_content'); ?&gt;
-			&lt;/div&gt;
-		&lt;/body&gt;
-	&lt;/html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;My website&lt;/h1&gt;
+        &lt;div class="content"&gt;
+            &lt;?php $view['slots']-&gt;output('_content'); ?&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
 			</code></pre></p>
 			
 			<p>You'll notice later on in the Templating section to reference and extend a global template file, you will use the following syntax in your modules template.</p>
 			<p><pre><code>
-	&lt;?php $view->extend('::base.html.php'); &gt;
+&lt;?php $view->extend('::base.html.php'); &gt;
 			</code></pre></p>
 			<p>Now everything from your module template will be applied into your <b>base.html.php</b> files <b>_content</b> section demonstrated above.</p>
 			
