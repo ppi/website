@@ -20,7 +20,7 @@
 	position: absolute;
 	right: 0px;
 	padding: 12px;
-	width: 210px;
+	width: 180px;
 	background-color: #e1eded;
 	color: #244d4d;
 	border: 1px solid #244d4d;
@@ -125,7 +125,7 @@ p.section-title {
 	position: fixed !important;
 }
 
-@media only screen and (max-width: 999px) {
+@media only screen and (max-width: 900px) {
 	
 	/* Hide the TOC when your screen is smaller than the TOC width. */
 	.toc {
