@@ -203,16 +203,16 @@ p.section-title {
 	position: fixed !important;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (orientation: portrait) {
 	
 	/* Hide the TOC when your screen is smaller than the TOC width. */
-	/*.toc-container .toc {*/
-        /*display: none;*/
-	/*}*/
-/**/
-    /*.toc-mobile {*/
-        /*display: block;*/
-    /*}*/
+	.toc-container .toc {
+        display: none;
+	}
+
+    .toc-mobile {
+        display: block;
+    }
 	
 	#page-content .docs-page article {
 		width: 95%;
