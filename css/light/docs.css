@@ -16,6 +16,19 @@
 	margin-left: 0px;
 }
 
+.toc-mobile.expanded {
+    border-left: 1px solid #244D4D;
+    border-right: 1px solid #244D4D;
+}
+.toc-mobile.expanded .toc-heading i {
+    background-image: url(../images/glyphicons-halflings-white.png);
+}
+.toc-mobile.expanded .toc-heading {
+    background-color: #244D4D;
+    color: white;
+
+}
+
 .toc-mobile {
     margin: 0 auto;
     position: fixed;
@@ -24,6 +37,9 @@
     width: 300px;
     left: 50%;
     margin-left: -150px;
+    background-color: #E1EDED;
+    border-left: 1px solid #E1EDED;
+    border-right: 1px solid #E1EDED;
     /*display: none;*/
 }
 
@@ -38,9 +54,11 @@
     right: 12px;
     top: 7px;
 }
+
 .toc-mobile .toc-heading:hover > i {
     background-image: url(../images/glyphicons-halflings-white.png);
 }
+
 .toc-mobile .toc-heading:hover {
     cursor: pointer;
     background-color: #244D4D;
@@ -48,23 +66,34 @@
     border: 1px solid #244D4D;
     border-bottom: none;
 }
+
 .toc-mobile .toc-heading {
+
     background-color: #E1EDED;
     color: #244D4D;
     border: 1px solid #244D4D;
     border-bottom: none;
 
     text-align: center;
+    font-family: "Museo_Slab_500";
+    font-size: 1.2em;
+
     position: relative;
     margin-bottom: 0;
     padding: 5px;
-    font-family: "Museo_Slab_500";
-    font-size: 1.2em;
+
 }
 
+.toc-mobile .items li:first-child {
+    /*margin-top: 0;*/
+}
+.toc-mobile .items li {
+    margin-top: 8px;
+}
 .toc-mobile .items {
     display: none;
-    margin: 0;
+    list-style-type: none;
+    margin-left: 30px;
 }
 
 .toc-heading {
