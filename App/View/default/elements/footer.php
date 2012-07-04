@@ -1,7 +1,7 @@
 <footer class="container-fluid">
 	<div class="row-fluid">
 		
-		<div class="span9">
+		<div class="span10">
 			<div class="logo"><img src="<?= $baseUrl; ?>images/light/ppi-white.png" alt="Logo"></div>
 			<div class="content links">
 				<a href="#" title="">Get Started</a>

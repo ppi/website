@@ -13,5 +13,9 @@ jQuery(document).ready(function($) {
 
     });
 
+    $(window).bind( 'orientationchange', function(e){
+       alert(e.orientation);
+    });
+
 
 });
