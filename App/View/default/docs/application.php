@@ -1,6 +1,17 @@
 <div class="continer-fluid content-box docs-page">
 
-
+    <div class="toc-mobile">
+        <p class="toc-heading"><i class="icon-arrow-down left"></i> Table of contents <i class="icon-arrow-down right"></i></p>
+        <ul class="items">
+            <li><a href="#" title="">Appliction File Structure</a></li>
+            <li><a href="#" title="">The public folder</a></li>
+            <li><a href="#" title="">The public index.php file</a></li>
+            <li><a href="#" title="">The app folder</a></li>
+            <li><a href="#" title="">The app.config.php file</a></li>
+            <li><a href="#" title="">The app.modules.php file</a></li>
+            <li><a href="#" title="">The modules folder</a></li>
+        </ul>
+    </div>
 	
 	<div class="row-fluid">
 		
