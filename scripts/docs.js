@@ -12,6 +12,8 @@ jQuery(document).ready(function($) {
         }
 
     });
+	
+	$.extend(  $.mobile , { linkBindingEnabled: false });
 
     $(window).bind( 'orientationchange', function(e){
         if(e.orientation === 'portrait') {

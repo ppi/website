@@ -196,3 +196,8 @@
 
 	border-bottom: 1px solid #202020;
 }
+
+#home-page {
+	width: 1024px;
+	margin: 0 auto;
+}

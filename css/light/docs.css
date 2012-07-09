@@ -1,8 +1,8 @@
 .docs-page {
 	position: relative;
 	background: white;
-	border-bottom: 1px solid #000;
 	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 .docs-page p {
