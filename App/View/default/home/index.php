@@ -17,12 +17,12 @@
 		<p class="download-count">downloaded <b><?=$downloadCount;?></b> times</p>
 		<ul class="list">
 			<li>
-				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/1day.png" alt="Icon"></a>
+				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/components.png" alt="Icon"></a>
 				<a class="title" href="<?= $baseUrl; ?>" title="">Modules</a>
 				<p class="desc">New and easy modular framework, leveraging the ZendFramework2 ModuleManager component.</p>
 			</li>
 			<li>
-				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/components.png" alt="Icon"></a>
+				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/1day.png" alt="Icon"></a>
 				<a class="title" href="<?= $baseUrl; ?>" title="">Routing</a>
 				<p class="desc">Simple and powerful routing based on the Symfony2 Routing component</p>
 			</li>
