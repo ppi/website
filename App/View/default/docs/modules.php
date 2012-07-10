@@ -3,12 +3,12 @@
     <div class="toc-mobile">
         <p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
         <ul class="items">
-            <li><a href="#" title="">Introduction</a></li>
-            <li><a href="#" title="">The Module.php class</a></li>
-            <li><a href="#" title="">Init</a></li>
-            <li><a href="#" title="">Configuration</a></li>
-            <li><a href="#" title="">Routing</a></li>
-            <li><a href="#" title="">Resources</a></li>
+			<li><a href="#" title="">Introduction</a></li>
+			<li><a href="#" title="">The Module.php class</a></li>
+			<li><a href="#" title="">Init</a></li>
+			<li><a href="#" title="">Configuration</a></li>
+			<li><a href="#" title="">Routing</a></li>
+			<li><a href="#" title="">Resources</a></li>
         </ul>
     </div>
 	

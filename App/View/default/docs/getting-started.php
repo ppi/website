@@ -6,13 +6,11 @@
 		<div class="toc-mobile">
 			<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
 			<ul class="items">
-				<li><a href="#" title="">Appliction File Structure</a></li>
-				<li><a href="#" title="">The public folder</a></li>
-				<li><a href="#" title="">The public index.php file</a></li>
-				<li><a href="#" title="">The app folder</a></li>
-				<li><a href="#" title="">The app.config.php file</a></li>
-				<li><a href="#" title="">The app.modules.php file</a></li>
-				<li><a href="#" title="">The modules folder</a></li>
+				<li><a href="#" title="">Overview</a></li>
+				<li><a href="#" title="">Standing on the shoulders of giants</a></li>
+				<li><a href="#" title="">Why use PPI?</a></li>
+				<li><a href="#" title="">Downloading PPI</a></li>
+				<li><a href="#" title="">System Requirements</a></li>
 			</ul>
 		</div>
 
@@ -42,7 +40,7 @@
             <p>PPI has pre-integrated the best features from existing frameworks for you, allowing you to just utilize them at will with no tedious integration process. We're re-using the power of Symfony2 for Routing, Request, Response, Templating and Class Autoloading. ZendFramework2's Module component to provide simple and clean modularity in your application. For database abstraction of the PDO library we're using Doctrine2's clean DBAL component which has been made easy to use through PPI's DataSource component.</p>
 
             <p class="section-title">Downloading PPI</p>
-            <p>You can download PPI from the <a href="" title="">Downloads</a> page</p>
+            <p>You can download PPI from the <a href="<?=$baseUrl;?>" title="">Homepage</a></p>
 
             <p class="section-title">System requirements</p>
             <p>A web server with its rewrite module enabled. (mod_rewrite for apache)</p>
