@@ -2,54 +2,82 @@
 namespace App\Controller;
 class Home extends Application {
 
+	/**
+	 * Homepage Action
+	 */
 	function index() {
+		$downloadCount = $this->getDownloadCount();
 		$this->addCSS('light/home');
-		$this->render('home/index');
+		$this->render('home/index', compact('downloadCount'));
 	}
 
-	public function getNews() {
-return array();
+	/**
+	 * Obtain the download count Action
+	 */
+	public function download_count() {
+		die( (string) $this->getDownloadCount());
+	}
+
+	/**
+	 * Incremement the download count Action
+	 */
+	public function increment_count() {
+		
+		// Store the download record for further tracking
+		$this->getDownloadsStorage()->create(array(
+			'ip_address' => $this->getRemote('ip')
+		));
+		
+		// Increment the download count
+		$newCount = $this->getDownloadCount() + 1;
+		$this->setDownloadCount($newCount);
+		die( (string) $newCount);
+	}
+
+	/**
+	 * Get the download count
+	 * 
+	 * @return integer
+	 */
+	protected function getDownloadCount() {
+		
 		$cache = $this->getCache();
-		$cacheName = 'homepage-news';
-		if($cache->exists($cacheName)) {
-			return $cache->get($cacheName);
+		$cacheKey = 'download_count';
+		if($cache->exists($cacheKey)) {
+			$count = $cache->get($cacheKey);
+		} else {
+			$count = $this->getSettingsStorage()->getSettingByKey('download_count')->getValue();
+			$cache->set($cacheKey, $count);
 		}
-
-		$news = array();
-		$news[] = array(
-			'source' => 'ppi',
-			'title'	 => 'Testing the news feature'
-		);
-		$feeds = array(
-			'https://github.com/dragoonis/ppi-framework/commits/master.atom',
-			'https://github.com/dragoonis/ppi-skeleton-app/commits/master.atom',
-			'https://github.com/dragoonis/ppi-website/commits/master.atom',
-			'https://github.com/dragoonis/ppi-issue-tracker/commits/master.atom',
-		);
-		$feeds = array();
-		foreach($feeds as $feed) {
-			$xml = simplexml_load_file($feed);
-			if(isset($xml->entry)) {
-				foreach($xml->entry as $commit){
-					$timestamp = strtotime( (string) $commit->updated);
-					list($day, $month, $year) = explode('/', date('d/m/Y', $timestamp));
-					if($year == 2011) {
-						$title = (string) $commit->title;
-						if(strlen($title) > 70) {
-							$title = trim(substr($title, 0, 70)) . '..';
-						}
-						$news[$timestamp] = array(
-							'source' => 'github',
-							'url'	 => (string) $commit->link['href'],
-							'title'	 => $title . ' on ' . date('jS M Y \a\t g:i a', $timestamp)
-						);
-					}
-				}
-			}
-		}
-		krsort($news);
-
-		$cache->set($cacheName, $news, 600);
-		return $news;
+		
+		return $count;
 	}
+
+	/**
+	 * Set the download count
+	 * 
+	 * @param integer $newCount
+	 */
+	protected function setDownloadCount($newCount) {
+		$this->getCache()->set('download_count', $newCount);
+	}
+
+	/**
+	 * Get the site settings storage
+	 * 
+	 * @return \App\Storage\SiteSettings
+	 */
+	protected function getSettingsStorage() {
+		return new \App\Storage\SiteSettings();
+	}
+
+	/**
+	 * Get the downloads storage
+	 * 
+	 * @return \App\Storage\Downloads
+	 */
+	protected function getDownloadsStorage() {
+		return new \App\Storage\Downloads();
+	}
+
 }
