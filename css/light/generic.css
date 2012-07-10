@@ -113,34 +113,11 @@ body {
 	position: relative;
 	margin: 0 auto;
 }
-#header nav {
-	position: absolute;
-	left: 60px;
-	top: 0;
-}
-#header nav li:first-child {
-	margin-left: 0;
-}
-#header nav ul {
-	list-style-type: none;
-}
 
-#header nav li a:hover {
+#header .nav li a:hover {
 	color: white;
 	background-color: #345958;
 	text-decoration: none;
-}
-#header nav li a {
-	color: #E1E1E1;
-	display: block;
-	height: 29px;
-	padding-top: 11px;
-	padding-left: 5px;
-	padding-right: 5px;
-	
-}
-#header nav li {
-	float: left;
 }
 
 #header .search input {
