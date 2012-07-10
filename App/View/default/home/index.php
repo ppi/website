@@ -1,4 +1,5 @@
-<div id="home-page" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<div id="home-page" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+	 xmlns="http://www.w3.org/1999/html">
 	<div class="top">
 		
 		<div class="intro">
@@ -13,6 +14,7 @@
 	</div>
 	<div class="middle">
 		<p class="heading">what is ppi made of?</p>
+		<p class="download-count">downloaded <b>132</b> times</p>
 		<ul class="list">
 			<li>
 				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/1day.png" alt="Icon"></a>

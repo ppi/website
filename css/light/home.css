@@ -143,6 +143,17 @@
 	left: 12px;
 	top: 50px;
 }
+#page-content .middle .download-count {
+	position: absolute;
+	text-align: right;
+	top: 20px;
+	right: 12px;
+	width: 300px;
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-size: 1.8em;
+	color: #4C7F7F;
+}
+
 #page-content .middle {
 	width: 963px;
 	background-color: #F9F9F0;
