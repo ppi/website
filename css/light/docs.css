@@ -148,11 +148,9 @@
 	margin-bottom: 5px;
 }
 
-
-
-.docs-page article {
+#page-content .docs-page article {
 	padding: 15px 15px 50px 15px;
-	margin-left: 20px;
+	margin-left: 0;
 	border: 1px solid #9f9f9f;
     position: relative;
 }
