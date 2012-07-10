@@ -97,7 +97,7 @@ body {
 }
 
 #header a {
-	/*background-color: #406C6C;*/
+	height: 20px;
 	color: white;
 }
 
