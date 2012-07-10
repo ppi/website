@@ -120,6 +120,14 @@ body {
 	text-decoration: none;
 }
 
+.navbar .nav .active > a, .navbar .nav .active > a:hover {
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#284545', endColorstr='#406c6c'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#284545), to(#406c6c)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #284545,  #406c6c); /* for firefox 3.6+ */
+
+}
+
 #header .search input {
 	width: 281px;
 	height: 23px;
