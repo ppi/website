@@ -13,7 +13,11 @@ jQuery(document).ready(function($) {
 
     });
 	
-	$.extend(  $.mobile , { linkBindingEnabled: false });
+	$.extend(  $.mobile , { 
+		linkBindingEnabled: false,
+		ajaxEnabled: false,
+		autoInitializePage: false
+	});
 
     $(window).bind( 'orientationchange', function(e){
         if(e.orientation === 'portrait') {

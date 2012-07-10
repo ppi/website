@@ -2,6 +2,19 @@
 
 
     <div class="row-fluid">
+		
+		<div class="toc-mobile">
+			<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
+			<ul class="items">
+				<li><a href="#" title="">Appliction File Structure</a></li>
+				<li><a href="#" title="">The public folder</a></li>
+				<li><a href="#" title="">The public index.php file</a></li>
+				<li><a href="#" title="">The app folder</a></li>
+				<li><a href="#" title="">The app.config.php file</a></li>
+				<li><a href="#" title="">The app.modules.php file</a></li>
+				<li><a href="#" title="">The modules folder</a></li>
+			</ul>
+		</div>
 
         <aside class="toc-container">
             <div class="toc">
@@ -16,7 +29,7 @@
             </div>
         </aside>
 
-        <article class="span9">
+        <article>
             <h1>Getting Started</h1>
 
             <p class="section-title">Overview</p>
