@@ -2,32 +2,39 @@
 	
 }
 
+#page-content .top .intro .buttons a {
+	font-size: 1.2em;
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	
+}
 #page-content .top .intro .buttons {
-	position: absolute;
-	bottom: 20px;
-	left: 90px;
+	width: 345px;
+	margin: 20px auto 0 auto;
 }
 #page-content .top .intro .desc {
-	font-size: 1.0em;
+	font-size: 1.2em;
 	line-height: 22px;
-	margin-top: 12px;
+	margin-top: 20px;
+	text-align: center;
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+
 }
 #page-content .top .intro .heading {
-	font-size: 2.0em;
-	font-family: "Museo_Slab_500";
+	font-size: 2.7em;
 	color: #406C6C;
+	text-align: center;
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 }
+
 #page-content .top .intro {
-	width: 500px;
+	width: 700px;
 	height: 200px;
-	margin-bottom: 0;
+	margin: 0px auto -1px auto;
 	padding: 20px 12px 12px 20px;
 	height: 202px;
-	position: absolute;
-	left: 0px;
 	background-color: #F9F9F0;
-	top: 20px;
 	z-index: 10;
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 	border: 1px solid #E5E5E5;
 	border-bottom: none;
 }
@@ -37,7 +44,7 @@
 	height: 30px;
 	width: 105px;
 	font-size: 1.5em;
-	font-family: "Museo_Slab_500";
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 	padding-top: 15px;
 	position: absolute;
 	left: 63px;
@@ -47,7 +54,7 @@
 #page-content .top .get-ppi-now .list a {
 	color: #4C7F7F;
 	font-size: 1.3em;
-	font-family: "Museo_Slab_500";
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 }
 #page-content .top .get-ppi-now .list li:first-child {
 	margin-bottom: 5px;
@@ -87,8 +94,9 @@
 #page-content .top {
 	/*background-color: #eaeaea;*/
 	position: relative;
-	height: 254px;
 	width: 965px;
+	margin-bottom: 0px;
+	z-index: 10000;
 	
 }
 #page-content .middle .heading {
@@ -96,7 +104,7 @@
 	font-weight: bold;
 	position: absolute;
 	top: 20px;
-	font-family: "Museo_Slab_500";
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 	left: 35px;
 	color: #4C7F7F;
 }
@@ -112,7 +120,7 @@
 #page-content .middle .list li .title {
 	color: #565656;
 	font-size: 1.15em;
-	font-family: "Museo_Slab_500";
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 	margin-bottom: 12px;
 	display: block;
 }
@@ -155,7 +163,7 @@
 }
 #page-content .bottom .list li .title {
 	color: #FFFFFF;
-	font-family: "Museo_Slab_500";
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 	font-size: 1.3em;
 }
 #page-content .bottom .list li .desc {
@@ -179,7 +187,7 @@
 #page-content .bottom .header {
 	font-size: 2.3em;
 	top: 20px;
-	font-family: "Museo_Slab_500";
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 	color: #FFFFFF;
 	left: 110px;
 	position: absolute;

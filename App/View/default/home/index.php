@@ -1,57 +1,43 @@
-<div id="home-page">
+<div id="home-page" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 	<div class="top">
 		
 		<div class="intro">
-			<p class="heading">PPI is awesome!</p>
-			<p class="desc">PPI is an <b>Open Source Framework</b> that streamlines development; both individual and enterprise. Providing you with the essentials you need, the things you want, and the freedom to work your own way. Leveraging PPI is fast, easy, and tuned for everything from Microblogging to E-Commerce and more.</p>
+			<p class="heading">ppi framework version 2 is here!</p>
+			<p class="desc">ppi is an open source php meta-framework. we have taken the good bits from Symfony2 and ZendFramework2 and combined them together to create a solid and easy web application framework. If you are already a fan of SF2 or ZF2 then you're already familiar with ppi. ppi is fully <a href="http://www.php-fig.org" title="PSR-0" target="_blank">PSR-0</a>, <a href="http://www.php-fig.org" title="PSR-0" target="_blank">PSR-1</a> and <a href="http://www.php-fig.org" title="PSR-0" target="_blank">PSR-2</a> complaint.</p>
 			<div class="buttons">
-				<a class="btn success large" href="<?= $baseUrl; ?>docs">Get Started Now!</a>&nbsp;&nbsp;&nbsp;&nbsp;
-				<a class="btn large" href="<?= $baseUrl; ?>contribute">Start Contributing</a>
+				<a class="btn btn-success btn-large" href="<?= $baseUrl; ?>docs">Download</a>&nbsp;
+				<a class="btn btn-large" href="<?= $baseUrl; ?>docs">Documentation</a>&nbsp;
+				<a class="btn btn-large" href="<?= $baseUrl; ?>docs">GitHub</a>
 			</div>
 		</div>
-		
-		<div class="get-ppi-now">
-			<div class="get-ppi-now-inner">
-				<a class="icon" href="<?= $baseUrl; ?>projects"><img src="<?= $baseUrl; ?>images/light/ppi-download.png" height="70" alt="Download"></a>
-				<ul class="list">
-					<li><a class="framework" href="<?= $baseUrl; ?>projects" title="Framework">Framework</a></li>
-					<li><a href="<?= $baseUrl; ?>projects" title="Skeleton App">Skeleton App</a></li>
-				</ul>
-				<div class="other">
-					<a href="<?= $baseUrl; ?>projects" title="">More Projects</a>
-				</div>
-			</div>
-		</div>
-		
 	</div>
-	
 	<div class="middle">
-		<p class="heading">Why use PPI?</p>
+		<p class="heading">why use ppi?</p>
 		<ul class="list">
 			<li>
 				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/1day.png" alt="Icon"></a>
-				<a class="title" href="<?= $baseUrl; ?>" title="">Super Fast Development</a>
-				<p class="desc">Many common components are included: translation tools, database access (including PDO, MongoDB, CouchDB), Cache tools, many templating systems and much more.</p>
+				<a class="title" href="<?= $baseUrl; ?>" title="">Modules</a>
+				<p class="desc">New and easy modular framework, leveraging the ZendFramework2 ModuleManager component.</p>
 			</li>
 			<li>
 				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/components.png" alt="Icon"></a>
-				<a class="title" href="<?= $baseUrl; ?>" title="">Flexibility</a>
-				<p class="desc">PPI is carefully designed to work well with third-party code. For example, you can use code from PEAR or Zend Framework, Doctrine or Symfony in your PPI application.</p>
+				<a class="title" href="<?= $baseUrl; ?>" title="">Routing</a>
+				<p class="desc">Simple and powerful routing component based on the Symfony2 Routing component</p>
 			</li>
 			<li style="margin-right: 0;">
 				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/easy.png" alt="Icon"></a>
-				<a class="title" href="<?= $baseUrl; ?>" title="">Dev never was so easy</a>
-				<p class="desc">PPI helps you develop clean and reusable code. It follows the MVC pattern, ensuring a clear separation of logic and presentation.</p>
+				<a class="title" href="<?= $baseUrl; ?>" title="">Templating</a>
+				<p class="desc">Awesome templating based on the Symfony2 Templating Component. We support PHP, Twig and Smarty</p>
 			</li>
 			<li>
 				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/perf.png" alt="Icon"></a>
-				<a class="title" href="<?= $baseUrl; ?>" title="">Performance, first!</a>
-				<p class="desc">Benchmarking a framework is hard and rarely reflects real world usage, but PPI is very efficient and carefully optimized for real world usage.</p>
+				<a class="title" href="<?= $baseUrl; ?>" title="">Databases</a>
+				<p class="desc">Simple and powerful DataSource component based on the Doctrine2 DBAL component</p>
 			</li>
 			<li>
 				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/config.png" alt="Icon"></a>
-				<a class="title" href="<?= $baseUrl; ?>" title="">No code generators</a>
-				<p class="desc">There are no code generators and endless configuration files, so setting up is fast an easy.</p>
+				<a class="title" href="<?= $baseUrl; ?>" title="">Composer Based</a>
+				<p class="desc">ppi itself is a composer package, and has its dependencies also linked to composer packages. installation has never been so easy!</p>
 			</li>
 			<li style="margin-right: 0;">
 				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/community2.png" alt="Icon"></a>
@@ -83,4 +69,4 @@
 		</ul>
 	</div>
 	
-</div> <!-- #home-page -->
+</div> <!-- /#home-page -->
