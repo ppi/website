@@ -12,7 +12,7 @@
 		</div>
 	</div>
 	<div class="middle">
-		<p class="heading">why use ppi?</p>
+		<p class="heading">what is ppi made of?</p>
 		<ul class="list">
 			<li>
 				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/1day.png" alt="Icon"></a>
@@ -22,7 +22,7 @@
 			<li>
 				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/components.png" alt="Icon"></a>
 				<a class="title" href="<?= $baseUrl; ?>" title="">Routing</a>
-				<p class="desc">Simple and powerful routing component based on the Symfony2 Routing component</p>
+				<p class="desc">Simple and powerful routing based on the Symfony2 Routing component</p>
 			</li>
 			<li style="margin-right: 0;">
 				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/easy.png" alt="Icon"></a>
