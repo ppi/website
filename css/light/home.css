@@ -119,9 +119,10 @@
 }
 #page-content .middle .list li .title {
 	color: #565656;
-	font-size: 1.15em;
+	font-size: 1.4em;
 	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
-	margin-bottom: 12px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	display: block;
 }
 #page-content .middle .list li {
