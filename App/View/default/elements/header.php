@@ -27,4 +27,7 @@
 		</div>
     </div>
   </div>
+	
+	<div id="ppi2-banner">E_NOTICE: This is the website for ppi1. We are currently making ppi2. The new website for it is here: <a href="http://dev.ppi.io" title="http://dev.ppi.io">http://dev.ppi.io</a></div>
+	
 </div>
