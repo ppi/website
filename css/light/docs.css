@@ -1,3 +1,8 @@
+#wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+
 .docs-page {
 	position: relative;
 	background: white;
@@ -21,7 +26,7 @@
     border-right: 1px solid #244D4D;
 }
 .toc-mobile.expanded .toc-heading i {
-    background-image: url(../images/glyphicons-halflings-white.png);
+    background-image: url(../../images/glyphicons-halflings-white.png);
 }
 .toc-mobile.expanded .toc-heading {
     background-color: #244D4D;
