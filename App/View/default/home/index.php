@@ -42,7 +42,7 @@
 			<li style="margin-right: 0;">
 				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/community2.png" alt="Icon"></a>
 				<a class="title" href="<?= $baseUrl; ?>" title="">Our community rocks</a>
-				<p class="desc">Our <a href="<?= $baseUrl; ?>community" title="Community">Community</a> page gives you access to what's going on in the PPI eco-system. Wether you're looking to contribute to, or be part of, PPI or not; check our <a href="<?= $baseUrl; ?>projects" title="">Projects</a> page for ways to interact in <strong>Discussions</strong></p>
+				<p class="desc">Our <a href="<?= $baseUrl; ?>community" title="Community">Community</a> page gives you access to what's going on in the PPI eco-system.</p>
 			</li>
 			
 		</ul>

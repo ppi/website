@@ -96,12 +96,11 @@
 	position: relative;
 	width: 965px;
 	margin-bottom: 0px;
-	z-index: 10000;
+	z-index: 1000;
 	
 }
 #page-content .middle .heading {
-	font-size: 1.4em;
-	font-weight: bold;
+	font-size: 2.0em;
 	position: absolute;
 	top: 20px;
 	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
@@ -119,22 +118,22 @@
 }
 #page-content .middle .list li .title {
 	color: #565656;
-	font-size: 1.15em;
+	font-size: 1.4em;
 	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
-	margin-bottom: 12px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	display: block;
 }
 #page-content .middle .list li {
 	float: left;
 	width: 245px;
-	height: 130px;
+	height: 85px;
 	margin-right: 5px;
-	margin-bottom: 12px;
 	padding: 12px 0px 12px 67px;
 }
 #page-content .middle .list {
 	list-style-type: none;
-	height: 330px;
+	height: 290px;
 	margin-left: 0;
 	position: absolute;
 	left: 12px;
@@ -145,7 +144,7 @@
 	background-color: #F9F9F0;
 	border: 1px solid #e5e5e5;
 	position: relative;
-	height: 375px;
+	height: 285px;
 }
 #page-content .bottom .fork {
 	position: absolute;
