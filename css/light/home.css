@@ -2,6 +2,9 @@
 	
 }
 
+#page-content .top .intro .buttons i {
+	margin-top: 3px;
+}
 #page-content .top .intro .buttons a:last-child {
 	margin-right: 0;
 }
