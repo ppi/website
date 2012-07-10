@@ -5,8 +5,8 @@
 			<p class="heading">ppi framework version 2 is here!</p>
 			<p class="desc">ppi is an open source php meta-framework. we have taken the good bits from Symfony2 and ZendFramework2 and combined them together to create a solid and easy web application framework. If you are already a fan of SF2 or ZF2 then you're already familiar with ppi. ppi is fully <a href="http://www.php-fig.org" title="PSR-0" target="_blank">PSR-0</a>, <a href="http://www.php-fig.org" title="PSR-0" target="_blank">PSR-1</a> and <a href="http://www.php-fig.org" title="PSR-0" target="_blank">PSR-2</a> complaint.</p>
 			<div class="buttons">
-				<a class="btn btn-success btn-large" href="<?= $baseUrl; ?>docs">Download</a>&nbsp;
-				<a class="btn btn-large" href="<?= $baseUrl; ?>docs">Documentation</a>&nbsp;
+				<a class="btn btn-success btn-large" href="<?= $baseUrl; ?>docs">Download</a>
+				<a class="btn btn-large" href="<?= $baseUrl; ?>docs">Documentation</a>
 				<a class="btn btn-large" href="<?= $baseUrl; ?>docs">GitHub</a>
 			</div>
 		</div>
@@ -37,7 +37,7 @@
 			<li>
 				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/config.png" alt="Icon"></a>
 				<a class="title" href="<?= $baseUrl; ?>" title="">Composer Based</a>
-				<p class="desc">ppi itself is a composer package, and has its dependencies also linked to composer packages. installation has never been so easy!</p>
+				<p class="desc">ppi itself is a composer package, and all of its dependencies are also composer packages. installation has never been so easy!</p>
 			</li>
 			<li style="margin-right: 0;">
 				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/community2.png" alt="Icon"></a>

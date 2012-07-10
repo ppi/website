@@ -2,13 +2,17 @@
 	
 }
 
+#page-content .top .intro .buttons a:last-child {
+	margin-right: 0;
+}
 #page-content .top .intro .buttons a {
 	font-size: 1.2em;
 	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	margin-right: 12px;
 	
 }
 #page-content .top .intro .buttons {
-	width: 345px;
+	width: 400px;
 	margin: 20px auto 0 auto;
 }
 #page-content .top .intro .desc {
