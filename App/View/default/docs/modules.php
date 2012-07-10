@@ -29,7 +29,7 @@
 			</div>
 		</aside>
 		
-		<article class="span9">
+		<article>
 	
 			<h1>PPI Modules</h1>
 			<p class="section-title">Introduction</p>

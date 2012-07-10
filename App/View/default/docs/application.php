@@ -31,7 +31,7 @@
 			</div>
 		</aside>
 		
-		<article class="span9">
+		<article>
 		
 			<h1>The Skeleton Application</h1>
 		
