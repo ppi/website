@@ -8,16 +8,15 @@ else:
 <?php include($viewDir . 'elements/head.php'); ?>
 <body>
 
-<div id="wrapper">
-	
-	<?php include($viewDir . 'elements/header.php'); ?>
-	
-	<div id="page-content">
-		<?php include_once($viewDir . $actionFile); ?>
-		<?php include_once($viewDir . 'elements/footer.php'); ?>
+	<div id="wrapper">
+
+		<?php include($viewDir . 'elements/header.php'); ?>
+		<div id="page-content">
+			<?php include_once($viewDir . $actionFile); ?>
+		</div>
 	</div>
-	
-</div>
+
+	<?php include_once($viewDir . 'elements/footer.php'); ?>
 </strong>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>

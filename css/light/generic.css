@@ -193,7 +193,9 @@ footer .desc {
 footer .logo {
 	float: left;
 }
+
 footer {
+
 	padding-left: 30px;
 	padding-top: 16px;
 	height: 60px;
@@ -210,6 +212,10 @@ footer {
     z-index: 10000;
 }
 
+div.inside {
+    margin: 0 auto;
+    width: 960px;
+}
 
 .ui-loader {
 	display: none;
