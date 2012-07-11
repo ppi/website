@@ -157,7 +157,13 @@
 .docs-page article a.next-article i {
 	margin-top: 2px;
 }
-.docs-page article a.next-article {
+.docs-page article a.next-article.top {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	font-size: 1.2em;
+}
+.docs-page article a.next-article.bottom {
 	position: absolute;
 	bottom: 12px;
 	right: 12px;

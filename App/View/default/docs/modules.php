@@ -32,6 +32,9 @@
 		<article>
 	
 			<h1>PPI Modules</h1>
+			
+			<a class="next-article top btn btn-success" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
+			
 			<p class="section-title">Introduction</p>
 			<p>By default, one module is provided with the SkeletonApp, named "Application". It provides a simple route pointing to the homepage. A simple controller to handle the "home" page of the application. This demonstrates using routes, controllers and views within your module.</p>
 			
@@ -109,12 +112,8 @@ class Module extends BaseModule {
 			
 
 			<a class="prev-article btn btn-success" href="application.html"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
-			<a class="next-article btn btn-success" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
-				
+			<a class="next-article bottom btn btn-success" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
 					
-			<a class="prev-article btn btn-success" href="application.html"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
-			<a class="next-article btn btn-success" href="modules.html">Something <i class="icon-arrow-right icon-white"></i></a>
-	
 	</article>
 	</div>
 </div>

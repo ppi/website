@@ -34,6 +34,8 @@
 		<article>
 		
 			<h1>The Skeleton Application</h1>
+			
+			<a class="next-article top btn btn-success" href="modules.html">Modules <i class="icon-arrow-right icon-white"></i></a>
 		
 			<p class="section-title">Application File Structure</p>
 			<p>First, lets review the file structure of the PPI skeleton application that we have pre-built for you to get up and running as quickly as possible.</p>
@@ -155,7 +157,7 @@ return array(
 			<p>This is where we get stuck into the real details, we're going into the /modules/ folder. Click the next section to proceed</p>
 			
 			<a class="prev-article btn btn-success" href="getting-started.html"><i class="icon-arrow-left icon-white"></i> Getting Started</a>
-			<a class="next-article btn btn-success" href="modules.html">Modules <i class="icon-arrow-right icon-white"></i></a>
+			<a class="next-article bottom btn btn-success" href="modules.html">Modules <i class="icon-arrow-right icon-white"></i></a>
 	
 	</article>
 	</div>
