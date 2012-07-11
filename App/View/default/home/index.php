@@ -22,7 +22,7 @@
 				<p class="desc">New and easy modular framework, leveraging the ZendFramework2 ModuleManager component.</p>
 			</li>
 			<li>
-				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/1day.png" alt="Icon"></a>
+				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/routing.png" alt="Icon"></a>
 				<a class="title" href="<?= $baseUrl; ?>" title="">Routing</a>
 				<p class="desc">Simple and powerful routing based on the Symfony2 Routing component</p>
 			</li>
@@ -37,7 +37,7 @@
 				<p class="desc">Simple and powerful DataSource component based on the Doctrine2 DBAL component</p>
 			</li>
 			<li>
-				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/perf.png" alt="Icon"></a>
+				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/composer.png" alt="Icon"></a>
 				<a class="title" href="<?= $baseUrl; ?>" title="">Composer Based</a>
 				<p class="desc">ppi itself is a composer package, and all of its dependencies are also composer packages. installation has never been so easy!</p>
 			</li>
