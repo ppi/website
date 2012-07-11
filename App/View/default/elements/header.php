@@ -1,4 +1,4 @@
-<div class="topbar" data-dropdown="dropdown" id="header">
+<div class="topbar clearfix" data-dropdown="dropdown" id="header">
 	<div class="topbar-inner">
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -25,7 +25,7 @@
 									<li><a href="<?= $baseUrl; ?>docs/session.html">Sessions</a></li>
 								</ul>
 							</li>
-							<li class=""><a href="admin">Manual</a></li>
+							<li class=""><a href="<?=$baseUrl;?>api">Manual</a></li>
 						</ul>
 					</div>
 				</div>

@@ -56,6 +56,16 @@ body {
     background: url(../../images/bg.png);
 }
 
+#header {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+#header .navbar-inner .container {
+	width: 985px;
+	margin: 0 auto;
+}
+
 #header #header-inner .logo {
 	display: block;
 	width: 50px;
@@ -97,7 +107,7 @@ body {
 }
 
 #header a {
-	/*background-color: #406C6C;*/
+	height: 20px;
 	color: white;
     font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 }
@@ -198,4 +208,9 @@ footer {
 	border-bottom: 1px solid #000;
 
     z-index: 10000;
+}
+
+
+.ui-loader {
+	display: none;
 }

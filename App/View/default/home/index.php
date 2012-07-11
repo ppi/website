@@ -17,27 +17,27 @@
 		<p class="download-count">downloaded <b><?=$downloadCount;?></b> times</p>
 		<ul class="list">
 			<li>
-				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/components.png" alt="Icon"></a>
-				<a class="title" href="<?= $baseUrl; ?>" title="">Modules</a>
+				<a class="icon" href="<?= $baseUrl; ?>docs/modules.html" title=""><img src="<?= $baseUrl; ?>images/light/components.png" alt="Icon"></a>
+				<a class="title" href="<?= $baseUrl; ?>docs/modules.html" title="">Modules</a>
 				<p class="desc">New and easy modular framework, leveraging the ZendFramework2 ModuleManager component.</p>
 			</li>
 			<li>
-				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/1day.png" alt="Icon"></a>
+				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/routing.png" alt="Icon"></a>
 				<a class="title" href="<?= $baseUrl; ?>" title="">Routing</a>
 				<p class="desc">Simple and powerful routing based on the Symfony2 Routing component</p>
 			</li>
 			<li style="margin-right: 0;">
-				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/easy.png" alt="Icon"></a>
+				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/home_templating.png" alt="Icon"></a>
 				<a class="title" href="<?= $baseUrl; ?>" title="">Templating</a>
 				<p class="desc">Awesome templating based on the Symfony2 Templating Component. We support PHP, Twig and Smarty</p>
 			</li>
 			<li>
-				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/perf.png" alt="Icon"></a>
+				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/config.png" alt="Icon"></a>
 				<a class="title" href="<?= $baseUrl; ?>" title="">Databases</a>
 				<p class="desc">Simple and powerful DataSource component based on the Doctrine2 DBAL component</p>
 			</li>
 			<li>
-				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/config.png" alt="Icon"></a>
+				<a class="icon" href="<?= $baseUrl; ?>" title=""><img src="<?= $baseUrl; ?>images/light/composer.png" alt="Icon"></a>
 				<a class="title" href="<?= $baseUrl; ?>" title="">Composer Based</a>
 				<p class="desc">ppi itself is a composer package, and all of its dependencies are also composer packages. installation has never been so easy!</p>
 			</li>

@@ -3,12 +3,12 @@
     <div class="toc-mobile">
         <p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
         <ul class="items">
-            <li><a href="#" title="">Introduction</a></li>
-            <li><a href="#" title="">The Module.php class</a></li>
-            <li><a href="#" title="">Init</a></li>
-            <li><a href="#" title="">Configuration</a></li>
-            <li><a href="#" title="">Routing</a></li>
-            <li><a href="#" title="">Resources</a></li>
+			<li><a href="#" title="">Introduction</a></li>
+			<li><a href="#" title="">The Module.php class</a></li>
+			<li><a href="#" title="">Init</a></li>
+			<li><a href="#" title="">Configuration</a></li>
+			<li><a href="#" title="">Routing</a></li>
+			<li><a href="#" title="">Resources</a></li>
         </ul>
     </div>
 	
@@ -29,9 +29,12 @@
 			</div>
 		</aside>
 		
-		<article class="span9">
+		<article>
 	
 			<h1>PPI Modules</h1>
+			
+			<a class="next-article top btn btn-success" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
+			
 			<p class="section-title">Introduction</p>
 			<p>By default, one module is provided with the SkeletonApp, named "Application". It provides a simple route pointing to the homepage. A simple controller to handle the "home" page of the application. This demonstrates using routes, controllers and views within your module.</p>
 			
@@ -109,12 +112,8 @@ class Module extends BaseModule {
 			
 
 			<a class="prev-article btn btn-success" href="application.html"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
-			<a class="next-article btn btn-success" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
-				
+			<a class="next-article bottom btn btn-success" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
 					
-			<a class="prev-article btn btn-success" href="application.html"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
-			<a class="next-article btn btn-success" href="modules.html">Something <i class="icon-arrow-right icon-white"></i></a>
-	
 	</article>
 	</div>
 </div>

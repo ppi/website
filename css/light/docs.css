@@ -35,7 +35,6 @@
 }
 
 .toc-mobile {
-    display: none;
     margin: 0 auto;
     position: fixed;
     bottom: 0;
@@ -46,7 +45,6 @@
     background-color: #E1EDED;
     border-left: 1px solid #E1EDED;
     border-right: 1px solid #E1EDED;
-    /*display: none;*/
 }
 
 .toc-mobile .toc-heading i.left {
@@ -148,11 +146,10 @@
 	margin-bottom: 5px;
 }
 
-
-
-.docs-page article {
+#page-content .docs-page article {
 	padding: 15px 15px 50px 15px;
-	margin-left: 20px;
+	margin-left: 0;
+	width: 97%;
 	border: 1px solid #9f9f9f;
     position: relative;
 }
@@ -160,7 +157,13 @@
 .docs-page article a.next-article i {
 	margin-top: 2px;
 }
-.docs-page article a.next-article {
+.docs-page article a.next-article.top {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	font-size: 1.2em;
+}
+.docs-page article a.next-article.bottom {
 	position: absolute;
 	bottom: 12px;
 	right: 12px;
@@ -201,26 +204,26 @@ p.section-title {
 }
 
 .toc-container {
-	right: 0px;
-	top: 90px;
+	right: -60px;
+	top: 0px;
+	display: none;
 	/*margin: 12px 180px 0 0;*/
 	margin-left: 0 !important;
-	position: fixed !important;
+	position: absolute;
 }
 
-@media only screen and (orientation: portrait) {
-	
+/*@media only screen and (orientation: portrait) {*/
 	/* Hide the TOC when your screen is smaller than the TOC width. */
-	.toc-container .toc {
-        display: none;
-	}
-
-    .toc-mobile {
-        display: block;
-    }
-	
-	#page-content .docs-page article {
-		width: 95%;
-	}
+	/*.toc-container .toc {*/
+        /*display: none;*/
+	/*}*/
+/**/
+    /*.toc-mobile {*/
+        /*display: block;*/
+    /*}*/
+	/**/
+	/*#page-content .docs-page article {*/
+		/*width: 95%;*/
+	/*}*/
 	
 }
