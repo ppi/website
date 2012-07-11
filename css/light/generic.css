@@ -99,6 +99,7 @@ body {
 #header a {
 	/*background-color: #406C6C;*/
 	color: white;
+    font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 }
 
 #header .dropdown-menu li a:hover {
