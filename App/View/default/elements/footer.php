@@ -6,7 +6,6 @@
 			<div class="content links">
 				<a href="#" title="">Get Started</a>
 				<a href="#" title="">Documentation</a>
-				<a href="#" title="">Videos</a>
 				<a href="#" title="">Community</a>
 				<a href="<?= $baseUrl; ?>projects" title="">Projects</a>
 				<a href="#" title="">Blog</a>
