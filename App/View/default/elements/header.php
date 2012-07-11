@@ -25,7 +25,7 @@
 									<li><a href="<?= $baseUrl; ?>docs/session.html">Sessions</a></li>
 								</ul>
 							</li>
-							<li class=""><a href="admin">Manual</a></li>
+							<li class=""><a href="<?=$baseUrl;?.api">Manual</a></li>
 						</ul>
 					</div>
 				</div>
