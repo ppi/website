@@ -28,6 +28,11 @@
 							<li class=""><a href="<?=$baseUrl;?>api">Manual</a></li>
 						</ul>
 					</div>
+					<div class="search">
+						<form action="<?= $baseUrl; ?>search/results" method="get">
+							<input type="text" name="keyword" placeholder="Type, press enter" id="header-search-input">
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

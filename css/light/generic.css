@@ -112,6 +112,10 @@ body {
     font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 }
 
+#header .nav li {
+    padding-top: 10px;
+}
+
 #header .dropdown-menu li a:hover {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#192b2b', endColorstr='#0d1616'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#192b2b), to(#0d1616)); /* for webkit browsers */
@@ -145,6 +149,9 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a7d7d', endColorstr='#589595'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#4a7d7d), to(#589595)); /* for webkit browsers */
 	background: -moz-linear-gradient(top,  #4a7d7d,  #589595); /* for firefox 3.6+ */
+
+    color: #fff;
+    padding: 0; margin: 0;
 }
 
 #header .nav {
@@ -155,17 +162,10 @@ body {
 	margin-left: 0;
 	width: 300px;
 	float: left;
+
+    padding-top: 10px;
 }
 
-#header .social .item {
-	float: left;
-}
-#header .social {
-	margin-top: 2px;
-	position: absolute;
-	left: 756px;
-	top: 5px;
-}
 #page-content {
 	padding-top: 60px;
 	margin: 0 auto;
