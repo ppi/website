@@ -30,7 +30,7 @@
 					</div>
 					<div class="search">
 						<form action="<?= $baseUrl; ?>search/results" method="get">
-							<input type="text" name="keyword" id="header-search-input">
+							<input type="text" name="keyword" id="header-search-input" placeholder="Type, press enter">
 						</form>
 					</div>
 				</div>

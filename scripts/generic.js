@@ -11,4 +11,6 @@ jQuery(document).ready(function() {
 		// tbc, re-display the autocomplete
 	});
 	
+	$('#header .search input').placeholder();
+	
 });
