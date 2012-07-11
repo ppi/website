@@ -64,6 +64,7 @@ body {
 #header .navbar-inner .container {
 	width: 985px;
 	margin: 0 auto;
+	position: relative;
 }
 
 #header #header-inner .logo {
@@ -112,10 +113,6 @@ body {
     font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 }
 
-#header .nav li {
-    padding-top: 10px;
-}
-
 #header .dropdown-menu li a:hover {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#192b2b', endColorstr='#0d1616'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#192b2b), to(#0d1616)); /* for webkit browsers */
@@ -158,12 +155,24 @@ body {
 	width: 550px;
 }
 
+#header div.inside {
+    margin: 0 auto;
+    width: 960px;
+}
+
+#header .search form input {
+	color: white;
+	padding-left: 5px;
+}
+#header .search form {
+	margin: 0;
+}
 #header .search {
 	margin-left: 0;
 	width: 300px;
-	float: left;
-
-    padding-top: 10px;
+	position: absolute;
+	bottom: 8px;
+	right: 164px;
 }
 
 #page-content {
@@ -212,11 +221,7 @@ footer {
     z-index: 10000;
 }
 
-div.inside {
-    margin: 0 auto;
-    width: 960px;
-}
+.autocomplete-w1 { top: -6px; left: -7px; }
 
-.ui-loader {
-	display: none;
-}
+.ui-loader { display: none; }
+
