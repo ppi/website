@@ -59,12 +59,12 @@
 				<p class="desc">Chat with the ppi community at #ppi on freenode.</p>
 			</li>
 			<li>
-				<a class="icon" target="_blank" href="http://www.github.com/ppi" title="" style="margin-top: -12px;"><img src="<?= $baseUrl; ?>images/light/github.png" alt="Icon"></a>
+				<a class="icon" target="_blank" href="http://www.github.com/ppi" title="" style="margin-top: -3px;"><img src="<?= $baseUrl; ?>images/light/github.png" alt="Icon"></a>
 				<a class="title" target="_blank" href="http://www.github.com/ppi" title="GitHub">GitHub</a>
 				<p class="desc">The easiest way to contribute to ppi is to fork us on GitHub</p>
 			</li>
 			<li>
-				<a class="icon" target="_blank" href="http://stackoverflow.com/questions/tagged/ppi" title="StackOverflow" style="margin-top: -12px;"><img src="<?= $baseUrl; ?>images/light/stackoverflow.png" alt="Icon"></a>
+				<a class="icon" target="_blank" href="http://stackoverflow.com/questions/tagged/ppi" title="StackOverflow" style="margin-top: -3px;"><img src="<?= $baseUrl; ?>images/light/stackoverflow.png" alt="Icon"></a>
 				<a class="title" target="_blank" href="http://stackoverflow.com/questions/tagged/ppi" title="StackOverflow">StackOverflow</a>
 				<p class="desc">Share your knowledge by answering user questions about ppi.</p>
 			</li>
