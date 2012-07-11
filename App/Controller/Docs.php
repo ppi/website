@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller;
 class Docs extends Application {
-	
+
 	function index() {
 
 		$section = $this->get('index');
@@ -12,7 +12,7 @@ class Docs extends Application {
 		$template = 'docs/' . $section;
 
 		$this->addCSS('light/docs', 'highlight/github');
-		$this->addJS('libs/jquery-mobile-1.1.0.min', 'highlight', 'docs');
+		$this->addJS('docs');
 		
 		$this->render($template, compact('content'));
 	}
