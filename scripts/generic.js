@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
 	
 	$('#header-search-input').autocomplete({
 		serviceUrl: baseUrl + 'search/ajax_search',

@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
-  $('pre code.php').each(function(i, e) {hljs.highlightBlock(e, '    ')});
+	
+//  $('pre code.php').each(function(i, e) {hljs.highlightBlock(e, '    ')});
 
     $('.toc-mobile .toc-heading').click(function() {
         $(this).parent().toggleClass('expanded');
@@ -13,19 +14,4 @@ jQuery(document).ready(function($) {
 
     });
 	
-	$.extend(  $.mobile , { 
-		linkBindingEnabled: false,
-		ajaxEnabled: false,
-		autoInitializePage: false
-	});
-
-    $(window).bind( 'orientationchange', function(e){
-        if(e.orientation === 'portrait') {
-//            $('.toc-mobile').effects('shake', {times: 5}, 3000);
-//            $('.toc-mobile').show();
-//            $('.toc-container .toc').hide();
-        }
-    });
-
-
 });
