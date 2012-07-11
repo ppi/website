@@ -1,4 +1,4 @@
-<div class="topbar" data-dropdown="dropdown" id="header">
+<div class="topbar clearfix" data-dropdown="dropdown" id="header">
 	<div class="topbar-inner">
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">

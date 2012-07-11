@@ -56,6 +56,16 @@ body {
     background: url(../../images/bg.png);
 }
 
+#header {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+#header .navbar-inner .container {
+	width: 985px;
+	margin: 0 auto;
+}
+
 #header #header-inner .logo {
 	display: block;
 	width: 50px;
