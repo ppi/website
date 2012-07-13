@@ -23,22 +23,22 @@
 			<p>Content coming shortly</p>
 			<p class="section-title">Basic Routing</p>
 			<p>The homepage route</p>
-			<pre class="language-lisp"><code>
+			<pre><code>
 Homepage:
 	pattern:  /
 	defaults: { _controller: "Application:Index:index"}
 			</code></pre>
 			
 			<p>The the blog homepage route</p>
-			<pre class="language-lisp"><code>
+			<pre><code>
 Blog_Index:
 	pattern:  /blog
 	defaults: { _controller: "Application:Blog:index"}
 			</code></pre>
 			
 			<p class="section-title">Routes with parameters</p>
-			<p>The following example is basically /blog/* where the wildcard is the value given to <b>title</b>. If the URL was <b>/blog/using-ppi2</b> then the <b>title</b> variable gets the value <b>using-ppi2</b>, which you can see being used in the next section.</p>
-			<pre class="language-lisp"><code>
+			<p>The following example is basically /blog/* where the wildcard is the value given to <b>title</b>. If the URL was <b>/blog/using-ppi2</b> then the <b>title</b> variable gets the value <b>using-ppi2</b>, which you can see being used in the Example Controller section below.</p>
+			<pre><code>
 Blog_Show:
 	pattern: /blog/{title}
 	defaults: { _controller: "Application:Blog:show"}
@@ -46,7 +46,7 @@ Blog_Show:
 			
 			<p class="section-title">Routes with HTTP Method Requirements</p>
 			<p>Only form submits using POST will trigger this route. This means you dont have to check this kind of stuff in your controller.</p>
-			<pre class="language-lisp"><code>
+			<pre><code>
 Blog_EditSave:
 	pattern: /blog/edit/{id}
 	defaults: { _controller: "Application:Blog:edit"}
@@ -56,7 +56,7 @@ Blog_EditSave:
 			
 			<p class="section-title">Routes with default parameters</p>
 			<p>This example optionally looks for the {pageNum} parameter, if it's not found it defaults to 1</p>
-			<pre class="language-lisp"><code>
+			<pre><code>
 Blog_Show:
 	pattern: /blog/{pageNum}
 	defaults: { _controller: "Application:Blog:index", pageNum: 1}
@@ -66,7 +66,7 @@ Blog_Show:
 			
 			<p class="section-title">Routes with parameters (advanced)</p>
 			<p>Checking if the {pageNum} parameter is numerical. Checking if the {lang} parameter is <b>en</b> or <b>de</b></b></del></p>
-			<pre class="language-lisp"><code>
+			<pre><code>
 Blog_Show:
 	pattern: /blog/{lang}/{pageNum}
 	defaults: { _controller: "Application:Blog:index", pageNum: 1, lang: en}
@@ -76,7 +76,7 @@ Blog_Show:
 			</code></pre>
 			
 			<p>Checking if the page is a POST request, and that {id} is numerical</p>
-			<pre class="language-lisp"><code>
+			<pre><code>
 Blog_EditSave:
 	pattern: /blog/edit/{id}
 	defaults: { _controller: "Application:Blog:edit"}
@@ -94,7 +94,7 @@ Blog_EditSave:
 			
 			<p class="section-title">Example controller</p>
 			<p>Here is an example blog controller, based on some of the routes provided above.</p>
-			<pre class="language-php"><code>
+			<pre><code>
 &lt;?php
 namespace Application\Controller;
 
