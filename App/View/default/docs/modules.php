@@ -25,7 +25,7 @@
 			
 			<p class="section-title">Module Structure</p>
 			<p>Your module starts with Module.php. You can have configuration on your module. Your can have routes which result in controllers getting dispatched. Your controllers can render view templates.</p>
-			<pre><code>
+			<pre class="language-php"><code>
 modules/
                 
     Application/
@@ -49,8 +49,8 @@ modules/
 			
 			<p class="section-title">The Module.php class</p>
 			<p>Every PPI module looks for a Module.php class file, this is the starting point for your module. </p>
-			<pre><code>
-&lt;php
+			<pre class="language-php"><code>
+&lt;?php
 namespace Application;
 
 use PPI\Module\Module as BaseModule
@@ -76,7 +76,8 @@ class Module extends BaseModule {
 			
 			<p class="section-title">Configuration</p>
 			<p>Expanding on from the previous code example, we're now adding a getConfig() method. This must return a raw php array. All the modules with getConfig() defined on them will be merged together to create 'modules config' and this is merged with your global app's configuration file at <b>/app/app.config.php</b>. Now from any controller you can get access to this config by doing <b>$this->getConfig()</b>. More examples on this later in the Controllers section.</b></p>
-			<pre><code>
+			<pre class="language-php"><code>
+&lt;?php
 class Module extends BaseModule {
 
 	protected $_moduleName = 'Application';
@@ -95,7 +96,7 @@ class Module extends BaseModule {
 			<p class="section-title">Routing</p>
 			<p>The getRoutes() method currently is re-using the Symfony2 routing component. It needs to return a Symfony RouteCollection instance. This means you can setup your routes using PHP, YAML or XML.</p>
 			
-			<pre><code>
+			<pre class="language-php"><code>
 class Module extends BaseModule {
 
 	protected $_moduleName = 'Application';

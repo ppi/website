@@ -59,7 +59,7 @@ www/ <- your web root directory
 			
 			<p class="section-title">The public index.php file</p>
 			<p>The <b>/public/index.php</b> is also known are your bootstrap file, or front controller is explained in-depth below</p>
-			<p><pre><code>
+			<p><pre class="language-php"><code>
 &lt;?php
 
 // All relative paths start from the main directory, not from /public/
@@ -89,7 +89,7 @@ $app->boot()->dispatch();
 			
 			<p class="section-title">The app.config.php file</p>
 			<p>Looking at the example config file below, you can control things here such as the environment, templating engine and datasource connection.</p>
-			<p><pre><code>
+			<p><pre class="language-php"><code>
 &lt;?php
 $config = array(
     'environment'            => 'development', // <-- Change this depending on your environment
@@ -108,7 +108,7 @@ return $config; // Very important
 
         <p class="section-title">The modules.config.php file</p>
         <p>The example below shows that you can control which modules are active and a list of directories <b>module_paths</b> that PPI will scan for your modules. Pay close attention to the <b>order</b> in which your modules are loaded. If one of your modules relies on resources loaded by another module. Make sure the module loading the resources is loaded <b>before</b> the others that depend upon it.</p>
-        <p><pre><code>
+        <p><pre class="language-php"><code>
 &lt;?php
 return array(
     'activeModules'   => array('Application', 'User'),
@@ -119,7 +119,7 @@ return array(
 			
 			<p class="section-title">The app/views folder</p>
 			<p>This folder is your applications global views folder. A global view is one that a multitude of other module views extend from. A good example of this is your website's template file. The following is an example of <b>/app/views/base.html.php</b></p>
-			<p><pre><code>
+			<p><pre class="language-php"><code>
 &lt;html&gt;
     &lt;body&gt;
         &lt;h1&gt;My website&lt;/h1&gt;
@@ -131,7 +131,7 @@ return array(
 			</code></pre></p>
 			
 			<p>You'll notice later on in the Templating section to reference and extend a global template file, you will use the following syntax in your modules template.</p>
-			<p><pre><code>
+			<p><pre class="language-php"><code>
 &lt;?php $view->extend('::base.html.php'); &gt;
 			</code></pre></p>
 			<p>Now everything from your module template will be applied into your <b>base.html.php</b> files <b>_content</b> section demonstrated above.</p>

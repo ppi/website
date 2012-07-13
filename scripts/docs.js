@@ -14,4 +14,12 @@ jQuery(document).ready(function($) {
 
     });
 	
+	<!-- Initialise jQuery Syntax Highlighter -->
+	$.SyntaxHighlighter.init({
+		prettifyBaseUrl: baseUrl + 'scripts/libs/jquery-syntaxhighlighter/prettify',
+		baseUrl: baseUrl + 'scripts/libs/jquery-syntaxhighlighter',
+		lineNumbers: false,
+		themes: ["google"]
+	});
+	
 });

@@ -12,7 +12,7 @@ class Docs extends Application {
 		$template = 'docs/' . $section;
 
 		$this->addCSS('light/docs', 'highlight/github');
-		$this->addJS('docs');
+		$this->addJS('libs/jquery-syntaxhighlighter/scripts/jquery.syntaxhighlighter.min', 'docs');
 		
 		$this->render($template, compact('content'));
 	}
