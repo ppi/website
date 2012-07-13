@@ -103,7 +103,11 @@ use PPI\Module\Controller as BaseController;
 class Blog extends BaseController {
 
 	public function indexAction() {
+                
+        // Get all the blog posts
 		$posts = $this->getBlogStorage()->getAll();
+                
+        // Render our main blog page, passing in our $posts to get rendered. 
 		$this->render('Application:blog:index.html.php', compact('posts'));
 	}
 
@@ -114,6 +118,8 @@ class Blog extends BaseController {
 				
 		// Obtain a blog post by its $title
 		$blogPost  = $this->getBlogStorage()->getByTitle($blogTitle);
+                
+        // Load up our template and send $blogPost there to get rendered
 		return $this->render('Application:blog:show.html.php', compact('blogPost'));
 	}
 
