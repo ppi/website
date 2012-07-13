@@ -25,7 +25,7 @@
 			
 			<p class="section-title">Module Structure</p>
 			<p>Your module starts with Module.php. You can have configuration on your module. Your can have routes which result in controllers getting dispatched. Your controllers can render view templates.</p>
-			<pre class="language-php"><code>
+			<pre><code>
 modules/
                 
     Application/
