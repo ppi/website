@@ -18,7 +18,9 @@
 		
 		<article>
 		
+			<h1>Routing and Controllers</h1>
 			<p class="section-title">Introduction</p>
+			<p>Content coming shortly</p>
 			<p class="section-title">Basic Routing</p>
 			<p>The homepage route</p>
 			<pre class="language-lisp"><code>

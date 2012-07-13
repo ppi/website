@@ -18,11 +18,9 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li><a href="<?= $baseUrl; ?>docs/getting-started.html">Getting Started</a></li>
-									<li><a href="<?= $baseUrl; ?>docs/controller.html">Controllers</a></li>
-									<li><a href="<?= $baseUrl; ?>docs/datasource.html">DataSource</a></li>
-									<li><a href="<?= $baseUrl; ?>docs/views.html">Views</a></li>
-									<li><a href="<?= $baseUrl; ?>docs/cache.html">Cache</a></li>
-									<li><a href="<?= $baseUrl; ?>docs/session.html">Sessions</a></li>
+									<li><a href="<?= $baseUrl; ?>docs/application.html">The Skeleton Application</a></li>
+									<li><a href="<?= $baseUrl; ?>docs/modules.html">Modules</a></li>
+									<li><a href="<?= $baseUrl; ?>docs/controllers-and-routing.html">Routing and Controllers</a></li>
 								</ul>
 							</li>
 							<li class=""><a href="<?=$baseUrl;?>api">Manual</a></li>
