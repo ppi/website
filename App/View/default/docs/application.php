@@ -66,7 +66,6 @@ www/ <- your web root directory
                     views/
                     ...
 
-        PPI/ <- the ppi framework and vendors
 		  </pre></p>
 			
 			<p>Lets break it down into parts:</p>
@@ -83,7 +82,7 @@ www/ <- your web root directory
 chdir(dirname(__DIR__));
 
 // Lets include PPI
-include('PPI/init.php');
+include('app/init.php');
 
 // Initialise our PPI App
 $app               = new PPI\App();

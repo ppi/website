@@ -33,7 +33,7 @@
 	
 			<h1>PPI Modules</h1>
 			
-			<a class="next-article top btn btn-success" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
+			<a class="next-article top btn btn-success" href="routing.html">Routing and Controllers<i class="icon-arrow-right icon-white"></i></a>
 			
 			<p class="section-title">Introduction</p>
 			<p>By default, one module is provided with the SkeletonApp, named "Application". It provides a simple route pointing to the homepage. A simple controller to handle the "home" page of the application. This demonstrates using routes, controllers and views within your module.</p>
@@ -83,7 +83,7 @@ class Module extends BaseModule {
 			</code></pre>
 			
 			<p class="section-title">Init</p>
-			<p>The above code shows you the Module class, and the all important <b>init()</b> method. Why is it important? If you remember from <b>The Skeleton Application</b> section previously, we have defined in our <b>modules.config.php</b> config file an <b>activeModules</b> option. When PPI is booting up the modules defined activeModules it looks for each module's init() method and calls it.</p>
+			<p>The above code shows you the Module class, and the all important <b>init()</b> method. Why is it important? If you remember from <b>The Skeleton Application</b> section previously, we have defined in our <b>modules.config.php</b> config file an <b>activeModules</b> option, when PPI is booting up the modules defined activeModules it looks for each module's init() method and calls it.</p>
 			<p class="tip">The init() method is run for every page request, and should not perform anything heavy.  It is considered bad practice to utilize these methods for setting up or configuring instances of application resources such as a database connection, application logger, or mailer.</p>
 			
 			<p class="section-title">Your modules resources</p>
@@ -108,11 +108,45 @@ class Module extends BaseModule {
 			</code></pre>
 			
 			<p class="section-title">Routing</p>
-			<p>The getRoutes() method currently expects is re-using the Symfony2 routing component.</p>
+			<p>The getRoutes() method currently is re-using the Symfony2 routing component. It needs to return a Symfony RouteCollection instance. This means you can setup your routes using PHP, YAML or XML.</p>
 			
+			<pre><code>
+class Module extends BaseModule {
+
+	protected $_moduleName = 'Application';
+
+	public function init($e) {
+		Autoload::add(__NAMESPACE__, dirname(__DIR__));
+	}
+
+	/**
+	 * Get the configuration for this module
+	 * 
+	 * @return array
+	 */
+	public function getConfig() {
+		return include(__DIR__ . '/resources/config/config.php');
+	}
+
+	/**
+	 * Get the routes for this module, in YAML format.
+	 * 
+	 * @return \Symfony\Component\Routing\RouteCollection
+	 */
+	public function getRoutes() {
+		return $this->loadYamlRoutes(__DIR__ . '/resources/config/routes.yml');
+	}
+
+}
+			</code></pre>
+			
+			<p class="section-title">Conclusion</p>
+			<p>So, what have we learnt in this section so far? We learnt how to initialize our module, and how to obtain configuration options and routes from it. </p>
+			<p>PPI will boot up all the modules and call the getRoutes() method on them all. It will merge the results together and match them against a request URI such as <b>/blog/my-blog-title</b>. When a matching route is found it dispatches the controller specified in that route.</p>
+			<p>Lets move onto the <b>Routing and Controllers</b> section to check out what happens next.</p>
 
 			<a class="prev-article btn btn-success" href="application.html"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
-			<a class="next-article bottom btn btn-success" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
+			<a class="next-article bottom btn btn-success" href="controllers-and-routing.html">Routing and Controllers <i class="icon-arrow-right icon-white"></i></a>
 					
 	</article>
 	</div>
