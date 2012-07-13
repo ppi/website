@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
 		prettifyBaseUrl: baseUrl + 'scripts/libs/jquery-syntaxhighlighter/prettify',
 		baseUrl: baseUrl + 'scripts/libs/jquery-syntaxhighlighter',
 		lineNumbers: false,
-		themes: ["google"]
+		theme: "solarized"
 	});
 	
 });

@@ -1,0 +1,57 @@
+.prettyprint.theme-solarized {
+	font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 15px;
+}
+
+.prettyprint.theme-solarized {
+  color: #839496;
+  background-color: #002b36;
+}
+
+.prettyprint.theme-solarized .pln {
+  color: inherit;
+}
+
+.prettyprint.theme-solarized .str,
+.prettyprint.theme-solarized .lit,
+.prettyprint.theme-solarized .atv {
+  color: #2aa198;
+}
+
+.prettyprint.theme-solarized .kwd {
+  color: #268bd2;
+}
+
+.prettyprint.theme-solarized .com,
+.prettyprint.theme-solarized .dec {
+  color: #586e75;
+  font-style: italic;
+}
+
+.prettyprint.theme-solarized .typ {
+  color: #b58900;
+}
+
+.prettyprint.theme-solarized .pun {
+  color: inherit;
+}
+
+.prettyprint.theme-solarized .opn {
+  color: inherit;
+}
+
+.prettyprint.theme-solarized .clo {
+  color: inherit;
+}
+
+.prettyprint.theme-solarized .tag {
+  color: #268bd2;
+  font-weight: bold;
+}
+
+.prettyprint.theme-solarized .atn {
+  color: inherit;
+}

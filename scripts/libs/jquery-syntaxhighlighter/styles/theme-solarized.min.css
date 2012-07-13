@@ -1,0 +1,57 @@
+.docs-page .prettyprint.theme-solarized {
+	font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 15px;
+}
+
+.docs-page .prettyprint.theme-solarized {
+  color: #839496;
+  background-color: #002b36;
+}
+
+.docs-page .prettyprint.theme-solarized .pln {
+  color: inherit;
+}
+
+.docs-page .prettyprint.theme-solarized .str,
+.docs-page .prettyprint.theme-solarized .lit,
+.docs-page .prettyprint.theme-solarized .atv {
+  color: #2aa198;
+}
+
+.docs-page .prettyprint.theme-solarized .kwd {
+  color: #268bd2;
+}
+
+.docs-page .prettyprint.theme-solarized .com,
+.docs-page .prettyprint.theme-solarized .dec {
+  color: #586e75;
+  font-style: italic;
+}
+
+.docs-page .prettyprint.theme-solarized .typ {
+  color: #b58900;
+}
+
+.docs-page .prettyprint.theme-solarized .pun {
+  color: inherit;
+}
+
+.docs-page .prettyprint.theme-solarized .opn {
+  color: inherit;
+}
+
+.docs-page .prettyprint.theme-solarized .clo {
+  color: inherit;
+}
+
+.docs-page .prettyprint.theme-solarized .tag {
+  color: #268bd2;
+  font-weight: bold;
+}
+
+.docs-page .prettyprint.theme-solarized .atn {
+  color: inherit;
+}
