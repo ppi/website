@@ -5,17 +5,37 @@
 #page-content .top .intro .buttons i {
 	margin-top: 3px;
 }
-#page-content .top .intro .buttons a:last-child {
-	margin-right: 0;
+
+#page-content .top .intro .buttons .main-button  {
+	margin-right: 12px;
 }
+
 #page-content .top .intro .buttons a {
 	font-size: 1.2em;
 	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
-	margin-right: 12px;
-	
+}
+
+#page-content .top .intro .docs-button {
+	position: absolute;
+	right: 100px;
+	bottom: 0;
+}
+
+#page-content .top .intro .github-button {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+#page-content .top .intro .btn-group {
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 #page-content .top .intro .buttons {
+	position: relative;
 	width: 400px;
+	height: 40px;
 	margin: 20px auto 0 auto;
 }
 #page-content .top .intro .desc {
@@ -226,4 +246,8 @@
 #home-page {
 	width: 967px;
 	margin: 0 auto;
+}
+
+#home-page .buttons .dropdown-menu a:hover {
+	background-color: #51A351;
 }

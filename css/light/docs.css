@@ -84,6 +84,7 @@
     /*margin-top: 0;*/
 }
 .toc-mobile .items li {
+	font-size: 1.1em;
     margin-top: 8px;
 }
 .toc-mobile .items {
