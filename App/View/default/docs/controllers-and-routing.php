@@ -25,6 +25,8 @@
 					<li><a href="#" title="">Basic Routing</a></li>
 					<li><a href="#" title="">Routes with parameters</a></li>
 					<li><a href="#" title="">Routes with HTTP Method Requirements</a></li>
+					<li><a href="#" title="">Routes with default parameters</a></li>
+					<li><a href="#" title="">Routes with parameters (advanced)</a></li>
 					<li><a href="#" title="">Controller Naming Scheme</a></li>
 					<li><a href="#" title="">Example controller</a></li>
 				</ul>
