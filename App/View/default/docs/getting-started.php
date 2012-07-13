@@ -14,19 +14,6 @@
 			</ul>
 		</div>
 
-        <aside class="toc-container">
-            <div class="toc">
-                <p class="heading">Table of Contents</p>
-                <ul class="items">
-                    <li><a href="#" title="">Overview</a></li>
-                    <li><a href="#" title="">Standing on the shoulders of giants</a></li>
-                    <li><a href="#" title="">Why use PPI?</a></li>
-                    <li><a href="#" title="">Downloading PPI</a></li>
-                    <li><a href="#" title="">System Requirements</a></li>
-                </ul>
-            </div>
-        </aside>
-
         <article>
 			
 			<a class="next-article top btn btn-success" href="<?=$baseUrl;?>docs/application.html">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>

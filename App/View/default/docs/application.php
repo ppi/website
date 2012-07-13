@@ -15,22 +15,6 @@
 	
 	<div class="row-fluid">
 		
-		<aside class="toc-container">
-			
-			<div class="toc">
-				<p class="heading">Table of Contents</p>
-				<ul class="items">
-					<li><a href="#" title="">Appliction File Structure</a></li>
-					<li><a href="#" title="">The public folder</a></li>
-					<li><a href="#" title="">The public index.php file</a></li>
-					<li><a href="#" title="">The app folder</a></li>
-					<li><a href="#" title="">The app.config.php file</a></li>
-					<li><a href="#" title="">The app.modules.php file</a></li>
-					<li><a href="#" title="">The modules folder</a></li>
-				</ul>
-			</div>
-		</aside>
-		
 		<article>
 		
 			<h1>The Skeleton Application</h1>

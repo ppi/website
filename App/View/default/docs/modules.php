@@ -14,21 +14,6 @@
 	
 	<div class="row-fluid">
 		
-		<aside class="toc-container">
-			
-			<div class="toc">
-				<p class="heading">Table of Contents</p>
-				<ul class="items">
-					<li><a href="#" title="">Introduction</a></li>
-					<li><a href="#" title="">The Module.php class</a></li>
-					<li><a href="#" title="">Init</a></li>
-					<li><a href="#" title="">Configuration</a></li>
-					<li><a href="#" title="">Routing</a></li>
-					<li><a href="#" title="">Resources</a></li>
-				</ul>
-			</div>
-		</aside>
-		
 		<article>
 	
 			<h1>PPI Modules</h1>
