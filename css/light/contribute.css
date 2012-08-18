@@ -1,3 +1,7 @@
+#wrapper {
+	width: 960px;
+}
+
 .contribute-page .left-side {
 	width: 250px;
 }
@@ -95,7 +99,7 @@
 
 .contribute-page .content-box {
 	float: left;
-	width: 697px;
+	width: 71.95833333333333%;
 	padding-left: 18px;
 	border-left: none;
 	position: relative;
