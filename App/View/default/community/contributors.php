@@ -18,6 +18,7 @@
                 <div class="title">PPI Project</div>
                  <p>Paul Dragoonis - Twitter: <a target="_blank" href="http://twitter.com/#!/dr4goonis" title="twitter">@dr4goonis</a> - Email: paul[at]ppi.io</p>
                  <p>Vítor Brandão - Twitter: <a target="_blank" href="http://twitter.com/#!/noiselabs" title="twitter">@noiselabs</a> - Email: vitor[at]ppi.io</p>
+                 <p>Alfredo Juarez - Twitter: <a target="_blank" href="http://twitter.com/#!/alfrekjv" title="twitter">@alfrekjv</a> - Email: alfredo[at]ppi.io</p>
             </div>
             
             <p class="intro">As ppi2 is constructed of components from existing libraries, we directly reached out to the core developers of those projects for assistance and advice on how to get the best out of their library. In addition to this, several members of the open source community have really helped too. The following people have been extremely influential in the creation process of ppi2. Viva la PHP community!</p>
