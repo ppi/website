@@ -192,7 +192,7 @@
 .contribute-page .left-side nav li.box input {
 	height: 30px;
 }
-.contribute-page .left-side nav li.box input[type=text] {
+.left-side nav li.box input[type=text] {
 	height: 22px;
 }
 .contribute-page .left-side nav li.box.newsletter-box .form #newsletter-email {
@@ -295,9 +295,7 @@
 	height: 40px;
 	position: relative;
 }
-.contributors-page .left-side nav li.box input {
-	height: 30px;
-}
+
 .contributors-page .left-side nav li.box.newsletter-box .form #newsletter-email {
 	float: left;
 	width: 173px;
