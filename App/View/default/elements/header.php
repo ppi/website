@@ -23,7 +23,7 @@
 									<li><a href="<?= $baseUrl; ?>docs/controllers-and-routing.html">Routing and Controllers</a></li>
 								</ul>
 							</li>
-							<li class=""><a href="<?=$baseUrl;?>api">Manual</a></li>
+<!--							<li class=""><a href="--><?//=$baseUrl;?><!--api">Manual</a></li>-->
 						</ul>
 					</div>
 					<div class="search">

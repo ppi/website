@@ -1,7 +1,9 @@
 <div class="community-page">
 	<div class="left-side">
 	<?php include_once($viewDir . 'community/elements/leftnav.php'); ?>
+        
 	</div>
+    
 	<div class="content-box">
 		
 		<ul class="breadcrumb">

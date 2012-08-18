@@ -21,6 +21,8 @@
 			
 			<a class="next-article top btn btn-success" href="modules.html">Modules <i class="icon-arrow-right icon-white"></i></a>
 		
+            <p class="section-title">What has been already set up for me?</p>
+            
 			<p class="section-title">Application File Structure</p>
 			<p>First, lets review the file structure of the PPI skeleton application that we have pre-built for you to get up and running as quickly as possible.</p>
 			<p><pre>

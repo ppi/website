@@ -1,7 +1,9 @@
 <div class="contribute-page">
 	<div class="left-side">
-	<?= include($viewDir . 'community/elements/leftnav.php'); ?>
+	<?php include($viewDir . 'community/elements/leftnav.php'); ?>
+        
 	</div>
+    
 	<div class="content-box">
 
 		<ul class="breadcrumb">
