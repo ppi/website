@@ -41,13 +41,13 @@ class Community extends Application {
 	}
 
 	function contributors() {
-		$this->addCSS('light/contributors');
+		$this->addCSS('light/community');
 //		$this->addJS('contributors');
 		$this->render('community/contributors');
 	}
 
 	function contribute() {
-		$this->addCSS('light/contribute');
+        $this->addCSS('light/community');
 		$this->render('community/contribute');
 	}
 

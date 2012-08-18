@@ -1,6 +1,6 @@
 <div class="contributors-page">
 	<div class="left-side">
-	<?= include_once($viewDir . 'community/elements/leftnav.php'); ?>
+	<?php include_once($viewDir . 'community/elements/leftnav.php'); ?>
 	</div>
 	<div class="content-box">
 		
