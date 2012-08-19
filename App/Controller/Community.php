@@ -1,13 +1,9 @@
 <?php
 namespace App\Controller;
 
-use PPI\Core;
-
 class Community extends Application {
 
 	function index() {
-
-		$activity = array();
 
 		$filter = $this->get('filter');
 		$filtered = false;
@@ -31,7 +27,7 @@ class Community extends Application {
 		krsort($activity);
 
 		$this->addCSS('light/community');
-		$this->addJS('light/community');
+		$this->addJS('community');
 		$this->render('community/index', compact('activity', 'filtered'));
 
 	}
@@ -51,9 +47,35 @@ class Community extends Application {
 		$this->render('community/contribute');
 	}
 
+    /**
+     * Create a newsletter entry, this is an AJAX based route
+     */
+    public function newsletter_submit() {
+        
+        $emailAddress = $this->post('email');
+        $name = $this->post('name');
+
+        if(!$this->is('post') || empty($emailAddress) || empty($name) || !filter_var($emailAddress, FILTER_VALIDATE_EMAIL)) {
+           die(json_encode('E_INVALID')); 
+        }
+        
+        $ns = $this->getNewsletterStorage();
+        
+        // Duplication check
+        if($ns->existsByEmail($emailAddress)) {
+            die(json_encode('E_DUPLICATE'));
+        }
+        
+        $ns->create($name, $emailAddress);
+        
+        die(json_encode('OK'));
+        
+        
+    }
+
 	protected function getTwits() {
 
-		$config = Core::getConfig();
+		$config = $this->getConfig();
 		$twitterFeeds = $config->community->twitterFeeds->toArray();
 		if(!empty($twitterFeeds)) {
 			foreach($twitterFeeds as $twitterFeed) {
@@ -66,7 +88,7 @@ class Community extends Application {
 
 	protected function getGithub() {
 
-		$config = Core::getConfig();
+		$config = $this->getConfig();
 		$githubFeeds = $config->community->githubFeeds->toArray();
 		if(!empty($githubFeeds)) {
 			$activity = $this->parseGithubFeeds($githubFeeds);
@@ -78,7 +100,7 @@ class Community extends Application {
 	protected function parseGithubFeeds($feeds) {
 
 		$cacheName = 'ppi-website-github-feeds';
-		$cache = Core::getCache();
+		$cache = $this->getCache();
 		if($cache->exists($cacheName)) {
 			return $cache->get($cacheName);
 		}
@@ -114,7 +136,7 @@ class Community extends Application {
 	protected function parseTweets($username, $maxtweets = 5) {
 
 		$cacheName = 'ppi-website-twitter-feeds';
-		$cache = Core::getCache();
+		$cache = $this->getCache();
 		if($cache->exists($cacheName)) {
 			return $cache->get($cacheName);
 		}
@@ -168,5 +190,7 @@ class Community extends Application {
 		// Return array
 		return $tweet_array;
 	}
+    
+    
 
 }

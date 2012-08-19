@@ -49,18 +49,16 @@
 	width: 173px;
 	margin-left: 12px;
 }
-.community-page .left-side nav li.box.newsletter-box .submit {
-	margin-top: 12px;
-}
-.community-page .left-side nav li.box.newsletter-box .form p {
+
+.community-page .left-side nav li.newsletter-box label {
 	float: left;
-	margin-top: 7px;
+	margin-top: 5px;
 }
+
 .community-page .left-side nav li.box {
 	background-color: #F9F9F9;
 	padding-left: 12px;
-	height: 120px;
-	padding-top: 5px;
+	padding-top: 12px;
 }
 .community-page .left-side nav li {
 	border: 1px solid #C7C7C7;
@@ -193,8 +191,11 @@
 	height: 30px;
 }
 .left-side nav li.box input[type=text] {
+	width: 171px;
 	height: 22px;
+	margin-left: 5px;
 }
+
 .contribute-page .left-side nav li.box.newsletter-box .form #newsletter-email {
 	float: left;
 	width: 173px;

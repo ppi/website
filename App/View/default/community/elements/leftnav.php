@@ -17,9 +17,11 @@
     <li class="box newsletter-box">
         <p class="title">PPI Newsletter</p>
         <div class="form">
-            <p>Email</p> <input id="newsletter-email" name="email" type="text" placeholder="Type email, press enter." /></p>
-            <div class="clear"></div>
-            <input type="submit" class="btn success submit" href="<?= $baseUrl; ?>live-chat" target="_blank" value="Subscribe">
+            <form action="#submit" method="post">
+                <p><label for="newsletterName">Name</label><input name="name" type="text" class="name" id="newsletterName"></p>
+                <p><label for="newsletterEmail">Email</label><input name="email" type="text" class="email" id="newsletterEmail"></p>
+                <input type="submit" class="btn success submit" href="<?= $baseUrl; ?>live-chat" target="_blank" value="Subscribe to the newsletter">
+            </form>
         </div>
     </li>
 </ul>

@@ -1,7 +1,7 @@
 <?php
 $coreJSFiles = array(
 	'modernizr-1.6.min', 
-	'bootstrap/dropdown', 
+	'bootstrap', 
 	'jquery.autocomplete/jquery.autocomplete',
 	'libs/jquery-placeholder.min',
 	'generic'
