@@ -28,6 +28,7 @@
                 <p>Christophe Coevoet (<a target="_blank" href="http://twitter.com/#!/Stof70" title="twitter">@Stof70</a>)</p>
                 <p>Lukas Kahwe Smith (<a target="_blank" href="http://twitter.com/#!/lsmith" title="twitter">@lsmith</a>)</p>
                 <p>Kris Wallsmith (<a target="_blank" href="http://twitter.com/#!/kriswallsmith" title="twitter">@kriswallsmith</a>)</p>
+                <p>Fabien Potencier (<a target="_blank" href="http://twitter.com/#!/fabpot" title="twitter">@fabpot</a>)</p>
             </div>
             
             <div class="project">
