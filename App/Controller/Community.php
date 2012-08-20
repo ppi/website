@@ -25,6 +25,7 @@ class Community extends Application {
 
 			case 'all':
 			default:
+            var_dump($this->getGithub(), $this->getTwits()); exit;
 				$activity = $this->getGithub() + $this->getTwits();
 				break;
 		}
@@ -90,6 +91,7 @@ class Community extends Application {
 
 		$config = $this->getConfig();
 		$githubFeeds = $config->community->githubFeeds->toArray();
+        $activity = array();
 		if(!empty($githubFeeds)) {
 			$activity = $this->parseGithubFeeds($githubFeeds);
 		}
