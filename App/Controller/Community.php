@@ -3,6 +3,11 @@ namespace App\Controller;
 
 class Community extends Application {
 
+    public function preDispatch() {
+        $this->addCSS('light/community');
+        $this->addJS('community');
+    }
+    
 	function index() {
 
 		$filter = $this->get('filter');
@@ -26,8 +31,6 @@ class Community extends Application {
 
 		krsort($activity);
 
-		$this->addCSS('light/community');
-		$this->addJS('community');
 		$this->render('community/index', compact('activity', 'filtered'));
 
 	}
@@ -37,13 +40,10 @@ class Community extends Application {
 	}
 
 	function contributors() {
-		$this->addCSS('light/community');
-//		$this->addJS('contributors');
 		$this->render('community/contributors');
 	}
 
 	function contribute() {
-        $this->addCSS('light/community');
 		$this->render('community/contribute');
 	}
 

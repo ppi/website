@@ -1,4 +1,4 @@
-<div class="contributors-page">
+<div class="contributors-page community-page">
     <div class="left-side">
     <?php include_once($viewDir . 'community/elements/leftnav.php'); ?>
     </div>

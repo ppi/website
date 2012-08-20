@@ -56,7 +56,7 @@
 		</ul>
 	</div>
 	<div class="bottom">
-		<a class="fork" href="http://www.github.com/ppi" title="Fork me on github"><img src="<?= $baseUrl; ?>images/light/fork-me.png" alt="Fork me on github"></a>
+		<a class="fork" href="http://www.github.com/ppi/website" title="Fork me on github"><img src="<?= $baseUrl; ?>images/light/fork-me.png" alt="Fork me on github"></a>
 		<p class="header">Community</p>
 		<ul class="list">
 			<li>
