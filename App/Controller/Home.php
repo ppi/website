@@ -8,7 +8,7 @@ class Home extends Application {
 	function index() {
 		$downloadCount = $this->getDownloadCount();
 		$this->addCSS('light/home');
-		$this->addJS('bootstrap/dropdown', 'home');
+		$this->addJS('home');
 		$this->render('home/index', compact('downloadCount'));
 	}
 
