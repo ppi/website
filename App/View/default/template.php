@@ -19,7 +19,7 @@ else:
 	<?php include_once($viewDir . 'elements/footer.php'); ?>
 </strong>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
 <script>var baseUrl = '<?= $baseUrl; ?>';</script>
 <script>!window.jQuery && document.write(unescape('%3Cscript src="' + baseUrl + 'scripts/jquery.1.7.0.min.js"%3E%3C/script%3E'));</script>
 <?php include_once($viewDir . 'framework/javascript.php'); ?>

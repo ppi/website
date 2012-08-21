@@ -27,11 +27,12 @@
 	bottom: 0;
 }
 
-#page-content .top .intro .btn-group {
+#page-content .top .intro .button-group {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 }
+
 #page-content .top .intro .buttons {
 	position: relative;
 	width: 400px;

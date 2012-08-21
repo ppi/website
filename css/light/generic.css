@@ -41,10 +41,11 @@ a, p {
 
 body {
 	background: url(../../images/bg.png);
+	font-size: 0.80em;
 }
 
 #header {
-	width:  1024px;
+	width:  auto;
 	margin: 0 auto;
 }
 
@@ -124,6 +125,8 @@ body {
 	background-color: #345958;
 	text-decoration:  none;
 }
+
+.navbar .logo img {width: 48px;}
 
 .navbar .nav .active > a, .navbar .nav .active > a:hover {
 	filter:     progid:DXImageTransform.Microsoft.gradient(startColorstr = '#284545', endColorstr = '#406c6c'); /* for IE */
