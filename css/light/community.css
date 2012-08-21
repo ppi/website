@@ -1,290 +1,327 @@
 #wrapper {
-    margin: 0 auto;
-    width: 960px;
+	margin: 0 auto;
+	width:  960px;
 }
 
 .community-page .left-side {
-    width: 26.04166666666667%; /* 250 / 960 */
+	width: 26.04166666666667%; /* 250 / 960 */
 }
+
 .community-page .left-side nav li a.first:hover {
 	background-color: #ebebeb;
-	text-decoration: none;
+	text-decoration:  none;
 }
+
 .community-page .left-side nav li a.first {
 	background-color: #F9F9F9;
-	display: block;
-	height: 30px;
-	color: #8E8E8E;
-	font-size: 1.2em;
-	font-family: 'Museo_Slab_500';
-	padding-left: 12px;
-	padding-top: 9px;
+	display:          block;
+	height:           30px;
+	color:            #8E8E8E;
+	font-size:        1.2em;
+	font-family:      'Museo_Slab_500';
+	padding-left:     12px;
+	padding-top:      9px;
 }
+
 .community-page .left-side nav li:first-child {
 	border-top: 1px solid #C7C7C7
 }
+
 .community-page .left-side nav li.box .title {
-	font-size: 1.2em;
+	font-size:   1.2em;
 	font-family: 'Museo_Slab_500';
 }
+
 .community-page .left-side nav li.box .details a {
-	width: 64px;
-	color: white;
-	height: 18px;
-	text-align: center;
-	padding-top: 8px;
+	width:        64px;
+	color:        white;
+	height:       18px;
+	text-align:   center;
+	padding-top:  8px;
 	padding-left: 10px;
-	margin: 0;
+	margin:       0;
 }
+
 .community-page .left-side nav li.box .details {
 	font-size: 1.1em;
-	height: 40px;
-	position: relative;
+	height:    40px;
+	position:  relative;
 }
+
 .community-page .left-side nav li.box input {
 	height: 30px;
 }
+
 .community-page .left-side nav li.box.newsletter-box .form #newsletter-email {
-	float: left;
-	width: 173px;
+	float:       left;
+	width:       173px;
 	margin-left: 12px;
 }
 
 .community-page .left-side nav li.newsletter-box label {
-	float: left;
+	float:      left;
 	margin-top: 5px;
 }
 
 .community-page .left-side nav li.box {
 	background-color: #F9F9F9;
-	padding-left: 12px;
-	padding-top: 12px;
+	padding-left:     12px;
+	padding-top:      12px;
 }
+
 .community-page .left-side nav li {
-	border: 1px solid #C7C7C7;
-	border-top:  none;
+	border:     1px solid #C7C7C7;
+	border-top: none;
 }
+
 .community-page .left-side nav ul {
 	list-style-type: none;
-	margin-left: 0;
+	margin-left:     0;
 }
+
 .community-page .left-side {
 	float: left;
-	
 }
+
 .community-page {
 	margin-top: 20px;
 }
 
 .community-page .content-box .breadcrumb {
-	background: none;
-	border-radius: 0;
-	border: 1px solid #C7C7C7;
+	background:            none;
+	border-radius:         0;
+	border:                1px solid #C7C7C7;
 	-webkit-border-radius: none;
-	background-color: white;
-	-moz-border-radius: none;
-	margin-left: -5px;
+	background-color:      white;
+	-moz-border-radius:    none;
+	margin-left:           -5px;
 }
+
 .community-page .content-box h1 {
-	color: #6F6F6F;
-	font-size: 2.0em;
-	font-family: "Museo_Slab_500"; 
+	color:       #6F6F6F;
+	font-size:   2.0em;
+	font-family: "Museo_Slab_500";
 }
+
 .community-page .content-box .activity-stream .feeds .feed:first-child {
 	border-top: 1px solid #C7C7C7;
 }
+
 .community-page .content-box .activity-stream .feed .actions a {
-	text-align: center;
-	color: white;
-	font-size: 0.9em;
-	display: block;
+	text-align:  center;
+	color:       white;
+	font-size:   0.9em;
+	display:     block;
 	padding-top: 6px;
-	width: 100px;
-	height: 22px;
+	width:       100px;
+	height:      22px;
 }
 
 .community-page .content-box .activity-stream .feed .actions a:hover {
-    text-decoration: none;
-    background: #345958;
+	text-decoration: none;
+	background:      #345958;
 }
 
 .community-page .content-box .activity-stream .feed .actions {
-	top: 0;
-	right: 0;
-	border-radius: 0;
+	top:                   0;
+	right:                 0;
+	border-radius:         0;
 	-webkit-border-radius: none;
-	-moz-border-radius: none;
-	position: absolute;
-	background-color: #518787;
-	margin-top: 0;
-	border: 0;
-	padding: 0;
+	-moz-border-radius:    none;
+	position:              absolute;
+	background-color:      #518787;
+	margin-top:            0;
+	border:                0;
+	padding:               0;
 }
+
 .community-page .content-box .activity-stream .feeds .feed .content {
 	float: left;
 	width: 500px;
 }
+
 .community-page .content-box .activity-stream .feeds .feed .image {
-	float: left;
+	float:        left;
 	margin-right: 12px;
-	margin-left: 12px;
-}
-.community-page .content-box .activity-stream .feeds .feed {
-	border: 1px solid #C7C7C7;
-	border-top: none;
-	height: 68px;
-	background-color: white;
-	padding-top: 12px;
-	position: relative;
-}
-.community-page .content-box .activity-stream {
-	
-}
-.community-page .content-box {
-	float: left;
-    width: 71.95833333333333%; /* RWD */
-	padding-left: 18px;
-	border-left: none;
-	position: relative;
+	margin-left:  12px;
 }
 
+.community-page .content-box .activity-stream .feeds .feed {
+	border:           1px solid #C7C7C7;
+	border-top:       none;
+	height:           68px;
+	background-color: white;
+	padding-top:      12px;
+	position:         relative;
+}
+
+.community-page .content-box .activity-stream {
+}
+
+.community-page .content-box {
+	float:        left;
+	width:        71.95833333333333%; /* RWD */
+	padding-left: 18px;
+	border-left:  none;
+	position:     relative;
+}
 
 .contribute-page .left-side {
 	width: 250px;
 }
+
 .contribute-page .left-side nav li a.first:hover {
 	background-color: #ebebeb;
-	text-decoration: none;
+	text-decoration:  none;
 }
+
 .contribute-page .left-side nav li a.first {
 	background-color: #F9F9F9;
-	display: block;
-	height: 30px;
-	color: #8E8E8E;
-	font-size: 1.2em;
-	font-family: 'Museo_Slab_500';
-	padding-left: 12px;
-	padding-top: 9px;
+	display:          block;
+	height:           30px;
+	color:            #8E8E8E;
+	font-size:        1.2em;
+	font-family:      'Museo_Slab_500';
+	padding-left:     12px;
+	padding-top:      9px;
 }
+
 .contribute-page .left-side nav li:first-child {
 	border-top: 1px solid #C7C7C7
 }
+
 .contribute-page .left-side nav li.box .title {
-	font-size: 1.2em;
+	font-size:   1.2em;
 	font-family: 'Museo_Slab_500';
 }
+
 .contribute-page .left-side nav li.box .details a {
-	width: 64px;
-	color: white;
-	height: 18px;
-	text-align: center;
-	padding-top: 8px;
+	width:        64px;
+	color:        white;
+	height:       18px;
+	text-align:   center;
+	padding-top:  8px;
 	padding-left: 10px;
-	margin: 0;
+	margin:       0;
 }
+
 .contribute-page .left-side nav li.box .details {
 	font-size: 1.1em;
-	height: 40px;
-	position: relative;
+	height:    40px;
+	position:  relative;
 }
+
 .contribute-page .left-side nav li.box input {
 	height: 30px;
 }
+
 .left-side nav li.box input[type=text] {
-	width: 171px;
-	height: 22px;
+	width:       171px;
+	height:      22px;
 	margin-left: 5px;
 }
 
 .contribute-page .left-side nav li.box.newsletter-box .form #newsletter-email {
-	float: left;
-	width: 173px;
+	float:       left;
+	width:       173px;
 	margin-left: 12px;
 }
+
 .contribute-page .left-side nav li.box.newsletter-box .submit {
 	margin-top: 12px;
 }
+
 .contribute-page .left-side nav li.box.newsletter-box .form p {
-	float: left;
+	float:      left;
 	margin-top: 7px;
 }
+
 .contribute-page .left-side nav li.box {
 	background-color: #F9F9F9;
-	padding-left: 12px;
-	height: 120px;
-	padding-top: 5px;
+	padding-left:     12px;
+	height:           120px;
+	padding-top:      5px;
 }
+
 .contribute-page .left-side nav li {
-	border: 1px solid #C7C7C7;
-	border-top:  none;
+	border:     1px solid #C7C7C7;
+	border-top: none;
 }
+
 .contribute-page .left-side nav ul {
 	list-style-type: none;
-	margin-left: 0;
+	margin-left:     0;
 }
+
 .contribute-page .left-side {
 	float: left;
-
 }
+
 .contribute-page {
 	margin-top: 20px;
 }
 
 .contribute-page .content-box .breadcrumb {
-	background: none;
-	border-radius: 0;
-	border: 1px solid #C7C7C7;
+	background:            none;
+	border-radius:         0;
+	border:                1px solid #C7C7C7;
 	-webkit-border-radius: none;
-	-moz-border-radius: none;
-	margin-left: -5px;
-	background-color: white;
+	-moz-border-radius:    none;
+	margin-left:           -5px;
+	background-color:      white;
 }
+
 .contribute-page .content-box h1 {
-	color: #6F6F6F;
-	font-size: 2.0em;
+	color:       #6F6F6F;
+	font-size:   2.0em;
 	font-family: "Museo_Slab_500";
 }
+
 .contribute-page .content-box h2 {
-	color: #6F6F6F;
-	font-size: 1.5em;
+	color:       #6F6F6F;
+	font-size:   1.5em;
 	font-family: "Museo_Slab_500";
 }
 
 .contribute-page .content-box {
-	float: left;
-	width: 71.95833333333333%;
+	float:        left;
+	width:        71.95833333333333%;
 	padding-left: 18px;
-	border-left: none;
-	position: relative;
+	border-left:  none;
+	position:     relative;
 }
 
 .contributors-page .content-box .projects-list .project .title {
-	font-size: 1.3em;
-	color: #406C6C;
+	font-size:     1.3em;
+	color:         #406C6C;
 	margin-bottom: 5px;
-	font-family: 'Museo_Slab_500';
+	font-family:   'Museo_Slab_500';
 }
+
 .contributors-page .content-box .projects-list .project p {
 	margin-bottom: 5px;
 }
+
 .contributors-page .content-box .projects-list .project .description {
 	margin-bottom: 12px;
 }
+
 .contributors-page .content-box .projects-list .project {
-	border: 1px solid #C7C7C7;
-	padding: 12px;
-	min-height: 75px;
-	position: relative;
-	margin-bottom: 12px;
+	border:           1px solid #C7C7C7;
+	padding:          12px;
+	min-height:       75px;
+	position:         relative;
+	margin-bottom:    12px;
 	background-color: white;
 }
+
 .contributors-page .content-box .projects-list {
-	
 }
+
 .contributors-page .content-box {
-	float: left;
-    width: 71.95833333333333%; /* RWD */
+	float:        left;
+	width:        71.95833333333333%; /* RWD */
 	padding-left: 18px;
-	border-left: none;
-	position: relative;
+	border-left:  none;
+	position:     relative;
 }
