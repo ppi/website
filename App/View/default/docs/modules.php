@@ -18,7 +18,7 @@
 	
 			<h1>PPI Modules</h1>
 			
-			<a class="next-article top btn btn-success" href="controllers-and-routing.html">Routing and Controllers<i class="icon-arrow-right icon-white"></i></a>
+			<a class="next-article top btn btn-green" href="controllers-and-routing.html">Routing and Controllers<i class="icon-arrow-right icon-white"></i></a>
 			
 			<p class="section-title">Introduction</p>
 			<p>By default, one module is provided with the SkeletonApp, named "Application". It provides a simple route pointing to the homepage. A simple controller to handle the "home" page of the application. This demonstrates using routes, controllers and views within your module.</p>
@@ -131,8 +131,8 @@ class Module extends BaseModule {
 			<p>PPI will boot up all the modules and call the getRoutes() method on them all. It will merge the results together and match them against a request URI such as <b>/blog/my-blog-title</b>. When a matching route is found it dispatches the controller specified in that route.</p>
 			<p>Lets move onto the <b>Routing and Controllers</b> section to check out what happens next.</p>
 
-			<a class="prev-article btn btn-success" href="application.html"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
-			<a class="next-article bottom btn btn-success" href="controllers-and-routing.html">Routing and Controllers <i class="icon-arrow-right icon-white"></i></a>
+			<a class="prev-article btn btn-green" href="application.html"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
+			<a class="next-article bottom btn btn-green" href="controllers-and-routing.html">Routing and Controllers <i class="icon-arrow-right icon-white"></i></a>
 					
 	</article>
 	</div>

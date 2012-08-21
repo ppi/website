@@ -7,7 +7,9 @@
 			<p class="desc">ppi is an open source php meta-framework. we have taken the good bits from Symfony2 and ZendFramework2 and combined them together to create a solid and easy web application framework. If you are already a fan of SF2 or ZF2 then you're already familiar with ppi. ppi is fully <a href="http://www.php-fig.org" title="PSR-0" target="_blank">PSR-0</a>, <a href="http://www.php-fig.org" title="PSR-0" target="_blank">PSR-1</a> and <a href="http://www.php-fig.org" title="PSR-0" target="_blank">PSR-2</a> compliant.</p>
 			<div class="buttons">
 				<div class="btn-group">
-					<a class="btn btn-success btn-large dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-circle-arrow-down icon-white"></i> Download</a>
+					<button class="btn btn-green btn-large dropdown-toggle" data-toggle="dropdown">
+                        <span class="icon-circle-arrow-down icon-white"></span> Download
+                    </button>
 					<ul class="dropdown-menu">
 						<li><a href="#download" id="download-skeleton-without-vendors">Skeleton App (without vendors) .tar.gz 5.8KB</a></li>
 						<li><a href="#download" id="download-skeleton-with-vendors">Skeleton App (with vendors) .tar.gz 20MB</a></li>

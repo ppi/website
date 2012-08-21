@@ -43,7 +43,7 @@
 	line-height: 22px;
 	margin: 20px auto 0 auto;
 	text-align: center;
-	width: 512px;
+	width: 600px;
 	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 
 }
@@ -248,6 +248,6 @@
 	margin: 0 auto;
 }
 
-#home-page .buttons .dropdown-menu a:hover {
+#home-page .buttons ul.dropdown-menu a:hover {
 	background-color: #51A351;
 }

@@ -16,7 +16,7 @@
 
         <article>
 			
-			<a class="next-article top btn btn-success" href="<?=$baseUrl;?>docs/application.html">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
+			<a class="next-article top btn btn-green" href="<?=$baseUrl;?>docs/application.html">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
 			
             <h1>Getting Started</h1>
 
@@ -36,7 +36,7 @@
             <p>A web server with its rewrite module enabled. (mod_rewrite for apache)</p>
             <p>PPI needs 5.3.3+. (5.3.0 for namespaces and 5.3.3 for Symfony2).</p>
 
-            <a class="next-article bottom btn btn-success" href="<?=$baseUrl;?>docs/application.html">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
+            <a class="next-article bottom btn btn-green" href="<?=$baseUrl;?>docs/application.html">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
 
         </article>
 
