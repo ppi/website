@@ -4,7 +4,7 @@
 }
 
 .projects-page .left-side {
-    width: 26.04166666666667%; /* 250 / 960 */
+	width: 26.04166666666667%; /* 250 / 960 | RWD */
 }
 .projects-page .left-side nav li a.first:hover {
 	background-color: #ebebeb;
@@ -139,7 +139,7 @@
 }
 .projects-page .content-box {
 	float: left;
-    width: 71.95833333333333%; /* RWD */
+	width: 71.95833333333333%; /* RWD */
 	padding-left: 18px;
 	border-left: none;
 	position: relative;

@@ -6,3 +6,4 @@ App/Cache/*
 App/Config/general.ini
 App/Config/connections.php
 index.php
+nbproject/*

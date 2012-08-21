@@ -1,48 +1,34 @@
-
 .clear { clear: both; }
 
 @font-face {
 	font-family: '';
-	src: url('fonts/Museo_Slab_500.ttf') format('truetype');
+	src:         url('fonts/Museo_Slab_500.ttf') format('truetype');
 }
-
 
 @font-face {
 	font-family: "Museo_Slab_500";
-	src: url('../fonts/Museo_Slab_500-webfont.eot?'); /* IE9 */
- 	src: url('../fonts/Museo_Slab_500-webfont.eot?') format('eot'), /* IE6-8 */
- 	     url('../fonts/Museo_Slab_500-webfont.woff') format('woff'), /* Modern browsers */
-	     url('../fonts/Museo_Slab_500-webfont.ttf') format('truetype'), /* Older Webkits */
-	     url('../fonts/Museo_Slab_500-webfont.svg#webfont') format('svg'); /* Opera */
+	src:         url('../fonts/Museo_Slab_500-webfont.eot?'); /* IE9 */
+	src:         url('../fonts/Museo_Slab_500-webfont.eot?') format('eot'), /* IE6-8 */ url('../fonts/Museo_Slab_500-webfont.woff') format('woff'), /* Modern browsers */ url('../fonts/Museo_Slab_500-webfont.ttf') format('truetype'), /* Older Webkits */ url('../fonts/Museo_Slab_500-webfont.svg#webfont') format('svg'); /* Opera */
 	font-weight: normal;
-	font-style: normal;
+	font-style:  normal;
 }
-
 
 @font-face {
 	font-family: "Bebas Neue";
-	src: url('../fonts/BebasNeue-webfont.eot?'); /* IE9 */
- 	src: url('../fonts/BebasNeue-webfont.eot?') format('eot'), /* IE6-8 */
- 	     url('../fonts/BebasNeue-webfont.woff') format('woff'), /* Modern browsers */
-	     url('../fonts/BebasNeue-webfont.ttf') format('truetype'), /* Older Webkits */
-	     url('../fonts/BebasNeue-webfont.svg#webfont') format('svg'); /* Opera */
+	src:         url('../fonts/BebasNeue-webfont.eot?'); /* IE9 */
+	src:         url('../fonts/BebasNeue-webfont.eot?') format('eot'), /* IE6-8 */ url('../fonts/BebasNeue-webfont.woff') format('woff'), /* Modern browsers */ url('../fonts/BebasNeue-webfont.ttf') format('truetype'), /* Older Webkits */ url('../fonts/BebasNeue-webfont.svg#webfont') format('svg'); /* Opera */
 	font-weight: normal;
-	font-style: normal;
+	font-style:  normal;
 }
-
 
 @font-face {
 	font-family: 'FertigoProRegular';
-	src: url('../fonts/fertigo-pro-webfont.eot');
-	src: url('../fonts/fertigo-pro-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/fertigo-pro-webfont.woff') format('woff'),
-		 url('../fonts/fertigo-pro-webfont.ttf') format('truetype'),
-		 url('../fonts/fertigo-pro-webfont.svg#FertigoProRegular') format('svg');
+	src:         url('../fonts/fertigo-pro-webfont.eot');
+	src:         url('../fonts/fertigo-pro-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/fertigo-pro-webfont.woff') format('woff'), url('../fonts/fertigo-pro-webfont.ttf') format('truetype'), url('../fonts/fertigo-pro-webfont.svg#FertigoProRegular') format('svg');
 	font-weight: normal;
-	font-style: normal;
+	font-style:  normal;
 
 }
-
 
 a, p {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
@@ -50,37 +36,45 @@ a, p {
 
 #wrapper {
 	margin: 0 auto;
+	width:  960px;
 }
 
 body {
-    background: url(../../images/bg.png);
+	background: url(../../images/bg.png);
 }
 
 #header {
-	width: 1024px;
+	width:  1024px;
 	margin: 0 auto;
 }
 
 #header .navbar-inner .container {
-	width: 985px;
-	margin: 0 auto;
+	width:    985px;
+	margin:   0 auto;
 	position: relative;
+	height:   50px;
 }
 
-#header #header-inner .logo {
-	display: block;
-	width: 50px;
-	margin-top: 2px;
-	position: absolute;
-	left: 0;
-	top: 0;
+.topbar .topbar-inner .nav, .search form {
+	padding-top: 10px;
+	height:      25px;
+}
+
+/*.topbar .topbar-inner .navbar-inner {
+    width: 960px;
+    margin: 0 auto;
+}*/
+
+.topbar .topbar-inner .search input {
+	color: #fff;
 }
 
 #header .container .nav li a[title="Community"] {
 	width: 70px;
 }
+
 #header .container .nav li a[title="Projects"] {
-	width: 50px;	
+	width: 50px;
 }
 
 #header .container {
@@ -91,66 +85,62 @@ body {
 #header div.navbar-inner {
 	background-color: #406C6C;
 	background-image: none;
-
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#406c6c', endColorstr='#284545'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#406c6c), to(#284545)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #406c6c,  #284545); /* for firefox 3.6+ */
-	border-bottom: 1px solid #000;
+	filter:           progid:DXImageTransform.Microsoft.gradient(startColorstr = '#406c6c', endColorstr = '#284545'); /* for IE */
+	background:       -webkit-gradient(linear, left top, left bottom, from(#406c6c), to(#284545)); /* for webkit browsers */
+	background:       -moz-linear-gradient(top, #406c6c, #284545); /* for firefox 3.6+ */
+	border-bottom:    1px solid #000;
 }
 
 #header .dropdown-menu {
-	margin-top: 1px;
+	margin-top:       1px;
 	background-color: #406C6C;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#406c6c', endColorstr='#284545'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#406c6c), to(#284545)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #406c6c,  #284545); /* for firefox 3.6+ */
-	border-bottom: 1px solid #000;
+	filter:           progid:DXImageTransform.Microsoft.gradient(startColorstr = '#406c6c', endColorstr = '#284545'); /* for IE */
+	background:       -webkit-gradient(linear, left top, left bottom, from(#406c6c), to(#284545)); /* for webkit browsers */
+	background:       -moz-linear-gradient(top, #406c6c, #284545); /* for firefox 3.6+ */
+	border-bottom:    1px solid #000;
 }
 
 #header a {
-	height: 20px;
-	color: white;
-    font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	height:      20px;
+	color:       white;
+	font-family: 'FertigoProRegular', 'Helvetica Neue', Helvetica, Arial, serif;
 }
 
 #header .dropdown-menu li a:hover {
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#192b2b', endColorstr='#0d1616'); /* for IE */
+	filter:     progid:DXImageTransform.Microsoft.gradient(startColorstr = '#192b2b', endColorstr = '#0d1616'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#192b2b), to(#0d1616)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #192b2b,  #0d1616); /* for firefox 3.6+ */
+	background: -moz-linear-gradient(top, #192b2b, #0d1616); /* for firefox 3.6+ */
 }
 
 #header #header-inner {
-	width: 1024px;
-	height: 40px;
+	width:    1024px;
+	height:   40px;
 	position: relative;
-	margin: 0 auto;
+	margin:   0 auto;
 }
 
 #header .nav li a:hover {
-	color: white;
+	color:            white;
 	background-color: #345958;
-	text-decoration: none;
+	text-decoration:  none;
 }
 
 .navbar .nav .active > a, .navbar .nav .active > a:hover {
-
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#284545', endColorstr='#406c6c'); /* for IE */
-    background: -webkit-gradient(linear, left top, left bottom, from(#284545), to(#406c6c)); /* for webkit browsers */
-    background: -moz-linear-gradient(top,  #284545,  #406c6c); /* for firefox 3.6+ */
-
+	filter:     progid:DXImageTransform.Microsoft.gradient(startColorstr = '#284545', endColorstr = '#406c6c'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#284545), to(#406c6c)); /* for webkit browsers */
+	background: -moz-linear-gradient(top, #284545, #406c6c); /* for firefox 3.6+ */
 }
 
 #header .search input {
-	width: 281px;
-	height: 25px;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a7d7d', endColorstr='#589595'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#4a7d7d), to(#589595)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #4a7d7d,  #589595); /* for firefox 3.6+ */
-    color: #fff;
-    padding: 0; margin: 0;
-	
-	        border-radius: 0;
-	   -moz-border-radius: 0;
+	width:                 281px;
+	height:                25px;
+	filter:                progid:DXImageTransform.Microsoft.gradient(startColorstr = '#4a7d7d', endColorstr = '#589595'); /* for IE */
+	background:            -webkit-gradient(linear, left top, left bottom, from(#4a7d7d), to(#589595)); /* for webkit browsers */
+	background:            -moz-linear-gradient(top, #4a7d7d, #589595); /* for firefox 3.6+ */
+	color:                 #fff;
+	padding:               0; margin: 0;
+	border-radius:         0;
+	-moz-border-radius:    0;
 	-webkit-border-radius: 0;
 }
 
@@ -159,16 +149,16 @@ body {
 }
 
 #header div.inside {
-    margin: 0 auto;
-    width: 960px;
+	margin: 0 auto;
+	width:  960px;
 }
 
-#header .search form input.placeholder { 
+#header .search form input.placeholder {
 	color: white;
 }
 
 #header .search form input {
-	color: white;
+	color:        white;
 	padding-left: 5px;
 }
 
@@ -178,61 +168,63 @@ body {
 
 #header .search {
 	margin-left: 0;
-	width: 300px;
-	position: absolute;
-	bottom: 6px;
-	right: 164px;
+	width:       300px;
+	position:    absolute;
+	bottom:      6px;
+	right:       164px;
 }
 
 #page-content {
 	padding-top: 60px;
-	margin: 0 auto;
+	margin:      0 auto;
 }
 
 footer a {
 	color: #E5E5DD;
 }
+
 footer .links a:hover {
 	color: white;
 }
+
 footer .links a {
 	margin-right: 12px;
 }
+
 footer .content {
 	margin-left: 12px;
 }
+
 footer .links {
 	float: left;
 }
+
 footer .desc {
-	color: #E5E5DD;
+	color:      #E5E5DD;
 	margin-top: 5px;
 }
+
 footer .logo {
 	float: left;
 }
 
 footer {
-
-	padding-left: 30px;
-	padding-top: 16px;
-	height: 60px;
-	margin: 0;
-	border-top: 1px solid #757575;
+	padding-left:     30px;
+	padding-top:      16px;
+	height:           60px;
+	margin:           0;
+	border-top:       1px solid #757575;
 	background-color: #626262;
-
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#626262', endColorstr='#3e3e3e'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#626262), to(#3e3e3e)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #626262,  #3e3e3e); /* for firefox 3.6+ */
-
-	border-bottom: 1px solid #000;
-
-    z-index: 10000;
+	filter:           progid:DXImageTransform.Microsoft.gradient(startColorstr = '#626262', endColorstr = '#3e3e3e'); /* for IE */
+	background:       -webkit-gradient(linear, left top, left bottom, from(#626262), to(#3e3e3e)); /* for webkit browsers */
+	background:       -moz-linear-gradient(top, #626262, #3e3e3e); /* for firefox 3.6+ */
+	border-bottom:    1px solid #000;
+	z-index:          10000;
 }
 
 input::-webkit-input-placeholder { color: white; }
-input:-moz-placeholder { color: white; }
 
+input:-moz-placeholder { color: white; }
 
 .autocomplete-w1 { top: -6px; left: -7px; }
 
