@@ -80,8 +80,8 @@
 	background: none;
 	border-radius: 0;
 	border: 1px solid #C7C7C7;
-	-webkit-border-radius: none;
 	background-color: white;
+	-webkit-border-radius: none;
 	-moz-border-radius: none;
 	margin-left: -5px;
 }

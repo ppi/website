@@ -79,11 +79,11 @@
 }
 
 .projects-page .content-box .breadcrumb {
-	background: none;
+	border: 1px solid #C7C7C7;
+	background-color: white;
 	border-radius: 0;
 	-webkit-border-radius: none;
 	-moz-border-radius: none;
-	background-color: white;
 	margin-left: -5px;
 }
 .projects-page .content-box h1 {
