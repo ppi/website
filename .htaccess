@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
 Options +FollowSymLinks
-RewriteCond %{REQUEST_URI} !css|scripts|images|favicon.ico|robots.txt
+RewriteCond %{REQUEST_URI} !css|scripts|images|favicon.ico|robots.txt|files
 RewriteRule .* index.php
 </IfModule>
