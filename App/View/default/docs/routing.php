@@ -7,10 +7,10 @@
             <li><a href="#" title="">The Details</a></li>
             <li><a href="#" title="">Basic Routes</a></li>
             <li><a href="#" title="">Routes with parameters</a></li>
-            <li><a href="#" title="">Routes with parameters (advanced)</a></li>
             <li><a href="#" title="">Routes with requirements</a></li>
-            <li><a href="#" title="">Controller Naming Scheme</a></li>
             <li><a href="#" title="">Example controller</a></li>
+            <li><a href="#" title="">Redirecting to routes</a></li>
+            <li><a href="#" title="">Getting route parameters in the controller</a></li>
         </ul>
     </div>
     
@@ -168,7 +168,7 @@ class Blog extends BaseController {
 }
             </code></pre>
             
-            <p class="section-title">Getting route parameters</p>
+            <p class="section-title">Getting route parameters in the controller</p>
             <pre><code>
 &lt;?php
 namespace Application\Controller;
