@@ -26,7 +26,7 @@
 									<li><a href="<?= $baseUrl; ?>docs/getting-started.html">Getting Started</a></li>
 									<li><a href="<?= $baseUrl; ?>docs/application.html">The Skeleton Application</a></li>
 									<li><a href="<?= $baseUrl; ?>docs/modules.html">Modules</a></li>
-									<li><a href="<?= $baseUrl; ?>docs/controllers-and-routing.html">Routing and Controllers</a></li>
+									<li><a href="<?= $baseUrl; ?>docs/routing.html">Routing</a></li>
 								</ul>
 							</li>
 						</ul>
