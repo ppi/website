@@ -177,11 +177,13 @@ use PPI\Module\Controller as BaseController;
 
 class Blog extends BaseController {
 
-    // pattern: /blog/show/{date}/{id}
+    // pattern: /blog/show//{id}
     public function showAction() {
                 
-        $blogData = $this->getRouteParam('date');
         $blogID   = $this->getRouteParam('id');
+        $blogPost = $this->getBlogStorage()->getByID($blogID);
+                
+        $this->render('Application:blog:show.html.php', compact('blogPost'));
                 
     }
 }
