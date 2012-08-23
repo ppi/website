@@ -4,7 +4,7 @@ class Projects extends Application {
 
 	function index() {
 		
-		$this->addCSS('light/projects');
+		$this->addCSS('light/community', 'light/projects');
 		$projects = $this->getProjects();
 		$this->render('projects/index', compact('projects'));
 		
