@@ -107,7 +107,7 @@ Blog_EditSave:
 &lt;?php
 namespace Application\Controller;
 
-use PPI\Module\Controller as BaseController;
+use Application\Controller\Shared as BaseController;
 
 class Blog extends BaseController {
 
@@ -128,7 +128,7 @@ class Blog extends BaseController {
 &lt;?php
 namespace Application\Controller;
 
-use PPI\Module\Controller as BaseController;
+use Application\Controller\Shared as BaseController;
 
 class Blog extends BaseController {
                 
@@ -150,7 +150,7 @@ class Blog extends BaseController {
 &lt;?php
 namespace Application\Controller;
 
-use PPI\Module\Controller as BaseController;
+use Application\Controller\Shared as BaseController;
 
 class Blog extends BaseController {
 
@@ -173,7 +173,7 @@ class Blog extends BaseController {
 &lt;?php
 namespace Application\Controller;
 
-use PPI\Module\Controller as BaseController;
+use Application\Controller\Shared as BaseController;
 
 class Blog extends BaseController {
 
