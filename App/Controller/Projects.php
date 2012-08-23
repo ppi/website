@@ -37,23 +37,6 @@ class Projects extends Application {
 				'download'    => 'https://github.com/ppi/website/downloads',
 				'tracker'     => 'https://github.com/ppi/website/issues?labels=Bug&sort=created&direction=desc&state=open&page=1',
 				'discussions' => 'https://github.com/ppi/website/issues?labels=Bug%2Cdiscussion&sort=created&direction=desc&state=open&page=1'
-			),
-			array(
-				'title' => 'Tracker',
-				'desc'  => 'The PPI Tracker is an open source project that covers general issue tracking purposes. It\'s a great solution if you want quick tracking for your project. It currently is pulling all its issues from multiple GitHub repositories. This is a great concept if you want to have your own issue tracker mirroring your existing GitHub repositories.',
-				'source'      => 'https://github.com/ppi/tracker',
-				'download'    => 'https://github.com/ppi/tracker/downloads',
-				'tracker'     => 'https://github.com/ppi/tracker/issues?labels=Bug&sort=created&direction=desc&state=open&page=1',
-				'discussions' => 'https://github.com/ppi/tracker/issues?labels=Bug%2Cdiscussion&sort=created&direction=desc&state=open&page=1'
-			),
-			array(
-				'title' => 'Documentation',
-				'desc'  => 'The PPI Documentation repository is the official repository powering http://docs.ppi.io. It\'s a great way to help the community contribute to the creation of docs. This repository will come in handy if you want a quick solution to creating documentation for your own public or private project',
-
-				'source'      => 'https://github.com/ppi/docs',
-				'download'    => 'https://github.com/ppi/docs/downloads',
-				'tracker'     => 'https://github.com/ppi/docs/issues?labels=Bug&sort=created&direction=desc&state=open&page=1',
-				'discussions' => 'https://github.com/ppi/docs/issues?labels=Bug%2Cdiscussion&sort=created&direction=desc&state=open&page=1'
 			)
 		);
 		
