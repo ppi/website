@@ -105,13 +105,6 @@ Blog_EditSave:
 		id: \d+
 			</code></pre>
 			
-			<p class="section-title">Controller Naming Scheme</p>
-			<p>As you may have noticed, every route has a <b>_controller</b> key, this is the value specifying with controller/action to execute.</p>
-			<p>The syntax is: <b>modulename</b>:<b>controllername</b>:<b>methodname</b></p>
-			<p>This means that within the Application module, it instantiates the Blog controller, and runs the showAction method on the controller.</p>
-			<p><b>Application:Blog:show</b> => <b>/modules/Application/Controller/Blog->showAction()</b></p>
-			<p><b>Application:Blog:editsave</b> => <b>/modules/Application/Controller/Blog->editsaveAction()</b></p>
-			
 			<p class="section-title">Example controller</p>
 			<p>Here is an example blog controller, based on some of the routes provided above.</p>
 			<pre><code>
@@ -130,17 +123,22 @@ class Blog extends BaseController {
         // Render our main blog page, passing in our $posts to get rendered. 
 		$this->render('Application:blog:index.html.php', compact('posts'));
 	}
+                
+}
+            </code></pre>
+            
+            <p class="section-title">Generating urls using routes</p>
+            <pre><code>
+&lt;?php
+namespace Application\Controller;
 
+use PPI\Module\Controller as BaseController;
+
+class Blog extends BaseController {
+                
 	public function showAction() {
 				
-		// Get {title} from the Blog_Show route
-		$blogTitle = $this->getRouteParam('title');
-				
-		// Obtain a blog post by its $title
-		$blogPost  = $this->getBlogStorage()->getByTitle($blogTitle);
-                
-        // Load up our template and send $blogPost there to get rendered
-		return $this->render('Application:blog:show.html.php', compact('blogPost'));
+		$this->
 	}
 
 	public function editsaveAction() {
@@ -159,6 +157,10 @@ class Blog extends BaseController {
 	}
 }
 			</code></pre>
+            
+            
+            
+            
 		</article>
 		
 	</div>
