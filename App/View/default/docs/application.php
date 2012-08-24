@@ -1,216 +1,215 @@
 <div class="continer-fluid content-box docs-page">
 
-	<div class="toc-mobile">
-		<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i
-			class="icon-arrow-down icon-white right"></i></p>
-		<ul class="items">
-			<li><a href="#app-structure" title="">Appliction File Structure</a></li>
-			<li><a href="#public-folder" title="">The public folder</a></li>
-			<li><a href="#public-index-file" title="">The public index.php file</a></li>
-			<li><a href="#app-folder" title="">The app folder</a></li>
-			<li><a href="#app-config-file" title="">The app.config.php file</a></li>
-			<li><a href="#app-views-folder" title="">The app/Views folder</a></li>
-			<li><a href="#modules-folder" title="">The modules folder</a></li>
-		</ul>
-	</div>
+    <div class="toc-mobile">
+        <p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i
+            class="icon-arrow-down icon-white right"></i></p>
+        <ul class="items">
+            <li><a href="#app-structure" title="">Appliction File Structure</a></li>
+            <li><a href="#public-folder" title="">The public folder</a></li>
+            <li><a href="#public-index-file" title="">The public index.php file</a></li>
+            <li><a href="#app-folder" title="">The app folder</a></li>
+            <li><a href="#app-config-file" title="">The app.config.php file</a></li>
+            <li><a href="#app-views-folder" title="">The app/Views folder</a></li>
+            <li><a href="#modules-folder" title="">The modules folder</a></li>
+        </ul>
+    </div>
 
-	<div class="row-fluid">
+    <div class="row-fluid">
 
-		<section class='content'>
+        <section class='content'>
 
-			<h1>The Skeleton Application</h1>
+            <h1>The Skeleton Application</h1>
 
-			<a class="next-article top btn btn-green" href="modules.html">Modules <i
-				class="icon-arrow-right icon-white"></i></a>
+            <a class="next-article top btn btn-green" href="modules.html">Modules <i
+                class="icon-arrow-right icon-white"></i></a>
 
-			<p class="section-title">What has been already set up for me?</p>
+            <p class="section-title">What has been already set up for me?</p>
 
-			<article id='app-structure'>
-				<p class="section-title">Application File Structure</p>
+            <article id='app-structure'>
+                <p class="section-title">Application File Structure</p>
 
-				<p>First, lets review the file structure of the PPI skeleton application that we have pre-built for you to
-					get up and running as quickly as possible.</p>
+                <p>First, lets review the file structure of the PPI skeleton application that we have pre-built for you to
+                    get up and running as quickly as possible.</p>
 
-				<p><pre>
+                <p><pre>
 
-	www/ <- your web root directory
+www/ <- your web root directory
 
-	    skeleton/ <- the unpacked archive
-	        app/
-	            app.config.php
-	            cache/
-	            views/
-	            ...
+    skeleton/ <- the unpacked archive
+        app/
+            app.config.php
+            cache/
+            views/
+            ...
 
-	        public/
-	            index.php
-	            css/
-	            js/
-	            images/
-	            ...
+        public/
+            index.php
+            css/
+            js/
+            images/
+            ...
 
-	        modules/
-	            Application/
-	                Module.php
-	                Controller/
-	                resources/
-	                    config/
-	                    views/
-	                    ...
+        modules/
+            Application/
+                Module.php
+                Controller/
+                resources/
+                    config/
+                    views/
+                    ...
 
-			  </pre>
-				</p>
+              </pre>
+                </p>
 
-				<p>Lets break it down into parts:</p>
-			</article>
+                <p>Lets break it down into parts:</p>
+            </article>
 
-			<article id='public-folder'>
-				<p class="section-title">The public folder</p>
+            <article id='public-folder'>
+                <p class="section-title">The public folder</p>
 
-				<p>The structure above shows you the <b>/public/</b> folder. Anything outside of /public/ i.e: all your
-					business code will be secure from direct URL access. In your development environment you don't need a
-					virtualhost file, you can directly access your application like so:
-					<b>http://localhost/skeleton/public/</b>. In your production environment this will be <b>http://www.mysite.com/</b>.
-					All your publicly available asset files should be here, CSS, JS, Images.</p>
-			</article>
+                <p>The structure above shows you the <b>/public/</b> folder. Anything outside of /public/ i.e: all your
+                    business code will be secure from direct URL access. In your development environment you don't need a
+                    virtualhost file, you can directly access your application like so:
+                    <b>http://localhost/skeleton/public/</b>. In your production environment this will be <b>http://www.mysite.com/</b>.
+                    All your publicly available asset files should be here, CSS, JS, Images.</p>
+            </article>
 
-			<article id='public-index-file'>
+            <article id='public-index-file'>
 
-				<p class="section-title">The public index.php file</p>
+                <p class="section-title">The public index.php file</p>
 
-				<p>The <b>/public/index.php</b> is also known are your bootstrap file, or front controller is explained
-					in-depth below</p>
+                <p>The <b>/public/index.php</b> is also known are your bootstrap file, or front controller is explained
+                    in-depth below</p>
 
-				<p><pre><code>
-				&lt;?php
+                <p><pre><code>
+&lt;?php
 
-				// All relative paths start from the main directory, not from /public/
-				chdir(dirname(__DIR__));
+// All relative paths start from the main directory, not from /public/
+chdir(dirname(__DIR__));
 
-				// Lets include PPI
-				include('app/init.php');
+// Lets include PPI
+include('app/init.php');
 
-				// Initialise our PPI App
-				$app = new PPI\App();
-				$app->moduleConfig = include 'app/modules.config.php';
-				$app->config = include 'app/app.config.php';
+// Initialise our PPI App
+$app = new PPI\App();
+$app->moduleConfig = include 'app/modules.config.php';
+$app->config = include 'app/app.config.php';
 
-				// Do you want twig engine enabled?
-				//$app->templatingEngine = 'twig';
+// Do you want twig engine enabled?
+//$app->templatingEngine = 'twig';
 
-				// If you are using the DataSource component, enable this
-				//$app->useDataSource = true;
+// If you are using the DataSource component, enable this
+//$app->useDataSource = true;
 
-				$app->boot()->dispatch();
-			</code></pre>
-				</p>
+$app->boot()->dispatch();
+            </code></pre>
+                </p>
 
-				<p>If you uncomment the useDataSource line, it is going to look for your <b>/app/datasource.config.php</b>
-					and load that into the DataSource component for you. Databases are not a requirement in PPI so if you
-					dont need one then you wont need to bother about this. More in-depth documentation about this in the
-					DataSource chapter.</p>
+                <p>If you uncomment the useDataSource line, it is going to look for your <b>/app/datasource.config.php</b>
+                    and load that into the DataSource component for you. Databases are not a requirement in PPI so if you
+                    dont need one then you wont need to bother about this. More in-depth documentation about this in the
+                    DataSource chapter.</p>
 
-			</article>
+            </article>
 
-			<article id='app-folder'>
+            <article id='app-folder'>
 
-				<p class="section-title">The app folder</p>
+                <p class="section-title">The app folder</p>
 
-				<p>This is where all your apps global items go such as app config, datasource config and modules config and
-					global templates(views). You wont need to touch these out-of-the-box but it allows for greater
-					flexibility in the future if you need it.</p>
-			</article>
+                <p>This is where all your apps global items go such as app config, datasource config and modules config and
+                    global templates(views). You wont need to touch these out-of-the-box but it allows for greater
+                    flexibility in the future if you need it.</p>
+            </article>
 
-			<article id='app-config-file'>
+            <article id='app-config-file'>
 
-				<p class="section-title">The app.config.php file</p>
+                <p class="section-title">The app.config.php file</p>
 
-				<p>Looking at the example config file below, you can control things here such as the environment, templating
-					engine and datasource connection.</p>
+                <p>Looking at the example config file below, you can control things here such as the environment, templating
+                    engine and datasource connection.</p>
 
-				<p><pre><code>
-				&lt;?php
-				$config = array(
-				'environment' => 'development', // <-- Change this depending on your environment
-				'templating.engine' => 'php', // <-- The default templating engine
-				'datasource.connections' => include (__DIR__ . '/datasource.config.php')
-				);
+                <p><pre><code>
+&lt;?php
+$config = array(
+    'environment' => 'development', // <-- Change this depending on your environment
+    'templating.engine' => 'php', // <-- The default templating engine
+    'datasource.connections' => include (__DIR__ . '/datasource.config.php')
+);
 
-				// Are we in debug mode ?
-				if($config['environment'] !== 'development') { // <-- You can also check the env from your controller using
-				$this->getEnv()
-				$config['debug'] = $config['environment'] === 'development';
-				$config['cache_dir'] = __DIR__ . '/cache';
-				}
-				return $config; // Very important
-			</code></pre>
-				</p>
-				<p>The 'return $config' line gets pulled into your index.php's <b>$app->config</b> variable.</p>
-			</article>
+// Are we in debug mode ?
+if($config['environment'] !== 'development') { // <-- You can also check the env from your controller using
+    $this->getEnv()
+    $config['debug'] = $config['environment'] === 'development';
+    $config['cache_dir'] = __DIR__ . '/cache';
+}
 
-			<article id='app-modules-file'>
-				<p class="section-title">The modules.config.php file</p>
+return $config; // Very important
+            </code></pre>
+                </p>
+                <p>The 'return $config' line gets pulled into your index.php's <b>$app->config</b> variable.</p>
+            </article>
 
-				<p>The example below shows that you can control which modules are active and a list of directories <b>module_paths</b>
-					that PPI will scan for your modules. Pay close attention to the <b>order</b> in which your modules are
-					loaded. If one of your modules relies on resources loaded by another module. Make sure the module
-					loading the resources is loaded <b>before</b> the others that depend upon it.</p>
+            <article id='app-modules-file'>
+                <p class="section-title">The modules.config.php file</p>
 
-				<p><pre><code>
-				&lt;?php
-				return array(
-				'activeModules' => array('Application', 'User'),
-				'listenerOptions' => array('module_paths' => array('./modules'), 'routingEnabled' => true),
-				);
-			</code></pre>
-				</p>
-				<p>Note that this file returns an array too, which is assigned against your index.php's <b>$app->moduleConfig</b>
-					variable</p>
+                <p>The example below shows that you can control which modules are active and a list of directories <b>module_paths</b>
+                    that PPI will scan for your modules. Pay close attention to the <b>order</b> in which your modules are
+                    loaded. If one of your modules relies on resources loaded by another module. Make sure the module
+                    loading the resources is loaded <b>before</b> the others that depend upon it.</p>
 
-			</article>
+                <p><pre><code>
+&lt;?php
+return array(
+    'activeModules'   => array('Application', 'User'),
+    'listenerOptions' => array('module_paths' => array('./modules'), 'routingEnabled' => true),
+);
+            </code></pre>
+                </p>
+                <p>Note that this file returns an array too, which is assigned against your index.php's <b>$app->moduleConfig</b>
+                    variable</p>
 
-			<article id='app-views-folder'>
+            </article>
 
-				<p class="section-title">The app/views folder</p>
+            <article id='app-views-folder'>
 
-				<p>This folder is your applications global views folder. A global view is one that a multitude of other
-					module views extend from. A good example of this is your website's template file. The following is an
-					example of <b>/app/views/base.html.php</b></p>
+                <p class="section-title">The app/views folder</p>
 
-				<p><pre><code>
-				&lt;html&gt;
-				&lt;body&gt;
-				&lt;h1&gt;My website&lt;/h1&gt;
-				&lt;div class="content"&gt;
-				&lt;?php $view['slots']-&gt;output('_content'); ?&gt;
-				&lt;/div&gt;
-				&lt;/body&gt;
-				&lt;/html&gt;
-			</code></pre>
-				</p>
+                <p>This folder is your applications global views folder. A global view is one that a multitude of other
+                    module views extend from. A good example of this is your website's template file. The following is an
+                    example of <b>/app/views/base.html.php</b></p>
 
-				<p>You'll notice later on in the Templating section to reference and extend a global template file, you will
-					use the following syntax in your modules template.</p>
+                <p><pre><code>
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;My website&lt;/h1&gt;
+&lt;div class="content"&gt;
+&lt;?php $view['slots']-&gt;output('_content'); ?&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+                </p>
 
-				<p><pre><code>
-				&lt;?php $view->extend('::base.html.php'); &gt;
-			</code></pre>
-				</p>
-				<p>Now everything from your module template will be applied into your <b>base.html.php</b> files
-					<b>_content</b> section demonstrated above.</p>
-			</article>
+                <p>You'll notice later on in the Templating section to reference and extend a global template file, you will
+                    use the following syntax in your modules template.</p>
 
-			<article id='modules-folder'>
-				<p class="section-title">The modules folder</p>
+                <p><pre><code>
+                &lt;?php $view->extend('::base.html.php'); &gt;
+            </code></pre>
+                </p>
+                <p>Now everything from your module template will be applied into your <b>base.html.php</b> files
+                    <b>_content</b> section demonstrated above.</p>
+            </article>
 
-				<p>This is where we get stuck into the real details, we're going into the /modules/ folder. Click the next
-					section to proceed</p>
+            <article id='modules-folder'>
+                <p class="section-title">The modules folder</p>
 
-				<a class="prev-article btn btn-green" href="getting-started.html"><i class="icon-arrow-left icon-white"></i>
-					Getting Started</a>
-				<a class="next-article bottom btn btn-green" href="modules.html">Modules <i
-					class="icon-arrow-right icon-white"></i></a>
-			</article>
-		</section>
-	</div>
+                <p>This is where we get stuck into the real details, we're going into the /modules/ folder. Click the next
+                    section to proceed</p>
+
+                <a class="prev-article btn btn-green" href="getting-started.html"><i class="icon-arrow-left icon-white"></i> Getting Started</a>
+                <a class="next-article bottom btn btn-green" href="modules.html">Modules <i class="icon-arrow-right icon-white"></i></a>
+            </article>
+        </section>
+    </div>
 </div>
