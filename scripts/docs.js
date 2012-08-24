@@ -15,11 +15,11 @@ jQuery(document).ready(function ($) {
 	});
 
 	// ToC Links functionality
-	$('.toc-link').click(function(e) {
+	$('.toc-mobile ul li a').click(function(e) {
 		e.preventDefault();
 		// Offset is to fix the bug caused by the topbar, and prevent
 		// hiding the section's title.
-		$.scrollTo($(this).attr('href'),800,{offset: {top:-50, left:0} });
+		$.scrollTo($(this).attr('href'),800,{offset: {top:-55, left:0} });
 	});
 
 	<!-- Initialise jQuery Syntax Highlighter -->

@@ -7,12 +7,12 @@
 			<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i
 				class="icon-arrow-down icon-white right"></i></p>
 			<ul class="items">
-				<li><a href="#overview" class="toc-link" title="">Overview</a></li>
-				<li><a href="#standing-on-the-shoulders-of-giants" class="toc-link" title="">Standing on the shoulders
+				<li><a href="#overview" title="">Overview</a></li>
+				<li><a href="#standing-on-the-shoulders-of-giants" title="">Standing on the shoulders
 					of giants</a></li>
-				<li><a href="#why-ppi" class="toc-link" title="">Why use PPI?</a></li>
-				<li><a href="#downloading-ppi" class="toc-link" title="">Downloading PPI</a></li>
-				<li><a href="#system-requirements" class="toc-link" title="">System Requirements</a></li>
+				<li><a href="#why-ppi" title="">Why use PPI?</a></li>
+				<li><a href="#downloading-ppi" title="">Downloading PPI</a></li>
+				<li><a href="#system-requirements" title="">System Requirements</a></li>
 			</ul>
 		</div>
 
