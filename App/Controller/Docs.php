@@ -12,7 +12,7 @@ class Docs extends Application {
 		$template = 'docs/' . $section;
 
 		$this->addCSS('light/docs', 'syntax-github');
-		$this->addJS('libs/highlight', 'docs');
+		$this->addJS('jquery.scrollto.min','libs/highlight', 'docs');
 		
 		$this->render($template, compact('content'));
 	}

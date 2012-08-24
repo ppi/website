@@ -1,19 +1,27 @@
-jQuery(document).ready(function($) {
-	
+jQuery(document).ready(function ($) {
+
 //  $('pre code.php').each(function(i, e) {hljs.highlightBlock(e, '    ')});
 
-    $('.toc-mobile .toc-heading').click(function() {
-        $(this).parent().toggleClass('expanded');
-        $(this).parent().find('.items').slideToggle();
-        var arrows = $(this).find('i');
-        if(arrows.hasClass('icon-arrow-up')) {
-            arrows.removeClass('icon-arrow-up').addClass('icon-arrow-down');
-        } else {
-            arrows.addClass('icon-arrow-up').removeClass('icon-arrow-down');
-        }
+	$('.toc-mobile .toc-heading').click(function () {
+		$(this).parent().toggleClass('expanded');
+		$(this).parent().find('.items').slideToggle();
+		var arrows = $(this).find('i');
+		if (arrows.hasClass('icon-arrow-up')) {
+			arrows.removeClass('icon-arrow-up').addClass('icon-arrow-down');
+		} else {
+			arrows.addClass('icon-arrow-up').removeClass('icon-arrow-down');
+		}
 
-    });
-	
+	});
+
+	// ToC Links functionality
+	$('.toc-link').click(function(e) {
+		e.preventDefault();
+		// Offset is to fix the bug caused by the topbar, and prevent
+		// hiding the section's title.
+		$.scrollTo($(this).attr('href'),800,{offset: {top:-50, left:0} });
+	});
+
 	<!-- Initialise jQuery Syntax Highlighter -->
 //	$.SyntaxHighlighter.init({
 //		prettifyBaseUrl: baseUrl + 'scripts/libs/jquery-syntaxhighlighter/prettify',
@@ -21,7 +29,7 @@ jQuery(document).ready(function($) {
 //		lineNumbers: false,
 //		theme: "solarized"
 //	});
-	
+
 });
 
 hljs.tabReplace = '    ';

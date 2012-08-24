@@ -147,7 +147,7 @@
 	margin-bottom: 5px;
 }
 
-#page-content .docs-page article {
+#page-content .docs-page section {
 	padding: 15px 15px 50px 15px;
 	margin-left: 0;
 	width: 97%;
@@ -155,27 +155,27 @@
     position: relative;
 }
 
-.docs-page article a.next-article i {
+.docs-page section a.next-article i {
 	margin-top: 2px;
 }
-.docs-page article a.next-article.top {
+.docs-page section a.next-article.top {
 	position: absolute;
 	top: 12px;
 	right: 12px;
 	font-size: 1.2em;
 }
-.docs-page article a.next-article.bottom {
+.docs-page section a.next-article.bottom {
 	position: absolute;
 	bottom: 12px;
 	right: 12px;
 	font-size: 1.2em;
 }
 
-.docs-page article a.prev-article i {
+.docs-page section a.prev-article i {
 	margin-top: 2px;
 }
 
-.docs-page article a.prev-article {
+.docs-page section a.prev-article {
 	position: absolute;
 	bottom: 12px;
 	left: 12px;

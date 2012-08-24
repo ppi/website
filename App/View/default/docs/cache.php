@@ -3,12 +3,12 @@
 	<aside class="toc">
 		<p class="heading">Table of Contents</p>
 		<ul class="items">
-			<li><a href="#" title="">Introduction</a></li>
-			<li><a href="#" title="">Accessing The Cache</a></li>
-			<li><a href="#" title="">Setting cache data</a></li>
-			<li><a href="#" title="">Getting cache data</a></li>
-			<li><a href="#" title="">Checking if data exists</a></li>
-			<li><a href="#" title="">Removing data</a></li>
+			<li><a href="#anchor-introduction" title="">Introduction</a></li>
+			<li><a href="#anchor-accessing-the-cache" title="">Accessing The Cache</a></li>
+			<li><a href="#anchor-setting-cache-data" title="">Setting cache data</a></li>
+			<li><a href="#anchor-getting-cache-data" title="">Getting cache data</a></li>
+			<li><a href="#anchor-checking-if-data-exists" title="">Checking if data exists</a></li>
+			<li><a href="#anchor-removing-data" title="">Removing data</a></li>
 		</ul>
 	</aside>
 
