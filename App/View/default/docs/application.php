@@ -194,7 +194,7 @@ return array(
                     use the following syntax in your modules template.</p>
 
                 <p><pre><code>
-                &lt;?php $view->extend('::base.html.php'); &gt;
+&lt;?php $view->extend('::base.html.php'); &gt;
             </code></pre>
                 </p>
                 <p>Now everything from your module template will be applied into your <b>base.html.php</b> files
