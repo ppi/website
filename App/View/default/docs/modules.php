@@ -36,22 +36,23 @@
             <pre><code>
 modules/
 
-Application/
-
-Controller/
-Index.php
-
-resources/
-
-views/
-index/index.html.php
-index/list.html.php
-
-config/
-config.yml
-routes.yml
-
-Module.php
+    Application/
+                
+        Module.php
+    
+        Controller/
+            Index.php
+        
+        resources/
+        
+            views/
+                index/index.html.php
+                index/list.html.php
+        
+            config/
+                config.yml
+                routes.yml
+        
             </code></pre>
 
             </article>
