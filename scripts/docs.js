@@ -13,6 +13,8 @@ jQuery(document).ready(function ($) {
 		}
 
 	});
+	
+
 
 	// ToC Links functionality
 	$('.toc-mobile ul li a').click(function(e) {
@@ -22,7 +24,14 @@ jQuery(document).ready(function ($) {
 		$.scrollTo($(this).attr('href'),800,{offset: {top:-55, left:0} });
 		
 	});
-
+	
+	
+	if(window.location.hash != '') {
+		var hash = window.location.hash;
+		window.scrollTo(0, 0);
+		$('.toc-mobile .items a[href=' + hash + ']').trigger('click');
+	}
+		
 	<!-- Initialise jQuery Syntax Highlighter -->
 //	$.SyntaxHighlighter.init({
 //		prettifyBaseUrl: baseUrl + 'scripts/libs/jquery-syntaxhighlighter/prettify',
