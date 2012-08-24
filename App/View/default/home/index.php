@@ -30,8 +30,8 @@
 				<p class="desc">New and easy modular framework, leveraging the ZendFramework2 ModuleManager component.</p>
 			</li>
 			<li>
-				<a class="icon" href="<?= $baseUrl; ?>docs/controllers-and-routing.html" title=""><img src="<?= $baseUrl; ?>images/light/routing.png" alt="Icon"></a>
-				<a class="title" href="<?= $baseUrl; ?>docs/controllers-and-routing.html" title="">Routing</a>
+				<a class="icon" href="<?= $baseUrl; ?>docs/routing.html" title=""><img src="<?= $baseUrl; ?>images/light/routing.png" alt="Icon"></a>
+				<a class="title" href="<?= $baseUrl; ?>docs/routing.html" title="">Routing</a>
 				<p class="desc">Simple and powerful routing based on the Symfony2 Routing component</p>
 			</li>
 			<li style="margin-right: 0;">
