@@ -20,6 +20,7 @@ jQuery(document).ready(function ($) {
 		// Offset is to fix the bug caused by the topbar, and prevent
 		// hiding the section's title.
 		$.scrollTo($(this).attr('href'),800,{offset: {top:-55, left:0} });
+		
 	});
 
 	<!-- Initialise jQuery Syntax Highlighter -->

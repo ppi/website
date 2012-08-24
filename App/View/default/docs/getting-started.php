@@ -4,13 +4,10 @@
 	<div class="row-fluid">
 
 		<div class="toc-mobile">
-			<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i
-				class="icon-arrow-down icon-white right"></i></p>
+			<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
 			<ul class="items">
 				<li><a href="#overview" title="">Overview</a></li>
-				<li><a href="#standing-on-the-shoulders-of-giants" title="">Standing on the shoulders
-					of giants</a></li>
-				<li><a href="#why-ppi" title="">Why use PPI?</a></li>
+				<li><a href="#standing-on-the-shoulders-of-giants" title="">Standing on the shoulders of giants</a></li>
 				<li><a href="#downloading-ppi" title="">Downloading PPI</a></li>
 				<li><a href="#system-requirements" title="">System Requirements</a></li>
 			</ul>
@@ -78,8 +75,7 @@
 				<p>PPI needs 5.3.3+. (5.3.0 for namespaces and 5.3.3 for Symfony2).</p>
 			</article>
 
-			<a class="next-article bottom btn btn-green" href="<?=$baseUrl;?>docs/application.html">The Skeleton
-				Application <i class="icon-arrow-right icon-white"></i></a>
+			<a class="next-article bottom btn btn-green" href="<?=$baseUrl;?>docs/application.html">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
 
 		</section>
 

@@ -1,8 +1,7 @@
 <div class="continer-fluid content-box docs-page">
 
 <div class="toc-mobile">
-	<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i
-		class="icon-arrow-down icon-white right"></i></p>
+	<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
 	<ul class="items">
 		<li><a href="#introduction" title="">Introduction</a></li>
 		<li><a href="#details" title="">The Details</a></li>
@@ -10,6 +9,7 @@
 		<li><a href="#routes-with-parameters" title="">Routes with parameters</a></li>
 		<li><a href="#routes-with-requirements" title="">Routes with requirements</a></li>
 		<li><a href="#example-controllers" title="">Example controller</a></li>
+		<li><a href="#generating-urls-using-routes" title="">Generating urls using routes</a></li>
 		<li><a href="#redirecting-to-routes" title="">Redirecting to routes</a></li>
 		<li><a href="#getting-route-parameters-in-the-controllers" title="">Getting route parameters in the controller</a></li>
 	</ul>
@@ -71,158 +71,160 @@
 	up here for reference.</p>
 
 <p class="section-title" id='basic-routes'>Basic Routes</p>
-            <pre><code>
-	            Homepage:
-	            pattern: /
-	            defaults: { _controller: "Application:Index:index"}
-            </code></pre>
+<pre><code>
+Homepage:
+    pattern: /
+    defaults: { _controller: "Application:Index:index"}
+</code></pre>
 
 <p>The the blog homepage route</p>
-            <pre><code>
-	            Blog_Index:
-	            pattern: /blog
-	            defaults: { _controller: "Application:Blog:index"}
-            </code></pre>
+<pre><code>
+Blog_Index:
+    pattern: /blog
+    defaults: { _controller: "Application:Blog:index"}
+</code></pre>
 
 <p class="section-title" id='routes-with-parameters'>Routes with parameters</p>
 
 <p>The following example is basically /blog/* where the wildcard is the value given to <b>title</b>. If the
 	URL was <b>/blog/using-ppi2</b> then the <b>title</b> variable gets the value <b>using-ppi2</b>, which
 	you can see being used in the Example Controller section below.</p>
-            <pre><code>
-	            Blog_Show:
-	            pattern: /blog/{title}
-	            defaults: { _controller: "Application:Blog:show"}
-            </code></pre>
+<pre><code>
+Blog_Show:
+    pattern: /blog/{title}
+    defaults: { _controller: "Application:Blog:show"}
+</code></pre>
 
 <p>This example optionally looks for the {pageNum} parameter, if it's not found it defaults to 1</p>
-            <pre><code>
-	            Blog_Show:
-	            pattern: /blog/{pageNum}
-	            defaults: { _controller: "Application:Blog:index", pageNum: 1}
-            </code></pre>
+<pre><code>
+Blog_Show:
+    pattern: /blog/{pageNum}
+    defaults: { _controller: "Application:Blog:index", pageNum: 1}
+</code></pre>
 
 <p class="section-title" id='routes-with-requirements'>Routes with requirements</p>
 
 <p>Only form submits using POST will trigger this route. This means you dont have to check this kind of
 	stuff in your controller.</p>
-            <pre><code>
-	            Blog_EditSave:
-	            pattern: /blog/edit/{id}
-	            defaults: { _controller: "Application:Blog:edit"}
-	            requirements:
-	            _method: POST
-            </code></pre>
+<pre><code>
+Blog_EditSave:
+    pattern: /blog/edit/{id}
+    defaults: { _controller: "Application:Blog:edit"}
+    requirements:
+    _method: POST
+</code></pre>
 
 <p>Checking if the {pageNum} parameter is numerical. Checking if the {lang} parameter is <b>en</b> or
 	<b>de</b></b></del></p>
-            <pre><code>
-	            Blog_Show:
-	            pattern: /blog/{lang}/{pageNum}
-	            defaults: { _controller: "Application:Blog:index", pageNum: 1, lang: en}
-	            requirements:
-	            id: \d+
-	            lang: en|de
-            </code></pre>
+<pre><code>
+Blog_Show:
+    pattern: /blog/{lang}/{pageNum}
+    defaults: { _controller: "Application:Blog:index", pageNum: 1, lang: en}
+    requirements:
+    id: \d+
+    lang: en|de
+</code></pre>
 
 <p>Checking if the page is a POST request, and that {id} is numerical</p>
-            <pre><code>
-	            Blog_EditSave:
-	            pattern: /blog/edit/{id}
-	            defaults: { _controller: "Application:Blog:edit"}
-	            requirements:
-	            _method: POST
-	            id: \d+
-            </code></pre>
+<pre><code>
+Blog_EditSave:
+    pattern: /blog/edit/{id}
+    defaults: { _controller: "Application:Blog:edit"}
+    requirements:
+    _method: POST
+    id: \d+
+</code></pre>
 
 <p class="section-title" id='example-controllers'>Example controller</p>
 
 <p>Here is an example blog controller, based on some of the routes provided above.</p>
             <pre><code>
-	            &lt;?php
-	            namespace Application\Controller;
+&lt;?php
+namespace Application\Controller;
 
-	            use Application\Controller\Shared as BaseController;
+use Application\Controller\Shared as BaseController;
 
-	            class Blog extends BaseController {
+class Blog extends BaseController {
 
-	            public function indexAction() {
+    public function indexAction() {
+    
+        // Get all the blog posts
+        $posts = $this->getBlogStorage()->getAll();
+        
+        // Render our main blog page, passing in our $posts to get rendered.
+        $this->render('Application:blog:index.html.php', compact('posts'));
+    }
 
-	            // Get all the blog posts
-	            $posts = $this->getBlogStorage()->getAll();
-
-	            // Render our main blog page, passing in our $posts to get rendered.
-	            $this->render('Application:blog:index.html.php', compact('posts'));
-	            }
-
-	            }
+}
             </code></pre>
 
 <p class="section-title" id='generating-urls-using-routes'>Generating urls using routes</p>
             <pre><code>
-	            &lt;?php
-	            namespace Application\Controller;
+&lt;?php
+namespace Application\Controller;
 
-	            use Application\Controller\Shared as BaseController;
+use Application\Controller\Shared as BaseController;
 
-	            class Blog extends BaseController {
+class Blog extends BaseController {
 
-	            public function showAction() {
+    public function showAction() {
+    
+        // pattern: /about
+        $aboutUrl = $this->generateUrl('About_Page');
+        
+        // pattern: /blog/read/{id}
+        $profileUrl = $this->generateUrl('Blog_Post', array('id' => 45464);
 
-	            // pattern: /about
-	            $aboutUrl = $this->generateUrl('About_Page');
-
-	            // pattern: /blog/read/{id}
-	            $profileUrl = $this->generateUrl('Blog_Post', array('id' => 45464);
-
-	            }
-	            }
+    }
+}
 
             </code></pre>
 
 <p class="section-title" id='redirecting-to-routes'>Redirecting to routes</p>
             <pre><code>
-	            &lt;?php
-	            namespace Application\Controller;
+&lt;?php
+namespace Application\Controller;
 
-	            use Application\Controller\Shared as BaseController;
+use Application\Controller\Shared as BaseController;
 
-	            class Blog extends BaseController {
+class Blog extends BaseController {
 
-	            public function showAction() {
-
-	            // Send user to /login, if they are not logged in
-	            if(!$this->isLoggedIn()) {
-	            return $this->redirectToRoute('User_Login');
-	            }
-
-	            // go to /user/profile/{username}
-	            return $this->redirectToRoute('User_Profile', array('username' => 'ppi_user'));
-
-	            }
-	            }
+    public function showAction() {
+    
+        // Send user to /login, if they are not logged in
+        if(!$this->isLoggedIn()) {
+            return $this->redirectToRoute('User_Login');
+        }
+    
+        // go to /user/profile/{username}
+        return $this->redirectToRoute('User_Profile', array('username' => 'ppi_user'));
+    
+    }
+}
             </code></pre>
 
-<p class="section-title" id='getting-route-parameters-in-the-controllers'>Getting route parameters in the controller</p>
+            <p class="section-title" id='getting-route-parameters-in-the-controllers'>Getting route parameters in the controller</p>
             <pre><code>
-	            &lt;?php
-	            namespace Application\Controller;
+&lt;?php
+namespace Application\Controller;
 
-	            use Application\Controller\Shared as BaseController;
+use Application\Controller\Shared as BaseController;
 
-	            class Blog extends BaseController {
+class Blog extends BaseController {
 
-	            // pattern: /blog/show//{id}
-	            public function showAction() {
+    // pattern: /blog/show//{id}
+    public function showAction() {
+    
+        $blogID = $this->getRouteParam('id');
+        $blogPost = $this->getBlogStorage()->getByID($blogID);
+        
+        $this->render('Application:blog:show.html.php', compact('blogPost'));
+    
+    }
+}
 
-	            $blogID = $this->getRouteParam('id');
-	            $blogPost = $this->getBlogStorage()->getByID($blogID);
-
-	            $this->render('Application:blog:show.html.php', compact('blogPost'));
-
-	            }
-	            }
-
+<a class="prev-article btn btn-green" href="modules.html"><i class="icon-arrow-left icon-white"></i> Modules</a>
+                
 
 </section>
 

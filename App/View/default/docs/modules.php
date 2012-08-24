@@ -1,15 +1,14 @@
 <div class="continer-fluid content-box docs-page">
 
 	<div class="toc-mobile">
-		<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i
-			class="icon-arrow-down icon-white right"></i></p>
+		<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
 		<ul class="items">
 			<li><a href="#introduction" title="">Introduction</a></li>
 			<li><a href="#module-class" title="">The Module.php class</a></li>
 			<li><a href="#init" title="">Init</a></li>
 			<li><a href="#configuration" title="">Configuration</a></li>
 			<li><a href="#routing" title="">Routing</a></li>
-			<li><a href="#conclusion" title="">Resources</a></li>
+			<li><a href="#conclusion" title="">Conclusion</a></li>
 		</ul>
 	</div>
 
@@ -19,8 +18,7 @@
 
 			<h1>PPI Modules</h1>
 
-			<a class="next-article top btn btn-green" href="routing.html">Routing and Controllers<i
-				class="icon-arrow-right icon-white"></i></a>
+			<a class="next-article top btn btn-green" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
 
 			<article id='introduction'>
 				<p class="section-title">Introduction</p>
@@ -180,10 +178,8 @@
 				<p>Lets move onto the <b>Routing and Controllers</b> section to check out what happens next.</p>
 			</article>
 
-			<a class="prev-article btn btn-green" href="application.html"><i class="icon-arrow-left icon-white"></i> The
-				Skeleton Application</a>
-			<a class="next-article bottom btn btn-green" href="routing.html">Routing and Controllers <i
-				class="icon-arrow-right icon-white"></i></a>
+			<a class="prev-article btn btn-green" href="application.html"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
+			<a class="next-article bottom btn btn-green" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
 
 		</section>
 
