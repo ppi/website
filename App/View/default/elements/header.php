@@ -27,6 +27,7 @@
 									<li><a href="<?= $baseUrl; ?>docs/application.html">The Skeleton Application</a></li>
 									<li><a href="<?= $baseUrl; ?>docs/modules.html">Modules</a></li>
 									<li><a href="<?= $baseUrl; ?>docs/routing.html">Routing</a></li>
+									<li><a href="<?= $baseUrl; ?>docs/controllers.html">Controllers</a></li>
 								</ul>
 							</li>
 						</ul>

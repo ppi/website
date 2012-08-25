@@ -15,7 +15,7 @@
 
 <section>
     
-    <a class="next-article top btn btn-green" href="controller.html">Controllers <i class="icon-arrow-right icon-white"></i></a>
+    <a class="next-article top btn btn-green" href="controllers.html">Controllers <i class="icon-arrow-right icon-white"></i></a>
 
 <h1>Routing</h1>
 
@@ -138,7 +138,7 @@ Blog_EditSave:
 
     
 <a class="prev-article btn btn-green" href="modules.html"><i class="icon-arrow-left icon-white"></i> Modules</a>
-<a class="next-article bottom btn btn-green" href="controller.html">Controllers <i class="icon-arrow-right icon-white"></i></a>
+<a class="next-article bottom btn btn-green" href="controllers.html">Controllers <i class="icon-arrow-right icon-white"></i></a>
                 
 
 </section>
