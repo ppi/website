@@ -196,6 +196,10 @@
 	line-height: 15px;
 }
 
+p.section-title span {
+	margin-left: 12px;
+}
+
 p.section-title {
 	font-size: 1.3em;
 	/*background-color: #404040;*/
