@@ -18,6 +18,8 @@
 <div class="row-fluid">
 
 <section>
+    
+    <a class="next-article top btn btn-green" href="controller.html">Controllers <i class="icon-arrow-right icon-white"></i></a>
 
 <h1>Routing</h1>
 
@@ -75,13 +77,11 @@
 Homepage:
     pattern: /
     defaults: { _controller: "Application:Index:index"}
-</code></pre>
-
-<p>The the blog homepage route</p>
-<pre><code>
+    
 Blog_Index:
     pattern: /blog
     defaults: { _controller: "Application:Blog:index"}
+    
 </code></pre>
 
 <p class="section-title" id='routes-with-parameters'>Routes with parameters</p>
@@ -93,6 +93,7 @@ Blog_Index:
 Blog_Show:
     pattern: /blog/{title}
     defaults: { _controller: "Application:Blog:show"}
+    
 </code></pre>
 
 <p>This example optionally looks for the {pageNum} parameter, if it's not found it defaults to 1</p>
@@ -100,6 +101,7 @@ Blog_Show:
 Blog_Show:
     pattern: /blog/{pageNum}
     defaults: { _controller: "Application:Blog:index", pageNum: 1}
+
 </code></pre>
 
 <p class="section-title" id='routes-with-requirements'>Routes with requirements</p>
@@ -112,6 +114,7 @@ Blog_EditSave:
     defaults: { _controller: "Application:Blog:edit"}
     requirements:
     _method: POST
+    
 </code></pre>
 
 <p>Checking if the {pageNum} parameter is numerical. Checking if the {lang} parameter is <b>en</b> or
@@ -123,6 +126,7 @@ Blog_Show:
     requirements:
     id: \d+
     lang: en|de
+    
 </code></pre>
 
 <p>Checking if the page is a POST request, and that {id} is numerical</p>
@@ -133,97 +137,12 @@ Blog_EditSave:
     requirements:
     _method: POST
     id: \d+
+    
 </code></pre>
 
-<p class="section-title" id='example-controllers'>Example controller</p>
-
-<p>Here is an example blog controller, based on some of the routes provided above.</p>
-            <pre><code>
-&lt;?php
-namespace Application\Controller;
-
-use Application\Controller\Shared as BaseController;
-
-class Blog extends BaseController {
-
-    public function indexAction() {
     
-        // Get all the blog posts
-        $posts = $this->getBlogStorage()->getAll();
-        
-        // Render our main blog page, passing in our $posts to get rendered.
-        $this->render('Application:blog:index.html.php', compact('posts'));
-    }
-
-}
-            </code></pre>
-
-<p class="section-title" id='generating-urls-using-routes'>Generating urls using routes</p>
-            <pre><code>
-&lt;?php
-namespace Application\Controller;
-
-use Application\Controller\Shared as BaseController;
-
-class Blog extends BaseController {
-
-    public function showAction() {
-    
-        // pattern: /about
-        $aboutUrl = $this->generateUrl('About_Page');
-        
-        // pattern: /blog/read/{id}
-        $profileUrl = $this->generateUrl('Blog_Post', array('id' => 45464);
-
-    }
-}
-
-            </code></pre>
-
-<p class="section-title" id='redirecting-to-routes'>Redirecting to routes</p>
-            <pre><code>
-&lt;?php
-namespace Application\Controller;
-
-use Application\Controller\Shared as BaseController;
-
-class Blog extends BaseController {
-
-    public function showAction() {
-    
-        // Send user to /login, if they are not logged in
-        if(!$this->isLoggedIn()) {
-            return $this->redirectToRoute('User_Login');
-        }
-    
-        // go to /user/profile/{username}
-        return $this->redirectToRoute('User_Profile', array('username' => 'ppi_user'));
-    
-    }
-}
-            </code></pre>
-
-            <p class="section-title" id='getting-route-parameters-in-the-controllers'>Getting route parameters in the controller</p>
-            <pre><code>
-&lt;?php
-namespace Application\Controller;
-
-use Application\Controller\Shared as BaseController;
-
-class Blog extends BaseController {
-
-    // pattern: /blog/show//{id}
-    public function showAction() {
-    
-        $blogID = $this->getRouteParam('id');
-        $blogPost = $this->getBlogStorage()->getByID($blogID);
-        
-        $this->render('Application:blog:show.html.php', compact('blogPost'));
-    
-    }
-}
-</pre></code>
 <a class="prev-article btn btn-green" href="modules.html"><i class="icon-arrow-left icon-white"></i> Modules</a>
+<a class="next-article bottom btn btn-green" href="controller.html">Controllers <i class="icon-arrow-right icon-white"></i></a>
                 
 
 </section>

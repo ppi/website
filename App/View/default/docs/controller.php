@@ -3,15 +3,16 @@
 <div class="toc-mobile">
 	<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
 	<ul class="items">
-		<li><a href="#introduction" title="">Introduction</a></li>
-		<li><a href="#details" title="">The Details</a></li>
-		<li><a href="#basic-routes" title="">Basic Routes</a></li>
-		<li><a href="#routes-with-parameters" title="">Routes with parameters</a></li>
-		<li><a href="#routes-with-requirements" title="">Routes with requirements</a></li>
-		<li><a href="#example-controllers" title="">Example controller</a></li>
-		<li><a href="#generating-urls-using-routes" title="">Generating urls using routes</a></li>
-		<li><a href="#redirecting-to-routes" title="">Redirecting to routes</a></li>
-		<li><a href="#getting-route-parameters-in-the-controllers" title="">Getting route parameters in the controller</a></li>
+		<li><a href="#introduction" title="Introduction">Introduction</a></li>
+		<li><a href="#example-controllers" title="Example controller">Example controller</a></li>
+		<li><a href="#generating-urls-using-routes" title="Generating urls using routes">Generating urls using routes</a></li>
+		<li><a href="#redirecting-to-routes" title="Redirecting to routes">Redirecting to routes</a></li>
+		<li><a href="#post-values" title="Working with POST values">Working with POST values</a></li>
+		<li><a href="#query-string-params" title="Working with QueryString parameters">Working with QueryString parameters</a></li>
+		<li><a href="#server-variables" title="Server Variables">Working with server variables</a></li>
+		<li><a href="#cookie-values" title="Working with cookies">Working with cookies</a></li>
+		<li><a href="#session-values" title="Working with session values">Working with session values</a></li>
+		<li><a href="#config-values" title="Working with the config">Working with the config</a></li>
 	</ul>
 </div>
 
@@ -22,7 +23,7 @@
 <h1>Controllers</h1>
 
 <p class="section-title" id='introduction'>Introduction</p>
-<p>So what is a controller? A controller is just a PHP class, like any other that you've created before, but the intention of it, is to have a bunch of methods on it called <b>actions</b>. The idea is, for each <b>route</b> in your system <b>action method</b>. Examples of action methods would be your <b>homepage</b> or <b>blog post page</b>. The job of a controller is to perform a bunch of code and respond with some HTTP content to be sent back to the browser. The response could be a HTML page, a JSON array, XML document or to redirect somewhere. Controllers in PPI are ideal for making anything from web services, to web applications, to just simple html-driven websites.</p>
+<p>So what is a controller? A controller is just a PHP class, like any other that you've created before, but the intention of it, is to have a bunch of methods on it called <b>actions</b>. The idea is: each <b>route</b> in your system will execute an <b>action</b> method. Examples of action methods would be your <b>homepage</b> or <b>blog post page</b>. The job of a controller is to perform a bunch of code and respond with some HTTP content to be sent back to the browser. The response could be a HTML page, a JSON array, XML document or to redirect somewhere. Controllers in PPI are ideal for making anything from web services, to web applications, to just simple html-driven websites.</p>
     
 <p>Lets quote something we said in the last chapter's introduction section</p>
 <blockquote><p><b>Defaults:</b><br>This is the important part, The syntax is <b>Module:Controller:action</b>. So if you
@@ -34,7 +35,6 @@
 
 
 <p class="section-title" id='example-controllers'>Example controller</p>
-    
 <p>Review the following route that we'll be matching.</p>
 <pre><code>
 Blog_Show:
@@ -43,9 +43,7 @@ Blog_Show:
     
 </code></pre>
     
-<p>So lets presume the route is <b>/blog/show/{id}</b>, and look at what your controller would look like. Here is an example blog controller, based on some of the routes provided above.</p>
-    
-    
+<p>So lets presume the route is <b>/blog/show/{id}</b>, and look at what your controller would look like. Here is an example blog controller, based on some of the routes provided above.</p>  
 <pre><code>
 &lt;?php
 namespace Application\Controller;
@@ -124,8 +122,7 @@ class Blog extends BaseController {
 }
 </code></pre>
     
-<p class="section-title" id='post-cookie-values'>Working with POST values, QueryString parameters, Server Variables, Cookies &amp; Session values</p></p>
-
+<p class="section-title" id='post-values'>Working with POST values</p>
 <pre><code>
 &lt;?php
 namespace Application\Controller;
@@ -149,6 +146,19 @@ class Blog extends BaseController {
         $postValues = $this->post();
     
     }
+}
+    
+</code></pre>
+
+<p class="section-title" id='query-string-params'>Working with QueryString parameters</p>
+<pre><code>
+&lt;?php
+namespace Application\Controller;
+
+use Application\Controller\Shared as BaseController;
+
+class Blog extends BaseController {
+
 
     // The URL is /blog/?action=show&id=453221
     public function queryStringAction() {
@@ -161,6 +171,17 @@ class Blog extends BaseController {
     
     }
     
+</code></pre>
+
+<p class="section-title" id='server-variables'>Working with server variables</p>
+<pre><code>
+&lt;?php
+namespace Application\Controller;
+
+use Application\Controller\Shared as BaseController;
+
+class Blog extends BaseController {
+
     public function serverAction() {
         
         $this->getServer()->set('myKey', 'myValue');
@@ -176,7 +197,19 @@ class Blog extends BaseController {
         $allServerValues =  $this->server();
         
     }
+}
     
+</code></pre>
+
+<p class="section-title" id='cookie-values'>Working with cookies</p>
+<pre><code>
+&lt;?php
+namespace Application\Controller;
+
+use Application\Controller\Shared as BaseController;
+
+class Blog extends BaseController {
+
     public function cookieAction() {
     
         $this->getCookie()->set('myKey', 'myValue');
@@ -192,7 +225,19 @@ class Blog extends BaseController {
         $cookies = $this->cookies();
     
     }
-    
+}
+
+</code></pre>
+
+<p class="section-title" id='session-values'>Working with session values</p>
+<pre><code>
+&lt;?php
+namespace Application\Controller;
+
+use Application\Controller\Shared as BaseController;
+
+class Blog extends BaseController {
+
     public function sessionAction() {
     
         $this->getSession()->set('myKey', 'myValue');
@@ -208,14 +253,42 @@ class Blog extends BaseController {
         $allSessionValues = $this->session();
     
     }
-    
 }
     
 </code></pre>
-    
-    
 
-    <a class="prev-article btn btn-green" href="templating.html"><i class="icon-arrow-left icon-white"></i> Templating</a>
+<p class="section-title" id='config-values'>Working with the config</p>
+<p>Using the <b>getConfig()</b> method we can obtain the config array. This config array is the result of ALL the configs returned from all the modules, merged with your application's global config.</p>
+<pre><code>
+&lt;?php
+namespace Application\Controller;
+
+use Application\Controller\Shared as BaseController;
+
+class Blog extends BaseController {
+
+    public function configAction() {
+    
+        $config = $this->getConfig();
+    
+        switch($config['mailer']) {
+    
+            case 'swift':
+                break;
+    
+            case 'sendgrid':
+                break;
+    
+            case 'mailchimp':
+                break;
+    
+        }
+    }
+}
+
+</code></pre>
+    
+<a class="prev-article btn btn-green" href="routing.html"><i class="icon-arrow-left icon-white"></i> Routing</a>
                 
 
 </section>
