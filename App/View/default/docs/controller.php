@@ -13,6 +13,10 @@
 		<li><a href="#cookie-values" title="Working with cookies">Working with cookies</a></li>
 		<li><a href="#session-values" title="Working with session values">Working with session values</a></li>
 		<li><a href="#config-values" title="Working with the config">Working with the config</a></li>
+		<li><a href="#is-method" title="Working with the is() method">Working with the is() method</a></li>
+		<li><a href="#ip-useragent" title="Getting the users IP or UserAgent">Getting the users IP or UserAgent</a></li>
+		<li><a href="#flash-messages" title="Working with flash messages">Working with flash messages</a></li>
+		<li><a href="#get-env" title="Getting the current environment">Getting the current environment</a></li>
 	</ul>
 </div>
 
@@ -287,9 +291,122 @@ class Blog extends BaseController {
 }
 
 </code></pre>
+
+<p class="section-title" id='is-method'>Working with the is() method</p>
+<p>The is() method is a very expressive way of coding and has a variety of options you can send to it. The method always returns a boolean as you are saying <b>"is this the case?"</b></p>
+<pre><code>
+&lt;?php
+namespace Application\Controller;
+
+use Application\Controller\Shared as BaseController;
+
+class Blog extends BaseController {
+
+    public function isAction() {
     
+        if($this->is('ajax')) {}
+    
+        if($this->is('post') {}
+        if($this->is('patch') {}
+        if($this->is('put') {}
+        if($this->is('delete') {}
+    
+        // ssl, https, secure: are all the same thing
+        if($this->is('ssl') {}
+        if($this->is('https') {}
+        if($this->is('secure') {}
+        
+    }
+}
+
+</code></pre>
+
+<p class="section-title" id='ip-useragent'>Getting the users IP or UserAgent</p>
+<p>Getting the user's IP address or user agent is very trivial.</p>
+<pre><code>
+&lt;?php
+namespace Application\Controller;
+
+use Application\Controller\Shared as BaseController;
+
+class Blog extends BaseController {
+
+    public function userAction() {
+    
+        $userIP = $this->getIP();
+        $userAgent = $this->getUserAgent();
+    }
+}
+
+</code></pre>
+
+<p class="section-title" id='flash-messages'>Working with flash messages</p>
+<p>A flash message is a notification that the user will see on the <b>next</b> page that is rendered. It's basically a setting stored in the session so when the user hits the next designated page it will display the message, and then disappear from the session. Flash messages in PPI have different <b>types</b>. These types can be <b>'error', 'warning', 'success'</b>, this will determine the color or styling applied to it. For a success message you'll see a positive green message and for an error you'll see a negative red message.</p>
+<p>Review the following action, it is used to delete a blog item and you'll see a different flash message depending on the scenario.</p>
+<pre><code>
+&lt;?php
+namespace Application\Controller;
+
+use Application\Controller\Shared as BaseController;
+
+class Blog extends BaseController {
+
+    public function deleteAction() {
+    
+        $blogID = $this->getPost()->get('blogID');
+    
+        if(empty($blogID)) {
+            $this->setFlash('error', 'Invalid BlogID Specified');
+            return $this->redirectToRoute('Blog_Index');
+        }
+    
+        $bs = $this->getBlogStorage();
+    
+        if(!$bs->existsByID($blogID)) {
+            $this->setFlash('error', 'This blog ID does not exist');
+            return $this->redirectToRoute('Blog_Index');
+        }
+    
+        $bs->deleteByID($blogID);
+        $this->setFlash('success', 'Your blog post has been deleted');
+        return $this->redirectToRoute('Blog_Index');
+    }
+}
+
+</code></pre>
+
+<p class="section-title" id='get-env'>Getting the current environment</p>
+<p>You may want to perform different scenarios based on the site's environment. This is a configuration value defined in your global application config. The <b>getEnv()</b> method is how it's obtained.</p>
+<pre><code>
+&lt;?php
+namespace Application\Controller;
+
+use Application\Controller\Shared as BaseController;
+
+class Blog extends BaseController {
+
+    public function envAction() {
+    
+        $env = $this->getEnv();
+        switch($env) {
+            case 'development':
+                break;
+    
+            case 'staging':
+                break;
+    
+            case 'production':
+            default:
+                break;
+            
+        }
+        
+    }
+}
+
+</code></pre>
+
 <a class="prev-article btn btn-green" href="routing.html"><i class="icon-arrow-left icon-white"></i> Routing</a>
-                
 
 </section>
 

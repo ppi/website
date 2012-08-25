@@ -8,10 +8,6 @@
 		<li><a href="#basic-routes" title="">Basic Routes</a></li>
 		<li><a href="#routes-with-parameters" title="">Routes with parameters</a></li>
 		<li><a href="#routes-with-requirements" title="">Routes with requirements</a></li>
-		<li><a href="#example-controllers" title="">Example controller</a></li>
-		<li><a href="#generating-urls-using-routes" title="">Generating urls using routes</a></li>
-		<li><a href="#redirecting-to-routes" title="">Redirecting to routes</a></li>
-		<li><a href="#getting-route-parameters-in-the-controllers" title="">Getting route parameters in the controller</a></li>
 	</ul>
 </div>
 
