@@ -15,13 +15,11 @@
 
 		<section class='content'>
 
-			<a class="next-article top btn btn-green" href="<?=$baseUrl;?>docs/application.html">The Skeleton
-				Application <i class="icon-arrow-right icon-white"></i></a>
+			<a class="next-article top btn btn-green" href="<?=$baseUrl;?>docs/application.html">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
 
 			<h1>Getting Started</h1>
 
-			<article id='overview'>
-				<p class="section-title">Overview</p>
+				<p id='overview' class="section-title">Overview</p>
 
 				<p>PPI is an open source framework for developing web applications and services with PHP 5.3. PPI is
 					implemented using 100% object-oriented code with namespaces. In true community spirit PPI aims to
@@ -39,10 +37,8 @@
 					learning these frameworks, and code created, can be re-used in building PPI apps.</p>
 
 				<p>PPI can be considered the boilerplate of PHP frameworks.</p>
-			</article>
 
-			<article id='standing-on-the-shoulders-of-giants'>
-				<p class="section-title">Standing on the shoulders of giants</p>
+				<p id='standing-on-the-shoulders-of-giants' class="section-title">Standing on the shoulders of giants</p>
 
 				<p>PPI has pre-integrated the best features from existing frameworks for you, allowing you to just
 					utilize
@@ -52,28 +48,16 @@
 					and clean modularity in your application. For database abstraction of the PDO library we're using
 					Doctrine2's clean DBAL component which has been made easy to use through PPI's DataSource
 					component.</p>
-			</article>
 
-			<article id='why-ppi'>
-				<p class="section-title">Why use PPI?</p>
-				<p>
-
-				</p>
-			</article>
-
-			<article id='downloading-ppi'>
-				<p class="section-title">Downloading PPI</p>
+				<p class="section-title" id='downloading-ppi'>Downloading PPI</p>
 
 				<p>You can download PPI from the <a href="<?=$baseUrl;?>" title="">Homepage</a></p>
-			</article>
 
-			<article id='system-requirements'>
-				<p class="section-title">System requirements</p>
+				<p id='system-requirements' class="section-title">System requirements</p>
 
 				<p>A web server with its rewrite module enabled. (mod_rewrite for apache)</p>
 
 				<p>PPI needs 5.3.3+. (5.3.0 for namespaces and 5.3.3 for Symfony2).</p>
-			</article>
 
 			<a class="next-article bottom btn btn-green" href="<?=$baseUrl;?>docs/application.html">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
 

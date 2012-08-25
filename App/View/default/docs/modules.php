@@ -20,19 +20,15 @@
 
             <a class="next-article top btn btn-green" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
 
-            <article id='introduction'>
-                <p class="section-title">Introduction</p>
+            <p id='introduction' class="section-title">Introduction</p>
 
-                <p>By default, one module is provided with the SkeletonApp, named "Application". It provides a simple
-                    route pointing to the homepage. A simple controller to handle the "home" page of the application.
-                    This demonstrates using routes, controllers and views within your module.</p>
-            </article>
+            <p>By default, one module is provided with the SkeletonApp, named "Application". It provides a simple
+                route pointing to the homepage. A simple controller to handle the "home" page of the application.
+                This demonstrates using routes, controllers and views within your module.</p>
 
-            <article id='module-structure'>
-                <p class="section-title">Module Structure</p>
+            <p id='module-structure' class="section-title">Module Structure</p>
 
-                <p>Your module starts with Module.php. You can have configuration on your module. Your can have routes
-                    which result in controllers getting dispatched. Your controllers can render view templates.</p>
+            <p>Your module starts with Module.php. You can have configuration on your module. Your can have routes which result in controllers getting dispatched. Your controllers can render view templates.</p>
             <pre><code>
 modules/
 
@@ -55,12 +51,9 @@ modules/
         
             </code></pre>
 
-            </article>
-
-            <article id='module-class'>
-                <p class="section-title">The Module.php class</p>
-
+                <p id='module-class' class="section-title">The Module.php class</p>
                 <p>Every PPI module looks for a Module.php class file, this is the starting point for your module. </p>
+                
             <pre><code>
 &lt;?php
 namespace Application;
@@ -78,10 +71,8 @@ class Module extends BaseModule {
 
 }
             </code></pre>
-            </article>
 
-            <article id='init'>
-                <p class="section-title">Init</p>
+                <p id='init' class="section-title">Init</p>
 
                 <p>The above code shows you the Module class, and the all important <b>init()</b> method. Why is it
                     important? If you remember from <b>The Skeleton Application</b> section previously, we have defined
@@ -91,18 +82,14 @@ class Module extends BaseModule {
                 <p class="tip">The init() method is run for every page request, and should not perform anything heavy.
                     It is considered bad practice to utilize these methods for setting up or configuring instances of
                     application resources such as a database connection, application logger, or mailer.</p>
-            </article>
 
-            <article id='modules-resources'>
-                <p class="section-title">Your modules resources</p>
+                <p id='modules-resources' class="section-title">Your modules resources</p>
 
                 <p>/Application/resources/ is where non-PHP-class files live such as config files (resources/config) and
                     views (resources/views). We encourage you to put your own custom config files in /resources/config/
                     too.</p>
-            </article>
 
-            <article id='configuration'>
-                <p class="section-title">Configuration</p>
+                <p id='configuration' class="section-title">Configuration</p>
 
                 <p>Expanding on from the previous code example, we're now adding a getConfig() method. This must return
                     a raw php array. All the modules with getConfig() defined on them will be merged together to create
@@ -125,11 +112,8 @@ protected $_moduleName = 'Application';
 
 }
             </code></pre>
-            </article>
 
-            <article id='routing'>
-
-                <p class="section-title">Routing</p>
+                <p id='routing' class="section-title">Routing</p>
 
                 <p>The getRoutes() method currently is re-using the Symfony2 routing component. It needs to return a
                     Symfony RouteCollection instance. This means you can setup your routes using PHP, YAML or XML.</p>
@@ -163,11 +147,8 @@ class Module extends BaseModule {
 
 }
             </code></pre>
-            </article>
 
-            <article id='conclusion'>
-
-                <p class="section-title">Conclusion</p>
+                <p id='conclusion' class="section-title">Conclusion</p>
 
                 <p>So, what have we learnt in this section so far? We learnt how to initialize our module, and how to
                     obtain configuration options and routes from it. </p>
