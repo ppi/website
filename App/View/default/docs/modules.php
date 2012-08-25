@@ -176,7 +176,7 @@ class Module extends BaseModule {
                     results together and match them against a request URI such as <b>/blog/my-blog-title</b>. When a
                     matching route is found it dispatches the controller specified in that route.</p>
 
-                <p>Lets move onto the <b>Routing and Controllers</b> section to check out what happens next.</p>
+                <p>Lets move onto the <b>Routing</b> section to check out what happens next.</p>
             </article>
 
             <a class="prev-article btn btn-green" href="application.html"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>

@@ -1,192 +1,224 @@
-<article class="content-box docs-page">
+<div class="continer-fluid content-box docs-page">
 
-	<aside class="toc">
-		<p class="heading">Table of Contents</p>
-		<ul class="items">
-			<li><a href="#" title="">Making your controller</a></li>
-			<li><a href="#" title="">Accessing your controller</a></li>
-			<li><a href="#" title="">Controllers with arguments</a></li>
-			<li><a href="#" title="">Loading a view</a></li>
-			<li><a href="#" title="">Loading an Ajax View</a></li>
-			<li><a href="#" title="">Handling Forms</a></li>
-			<li><a href="#" title="">Passing data to a view</a></li>
-			<li><a href="#" title="">Defining the default controller</a></li>
-		</ul>
-	</aside>
+<div class="toc-mobile">
+	<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
+	<ul class="items">
+		<li><a href="#introduction" title="">Introduction</a></li>
+		<li><a href="#details" title="">The Details</a></li>
+		<li><a href="#basic-routes" title="">Basic Routes</a></li>
+		<li><a href="#routes-with-parameters" title="">Routes with parameters</a></li>
+		<li><a href="#routes-with-requirements" title="">Routes with requirements</a></li>
+		<li><a href="#example-controllers" title="">Example controller</a></li>
+		<li><a href="#generating-urls-using-routes" title="">Generating urls using routes</a></li>
+		<li><a href="#redirecting-to-routes" title="">Redirecting to routes</a></li>
+		<li><a href="#getting-route-parameters-in-the-controllers" title="">Getting route parameters in the controller</a></li>
+	</ul>
+</div>
 
-	<h1>Using Controllers</h1>
-	<h5 id="anchor-introduction">Introduction</h5>
-	<p>Controllers are simply classes that are named in a way that they can be associated with a URI.</p>
-	<p>They are in charge of controlling flow and contain the bussiness logic for your application. They retrieve information via various methods such as from the database using Models. They then pass that information onto the presentation layer (A View) to be displayed.</p>
-	<br>
-	<p>The following documentation will outline the various ways in which you can interact with PPI's controller layer.</p>
+<div class="row-fluid">
 
-	<h5 id="anchor-making-your-controller">Making your controller</h5>
-	<pre><code class="php">&lt;?php
-// File: App/Controller/Home.php
-namespace App\Controller;
-class Home extends Application {
+<section>
 
-	function index() {
-		echo 'Hello world';
-	}
+<h1>Controllers</h1>
 
-}
-	</code></pre>
+<p class="section-title" id='introduction'>Introduction</p>
+<p>So what is a controller? A controller is just a PHP class, like any other that you've created before, but the intention of it, is to have a bunch of methods on it called <b>actions</b>. The idea is, for each <b>route</b> in your system <b>action method</b>. Examples of action methods would be your <b>homepage</b> or <b>blog post page</b>. The job of a controller is to perform a bunch of code and respond with some HTTP content to be sent back to the browser. The response could be a HTML page, a JSON array, XML document or to redirect somewhere. Controllers in PPI are ideal for making anything from web services, to web applications, to just simple html-driven websites.</p>
+    
+<p>Lets quote something we said in the last chapter's introduction section</p>
+<blockquote><p><b>Defaults:</b><br>This is the important part, The syntax is <b>Module:Controller:action</b>. So if you
+	specify <b>Application:Blog:show</b> then this will execute the following class path: <b>/modules/Application/Controller/Blog->showAction()</b>.
+	Notice how the method has a suffix of Action, this is so you can have lots of methods on your controller
+	but only the ones ending in Action() will be executable from a route.</p>
+</blockquote>
+    
 
-	<h5 id="anchor-accessing-your-controller">Accessing your controller</h5>
-	<p>As mentioned in the introduction, we associate a URI with a contoller. This is how we do it.</p>
-	<pre><code>
-http://hostname/controller/method
-	</code></pre>
-	<p>The part "controller" matches the last segment of your class name. The part "method" is the method that is called on your controller. If you do not specify a method in your URI then the default method called is "index".</p>
-	<p>Consider the following:</p>
-	<pre><code class="php">&lt;?php
-// File: App/Controller/User.php
-namespace App\Controller;
-class User extends Application {
 
-	function index() {
-		echo 'Hello Index';
-	}
+<p class="section-title" id='example-controllers'>Example controller</p>
+    
+<p>Review the following route that we'll be matching.</p>
+<pre><code>
+Blog_Show:
+    pattern: /blog/{id}
+    defaults: { _controller: "Application:Blog:show"}
+    
+</code></pre>
+    
+<p>So lets presume the route is <b>/blog/show/{id}</b>, and look at what your controller would look like. Here is an example blog controller, based on some of the routes provided above.</p>
+    
+    
+<pre><code>
+&lt;?php
+namespace Application\Controller;
 
-	function profile() {
-		echo 'Hello Profile';
-	}
+use Application\Controller\Shared as BaseController;
 
-}
-	</code></pre>
+class Blog extends BaseController {
 
-	<p>To get the output of "Hello Index" your URL would be:</p>
-	<pre><code class="">
-http://localhost/myapp/user (defaults to method 'index')
-http://localhost/myapp/user/index
-	</code></pre>
-
-	<p>To get the output of "Hello Profile" your URL would be:</p>
-	<pre><code>http://localhost/myapp/user/profile</code></pre>
-
-	<h5 id="anchor-controllers-with-arguments">Controllers with arguments</h5>
-	<p>To pass arguments aka "parameters" you can send the via the URI. Here is an example:</p>
-	<pre><code>http://localhost/myapp/user/profile/23</code></pre>
-
-	<p>To obtain the ID from the URI we can use the get() method.</p>
-	<pre><code class="php">&lt;?php
-namespace App\Controller;
-class \App\Controller\User extends \App\Contrlller\Application {
-
-	// Url: http://localhost/myapp/user/profile/23
-	function profile() {
-		$userID = $this->get('profile', 0);
-	}
+    public function showAction() {
+    
+        $blogID = $this->getRouteParam('id');
+    
+        $bs = $this->getBlogStorage();
+    
+        if(!$bs->existsByID($blogID)) {
+            $this->setFlash('error', 'Invalid Blog ID');
+            return $this->redirectToRoute('Blog_Index');
+        }
+    
+        // Get the blog post for this ID
+        $blogPost = $bs->getByID($blogID);
+        
+        // Render our main blog page, passing in our $blogPost article to be rendered
+        $this->render('Application:blog:show.html.php', compact('blogPost'));
+    }
 
 }
-	</pre></code>
+</code></pre>
 
-	<h5 id="anchor-loading-a-view">Loading a view</h5>
-	<p>We use the load() method to load up a view file, for the homepage, from your application's view folder.</p>
-	<pre><code class="php">namespace App\Controller;
-class Home extends Application {
+<p class="section-title" id='generating-urls-using-routes'>Generating urls using routes</p>
+<p>Here we are still executing the same route, but making up some urls using route names</p>
+<pre><code>
+&lt;?php
+namespace Application\Controller;
 
-	// Url: http://localhost/myapp/
-	function index() {
-		$this->load('home/index');
-	}
-}
-	</code></pre>
+use Application\Controller\Shared as BaseController;
 
-	<h5 id="anchor-loading-an-ajax-view">Loading an Ajax View</h5>
-	<p>Imagine you're making a twitter-like application where on a user's profile you can click "See John's Followers" and you want to get them via ajax.</p>
-	<p>The following is an example of loading an ajax view being loaded with the $isAjax variable set to true.</p>
+class Blog extends BaseController {
 
-	<pre><code class="php">&lt;?php
-namespace App\Controller;
-class User extends Application {
+    public function showAction() {
+    
+        $blogID = $this->getRouteParam('id');
+    
+        // pattern: /about
+        $aboutUrl = $this->generateUrl('About_Page');
+        
+        // pattern: /blog/show/{id}
+        $blogPostUrl = $this->generateUrl('Blog_Post', array('id' => $blogID);
 
-	// Url: http://localhost/myapp/user/ajax_followers/userid/13
-	function ajax_followers() {
-		$isAjax    = true;
-		$userID    = $this->get('userid');
-		$followers = $this->getFollowers($userID);
-		$this->load('user/ajax_followers', compact('isAjax', 'followers'));
-	}
+    }
 }
 
-	</code></pre>
+</code></pre>
+    
+<p class="section-title" id='redirecting-to-routes'>Redirecting to routes</p>
+<p>An extremely handy way to send your users around your application is redirect them to a specific route.</p>
+<pre><code>
+&lt;?php
+namespace Application\Controller;
 
-	<h5 id="anchor-handling-forms">Handling Forms</h5>
-	<p>You can submit forms to controller methods and obtain the POST information using the post() method. Here we display a create user page and also handle the form submit in the create() method.</p>
-	<pre><code class="php">&lt;?php
-namespace App\Controller;
-class User extends Application {
+use Application\Controller\Shared as BaseController;
 
+class Blog extends BaseController {
 
-	// Url: http://localhost/myapp/user/create
-	function create() {
-
-		// Has the form been submitted ?
-		if($this->is('post')) {
-			$userModel = new \App\Model\User();
-			$userInfo  = $this->post();
-			$userModel->insert($userInfo);
-			$this->load('user/createsuccess');
-			return;
-		}
-
-		$this->load('user/create');
-	}
-
+    public function showAction() {
+    
+        // Send user to /login, if they are not logged in
+        if(!$this->isLoggedIn()) {
+            return $this->redirectToRoute('User_Login');
+        }
+    
+        // go to /user/profile/{username}
+        return $this->redirectToRoute('User_Profile', array('username' => 'ppi_user'));
+    
+    }
 }
-	</code></pre>
+</code></pre>
+    
+<p class="section-title" id='post-cookie-values'>Working with POST values, QueryString parameters, Server Variables, Cookies &amp; Session values</p></p>
 
-	<h5 id="anchor-passing-data-to-a-view">Passing data to a view</h5>
-	<p>Passing data to a view is very simple. Below is an example where we take an argument using get(). Load up a model, get the user's information and pass that to the view for rendering.</p>
+<pre><code>
+&lt;?php
+namespace Application\Controller;
 
-	<pre><code class="php">&lt;?php
-namespace App\Controller;
-class User extends Application {
+use Application\Controller\Shared as BaseController;
 
-	// Url: http://localhost/myapp/user/profile/23
-	function profile() {
-		$userID    = $this->get('profile', 0);
-		$userModel = new \App\Model\User();
-		$user      = $userModel->find($userID);
-		$this->load('user/profile', compact('user'));
-	}
+class Blog extends BaseController {
 
+    public function postAction() {
+    
+        $this->getPost()->set('myKey', 'myValue');
+    
+        var_dump($this->getPost()->get('myKey')); // string('myValue')
+    
+        var_dump($this->getPost()->has('myKey')); // bool(true)
+    
+        var_dump($this->getPost()->remove('myKey'));
+        var_dump($this->getPost()->has('myKey')); // bool(false)
+    
+        // To get all the post values
+        $postValues = $this->post();
+    
+    }
+
+    // The URL is /blog/?action=show&id=453221
+    public function queryStringAction() {
+    
+        var_dump($this->getQueryString()->get('action')); // string('show')
+        var_dump($this->getQueryString()->has('id')); // bool(true)
+    
+        // Get all the query string values
+        $allValues = $this->queryString();
+    
+    }
+    
+    public function serverAction() {
+        
+        $this->getServer()->set('myKey', 'myValue');
+    
+        var_dump($this->getServer()->get('myKey')); // string('myValue')
+    
+        var_dump($this->getServer()->has('myKey')); // bool(true)
+    
+        var_dump($this->getServer()->remove('myKey'));
+        var_dump($this->getServer()->has('myKey')); // bool(false)
+    
+        // Get all server values
+        $allServerValues =  $this->server();
+        
+    }
+    
+    public function cookieAction() {
+    
+        $this->getCookie()->set('myKey', 'myValue');
+    
+        var_dump($this->getCookie()->get('myKey')); // string('myValue')
+    
+        var_dump($this->getCookie()->has('myKey')); // bool(true)
+    
+        var_dump($this->getCookie()->remove('myKey'));
+        var_dump($this->getCookie()->has('myKey')); // bool(false)
+    
+        // Get all the cookies
+        $cookies = $this->cookies();
+    
+    }
+    
+    public function sessionAction() {
+    
+        $this->getSession()->set('myKey', 'myValue');
+    
+        var_dump($this->getSession()->get('myKey')); // string('myValue')
+    
+        var_dump($this->getSession()->has('myKey')); // bool(true)
+    
+        var_dump($this->getSession()->remove('myKey'));
+        var_dump($this->getSession()->has('myKey')); // bool(false)
+    
+        // Get all the session values
+        $allSessionValues = $this->session();
+    
+    }
+    
 }
-	</code></pre>
+    
+</code></pre>
+    
+    
 
-<pre><code class="php">&lt;?php
-namespace App\Controller;
-class User extends Application {
+    <a class="prev-article btn btn-green" href="templating.html"><i class="icon-arrow-left icon-white"></i> Templating</a>
+                
 
-	// Url: http://localhost/myapp/user/profile/23/usecompact/yes
-	function profile() {
+</section>
 
-		$userID     = $this->get('profile', 0);
-		$useCompact = $this->get('usecompact', 'yes');
-
-		// The following load() calls are exactly the same thing.
-		if($useCompact === 'yes') {
-			$this->load('user/profile', compact('userid'));
-		} else {
-			$this->load('user/profile', array('userid' => $userID));
-		}
-	}
-
-}
-	</code></pre>
-
-	<h5 id="anchor-defining-the-master-controller">Defining the default controller</h5>
-	<p>The "default controller" is maintained from your PPI application's routes file commonly located at App/Config/routes.php. A default controller is needed so that when you access the root of your website there will still be a controller dispatched. Here is an example:</p>
-	<pre><code class="ini">// File: App/Config/routes.php
-$routes['__default__'] = 'home/index';
-	</code></pre>
-	<p>The following examples equate to the exact same thing. They will access the exact same method of "index" in the Home controller.</p>
-	<pre><code>http://localhost/myapp
-http://localhost/myapp/home
-http://localhost/myapp/home/index
-	</code></pre>
-	
-</article>
+</div>
+</div>

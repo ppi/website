@@ -222,7 +222,7 @@ class Blog extends BaseController {
     
     }
 }
-
+</pre></code>
 <a class="prev-article btn btn-green" href="modules.html"><i class="icon-arrow-left icon-white"></i> Modules</a>
                 
 
