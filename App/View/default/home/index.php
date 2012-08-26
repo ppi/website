@@ -4,7 +4,8 @@
 		
 		<div class="intro">
 			<p class="heading">ppi framework version 2 is here!</p>
-			<p class="desc">ppi is an open source php meta-framework. ppi can be considered the boilerplate of PHP frameworks. we have taken the good bits from Symfony2, ZendFramework2 &amp; Doctrine2 and combined them together to create a solid and very easy web application framework. ppi is fully <a href="http://www.php-fig.org" title="PSR-0" target="_blank">PSR</a> compliant.</p>
+			<p class="desc">ppi is an open source php meta-framework. we have taken the good bits from Symfony2, ZendFramework2 &amp; Doctrine2 and combined them together to create a solid and very easy web application framework. ppi is fully <a href="http://www.php-fig.org" title="PSR-0" target="_blank">PSR</a> compliant.</p>
+            <p class="desc">ppi can be considered the boilerplate of PHP frameworks</p>
 			<div class="buttons">
 				<div class="btn-group">
 					<button class="btn btn-green btn-large dropdown-toggle" data-toggle="dropdown">

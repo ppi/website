@@ -20,7 +20,7 @@
         <div class="desc">
         <ul>
             <li>Minimise the learning curve of using such powerful components.</li>
-            <li>Do not re-invent the wheel! Choose the best component for the job from an existing library and make is easily accessible for the developer.</li>
+            <li>Do not re-invent the wheel! Choose the best component for the job from an existing library and make it easily accessible for the developer.</li>
             <li>Designed to be cloud compatible from the beginning.</li>
             <li>To harness the capabilities of larger more complex frameworks and convey them in a more productive and approachable manner.</li>
             <li>To give developers coming from frameworks such as CodeIgniter, Kohana, CakePHP a platform to step up and use much more powerful components while retaining the simplistic routes of those frameworks they've came from.</li>
