@@ -14,7 +14,7 @@
 	background-color: #F9F9F9;
 	display: block;
 	height: 30px;
-	color: #8E8E8E;
+	color: #333;
 	font-size: 1.2em;
 	font-family: 'Museo_Slab_500';
 	padding-left: 12px;
@@ -297,4 +297,8 @@
 	border: 1px solid #C7C7C7;
 	background-color: white;
 	padding: 12px 12px 0 12px;
+}
+
+ul.breadcrumb .active {
+	color: #333;
 }
