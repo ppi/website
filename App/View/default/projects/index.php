@@ -20,7 +20,6 @@
 				<div class="description"><?= $helper->escape($project['desc']); ?></div>
 				<div class="actions">
 					<a href="<?= $project["tracker"];?>" target="_blank" class="readmore">Tracker</a>
-					<a href="<?= $project["discussions"];?>" target="_blank" class="readmore">Discussions</a>
 					<a href="<?= $project["source"];?>" target="_blank" class="readmore">Source Code</a>
 					<a href="<?= $project["download"];?>" target="_blank" class="readmore">Download</a>
 					<div class="clear"></div>
