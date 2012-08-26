@@ -72,6 +72,12 @@ class Community extends Application {
         
         
     }
+    
+    public function about() {
+        
+        $this->render('community/about');
+        
+    }
 
 	protected function getTwits() {
 

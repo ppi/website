@@ -146,6 +146,7 @@
 	padding-left: 18px;
 	border-left: none;
 	position: relative;
+	margin-bottom: 25px;
 }
 
 
@@ -287,4 +288,13 @@
 	padding-left: 18px;
 	border-left: none;
 	position: relative;
+}
+
+.about-page .desc ul li {
+	font-size: 1.1em;
+}
+.about-page .desc {
+	border: 1px solid #C7C7C7;
+	background-color: white;
+	padding: 12px 12px 0 12px;
 }

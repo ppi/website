@@ -8,8 +8,6 @@ class General extends Application {
 		$this->render('framework/404');
 	}
 
-	function about() { die('about'); }
-
 	function advertising() { die('advertising'); }
 
 }
