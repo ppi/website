@@ -46,7 +46,7 @@ modules/
                 index/list.html.php
         
             config/
-                config.yml
+                config.php
                 routes.yml
         
             </code></pre>
