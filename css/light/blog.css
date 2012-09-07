@@ -50,7 +50,7 @@
 }
 #blog-index .left-side .post .date-area {
 	position: absolute;
-	top: 0;
+	top: 14px;
 	left: -70px;
 	width: 60px;
 	height: 60px;
