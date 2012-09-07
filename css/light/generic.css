@@ -53,7 +53,8 @@ a, p {
 }
 
 #wrapper {
-	margin: 0 auto;
+    margin: 0 auto;
+    width: 960px;
 }
 
 body {
@@ -197,7 +198,7 @@ div.navbar .nav .active > a, div.navbar .nav .active > a:hover {
 }
 
 #header .nav {
-	width: 550px;
+	width: 600px;
 }
 
 #header div.inside {

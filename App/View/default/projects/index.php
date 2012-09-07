@@ -12,9 +12,7 @@
 		<h1>Projects</h1>
 
 		<div class="projects-list">
-		<?php
-		foreach($projects as $project):
-		?>
+		<?php foreach($projects as $project): ?>
 			<div class="project">
 				<div class="title"><?= $project['title']; ?></div>
 				<div class="description"><?= $helper->escape($project['desc']); ?></div>

@@ -15,7 +15,7 @@
 
 <section>
     
-    <a class="next-article top btn btn-green" href="controllers.html">Controllers <i class="icon-arrow-right icon-white"></i></a>
+<a class="next-article top btn btn-green" href="controllers.html">Controllers <i class="icon-arrow-right icon-white"></i></a>
 
 <h1>Routing</h1>
 

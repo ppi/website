@@ -1,19 +1,62 @@
-<div id="content">
-	<?php foreach($posts as $post): ?>
-	<div class="post">
-		<h1 class="title"><?php echo $post['title']; ?></h1>
-		<p class="meta">
-			Posted by <?php echo $post['first_name'] . ' ' . $post['last_name']; ?> on <?php echo date('F jS, Y', $post['created']); ?>
-			&nbsp;&bull;&nbsp;<!-- <a href="#" class="comments">Comments (64)</a> &nbsp;&bull;&nbsp; -->
-			<a href="<?php echo $baseUrl; ?>blog/view/<?php echo $post['permalink']; ?>" class="permalink">Full article</a>		
-		</p>
-		<div class="entry">
+<div id="blog-index" class="clearfix">
+	
+	<div class="left-side">
+		
+		<?php foreach(range(0, 5) as $i): ?>
+		<div class="post">
+			<h1 class="post-title">Create an Excellent Cosmic Composition</h1>
+			<div class="post-thumbnail"></div>
+			<div class="post-content">
+				<p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet.</p>
+				<p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet.</p>
+			</div>
+			
+			<div class="post-meta">
+				<a href="" class="more-link">Continue Reading &raquo;</a>
+				<a class="num-comments" href="" title="Comment on Create an 'Excellent' Cosmic – Composition">7 Comments</a>
+			</div>
+			
+			<div class="date-area">
+				<div class="inner">
+					<span>Jun</span>
+					<span class="day">2</span>
+					<span>2010</span>
+				</div>
+			</div>
+			
+		</div>
+		<?php endforeach;?>
+		
+	</div>
+	<div class="right-side">
+		
+<!--		<div class="section">-->
+<!--			<form>-->
+<!--				<input type="text" name="search"> <input type="submit" value="Search">-->
+<!--			</form>-->
+<!--		</div>-->
+		
+		<div class="section">
+			<h3>Categories</h3>
 			<ul>
-				<li>Learning delivered via the internet to any receptive device, be it personal computer, digital television or mobile phone.</li>
-				<li>Learning which complies with industry standards to ensure accessibility and interoperability with other standards-compliant systems.</li>
-				<li>Learning thats engaging and specific to your business requirements.</li>
+				<li><a href="" title="">Lorem upsum dolor sit</a></li>
+				<li>Lorem upsum dolor sit</li>
+				<li>Lorem upsum dolor sit</li>
+				<li>Lorem upsum dolor sit</li>
+			</ul>
+
+		</div>
+		
+		<div class="section">
+			<h3>Recent Comments</h3>
+			<ul>
+				<li>Lorem upsum dolor sit</li>
+				<li>Lorem upsum dolor sit</li>
+				<li>Lorem upsum dolor sit</li>
+				<li>Lorem upsum dolor sit</li>
 			</ul>
 		</div>
+		
 	</div>
-	<?php endforeach; ?>
+	
 </div>
