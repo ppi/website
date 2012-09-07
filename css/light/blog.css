@@ -35,14 +35,12 @@
 	margin: 0;
 }
 #blog-index .left-side .post .date-area span.day {
-	font-size: 2.0em;
+	font-size: 1.9em;
+	line-height: 13px;
 	font-weight: bold;
 }
 #blog-index .left-side .post .date-area span {
 	display: block;
-	text-align: center;
-	font-size: 1.0em;
-	color: white;
 }
 
 #blog-index .left-side .post .date-area .inner {
@@ -51,10 +49,14 @@
 #blog-index .left-side .post .date-area {
 	position: absolute;
 	top: 14px;
-	left: -70px;
-	width: 60px;
-	height: 60px;
+	left: -60px;
+	width: 50px;
+	height: 55px;
 	padding: 5px;
+	
+	text-align: center;
+	font-size: 0.8em;
+	color: white;
 	
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#406c6c', endColorstr='#284545');
 	background: -webkit-gradient(linear, left top, left bottom, from(#406C6C), to(#284545));
