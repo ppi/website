@@ -4,6 +4,7 @@ namespace App\Storage;
 
 use PPI\DataSource\ActiveQuery;
 use App\Entity\BlogPostTag as BlogPostTagEntity;
+use App\Entity\BlogPost as BlogPostEntity;
 	
 class BlogPostTag extends ActiveQuery {
 	
@@ -71,20 +72,25 @@ class BlogPostTag extends ActiveQuery {
 		
 	}
 	
-	public function getByTagID($id) {
+	public function getPostsByTagID($id) {
 		
-		$row = $this->_conn->createQueryBuilder()
-			->select('bpt.*')
+		$rows = $this->_conn->createQueryBuilder()
+			->select('bp.*')
 			->from($this->_meta['table'], 'bpt')
-			->andWhere('bpt.post_id = :id')
-			->setParameter(':id', $id)
-			->execute()->fetch();
+			->innerJoin('bpt', 'blog_post', 'bp', 'bp.id = bpt.post_id')
+			->andWhere('bpt.tag_id = :tag_id')->setParameter(':tag_id', $id)
+			->execute()->fetchAll($this->_meta['fetchmode']);
 		
-		if($row === false) {
-			throw new \Exception();
+		if($rows === false) {
+			throw new \Exception('No posts found for this tag id');
 		}
 		
-		return new BlogPostTagEntity($row);
+		$entities = array();
+		foreach($rows as $row) {
+			$entities[] = new BlogPostEntity($row);
+		}
+		
+		return $entities;
 		
 	}
 	

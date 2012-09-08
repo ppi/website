@@ -4,10 +4,15 @@ namespace App\Controller;
 
 class Blog extends Application {
 
-	function index() {
+	function index($tagID = null) {
 		
 		$bs    = $this->getBlogStorage();
-		$posts = $bs->getAllPublished();
+		
+		if($tagID === null) {
+			$posts = $bs->getAllPublished();
+		} else {
+			$posts = $this->getBlogPostTagStorage()->getPostsByTagID($tagID);
+		}
 		
 		$tagsGroupedByPostID = $bs->getTagsGroupedByPostID($posts, $this->getBlogPostTagStorage());
 		foreach($posts as $key => $post) {
@@ -32,6 +37,10 @@ class Blog extends Application {
 		$this->addCSS('light/blog');
 		$this->addJS('mustache', 'blog');
 		$this->render('blog/view', compact('post', 'blogPostTags'));
+	}
+	
+	public function tagview() {
+		$this->index($this->get('tagview'));
 	}
 	
 	public function get_popular_tags() {
