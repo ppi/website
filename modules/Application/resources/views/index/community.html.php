@@ -22,7 +22,7 @@
 			<div class="feeds">
 			<?php
 			foreach($activity as $item):
-				$feedImage  = $baseUrl . 'images/community/' . $item['source'] . '.png';
+				$feedImage  =  $view['assets']->getUrl('images/' . $item['source'] . '.png');
 				$feedDesc = $item['title'];
 			?>
 				<div class="feed source-<?= $item['source']; ?>">

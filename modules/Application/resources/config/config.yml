@@ -1,2 +1,8 @@
-another:
-    var
+community:
+    githubFeeds:
+        - https://github.com/ppi/framework/commits/master.atom
+        - https://github.com/ppi/skeletonapp/commits/master.atom
+        - https://github.com/ppi/website/commits/master.atom
+        
+    twitterUsernames:
+        - ppi_framework

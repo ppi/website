@@ -38,28 +38,27 @@ class Blog extends SharedController
     }
     
     public function viewAction() {
-   		
-   		$postID       = $this->getRouteParam('postID');
-   		$post         = $this->getBlogStorage()->getByID($postID);
-   		$blogPostTags = $this->getBlogTagStorage()->getAll();
-   		
-   		$this->render('blog/view', compact('post', 'blogPostTags'));
-   	}
+           
+           $postID       = $this->getRouteParam('postID');
+           $post         = $this->getBlogStorage()->getByID($postID);
+           $blogPostTags = $this->getBlogTagStorage()->getAll();
+           
+           $this->render('blog/view', compact('post', 'blogPostTags'));
+       }
     
     public function getPopularTagsAction() {
-   		
-//   		$cache = $this->getCache();
-//   		$cacheKey = 'popular_tags';
-//   		
-//   		if($cache->exists($cacheKey)) {
-//   			$popularTags = $cache->get($cacheKey);
-//   		} else {
-   			
-//   			$cache->set($cacheKey, $popularTags, 86400);
-//   		}
+           
+        $cache    = $this->getService('blog.cache');
+        $cacheKey = 'popular_tags';
+        if($cache->contains($cacheKey)) {
+            $popularTags = $cache->fetch($cacheKey);
+        } else {
+            $popularTags = $this->getBlogPostTagStorage()->getPopularTags();
+            $cache->save($cacheKey, $popularTags, 86400);
+        }
         
         $response = array();
-        $popularTags = $this->getBlogPostTagStorage()->getPopularTags();
+        
         
         foreach($popularTags as $tag) {
             $response[] = array(
@@ -69,28 +68,28 @@ class Blog extends SharedController
                 'link'  => $this->generateUrl('BlogTagView', array(
                        'tagID' => $tag->getTagID(),
                        'title' => strtolower($tag->getTitle())
-                 ))
-           );
-   		}
-   		
-   		return json_encode(array('tags' => $response));
-   		
-   	}
+                ))
+            );
+        }
+           
+        return json_encode(array('tags' => $response));
+           
+    }
     
     public function tagviewAction() {
         return $this->indexAction($this->getRouteParam('tagID'));   
     }
     
     protected function getBlogStorage() {
-   		return new \Application\Storage\BlogPost($this->getService('datasource'));
-   	}
-   	
-   	protected function getBlogTagStorage() {
-   		return new \Application\Storage\BlogTag($this->getService('datasource'));
-   	}
-   	
-   	protected function getBlogPostTagStorage() {
-   		return new \Application\Storage\BlogPostTag($this->getService('datasource'));
-   	}
+           return new \Application\Storage\BlogPost($this->getService('datasource'));
+       }
+       
+       protected function getBlogTagStorage() {
+           return new \Application\Storage\BlogTag($this->getService('datasource'));
+       }
+       
+       protected function getBlogPostTagStorage() {
+           return new \Application\Storage\BlogPostTag($this->getService('datasource'));
+       }
 
 }

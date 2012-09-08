@@ -39,8 +39,12 @@ class Module extends BaseModule
     {
         return array('factories' => array(
             
-            'testService' => function($sm) {
-                return new Application\Classes\TestServiceClass();
+            'blog.cache' => function($sm) {
+                return new \Doctrine\Common\Cache\ApcCache();
+            },
+            
+            'community.cache' => function($sm) {
+                return new \Doctrine\Common\Cache\ApcCache();
             }
             
         ));

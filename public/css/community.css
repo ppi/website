@@ -94,3 +94,54 @@ margin-bottom: 25px;
 	height: 22px;
 	margin-left: 5px;
 }
+
+.community-page .content-box .activity-stream .feeds .feed:first-child {
+	border-top: 1px solid #C7C7C7;
+}
+.community-page .content-box .activity-stream .feed .actions a {
+	text-align: center;
+	color: white;
+	font-size: 0.9em;
+	display: block;
+	padding-top: 6px;
+	width: 100px;
+	height: 22px;
+}
+
+.community-page .content-box .activity-stream .feed .actions a:hover {
+    text-decoration: none;
+    background: #345958;
+}
+
+.community-page .content-box .activity-stream .feed .actions {
+	top: 0;
+	right: 0;
+	border-radius: 0;
+	-webkit-border-radius: none;
+	-moz-border-radius: none;
+	position: absolute;
+	background-color: #518787;
+	margin-top: 0;
+	border: 0;
+	padding: 0;
+}
+.community-page .content-box .activity-stream .feeds .feed .content {
+	float: left;
+	width: 500px;
+}
+.community-page .content-box .activity-stream .feeds .feed .image {
+	float: left;
+	margin-right: 12px;
+	margin-left: 12px;
+}
+.community-page .content-box .activity-stream .feeds .feed {
+	border: 1px solid #C7C7C7;
+	border-top: none;
+	height: 68px;
+	background-color: white;
+	padding-top: 12px;
+	position: relative;
+}
+.community-page .content-box .activity-stream {
+	
+}
