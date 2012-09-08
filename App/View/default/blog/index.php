@@ -19,7 +19,7 @@
 			
 			<div class="post-meta">
 				<a href="<?=$urlLink;?>" title="Continue Reading" class="more-link">Continue Reading &raquo;</a>
-				<a class="num-comments" href="" title="Comment on Create an 'Excellent' Cosmic – Composition">7 Comments</a>
+<!--				<a class="num-comments" href="" title="Comment on Create an 'Excellent' Cosmic – Composition">7 Comments</a>-->
 			</div>
 			
 			<div class="date-area">
@@ -45,13 +45,10 @@
 		<div class="section">
 			<h3>Categories</h3>
 			<ul>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
+				<?php foreach($cats as $cat): ?>
+				<li><a href="" title=""><?=$helper->escape($cat->getTitle());?></a></li>
+				<?php endforeach; ?>
 			</ul>
-
 		</div>
 		
 		<div class="section">

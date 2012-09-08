@@ -3,14 +3,14 @@
 namespace App\Storage;
 
 use PPI\DataSource\ActiveQuery;
-use App\Entity\BlogPost as BlogPostEntity;
+use App\Entity\BlogCat as BlogCatEntity;
 	
-class BlogPost extends ActiveQuery {
+class BlogCat extends ActiveQuery {
 	
 	protected $_meta = array(
 		'conn'      => 'main',
 		'primary'   => 'id',
-		'table'     => 'blog_post',
+		'table'     => 'blog_category',
 		'fetchmode' => \PDO::FETCH_ASSOC
 	);
 
@@ -22,14 +22,9 @@ class BlogPost extends ActiveQuery {
 	 * @param string $email
 	 * @return integer
 	 */
-	public function create($title, $content) {
+	public function create($title) {
 		
-		if(!isset($data['date_created'])) {
-			$data['date_created'] = time();
-		}
-
         $data['title'] = $title;
-        $data['content'] = $content;
 		
 		return parent::insert($data);
 			
@@ -41,22 +36,18 @@ class BlogPost extends ActiveQuery {
      * @return array
      * @throws \Exception When no rows exist
      */
-    public function getAllPublished() {
+    public function getAll() {
         
-		$rows = $this->_conn->createQueryBuilder()
-			->select('bp.*')
-			->from($this->_meta['table'], 'bp')
-			->andWhere('bp.published = 1')
-			->execute()->fetchAll();
+		$rows = $this->fetchAll();
         
         if($rows === false) {
-            throw new \Exception('No blog entries found');
+            throw new \Exception('No blog cats found');
         }
         
         $entities = array();
         
         foreach($rows as $row) {
-            $entities[] = new BlogPostEntity($row);
+            $entities[] = new BlogCatEntity($row);
         }
         
         return $entities;
@@ -66,9 +57,9 @@ class BlogPost extends ActiveQuery {
 	public function getByID($id) {
 		
 		$row = $this->_conn->createQueryBuilder()
-			->select('bp.*')
-			->from($this->_meta['table'], 'bp')
-			->andWhere('bp.id = :id')
+			->select('bc.*')
+			->from($this->_meta['table'], 'bc')
+			->andWhere('bc.id = :id')
 			->setParameter(':id', $id)
 			->execute()->fetch();
 		
@@ -76,7 +67,7 @@ class BlogPost extends ActiveQuery {
 			throw new \Exception();
 		}
 		
-		return new BlogPostEntity($row);
+		return new BlogCatEntity($row);
 		
 	}
 	
