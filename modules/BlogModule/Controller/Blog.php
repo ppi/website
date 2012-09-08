@@ -1,7 +1,7 @@
 <?php
-namespace Application\Controller;
+namespace BlogModule\Controller;
 
-use Application\Controller\Shared as SharedController;
+use BlogModule\Controller\Shared as SharedController;
 
 class Blog extends SharedController
 {
@@ -33,7 +33,7 @@ class Blog extends SharedController
         
         $allTags = array();
         
-        return $this->render('Application:blog:index.html.php', compact('posts', 'allTags'));
+        return $this->render('BlogModule:blog:index.html.php', compact('posts', 'allTags'));
         
     }
     
@@ -43,7 +43,7 @@ class Blog extends SharedController
            $post         = $this->getBlogStorage()->getByID($postID);
            $blogPostTags = $this->getBlogTagStorage()->getAll();
            
-           $this->render('blog/view', compact('post', 'blogPostTags'));
+           return $this->render('BlogModule:blog:view.html.php', compact('post', 'blogPostTags'));
        }
     
     public function getPopularTagsAction() {
@@ -81,15 +81,15 @@ class Blog extends SharedController
     }
     
     protected function getBlogStorage() {
-           return new \Application\Storage\BlogPost($this->getService('datasource'));
-       }
-       
-       protected function getBlogTagStorage() {
-           return new \Application\Storage\BlogTag($this->getService('datasource'));
-       }
-       
-       protected function getBlogPostTagStorage() {
-           return new \Application\Storage\BlogPostTag($this->getService('datasource'));
-       }
+        return new \BlogModule\Storage\BlogPost($this->getService('datasource'));
+    }
+    
+    protected function getBlogTagStorage() {
+        return new \BlogModule\Storage\BlogTag($this->getService('datasource'));
+    }
+    
+    protected function getBlogPostTagStorage() {
+        return new \BlogModule\Storage\BlogPostTag($this->getService('datasource'));
+    }
 
 }

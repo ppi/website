@@ -1,10 +1,10 @@
 <?php
 
-namespace Application\Storage;
+namespace BlogModule\Storage;
 
-use Application\Storage\Base as BaseStorage;
-use Application\Entity\BlogPostTag as BlogPostTagEntity;
-use Application\Entity\BlogPost as BlogPostEntity;
+use BlogModule\Storage\Base as BaseStorage;
+use BlogModule\Entity\BlogPostTag as BlogPostTagEntity;
+use BlogModule\Entity\BlogPost as BlogPostEntity;
     
 class BlogPostTag extends BaseStorage {
     

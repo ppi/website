@@ -64,6 +64,7 @@
                                 <li class="logo-item"><a class="logo" href="<?=$view['router']->generate('Homepage');?>" title="PPI"><img src="<?=$view['assets']->getUrl('images/ppi-white.png');?>" alt="Logo" height="25"></a></li>
                                 <li class=""><a href="<?=$view['router']->generate('Homepage');?>">Home</a></li>
                                 <li><a href="<?=$view['router']->generate('About');?>">About</a></li>
+                                <li><a href="<?=$view['router']->generate('Blog');?>">Blog</a></li>
     <!--							<li class="--><?//=$request['controller'] == 'blog' ? 'active' : '';?><!--"><a href="--><?//= $baseUrl; ?><!--blog">Blog</a></li>-->
                                 <li class=""><a href="<?=$view['router']->generate('Homepage');?>community">Community</a></li>
                                 <li class=""><a href="<?=$view['router']->generate('Projects');?>">Projects</a></li>

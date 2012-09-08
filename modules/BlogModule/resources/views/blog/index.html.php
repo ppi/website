@@ -32,11 +32,15 @@
 				<a href="<?=$urlLink;?>" title="Continue Reading" class="more-link">Continue Reading &raquo;</a>
 				<?php if($post->hasTags()): ?>
 				<div class="tags">
-					<?php foreach($post->getTags() as $tag): ?>
-					<a href="" title="Tags">
-						<span class="label label-success"><?=$view->escape($tag->getTitle());?></span>
-					</a>
-					<?php endforeach; ?>
+					<?php
+                    foreach($post->getTags() as $tag):
+                        
+                        $tagLink = $view['router']->generate('BlogTagView', array('tagID' => $tag->getID(), 'title' => strtolower($tag->getTitle())));
+                    ?>
+					<a href="<?=$tagLink;?>" title="Tags" class="label label-success"><?=$view->escape($tag->getTitle());?></a>
+					<?php
+                    endforeach;
+                    ?>
 				</div>
 				<?php endif; ?>
 			</div>

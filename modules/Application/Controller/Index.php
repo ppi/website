@@ -43,7 +43,8 @@ class Index extends SharedController
         return new \UserModule\Storage\User($this->getService('DataSource'));
     }
     
-    protected function getProjects() {
+    protected function getProjects()
+    {
         
         return array(
             array(
@@ -75,12 +76,14 @@ class Index extends SharedController
         
     }
     
-    protected function getGithubActivityFeeds() {
+    protected function getGithubActivityFeeds()
+    {
         $config = $this->getConfig();
         return isset($config['community']['githubFeeds']) ? $config['community']['githubFeeds'] : array(); 
     }
     
-    protected function getTwitterActivityUsernames() {
+    protected function getTwitterActivityUsernames()
+    {
         $config = $this->getConfig();
         return isset($config['community']['twitterUsernames']) ? $config['community']['twitterUsernames'] : array();
     }

@@ -1,7 +1,5 @@
-console.log('blog.js');
 jQuery(document).ready(function ($) {
 	
-	console.log(ppi.baseUrl + 'blog/get_popular_tags');
 	$.get(ppi.baseUrl + 'blog/get_popular_tags', {}, function(response) {
 		
 		var content;

@@ -1,9 +1,9 @@
 <?php
 
-namespace Application\Storage;
+namespace BlogModule\Storage;
 
-use Application\Storage\Base as BaseStorage;
-use Application\Entity\BlogPost as BlogPostEntity;
+use BlogModule\Storage\Base as BaseStorage;
+use BlogModule\Entity\BlogPost as BlogPostEntity;
     
 class BlogPost extends BaseStorage {
     

@@ -17,22 +17,5 @@ Contributors:
 Projects:
     pattern:  /projects
     defaults: { _controller: "Application:Index:projects"}
-
-
-Blog:
-    pattern:  /blog
-    defaults: { _controller: "Application:Blog:index"}
-    
-BlogView:
-    pattern:  /blog/{postID}/{title}
-    defaults: { _controller: "Application:Blog:view"}
-    
-BlogTagView:
-    pattern:  /blog/tag/{tagID}/{title}
-    defaults: { _controller: "Application:Blog:tagview"}
-    
-BlogGetPopular:
-    pattern:  /blog/get_popular_tags
-    defaults: { _controller: "Application:Blog:getPopularTags"}
     
     
