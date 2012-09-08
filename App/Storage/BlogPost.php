@@ -80,4 +80,15 @@ class BlogPost extends ActiveQuery {
 		
 	}
 	
+	public function getTagsGroupedByPostID($posts, $blogPostTagStorage) {
+		
+		$map = array();
+		
+		foreach($posts as $post) {
+			$map[$post->getID()] = $blogPostTagStorage->getTagsByPostID($post->getID());
+		}
+		
+		return $map;
+	}
+	
 }

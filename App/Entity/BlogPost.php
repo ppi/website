@@ -9,6 +9,7 @@ class BlogPost {
 	protected $_content = null;
 	protected $_category_id = null;
 	protected $_date_created = null;
+	protected $_tags = array();
 	
 	public function __construct($row) {
 		foreach($row as $key => $val) {
@@ -48,6 +49,18 @@ class BlogPost {
 		$dt = new \DateTime();
 		$dt->setTimestamp($this->_date_created);
 		return $dt;
+	}
+	
+	public function setTags($tags) {
+		$this->_tags = $tags;
+	}
+	
+	public function hasTags() {
+		return !empty($this->_tags);
+	}
+	
+	public function getTags() {
+		return $this->_tags;
 	}
     
 }

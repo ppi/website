@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-class BlogCat {
+class BlogTag {
 	
 	protected $_id = null;
 	protected $_title = null;

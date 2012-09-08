@@ -19,7 +19,15 @@
 			
 			<div class="post-meta">
 				<a href="<?=$urlLink;?>" title="Continue Reading" class="more-link">Continue Reading &raquo;</a>
-<!--				<a class="num-comments" href="" title="Comment on Create an 'Excellent' Cosmic – Composition">7 Comments</a>-->
+				<?php if($post->hasTags()): ?>
+				<div class="tags">
+					<?php foreach($post->getTags() as $tag): ?>
+					<a href="" title="Tags">
+						<span class="label label-success"><?=$helper->escape($tag->getTitle());?></span>
+					</a>
+					<?php endforeach; ?>
+				</div>
+				<?php endif; ?>
 			</div>
 			
 			<div class="date-area">
@@ -34,6 +42,7 @@
 		<?php endforeach;?>
 		
 	</div>
+	
 	<div class="right-side">
 		
 <!--		<div class="section">-->
@@ -43,25 +52,16 @@
 <!--		</div>-->
 		
 		<div class="section">
-			<h3>Categories</h3>
-			<ul>
-				<?php foreach($cats as $cat): ?>
-				<li><a href="" title=""><?=$helper->escape($cat->getTitle());?></a></li>
-				<?php endforeach; ?>
-			</ul>
-		</div>
-		
-		<div class="section">
-			<h3>Recent Comments</h3>
-			<ul>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-			</ul>
+			<h3>Popular Tags</h3>
+			<ul id="popular-tags-content"></ul>
 		</div>
 		
 	</div>
 	
 </div>
+	
+<script type="text/template" id="popular-tags-template">
+{{#tags}}
+<li><a href="{{link}}" title="{{title}}">{{title}} ({{count}})</a></li>
+{{/tags}}
+</script>

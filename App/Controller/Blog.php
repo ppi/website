@@ -6,29 +6,72 @@ class Blog extends Application {
 
 	function index() {
 		
-		$posts = $this->getBlogStorage()->getAllPublished();
-		$cats  = $this->getBlogCatStorage()->getAll();
+		$bs    = $this->getBlogStorage();
+		$posts = $bs->getAllPublished();
+		
+		$tagsGroupedByPostID = $bs->getTagsGroupedByPostID($posts, $this->getBlogPostTagStorage());
+		foreach($posts as $key => $post) {
+			if(isset($tagsGroupedByPostID[$post->getID()])) {
+				$posts[$key]->setTags($tagsGroupedByPostID[$post->getID()]);
+			}
+		}
+		
+		$allTags = array();
 
 		$this->addCSS('light/blog');
-		$this->render('blog/index', compact('posts', 'cats'));
+		$this->addJS('mustache', 'blog');
+		$this->render('blog/index', compact('posts', 'allTags'));
 	}
 	
 	public function view() {
 		
-		$postID = $this->get('view');
-		$post   = $this->getBlogStorage()->getByID($postID);
-		$cats   = $this->getBlogCatStorage()->getAll();
+		$postID       = $this->get('view');
+		$post         = $this->getBlogStorage()->getByID($postID);
+		$blogPostTags = $this->getBlogTagStorage()->getAll();
 		
 		$this->addCSS('light/blog');
-		$this->render('blog/view', compact('post', 'cats'));
+		$this->addJS('mustache', 'blog');
+		$this->render('blog/view', compact('post', 'blogPostTags'));
+	}
+	
+	public function get_popular_tags() {
+		
+		$cache = $this->getCache();
+		$cacheKey = 'popular_tags';
+		
+		if($cache->exists($cacheKey)) {
+			$popularTags = $cache->get($cacheKey);
+		} else {
+			$popularTags = $this->getBlogPostTagStorage()->getPopularTags();
+			$cache->set($cacheKey, $popularTags, 86400);
+		}
+		
+		$response = array();
+		$baseUrl = $this->getBaseUrl();
+		
+		foreach($popularTags as $tag) {
+			$response[] = array(
+				'id'    => $tag->getTagID(),
+				'title' => $tag->getTitle(),
+				'count' => $tag->getTagCount(),
+				'link'  => $baseUrl . 'blog/tag/' . $tag->getTagID() . '/' . strtolower($tag->getTitle())
+			);
+		}
+		
+		die(json_encode(array('tags' => $response)));
+		
 	}
 	
 	protected function getBlogStorage() {
 		return new \App\Storage\BlogPost();
 	}
 	
-	protected function getBlogCatStorage() {
-		return new \App\Storage\BlogCat();
+	protected function getBlogTagStorage() {
+		return new \App\Storage\BlogTag();
+	}
+	
+	protected function getBlogPostTagStorage() {
+		return new \App\Storage\BlogPostTag();
 	}
 	
 }

@@ -53,25 +53,16 @@
 <!--		</div>-->
 		
 		<div class="section">
-			<h3>Categories</h3>
-			<ul>
-				<?php foreach($cats as $cat): ?>
-				<li><a href="" title=""><?=$helper->escape($cat->getTitle());?></a></li>
-				<?php endforeach; ?>
-			</ul>
-		</div>
-		
-		<div class="section">
-			<h3>Recent Comments</h3>
-			<ul>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-			</ul>
+			<h3>Popular Tags</h3>
+			<ul id="popular-tags-content"></ul>
 		</div>
 		
 	</div>
 	
 </div>
+
+<script type="text/template" id="popular-tags-template">
+{{#tags}}
+<li><a href="{{link}}" title="{{title}}">{{title}} ({{count}})</a></li>
+{{/tags}}
+</script>

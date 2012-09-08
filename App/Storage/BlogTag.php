@@ -3,14 +3,14 @@
 namespace App\Storage;
 
 use PPI\DataSource\ActiveQuery;
-use App\Entity\BlogCat as BlogCatEntity;
+use App\Entity\BlogTag as BlogTagEntity;
 	
-class BlogCat extends ActiveQuery {
+class BlogTag extends ActiveQuery {
 	
 	protected $_meta = array(
 		'conn'      => 'main',
 		'primary'   => 'id',
-		'table'     => 'blog_category',
+		'table'     => 'blog_tag',
 		'fetchmode' => \PDO::FETCH_ASSOC
 	);
 
@@ -41,13 +41,13 @@ class BlogCat extends ActiveQuery {
 		$rows = $this->fetchAll();
         
         if($rows === false) {
-            throw new \Exception('No blog cats found');
+            throw new \Exception('No blog tag found');
         }
         
         $entities = array();
         
         foreach($rows as $row) {
-            $entities[] = new BlogCatEntity($row);
+            $entities[] = new BlogTagEntity($row);
         }
         
         return $entities;
@@ -67,7 +67,7 @@ class BlogCat extends ActiveQuery {
 			throw new \Exception();
 		}
 		
-		return new BlogCatEntity($row);
+		return new BlogTagEntity($row);
 		
 	}
 	
