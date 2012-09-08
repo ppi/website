@@ -88,7 +88,7 @@ class Shared extends BaseController
     protected function render($template, array $params = array(), array $options = array())
     {
         
-        $this->addTemplateGlobal('isLoggedIn', $this->isLoggedIn());
+//        $this->addTemplateGlobal('isLoggedIn', $this->isLoggedIn());
         return parent::render($template, $params, $options);
     }
 

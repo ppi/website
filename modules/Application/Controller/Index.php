@@ -10,6 +10,11 @@ class Index extends SharedController
         $downloadCount = 12;
         return $this->render('Application:index:index.html.php', compact('downloadCount'));
     }
+    
+    public function twigAction()
+    {
+        return $this->render('Application:index:index.html.twig');
+    }
 
     public function aboutAction()
     {
