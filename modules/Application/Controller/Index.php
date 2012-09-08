@@ -7,7 +7,8 @@ class Index extends SharedController
 {
     public function indexAction()
     {
-        return $this->render('Application:index:index.html.php');
+        $downloadCount = 12;
+        return $this->render('Application:index:index.html.php', compact('downloadCount'));
     }
 
     public function aboutAction()

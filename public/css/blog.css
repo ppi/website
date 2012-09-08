@@ -1,0 +1,117 @@
+#blog-index .left-side .post .post-content {
+	
+}
+
+#blog-index .left-side .post .post-thumbnail {
+	
+}
+
+#blog-index .left-side .post .post-meta .more-link {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#blog-index .left-side .post .post-meta .tags {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	text-align: right;
+	width: 350px;
+}
+#blog-index .left-side .post .post-meta {
+	border-top: 1px solid #E2E2E2;
+	height: 30px;
+	margin-top: 16px;
+	position: relative;
+}
+
+#blog-index .left-side .post .post-title a {
+	font-size: 0.7em;
+	text-align: left;
+	color: #406C6C;
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+}
+
+#blog-index .left-side .post h1 {
+	margin: 0;
+}
+#blog-index .left-side .post .date-area span.day {
+	font-size: 1.9em;
+	line-height: 13px;
+	font-weight: bold;
+}
+#blog-index .left-side .post .date-area span {
+	display: block;
+}
+
+#blog-index .left-side .post .date-area .inner {
+	border: 1px dashed #77c4c4;
+}
+#blog-index .left-side .post .date-area {
+	position: absolute;
+	top: 14px;
+	left: -60px;
+	width: 50px;
+	height: 55px;
+	padding: 5px;
+	
+	text-align: center;
+	font-size: 0.8em;
+	color: white;
+	
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#406c6c', endColorstr='#284545');
+	background: -webkit-gradient(linear, left top, left bottom, from(#406C6C), to(#284545));
+	
+}
+
+#blog-index .left-side .post {
+	padding: 5px 20px 20px 20px;
+	box-shadow: 0 0 10px #BDBDBD;
+	margin-bottom: 20px;
+	background-color: white;
+	position: relative;
+}
+
+#blog-index .right-side h3 {
+	color: #406C6C;
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	margin: 0;
+	font-size: 1.45em;
+}
+#blog-index .right-side .section {
+	box-shadow: 0 0 10px #BDBDBD;
+	margin-bottom: 25px;
+	background-color: white;
+	padding: 4px 12px 0 12px;
+	
+}
+
+#blog-index .right-side ul li:last-child {
+	border-bottom: 0;
+}
+#blog-index .right-side ul li {
+	list-style-type: none;
+	border-bottom: 1px solid #E2E2E2;
+	padding: 4px 6px 8px 16px;
+	background: url(../../images/light/sprite-arrow.png) no-repeat scroll -48px 7px transparent;
+}
+#blog-index .right-side ul {
+	margin-left: 0;
+}
+#blog-index .right-side {
+	float: left;
+	width: 300px;
+	
+}
+
+#blog-index .left-side {
+	width: 600px;
+	float: left;
+	margin-right: 25px;
+}
+
+#blog-index {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}

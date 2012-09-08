@@ -1,6 +1,6 @@
 <?php
 
-namespace UserModule\Storage;
+namespace Application\Storage;
 
 use PPI\DataSource\ActiveQuery;
 

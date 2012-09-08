@@ -6,7 +6,7 @@ use Application\Storage\Base as BaseStorage;
 use Application\Entity\BlogPostTag as BlogPostTagEntity;
 use Application\Entity\BlogPost as BlogPostEntity;
     
-class BlogPostTag extends ActiveQuery {
+class BlogPostTag extends BaseStorage {
     
     protected $_meta = array(
         'conn'      => 'main',
