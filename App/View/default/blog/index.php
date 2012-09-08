@@ -6,18 +6,19 @@
 		foreach($posts as $post):
 			
 			$created = $post->getCreatedDate();
-			$urlTitle = str_replace(' ', '-', strtolower($post->getTitle()));
+			$urlLink = $baseUrl . 'blog/' . $post->getID() . '/' . 
+				str_replace(' ', '-', strtolower($post->getTitle()));
 		?>
 		
 		<div class="post">
-			<h1 class="post-title"><a href="<?=$baseUrl;?>blog/<?=$post->getID();?>/<?=$urlTitle;?>" title="<?=$post->getTitle();?>"><?=$post->getTitle();?></a></h1>
+			<h1 class="post-title"><a href="<?=$urlLink;?>" title="<?=$post->getTitle();?>"><?=$post->getTitle();?></a></h1>
 			<div class="post-thumbnail"></div>
 			<div class="post-content">
 				<?=$post->getShortContent();?>
 			</div>
 			
 			<div class="post-meta">
-				<a href="" class="more-link">Continue Reading &raquo;</a>
+				<a href="<?=$urlLink;?>" title="Continue Reading" class="more-link">Continue Reading &raquo;</a>
 				<a class="num-comments" href="" title="Comment on Create an 'Excellent' Cosmic – Composition">7 Comments</a>
 			</div>
 			
