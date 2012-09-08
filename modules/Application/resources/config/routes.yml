@@ -1,6 +1,10 @@
 Homepage:
     pattern:  /
     defaults: { _controller: "Application:Index:index"}
+    
+Download:
+    pattern:  /download/{type}
+    defaults: { _controller: "Application:Index:download"}
 
 About:
     pattern:  /about

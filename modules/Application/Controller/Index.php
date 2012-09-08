@@ -7,8 +7,13 @@ class Index extends SharedController
 {
     public function indexAction()
     {
-        $downloadCount = 12;
+        $downloadCount = $this->getDownloadCounterHelper()->getDownloadCount();
         return $this->render('Application:index:index.html.php', compact('downloadCount'));
+    }
+    
+    public function downloadAction()
+    {
+        $this->getDownloadCounterHelper()->incrementDownloadCount();
     }
     
     public function twigAction()
@@ -91,6 +96,15 @@ class Index extends SharedController
     {
         $config = $this->getConfig();
         return isset($config['community']['twitterUsernames']) ? $config['community']['twitterUsernames'] : array();
+    }
+
+    /**
+     * Get the download counter helper
+     * 
+     * @return \Application\Classes\DownloadCounter
+     */
+    protected function getDownloadCounterHelper() {
+        return new \Application\Classes\DownloadCounter($this->getService('community.cache'));
     }
 
 }
