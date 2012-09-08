@@ -2,13 +2,18 @@
 	
 	<div class="left-side">
 		
-		<?php foreach(range(0, 5) as $i): ?>
+		<?php
+		foreach($posts as $post):
+			
+			$created = $post->getCreatedDate();
+			$urlTitle = str_replace(' ', '-', strtolower($post->getTitle()));
+		?>
+		
 		<div class="post">
-			<h1 class="post-title">Create an Excellent Cosmic Composition</h1>
+			<h1 class="post-title"><a href="<?=$baseUrl;?>blog/<?=$post->getID();?>/<?=$urlTitle;?>" title="<?=$post->getTitle();?>"><?=$post->getTitle();?></a></h1>
 			<div class="post-thumbnail"></div>
 			<div class="post-content">
-				<p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet.</p>
-				<p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet.</p>
+				<?=$post->getShortContent();?>
 			</div>
 			
 			<div class="post-meta">
@@ -18,9 +23,9 @@
 			
 			<div class="date-area">
 				<div class="inner">
-					<span>Jun</span>
-					<span class="day">2</span>
-					<span>2010</span>
+					<span><?=$created->format('M');?></span>
+					<span class="day"><?=$created->format('j');?></span>
+					<span><?=$created->format('Y');?></span>
 				</div>
 			</div>
 			
@@ -40,9 +45,10 @@
 			<h3>Categories</h3>
 			<ul>
 				<li><a href="" title="">Lorem upsum dolor sit</a></li>
-				<li>Lorem upsum dolor sit</li>
-				<li>Lorem upsum dolor sit</li>
-				<li>Lorem upsum dolor sit</li>
+				<li><a href="" title="">Lorem upsum dolor sit</a></li>
+				<li><a href="" title="">Lorem upsum dolor sit</a></li>
+				<li><a href="" title="">Lorem upsum dolor sit</a></li>
+				<li><a href="" title="">Lorem upsum dolor sit</a></li>
 			</ul>
 
 		</div>
@@ -50,10 +56,11 @@
 		<div class="section">
 			<h3>Recent Comments</h3>
 			<ul>
-				<li>Lorem upsum dolor sit</li>
-				<li>Lorem upsum dolor sit</li>
-				<li>Lorem upsum dolor sit</li>
-				<li>Lorem upsum dolor sit</li>
+				<li><a href="" title="">Lorem upsum dolor sit</a></li>
+				<li><a href="" title="">Lorem upsum dolor sit</a></li>
+				<li><a href="" title="">Lorem upsum dolor sit</a></li>
+				<li><a href="" title="">Lorem upsum dolor sit</a></li>
+				<li><a href="" title="">Lorem upsum dolor sit</a></li>
 			</ul>
 		</div>
 		
