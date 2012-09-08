@@ -1,0 +1,13 @@
+.about-page .desc ul li {
+	font-size: 1.1em;
+	margin-bottom: 12px;
+}
+.about-page .desc {
+	border: 1px solid #C7C7C7;
+	background-color: white;
+	padding: 12px 12px 0 12px;
+}
+
+.about-page ul {
+	margin-left: 18px;
+}

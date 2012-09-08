@@ -1,0 +1,96 @@
+.community-page .left-side {
+    width: 26.05%; /* 250 / 960 */
+}
+.community-page .left-side nav li a.first:hover {
+	background-color: #ebebeb;
+	text-decoration: none;
+}
+.community-page .left-side nav li a.first {
+	background-color: #F9F9F9;
+	display: block;
+	height: 30px;
+	color: #333;
+	font-size: 1.2em;
+	font-family: 'Museo_Slab_500';
+	padding-left: 12px;
+	padding-top: 9px;
+}
+.community-page .left-side nav li:first-child {
+	border-top: 1px solid #C7C7C7
+}
+.community-page .left-side nav li.box .title {
+	font-size: 1.2em;
+	font-family: 'Museo_Slab_500';
+}
+.community-page .left-side nav li.box .details a {
+	width: 64px;
+	color: white;
+	height: 18px;
+	text-align: center;
+	padding-top: 8px;
+	padding-left: 10px;
+	margin: 0;
+}
+.community-page .left-side nav li.box .details {
+	font-size: 1.1em;
+	height: 40px;
+	position: relative;
+}
+.community-page .left-side nav li.box input {
+	height: 30px;
+}
+.community-page .left-side nav li.box.newsletter-box .form #newsletter-email {
+	float: left;
+	width: 173px;
+	margin-left: 12px;
+}
+
+.community-page .left-side nav li.newsletter-box label {
+	float: left;
+	margin-top: 5px;
+}
+
+.community-page .left-side nav li.box {
+	background-color: #F9F9F9;
+	padding-left: 12px;
+	padding-top: 12px;
+}
+.community-page .left-side nav li {
+	border: 1px solid #C7C7C7;
+	border-top:  none;
+}
+.community-page .left-side nav ul {
+	list-style-type: none;
+	margin-left: 0;
+}
+.community-page .left-side {
+	float: left;
+	
+}
+
+
+.community-page .content-box {
+float: left;
+width: 71.95833333333333%;
+padding-left: 18px;
+border-left: none;
+position: relative;
+margin-bottom: 25px;
+}
+
+
+.community-page .breadcrumb {
+	background: none;
+	border-radius: 0;
+	border: 1px solid #C7C7C7;
+	background-color: white;
+	-webkit-border-radius: none;
+	-moz-border-radius: none;
+	margin-left: -5px;
+}
+
+.left-side nav li.box input[type=text] {
+	width: 158px;
+	height: 22px;
+	margin-left: 5px;
+}

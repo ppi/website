@@ -1,0 +1,31 @@
+
+.contributors-page .content-box .projects-list .project .title {
+	font-size: 1.3em;
+	color: #406C6C;
+	margin-bottom: 5px;
+	font-family: 'Museo_Slab_500';
+}
+.contributors-page .content-box .projects-list .project p {
+	margin-bottom: 5px;
+}
+.contributors-page .content-box .projects-list .project .description {
+	margin-bottom: 12px;
+}
+.contributors-page .content-box .projects-list .project {
+	border: 1px solid #C7C7C7;
+	padding: 12px;
+	min-height: 75px;
+	position: relative;
+	margin-bottom: 12px;
+	background-color: white;
+}
+.contributors-page .content-box .projects-list {
+	
+}
+.contributors-page .content-box {
+	float: left;
+    width: 71.95833333333333%; /* RWD */
+	padding-left: 18px;
+	border-left: none;
+	position: relative;
+}

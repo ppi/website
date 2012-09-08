@@ -1,6 +1,0 @@
-<IfModule mod_rewrite.c>
-RewriteEngine on
-Options +FollowSymLinks
-RewriteCond %{REQUEST_URI} !css|scripts|images|favicon.ico|robots.txt
-RewriteRule .* index.php
-</IfModule>

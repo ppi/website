@@ -1,0 +1,19 @@
+Homepage:
+    pattern:  /
+    defaults: { _controller: "Application:Index:index"}
+
+About:
+    pattern:  /about
+    defaults: { _controller: "Application:Index:about"}
+
+Community:
+    pattern:  /community
+    defaults: { _controller: "Application:Index:community"}
+    
+Contributors:
+    pattern:  /contributors
+    defaults: { _controller: "Application:Index:contributors"}
+    
+Projects:
+    pattern:  /projects
+    defaults: { _controller: "Application:Index:projects"}

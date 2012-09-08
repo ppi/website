@@ -1,0 +1,96 @@
+.projects-list .project .title {
+	font-size: 1.3em;
+	color: #406C6C;
+	margin-bottom: 5px;
+	font-family: 'Museo_Slab_500';
+}
+.projects-list .project p {
+	margin-bottom: 5px;
+}
+.projects-list .project .description {
+	margin-bottom: 12px;
+}
+.projects-list .project {
+	border: 1px solid #C7C7C7;
+	padding: 12px;
+	min-height: 75px;
+	position: relative;
+	margin-bottom: 12px;
+	background-color: white;
+}
+.projects-list {
+	
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+
+
+.projects-page .content-box .breadcrumb {
+	border: 1px solid #C7C7C7;
+	background-color: white;
+	border-radius: 0;
+	-webkit-border-radius: none;
+	-moz-border-radius: none;
+	margin-left: -5px;
+}
+.projects-page .content-box h1 {
+	color: #6F6F6F;
+	font-size: 2.0em;
+	font-family: "Museo_Slab_500"; 
+}
+.projects-list .project .actions a {
+	text-align: center;
+	color: white;
+	font-size: 0.9em;
+	display: block;
+	float: left;
+	padding-top: 6px;
+	width: 100px;
+	height: 22px;
+}
+.projects-list .project .title {
+	font-size: 1.3em;
+	color: #406C6C;
+	margin-bottom: 5px;
+	font-family: 'Museo_Slab_500';
+}
+.projects-list .project .actions {
+	top: 0;
+	right: 0;
+	width: 400px;
+	border-radius: 0;
+	-webkit-border-radius: none;
+	-moz-border-radius: none;
+	position: absolute;
+	background-color: #518787;
+	margin-top: 0;
+	border: 0;
+	padding: 0;
+}
+
+.projects-list .project .actions a:hover {
+	background: #477575;
+	text-decoration: none;
+}
+
+.projects-list .project {
+	border: 1px solid #C7C7C7;
+	padding: 12px;
+	min-height: 75px;
+	position: relative;
+	margin-bottom: 12px;
+	background-color: #FFF;
+}
+.projects-list {
+	
+}
+.projects-page .content-box {
+	float: left;
+    width: 71.95833333333333%; /* RWD */
+	padding-left: 18px;
+	border-left: none;
+	position: relative;
+}
