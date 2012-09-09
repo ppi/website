@@ -1,0 +1,231 @@
+.docs-page {
+	position: relative;
+	background: white;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.docs-page p {
+	font-family: Helvetica;
+	font-size: 1.1em;
+	font-weight: normal;
+}
+
+.docs-page .toc ul {
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+.toc-mobile.expanded {
+    border-left: 1px solid #244D4D;
+    border-right: 1px solid #244D4D;
+}
+.toc-mobile.expanded .toc-heading i {
+    background-image: url(../images/glyphicons-halflings-white.png);
+}
+.toc-mobile.expanded .toc-heading {
+    background-color: #244D4D;
+    color: white;
+
+}
+
+.toc-mobile {
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+    background-color: #E1EDED;
+    border-left: 1px solid #E1EDED;
+    border-right: 1px solid #E1EDED;
+}
+
+.toc-mobile .toc-heading i.left {
+    position: absolute;
+    left: 12px;
+    top: 7px;
+}
+
+.toc-mobile .toc-heading i.right {
+    position: absolute;
+    right: 12px;
+    top: 7px;
+}
+
+.toc-mobile .toc-heading:hover {
+    cursor: pointer;
+}
+
+.toc-mobile .toc-heading {
+
+    background-color: #244D4D;
+    color: white;
+    border: 1px solid #244D4D;
+    border-bottom: none;
+
+    text-align: center;
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+    font-size: 1.2em;
+
+    position: relative;
+    margin-bottom: 0;
+    padding: 5px;
+
+}
+
+.toc-mobile .items li:first-child {
+    /*margin-top: 0;*/
+}
+.toc-mobile .items li {
+	font-size: 1.1em;
+    margin-top: 8px;
+}
+.toc-mobile .items {
+    display: none;
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+.toc-heading {
+    background-color: #406C6C;
+    color: white;
+}
+
+.docs-page .toc {
+	position: absolute;
+	right: 0px;
+	padding: 12px;
+	width: 180px;
+	background-color: #e1eded;
+	color: #244d4d;
+	border: 1px solid #244d4d;
+	border-right: none;
+
+	/*border-radius: 0 0 35px 0;*/
+	/*-webkit-border-radius: 0 0 35px 0;*/
+	/*-moz-border-radius: 0 0 35px 0;*/
+	/*-moz-box-shadow: 3px 3px 5px #bebebe;*/
+	/*-webkit-box-shadow: 3px 3px 5px #bebebe;*/
+	box-shadow: 3px 3px 5px #bebebe;
+}
+
+.docs-page .toc.sticky {
+	position: fixed;
+	top: 30px;
+}
+
+.docs-page .toc .heading {
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-size: 1.3em;
+}
+
+.docs-page code {
+	line-height: 22px;
+	background-color: transparent;
+}
+
+.docs-page h1, .docs-page h2, .docs-page h3 {
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+}
+
+.docs-page .anchor {
+	font-size: 0.5em;
+}
+
+.docs-page p + h1 {
+	margin-top: 20px;
+}
+
+.docs-page h1 {
+	margin-bottom: 5px;
+}
+
+#page-content .docs-page section {
+	padding: 15px 15px 50px 15px;
+	margin-left: 0;
+	width: 97%;
+	border: 1px solid #9f9f9f;
+    position: relative;
+}
+
+.docs-page section a.next-article i {
+	margin-top: 2px;
+}
+.docs-page section a.next-article.top {
+	position: absolute;
+	top: 33px;
+	right: 16px;
+	font-size: 1.2em;
+}
+.docs-page section a.next-article.bottom {
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+	font-size: 1.2em;
+}
+
+.docs-page section a.prev-article i {
+	margin-top: 2px;
+}
+
+.docs-page section a.prev-article {
+	position: absolute;
+	bottom: 12px;
+	left: 12px;
+	font-size: 1.2em;
+}
+
+#page-content pre {
+	padding: 0 0 0 12px;
+	margin: 5px 5px 5px 0;
+}
+#page-content code {
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+
+#page-content pre, #page-content code {
+	line-height: 15px;
+}
+
+p.section-title span {
+	margin-left: 12px;
+}
+
+p.section-title {
+	font-size: 1.3em;
+	/*background-color: #404040;*/
+	background-color: #E1EDED;
+	color: #244D4D;
+	padding: 5px;
+	margin-top: 12px;
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+}
+
+.toc-container {
+	right: -60px;
+	top: 0px;
+	display: none;
+	/*margin: 12px 180px 0 0;*/
+	margin-left: 0 !important;
+	position: absolute;
+}
+
+/*@media only screen and (orientation: portrait) {*/
+	/* Hide the TOC when your screen is smaller than the TOC width. */
+	/*.toc-container .toc {*/
+        /*display: none;*/
+	/*}*/
+/**/
+    /*.toc-mobile {*/
+        /*display: block;*/
+    /*}*/
+	/**/
+	/*#page-content .docs-page article {*/
+		/*width: 95%;*/
+	/*}*/
+	
+}

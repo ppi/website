@@ -6,3 +6,12 @@ community:
         
     twitterUsernames:
         - ppi_framework
+        
+docs:
+    pages:
+        - getting-started
+        - application
+        - controllers
+        - modules
+        - routing
+        - templating

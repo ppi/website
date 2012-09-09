@@ -22,4 +22,6 @@ Projects:
     pattern:  /projects
     defaults: { _controller: "Application:Index:projects"}
     
-    
+DocsViewFile:
+    pattern:  /docs/{page}.html
+    defaults: { _controller: "Application:Docs:index"}
