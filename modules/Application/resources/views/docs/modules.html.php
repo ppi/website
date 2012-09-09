@@ -1,6 +1,7 @@
 <?php $view->extend('::base.html.php'); ?>
 
 <?php $view['slots']->start('include_css'); ?>
+<link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
 <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
 <?php $view['slots']->stop(); ?>
 
@@ -31,7 +32,7 @@
 
             <h1>PPI Modules</h1>
 
-            <a class="next-article top btn btn-green" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
+            <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'routing'));?>">Routing <i class="icon-arrow-right icon-white"></i></a>
 
             <p id='introduction' class="section-title">Introduction</p>
 
@@ -173,8 +174,8 @@ class Module extends BaseModule {
                 <p>Lets move onto the <b>Routing</b> section to check out what happens next.</p>
             </article>
 
-            <a class="prev-article btn btn-green" href="application.html"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
-            <a class="next-article bottom btn btn-green" href="routing.html">Routing <i class="icon-arrow-right icon-white"></i></a>
+            <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
+            <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'routing'));?>">Routing <i class="icon-arrow-right icon-white"></i></a>
 
         </section>
 

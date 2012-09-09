@@ -1,6 +1,7 @@
 <?php $view->extend('::base.html.php'); ?>
 
 <?php $view['slots']->start('include_css'); ?>
+<link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
 <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
 <?php $view['slots']->stop(); ?>
 

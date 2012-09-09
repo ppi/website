@@ -1,6 +1,7 @@
 <?php $view->extend('::base.html.php'); ?>
 
 <?php $view['slots']->start('include_css'); ?>
+<link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
 <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
 <?php $view['slots']->stop(); ?>
 
@@ -26,7 +27,7 @@
 
 		<section class='content'>
 
-			<a class="next-article top btn btn-green" href="<?=$baseUrl;?>docs/application.html">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
+			<a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
 
 			<h1>Getting Started</h1>
 
@@ -43,13 +44,13 @@
 
 				<p class="section-title" id='downloading-ppi'>Downloading PPI</p>
 
-				<p>You can download the ppi skeletonaapp from the <a href="<?=$baseUrl;?>" title="Homepage">Homepage</a>. If you just want everything in one folder ready to go, you should choose the <b>"ppi skeletonapp with vendors"</b> option. If you are comfortable with using <b>git</b> then you can download the <b>"skeleton app without vendors"</b> option and run <b>composer install</b> yourself.</p>
+				<p>You can download the ppi skeletonaapp from the <a href="<?=$view['router']->generate('Homepage');?>" title="Homepage">Homepage</a>. If you just want everything in one folder ready to go, you should choose the <b>"ppi skeletonapp with vendors"</b> option. If you are comfortable with using <b>git</b> then you can download the <b>"skeleton app without vendors"</b> option and run <b>composer install</b> yourself.</p>
 
 				<p id='system-requirements' class="section-title">System requirements</p>
 				<p>A web server with its rewrite module enabled. (mod_rewrite for apache)</p>
 				<p>PPI needs <b>5.3.3</b> or above. The recommended version by symfony is <b>5.3.10</b> or above.</p>
 
-			<a class="next-article bottom btn btn-green" href="<?=$baseUrl;?>docs/application.html">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
+			<a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
 
 		</section>
 

@@ -1,6 +1,7 @@
 <?php $view->extend('::base.html.php'); ?>
 
 <?php $view['slots']->start('include_css'); ?>
+<link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
 <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
 <?php $view['slots']->stop(); ?>
 
@@ -419,7 +420,7 @@ class Blog extends BaseController {
 
 </code></pre>
 
-<a class="prev-article btn btn-green" href="routing.html"><i class="icon-arrow-left icon-white"></i> Routing</a>
+<a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'routing'));?>"><i class="icon-arrow-left icon-white"></i> Routing</a>
 
 </section>
 

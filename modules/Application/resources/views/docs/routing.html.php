@@ -1,6 +1,7 @@
 <?php $view->extend('::base.html.php'); ?>
 
 <?php $view['slots']->start('include_css'); ?>
+<link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
 <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
 <?php $view['slots']->stop(); ?>
 
@@ -28,7 +29,7 @@
 
 <section>
     
-<a class="next-article top btn btn-green" href="controllers.html">Controllers <i class="icon-arrow-right icon-white"></i></a>
+<a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'controllers'));?>">Controllers <i class="icon-arrow-right icon-white"></i></a>
 
 <h1>Routing</h1>
 
@@ -150,8 +151,8 @@ Blog_EditSave:
 </code></pre>
 
     
-<a class="prev-article btn btn-green" href="modules.html"><i class="icon-arrow-left icon-white"></i> Modules</a>
-<a class="next-article bottom btn btn-green" href="controllers.html">Controllers <i class="icon-arrow-right icon-white"></i></a>
+<a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'modules'));?>"><i class="icon-arrow-left icon-white"></i> Modules</a>
+<a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'controllers'));?>">Controllers <i class="icon-arrow-right icon-white"></i></a>
                 
 
 </section>

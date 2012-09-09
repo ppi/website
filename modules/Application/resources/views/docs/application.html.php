@@ -1,6 +1,7 @@
 <?php $view->extend('::base.html.php'); ?>
 
 <?php $view['slots']->start('include_css'); ?>
+<link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
 <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
 <?php $view['slots']->stop(); ?>
 
@@ -32,8 +33,7 @@
 
             <h1>The Skeleton Application</h1>
 
-            <a class="next-article top btn btn-green" href="modules.html">Modules <i
-                class="icon-arrow-right icon-white"></i></a>
+            <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'modules'));?>">Modules <i class="icon-arrow-right icon-white"></i></a>
 
             <p class="section-title">What has been already set up for me?</p>
 
@@ -195,8 +195,8 @@ return array(
                 <p>This is where we get stuck into the real details, we're going into the /modules/ folder. Click the next
                     section to proceed</p>
 
-                <a class="prev-article btn btn-green" href="getting-started.html"><i class="icon-arrow-left icon-white"></i> Getting Started</a>
-                <a class="next-article bottom btn btn-green" href="modules.html">Modules <i class="icon-arrow-right icon-white"></i></a>
+                <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'getting-started'));?>"><i class="icon-arrow-left icon-white"></i> Getting Started</a>
+                <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'modules'));?>">Modules <i class="icon-arrow-right icon-white"></i></a>
             </article>
         </section>
     </div>
