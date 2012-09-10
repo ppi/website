@@ -9,18 +9,25 @@
 	background-color: #F9F9F9;
 	display: block;
 	height: 30px;
-	color: #333;
 	font-size: 1.2em;
-	font-family: 'Museo_Slab_500';
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	color: #406C6C;
 	padding-left: 12px;
 	padding-top: 9px;
 }
+
+.community-page h1 {
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	color: #406C6C;
+}
+
 .community-page .left-side nav li:first-child {
 	border-top: 1px solid #C7C7C7
 }
 .community-page .left-side nav li.box .title {
 	font-size: 1.2em;
-	font-family: 'Museo_Slab_500';
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	color: #406C6C;
 }
 .community-page .left-side nav li.box .details a {
 	width: 64px;
