@@ -18,7 +18,7 @@ Contributors:
     pattern:  /contributors
     defaults: { _controller: "Application:Index:contributors"}
     
-Contributors:
+LiveChat:
     pattern:  /live-chat
     defaults: { _controller: "Application:Index:liveChat"}
     
