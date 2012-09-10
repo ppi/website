@@ -1,10 +1,12 @@
 .community-page .left-side {
-    width: 26.05%; /* 250 / 960 */
+    width: 26.05%;
 }
+
 .community-page .left-side nav li a.first:hover {
 	background-color: #ebebeb;
 	text-decoration: none;
 }
+
 .community-page .left-side nav li a.first {
 	background-color: #F9F9F9;
 	display: block;
@@ -24,6 +26,7 @@
 .community-page .left-side nav li:first-child {
 	border-top: 1px solid #C7C7C7
 }
+
 .community-page .left-side nav li.box .title {
 	font-size: 1.2em;
 	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
@@ -43,9 +46,11 @@
 	height: 40px;
 	position: relative;
 }
+
 .community-page .left-side nav li.box input {
 	height: 30px;
 }
+
 .community-page .left-side nav li.box.newsletter-box .form #newsletter-email {
 	float: left;
 	width: 173px;
@@ -75,16 +80,14 @@
 	
 }
 
-
 .community-page .content-box {
-float: left;
-width: 71.95833333333333%;
-padding-left: 18px;
-border-left: none;
-position: relative;
-margin-bottom: 25px;
+	float: left;
+	width: 71.95833333333333%;
+	padding-left: 18px;
+	border-left: none;
+	position: relative;
+	margin-bottom: 25px;
 }
-
 
 .community-page .breadcrumb {
 	background: none;

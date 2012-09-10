@@ -1,13 +1,12 @@
 <?php $view->extend('::base.html.php'); ?>
 
 <?php $view['slots']->start('include_css'); ?>
-<link href="<?=$view['assets']->getUrl('css/blog.css');?>" rel="stylesheet">
-<?php $view['slots']->stop(); ?>  
-
+<link href="<?=$view['assets']->getUrl('mod/blog/blog.css');?>" rel="stylesheet">
+<?php $view['slots']->stop(); ?>
 
 <?php $view['slots']->start('include_js_body'); ?>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/mustache.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/blog.js');?>"></script>
+<script type="text/javascript" src="<?=$view['assets']->getUrl('mod/blog/blog.js');?>"></script>
 <?php $view['slots']->stop(); ?>
 
 <div id="blog-index" class="clearfix">

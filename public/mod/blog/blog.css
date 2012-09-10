@@ -95,7 +95,7 @@
 	list-style-type: none;
 	border-bottom: 1px solid #E2E2E2;
 	padding: 4px 6px 8px 16px;
-	background: url(../images/sprite-arrow.png) no-repeat scroll -48px 7px transparent;
+	background: url(../../images/sprite-arrow.png) no-repeat scroll -48px 7px transparent;
 }
 #blog-index .right-side ul {
 	margin-left: 0;
