@@ -22,6 +22,10 @@ Projects:
     pattern:  /projects
     defaults: { _controller: "Application:Index:projects"}
     
+NewsletterSubmit:
+    pattern:  /newsletter_submit
+    defaults: { _controller: "Application:Index:newsletterSubmit"}
+    
 DocsViewFile:
     pattern:  /docs/{page}.html
     defaults: { _controller: "Application:Docs:index"}

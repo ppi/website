@@ -13,3 +13,10 @@ BlogTagView:
 BlogGetPopular:
     pattern:  /blog/get_popular_tags
     defaults: { _controller: "Application:Blog:getPopularTags"}
+    
+BlogGetRelatedPosts:
+    pattern:  /blog/get_related_posts
+    defaults: { _controller: "Application:Blog:getRelatedPosts"}
+    requirements:
+        _method: POST
+        

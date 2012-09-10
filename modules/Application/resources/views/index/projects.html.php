@@ -1,5 +1,9 @@
 <?php $view->extend('::base.html.php'); ?>
 
+<?php $view['slots']->start('include_js_body'); ?>
+<script type="text/javascript" src="<?=$view['assets']->getUrl('js/community.js');?>"></script>
+<?php $view['slots']->stop(); ?>
+
 <div class="projects-page community-page">
 	<div class="left-side">
 <!--	--><?php //include_once($viewDir . 'community/elements/leftnav.php'); ?>

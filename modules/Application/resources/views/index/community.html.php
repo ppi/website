@@ -2,7 +2,11 @@
 
 <?php $view['slots']->start('include_css'); ?>
 <link href="<?=$view['assets']->getUrl('css/community.css');?>" rel="stylesheet">
-<?php $view['slots']->stop(); ?>   
+<?php $view['slots']->stop(); ?> 
+
+<?php $view['slots']->start('include_js_body'); ?>
+<script type="text/javascript" src="<?=$view['assets']->getUrl('js/community.js');?>"></script>
+<?php $view['slots']->stop(); ?>
 
 <div class="community-page">
 	<div class="left-side">

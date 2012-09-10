@@ -5,6 +5,10 @@
 <link href="<?=$view['assets']->getUrl('css/contributors.css');?>" rel="stylesheet">
 <?php $view['slots']->stop(); ?>
 
+<?php $view['slots']->start('include_js_body'); ?>
+<script type="text/javascript" src="<?=$view['assets']->getUrl('js/community.js');?>"></script>
+<?php $view['slots']->stop(); ?>
+
 <div class="contributors-page community-page">
     <div class="left-side">
     <?=$view->render('Application:index:community_leftnav.html.php');?>

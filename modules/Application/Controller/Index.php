@@ -47,11 +47,42 @@ class Index extends SharedController
         $filtered = false;
         return $this->render('Application:index:community.html.php', compact('activity', 'filtered'));
     }
+    
+    public function newsletterSubmitAction()
+    {
+        $emailAddress = $this->post('email');
+        $name = $this->post('name');
+
+        if(empty($emailAddress) || empty($name) || !filter_var($emailAddress, FILTER_VALIDATE_EMAIL)) {
+           die(json_encode('E_INVALID')); 
+        }
+        
+        $ns = $this->getNewsletterStorage();
+        
+        // Duplication check
+        if($ns->existsByEmail($emailAddress)) {
+            die(json_encode('E_DUPLICATE'));
+        }
+        
+        $ns->create($name, $emailAddress);
+        
+        die(json_encode('OK'));
+    }
 
     protected function getUserStorage()
     {
         return new \UserModule\Storage\User($this->getService('DataSource'));
     }
+    
+    /**
+      * Get the news letter storage
+      * 
+      * @return \Application\Storage\NewsletterEntry
+      */
+     public function getNewsletterStorage() {
+         return new \Application\Storage\NewsletterEntry($this->getService('DataSource'));
+     }
+
     
     protected function getProjects()
     {
