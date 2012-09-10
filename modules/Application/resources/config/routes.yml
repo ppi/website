@@ -18,6 +18,10 @@ Contributors:
     pattern:  /contributors
     defaults: { _controller: "Application:Index:contributors"}
     
+Contributors:
+    pattern:  /live-chat
+    defaults: { _controller: "Application:Index:liveChat"}
+    
 Projects:
     pattern:  /projects
     defaults: { _controller: "Application:Index:projects"}
