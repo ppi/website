@@ -143,7 +143,7 @@ LOCK TABLES `newsletter_entries` WRITE;
 INSERT INTO `newsletter_entries` (`id`,`name`,`email`,`created_time`)
 VALUES
 	(4,'Paul Dragoonis','paul@ppi.io',1347272504),
-	(5,'Paul Dragoonis','paul-d@ppi.io',1347272608),
+	(5,'Paul Dragoonis','paul-d@ppi.io',1347272608);
 
 /*!40000 ALTER TABLE `newsletter_entries` ENABLE KEYS */;
 UNLOCK TABLES;
