@@ -69,7 +69,6 @@
                 <li class="ajax-loader"></li>
             </ul>
         </div>
-
         
         <div class="section">
             <h3>Popular Tags</h3>
