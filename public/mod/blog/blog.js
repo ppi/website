@@ -1,5 +1,7 @@
 jQuery(document).ready(function ($) {
-
+	
+	var postID = $('#related-posts-content').attr('data-rel');
+	
     $.get(ppi.baseUrl + 'blog/get_popular_tags', {}, function (response) {
 
         var content;
@@ -23,6 +25,19 @@ jQuery(document).ready(function ($) {
         }
 
         $('#recent-comments-content').html(content);
+
+    }, 'json');
+    
+    $.get(ppi.baseUrl + 'blog/get_related_posts/' + postID, {}, function (response) {
+
+        var content;
+        if (response.posts.length == 0) {
+            content = '<li><p>No Related Posts</p></li>';
+        } else {
+            content = Mustache.render($('#related-posts-template').html(), response);
+        }
+
+        $('#related-posts-content').html(content);
 
     }, 'json');
 

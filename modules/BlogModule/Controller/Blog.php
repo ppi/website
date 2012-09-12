@@ -83,9 +83,46 @@ class Blog extends SharedController
         return json_encode(array('tags' => $response));
 
     }
+    
+    public function getRelatedPostsAction()
+    {
+        $postID   = $this->getRouteParam('postID');
+        
+        $cache    = $this->getService('blog.cache');
+        $cacheKey = 'related_posts_' . $postID;
+        if($cache->contains($cacheKey)) {
+            $posts = $cache->fetch($cacheKey);
+        } else {
+            $storage  = $this->getBlogStorage();
+            $tagStorage = $this->getBlogPostTagStorage();
+            $posts = $storage->getRelatedPostsByTag($postID, $tagStorage);
+            $cache->save($cacheKey, $posts, 86400);
+        }
+        
+        $response = array('posts' => array());
+        foreach ($posts as $post) {
+            $title = $post->getTitle();
+            
+            $routeParams = array(
+                'postID' => $post->getID(),
+                'title' => $this->normalisePostTitleLink($title),
+            );
+            
+            $response['posts'][] = array(
+                'link' => $postUrl = $this->generateUrl('BlogView', $routeParams),
+                'title' => $title,
+            );
+        }
+        
+        return json_encode($response);
+    }
 
     public function tagviewAction() {
         return $this->indexAction($this->getRouteParam('tagID'));
+    }
+    
+    protected function normalisePostTitleLink($title) {
+        return strtolower(str_replace(' ', '-', $title));
     }
     
     protected function getRecentCommentsAmount()
