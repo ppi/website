@@ -83,45 +83,46 @@ class Blog extends SharedController
         return json_encode(array('tags' => $response));
 
     }
-    
+
+    /**
+     * Get the related posts for the specified routeParam('postID')
+     * 
+     * @return string
+     */
     public function getRelatedPostsAction()
     {
-        $postID   = $this->getRouteParam('postID');
+        $bs   = $this->getBlogStorage();
+        $post = $bs->getByID($this->getRouteParam('postID'));
         
-        $cache    = $this->getService('blog.cache');
-        $cacheKey = 'related_posts_' . $postID;
-        if($cache->contains($cacheKey)) {
-            $posts = $cache->fetch($cacheKey);
-        } else {
-            $storage  = $this->getBlogStorage();
-            $tagStorage = $this->getBlogPostTagStorage();
-            $posts = $storage->getRelatedPostsByTag($postID, $tagStorage);
-            $cache->save($cacheKey, $posts, 86400);
-        }
+        $relatedPostsHelper = new \BlogModule\Classes\RelatedPosts(
+            $this->getService('blog.cache'), $bs, $this->getBlogPostTagStorage()
+        );
+
+        $relatedPosts = $relatedPostsHelper->getRelatedPosts($post);
         
         $response = array('posts' => array());
-        foreach ($posts as $post) {
-            $title = $post->getTitle();
+        foreach ($relatedPosts as $relatedPost) {
             
-            $routeParams = array(
-                'postID' => $post->getID(),
-                'title' => $this->normalisePostTitleLink($title),
-            );
+            $relatedTitle = $relatedPost->getTitle();
             
-            $response['posts'][] = array(
-                'link' => $postUrl = $this->generateUrl('BlogView', $routeParams),
-                'title' => $title,
-            );
+            $postLink = $this->generateUrl('BlogView', array(
+                'postID' => $relatedPost->getID(),
+                'title'  => $this->normalizePostTitleLink($relatedTitle),
+            ));
+            
+            $response['posts'][] = array('link'  => $postLink, 'title' => $relatedTitle);
         }
         
         return json_encode($response);
     }
 
-    public function tagviewAction() {
+    public function tagviewAction()
+    {
         return $this->indexAction($this->getRouteParam('tagID'));
     }
     
-    protected function normalisePostTitleLink($title) {
+    protected function normalizePostTitleLink($title)
+    {
         return strtolower(str_replace(' ', '-', $title));
     }
     

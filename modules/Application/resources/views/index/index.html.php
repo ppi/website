@@ -52,9 +52,9 @@
 				<p class="desc">ppi itself is a composer package, and all of its dependencies are also composer packages. installation has never been so easy!</p>
 			</li>
 			<li style="margin-right: 0;">
-				<a class="icon" href="<?=$view['router']->generate('Homepage');?>" title=""><img src="<?=$view['assets']->getUrl('images/community2.png');?>" alt="Icon"></a>
-				<a class="title" href="<?=$view['router']->generate('Homepage');?>" title="">Our community rocks</a>
-				<p class="desc">Our <a href="<?=$view['router']->generate('Homepage');?>community" title="Community">Community</a> page gives you access to what's going on in the PPI eco-system.</p>
+				<a class="icon" href="<?=$view['router']->generate('Community');?>" title=""><img src="<?=$view['assets']->getUrl('images/community2.png');?>" alt="Icon"></a>
+				<a class="title" href="<?=$view['router']->generate('Community');?>" title="">Our community rocks</a>
+				<p class="desc">Our <a href="<?=$view['router']->generate('Community');?>" title="Community">Community</a> page gives you access to what's going on in the PPI eco-system.</p>
 			</li>
 			
 		</ul>
