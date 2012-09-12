@@ -28,6 +28,13 @@ jQuery(document).ready(function ($) {
 		$.scrollTo($(this).attr('href'), 800,{offset: {top:-55, left:0} });
 	});
 	
+	$('.toc-mobile a').click(function(e) {
+		e.preventDefault();
+		var scroll = document.body.scrollTop;
+		window.location.hash = $(this).attr('href').substr(1);
+		document.body.scrollTop = scroll;
+	});
+	
 	if(window.location.hash != '') {
 
 		var hash = window.location.hash;

@@ -57,7 +57,7 @@
 #page-content .top .intro {
 	width: 931px;
 	margin: 0px auto -1px auto;
-	padding: 20px 12px 12px 20px;
+	padding: 25px 12px 25px 20px;
 	background-color: #F9F9F0;
 	z-index: 10;
 	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
@@ -121,16 +121,50 @@
 	/*background-color: #eaeaea;*/
 	position: relative;
 	width: 965px;
-	margin-bottom: 0px;
 	z-index: 1000;
+	margin: 25px 0 25px 0;
 	
 }
+
+#page-content .top
+{
+  	position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+#page-content .top:before, #page-content .top:after
+{
+	content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+#page-content .top:after
+{
+	right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
 #page-content .middle .heading {
 	font-size: 2.0em;
 	position: absolute;
-	top: 20px;
+	top: 27px;
 	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
-	left: 35px;
+	left: 23px;
 	color: #4C7F7F;
 }
 #page-content .middle .list li .desc {
@@ -140,7 +174,7 @@
 }
 #page-content .middle .list li .icon {
 	float: left;
-	margin-left: -50px;
+	margin-left: -61px;
 }
 #page-content .middle .list li .title {
 	color: #565656;
@@ -155,21 +189,23 @@
 	width: 245px;
 	height: 85px;
 	margin-right: 5px;
+	margin-bottom: 30px;
 	padding: 12px 0px 12px 67px;
 }
 #page-content .middle .list {
+	margin-top: 25px;
 	list-style-type: none;
 	height: 290px;
 	margin-left: 0;
 	position: absolute;
-	left: 12px;
+	left: 13px;
 	top: 50px;
 }
 #page-content .middle .download-count {
 	position: absolute;
 	text-align: right;
-	top: 20px;
-	right: 12px;
+	top: 27px;
+	right: 32px;
 	width: 300px;
 	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 	font-size: 1.8em;
@@ -181,7 +217,7 @@
 	background-color: #F9F9F0;
 	border: 1px solid #e5e5e5;
 	position: relative;
-	height: 285px;
+	height: 400px;
 }
 #page-content .bottom .fork {
 	position: absolute;
@@ -243,7 +279,7 @@
 
 #home-page {
 	width: 967px;
-	margin: 0 auto;
+	margin: 0 auto 25px auto;
 }
 
 #home-page .buttons ul.dropdown-menu a:hover {
