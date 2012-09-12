@@ -7,6 +7,7 @@ class RecentComments {
     public $cache = null;
     
     const DEFAULT_RECENT_COMMENTS_COUNT = 5;
+    const DEFAULT_DESC_TRUNCATION_LENGTH = 20;
 
     public function __construct($cache)
     {
@@ -33,7 +34,7 @@ class RecentComments {
                     $recentComments[] = array(
                         'title'         => (string) $entry->title,
                         'link'          => (string) $entry->link,
-                        'description'   => strip_tags((string) $entry->description),
+                        'description'   => $this->prepareDesc((string) $entry->description),
                         'pubDate'       => (string) $entry->pubDate
                     );
                 }
@@ -45,6 +46,22 @@ class RecentComments {
 
         return $recentComments;
 
+    }
+
+    /**
+     * Prepare the description, strip out tags and perform truncation
+     * 
+     * @param $desc
+     * @return string
+     */
+    protected function prepareDesc($desc)
+    {
+        
+        $desc = html_entity_decode(strip_tags($desc), ENT_QUOTES, 'UTF-8');
+        if(mb_strlen($desc) > 60) {
+            $desc = mb_substr($desc, 0, 60) . ' ...';
+        }
+        return $desc;
     }
 
 }
