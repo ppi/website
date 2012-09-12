@@ -102,7 +102,9 @@ class Blog extends SharedController
         
         $response = array('posts' => array());
         foreach ($relatedPosts as $relatedPost) {
-            $relatedTitle = $post->getTitle();
+            
+            $relatedTitle = $relatedPost->getTitle();
+            
             $postLink = $this->generateUrl('BlogView', array(
                 'postID' => $relatedPost->getID(),
                 'title'  => $this->normalizePostTitleLink($relatedTitle),

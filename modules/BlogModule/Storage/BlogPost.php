@@ -5,7 +5,8 @@ namespace BlogModule\Storage;
 use BlogModule\Storage\Base as BaseStorage;
 use BlogModule\Entity\BlogPost as BlogPostEntity;
     
-class BlogPost extends BaseStorage {
+class BlogPost extends BaseStorage
+{
     
     protected $_meta = array(
         'conn'      => 'main',
@@ -22,7 +23,8 @@ class BlogPost extends BaseStorage {
      * @param string $email
      * @return integer
      */
-    public function create($title, $content) {
+    public function create($title, $content)
+    {
         
         if(!isset($data['date_created'])) {
             $data['date_created'] = time();
@@ -41,7 +43,8 @@ class BlogPost extends BaseStorage {
      * @return array
      * @throws \Exception When no rows exist
      */
-    public function getAllPublished() {
+    public function getAllPublished()
+    {
         
         $rows = $this->_conn->createQueryBuilder()
             ->select('bp.*')
@@ -63,7 +66,8 @@ class BlogPost extends BaseStorage {
         
     }
     
-    public function getByID($id) {
+    public function getByID($id)
+    {
         
         $row = $this->_conn->createQueryBuilder()
             ->select('bp.*')
@@ -80,7 +84,8 @@ class BlogPost extends BaseStorage {
         
     }
     
-    public function getRelatedPostsByTag($id, $blogPostTagStorage) {
+    public function getRelatedPostsByTag($id, $blogPostTagStorage)
+    {
         
         $tags = $blogPostTagStorage->getTagsByPostID($id);
         
@@ -99,7 +104,8 @@ class BlogPost extends BaseStorage {
         return $related;
     }
     
-    public function getTagsGroupedByPostID($posts, $blogPostTagStorage) {
+    public function getTagsGroupedByPostID($posts, $blogPostTagStorage)
+    {
         
         $map = array();
         foreach($posts as $post) {

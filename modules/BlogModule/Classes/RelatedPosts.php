@@ -19,7 +19,7 @@ class RelatedPosts {
     public function getRelatedPosts($post)
     {
         
-        $cacheKey = 'related_posts_' . $post->getID();
+        $cacheKey = 'blog_related_posts_' . $post->getID();
         if($this->cache->contains($cacheKey)) {
             $posts = $this->cache->fetch($cacheKey);
         } else {
