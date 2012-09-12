@@ -80,6 +80,25 @@ class BlogPost extends BaseStorage {
         
     }
     
+    public function getRelatedPostsByTag($id, $blogPostTagStorage) {
+        
+        $tags = $blogPostTagStorage->getTagsByPostID($id);
+        
+        $related = array();
+        foreach ($tags as $tag) {
+            $posts = $blogPostTagStorage->getPostsByTagID($tag->getTagID());
+            foreach ($posts as $post) {
+                $postID = $post->getID();
+                if ($id == $postID) {
+                    continue;
+                }
+                $related[$post->getID()] = $post;
+            }
+        }
+        
+        return $related;
+    }
+    
     public function getTagsGroupedByPostID($posts, $blogPostTagStorage) {
         
         $map = array();

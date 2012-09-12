@@ -73,7 +73,10 @@
 			<ul id="recent-comments-content"></ul>
 		</div>
 
-
+        <div class="section">
+			<h3>Related Posts</h3>
+			<ul id="related-posts-content" data-rel="<?=$post->getID();?>"></ul>
+		</div>
 		
 	</div>
 	
@@ -94,3 +97,10 @@
 {{/comments}}
 </script>
 
+<script type="text/template" id="related-posts-template">
+{{#posts}}
+<li>
+    <a href="{{link}}" title="{{title}}">{{title}}</a>
+</li>
+{{/posts}}
+</script>

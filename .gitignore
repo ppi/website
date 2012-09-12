@@ -1,0 +1,9 @@
+# Eclipse meta files
+.buildpath
+.project
+.settings
+
+composer.lock
+
+vendor/
+app/cache/

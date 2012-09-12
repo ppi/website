@@ -1,26 +1,24 @@
 Blog:
     pattern:  /blog
-    defaults: { _controller: "Application:Blog:index"}
+    defaults: { _controller: "BlogModule:Blog:index"}
+    
+BlogGetRelatedPosts:
+    pattern:  /blog/get_related_posts/{postID}
+    defaults: { _controller: "BlogModule:Blog:getRelatedPosts"}
     
 BlogView:
     pattern:  /blog/{postID}/{title}
-    defaults: { _controller: "Application:Blog:view"}
+    defaults: { _controller: "BlogModule:Blog:view"}
     
 BlogTagView:
     pattern:  /blog/tag/{tagID}/{title}
-    defaults: { _controller: "Application:Blog:tagview"}
+    defaults: { _controller: "BlogModule:Blog:tagview"}
     
 BlogGetPopular:
     pattern:  /blog/get_popular_tags
-    defaults: { _controller: "Application:Blog:getPopularTags"}
+    defaults: { _controller: "BlogModule:Blog:getPopularTags"}
 
 BlogGetRecentComments:
     pattern:  /blog/get_recent_comments
-    defaults: { _controller: "Application:Blog:getRecentComments"}
+    defaults: { _controller: "BlogModule:Blog:getRecentComments"}
     
-BlogGetRelatedPosts:
-    pattern:  /blog/get_related_posts
-    defaults: { _controller: "Application:Blog:getRelatedPosts"}
-    requirements:
-        _method: POST
-        
