@@ -17,10 +17,10 @@ Community:
 Contributors:
     pattern:  /contributors
     defaults: { _controller: "Application:Index:contributors"}
-    
-LiveChat:
-    pattern:  /live-chat
-    defaults: { _controller: "Application:Index:liveChat"}
+
+Chat:
+    pattern:  /chat
+    defaults: { _controller: "Application:Index:Chat"}
     
 Projects:
     pattern:  /projects

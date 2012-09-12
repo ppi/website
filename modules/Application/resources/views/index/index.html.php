@@ -64,8 +64,8 @@
 		<p class="header">Community</p>
 		<ul class="list">
 			<li>
-				<a class="icon" target="_blank" href="<?=$view['router']->generate('Homepage');?>live-chat" title=""><img src="<?=$view['assets']->getUrl('images/chat.png');?>" alt="Icon"></a>
-				<a class="title" target="_blank" href="<?=$view['router']->generate('Homepage');?>live-chat" title="IRC Chat">IRC</a>
+				<a class="icon" target="_blank" href="<?=$view['router']->generate('Chat');?>" title=""><img src="<?=$view['assets']->getUrl('images/chat.png');?>" alt="Icon"></a>
+				<a class="title" target="_blank" href="<?=$view['router']->generate('Chat');?>" title="IRC Chat">IRC</a>
 				<p class="desc">Chat with the ppi community at #ppi on freenode.</p>
 			</li>
 			<li>

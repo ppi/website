@@ -31,7 +31,7 @@ class Index extends SharedController
         return $this->render('Application:index:contributors.html.php');
     }
     
-    public function liveChatAction()
+    public function ChatAction()
     {
         return $this->render('Application:index:livechat.html.php');
     }
