@@ -50,6 +50,7 @@ class Blog extends SharedController
     {
         $recentCommentsHelper = new \BlogModule\Classes\RecentComments($this->getService('blog.cache'));
         $recentComments       = $recentCommentsHelper->getComments();
+        $recentComments       = array_slice($recentComments, 0, $this->getRecentCommentsAmount());
 
         return json_encode(array('comments' => $recentComments));
     }
@@ -85,6 +86,14 @@ class Blog extends SharedController
 
     public function tagviewAction() {
         return $this->indexAction($this->getRouteParam('tagID'));
+    }
+    
+    protected function getRecentCommentsAmount()
+    {
+        $config = $this->getConfig();
+        return isset($config['blog']['numRecentComments']) 
+            ? $config['blog']['numRecentComments'] 
+            : \BlogModule\Classes\RecentComments::DEFAULT_RECENT_COMMENTS_COUNT;
     }
 
     protected function getBlogStorage() {

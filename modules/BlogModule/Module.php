@@ -22,16 +22,16 @@ class Module extends BaseModule
     {
         return $this->loadYamlRoutes(__DIR__ . '/resources/config/routes.yml');
     }
-
+    
     /**
      * Get the configuration for this module
      *
      * @return array
      */
-//    public function getConfig()
-//    {
-//        return $this->loadYamlConfig(__DIR__ . '/resources/config/config.yml');
-//    }
+    public function getConfig()
+    {
+        return $this->loadYamlConfig(__DIR__ . '/resources/config/config.yml');
+    }
     
     public function getServiceConfig()
     {

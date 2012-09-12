@@ -17,8 +17,6 @@ BlogGetPopular:
 BlogGetRecentComments:
     pattern:  /blog/get_recent_comments
     defaults: { _controller: "Application:Blog:getRecentComments"}
-
-
     
 BlogGetRelatedPosts:
     pattern:  /blog/get_related_posts

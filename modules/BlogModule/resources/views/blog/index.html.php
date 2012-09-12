@@ -70,6 +70,11 @@
 			<h3>Popular Tags</h3>
 			<ul id="popular-tags-content"></ul>
 		</div>
+        
+        <div class="section">
+			<h3>Recent Comments</h3>
+			<ul id="recent-comments-content"></ul>
+		</div>
 		
 	</div>
 	
@@ -79,4 +84,13 @@
 {{#tags}}
 <li><a href="{{link}}" title="{{title}}">{{title}} ({{count}})</a></li>
 {{/tags}}
+</script>
+
+<script type="text/template" id="recent-comments-template">
+{{#comments}}
+<li>
+    <a href="{{link}}" title="{{title}}">{{title}}</a>
+    <p>{{description}}</p>
+</li>
+{{/comments}}
 </script>
