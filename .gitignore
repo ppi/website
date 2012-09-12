@@ -3,4 +3,7 @@
 .project
 .settings
 
+composer.lock
+
 vendor/
+app/cache/
