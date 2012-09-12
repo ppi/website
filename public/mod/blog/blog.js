@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
 
     }, 'json');
 
-    $.get(ppi.baseUrl + 'blog/get_recent_comments', {}, function (response) {
+    $.get(ppi.baseUrl + 'blog/get_recent_com,ments', {}, function (response) {
 
         var content;
         if (response.comments.length == 0) {
