@@ -97,6 +97,10 @@
 	padding: 4px 6px 8px 16px;
 	background: url(../../images/sprite-arrow.png) no-repeat scroll -48px 7px transparent;
 }
+#blog-index .right-side ul li.ajax-loader {
+	background: url(../../images/ajax-loader.gif) top center no-repeat;
+	height:16px;
+}
 #blog-index .right-side ul {
 	margin-left: 0;
 }

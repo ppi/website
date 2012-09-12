@@ -68,12 +68,16 @@
 		
 		<div class="section">
 			<h3>Popular Tags</h3>
-			<ul id="popular-tags-content"></ul>
+			<ul id="popular-tags-content">
+			    <li class="ajax-loader"></li>
+			</ul>
 		</div>
         
         <div class="section">
 			<h3>Recent Comments</h3>
-			<ul id="recent-comments-content"></ul>
+			<ul id="recent-comments-content">
+			    <li class="ajax-loader"></li>
+			</ul>
 		</div>
 		
 	</div>
