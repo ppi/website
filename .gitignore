@@ -1,0 +1,6 @@
+# Eclipse meta files
+.buildpath
+.project
+.settings
+
+vendor/
