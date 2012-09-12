@@ -20,7 +20,7 @@ Contributors:
 
 Chat:
     pattern:  /chat
-    defaults: { _controller: "Application:Index:Chat"}
+    defaults: { _controller: "Application:Index:chat"}
     
 Projects:
     pattern:  /projects
