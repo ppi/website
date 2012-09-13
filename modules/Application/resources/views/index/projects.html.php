@@ -5,9 +5,9 @@
 <?php $view['slots']->stop(); ?>
 
 <div class="projects-page community-page">
-	<div class="left-side">
-<!--	--><?php //include_once($viewDir . 'community/elements/leftnav.php'); ?>
-	</div>
+    <div class="left-side">
+        <?=$view->render('Application:index:community_leftnav.html.php');?>
+    </div>
 	<div class="content-box">
 		
 		<ul class="breadcrumb">
