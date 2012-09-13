@@ -7,7 +7,9 @@
 
 <?php $view['slots']->start('include_js_body'); ?>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/highlight.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollto.min.js');?>"></script>
+<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollto.js');?>"></script>
+<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.localscroll.js');?>"></script>
+<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.serialScroll.min.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/docs.js');?>"></script>
 <?php $view['slots']->stop(); ?>  
 

@@ -193,6 +193,7 @@
 
 p.section-title span {
 	margin-left: 12px;
+	display: none;
 }
 
 p.section-title {
