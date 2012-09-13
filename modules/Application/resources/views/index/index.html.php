@@ -23,8 +23,8 @@
 		</div>
 	</div>
 	<div class="middle">
-		<p class="heading">what is ppi made of?</p>
-		<p class="download-count">downloaded <b><?=$downloadCount;?></b> times</p>
+		<p class="heading">What is ppi made of?</p>
+		<p class="download-count">Downloaded <b><?=$downloadCount;?></b> times</p>
 		<ul class="list">
 			<li>
 				<a class="icon" href="<?=$view['router']->generate('Homepage');?>docs/modules.html" title=""><img src="<?=$view['assets']->getUrl('images/components.png');?>" alt="Icon"></a>
