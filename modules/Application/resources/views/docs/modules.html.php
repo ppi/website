@@ -13,8 +13,6 @@
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/docs.js');?>"></script>
 <?php $view['slots']->stop(); ?>  
 
-
-
 <div class="continer-fluid content-box docs-page">
 
     <div class="toc-mobile">

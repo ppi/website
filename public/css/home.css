@@ -58,11 +58,20 @@
 	width: 931px;
 	margin: 0px auto -1px auto;
 	padding: 25px 12px 25px 20px;
-	background-color: #F9F9F0;
 	z-index: 10;
 	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 	border: 1px solid #E5E5E5;
 	border-bottom: none;
+	
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	
 }
 
 #page-content .top .get-ppi-now .icon {

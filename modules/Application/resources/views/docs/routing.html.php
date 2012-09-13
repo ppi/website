@@ -13,8 +13,6 @@
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/docs.js');?>"></script>
 <?php $view['slots']->stop(); ?>  
 
-
-
 <div class="continer-fluid content-box docs-page">
     
     <div class="toc-mobile">
@@ -87,13 +85,13 @@
             
             <p class="section-title" id="basic-routes">Basic Routes</p>
             <pre><code>
-            Homepage:
-                pattern: /
-                defaults: { _controller: "Application:Index:index"}
-                
-            Blog_Index:
-                pattern: /blog
-                defaults: { _controller: "Application:Blog:index"}
+Homepage:
+    pattern: /
+    defaults: { _controller: "Application:Index:index"}
+    
+Blog_Index:
+    pattern: /blog
+    defaults: { _controller: "Application:Blog:index"}
                 
             </code></pre>
             
@@ -103,17 +101,17 @@
                 URL was <b>/blog/using-ppi2</b> then the <b>title</b> variable gets the value <b>using-ppi2</b>, which
                 you can see being used in the Example Controller section below.</p>
             <pre><code>
-            Blog_Show:
-                pattern: /blog/{title}
-                defaults: { _controller: "Application:Blog:show"}
+Blog_Show:
+    pattern: /blog/{title}
+    defaults: { _controller: "Application:Blog:show"}
                 
             </code></pre>
             
             <p>This example optionally looks for the {pageNum} parameter, if it's not found it defaults to 1</p>
             <pre><code>
-            Blog_Show:
-                pattern: /blog/{pageNum}
-                defaults: { _controller: "Application:Blog:index", pageNum: 1}
+Blog_Show:
+    pattern: /blog/{pageNum}
+    defaults: { _controller: "Application:Blog:index", pageNum: 1}
             
             </code></pre>
             
@@ -122,34 +120,34 @@
             <p>Only form submits using POST will trigger this route. This means you dont have to check this kind of
                 stuff in your controller.</p>
             <pre><code>
-            Blog_EditSave:
-                pattern: /blog/edit/{id}
-                defaults: { _controller: "Application:Blog:edit"}
-                requirements:
-                _method: POST
+Blog_EditSave:
+    pattern: /blog/edit/{id}
+    defaults: { _controller: "Application:Blog:edit"}
+    requirements:
+        _method: POST
                 
             </code></pre>
             
             <p>Checking if the {pageNum} parameter is numerical. Checking if the {lang} parameter is <b>en</b> or
                 <b>de</b></b></del></p>
             <pre><code>
-            Blog_Show:
-                pattern: /blog/{lang}/{pageNum}
-                defaults: { _controller: "Application:Blog:index", pageNum: 1, lang: en}
-                requirements:
-                id: \d+
-                lang: en|de
-                
+Blog_Show:
+    pattern: /blog/{lang}/{pageNum}
+    defaults: { _controller: "Application:Blog:index", pageNum: 1, lang: en}
+    requirements:
+        id: \d+
+        lang: en|de
+    
             </code></pre>
             
             <p>Checking if the page is a POST request, and that {id} is numerical</p>
             <pre><code>
-            Blog_EditSave:
-                pattern: /blog/edit/{id}
-                defaults: { _controller: "Application:Blog:edit"}
-                requirements:
-                _method: POST
-                id: \d+
+Blog_EditSave:
+    pattern: /blog/edit/{id}
+    defaults: { _controller: "Application:Blog:edit"}
+    requirements:
+        _method: POST
+        id: \d+
                 
             </code></pre>
             
