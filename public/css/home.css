@@ -12,7 +12,7 @@
 
 #page-content .top .intro .buttons a {
 	font-size: 1.2em;
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 
 #page-content .top .intro .docs-button {
@@ -44,14 +44,15 @@
 	margin: 20px auto 0 auto;
 	text-align: center;
 	width: 635px;
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
-
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
+
 #page-content .top .intro .heading {
 	font-size: 2.7em;
+	font-weight: bold;
 	color: #406C6C;
 	text-align: center;
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 
 #page-content .top .intro {
@@ -59,7 +60,7 @@
 	margin: 0px auto -1px auto;
 	padding: 25px 12px 25px 20px;
 	z-index: 10;
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 	border: 1px solid #E5E5E5;
 	border-bottom: none;
 	
@@ -79,7 +80,7 @@
 	height: 30px;
 	width: 105px;
 	font-size: 1.5em;
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans','Helvetica Neue',Helvetica,Arial,serif;
 	padding-top: 15px;
 	position: absolute;
 	left: 63px;
@@ -89,7 +90,7 @@
 #page-content .top .get-ppi-now .list a {
 	color: #4C7F7F;
 	font-size: 1.3em;
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans','Helvetica Neue',Helvetica,Arial,serif;
 }
 #page-content .top .get-ppi-now .list li:first-child {
 	margin-bottom: 5px;
@@ -172,7 +173,7 @@
 	font-size: 2.0em;
 	position: absolute;
 	top: 27px;
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 	left: 23px;
 	color: #4C7F7F;
 }
@@ -188,7 +189,7 @@
 #page-content .middle .list li .title {
 	color: #565656;
 	font-size: 1.4em;
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	display: block;
@@ -216,7 +217,7 @@
 	top: 27px;
 	right: 32px;
 	width: 300px;
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 	font-size: 1.8em;
 	color: #4C7F7F;
 }
@@ -244,7 +245,7 @@
 }
 #page-content .bottom .list li .title {
 	color: #FFFFFF;
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 	font-size: 1.3em;
 }
 #page-content .bottom .list li .desc {
@@ -268,7 +269,7 @@
 #page-content .bottom .header {
 	font-size: 2.3em;
 	top: 20px;
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 	color: #FFFFFF;
 	left: 110px;
 	position: absolute;

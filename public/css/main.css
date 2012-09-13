@@ -6,6 +6,20 @@
 	src: url('fonts/Museo_Slab_500.ttf') format('truetype');
 }
 
+/* Font Face */
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/EFpQQyG9GqCrobXxL-KRMXbFhgvWbfSbdVg11QabG8w.woff) format('woff');
+}
+
 
 @font-face {
 	font-family: "Museo_Slab_500";
@@ -49,7 +63,7 @@ body a {
 
 
 a, p {
-	font-family: "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+ font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 
 #wrapper {
@@ -118,7 +132,7 @@ body {
 	text-shadow: none;
 	height: 30px;
 	color: white;
-    font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 
 #header .dropdown-menu li a:hover {
@@ -199,6 +213,7 @@ div.navbar .nav .active > a, div.navbar .nav .active > a:hover {
 
 #header .nav {
 	width: 700px;
+	left: 15px;
 }
 
 #header div.inside {
