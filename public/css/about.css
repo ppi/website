@@ -8,6 +8,10 @@
 	padding: 12px 12px 0 12px;
 }
 
+.about-page ul li {
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+}
+
 .about-page ul {
 	margin-left: 18px;
 }
