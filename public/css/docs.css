@@ -128,6 +128,7 @@
 
 .docs-page h1, .docs-page h2, .docs-page h3 {
 	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+	font-weight: normal;
 }
 
 .docs-page .anchor {
