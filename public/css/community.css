@@ -12,15 +12,16 @@
 	display: block;
 	height: 30px;
 	font-size: 1.2em;
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans','Helvetica Neue',Helvetica,Arial,serif;
 	color: #406C6C;
 	padding-left: 12px;
 	padding-top: 9px;
 }
 
 .community-page h1 {
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans','Helvetica Neue',Helvetica,Arial,serif;
 	color: #406C6C;
+	font-weight: normal;
 }
 
 .community-page .left-side nav li:first-child {
@@ -29,7 +30,7 @@
 
 .community-page .left-side nav li.box .title {
 	font-size: 1.2em;
-	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	font-family: 'Droid Sans','Helvetica Neue',Helvetica,Arial,serif;
 	color: #406C6C;
 }
 .community-page .left-side nav li.box .details a {

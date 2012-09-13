@@ -38,7 +38,7 @@
 
             <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'modules'));?>">Modules <i class="icon-arrow-right icon-white"></i></a>
 
-            <p class="section-title">What has been already set up for me?</p>
+<!--            <p class="section-title">What has been already set up for me?</p>-->
 
                 <p class="section-title" id='app-structure'>Application File Structure</p>
 
@@ -103,9 +103,6 @@ include('app/init.php');
 $app = new PPI\App();
 $app->moduleConfig = include 'app/modules.config.php';
 $app->config = include 'app/app.config.php';
-
-// Do you want twig engine enabled?
-//$app->templatingEngine = 'twig';
 
 // If you are using the DataSource component, enable this
 //$app->useDataSource = true;
