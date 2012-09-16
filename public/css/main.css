@@ -44,7 +44,6 @@
 	font-style: normal;
 }
 
-
 @font-face {
 	font-family: 'FertigoProRegular';
 	src: url('../fonts/fertigo-pro-webfont.eot');
@@ -61,8 +60,7 @@ body a {
 	color: #406C6C;
 }
 
-
-a, p {
+button, a, p {
  font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 
@@ -155,11 +153,9 @@ body {
 }
 
 div.navbar .nav .active > a, div.navbar .nav .active > a:hover {
-
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#284545', endColorstr='#406c6c'); /* for IE */
     background: -webkit-gradient(linear, left top, left bottom, from(#284545), to(#406c6c)); /* for webkit browsers */
     background: -moz-linear-gradient(top,  #284545,  #406c6c); /* for firefox 3.6+ */
-
 }
 
 .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
@@ -271,7 +267,6 @@ footer .logo {
 }
 
 footer {
-
 	padding-left: 30px;
 	padding-top: 16px;
 	height: 60px;
