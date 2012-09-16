@@ -17,7 +17,7 @@
 						<li><a href="#download" id="download-skeleton-with-vendors">Skeleton App (with vendors) .tar.gz 20MB</a></li>
 					</ul>
 				</div>
-				<a class="main-button docs-button btn btn-large" href="<?=$view['router']->generate('Homepage');?>docs">Documentation</a>
+				<a class="main-button docs-button btn btn-large" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'getting-started'));?>">Documentation</a>
 				<a class="main-button github-button btn btn-large" href="http://www.github.com/ppi">GitHub</a>
 			</div>
 		</div>
