@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
             name  = $.trim($el.find('.name').val());
 
         field.popover({
-            position: 'left',
+            placement: 'top',
             trigger: 'manual',
             content: msg,
             title: title
