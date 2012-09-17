@@ -19,8 +19,6 @@ jQuery(document).ready(function($) {
 			title: title
 		});
 		
-		console.log(ppi.baseUrl + 'newsletter_submit');
-		
 		$.post(ppi.baseUrl + 'newsletter_submit', {email: email, name: name}, function(response) {
 		
 			switch(response) {

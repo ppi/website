@@ -33,13 +33,11 @@ jQuery(document).ready(function($) {
             name  = $.trim($el.find('.name').val());
 
         field.popover({
-            position: 'right',
+            position: 'left',
             trigger: 'manual',
             content: msg,
             title: title
         });
-
-        console.log(ppi.baseUrl + 'newsletter_submit');
 
         $.post(ppi.baseUrl + 'newsletter_submit', {email: email, name: name}, function(response) {
 
