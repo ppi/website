@@ -121,6 +121,12 @@ class Blog extends SharedController
         return $this->indexAction($this->getRouteParam('tagID'));
     }
     
+    
+    public function getRSS()
+    {
+        
+    }
+    
     protected function normalizePostTitleLink($title)
     {
         return strtolower(str_replace(' ', '-', $title));
@@ -145,5 +151,7 @@ class Blog extends SharedController
     protected function getBlogPostTagStorage() {
         return new \BlogModule\Storage\BlogPostTag($this->getService('datasource'));
     }
+    
+    
 
 }

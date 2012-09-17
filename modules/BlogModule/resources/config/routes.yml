@@ -22,3 +22,6 @@ BlogGetRecentComments:
     pattern:  /blog/get_recent_comments
     defaults: { _controller: "BlogModule:Blog:getRecentComments"}
     
+BlogGetPopular:
+    pattern:  /blog/get_rss
+    defaults: { _controller: "BlogModule:Blog:getRSS"}
