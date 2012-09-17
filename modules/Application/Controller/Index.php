@@ -79,12 +79,13 @@ class Index extends SharedController
         return new \UserModule\Storage\User($this->getService('DataSource'));
     }
     
-    /**
+     /**
       * Get the news letter storage
       * 
       * @return \Application\Storage\NewsletterEntry
       */
-     public function getNewsletterStorage() {
+     public function getNewsletterStorage()
+     {
          return new \Application\Storage\NewsletterEntry($this->getService('DataSource'));
      }
 
@@ -139,7 +140,8 @@ class Index extends SharedController
      * 
      * @return \Application\Classes\DownloadCounter
      */
-    protected function getDownloadCounterHelper() {
+    protected function getDownloadCounterHelper()
+    {
         return new \Application\Classes\DownloadCounter($this->getService('community.cache'));
     }
 
