@@ -123,11 +123,10 @@
             <p class="title">PPI Newsletter</p>
 
             <form action="#submit" class="newsletter-form" method="post">
-                <p><input name="name" type="text" class="name" id="newsletterName" placeholder='Name'></p>
-
-                <p><input name="email" type="text" class="email" id="newsletterEmail" placeholder='E-mail'></p>
-                <input type="submit" class="btn success submit" href="<?= $view['router']->generate('Chat'); ?>"
-                       target="_blank" value="Subscribe to the newsletter">
+                <p><label for="newsletterName">Name</label><input name="name" type="text" class="name" id="newsletterName" placeholder='Name'></p>
+                <p><label for="newsletterEmail">Email</label><input name="email" type="text" class="email" id="newsletterEmail" placeholder='E-mail'></p>
+                
+                <input type="submit" class="btn success submit" href="<?= $view['router']->generate('Chat'); ?>" target="_blank" value="Subscribe to the newsletter">
             </form>
         </div>
     </div>

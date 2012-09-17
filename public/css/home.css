@@ -272,14 +272,29 @@
 
 #page-content .bottom .newsletter {
     position: absolute;
-    top: 30px;
+    top: 12px;
     left: 720px;
 }
 
 #page-content .bottom .newsletter .title {
     color: #fff;
-    font-size: 1.15em;
-    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#page-content .newsletter-box input[type="text"] {
+	width: 158px;
+	height: 22px;
+	margin-left: 5px;
+}
+
+#page-content .newsletter-box .submit {
+	width: 218px;
+}
+#page-content .newsletter-box label {
+	float: left;
+	margin-top: 5px;
+	color: #fff;
+	width: 40px;
 }
 
 #page-content .bottom .header {
