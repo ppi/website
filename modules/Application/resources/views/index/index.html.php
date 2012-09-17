@@ -23,6 +23,7 @@
 		</div>
 	</div>
 	<div class="middle">
+        
 		<p class="heading">What is ppi made of?</p>
 		<p class="download-count">Downloaded <b><?=$downloadCount;?></b> times</p>
 		<ul class="list">
@@ -56,9 +57,17 @@
 				<a class="title" href="<?=$view['router']->generate('Community');?>" title="">Our community rocks</a>
 				<p class="desc">Our <a href="<?=$view['router']->generate('Community');?>" title="Community">Community</a> page gives you access to what's going on in the PPI eco-system.</p>
 			</li>
-			
 		</ul>
 	</div>
+    
+    <div class="whos-using-ppi">
+        <p class="heading">Who's using PPI Framework?</p>
+        <ul class="clearfix">
+            <li><a href="http://www.bestbuys.com" title="BestBuys" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/bestbuys.png');?>" alt="" width="150"></a></li>
+            <li><a href="http://store.tomorrowland.com" title="Tomorrowland" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/tomorrowland.png');?>" alt="" width="180"></a></li>
+        </ul>
+    </div>
+    
 	<div class="bottom">
 		<a class="fork" href="http://www.github.com/ppi/website" title="Fork me on github"><img src="<?=$view['assets']->getUrl('images/fork-me.png');?>" alt="Fork me on github"></a>
 		<p class="header">Community</p>

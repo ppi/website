@@ -79,15 +79,15 @@ class Index extends SharedController
         return new \UserModule\Storage\User($this->getService('DataSource'));
     }
     
-     /**
-      * Get the news letter storage
-      * 
-      * @return \Application\Storage\NewsletterEntry
-      */
-     public function getNewsletterStorage()
-     {
-         return new \Application\Storage\NewsletterEntry($this->getService('DataSource'));
-     }
+    /**
+     * Get the news letter storage
+     * 
+     * @return \Application\Storage\NewsletterEntry
+     */
+    public function getNewsletterStorage()
+    {
+        return new \Application\Storage\NewsletterEntry($this->getService('DataSource'));
+    }
 
     
     protected function getProjects()

@@ -298,3 +298,76 @@
 #home-page .buttons ul.dropdown-menu a:hover {
 	background-color: #51A351;
 }
+
+
+
+
+/* ****************
+ * WHOS USING PPI *
+ * ****************/
+
+.whos-using-ppi {
+	margin-bottom: 12px;
+	margin-top: 12px;
+	width: 951px;
+	background-color: #F9F9F0;
+	border: 1px solid #e5e5e5;
+	position: relative;
+	height: 80px;
+	padding-top: 12px;
+	padding-left: 12px;
+}
+
+.whos-using-ppi ul {
+	margin-left: 0;
+}
+
+.whos-using-ppi li:first-child {
+	margin-left: 0
+}
+.whos-using-ppi li {
+	float: left;
+	list-style-type: none;
+	margin-left: 12px;
+}
+
+.whos-using-ppi .heading {
+	font-size: 2.0em;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+	left: 23px;
+	color: #4C7F7F;
+	margin-bottom: 12px;
+}
+
+.whos-using-ppi img {
+	filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+    opacity:0.4;
+}
+
+.whos-using-ppi img:hover{
+	filter: none;
+    -webkit-filter: grayscale(0);
+     -webkit-animation: who-opac 1s forwards;
+     -moz-animation:    who-opac 1s forwards;
+     -ms-animation:     who-opac 1s forwards;
+     -o-animation:      who-opac 1s forwards;
+}
+
+@-webkit-keyframes who-opac {
+	0%   { opacity:0.4; }
+	100% { opacity: 1; }
+}
+@-moz-keyframes who-opac {
+	0%   { opacity:0.4; }
+	100% { opacity: 1; }
+}
+@-ms-keyframes who-opac {
+	0%   { opacity:0.4; }
+	100% { opacity: 1; }
+}
+@-o-keyframes who-opac {
+	0%   { opacity:0.4; }
+	100% { opacity: 1; }
+}
