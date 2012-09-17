@@ -119,10 +119,10 @@
             </li>
         </ul>
 
-        <div class="newsletter">
+        <div class="newsletter newsletter-box">
             <p class="title">PPI Newsletter</p>
 
-            <form action="#submit" method="post">
+            <form action="#submit" class="newsletter-form" method="post">
                 <p><input name="name" type="text" class="name" id="newsletterName" placeholder='Name'></p>
 
                 <p><input name="email" type="text" class="email" id="newsletterEmail" placeholder='E-mail'></p>

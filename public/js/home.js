@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
-    $('.newsletter-box').find('form').submit(function(e) {
+    $('.newsletter-form').submit(function(e) {
 
         e.preventDefault();
 
