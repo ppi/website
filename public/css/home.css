@@ -257,18 +257,31 @@
 	font-size: 0.9em;
 }
 #page-content .bottom .list li {
-	width: 167px;
+	width: 140px;
 	float: left;
-	margin-right: 30px;
+	margin-right: 5px;
 	padding: 12px 0px 12px 70px;
 }
 #page-content .bottom .list {
 	position: absolute;
 	list-style-type: none;
 	margin-left: 0;
-	left: 100px;
+	left: 50px;
 	top: 60px;
 }
+
+#page-content .bottom .newsletter {
+    position: absolute;
+    top: 30px;
+    left: 720px;
+}
+
+#page-content .bottom .newsletter .title {
+    color: #fff;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
 #page-content .bottom .header {
 	font-size: 2.3em;
 	top: 20px;
@@ -279,7 +292,7 @@
 }
 #page-content .bottom {
 	width: 965px;
-	height: 180px; 
+	height: 220px;
 	position: relative;
 	background-color: #406C6C;
 
