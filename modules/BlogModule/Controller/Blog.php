@@ -122,9 +122,19 @@ class Blog extends SharedController
     }
     
     
-    public function getRSS()
+    public function getRSSAction()
     {
-        
+        $rssHelper = new \BlogModule\Classes\GenerateRSS(
+            $this->getCache(), 
+            $this->getBlogStorage(),
+            $this->getService('router')
+        );
+        $rssData = $rssHelper->getRSSData();
+        $rssBaseLink = $this->generateUrl('BlogGetRSS');
+        $content = $this->render('BlogModule:blog:rss.xml.php', compact('rssData', 'rssBaseLink'));
+//        die($content);
+        $this->getService('response')->headers->set('Content-Type', 'text/xml');
+        return $content;
     }
     
     protected function normalizePostTitleLink($title)

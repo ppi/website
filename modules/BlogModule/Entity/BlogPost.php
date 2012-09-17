@@ -30,6 +30,10 @@ class BlogPost {
 	public function getTitle() {
 		return $this->_title;
 	}
+    
+    public function getTitleForLink() {
+        return strtolower(str_replace(' ', '-', $this->getTitle()));
+    }
 	
 	public function getShortContent() {
 		$content = explode('[split]', $this->getContent());

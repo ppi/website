@@ -102,5 +102,15 @@ class Shared extends BaseController
     {
         $this->getService('templating')->addGlobal($param, $value);
     }
+
+    /**
+     * Get the blog cache
+     * 
+     * @return object
+     */
+    protected function getCache()
+    {
+        return $this->getService('blog.cache');
+    }
     
 }
