@@ -131,7 +131,6 @@
             </form>
         </div>
     </div>
-
 </div> <!-- /#home-page -->
 
 
