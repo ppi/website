@@ -87,6 +87,15 @@
 
         </ul>
     </div>
+    
+    <div class="whos-using-ppi">
+        <p class="heading">Who's using PPI Framework?</p>
+        <ul class="clearfix">
+            <li><a href="http://www.bestbuys.com" title="BestBuys" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/bestbuys.png');?>" alt="" width="150"></a></li>
+            <li><a href="http://store.tomorrowland.com" title="Tomorrowland" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/tomorrowland.png');?>" alt="" width="180"></a></li>
+        </ul>
+    </div>
+    
     <div class="bottom">
         <a class="fork" href="http://www.github.com/ppi/website" title="Fork me on github"><img
                 src="<?=$view['assets']->getUrl('images/fork-me.png');?>" alt="Fork me on github"></a>
@@ -107,15 +116,6 @@
                 <a class="title" target="_blank" href="http://www.github.com/ppi" title="GitHub">GitHub</a>
 
                 <p class="desc">The easiest way to contribute to ppi is to fork us on GitHub</p>
-            </li>
-            <li>
-                <a class="icon" target="_blank" href="http://stackoverflow.com/questions/tagged/ppi"
-                   title="StackOverflow" style="margin-top: -3px;"><img
-                        src="<?=$view['assets']->getUrl('images/stackoverflow.png');?>" alt="Icon"></a>
-                <a class="title" target="_blank" href="http://stackoverflow.com/questions/tagged/ppi"
-                   title="StackOverflow">StackOverflow</a>
-
-                <p class="desc">Share your knowledge by answering user questions about ppi.</p>
             </li>
         </ul>
 

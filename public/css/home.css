@@ -257,7 +257,7 @@
 	font-size: 0.9em;
 }
 #page-content .bottom .list li {
-	width: 140px;
+	width: 175px;
 	float: left;
 	margin-right: 5px;
 	padding: 12px 0px 12px 70px;
@@ -266,7 +266,7 @@
 	position: absolute;
 	list-style-type: none;
 	margin-left: 0;
-	left: 50px;
+	left: 86px;
 	top: 60px;
 }
 
