@@ -246,6 +246,7 @@ class Blog extends BaseController {
 
 
 <p class="section-title" id='using-the-router'>Using the router helper</p>
+<p>Coming soon..</p>
 
     
 <!--<a class="next-article bottom btn btn-green" href="controllers.html">Controllers <i class="icon-arrow-right icon-white"></i></a>-->
