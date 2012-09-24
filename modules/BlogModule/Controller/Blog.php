@@ -132,7 +132,6 @@ class Blog extends SharedController
         $rssData = $rssHelper->getRSSData();
         $rssBaseLink = $this->generateUrl('BlogGetRSS');
         $content = $this->render('BlogModule:blog:rss.xml.php', compact('rssData', 'rssBaseLink'));
-//        die($content);
         $this->getService('response')->headers->set('Content-Type', 'text/xml');
         return $content;
     }

@@ -1,7 +1,7 @@
 .docs-page {
 	position: relative;
 	background: white;
-	margin-top: 30px;
+	padding-top: 60px;
 	margin-bottom: 30px;
 }
 
@@ -30,96 +30,75 @@
 }
 
 .toc-mobile {
+	display: none;
     margin: 0 auto;
-    position: fixed;
-    bottom: 0;
     z-index: 1000;
     width: 300px;
-    left: 50%;
-    margin-left: -150px;
-    background-color: #E1EDED;
-    border-left: 1px solid #E1EDED;
-    border-right: 1px solid #E1EDED;
+	background-color: #406C6C;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
-.toc-mobile .toc-heading i.left {
+.toc-heading i.left {
     position: absolute;
     left: 12px;
     top: 7px;
 }
 
-.toc-mobile .toc-heading i.right {
+.toc-heading i.right {
     position: absolute;
     right: 12px;
     top: 7px;
 }
 
-.toc-mobile .toc-heading:hover {
+.toc-heading:hover {
     cursor: pointer;
 }
 
-.toc-mobile .toc-heading {
+.toc-heading {
 
-    background-color: #244D4D;
-    color: white;
+    color: black;
     border: 1px solid #244D4D;
     border-bottom: none;
-
+	width: 50px;
+	height:12px;
+	background-color: #406C6C;
+	right: 12px;
+	z-index: 10;
     text-align: center;
 	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
     font-size: 1.2em;
-
-    position: relative;
     margin-bottom: 0;
-    padding: 5px;
+	display: none;
 
 }
 
 .toc-mobile .items li:first-child {
     /*margin-top: 0;*/
 }
+.toc-mobile .heading {
+	margin-top: 70px;
+	margin-left: 22px;
+	color: white;
+	font-size: 2.0em;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+}
+.toc-mobile .items li a {
+	color: white;
+}
+
 .toc-mobile .items li {
 	font-size: 1.1em;
     margin-top: 8px;
 }
 .toc-mobile .items {
-    display: none;
     list-style-type: none;
-    margin-left: 30px;
+    margin-left: 26px;
+	width: 265px;
+	z-index: 100;
 }
 
-.toc-heading {
-    background-color: #406C6C;
-    color: white;
-}
-
-.docs-page .toc {
-	position: absolute;
-	right: 0px;
-	padding: 12px;
-	width: 180px;
-	background-color: #e1eded;
-	color: #244d4d;
-	border: 1px solid #244d4d;
-	border-right: none;
-
-	/*border-radius: 0 0 35px 0;*/
-	/*-webkit-border-radius: 0 0 35px 0;*/
-	/*-moz-border-radius: 0 0 35px 0;*/
-	/*-moz-box-shadow: 3px 3px 5px #bebebe;*/
-	/*-webkit-box-shadow: 3px 3px 5px #bebebe;*/
-	box-shadow: 3px 3px 5px #bebebe;
-}
-
-.docs-page .toc.sticky {
-	position: fixed;
-	top: 30px;
-}
-
-.docs-page .toc .heading {
-	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
-	font-size: 1.3em;
-}
 
 .docs-page code {
 	line-height: 22px;
@@ -143,10 +122,10 @@
 	margin-bottom: 5px;
 }
 
-#page-content .docs-page section {
+#docspage-content .docs-page section {
 	padding: 15px 15px 50px 15px;
 	margin-left: 0;
-	width: 97%;
+	width: 96%;
 	border: 1px solid #9f9f9f;
     position: relative;
 }
@@ -178,17 +157,17 @@
 	font-size: 1.2em;
 }
 
-#page-content pre {
+#docspage-content pre {
 	padding: 0 0 0 12px;
 	margin: 5px 5px 5px 0;
 }
-#page-content code {
+#docspage-content code {
 	background: none;
 	padding: 0;
 	margin: 0;
 }
 
-#page-content pre, #page-content code {
+#docspage-content pre, #docspage-content code {
 	line-height: 15px;
 }
 
@@ -214,20 +193,4 @@ p.section-title {
 	/*margin: 12px 180px 0 0;*/
 	margin-left: 0 !important;
 	position: absolute;
-}
-
-/*@media only screen and (orientation: portrait) {*/
-	/* Hide the TOC when your screen is smaller than the TOC width. */
-	/*.toc-container .toc {*/
-        /*display: none;*/
-	/*}*/
-/**/
-    /*.toc-mobile {*/
-        /*display: block;*/
-    /*}*/
-	/**/
-	/*#page-content .docs-page article {*/
-		/*width: 95%;*/
-	/*}*/
-	
 }

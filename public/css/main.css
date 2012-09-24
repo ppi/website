@@ -238,6 +238,10 @@ div.navbar .nav .active > a, div.navbar .nav .active > a:hover {
 	right: 164px;
 }
 
+#docspage-content {
+	width: 100%;
+}
+
 #page-content {
 	padding-top: 60px;
 	margin: 0 auto;
