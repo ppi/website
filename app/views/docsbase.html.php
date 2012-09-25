@@ -16,14 +16,13 @@
     <meta name="keywords" content="ppi is an open source php meta-framework. we have taken the good bits from Symfony2, ZendFramework2 & Doctrine2 and combined them together to create a solid and very easy web application framework. ppi is fully PSR compliant. ppi can be considered the boilerplate of PHP frameworks">
    	<meta name="author" content="Paul Dragoonis">
     
-    
-    
     <title><?php $view['slots']->output('title', 'PPI Skeleton Application') ?></title>
     
     <!-- CSS Stuff -->
+    <link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/libs/bootstrap.min.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/main.css');?>" rel="stylesheet">
-    <?php $view['slots']->output('include_css'); ?>
+    <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
     <!-- /CSS Stuff -->
     
     <!-- JS Head Stuff -->
@@ -144,8 +143,8 @@
     <script>window.jQuery || document.write('<script src="<?=$view['assets']->getUrl('js/libs/jquery-1.8.0.min.js');?>"><\/script>')</script>
     
     <!-- JS Body Stuff -->
-    <script src="<?=$view['assets']->getUrl('js/libs/bootstrap.min.js');?>"></script>
-    <?php $view['slots']->output('include_js_body'); ?>
+    <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/bootstrap.min.js');?>"></script>
+    <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/highlight.js');?>"></script>
     <!-- /JS Body Stuff -->
 
 </body>

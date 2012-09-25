@@ -13,19 +13,10 @@ jQuery(document).ready(function ($) {
 	
 	var meny = Meny.create({
 		
-		// The element that will be animated in from off screen
-		menuElement: document.querySelector( '.toc-mobile' ),
-
-		// The contents that gets pushed aside while Meny is active
-		contentsElement: document.querySelector( '.docs-page' ),
-
-		// [optional] The alignment of the menu (top/right/bottom/left)
-		position: Meny.getQuery().p || 'right',
-
-		// [optional] The width of the menu (when using left/right position)
+		menuElement: document.querySelector( '.meny' ),
+		contentsElement: document.querySelector( '.contents' ),
+		position: 'right',
 		width: 300,
-
-		// [optional] Distance from mouse (in pixels) when menu should open
 		threshold: 20
 	});
 

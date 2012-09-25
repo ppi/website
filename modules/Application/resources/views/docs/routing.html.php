@@ -1,5 +1,3 @@
-<?php $view->extend('::docsbase.html.php'); ?>
-
 <?php $view['slots']->start('include_css'); ?>
 <link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
 <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
@@ -10,28 +8,8 @@
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollTo.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.serialScroll.min.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.localscroll.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/meny.min.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/docs.js');?>"></script>
 <?php $view['slots']->stop(); ?>  
 
-<div class="toc-mobile">
-
-    <div class="toc-mobile-content">
-        
-        <p class="heading">Table of Contents</p>
-        <ul class="items">
-            <li><a href="#introduction" title="">Introduction</a></li>
-            <li><a href="#details" title="">The Details</a></li>
-            <li><a href="#basic-routes" title="">Basic Routes</a></li>
-            <li><a href="#routes-with-parameters" title="">Routes with parameters</a></li>
-            <li><a href="#routes-with-requirements" title="">Routes with requirements</a></li>
-        </ul>
-        
-    </div>
-    
-</div>
-    
-<div class="continer-fluid content-box docs-page">
 
     <div class="row-fluid docs-content">
     
@@ -165,4 +143,19 @@ Blog_EditSave:
         </section>
     
     </div>
-</div>
+        
+
+
+<!--<div class="toc-mobile meny">-->
+<!--    <div class="toc-mobile-content">-->
+<!--        <p class="heading">Table of Contents</p>-->
+<!--        -->
+<!--        <ul class="items">-->
+<!--            <li><a href="#introduction" title="">Introduction</a></li>-->
+<!--            <li><a href="#details" title="">The Details</a></li>-->
+<!--            <li><a href="#basic-routes" title="">Basic Routes</a></li>-->
+<!--            <li><a href="#routes-with-parameters" title="">Routes with parameters</a></li>-->
+<!--            <li><a href="#routes-with-requirements" title="">Routes with requirements</a></li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</div>-->

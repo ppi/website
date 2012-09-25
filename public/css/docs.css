@@ -29,59 +29,29 @@
 
 }
 
-.toc-mobile {
+.meny {
 	display: none;
-    margin: 0 auto;
-    z-index: 1000;
-    width: 300px;
-	background-color: #406C6C;
+	padding: 20px;
+	overflow: auto;
+	background: #333;
+	color: #eee;
+
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 }
 
-.toc-heading i.left {
-    position: absolute;
-    left: 12px;
-    top: 7px;
-}
-
-.toc-heading i.right {
-    position: absolute;
-    right: 12px;
-    top: 7px;
-}
-
-.toc-heading:hover {
-    cursor: pointer;
-}
-
-.toc-heading {
-
-    color: black;
-    border: 1px solid #244D4D;
-    border-bottom: none;
-	width: 50px;
-	height:12px;
+.toc-mobile {
+	
+	z-index: 1000;
+    width: 300px;
+	height: 100%;
 	background-color: #406C6C;
-	right: 12px;
-	z-index: 10;
-    text-align: center;
-	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
-    margin-bottom: 0;
-	display: none;
-
 }
 
-.toc-mobile .items li:first-child {
-    /*margin-top: 0;*/
-}
 .toc-mobile .heading {
-	margin-top: 70px;
-	margin-left: 22px;
 	color: white;
-	font-size: 2.0em;
+	font-size: 1.9em;
 	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 .toc-mobile .items li a {
@@ -94,7 +64,7 @@
 }
 .toc-mobile .items {
     list-style-type: none;
-    margin-left: 26px;
+    margin-left: 5px;
 	width: 265px;
 	z-index: 100;
 }
@@ -193,4 +163,9 @@ p.section-title {
 	/*margin: 12px 180px 0 0;*/
 	margin-left: 0 !important;
 	position: absolute;
+}
+
+#action-content {
+	height: 100%;
+	min-height: 1000px;
 }

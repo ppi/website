@@ -30,6 +30,10 @@ NewsletterSubmit:
     pattern:  /newsletter_submit
     defaults: { _controller: "Application:Index:newsletterSubmit"}
     
-DocsViewFile:
+DocsIndex:
     pattern:  /docs/{page}.html
     defaults: { _controller: "Application:Docs:index"}
+    
+DocsViewFile:
+    pattern:  /docs/view/{page}.html
+    defaults: { _controller: "Application:Docs:view"}
