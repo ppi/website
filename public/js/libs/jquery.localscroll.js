@@ -110,10 +110,8 @@
 			
 
 		if( e ) {
-			console.log('prevvent');
 			e.preventDefault();
 		}
-			
 
 		var $target = $( settings.target );
 
