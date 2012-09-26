@@ -16,19 +16,6 @@
 	margin-left: 0px;
 }
 
-.toc-mobile.expanded {
-    border-left: 1px solid #244D4D;
-    border-right: 1px solid #244D4D;
-}
-.toc-mobile.expanded .toc-heading i {
-    background-image: url(../images/glyphicons-halflings-white.png);
-}
-.toc-mobile.expanded .toc-heading {
-    background-color: #244D4D;
-    color: white;
-
-}
-
 .meny {
 	display: none;
 	padding: 20px;
@@ -53,6 +40,7 @@
 	color: white;
 	font-size: 1.9em;
 	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+	margin-bottom: 5px;
 }
 .toc-mobile .items li a {
 	color: white;
@@ -60,8 +48,8 @@
 
 .toc-mobile .items li {
 	font-size: 1.1em;
-    margin-top: 8px;
 }
+
 .toc-mobile .items {
     list-style-type: none;
     margin-left: 5px;
@@ -69,6 +57,23 @@
 	z-index: 100;
 }
 
+.toc-mobile .items li {
+	margin: 0;
+}
+
+.toc-mobile .items li a {
+	display: block;
+	padding: 5px;
+}
+
+.toc-mobile .items li a:hover {
+	background-color: #345958;
+	text-decoration: none;
+}
+
+.toc-mobile .items li.active {
+	background-color: #345958;
+}
 
 .docs-page code {
 	line-height: 22px;
