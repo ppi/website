@@ -1,3 +1,11 @@
+/* Font Face */
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+
 .docs-page {
 	position: relative;
 	background: white;
@@ -29,7 +37,6 @@
 }
 
 .toc-mobile {
-	
 	z-index: 1000;
     width: 300px;
 	height: 100%;
@@ -44,10 +51,11 @@
 }
 .toc-mobile .items li a {
 	color: white;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 
 .toc-mobile .items li {
-	font-size: 1.1em;
+	font-size: 1.0em;
 }
 
 .toc-mobile .items {
@@ -153,11 +161,14 @@ p.section-title span {
 
 p.section-title {
 	font-size: 1.3em;
-	/*background-color: #404040;*/
 	background-color: #E1EDED;
 	color: #244D4D;
 	padding: 5px;
 	margin-top: 12px;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+}
+
+.docs-page ul li {
 	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 
