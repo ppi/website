@@ -110,16 +110,16 @@ $app->boot()->dispatch();
             <pre><code>
 &lt;?php
 $config = array(
-'environment' => 'development', // <-- Change this depending on your environment
-'templating.engine' => 'php', // <-- The default templating engine
-'datasource.connections' => include (__DIR__ . '/datasource.config.php')
+    'environment' => 'development', // <-- Change this depending on your environment
+    'templating.engine' => 'php', // <-- The default templating engine
+    'datasource.connections' => include (__DIR__ . '/datasource.config.php')
 );
 
 // Are we in debug mode ?
 if($config['environment'] !== 'development') { // <-- You can also check the env from your controller using
-$this->getEnv()
-$config['debug'] = $config['environment'] === 'development';
-$config['cache_dir'] = __DIR__ . '/cache';
+    $this->getEnv()
+    $config['debug'] = $config['environment'] === 'development';
+    $config['cache_dir'] = __DIR__ . '/cache';
 }
 
 return $config; // Very important
@@ -136,8 +136,8 @@ return $config; // Very important
             <pre><code>
 &lt;?php
 return array(
-'activeModules'   => array('Application', 'User'),
-'listenerOptions' => array('module_paths' => array('./modules'), 'routingEnabled' => true),
+    'activeModules'   => array('Application', 'User'),
+    'listenerOptions' => array('module_paths' => array('./modules'), 'routingEnabled' => true),
 );
         </code></pre>
 
@@ -151,12 +151,12 @@ return array(
 
             <pre><code>
 &lt;html&gt;
-&lt;body&gt;
-&lt;h1&gt;My website&lt;/h1&gt;
-&lt;div class="content"&gt;
-&lt;?php $view['slots']-&gt;output('_content'); ?&gt;
-&lt;/div&gt;
-&lt;/body&gt;
+    &lt;body&gt;
+        &lt;h1&gt;My website&lt;/h1&gt;
+        &lt;div class="content"&gt;
+            &lt;?php $view['slots']-&gt;output('_content'); ?&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
 &lt;/html&gt;
         </code></pre>
 

@@ -48,19 +48,19 @@ $toc = array(
             
         <p><b>Example base template</b></p>
         <pre><code>
-        &lt;!DOCTYPE html&gt;
-        &lt;html&gt;
-            &lt;head&gt;
-                &lt;title&gt;Welcome to Symfony!&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-                &lt;div id="header"&gt;...&lt;/div&gt;
-                &lt;div id="page-content"&gt;
-                    &lt;?php $view['slots']->output('_content'); ?&gt;
-                &lt;/div&gt;
-                &lt;div id="footer"&gt;...&lt;/div&gt;
-            &lt;/body&gt;
-        &lt;/html&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Welcome to Symfony!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="header"&gt;...&lt;/div&gt;
+        &lt;div id="page-content"&gt;
+            &lt;?php $view['slots']->output('_content'); ?&gt;
+        &lt;/div&gt;
+        &lt;div id="footer"&gt;...&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
             
         </code></pre>
             
@@ -74,11 +74,11 @@ $toc = array(
         <p class="section-title" id='extending-base-templates'>Extending Base Templates</p>
         <p>On our first line we extend the base template we want. You can extend literally any template you like by specifying its <b>Module:folder:file.format.engine</b> naming syntax. If you miss out the <b>Module</b> and <b>folder</b> sections, such as <b>::base.html.php</b> then it's going to take the global route of <b>./app/views/</b>.</p>
         <pre><code>
-        &lt;?php $view-&gt;extend('::base.html.php'); ?&gt;
-        &lt;div class="user-registration-page"&gt;
-            &lt;h1&gt;Register for our site&lt;/h1&gt;
-            &lt;form&gt;...&lt;/form&gt;
-        &lt;/div&gt;
+&lt;?php $view-&gt;extend('::base.html.php'); ?&gt;
+&lt;div class="user-registration-page"&gt;
+    &lt;h1&gt;Register for our site&lt;/h1&gt;
+    &lt;form&gt;...&lt;/form&gt;
+&lt;/div&gt;
             
         </code></pre>
         
@@ -86,24 +86,24 @@ $toc = array(
         <p><b>The resulting output</b></p>
         <p>If you remember that the <b>extend</b> call is really just populating a <b>slots</b> section named <b>_content</b> then the injected content into the parent template looks like this.</p>
         <pre><code>
-        &lt;!DOCTYPE html&gt;
-        &lt;html&gt;
-            &lt;head&gt;
-                &lt;title&gt;Welcome to Symfony!&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-                &lt;div id="header"&gt;...&lt;/div&gt;
-                &lt;div id="page-content"&gt;
-            
-                    &lt;div class="user-registration-page"&gt;
-                        &lt;h1&gt;Register for our site&lt;/h1&gt;
-                        &lt;form&gt;...&lt;/form&gt;
-                    &lt;/div&gt;
-            
-                &lt;/div&gt;
-                &lt;div id="footer"&gt;...&lt;/div&gt;
-            &lt;/body&gt;
-        &lt;/html&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Welcome to Symfony!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="header"&gt;...&lt;/div&gt;
+        &lt;div id="page-content"&gt;
+    
+            &lt;div class="user-registration-page"&gt;
+                &lt;h1&gt;Register for our site&lt;/h1&gt;
+                &lt;form&gt;...&lt;/form&gt;
+            &lt;/div&gt;
+    
+        &lt;/div&gt;
+        &lt;div id="footer"&gt;...&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
             
         </code></pre>    
             
@@ -123,43 +123,43 @@ $toc = array(
             
         <p><b>The controller</b></p>
         <pre><code>
-        &lt;?php
-        namespace Application\Controller;
-        
-        use Application\Controller\Shared as BaseController;
-        
-        class Blog extends BaseController {
-        
-            public function showAction() {
-            
-                $blogID = $this->getRouteParam('id');
-                $bs     = $this->getBlogStorage();
-            
-                if(!$bs->existsByID($blogID)) {
-                    $this->setFlash('error', 'Invalid Blog ID');
-                    return $this->redirectToRoute('Blog_Index');
-                }
-            
-                // Get the blog post for this ID
-                $blogPost = $bs->getByID($blogID);
-                
-                // Render our blog post page, passing in our $blogPost article to be rendered
-                $this->render('Application:blog:show.html.php', compact('blogPost'));
-            }
+&lt;?php
+namespace Application\Controller;
+
+use Application\Controller\Shared as BaseController;
+
+class Blog extends BaseController {
+
+    public function showAction() {
+    
+        $blogID = $this->getRouteParam('id');
+        $bs     = $this->getBlogStorage();
+    
+        if(!$bs->existsByID($blogID)) {
+            $this->setFlash('error', 'Invalid Blog ID');
+            return $this->redirectToRoute('Blog_Index');
         }
+    
+        // Get the blog post for this ID
+        $blogPost = $bs->getByID($blogID);
+        
+        // Render our blog post page, passing in our $blogPost article to be rendered
+        $this->render('Application:blog:show.html.php', compact('blogPost'));
+    }
+}
             
         </code></pre>
             
         <p><b>The template</b></p>
         <p>So the name of the template loaded is <b>Application:blog:show.html.php</b> then this is going to translate to <b>./modules/Application/blog/show.html.php</b>. We also passed in a <b>$blogPost</b> variable which can be used locally within the template that you'll see below.</p>
         <pre><code>
-        &lt;?php $view-&gt;extend('::base.html.php'); ?&gt;
-            
-        &lt;div class="blog-post-page"&gt;
-            &lt;h1&gt;&lt;?=$blogPost-&gt;getTitle();?&gt;&lt;/h1&gt;
-            &lt;p class="created-by"&gt;&lt;?=$blogPost-&gt;getCreatedBy();?&gt;&lt;/p&gt;
-            &lt;p class="content"&gt;&lt;?=$blogPost-&gt;getContent();?&gt;&lt;/p&gt;
-        &lt;/div&gt;
+&lt;?php $view-&gt;extend('::base.html.php'); ?&gt;
+    
+&lt;div class="blog-post-page"&gt;
+    &lt;h1&gt;&lt;?=$blogPost-&gt;getTitle();?&gt;&lt;/h1&gt;
+    &lt;p class="created-by"&gt;&lt;?=$blogPost-&gt;getCreatedBy();?&gt;&lt;/p&gt;
+    &lt;p class="content"&gt;&lt;?=$blogPost-&gt;getContent();?&gt;&lt;/p&gt;
+&lt;/div&gt;
             
         </code></pre>
             
@@ -169,34 +169,34 @@ $toc = array(
             
         <p><b>The base template</b></p>
         <pre><code>
-        &lt;!DOCTYPE html&gt;
-        &lt;html&gt;
-            &lt;head&gt;
-                &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
-                &lt;title&gt;&lt;?php $view['slots']-&gt;output('title', 'PPI Skeleton Application') ?&gt;&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-                &lt;div id="page-content"&gt;
-                    &lt;?php $view['slots']-&gt;output('_content') ?&gt;
-                &lt;/div&gt;
-            &lt;/body&gt;
-        &lt;/html&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+        &lt;title&gt;&lt;?php $view['slots']-&gt;output('title', 'PPI Skeleton Application') ?&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="page-content"&gt;
+            &lt;?php $view['slots']-&gt;output('_content') ?&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
             
         </code></pre>
         
         <p><b>The child template</b></p>
         <pre><code>
-            &lt;?php $view-&gt;extend('::base.html.php'); ?&gt;
-                
-            &lt;div class="blog-post-page"&gt;
-                &lt;h1&gt;&lt;?=$blogPost-&gt;getTitle();?&gt;&lt;/h1&gt;
-                &lt;p class="created-by"&gt;&lt;?=$blogPost-&gt;getCreatedBy();?&gt;&lt;/p&gt;
-                &lt;p class="content"&gt;&lt;?=$blogPost-&gt;getContent();?&gt;&lt;/p&gt;
-            &lt;/div&gt;
-                
-            &lt;?php $view['slots']->start('title'); ?&gt;
-            Welcome to the blog page
-            &lt;?php $view['slots']->stop(); ?&gt;
+&lt;?php $view-&gt;extend('::base.html.php'); ?&gt;
+    
+&lt;div class="blog-post-page"&gt;
+    &lt;h1&gt;&lt;?=$blogPost-&gt;getTitle();?&gt;&lt;/h1&gt;
+    &lt;p class="created-by"&gt;&lt;?=$blogPost-&gt;getCreatedBy();?&gt;&lt;/p&gt;
+    &lt;p class="content"&gt;&lt;?=$blogPost-&gt;getContent();?&gt;&lt;/p&gt;
+&lt;/div&gt;
+    
+&lt;?php $view['slots']->start('title'); ?&gt;
+Welcome to the blog page
+&lt;?php $view['slots']->stop(); ?&gt;
             
         </code></pre>
         
@@ -208,26 +208,26 @@ $toc = array(
         <p>Review this example, it's including a few CSS and JS files</p>
         <p>Review this example it shows a few examples of using the slots helper for various different reasons.</p>
         <pre><code>
-        &lt;?php $view-&gt;extend('::base.html.php'); ?&gt;
-            
-        &lt;div class="blog-post-page"&gt;
-            
-            &lt;h1&gt;&lt;?=$blogPost-&gt;getTitle();?&gt;&lt;/h1&gt;
-            
-            &lt;img src="&lt;?=$view['assets']->getUrl('images/blog.png');?&gt;" alt="The Blog Image"&gt;
-            
-            &lt;p class="created-by"&gt;&lt;?=$blogPost-&gt;getCreatedBy();?&gt;&lt;/p&gt;
-            &lt;p class="content"&gt;&lt;?=$blogPost-&gt;getContent();?&gt;&lt;/p&gt;
-            
-            &lt;?php $view['slots']-&gt;start('include_js'); ?&gt;
-            &lt;script type="text/javascript" src="&lt;?=$view['assets']-&gt;getUrl('js/blog.js');?&gt;"&gt;&lt;/script&gt;
-            &lt;?php $view['slots']-&gt;stop(); ?&gt;
-            
-            &lt;?php $view['slots']-&gt;start('include_css'); ?&gt;
-            &lt;link href="&lt;?=$view['assets']-&gt;getUrl('css/blog.css');?&gt;" rel="stylesheet"&gt;
-            &lt;?php $view['slots']-&gt;stop(); ?&gt;
-            
-        &lt;/div&gt;
+&lt;?php $view-&gt;extend('::base.html.php'); ?&gt;
+    
+&lt;div class="blog-post-page"&gt;
+    
+    &lt;h1&gt;&lt;?=$blogPost-&gt;getTitle();?&gt;&lt;/h1&gt;
+    
+    &lt;img src="&lt;?=$view['assets']->getUrl('images/blog.png');?&gt;" alt="The Blog Image"&gt;
+    
+    &lt;p class="created-by"&gt;&lt;?=$blogPost-&gt;getCreatedBy();?&gt;&lt;/p&gt;
+    &lt;p class="content"&gt;&lt;?=$blogPost-&gt;getContent();?&gt;&lt;/p&gt;
+    
+    &lt;?php $view['slots']-&gt;start('include_js'); ?&gt;
+    &lt;script type="text/javascript" src="&lt;?=$view['assets']-&gt;getUrl('js/blog.js');?&gt;"&gt;&lt;/script&gt;
+    &lt;?php $view['slots']-&gt;stop(); ?&gt;
+    
+    &lt;?php $view['slots']-&gt;start('include_css'); ?&gt;
+    &lt;link href="&lt;?=$view['assets']-&gt;getUrl('css/blog.css');?&gt;" rel="stylesheet"&gt;
+    &lt;?php $view['slots']-&gt;stop(); ?&gt;
+    
+&lt;/div&gt;
             
         </code></pre>
             
