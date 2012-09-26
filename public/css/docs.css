@@ -1,7 +1,7 @@
 .docs-page {
 	position: relative;
 	background: white;
-	padding-top: 60px;
+	padding-top: 38px;
 	margin-bottom: 30px;
 }
 
@@ -168,4 +168,8 @@ p.section-title {
 #action-content {
 	height: 100%;
 	min-height: 1000px;
+}
+
+#toc-data {
+	display: none;
 }

@@ -1,32 +1,17 @@
-<?php $view->extend('::base.html.php'); ?>
+<?php
+$toc = array(
+    'downloading-ppi' => 'Downloading PPI',
+    'system-requirements' => 'System Requirements'
+);
+?>
 
-<?php $view['slots']->start('include_css'); ?>
-<link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
-<link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
-<?php $view['slots']->stop(); ?>
-
-<?php $view['slots']->start('include_js_body'); ?>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/highlight.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollTo.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.serialScroll.min.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.localscroll.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/docs.js');?>"></script>
-<?php $view['slots']->stop(); ?>  
-
+<div id="toc-data">
+<?=json_encode($toc);?>
+</div>
 
 <div class="continer-fluid content-box docs-page">
 
 	<div class="row-fluid">
-
-		<div class="toc-mobile">
-			<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
-			<ul class="items">
-				<li><a href="#overview" title="">Overview</a></li>
-				<li><a href="#standing-on-the-shoulders-of-giants" title="">Standing on the shoulders of giants</a></li>
-				<li><a href="#downloading-ppi" title="">Downloading PPI</a></li>
-				<li><a href="#system-requirements" title="">System Requirements</a></li>
-			</ul>
-		</div>
 
 		<section class='content'>
 

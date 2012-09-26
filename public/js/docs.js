@@ -47,5 +47,16 @@ jQuery(document).ready(function ($) {
 
 });
 
-hljs.tabReplace = '    ';
-hljs.initHighlightingOnLoad();
+jQuery('.contents iframe').load(function() {
+	
+	var tocData = $.parseJSON($('.contents iframe').contents().find("#toc-data").html());
+	var tocItems = $('.toc-mobile .items');
+	for(var i in tocData) {
+		tocItems.append('<li><a href="#' + i + '" title="">' + tocData[i] + '</a></li>');
+	}
+
+	
+});
+
+//hljs.tabReplace = '    ';
+//hljs.initHighlightingOnLoad();

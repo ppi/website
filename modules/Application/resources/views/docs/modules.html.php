@@ -1,31 +1,19 @@
-<?php $view->extend('::base.html.php'); ?>
+<?php
+$toc = array(
+    'introduction' => 'Introduction',
+    'module-class' => 'The Module.php class',
+    'init' => 'Init',
+    'configuration' => 'Configuration',
+    'routing' => 'Routing',
+    'conclusion' => 'Conclusion'
+);
+?>
 
-<?php $view['slots']->start('include_css'); ?>
-<link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
-<link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
-<?php $view['slots']->stop(); ?>
+<div id="toc-data">
+<?=json_encode($toc);?>
+</div>
 
-<?php $view['slots']->start('include_js_body'); ?>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/highlight.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollTo.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.serialScroll.min.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.localscroll.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/docs.js');?>"></script>
-<?php $view['slots']->stop(); ?>  
-
-<div class="continer-fluid content-box docs-page">
-
-    <div class="toc-mobile">
-        <p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
-        <ul class="items">
-            <li><a href="#introduction" title="">Introduction</a></li>
-            <li><a href="#module-class" title="">The Module.php class</a></li>
-            <li><a href="#init" title="">Init</a></li>
-            <li><a href="#configuration" title="">Configuration</a></li>
-            <li><a href="#routing" title="">Routing</a></li>
-            <li><a href="#conclusion" title="">Conclusion</a></li>
-        </ul>
-    </div>
+<div class="content-box docs-page">
 
     <div class="row-fluid">
 

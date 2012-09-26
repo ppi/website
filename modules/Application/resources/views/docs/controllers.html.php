@@ -1,40 +1,27 @@
-<?php $view->extend('::base.html.php'); ?>
+<?php
+$toc = array(
+    'introduction' => 'Introduction',
+    'example-controllers' => 'Example controller',
+    'generating-urls-using-routes' => 'Generating urls using routes',
+    'redirecting-to-routes' => 'Redirecting to routes',
+    'post-values' => 'Working with POST values',
+    'query-string-params' => 'Working with QueryString parameters',
+    'server-variables' => 'Working with server variables',
+    'cookie-values' => 'Working with cookies',
+    'session-values' => 'Working with session values',
+    'config-values' => 'Working with the config',
+    'is-method' => 'Working with the is() method',
+    'ip-useragent' => 'Getting the users IP or UserAgent',
+    'flash-messages' => 'Working with flash messages',
+    'get-env' => 'Getting the current environment'
+);
+?>
 
-<?php $view['slots']->start('include_css'); ?>
-<link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
-<link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
-<?php $view['slots']->stop(); ?>
-
-<?php $view['slots']->start('include_js_body'); ?>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/highlight.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollTo.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.serialScroll.min.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.localscroll.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/docs.js');?>"></script>
-<?php $view['slots']->stop(); ?>  
-
-
-<div class="continer-fluid content-box docs-page">
-
-<div class="toc-mobile">
-	<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
-	<ul class="items">
-		<li><a href="#introduction" title="Introduction">Introduction</a></li>
-		<li><a href="#example-controllers" title="Example controller">Example controller</a></li>
-		<li><a href="#generating-urls-using-routes" title="Generating urls using routes">Generating urls using routes</a></li>
-		<li><a href="#redirecting-to-routes" title="Redirecting to routes">Redirecting to routes</a></li>
-		<li><a href="#post-values" title="Working with POST values">Working with POST values</a></li>
-		<li><a href="#query-string-params" title="Working with QueryString parameters">Working with QueryString parameters</a></li>
-		<li><a href="#server-variables" title="Server Variables">Working with server variables</a></li>
-		<li><a href="#cookie-values" title="Working with cookies">Working with cookies</a></li>
-		<li><a href="#session-values" title="Working with session values">Working with session values</a></li>
-		<li><a href="#config-values" title="Working with the config">Working with the config</a></li>
-		<li><a href="#is-method" title="Working with the is() method">Working with the is() method</a></li>
-		<li><a href="#ip-useragent" title="Getting the users IP or UserAgent">Getting the users IP or UserAgent</a></li>
-		<li><a href="#flash-messages" title="Working with flash messages">Working with flash messages</a></li>
-		<li><a href="#get-env" title="Getting the current environment">Getting the current environment</a></li>
-	</ul>
+<div id="toc-data">
+<?=json_encode($toc);?>
 </div>
+    
+<div class="continer-fluid content-box docs-page">
 
 <div class="row-fluid">
 

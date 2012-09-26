@@ -23,6 +23,7 @@
     <link href="<?=$view['assets']->getUrl('css/libs/bootstrap.min.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/main.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
+    
     <!-- /CSS Stuff -->
     
     <!-- JS Head Stuff -->
@@ -70,11 +71,12 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret icon-white"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="<?=$view['router']->generate('Homepage');?>docs/getting-started.html">Getting Started</a></li>
-                                        <li><a href="<?=$view['router']->generate('Homepage');?>docs/application.html">The Skeleton Application</a></li>
-                                        <li><a href="<?=$view['router']->generate('Homepage');?>docs/modules.html">Modules</a></li>
-                                        <li><a href="<?=$view['router']->generate('Homepage');?>docs/routing.html">Routing</a></li>
-                                        <li><a href="<?=$view['router']->generate('Homepage');?>docs/controllers.html">Controllers</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsViewFile', array('page' => 'getting-started'));?>">Getting Started</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>">The Skeleton Application</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsViewFile', array('page' => 'modules'));?>">Modules</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsViewFile', array('page' => 'routing'));?>">Routing</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsViewFile', array('page' => 'controllers'));?>">Controllers</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsViewFile', array('page' => 'templating'));?>">Templating</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -139,12 +141,15 @@
     </script>
     
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-<!--    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="<?=$view['assets']->getUrl('js/libs/jquery-1.8.0.min.js');?>"><\/script>')</script>
     
     <!-- JS Body Stuff -->
     <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/bootstrap.min.js');?>"></script>
     <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/highlight.js');?>"></script>
+    <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollTo.js');?>"></script>
+    <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.serialScroll.min.js');?>"></script>
+    <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.localscroll.js');?>"></script>
     <!-- /JS Body Stuff -->
 
 </body>
