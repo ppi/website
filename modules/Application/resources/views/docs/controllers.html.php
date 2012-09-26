@@ -25,6 +25,8 @@ $toc = array(
 
 <h1>Controllers</h1>
 
+<a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'templating'));?>" title="Templating">Templating <i class="icon-arrow-right icon-white"></i></a>
+
 <p class="section-title" id='introduction'>Introduction</p>
 <p>So what is a controller? A controller is just a PHP class, like any other that you've created before, but the intention of it, is to have a bunch of methods on it called <b>actions</b>. The idea is: each <b>route</b> in your system will execute an <b>action</b> method. Examples of action methods would be your <b>homepage</b> or <b>blog post page</b>. The job of a controller is to perform a bunch of code and respond with some HTTP content to be sent back to the browser. The response could be a HTML page, a JSON array, XML document or to redirect somewhere. Controllers in PPI are ideal for making anything from web services, to web applications, to just simple html-driven websites.</p>
     
@@ -406,6 +408,8 @@ class Blog extends BaseController {
 </code></pre>
 
 <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>"><i class="icon-arrow-left icon-white"></i> Routing</a>
+
+<a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'templating'));?>" title="templating">Templating <i class="icon-arrow-right icon-white"></i></a>
 
 </section>
 
