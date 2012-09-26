@@ -43,7 +43,7 @@
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6. -->
     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
     
-    <div class="topbar clearfix" data-dropdown="dropdown" id="header">
+    <div class="topbar clearfix docs-header" data-dropdown="dropdown" id="header">
         
         <div class="topbar-inner">
             
@@ -68,7 +68,7 @@
     <!--							<li class="--><?//=$request['controller'] == 'blog' ? 'active' : '';?><!--"><a href="--><?//= $baseUrl; ?><!--blog">Blog</a></li>-->
                                 <li class=""><a href="<?=$view['router']->generate('Homepage');?>community">Community</a></li>
                                 <li class=""><a href="<?=$view['router']->generate('Projects');?>">Projects</a></li>
-                                <li class="dropdown">
+                                <li class="dropdown docs-dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret icon-white"></b></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="<?=$view['router']->generate('DocsViewFile', array('page' => 'getting-started'));?>">Getting Started</a></li>
@@ -150,6 +150,7 @@
     <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollTo.js');?>"></script>
     <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.serialScroll.min.js');?>"></script>
     <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.localscroll.js');?>"></script>
+    <script type="text/javascript" src="<?=$view['assets']->getUrl('js/docs-child.js');?>"></script>
     <!-- /JS Body Stuff -->
 
 </body>

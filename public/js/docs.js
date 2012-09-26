@@ -44,6 +44,11 @@ jQuery(document).ready(function ($) {
 			$(this).find('span').hide();
 		});
 	});
+	
+	$('.docs-header ul.nav li a').not($('.docs-header .docs-dropdown li')).live('click', function() {
+		console.log('not docs link');
+		return false;
+	});
 
 });
 
