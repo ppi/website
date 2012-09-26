@@ -71,11 +71,11 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret icon-white"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('getting-started'));?>">Getting Started</a></li>
-                                        <li><a href="<?=$view['router']->generate('Homepage');?>docs/application.html">The Skeleton Application</a></li>
-                                        <li><a href="<?=$view['router']->generate('Homepage');?>docs/modules.html">Modules</a></li>
-                                        <li><a href="<?=$view['router']->generate('Homepage');?>docs/routing.html">Routing</a></li>
-                                        <li><a href="<?=$view['router']->generate('Homepage');?>docs/controllers.html">Controllers</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting-started'));?>">Getting Started</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">The Skeleton Application</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>">Modules</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">Routing</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">Controllers</a></li>
                                     </ul>
                                 </li>
                             </ul>
