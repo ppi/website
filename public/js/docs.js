@@ -1,3 +1,11 @@
+var meny = Meny.create({
+	menuElement: document.querySelector( '.meny' ),
+	contentsElement: document.querySelector( '.contents' ),
+	position: 'right',
+	width: 300,
+	threshold: 20
+});
+
 jQuery(document).ready(function ($) {
 
 	$('.toc-mobile .toc-heading').click(function () {
@@ -10,31 +18,37 @@ jQuery(document).ready(function ($) {
 		}
 		
 	});
-	
-	var meny = Meny.create({
-		
-		menuElement: document.querySelector( '.meny' ),
-		contentsElement: document.querySelector( '.contents' ),
-		position: 'right',
-		width: 300,
-		threshold: 20
-	});
 
-	$.localScroll.defaults.axis = 'y';
-	$.localScroll.defaults.lazy = true;
+
 	
-	$.localScroll.hash({
-		axis: 'y',
-		hash:   true,
-		offset: {top:-55, left:0}
+});
+
+jQuery('.contents iframe').load(function() {
+	
+	var iframe = $('.contents iframe').contents();
+	
+	// Loading up the ToC Data
+	var tocData = $.parseJSON(iframe.find("#toc-data").html());
+	var tocContent = '';
+	
+	for(var i in tocData) {
+		tocContent += '<li><a href="#' + i + '" title="">' + tocData[i] + '</a></li>';
+	}
+	$('.toc-mobile .items').html(tocContent);
+	
+	// ** Binding to some links within the iframe to make sure they update the parent frame and not the child
+	iframe.find('.docs-header ul.nav li a').click(function() {
+		if(!$(this).hasClass('dropdown-toggle')) {
+			window.location.href = $(this).attr('href');
+		}
 	});
 	
-	$('.toc-mobile li').localScroll({
-		hash:   true,
-		offset: {top:-55, left:0}
+	iframe.find('a.next-article, a.prev-article').click(function() {
+		window.location.href = $(this).attr('href');
 	});
 	
-	$('.section-title').each(function() {
+	// ** Lets append a &para; to the end of each section title
+	iframe.find('.section-title').each(function() {
 		
 		$(this).append('<span><a href="#' + $(this).attr('id') +  '">&para;</a></span>');
 		
@@ -45,32 +59,25 @@ jQuery(document).ready(function ($) {
 		});
 	});
 	
-	$('.docs-header ul.nav li a').not($('.docs-header .docs-dropdown li')).live('click', function() {
-		console.log('not docs link');
-		return false;
+	// Smooth anchor scrolling
+	$.localScroll.defaults.axis = 'y';
+	$.localScroll.defaults.lazy = true;
+	$.localScroll.defaults.target = $('.contents iframe').contents();
+	
+	$.localScroll.hash({
+		axis: 'y',
+		hash:   true,
+		offset: {top:-55, left:0}
 	});
+	
+	$('.toc-mobile li').localScroll({
+		hash:   true,
+		offset: {top:-55, left:0},
+		onAfter:function( anchor, settings ){
+			meny.close();
+		}
+	});
+	
 
-});
-
-jQuery('.contents iframe').load(function() {
-	
-	var iframe = $('.contents iframe').contents();
-	
-	var tocData = $.parseJSON(iframe.find("#toc-data").html());
-	var tocItems = $('.toc-mobile .items');
-	for(var i in tocData) {
-		tocItems.append('<li><a href="#' + i + '" title="">' + tocData[i] + '</a></li>');
-	}
-	
-	iframe.find('.docs-header ul.nav li a:not(.dropdown-toggle)').click(function() {
-		window.location.href = $(this).attr('href');
-	});
-	
-	iframe.find('a.next-article, a.prev-article').click(function() {
-		window.location.href = $(this).attr('href');
-	});
 	
 });
-
-hljs.tabReplace = '    ';
-hljs.initHighlightingOnLoad();

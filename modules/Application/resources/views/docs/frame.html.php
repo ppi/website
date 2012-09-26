@@ -18,42 +18,7 @@
     
     <title><?php $view['slots']->output('title', 'PPI Skeleton Application') ?></title>
     
-    
-    <style type="text/css">
-        * {
-        	margin: 0;
-        	padding: 0;
-        }
-        
-        html, 
-        body {
-        	height: 100%;
-        	overflow: hidden;
-        }
-        
-        a {
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        .meny {
-        	display: none;
-        	padding: 20px;
-        	overflow: auto;
-        	background: #333;
-        	color: #eee;
-        
-        	-webkit-box-sizing: border-box;
-        	   -moz-box-sizing: border-box;
-        	        box-sizing: border-box;
-        }
-
-    </style>
-    
-    <link href="<?=$view['assets']->getUrl('css/docs0frame.css');?>" rel="stylesheet">
+    <link href="<?=$view['assets']->getUrl('css/docs-frame.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
     
 </head>
@@ -94,15 +59,12 @@
 <script>window.jQuery || document.write('<script src="<?=$view['assets']->getUrl('js/libs/jquery-1.8.0.min.js');?>"><\/script>')</script>
 
 
-<!-- CSS Stuff -->
-
-
 <!-- JS Body Stuff -->
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/bootstrap.min.js');?>"></script>
+<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/meny.min.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollTo.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.serialScroll.min.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.localscroll.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/meny.min.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/docs.js');?>"></script>
 <!-- /JS Body Stuff -->
 
