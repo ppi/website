@@ -11,7 +11,7 @@ $toc = array(
 
     <section class='content'>
 
-        <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
+        <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
 
         <h1>Getting Started</h1>
 
@@ -34,7 +34,7 @@ $toc = array(
             <p>A web server with its rewrite module enabled. (mod_rewrite for apache)</p>
             <p>PPI needs <b>5.3.3</b> or above. The recommended version by symfony is <b>5.3.10</b> or above.</p>
 
-        <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
+        <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
 
     </section>
 

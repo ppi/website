@@ -54,14 +54,22 @@ jQuery(document).ready(function ($) {
 
 jQuery('.contents iframe').load(function() {
 	
-	var tocData = $.parseJSON($('.contents iframe').contents().find("#toc-data").html());
+	var iframe = $('.contents iframe').contents();
+	
+	var tocData = $.parseJSON(iframe.find("#toc-data").html());
 	var tocItems = $('.toc-mobile .items');
 	for(var i in tocData) {
 		tocItems.append('<li><a href="#' + i + '" title="">' + tocData[i] + '</a></li>');
 	}
-
+	
+	iframe.find('.docs-header ul.nav li a:not(.dropdown-toggle)').click(function() {
+		window.location.href = $(this).attr('href');
+	});
+	
+	iframe.find('a.next-article, a.prev-article').click(function() {
+		window.location.href = $(this).attr('href');
+	});
 	
 });
-
 //hljs.tabReplace = '    ';
 //hljs.initHighlightingOnLoad();

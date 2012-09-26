@@ -16,7 +16,7 @@ $toc = array(
 
     <section class='content'>
             
-        <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'controllers'));?>">Controllers <i class="icon-arrow-right icon-white"></i></a>
+        <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">Controllers <i class="icon-arrow-right icon-white"></i></a>
         
         <h1>Routing</h1>
         
@@ -138,8 +138,8 @@ requirements:
         </code></pre>
         
             
-        <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'modules'));?>"><i class="icon-arrow-left icon-white"></i> Modules</a>
-        <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'controllers'));?>">Controllers <i class="icon-arrow-right icon-white"></i></a>
+        <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>"><i class="icon-arrow-left icon-white"></i> Modules</a>
+        <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">Controllers <i class="icon-arrow-right icon-white"></i></a>
                         
     </section>
 

@@ -71,17 +71,16 @@
                                 <li class="dropdown docs-dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret icon-white"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="<?=$view['router']->generate('DocsViewFile', array('page' => 'getting-started'));?>">Getting Started</a></li>
-                                        <li><a href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>">The Skeleton Application</a></li>
-                                        <li><a href="<?=$view['router']->generate('DocsViewFile', array('page' => 'modules'));?>">Modules</a></li>
-                                        <li><a href="<?=$view['router']->generate('DocsViewFile', array('page' => 'routing'));?>">Routing</a></li>
-                                        <li><a href="<?=$view['router']->generate('DocsViewFile', array('page' => 'controllers'));?>">Controllers</a></li>
-                                        <li><a href="<?=$view['router']->generate('DocsViewFile', array('page' => 'templating'));?>">Templating</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting-started'));?>">Getting Started</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">The Skeleton Application</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>">Modules</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">Routing</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">Controllers</a></li>
+                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'templating'));?>">Templating</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -150,7 +149,6 @@
     <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollTo.js');?>"></script>
     <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.serialScroll.min.js');?>"></script>
     <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.localscroll.js');?>"></script>
-    <script type="text/javascript" src="<?=$view['assets']->getUrl('js/docs-child.js');?>"></script>
     <!-- /JS Body Stuff -->
 
 </body>

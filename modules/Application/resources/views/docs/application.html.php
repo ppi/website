@@ -18,7 +18,7 @@ $toc = array(
 
         <h1>The Skeleton Application</h1>
 
-        <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'modules'));?>">Modules <i class="icon-arrow-right icon-white"></i></a>
+        <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>">Modules <i class="icon-arrow-right icon-white"></i></a>
 
             <p class="section-title" id='app-structure'>Application File Structure</p>
 
@@ -175,8 +175,8 @@ return array(
             <p>This is where we get stuck into the real details, we're going into the /modules/ folder. Click the next
                 section to proceed</p>
 
-            <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'getting-started'));?>"><i class="icon-arrow-left icon-white"></i> Getting Started</a>
-            <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'modules'));?>">Modules <i class="icon-arrow-right icon-white"></i></a>
+            <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting-started'));?>"><i class="icon-arrow-left icon-white"></i> Getting Started</a>
+            <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>">Modules <i class="icon-arrow-right icon-white"></i></a>
         </article>
     </section>
 </div>
