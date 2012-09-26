@@ -71,5 +71,6 @@ jQuery('.contents iframe').load(function() {
 	});
 	
 });
-//hljs.tabReplace = '    ';
-//hljs.initHighlightingOnLoad();
+
+hljs.tabReplace = '    ';
+hljs.initHighlightingOnLoad();

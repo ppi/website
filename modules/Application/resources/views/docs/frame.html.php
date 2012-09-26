@@ -18,7 +18,42 @@
     
     <title><?php $view['slots']->output('title', 'PPI Skeleton Application') ?></title>
     
-    <link href="<?=$view['assets']->getUrl('css/docs-frame.css');?>" rel="stylesheet">
+    
+    <style type="text/css">
+        * {
+        	margin: 0;
+        	padding: 0;
+        }
+        
+        html, 
+        body {
+        	height: 100%;
+        	overflow: hidden;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .meny {
+        	display: none;
+        	padding: 20px;
+        	overflow: auto;
+        	background: #333;
+        	color: #eee;
+        
+        	-webkit-box-sizing: border-box;
+        	   -moz-box-sizing: border-box;
+        	        box-sizing: border-box;
+        }
+
+    </style>
+    
+    <link href="<?=$view['assets']->getUrl('css/docs0frame.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
     
 </head>
@@ -29,6 +64,11 @@
     <div class="toc-mobile-content">
         <p class="heading">Table of Contents</p>
         <ul class="items">
+            <li><a href="#introduction" title="">Introduction</a></li>
+            <li><a href="#details" title="">The Details</a></li>
+            <li><a href="#basic-routes" title="">Basic Routes</a></li>
+            <li><a href="#routes-with-parameters" title="">Routes with parameters</a></li>
+            <li><a href="#routes-with-requirements" title="">Routes with requirements</a></li>
         </ul>
     </div>
 </div>
@@ -58,6 +98,7 @@
 
 
 <!-- JS Body Stuff -->
+<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/bootstrap.min.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollTo.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.serialScroll.min.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.localscroll.js');?>"></script>
