@@ -12,9 +12,9 @@ $toc = array(
 <?=json_encode($toc);?>
 </div>
 
-<div class="row-fluid docs-content">
+<div class="content-box docs-page">
 
-    <section>
+    <section class='content'>
             
         <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'controllers'));?>">Controllers <i class="icon-arrow-right icon-white"></i></a>
         

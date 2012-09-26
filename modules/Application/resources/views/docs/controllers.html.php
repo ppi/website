@@ -17,13 +17,9 @@ $toc = array(
 );
 ?>
 
-<div id="toc-data">
-<?=json_encode($toc);?>
-</div>
+<div id="toc-data"><?=json_encode($toc);?></div>
     
-<div class="continer-fluid content-box docs-page">
-
-<div class="row-fluid">
+<div class="content-box docs-page">
 
 <section>
 

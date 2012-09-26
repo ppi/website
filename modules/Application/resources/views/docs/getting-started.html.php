@@ -7,15 +7,13 @@ $toc = array(
 
 <div id="toc-data"><?=json_encode($toc);?></div>
 
-<div class="continer-fluid content-box docs-page">
+<div class="content-box docs-page">
 
-	<div class="row-fluid">
+    <section class='content'>
 
-		<section class='content'>
+        <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
 
-			<a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
-
-			<h1>Getting Started</h1>
+        <h1>Getting Started</h1>
 
 <!--				<p id='standing-on-the-shoulders-of-giants' class="section-title">Standing on the shoulders of giants</p>-->
 <!---->
@@ -28,18 +26,16 @@ $toc = array(
 <!--					Doctrine2's clean DBAL component which has been made easy to use through PPI's DataSource-->
 <!--					component.</p>-->
 
-				<p class="section-title" id='downloading-ppi'>Downloading PPI</p>
+            <p class="section-title" id='downloading-ppi'>Downloading PPI</p>
 
-				<p>You can download the ppi skeletonaapp from the <a href="<?=$view['router']->generate('Homepage');?>" title="Homepage">Homepage</a>. If you just want everything in one folder ready to go, you should choose the <b>"ppi skeletonapp with vendors"</b> option. If you are comfortable with using <b>git</b> then you can download the <b>"skeleton app without vendors"</b> option and run <b>composer install</b> yourself.</p>
+            <p>You can download the ppi skeletonaapp from the <a href="<?=$view['router']->generate('Homepage');?>" title="Homepage">Homepage</a>. If you just want everything in one folder ready to go, you should choose the <b>"ppi skeletonapp with vendors"</b> option. If you are comfortable with using <b>git</b> then you can download the <b>"skeleton app without vendors"</b> option and run <b>composer install</b> yourself.</p>
 
-				<p id='system-requirements' class="section-title">System requirements</p>
-				<p>A web server with its rewrite module enabled. (mod_rewrite for apache)</p>
-				<p>PPI needs <b>5.3.3</b> or above. The recommended version by symfony is <b>5.3.10</b> or above.</p>
+            <p id='system-requirements' class="section-title">System requirements</p>
+            <p>A web server with its rewrite module enabled. (mod_rewrite for apache)</p>
+            <p>PPI needs <b>5.3.3</b> or above. The recommended version by symfony is <b>5.3.10</b> or above.</p>
 
-			<a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
+        <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
 
-		</section>
-
-	</div>
+    </section>
 
 </div>

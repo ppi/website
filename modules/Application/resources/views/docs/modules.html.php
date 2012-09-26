@@ -19,7 +19,7 @@ $toc = array(
 
         <section class='content'>
 
-            <h1>PPI Modules</h1>
+            <h1>Modules</h1>
 
             <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'routing'));?>">Routing <i class="icon-arrow-right icon-white"></i></a>
 
