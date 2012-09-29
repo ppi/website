@@ -1,4 +1,4 @@
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<?='<';?>?xml version="1.0" encoding="UTF-8"<?='?';?>>
 <rss version="2.0">
     <channel>
         <title>PPI Blog RSS Feed</title>

@@ -120,19 +120,20 @@ class Blog extends SharedController
     {
         return $this->indexAction($this->getRouteParam('tagID'));
     }
-    
-    
+
+
     public function getRSSAction()
     {
-        $rssHelper = new \BlogModule\Classes\GenerateRSS(
-            $this->getCache(), 
+        $rssHelper   = new \BlogModule\Classes\GenerateRSS(
+            $this->getCache(),
             $this->getBlogStorage(),
             $this->getService('router')
         );
-        $rssData = $rssHelper->getRSSData();
+
+        $rssData     = $rssHelper->getRSSData();
         $rssBaseLink = $this->generateUrl('BlogGetRSS');
-        $content = $this->render('BlogModule:blog:rss.xml.php', compact('rssData', 'rssBaseLink'));
-//        die($content);
+        $content     = $this->render('BlogModule:blog:rss.xml.php', compact('rssData', 'rssBaseLink'));
+
         $this->getService('response')->headers->set('Content-Type', 'text/xml');
         return $content;
     }
@@ -161,7 +162,5 @@ class Blog extends SharedController
     protected function getBlogPostTagStorage() {
         return new \BlogModule\Storage\BlogPostTag($this->getService('datasource'));
     }
-    
-    
 
 }
