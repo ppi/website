@@ -64,8 +64,6 @@
 <!--        </div>-->
 
         <div class="section">
-            <h3>Social Links</h3>
-
             <div class="social-icons">
                 <a href="http://twitter.com/ppi_framework"><img src="<?= $view['assets']->getUrl('images/twitter2.png');;?>" width="48" /> </a>
                 <a href="#"><img src="<?= $view['assets']->getUrl('images/googleplus.png');;?>" width="48" /></a>
