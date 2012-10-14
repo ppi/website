@@ -1,46 +1,52 @@
 <?php
 
 namespace Application\Classes;
+use Application\Storage\DownloadEntry as DownloadEntryStorage;
 
 class DownloadCounter {
-    
-    public $cache = null;
-    
-    public function __construct($cache)
+
+    public $storage = null;
+    public $_ip = null;
+
+    public function __construct($ip, $storage)
     {
-        $this->cache = $cache;
+        $this->storage = $storage;
+        $this->_ip     = $ip;
     }
 
     /**
      * Get the download count
-     * 
+     *
      * @return int
      */
     public function getDownloadCount()
     {
-        $cacheKey = 'site_download_count';
-        return $this->cache->contains($cacheKey) ? $this->cache->fetch($cacheKey) : 0;
+        $download = new DownloadEntryStorage($this->storage);
+        return $download->countAll();
     }
 
     /**
      * Set the download count
-     * 
+     *
      * @param integer $count
      */
-    public function setDownloadCount($count)
+    public function setDownloadCount()
     {
-        $cacheKey = 'site_download_count';
-        $this->cache->save($cacheKey, $count); // Store this forever, it should never expire
+        $download = new DownloadEntryStorage($this->storage);
+        $userIP   = $this->_ip;
+        $created  = time();
+
+        return $download->insert(array('ip_address' => $userIP, 'created' => $created));
     }
 
     /**
      * Increment the download count
-     * 
+     *
      * @return void
      */
-    public function incrementDownloadCount() 
+    public function incrementDownloadCount()
     {
-        $this->setDownloadCount($this->getDownloadCount() + 1);
+        $this->setDownloadCount();
     }
-    
+
 }

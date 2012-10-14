@@ -7,13 +7,13 @@ class Index extends SharedController
 {
     public function indexAction()
     {
-        $downloadCount = $this->getDownloadCounterHelper()->getDownloadCount();
+        $downloadCount = $this->getDownloadCounterHelper($this->getIP())->getDownloadCount();
         return $this->render('Application:index:index.html.php', compact('downloadCount'));
     }
     
     public function downloadAction()
     {
-        $this->getDownloadCounterHelper()->incrementDownloadCount();
+        $this->getDownloadCounterHelper($this->getIP())->incrementDownloadCount();
     }
     
     public function twigAction()
@@ -140,9 +140,9 @@ class Index extends SharedController
      * 
      * @return \Application\Classes\DownloadCounter
      */
-    protected function getDownloadCounterHelper()
+    protected function getDownloadCounterHelper($ip)
     {
-        return new \Application\Classes\DownloadCounter($this->getService('community.cache'));
+        return new \Application\Classes\DownloadCounter($ip, $this->getService('DataSource'));
     }
 
 }
