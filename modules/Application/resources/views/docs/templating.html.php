@@ -205,8 +205,7 @@ Welcome to the blog page
             
         <p class="section-title" id='using-assets-helper'>Using the assets helper</p>
         <p>So why do we need an assets helper? Well one main purpose for it is to include asset files from your project's <b>./public/</b> folder such as <b>images, css files, javascript files</b>. This is useful because we're never hard-coding any baseurl's anywhere so it will work on any environment you host it on.</p>
-        <p>Review this example, it's including a few CSS and JS files</p>
-        <p>Review this example it shows a few examples of using the slots helper for various different reasons.</p>
+        <p>Review this example it shows a few examples of using the slots helper for various different reasons such as including CSS and JS files.</p>
         <pre><code>
 &lt;?php $view-&gt;extend('::base.html.php'); ?&gt;
     
@@ -232,15 +231,18 @@ Welcome to the blog page
         </code></pre>
             
         <p><b>What's going on?</b></p>
-        <p>By asking for <b>images/blog.png</b> we're basically asking for <b>www.mysite.com/images/blog.png</b>, pretty straight forward. Our <b>include_css</b> and <b>include_js</b> slots blocks have specified custom HTML that's loading up CSS/JS files just for this paritcular page load.</p>
-        
+        <p>By asking for <b>images/blog.png</b> we're basically asking for <b>www.mysite.com/images/blog.png</b>, pretty straight forward right? Our <b>include_css</b> and <b>include_js</b> slots blocks are custom HTML that's loading up CSS/JS files just for this paritcular page load. This is great because you can split your application up onto smaller CSS/JS files and only load the required assets for your particular page, rather than having to bundle all your CSS into the one file.</p>
         
         <p class="section-title" id='using-the-router'>Using the router helper</p>
-        <p>Coming soon..</p>
+        <p>
+	    So why do we need a routing helper? Well we initially create a route perhaps something called <b></b>		
+        </p>
         
             
         <!--<a class="next-article bottom btn btn-green" href="controllers.html">Controllers <i class="icon-arrow-right icon-white"></i></a>-->
         <a class="prev-article btn btn-green" href="controllers.html"><i class="icon-arrow-left icon-white"></i> Controllers</a>
+        
+        <div class="spacer"></div>
         
         </section>
         

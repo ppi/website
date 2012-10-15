@@ -2,9 +2,11 @@ var meny = Meny.create({
 	menuElement: document.querySelector( '.meny' ),
 	contentsElement: document.querySelector( '.contents' ),
 	position: 'right',
-	width: 300,
-	threshold: 20
+	width: 320,
+	threshold: 100
 });
+
+$('.toc-mobile.meny').css('right', '20px');
 
 jQuery(document).ready(function ($) {
 
@@ -19,11 +21,9 @@ jQuery(document).ready(function ($) {
 		
 	});
 
-
-	
 });
 
-jQuery('.contents iframe').load(function() {
+jQuery('.contents iframe').load(function($) {
 	
 	var iframe = $('.contents iframe').contents();
 	
@@ -48,7 +48,7 @@ jQuery('.contents iframe').load(function() {
 	});
 	
 	// ** Lets append a &para; to the end of each section title
-	iframe.find('.section-title').each(function() {
+/* 	iframe.find('.section-title').each(function() { 
 		
 		$(this).append('<span><a href="#' + $(this).attr('id') +  '">&para;</a></span>');
 		
@@ -58,6 +58,7 @@ jQuery('.contents iframe').load(function() {
 			$(this).find('span').hide();
 		});
 	});
+	*/
 	
 	// Smooth anchor scrolling
 	$.localScroll.defaults.axis = 'y';

@@ -164,6 +164,8 @@ class Module extends BaseModule {
             <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
             <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">Routing <i class="icon-arrow-right icon-white"></i></a>
 
+		<div class="spacer"></div>
+
         </section>
 
     </div>

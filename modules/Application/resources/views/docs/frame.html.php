@@ -16,7 +16,7 @@
     <meta name="keywords" content="ppi is an open source php meta-framework. we have taken the good bits from Symfony2, ZendFramework2 & Doctrine2 and combined them together to create a solid and very easy web application framework. ppi is fully PSR compliant. ppi can be considered the boilerplate of PHP frameworks">
    	<meta name="author" content="Paul Dragoonis">
     
-    <title><?php $view['slots']->output('title', 'PPI Skeleton Application') ?></title>
+    <title><?php $view['slots']->output('title', 'PPI Framework') ?></title>
     
     <link href="<?=$view['assets']->getUrl('css/docs-frame.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
@@ -51,7 +51,7 @@
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    });
+    })();
 </script>
 
 <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->

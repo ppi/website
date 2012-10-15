@@ -8,9 +8,7 @@ $toc = array(
 );
 ?>
 
-<div id="toc-data">
-<?=json_encode($toc);?>
-</div>
+<div id="toc-data"><?=json_encode($toc);?></div>
 
 <div class="content-box docs-page">
 
@@ -140,6 +138,8 @@ requirements:
             
         <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>"><i class="icon-arrow-left icon-white"></i> Modules</a>
         <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">Controllers <i class="icon-arrow-right icon-white"></i></a>
+    
+    <div class="spacer"></div>
                         
     </section>
 

@@ -36,6 +36,8 @@ $toc = array(
 
         <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
 
+	<div class="spacer"></div>
+
     </section>
 
 </div>

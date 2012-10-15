@@ -3,7 +3,7 @@
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+  /*src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');*/
 }
 
 .docs-page {
@@ -11,6 +11,10 @@
 	background: white;
 	padding-top: 38px;
 	margin-bottom: 30px;
+}
+
+.docs-page .spacer {
+	height: 250px;
 }
 
 .docs-page p {
@@ -124,8 +128,8 @@
 }
 .docs-page section a.next-article.bottom {
 	position: absolute;
-	bottom: 12px;
-	right: 12px;
+	bottom: 270px;
+	right: 18px;
 	font-size: 1.2em;
 }
 
@@ -135,8 +139,8 @@
 
 .docs-page section a.prev-article {
 	position: absolute;
-	bottom: 12px;
-	left: 12px;
+	bottom: 270px;
+	left: 15px;
 	font-size: 1.2em;
 }
 

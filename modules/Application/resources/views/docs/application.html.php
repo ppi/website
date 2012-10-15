@@ -178,5 +178,9 @@ return array(
             <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting-started'));?>"><i class="icon-arrow-left icon-white"></i> Getting Started</a>
             <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>">Modules <i class="icon-arrow-right icon-white"></i></a>
         </article>
+        
+        
+        <div class="spacer"></div>
+        
     </section>
 </div>

@@ -59,8 +59,6 @@
                                 <li class="logo-item"><a class="logo" href="<?=$view['router']->generate('Homepage');?>" title="PPI"><img src="<?=$view['assets']->getUrl('images/ppi-white.png');?>" alt="Logo" height="25"></a></li>
                                 <li class=""><a href="<?=$view['router']->generate('Homepage');?>">Home</a></li>
                                 <li><a href="<?=$view['router']->generate('About');?>">About</a></li>
-<!--                                <li><a href="<?=$view['router']->generate('Blog');?>">Blog</a></li> -->
-    <!--							<li class="--><?//=$request['controller'] == 'blog' ? 'active' : '';?><!--"><a href="--><?//= $baseUrl; ?><!--blog">Blog</a></li>-->
                                 <li class=""><a href="<?=$view['router']->generate('Homepage');?>community">Community</a></li>
                                 <li class=""><a href="<?=$view['router']->generate('Projects');?>">Projects</a></li>
                                 <li class="dropdown docs-dropdown">
@@ -121,7 +119,6 @@
         
     </div>
     
-    
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-20964741-1']);
@@ -134,7 +131,7 @@
         })();
     </script>
     
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<!--    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>-->
     <script>window.jQuery || document.write('<script src="<?=$view['assets']->getUrl('js/libs/jquery-1.8.0.min.js');?>"><\/script>')</script>
     
     <!-- JS Body Stuff -->
