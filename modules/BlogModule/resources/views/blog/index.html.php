@@ -65,6 +65,14 @@
 <!--				<input type="text" name="search"> <input type="submit" value="Search">-->
 <!--			</form>-->
 <!--		</div>-->
+
+        <div class="section">
+            <div class="social-icons">
+                <a href="http://twitter.com/ppi_framework"><img src="<?= $view['assets']->getUrl('images/twitter2.png');;?>" width="48" /> </a>
+                <a href="#"><img src="<?= $view['assets']->getUrl('images/googleplus.png');;?>" width="48" /></a>
+                <a href="<?=$view['router']->generate('BlogGetRSS');?>"><img src="<?= $view['assets']->getUrl('images/rss.png');;?>" width="48" /></a>
+            </div>
+        </div>
 		
 		<div class="section">
 			<h3>Popular Tags</h3>

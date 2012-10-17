@@ -3,44 +3,43 @@
 namespace Application\Classes;
 
 class DownloadCounter {
-    
-    public $cache = null;
-    
-    public function __construct($cache)
+
+    public $storage = null;
+    public $ip = null;
+
+    public function __construct($storage)
     {
-        $this->cache = $cache;
+        $this->storage = $storage;
+    }
+    
+    public function setIP($ip)
+    {
+        $this->ip = $ip;
     }
 
     /**
      * Get the download count
-     * 
+     *
      * @return int
      */
     public function getDownloadCount()
     {
-        $cacheKey = 'site_download_count';
-        return $this->cache->contains($cacheKey) ? $this->cache->fetch($cacheKey) : 0;
+        return $this->storage->countAll();
     }
-
-    /**
-     * Set the download count
-     * 
-     * @param integer $count
-     */
-    public function setDownloadCount($count)
+    
+    public function setDownloadStorage($storage)
     {
-        $cacheKey = 'site_download_count';
-        $this->cache->save($cacheKey, $count); // Store this forever, it should never expire
+        $this->storage = $storage;
     }
 
     /**
      * Increment the download count
-     * 
+     *
      * @return void
      */
-    public function incrementDownloadCount() 
+    public function incrementDownloadCount()
     {
-        $this->setDownloadCount($this->getDownloadCount() + 1);
+        return $this->storage->insert(array('ip_address' => $this->ip, 'created' => time()));
     }
-    
+
 }
