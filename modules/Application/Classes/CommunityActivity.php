@@ -52,6 +52,7 @@ class CommunityActivity {
     
     public function getTweets($usernames)
     {
+        
         $activity = array();
         if(!empty($usernames)) {
             foreach($usernames as $username) {
@@ -69,16 +70,14 @@ class CommunityActivity {
             return $this->cache->fetch($cacheName);
         }
         $tweet_array = array();
-        $tweets = simplexml_load_file("http://twitter.com/statuses/user_timeline/" . $username . ".rss");
-        foreach ( $tweets->channel->item as $tweet ) {
+        $tweets = simplexml_load_file(sprintf("https://api.twitter.com/1/statuses/user_timeline.xml?include_rts=true&screen_name=%s", $username));
+        foreach($tweets->status as $tweet ) {
+            
             // Loop to limitate nr of tweets.
             if ($maxtweets == 0) {
                 break;
             } else {
-                $twit = $tweet->description;  //Fetch the tweet itself
-    
-                //Remove the preceding 'username: '
-                $twit = substr(strstr($twit, ': '), 2, strlen($twit));
+                $twit = (string) $tweet->text;  //Fetch the tweet itself
     
                 // Convert URLs into hyperlinks
                 $twit = preg_replace("/(http:\/\/)(.*?)\/([\w\.\/\&\=\?\-\,\:\;\#\_\~\%\+]*)/", "<a href=\"\\0\">\\0</a>", $twit);
@@ -94,10 +93,11 @@ class CommunityActivity {
                 $twit = utf8_decode($twit);
     
                 // get the URL of the status..
-                $status = (string) $tweet->link; 
+                $status = "https://twitter.com/ppi_framework/status/" . ( (string) $tweet->id); 
     
                 //Get the date it was posted
-                $pubdate = strtotime($tweet->pubDate);
+                $dateParseFormat = 'D M j G:i:s O Y';
+                $pubdate = \DateTime::createFromFormat($dateParseFormat, (string) $tweet->created_at)->getTimestamp();
                 $propertime = gmdate('F jS Y, H:i', $pubdate);  //Customize this to your liking
     
                 //Store tweet and time into the array
