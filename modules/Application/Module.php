@@ -39,7 +39,18 @@ class Module extends BaseModule
             
             'community.cache' => function($sm) {
                 return new \Doctrine\Common\Cache\ApcCache();
+            },
+            
+            'download.counter' => function($sm) {
+                return new \Application\Classes\DownloadCounter($sm->get('download.entry.storage'));
+            },
+            
+            'download.entry.storage' => function($sm) {
+                return new \Application\Storage\DownloadEntry($sm->get('datasource'));
             }
+            
+        
+            
             
         ));
     }

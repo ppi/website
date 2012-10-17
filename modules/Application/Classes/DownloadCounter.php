@@ -1,17 +1,20 @@
 <?php
 
 namespace Application\Classes;
-use Application\Storage\DownloadEntry as DownloadEntryStorage;
 
 class DownloadCounter {
 
     public $storage = null;
-    public $_ip = null;
+    public $ip = null;
 
-    public function __construct($ip, $storage)
+    public function __construct($storage)
     {
         $this->storage = $storage;
-        $this->_ip     = $ip;
+    }
+    
+    public function setIP($ip)
+    {
+        $this->ip = $ip;
     }
 
     /**
@@ -21,22 +24,12 @@ class DownloadCounter {
      */
     public function getDownloadCount()
     {
-        $download = new DownloadEntryStorage($this->storage);
-        return $download->countAll();
+        return $this->storage->countAll();
     }
-
-    /**
-     * Set the download count
-     *
-     * @param integer $count
-     */
-    public function setDownloadCount()
+    
+    public function setDownloadStorage($storage)
     {
-        $download = new DownloadEntryStorage($this->storage);
-        $userIP   = $this->_ip;
-        $created  = time();
-
-        return $download->insert(array('ip_address' => $userIP, 'created' => $created));
+        $this->storage = $storage;
     }
 
     /**
@@ -46,7 +39,7 @@ class DownloadCounter {
      */
     public function incrementDownloadCount()
     {
-        $this->setDownloadCount();
+        return $this->storage->insert(array('ip_address' => $this->ip, 'created' => time()));
     }
 
 }

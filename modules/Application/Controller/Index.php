@@ -7,20 +7,21 @@ class Index extends SharedController
 {
     public function indexAction()
     {
-        $downloadCount = $this->getDownloadCounterHelper($this->getIP())->getDownloadCount();
+        $downloadCounter = $this->getService('download.counter');
+        $downloadCounter->setIP($this->getIP());
+        
+        $downloadCount = $downloadCounter->getDownloadCount();
         return $this->render('Application:index:index.html.php', compact('downloadCount'));
     }
     
     public function downloadAction()
     {
-        $this->getDownloadCounterHelper($this->getIP())->incrementDownloadCount();
+        $downloadCounter = $this->getService('download.counter');
+        $downloadCounter->setIP($this->getIP());
+        $downloadCounter->incrementDownloadCount();
+        return 'OK';
     }
     
-    public function twigAction()
-    {
-        return $this->render('Application:index:index.html.twig');
-    }
-
     public function aboutAction()
     {
         return $this->render('Application:index:about.html.php');
@@ -133,16 +134,6 @@ class Index extends SharedController
     {
         $config = $this->getConfig();
         return isset($config['community']['twitterUsernames']) ? $config['community']['twitterUsernames'] : array();
-    }
-
-    /**
-     * Get the download counter helper
-     * 
-     * @return \Application\Classes\DownloadCounter
-     */
-    protected function getDownloadCounterHelper($ip)
-    {
-        return new \Application\Classes\DownloadCounter($ip, $this->getService('DataSource'));
     }
 
 }
