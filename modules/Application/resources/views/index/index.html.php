@@ -91,8 +91,9 @@
     <div class="whos-using-ppi">
         <p class="heading">Who's using PPI Framework?</p>
         <ul class="clearfix">
-            <li><a href="http://www.bestbuys.com" title="BestBuys" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/bestbuys.png');?>" alt="" width="150"></a></li>
-            <li><a href="http://store.tomorrowland.com" title="Tomorrowland" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/tomorrowland.png');?>" alt="" width="180"></a></li>
+            <li><a href="http://www.bestbuys.com" title="BestBuys" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/bestbuys.png');?>" alt=""></a></li>
+            <li><a href="http://store.tomorrowland.com" title="Tomorrowland" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/tomorrowland.png');?>" alt=""></a></li>
+            <li><a href="#" onclick="javascript: void(0);" title="NHS Local" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/nhslocal.gif');?>" alt=""></a></li>
         </ul>
     </div>
     
