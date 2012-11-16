@@ -350,17 +350,17 @@
     margin-bottom:    12px;
     margin-top:       12px;
     width:            951px;
-    background-color: #F9F9F0;
-    border:           1px solid #e5e5e5;
-    position:         relative;
-    height:           110px;
+	height:           117px;
+	background-color: #F9F9F0;
+	border:           1px solid #e5e5e5;
+	position:         relative;
     padding-top:      12px;
     padding-left:     12px;
 }
 
 .whos-using-ppi ul {
     margin-left: 0;
-    padding:     15px;
+    padding:     0px;
 }
 
 .whos-using-ppi li:first-child {
@@ -387,6 +387,8 @@
     filter:         gray; /* IE6-9 */
     -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
     opacity:        0.4;
+	width: 200px;
+	height: 50px;
 }
 
 .whos-using-ppi img:hover {
