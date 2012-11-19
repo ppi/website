@@ -382,6 +382,10 @@
     margin-bottom: 12px;
 }
 
+.whos-using-ppi .nhs img {
+	width: 130px;
+}
+
 .whos-using-ppi img {
     filter:         url(filters.svg#grayscale); /* Firefox 3.5+ */
     filter:         gray; /* IE6-9 */

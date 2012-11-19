@@ -93,7 +93,7 @@
         <ul class="clearfix">
             <li><a href="http://www.bestbuys.com" title="BestBuys" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/bestbuys.png');?>" alt=""></a></li>
             <li><a href="http://store.tomorrowland.com" title="Tomorrowland" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/tomorrowland.png');?>" alt=""></a></li>
-            <li><a href="#" onclick="javascript: void(0);" title="NHS Local" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/nhslocal.gif');?>" alt=""></a></li>
+            <li class="nhs"><a href="#" onclick="javascript: void(0);" title="NHS Local" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/nhslocal.gif');?>" alt=""></a></li>
         </ul>
     </div>
     
@@ -126,7 +126,6 @@
             <form action="#submit" class="newsletter-form" method="post">
                 <p><label for="newsletterName">Name</label><input name="name" type="text" class="name" id="newsletterName"></p>
                 <p><label for="newsletterEmail">Email</label><input name="email" type="text" class="email" id="newsletterEmail"></p>
-                
                 <input type="submit" class="btn success submit" href="<?= $view['router']->generate('Chat'); ?>" target="_blank" value="Subscribe to the newsletter">
             </form>
         </div>
