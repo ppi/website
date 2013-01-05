@@ -1,6 +1,6 @@
 <?php
 $toc = array(
-    'app-structure' => 'Applicaiton File Structure',
+    'app-structure' => 'Application File Structure',
     'public-folder' => 'The public folder',
     'public-index-file' => 'The public index.php file',
     'app-folder' => 'The app folder',
@@ -8,23 +8,30 @@ $toc = array(
     'app-views-folder' => 'The app/views folder',
     'modules-folder' => 'The modules folder'
 );
+
+$pagingData = array(
+    'prev' => array('title' => 'Getting Started', 'href' => 'getting-started.html'),
+    'next' => array('title' => 'Modules', 'href' => 'modules.html')
+);
+
 ?>
 
-<div id="toc-data"><?=json_encode($toc);?></div>
+<div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
+<div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
 
+<div class="section-subbar"><h1>The Skeleton Application</h1></div>
+    
 <div class="content-box docs-page">
 
     <section class='content'>
 
-        <h1>The Skeleton Application</h1>
-
-        <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>">Modules <i class="icon-arrow-right icon-white"></i></a>
+        
 
             <p class="section-title" id='app-structure'>Application File Structure</p>
-
+    
             <p>First, lets review the file structure of the PPI skeleton application that we have pre-built for you to
                 get up and running as quickly as possible.</p>
-
+    
             <p><pre>
 
 www/ <- your web root directory
@@ -175,8 +182,8 @@ return array(
             <p>This is where we get stuck into the real details, we're going into the /modules/ folder. Click the next
                 section to proceed</p>
 
-            <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting-started'));?>"><i class="icon-arrow-left icon-white"></i> Getting Started</a>
-            <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>">Modules <i class="icon-arrow-right icon-white"></i></a>
+<!--            <a class="prev-article btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'getting-started'));?><!--"><i class="icon-arrow-left icon-white"></i> Getting Started</a>-->
+<!--            <a class="next-article bottom btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'modules'));?><!--">Modules <i class="icon-arrow-right icon-white"></i></a>-->
         </article>
         
         

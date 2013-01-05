@@ -1,25 +1,30 @@
 <?php
 $toc = array(
-    'introduction' => 'Introduction',
-    'module-class' => 'The Module.php class',
-    'init' => 'Init',
+    'introduction'  => 'Introduction',
+    'module-class'  => 'The Module.php class',
+    'init'          => 'Init',
     'configuration' => 'Configuration',
-    'routing' => 'Routing',
-    'conclusion' => 'Conclusion'
+    'routing'       => 'Routing',
+    'conclusion'    => 'Conclusion'
 );
+
+$pagingData = array(
+    'prev' => array('title' => 'The Skeleton Application', 'href' => 'application.html'),
+    'next' => array('title' => 'Routing', 'href' => 'routing.html')
+);
+
 ?>
 
-<div id="toc-data"><?=json_encode($toc);?></div>
+<div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
+<div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
 
+<div class="section-subbar"><h1>Modules</h1></div>
+    
 <div class="content-box docs-page">
 
     <div class="row-fluid">
 
         <section class='content'>
-
-            <h1>Modules</h1>
-
-            <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">Routing <i class="icon-arrow-right icon-white"></i></a>
 
             <p id='introduction' class="section-title">Introduction</p>
 
@@ -161,8 +166,8 @@ class Module extends BaseModule {
                 <p>Lets move onto the <b>Routing</b> section to check out what happens next.</p>
             </article>
 
-            <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
-            <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">Routing <i class="icon-arrow-right icon-white"></i></a>
+<!--            <a class="prev-article btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'application'));?><!--"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>-->
+<!--            <a class="next-article bottom btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'routing'));?><!--">Routing <i class="icon-arrow-right icon-white"></i></a>-->
 
 		<div class="spacer"></div>
 

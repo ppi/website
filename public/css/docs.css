@@ -3,7 +3,7 @@
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 400;
-  /*src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');*/
+  src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
 }
 
 #docspage-content {
@@ -14,13 +14,13 @@
 
 .docs-page {
 	position: relative;
-	background: white;
-	padding-top: 38px;
+	padding-top: 60px;
 	margin-bottom: 30px;
 }
 
 .docs-page .spacer {
 	height: 250px;
+	display: none;
 }
 
 .docs-page p {
@@ -122,11 +122,12 @@ div.toc-mobile {
 }
 
 #docspage-content .docs-page section {
-	padding: 15px 15px 50px 15px;
+	padding: 15px;
 	margin-left: 0;
 	width: 100%;
 	border: 1px solid #9f9f9f;
     position: relative;
+	background-color: white;
 }
 
 .docs-page section a.next-article i {
@@ -221,4 +222,18 @@ p.section-title {
 
 body.docsbase {
 	position: relative;
+}
+
+.section-subbar {
+	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 1px 5px rgba(50, 50, 50, 0.75);
+	background-color: #E1EDED; height:40px; border-bottom: 1px solid #909090; width: 100%; position:fixed; top: 52px; z-index: 999; margin-left: -20px; opacity: 0.8;
+}
+
+.section-subbar h1 {
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+	margin: 0 0 0 12px;
+	padding: 0;
+	font-size: 1.8em;
 }

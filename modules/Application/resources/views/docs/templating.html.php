@@ -1,16 +1,24 @@
 <?php
+
 $toc = array(
-    'introduction' => 'Introduction',
-    'base-templates' => 'Base Templates',
+    'introduction'        => 'Introduction',
+    'base-templates'      => 'Base Templates',
     'extending-base-templates' => 'Extending Base Templates',
-    'example-scenario' => 'Example Scenario',
-    'using-slots-helper' => 'Using the slots helper',
+    'example-scenario'    => 'Example Scenario',
+    'using-slots-helper'  => 'Using the slots helper',
     'using-assets-helper' => 'Using the assets helper',
-    'using-the-router' => 'Using the router helper'
+    'using-the-router'    => 'Using the router helper'
 );
+
+$pagingData = array(
+    'prev' => array('title' => 'Controllers', 'href' => 'controllers.html'),
+    'next' => array('title' => '', 'href' => '')
+);
+
 ?>
 
-<div id="toc-data"><?=json_encode($toc);?></div>
+<div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
+<div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
 
 <div class="content-box docs-page">
 
@@ -18,8 +26,6 @@ $toc = array(
         
         <section>
             
-        <!--<a class="next-article top btn btn-green" href="controllers.html">Controllers <i class="icon-arrow-right icon-white"></i></a>-->
-        
         <h1>Templating</h1>
         
         <p class="section-title" id='introduction'>Introduction</p>
@@ -234,15 +240,7 @@ Welcome to the blog page
         <p>By asking for <b>images/blog.png</b> we're basically asking for <b>www.mysite.com/images/blog.png</b>, pretty straight forward right? Our <b>include_css</b> and <b>include_js</b> slots blocks are custom HTML that's loading up CSS/JS files just for this paritcular page load. This is great because you can split your application up onto smaller CSS/JS files and only load the required assets for your particular page, rather than having to bundle all your CSS into the one file.</p>
         
         <p class="section-title" id='using-the-router'>Using the router helper</p>
-        <p>
-	    So why do we need a routing helper? Well we initially create a route perhaps something called <b></b>		
-        </p>
-        
-            
-        <!--<a class="next-article bottom btn btn-green" href="controllers.html">Controllers <i class="icon-arrow-right icon-white"></i></a>-->
-        <a class="prev-article btn btn-green" href="controllers.html"><i class="icon-arrow-left icon-white"></i> Controllers</a>
-        
-        <div class="spacer"></div>
+        <p>So why do we need a routing helper? Well we initially create a route perhaps something called <b></b></p>
         
         </section>
         

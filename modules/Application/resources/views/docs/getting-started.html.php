@@ -3,17 +3,24 @@ $toc = array(
     'downloading-ppi' => 'Downloading PPI',
     'system-requirements' => 'System Requirements'
 );
+
+$pagingData = array(
+    'prev' => array('title' => '', 'href' => ''),
+    'next' => array('title' => 'The Skeleton Application', 'href' => 'application.html')
+);
+
 ?>
 
-<div id="toc-data"><?=json_encode($toc);?></div>
-
+<div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
+<div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
+    
+<div class="section-subbar"><h1>Getting Started</h1></div>
+    
 <div class="content-box docs-page">
-
+    
     <section class='content'>
 
-        <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
-
-        <h1>Getting Started</h1>
+        
 
 <!--				<p id='standing-on-the-shoulders-of-giants' class="section-title">Standing on the shoulders of giants</p>-->
 <!---->
@@ -34,7 +41,7 @@ $toc = array(
             <p>A web server with its rewrite module enabled. (mod_rewrite for apache)</p>
             <p>PPI needs <b>5.3.3</b> or above. The recommended version by symfony is <b>5.3.10</b> or above.</p>
 
-        <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
+<!--        <a class="next-article bottom btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'application'));?><!--">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>-->
 
 	<div class="spacer"></div>
 

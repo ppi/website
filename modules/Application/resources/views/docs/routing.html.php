@@ -6,16 +6,21 @@ $toc = array(
     'routes-with-parameters' => 'Routes with parameters',
     'routes-with-requirements' => 'Routes with requirements'
 );
+
+$pagingData = array(
+    'prev' => array('title' => 'Modules', 'href' => 'modules.html'),
+    'next' => array('title' => 'Controllers', 'href' => 'controllers.html')
+);
+
 ?>
 
-<div id="toc-data"><?=json_encode($toc);?></div>
+<div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
+<div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
 
 <div class="content-box docs-page">
 
     <section class='content'>
             
-        <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">Controllers <i class="icon-arrow-right icon-white"></i></a>
-        
         <h1>Routing</h1>
         
         <p class="section-title" id="introduction">Introduction</p>
@@ -136,8 +141,8 @@ requirements:
         </code></pre>
         
             
-        <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>"><i class="icon-arrow-left icon-white"></i> Modules</a>
-        <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">Controllers <i class="icon-arrow-right icon-white"></i></a>
+<!--        <a class="prev-article btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'modules'));?><!--"><i class="icon-arrow-left icon-white"></i> Modules</a>-->
+<!--        <a class="next-article bottom btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?><!--">Controllers <i class="icon-arrow-right icon-white"></i></a>-->
     
     <div class="spacer"></div>
                         
