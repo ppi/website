@@ -1,12 +1,12 @@
-var meny = Meny.create({
-	menuElement: document.querySelector( '.meny' ),
-	contentsElement: document.querySelector( '.contents' ),
-	position: 'right',
-	width: 320,
-	threshold: 100
-});
+//var meny = Meny.create({
+//	menuElement: document.querySelector( '.meny' ),
+//	contentsElement: document.querySelector( '.contents' ),
+//	position: 'right',
+//	width: 360,
+//	threshold: 150
+//});
 
-$('.toc-mobile.meny').css('right', '20px');
+//meny.open();
 
 jQuery(document).ready(function ($) {
 
@@ -74,9 +74,9 @@ jQuery('.contents iframe').load(function() {
 	jQuery('.toc-mobile li').localScroll({
 		hash:   true,
 		offset: {top:-55, left:0},
-		onAfter:function( anchor, settings ){
-			meny.close();
-		}
+//		onAfter:function( anchor, settings ){
+//			meny.close();
+//		}
 	});
 	
 

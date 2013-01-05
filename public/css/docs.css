@@ -6,6 +6,12 @@
   /*src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');*/
 }
 
+#docspage-content {
+	width: 92%;
+	position: absolute;
+	left: 2%;
+}
+
 .docs-page {
 	position: relative;
 	background: white;
@@ -40,16 +46,22 @@
 	        box-sizing: border-box;
 }
 
-.toc-mobile {
-	z-index: 1000;
-    width: 300px;
+div.toc-mobile {
+    width: 23%;
+	max-width: 300px;
 	height: 100%;
 	background-color: #406C6C;
+	right: 0px;
+	position: fixed;
+	display: block;
+	z-index: 1;
+	padding: 12px; 
+	
 }
 
 .toc-mobile .heading {
 	color: white;
-	font-size: 1.9em;
+	font-size: 1.5em;
 	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 	margin-bottom: 5px;
 }
@@ -112,7 +124,7 @@
 #docspage-content .docs-page section {
 	padding: 15px 15px 50px 15px;
 	margin-left: 0;
-	width: 96%;
+	width: 100%;
 	border: 1px solid #9f9f9f;
     position: relative;
 }
@@ -192,4 +204,21 @@ p.section-title {
 
 #toc-data {
 	display: none;
+}
+
+#frame-container {
+	width: 100%; 
+	height: 100%; 
+	overflow-y: auto; 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+
+#frame-container iframe {
+	width: 77.6%; height: 100%; border: 0; position: absolute;
+}
+
+body.docsbase {
+	position: relative;
 }

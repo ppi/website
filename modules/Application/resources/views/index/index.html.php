@@ -57,8 +57,7 @@
                         src="<?=$view['assets']->getUrl('images/home_templating.png');?>" alt="Icon"></a>
                 <a class="title" href="<?=$view['router']->generate('Homepage');?>" title="">Templating</a>
 
-                <p class="desc">Awesome templating based on the Symfony2 Templating Component. We support PHP, Twig and
-                    Smarty</p>
+                <p class="desc">Awesome templating based on the Symfony2 Templating Component. We support PHP, Twig and Smarty</p>
             </li>
             <li>
                 <a class="icon" href="<?=$view['router']->generate('Homepage');?>" title=""><img

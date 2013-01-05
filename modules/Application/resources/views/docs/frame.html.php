@@ -25,21 +25,15 @@
 
 <body>
 
-<div class="toc-mobile meny">
+<div class="toc-mobile meny" style="">
     <div class="toc-mobile-content">
         <p class="heading">Table of Contents</p>
-        <ul class="items">
-            <li><a href="#introduction" title="">Introduction</a></li>
-            <li><a href="#details" title="">The Details</a></li>
-            <li><a href="#basic-routes" title="">Basic Routes</a></li>
-            <li><a href="#routes-with-parameters" title="">Routes with parameters</a></li>
-            <li><a href="#routes-with-requirements" title="">Routes with requirements</a></li>
-        </ul>
+        <ul class="items"></ul>
     </div>
 </div>
 
-<div class="contents" style="width: 100%; height: 100%; overflow-y: auto; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;">
-    <iframe src="<?=$view['router']->generate('DocsViewFile', array('page' => $page));?>" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>
+<div class="contents" id="frame-container">
+    <iframe src="<?=$view['router']->generate('DocsViewFile', array('page' => $page));?>"></iframe>
 </div>
 
 <script type="text/javascript">
@@ -61,7 +55,7 @@
 
 <!-- JS Body Stuff -->
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/bootstrap.min.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/meny.min.js');?>"></script>
+<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/meny.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollTo.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.serialScroll.min.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.localscroll.js');?>"></script>
