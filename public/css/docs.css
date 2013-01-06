@@ -230,7 +230,13 @@ body.docsbase {
 	box-shadow:         0px 1px 5px rgba(50, 50, 50, 0.75);
 	background-color: #E1EDED; 
 	height: 50px; 
-	border-bottom: 1px solid #909090; width: 100%; position:fixed; top: 52px; z-index: 999; margin-left: -20px; opacity: 0.8;
+	border-bottom: 1px solid #909090; 
+	width: 100%; 
+	position:fixed; 
+	top: 52px; 
+	z-index: 999; 
+	margin-left: -20px; 
+	opacity: 0.9;
 }
 
 .section-subbar .buttons-container {

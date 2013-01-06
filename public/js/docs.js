@@ -54,7 +54,7 @@ jQuery('.contents iframe').load(function() {
 	$.localScroll.hash({
 		axis: 'y',
 		hash:   true,
-		offset: {top:-55, left:0}
+		offset: {top:-110, left:0}
 	});
 	
 	jQuery('.toc-mobile li').localScroll({
