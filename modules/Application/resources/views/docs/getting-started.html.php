@@ -1,38 +1,26 @@
-<?php $view->extend('::base.html.php'); ?>
+<?php
+$toc = array(
+    'downloading-ppi' => 'Downloading PPI',
+    'system-requirements' => 'System Requirements'
+);
 
-<?php $view['slots']->start('include_css'); ?>
-<link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
-<link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
-<?php $view['slots']->stop(); ?>
+?>
 
-<?php $view['slots']->start('include_js_body'); ?>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/highlight.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollTo.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.serialScroll.min.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.localscroll.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/docs.js');?>"></script>
-<?php $view['slots']->stop(); ?>  
+<div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
 
+<div class="section-subbar clearfix">
+<!--     <a class="prev-page" title="Getting Started"><img src="--><?//=$view['assets']->getUrl('images/docs/previous-page.png');?><!--" alt="Previous"></a>-->
+    <div class="main-title">Getting Started</div>
+    <a class="next-page btn" title="The Skeleton Application" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">
+        The Skeleton Application&nbsp;&nbsp;<img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Next">
+    </a>
+ </div>
+    
+<div class="content-box docs-page">
+    
+    <section class='content'>
 
-<div class="continer-fluid content-box docs-page">
-
-	<div class="row-fluid">
-
-		<div class="toc-mobile">
-			<p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
-			<ul class="items">
-				<li><a href="#overview" title="">Overview</a></li>
-				<li><a href="#standing-on-the-shoulders-of-giants" title="">Standing on the shoulders of giants</a></li>
-				<li><a href="#downloading-ppi" title="">Downloading PPI</a></li>
-				<li><a href="#system-requirements" title="">System Requirements</a></li>
-			</ul>
-		</div>
-
-		<section class='content'>
-
-			<a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
-
-			<h1>Getting Started</h1>
+        
 
 <!--				<p id='standing-on-the-shoulders-of-giants' class="section-title">Standing on the shoulders of giants</p>-->
 <!---->
@@ -45,18 +33,18 @@
 <!--					Doctrine2's clean DBAL component which has been made easy to use through PPI's DataSource-->
 <!--					component.</p>-->
 
-				<p class="section-title" id='downloading-ppi'>Downloading PPI</p>
+            <p class="section-title" id='downloading-ppi'>Downloading PPI</p>
 
-				<p>You can download the ppi skeletonaapp from the <a href="<?=$view['router']->generate('Homepage');?>" title="Homepage">Homepage</a>. If you just want everything in one folder ready to go, you should choose the <b>"ppi skeletonapp with vendors"</b> option. If you are comfortable with using <b>git</b> then you can download the <b>"skeleton app without vendors"</b> option and run <b>composer install</b> yourself.</p>
+            <p>You can download the ppi skeletonaapp from the <a href="<?=$view['router']->generate('Homepage');?>" title="Homepage">Homepage</a>. If you just want everything in one folder ready to go, you should choose the <b>"ppi skeletonapp with vendors"</b> option. If you are comfortable with using <b>git</b> then you can download the <b>"skeleton app without vendors"</b> option and run <b>composer install</b> yourself.</p>
 
-				<p id='system-requirements' class="section-title">System requirements</p>
-				<p>A web server with its rewrite module enabled. (mod_rewrite for apache)</p>
-				<p>PPI needs <b>5.3.3</b> or above. The recommended version by symfony is <b>5.3.10</b> or above.</p>
+            <p id='system-requirements' class="section-title">System requirements</p>
+            <p>A web server with its rewrite module enabled. (mod_rewrite for apache)</p>
+            <p>PPI needs <b>5.3.3</b> or above. The recommended version by symfony is <b>5.3.10</b> or above.</p>
 
-			<a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>
+<!--        <a class="next-article bottom btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'application'));?><!--">The Skeleton Application <i class="icon-arrow-right icon-white"></i></a>-->
 
-		</section>
+	<div class="spacer"></div>
 
-	</div>
+    </section>
 
 </div>

@@ -1,39 +1,32 @@
-<?php $view->extend('::base.html.php'); ?>
+<?php
+$toc = array(
+    'introduction'  => 'Introduction',
+    'module-class'  => 'The Module.php class',
+    'init'          => 'Init',
+    'configuration' => 'Configuration',
+    'routing'       => 'Routing',
+    'conclusion'    => 'Conclusion'
+);
 
-<?php $view['slots']->start('include_css'); ?>
-<link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
-<link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
-<?php $view['slots']->stop(); ?>
+?>
 
-<?php $view['slots']->start('include_js_body'); ?>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/highlight.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.scrollTo.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.serialScroll.min.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/jquery.localscroll.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/docs.js');?>"></script>
-<?php $view['slots']->stop(); ?>  
+<div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
 
-<div class="continer-fluid content-box docs-page">
-
-    <div class="toc-mobile">
-        <p class="toc-heading"><i class="icon-arrow-down left icon-white"></i> Table of Contents <i class="icon-arrow-down icon-white right"></i></p>
-        <ul class="items">
-            <li><a href="#introduction" title="">Introduction</a></li>
-            <li><a href="#module-class" title="">The Module.php class</a></li>
-            <li><a href="#init" title="">Init</a></li>
-            <li><a href="#configuration" title="">Configuration</a></li>
-            <li><a href="#routing" title="">Routing</a></li>
-            <li><a href="#conclusion" title="">Conclusion</a></li>
-        </ul>
-    </div>
+<div class="section-subbar clearfix">
+    <a class="prev-page btn" title="The Skeleton Application" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">
+        <img src="<?=$view['assets']->getUrl('images/docs/previous-page.png');?>" alt="Previous">&nbsp;&nbsp;The Skeleton Application
+    </a>
+    <div class="main-title">Modules</div>
+    <a class="next-page btn" title="Routing" href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">
+        Routing&nbsp;&nbsp;<img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Next">
+    </a>
+</div>
+    
+<div class="content-box docs-page">
 
     <div class="row-fluid">
 
         <section class='content'>
-
-            <h1>PPI Modules</h1>
-
-            <a class="next-article top btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'routing'));?>">Routing <i class="icon-arrow-right icon-white"></i></a>
 
             <p id='introduction' class="section-title">Introduction</p>
 
@@ -175,8 +168,10 @@ class Module extends BaseModule {
                 <p>Lets move onto the <b>Routing</b> section to check out what happens next.</p>
             </article>
 
-            <a class="prev-article btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'application'));?>"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>
-            <a class="next-article bottom btn btn-green" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'routing'));?>">Routing <i class="icon-arrow-right icon-white"></i></a>
+<!--            <a class="prev-article btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'application'));?><!--"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>-->
+<!--            <a class="next-article bottom btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'routing'));?><!--">Routing <i class="icon-arrow-right icon-white"></i></a>-->
+
+		<div class="spacer"></div>
 
         </section>
 

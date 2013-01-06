@@ -1,8 +1,26 @@
+/* Font Face */
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+
+#docspage-content {
+	width: 90%;
+	position: absolute;
+	left: 2%;
+}
+
 .docs-page {
 	position: relative;
-	background: white;
-	margin-top: 30px;
+	padding-top: 60px;
 	margin-bottom: 30px;
+}
+
+.docs-page .spacer {
+	height: 250px;
+	display: none;
 }
 
 .docs-page p {
@@ -16,109 +34,69 @@
 	margin-left: 0px;
 }
 
-.toc-mobile.expanded {
-    border-left: 1px solid #244D4D;
-    border-right: 1px solid #244D4D;
-}
-.toc-mobile.expanded .toc-heading i {
-    background-image: url(../images/glyphicons-halflings-white.png);
-}
-.toc-mobile.expanded .toc-heading {
-    background-color: #244D4D;
-    color: white;
+.meny {
+	display: none;
+	padding: 20px 20px 20px 30px;
+	overflow: auto;
+	background: #333;
+	color: #eee;
 
-}
-
-.toc-mobile {
-    margin: 0 auto;
-    position: fixed;
-    bottom: 0;
-    z-index: 1000;
-    width: 300px;
-    left: 50%;
-    margin-left: -150px;
-    background-color: #E1EDED;
-    border-left: 1px solid #E1EDED;
-    border-right: 1px solid #E1EDED;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
-.toc-mobile .toc-heading i.left {
-    position: absolute;
-    left: 12px;
-    top: 7px;
-}
-
-.toc-mobile .toc-heading i.right {
-    position: absolute;
-    right: 12px;
-    top: 7px;
-}
-
-.toc-mobile .toc-heading:hover {
-    cursor: pointer;
-}
-
-.toc-mobile .toc-heading {
-
-    background-color: #244D4D;
-    color: white;
-    border: 1px solid #244D4D;
-    border-bottom: none;
-
-    text-align: center;
-	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
-
-    position: relative;
-    margin-bottom: 0;
-    padding: 5px;
-
-}
-
-.toc-mobile .items li:first-child {
-    /*margin-top: 0;*/
-}
-.toc-mobile .items li {
-	font-size: 1.1em;
-    margin-top: 8px;
-}
-.toc-mobile .items {
-    display: none;
-    list-style-type: none;
-    margin-left: 30px;
-}
-
-.toc-heading {
-    background-color: #406C6C;
-    color: white;
-}
-
-.docs-page .toc {
-	position: absolute;
+div.toc-mobile {
+    width: 23%;
+	max-width: 300px;
+	height: 100%;
+	background-color: #406C6C;
 	right: 0px;
-	padding: 12px;
-	width: 180px;
-	background-color: #e1eded;
-	color: #244d4d;
-	border: 1px solid #244d4d;
-	border-right: none;
-
-	/*border-radius: 0 0 35px 0;*/
-	/*-webkit-border-radius: 0 0 35px 0;*/
-	/*-moz-border-radius: 0 0 35px 0;*/
-	/*-moz-box-shadow: 3px 3px 5px #bebebe;*/
-	/*-webkit-box-shadow: 3px 3px 5px #bebebe;*/
-	box-shadow: 3px 3px 5px #bebebe;
-}
-
-.docs-page .toc.sticky {
 	position: fixed;
-	top: 30px;
+	display: block;
+	z-index: 1;
+	padding: 12px; 
+	
 }
 
-.docs-page .toc .heading {
+.toc-mobile .heading {
+	color: white;
+	font-size: 1.5em;
 	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
-	font-size: 1.3em;
+	margin-bottom: 5px;
+}
+.toc-mobile .items li a {
+	color: white;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+}
+
+.toc-mobile .items li {
+	font-size: 1.0em;
+}
+
+.toc-mobile .items {
+    list-style-type: none;
+    margin-left: 5px;
+	width: 265px;
+	z-index: 100;
+}
+
+.toc-mobile .items li {
+	margin: 0;
+}
+
+.toc-mobile .items li a {
+	display: block;
+	padding: 5px;
+}
+
+.toc-mobile .items li a:hover {
+	background-color: #345958;
+	text-decoration: none;
+}
+
+.toc-mobile .items li.active {
+	background-color: #345958;
 }
 
 .docs-page code {
@@ -143,12 +121,13 @@
 	margin-bottom: 5px;
 }
 
-#page-content .docs-page section {
-	padding: 15px 15px 50px 15px;
+#docspage-content .docs-page section {
+	padding: 15px;
 	margin-left: 0;
-	width: 97%;
+	width: 100%;
 	border: 1px solid #9f9f9f;
     position: relative;
+	background-color: white;
 }
 
 .docs-page section a.next-article i {
@@ -162,8 +141,8 @@
 }
 .docs-page section a.next-article.bottom {
 	position: absolute;
-	bottom: 12px;
-	right: 12px;
+	bottom: 270px;
+	right: 18px;
 	font-size: 1.2em;
 }
 
@@ -173,22 +152,22 @@
 
 .docs-page section a.prev-article {
 	position: absolute;
-	bottom: 12px;
-	left: 12px;
+	bottom: 270px;
+	left: 15px;
 	font-size: 1.2em;
 }
 
-#page-content pre {
+#docspage-content pre {
 	padding: 0 0 0 12px;
 	margin: 5px 5px 5px 0;
 }
-#page-content code {
+#docspage-content code {
 	background: none;
 	padding: 0;
 	margin: 0;
 }
 
-#page-content pre, #page-content code {
+#docspage-content pre, #docspage-content code {
 	line-height: 15px;
 }
 
@@ -199,11 +178,14 @@ p.section-title span {
 
 p.section-title {
 	font-size: 1.3em;
-	/*background-color: #404040;*/
 	background-color: #E1EDED;
 	color: #244D4D;
 	padding: 5px;
 	margin-top: 12px;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+}
+
+.docs-page ul li {
 	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 
@@ -216,18 +198,89 @@ p.section-title {
 	position: absolute;
 }
 
-/*@media only screen and (orientation: portrait) {*/
-	/* Hide the TOC when your screen is smaller than the TOC width. */
-	/*.toc-container .toc {*/
-        /*display: none;*/
-	/*}*/
-/**/
-    /*.toc-mobile {*/
-        /*display: block;*/
-    /*}*/
-	/**/
-	/*#page-content .docs-page article {*/
-		/*width: 95%;*/
-	/*}*/
+#action-content {
+	height: 100%;
+	min-height: 1000px;
+}
+
+#toc-data {
+	display: none;
+}
+
+#frame-container {
+	width: 100%; 
+	height: 100%; 
+	overflow-y: auto; 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+
+#frame-container iframe {
+	width: 77.0%; height: 100%; border: 0; position: absolute;
+}
+
+body.docsbase {
+	position: relative;
+}
+
+.section-subbar {
+	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 1px 5px rgba(50, 50, 50, 0.75);
+	background-color: #E1EDED; 
+	height: 50px; 
+	border-bottom: 1px solid #909090; 
+	width: 100%; 
+	position:fixed; 
+	top: 52px; 
+	z-index: 999; 
+	margin-left: -20px; 
+	opacity: 0.9;
+}
+
+.section-subbar:hover {
+	opacity: 1;
+}
+
+.section-subbar .buttons-container {
+}
+
+.section-subbar .main-title {
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+	padding: 0;
+	font-size: 1.8em;
+	min-width: 300px;
+	width: auto;
+	text-align: center;
+	margin: 15px auto 0 -20px;
+}
+
+.section-subbar .main-title span {
+	opacity: 1.0 !important;
+}
+
+
+.section-subbar .prev-page {
+	display: block;
+	position: absolute;
+	left: 18px;
+	top: 5px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.section-subbar .prev-page img, .section-subbar .next-page img {
+	width: 20.8px;
+	margin-top: -2px;
+}
+
+.section-subbar .next-page {
+	padding-bottom: 8px;
+	padding-top: 8px;
 	
+	position: absolute;
+	display: block;
+	right: 42px;
+	top: 5px;
 }

@@ -99,23 +99,28 @@
 		};
 	};
 
-	function scroll( e, link, settings ){
-		
-		var id = link.hash.slice(1),
-			elem = document.getElementById(id) || document.getElementsByName(id)[0];
+	function scroll( e, link, settings ) {
 
-		if ( !elem ) {
+		var id = link.hash.slice(1), elem, target;
+		
+		// If our target is already a jquery object then we can just do a jQuery.find() to get our 'elem'
+		if(settings.target instanceof jQuery) {
+			$target = settings.target;
+			elem = $target.find('#' + id);
+			
+		// We have a standard jQuery selector and will use native DOM functions.
+		} else {
+			$target = $(settings.target);
+			elem = $target.getElementById(id) || $target.getElementsByName(id)[0];
+		}
+		
+		if ( !elem) {
 			return;
 		}
-			
 
 		if( e ) {
-			console.log('prevvent');
 			e.preventDefault();
 		}
-			
-
-		var $target = $( settings.target );
 
 		if( settings.lock && $target.is(':animated') ||
 			settings.onBefore && settings.onBefore.call(settings, e, elem, $target) === false ) {

@@ -19,13 +19,11 @@
                         <span class="icon-circle-arrow-down icon-white"></span> Download
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href="#download" id="download-skeleton-without-vendors">Skeleton App (without vendors)
-                            .tar.gz 5.8KB</a></li>
-                        <li><a href="#download" id="download-skeleton-with-vendors">Skeleton App (with vendors) .tar.gz
-                            20MB</a></li>
+                        <li><a href="#download" id="download-skeleton-without-vendors">Skeleton App (without vendors).tar.gz</a></li>
+                        <li><a href="#download" id="download-skeleton-with-vendors">Skeleton App (with vendors) .tar.gz</a></li>
                     </ul>
                 </div>
-                <a class="main-button docs-button btn btn-large" href="<?=$view['router']->generate('DocsViewFile', array('page' => 'getting-started'));?>">Documentation</a>
+                <a class="main-button docs-button btn btn-large" href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting-started'));?>">Documentation</a>
                 <a class="main-button github-button btn btn-large" href="http://www.github.com/ppi">GitHub</a>
             </div>
         </div>
@@ -57,8 +55,7 @@
                         src="<?=$view['assets']->getUrl('images/home_templating.png');?>" alt="Icon"></a>
                 <a class="title" href="<?=$view['router']->generate('Homepage');?>" title="">Templating</a>
 
-                <p class="desc">Awesome templating based on the Symfony2 Templating Component. We support PHP, Twig and
-                    Smarty</p>
+                <p class="desc">Awesome templating based on the Symfony2 Templating Component. We support PHP, Twig and Smarty</p>
             </li>
             <li>
                 <a class="icon" href="<?=$view['router']->generate('Homepage');?>" title=""><img

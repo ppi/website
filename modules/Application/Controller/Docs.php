@@ -13,7 +13,17 @@ class Docs extends SharedController
             return $this->redirectToRoute('Homepage');
         }
         
-        return $this->render('Application:docs:' . $page . '.html.php');
+        return $this->render('Application:docs:frame.html.php', compact('page'));
+    }
+    
+    public function viewAction()
+    {
+        $page = $this->getRouteParam('page');
+        if(!$this->isValidDocsPage($page)) {
+            return 'Invalid Docs Page';
+        }
+        
+        return $this->render('Application:docs:index.html.php', compact('page'));
     }
 
     /**
