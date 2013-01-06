@@ -10,19 +10,13 @@ $toc = array(
     'using-the-router'    => 'Using the router helper'
 );
 
-$pagingData = array(
-    'prev' => array('title' => 'Controllers', 'href' => 'controllers.html'),
-    'next' => array('title' => '', 'href' => '')
-);
-
 ?>
 
 <div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
-<div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
 
 <div class="section-subbar clearfix">
-     <a class="prev-page" title="Controllers" href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">
-         <img src="<?=$view['assets']->getUrl('images/docs/previous-page.png');?>" alt="Previous">
+     <a class="prev-page btn" title="Controllers" href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">
+         <img src="<?=$view['assets']->getUrl('images/docs/previous-page.png');?>" alt="Previous">&nbsp;&nbsp;Controllers
      </a>
      <div class="main-title">Templating</div>
 <!--     <a class="next-page" title="Modules" href=""><img src="--><?//=$view['assets']->getUrl('images/docs/next-page.png');?><!--" alt="Previous"></a>-->

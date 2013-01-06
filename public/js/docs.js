@@ -8,21 +8,6 @@
 
 //meny.open();
 
-jQuery(document).ready(function ($) {
-
-	$('.toc-mobile .toc-heading').click(function () {
-		
-		var arrows = $(this).find('i');
-		if (arrows.hasClass('icon-arrow-up')) {
-			arrows.removeClass('icon-arrow-up').addClass('icon-arrow-down');
-		} else {
-			arrows.addClass('icon-arrow-up').removeClass('icon-arrow-down');
-		}
-		
-	});
-
-});
-
 jQuery('.contents iframe').load(function() {
 	
 	var iframe = jQuery('.contents iframe').contents();

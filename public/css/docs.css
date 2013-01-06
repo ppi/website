@@ -253,43 +253,24 @@ body.docsbase {
 
 .section-subbar .prev-page {
 	display: block;
-	width: 37px;
-	height: 37px;
 	position: absolute;
 	left: 18px;
 	top: 5px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
-.section-subbar .prev-page img {
-	width: 37px;
-	height: 37px;
+.section-subbar .prev-page img, .section-subbar .next-page img {
+	width: 20.8px;
+	margin-top: -2px;
 }
 
 .section-subbar .next-page {
-	display: block;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	
 	position: absolute;
+	display: block;
 	right: 42px;
 	top: 5px;
-	width: 37px;
-	height: 37px;
-}
-
-.section-subbar .next-page img {
-	width: 37px;
-	height: 37px;
-}
-
-.tooltip {
-	font-size: 1.0em;
-}
-
-div.tooltip-inner {
-	background-color: #333;
-}
-
-div.tooltip.left .tooltip-arrow {
-	border-left-color: #333;
-}
-div.tooltip.right .tooltip-arrow {
-	border-right-color: #333;
 }

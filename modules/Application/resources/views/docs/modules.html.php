@@ -8,23 +8,17 @@ $toc = array(
     'conclusion'    => 'Conclusion'
 );
 
-$pagingData = array(
-    'prev' => array('title' => 'The Skeleton Application', 'href' => 'application.html'),
-    'next' => array('title' => 'Routing', 'href' => 'routing.html')
-);
-
 ?>
 
 <div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
-<div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
 
 <div class="section-subbar clearfix">
-    <a class="prev-page" title="The Skeleton Application" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">
-        <img src="<?=$view['assets']->getUrl('images/docs/previous-page.png');?>" alt="Previous">
+    <a class="prev-page btn" title="The Skeleton Application" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">
+        <img src="<?=$view['assets']->getUrl('images/docs/previous-page.png');?>" alt="Previous">&nbsp;&nbsp;The Skeleton Application
     </a>
     <div class="main-title">Modules</div>
-    <a class="next-page" title="Routing" href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">
-        <img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Next">
+    <a class="next-page btn" title="Routing" href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">
+        Routing&nbsp;&nbsp;<img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Next">
     </a>
 </div>
     

@@ -7,23 +7,17 @@ $toc = array(
     'routes-with-requirements' => 'Routes with requirements'
 );
 
-$pagingData = array(
-    'prev' => array('title' => 'Modules', 'href' => 'modules.html'),
-    'next' => array('title' => 'Controllers', 'href' => 'controllers.html')
-);
-
 ?>
 
 <div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
-<div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
 
 <div class="section-subbar clearfix">
-    <a class="prev-page" title="Modules" href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>">
-        <img src="<?=$view['assets']->getUrl('images/docs/previous-page.png');?>" alt="Previous">
+    <a class="prev-page btn" title="Modules" href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>">
+        <img src="<?=$view['assets']->getUrl('images/docs/previous-page.png');?>" alt="Previous">&nbsp;&nbsp;Modules
     </a>
     <div class="main-title">Routing</div>
-    <a class="next-page" title="Controllers" href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">
-        <img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Next">
+    <a class="next-page btn" title="Controllers" href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">
+        Controllers&nbsp;&nbsp;<img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Next">
     </a>
  </div>
 

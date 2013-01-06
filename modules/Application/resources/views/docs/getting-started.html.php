@@ -4,21 +4,15 @@ $toc = array(
     'system-requirements' => 'System Requirements'
 );
 
-$pagingData = array(
-    'prev' => array('title' => '', 'href' => ''),
-    'next' => array('title' => 'The Skeleton Application', 'href' => 'application.html')
-);
-
 ?>
 
 <div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
-<div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
 
 <div class="section-subbar clearfix">
 <!--     <a class="prev-page" title="Getting Started"><img src="--><?//=$view['assets']->getUrl('images/docs/previous-page.png');?><!--" alt="Previous"></a>-->
     <div class="main-title">Getting Started</div>
-    <a class="next-page" title="The Skeleton Application" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">
-        <img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Next">
+    <a class="next-page btn" title="The Skeleton Application" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">
+        The Skeleton Application&nbsp;&nbsp;<img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Next">
     </a>
  </div>
     

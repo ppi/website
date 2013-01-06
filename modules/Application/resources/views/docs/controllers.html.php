@@ -16,23 +16,17 @@ $toc = array(
     'get-env' => 'Getting the current environment'
 );
 
-$pagingData = array(
-    'prev' => array('title' => 'Controllers', 'href' => 'controllers.html'),
-    'next' => array('title' => '', 'href' => '')
-);
-
 ?>
 
 <div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
-<div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
 
 <div class="section-subbar clearfix">
-    <a class="prev-page" title="Routing" href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">
-        <img src="<?=$view['assets']->getUrl('images/docs/previous-page.png');?>" alt="Previous">
+    <a class="prev-page btn" title="Routing" href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">
+        <img src="<?=$view['assets']->getUrl('images/docs/previous-page.png');?>" alt="Previous">&nbsp;&nbsp;Routing
     </a>
     <div class="main-title">Controllers</div>
-    <a class="next-page" title="Templating" href="<?=$view['router']->generate('DocsIndex', array('page' => 'templating'));?>">
-        <img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Next">
+    <a class="next-page btn" title="Templating" href="<?=$view['router']->generate('DocsIndex', array('page' => 'templating'));?>">
+        Templating&nbsp;&nbsp;<img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Previous">
     </a>
 </div>
     
