@@ -228,12 +228,53 @@ body.docsbase {
 	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow:    0px 1px 5px rgba(50, 50, 50, 0.75);
 	box-shadow:         0px 1px 5px rgba(50, 50, 50, 0.75);
-	background-color: #E1EDED; height:40px; border-bottom: 1px solid #909090; width: 100%; position:fixed; top: 52px; z-index: 999; margin-left: -20px; opacity: 0.8;
+	background-color: #E1EDED; 
+	height: 50px; 
+	border-bottom: 1px solid #909090; width: 100%; position:fixed; top: 52px; z-index: 999; margin-left: -20px; opacity: 0.8;
 }
 
-.section-subbar h1 {
+.section-subbar .buttons-container {
+}
+
+.section-subbar .main-title {
 	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
-	margin: 0 0 0 12px;
 	padding: 0;
 	font-size: 1.8em;
+	min-width: 300px;
+	width: auto;
+	text-align: center;
+	margin: 15px auto 0 -20px;
+}
+
+.section-subbar .main-title span {
+	opacity: 1.0 !important;
+}
+
+
+.section-subbar .prev-page {
+	display: block;
+	width: 37px;
+	height: 37px;
+	position: absolute;
+	left: 18px;
+	top: 5px;
+}
+
+.section-subbar .prev-page img {
+	width: 37px;
+	height: 37px;
+}
+
+.section-subbar .next-page {
+	display: block;
+	position: absolute;
+	right: 42px;
+	top: 5px;
+	width: 37px;
+	height: 37px;
+}
+
+.section-subbar .next-page img {
+	width: 37px;
+	height: 37px;
 }

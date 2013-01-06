@@ -19,18 +19,19 @@ $pagingData = array(
 <div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
 <div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
 
-<div class="section-subbar"><h1>The Skeleton Application</h1></div>
+<div class="section-subbar clearfix">
+    <a class="prev-page" title="Getting Started"><img src="<?=$view['assets']->getUrl('images/docs/previous-page.png');?>" alt="Previous"></a>
+    <div class="main-title">The Skeleton Application</div>
+    <a class="next-page" title="Modules"><img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Previous"></a>
+</div>
     
 <div class="content-box docs-page">
 
     <section class='content'>
 
-        
-
             <p class="section-title" id='app-structure'>Application File Structure</p>
     
-            <p>First, lets review the file structure of the PPI skeleton application that we have pre-built for you to
-                get up and running as quickly as possible.</p>
+            <p>First, lets review the file structure of the PPI skeleton application that we have pre-built for you to get up and running as quickly as possible.</p>
     
             <p><pre>
 

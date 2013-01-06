@@ -13,8 +13,12 @@ $pagingData = array(
 
 <div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
 <div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
-    
-<div class="section-subbar"><h1>Getting Started</h1></div>
+
+<div class="section-subbar clearfix">
+     <a class="prev-page" title="Getting Started"><img src="<?=$view['assets']->getUrl('images/docs/previous-page.png');?>" alt="Previous"></a>
+     <div class="main-title">Getting Started</div>
+     <a class="next-page" title="Modules"><img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Previous"></a>
+ </div>
     
 <div class="content-box docs-page">
     

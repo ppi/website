@@ -17,12 +17,16 @@ $pagingData = array(
 <div id="toc-data" style="display: none;"><?=json_encode($toc);?></div>
 <div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
 
+<div class="section-subbar clearfix">
+     <a class="prev-page" title="Getting Started"><img src="<?=$view['assets']->getUrl('images/docs/previous-page.png');?>" alt="Previous"></a>
+     <div class="main-title">Routing</div>
+     <a class="next-page" title="Modules"><img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Previous"></a>
+ </div>
+
 <div class="content-box docs-page">
 
     <section class='content'>
             
-        <h1>Routing</h1>
-        
         <p class="section-title" id="introduction">Introduction</p>
         
         <p>Routes are the rules that tell the framework what URLs map to what area of your application. The routing
