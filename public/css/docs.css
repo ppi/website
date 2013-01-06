@@ -239,6 +239,10 @@ body.docsbase {
 	opacity: 0.9;
 }
 
+.section-subbar:hover {
+	opacity: 1;
+}
+
 .section-subbar .buttons-container {
 }
 
