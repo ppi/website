@@ -240,8 +240,32 @@ Welcome to the blog page
         <p>By asking for <b>images/blog.png</b> we're basically asking for <b>www.mysite.com/images/blog.png</b>, pretty straight forward right? Our <b>include_css</b> and <b>include_js</b> slots blocks are custom HTML that's loading up CSS/JS files just for this paritcular page load. This is great because you can split your application up onto smaller CSS/JS files and only load the required assets for your particular page, rather than having to bundle all your CSS into the one file.</p>
         
         <p class="section-title" id='using-the-router'>Using the router helper</p>
-        <p>So why do we need a routing helper? Well we initially create a route perhaps something called <b></b></p>
+        <p>What is a router helper? The router help is a nice PHP class with routing related methods on it that you can use while you're building PHP templates for your application.</p>
+        <p>What's it useful for? The most common use for this is to perform a technique commonly known as <b>reverse routing</b>. Basically this is the process of taking a <b>route key</b> and turning that into a URL, rather than the standard process of having a URL and that translate into a route to become dispatched.</p>
+        <p>Why is reverse routing needed? Lets take the <b>Blog_Show</b> route we made earlier in the routing section. The syntax of that URI would be like: <b>/blog/show/{title}</b>, so rather than having numerous HTML links all manually referring to <b>/blog/show/my-title</b> we always refer to its route key instead, that way if we ever want to change the URI to something like <b>/blog/post/{title}</b> the templating layer of your application won't care because that change has been centrally maintained in your module's routes file.</p>
+        <p>Here are some examples of reverse routing using the routes helper</p>
+        <pre><code>
+&lt;a href="&lt;?=$view['router']-&gt;generate('About_Page');?&gt;"&gt;About Page&lt;/a&gt;
+            
+&lt;p&gt;User List&lt;/p&gt;
+&lt;ul&gt;
+&lt;?php foreach($users as $user): ?&gt;
+    &lt;li&gt;&lt;a href="&lt;?=$view['router']-&gt;generate('User_Profile', array('id' =&gt; $user-&gt;getID())); ?&gt;"&gt;&lt;?=$view-&gt;escape($user-&gt;getName());?&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;?php endforeach; ?&gt;
+&lt;/ul&gt;
+        </code></pre>
         
+        <p>The output would be something like this</p>
+<pre><code>
+&lt;a href="/about"&gt;About Page&lt;/a&gt;
+    
+&lt;p&gt;User List&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href="/user/profile?id=23"&gt;PPI User&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/user/profile?id=87675"&gt;Another PPI User&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+</code></pre>
         </section>
         
     </div>
