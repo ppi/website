@@ -43,7 +43,8 @@ jQuery('.contents iframe').load(function() {
 		}
 	});
 	
-	iframe.find('a.next-article, a.prev-article').click(function() {
+	iframe.find('.section-subbar a').click(function(e) {
+		e.preventDefault();
 		window.location.href = jQuery(this).attr('href');
 	});
 	

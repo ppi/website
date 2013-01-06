@@ -15,9 +15,11 @@ $pagingData = array(
 <div id="paging-data" style="display: none"><?=json_encode($pagingData);?></div>
 
 <div class="section-subbar clearfix">
-     <a class="prev-page" title="Getting Started"><img src="<?=$view['assets']->getUrl('images/docs/previous-page.png');?>" alt="Previous"></a>
-     <div class="main-title">Getting Started</div>
-     <a class="next-page" title="Modules"><img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Previous"></a>
+<!--     <a class="prev-page" title="Getting Started"><img src="--><?//=$view['assets']->getUrl('images/docs/previous-page.png');?><!--" alt="Previous"></a>-->
+    <div class="main-title">Getting Started</div>
+    <a class="next-page" title="The Skeleton Application" href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">
+        <img src="<?=$view['assets']->getUrl('images/docs/next-page.png');?>" alt="Next">
+    </a>
  </div>
     
 <div class="content-box docs-page">
