@@ -44,12 +44,12 @@
     line-height: 22px;
     margin:      20px auto 0 auto;
     text-align:  center;
-    width:       635px;
+    width:      468px;
     font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 
 #page-content .top .intro .heading {
-    font-size:   2.7em;
+    font-size:   2.5em;
     font-weight: normal;
     color:       #406C6C;
     text-align:  center;
@@ -57,7 +57,7 @@
 }
 
 #page-content .top .intro {
-    width:         931px;
+    width:         489px;
     margin:        0px auto -1px auto;
     padding:       25px 12px 25px 20px;
     z-index:       10;
@@ -135,15 +135,95 @@
     top:      20px;
 }
 
-#page-content .top {
-    /*background-color: #eaeaea;*/
-    position: relative;
-    width:    965px;
-    z-index:  1000;
-    margin:   25px 0 25px 0;
+#page-content .top-container .news-area {
+	width: 412px;
+	height: 279px;
+	margin-left: 30px;
+	margin-top: 25px;
+	float: left;
+	border: 1px solid #E5E5E5;
+	position: relative;
+	
+	background: white;
+	background: -moz-linear-gradient(top, white 0%, #F9F9F0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #F9F9F0));
+	background: -webkit-linear-gradient(top, white 0%, #F9F9F0 100%);
+	background: -o-linear-gradient(top, white 0%, #F9F9F0 100%);
+	background: -ms-linear-gradient(top, white 0%, #F9F9F0 100%);
+	background: linear-gradient(to bottom, white 0%, #F9F9F0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#F9F9F0', GradientType = 0);
+	
+}
+
+
+#page-content .top-container .news-area:before, #page-content .top-container .news-area:after {
+    content:            "";
+    position:           absolute;
+    z-index:            -1;
+    -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow:    0 8px 20px rgba(0, 0, 0, 0.8);
+    box-shadow:         0 8px 20px rgba(0, 0, 0, 0.8);
+    top:                0;
+    bottom:             8px;
+    left:               10px;
+    right:              10px;
+    -moz-border-radius: 100px / 10px;
+    border-radius:      100px / 10px;
+}
+
+#page-content .top-container .news-area:after {
+    right:             10px;
+    left:              auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform:    skew(8deg) rotate(3deg);
+    -ms-transform:     skew(8deg) rotate(3deg);
+    -o-transform:      skew(8deg) rotate(3deg);
+    transform:         skew(8deg) rotate(3deg);
+}
+
+
+#page-content .top-container .news-area .heading {
+	font-size: 2.0em;
+	background-color: #406C6C;
+	padding: 12px 12px 12px 18px;
+	font-weight: normal;
+	color: white;
+	font-family: "FertigoProRegular", "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+}
+
+#page-content .news-area ul {
+	margin-left: 0;
+	list-style: none;
+	/*list-style-type: none;*/
+}
+
+#page-content .news-area ul li a {
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+}
+#page-content .news-area ul li {
+	padding-bottom: 22px;
+	padding-top: 3px;
+	padding-left: 18px;
+	background: url(../images/whats-new-separator.png) center bottom no-repeat;
+}
+
+#page-content .news-area ul li:last-child {
+	background: none;
+}
+
+#page-content .top-container .news-area .top-color {
+	/*height: 40px;*/
+	/*background-color: #4C7F7F;*/
 }
 
 #page-content .top {
+	position: relative;
+	float: left;
+	height: 280px;
+	width:    521px;
+	z-index:  1000;
+	margin:   25px 0 25px 0;
     position:           relative;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     -moz-box-shadow:    0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
