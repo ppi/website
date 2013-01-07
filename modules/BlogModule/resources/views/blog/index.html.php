@@ -68,9 +68,9 @@
 
         <div class="section">
             <div class="social-icons">
-                <a href="http://twitter.com/ppi_framework"><img src="<?= $view['assets']->getUrl('images/twitter2.png');;?>" width="48" /> </a>
-                <a href="#"><img src="<?= $view['assets']->getUrl('images/googleplus.png');;?>" width="48" /></a>
-                <a href="<?=$view['router']->generate('BlogGetRSS');?>"><img src="<?= $view['assets']->getUrl('images/rss.png');;?>" width="48" /></a>
+                <a href="http://twitter.com/ppi_framework" target="_blank"><img src="<?= $view['assets']->getUrl('images/twitter2.png');?>" alt="Twitter" width="48" /></a>
+                <a href="https://plus.google.com/communities/100606932222119087997" target="_blank"><img src="<?= $view['assets']->getUrl('images/googleplus.png');?>" width="48" /></a>
+                <a href="<?=$view['router']->generate('BlogGetRSS');?>"><img src="<?= $view['assets']->getUrl('images/rss.png');?>" width="48" /></a>
             </div>
         </div>
 		
