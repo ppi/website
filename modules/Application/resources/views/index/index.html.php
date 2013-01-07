@@ -29,13 +29,22 @@
         </div>
         
         <div class="news-area">
-            <p class="heading">What's new</p>
+            <div class="heading">
+                <span>What's new</span>
+            
+                <div class="social-icons">
+                    <a href="http://twitter.com/ppi_framework" target="_blank"><img src="<?= $view['assets']->getUrl('images/twitter2.png');?>" alt="Twitter" width="38" /></a>
+                    <a href="https://plus.google.com/communities/100606932222119087997" target="_blank"><img src="<?= $view['assets']->getUrl('images/googleplus.png');?>" width="38" /></a>
+<!--                    <a href="--><?//=$view['router']->generate('BlogGetRSS');?><!--"><img src="--><?//= $view['assets']->getUrl('images/rss.png');?><!--" width="38" /></a>-->
+                </div>
+            
+            </div>
             
             <ul>
-                <li><a href="" title="">New documentation theme released</a></li>
-                <li><a href="" title="">New documentation theme released</a></li>
-                <li><a href="" title="">New documentation theme released</a></li>
-                <li><a href="" title="">New documentation theme released</a></li>
+                <li><a href="" title="">NHS Local now using PPI</a></li>
+                <li><a href="" title="">Google plus community launched</a></li>
+                <li><a href="" title="">Blog released</a></li>
+                <li><a href="" title="">New homepage theme released</a></li>
                 <li><a href="" title="">New documentation theme released</a></li>
             </ul>
             
