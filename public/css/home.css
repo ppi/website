@@ -49,21 +49,23 @@
 }
 
 #page-content .top .intro .heading {
-    font-size:   2.5em;
+    font-size:   2.2em;
+	padding:     15px 12px 15px 12px;
     font-weight: normal;
-    color:       #406C6C;
+    color:       white;
+	background-color: #406C6C;
     text-align:  center;
     font-family: "FertigoProRegular", "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 
 #page-content .top .intro {
-    width:         489px;
-    margin:        0px auto -1px auto;
-    padding:       25px 12px 25px 20px;
+    width:         527px;
+    margin:        0px auto -1px -5px;
+    padding:       0 0 20px 0;
     z-index:       10;
     font-family:   'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
     border:        1px solid #E5E5E5;
-    border-bottom: none;
+	border-top:    none;
     background:    #ffffff; /* Old browsers */
     background:    -moz-linear-gradient(top, #ffffff 0%, #F9F9F0 100%); /* FF3.6+ */
     background:    -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #F9F9F0)); /* Chrome,Safari4+ */
@@ -187,7 +189,7 @@
 	font-size: 2.0em;
 	background-color: #406C6C;
 	margin-bottom: 12px;
-	padding: 12px 12px 12px 18px;
+	padding: 15px 12px 15px 18px;
 	font-weight: normal;
 	color: white;
 	font-family: "FertigoProRegular", "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
@@ -213,7 +215,7 @@
 	padding-bottom: 22px;
 	padding-top: 3px;
 	padding-left: 18px;
-	background: url(../images/whats-new-separator.png) center bottom no-repeat;
+	background: url(../images/whats-new-separator2.png) left bottom no-repeat;
 }
 
 #page-content .news-area ul li:last-child {
@@ -227,8 +229,8 @@
 
 #page-content .top {
 	position: relative;
-	float: left;
-	height: 280px;
+	float:    left;
+	height:   277px;
 	width:    521px;
 	z-index:  1000;
 	margin:   25px 0 25px 0;

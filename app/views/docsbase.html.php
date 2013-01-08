@@ -16,6 +16,12 @@
     <meta name="keywords" content="ppi is an open source php meta-framework. we have taken the good bits from Symfony2, ZendFramework2 & Doctrine2 and combined them together to create a solid and very easy web application framework. ppi is fully PSR compliant. ppi can be considered the boilerplate of PHP frameworks">
    	<meta name="author" content="Paul Dragoonis">
     
+    <meta property="og:title" content="PPI Framework: the php meta framework" />
+    <meta property="og:site_name" content="PPI Framework: the php meta framework"/>
+    <meta property="og:url" content="http://www.ppi.io"/>
+    <meta property="og:type" content="website"> 
+    <meta property="og:image" content="<?=$view['assets']->getUrl('images/opengraph.png');?>"/>
+    
     <title><?php $view['slots']->output('title', 'PPI Skeleton Application') ?></title>
     
     <!-- CSS Stuff -->
