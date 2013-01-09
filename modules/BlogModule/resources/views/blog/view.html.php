@@ -24,7 +24,7 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 <?php $view['slots']->start('custom_opengraph'); ?>
 <meta property="og:title" content="PPI Framework: <?=$view->escape($post->getTitle());?>" />
 <meta property="og:site_name" content="PPI Framework: <?=$view->escape($post->getTitle());?>"/>
-<meta property="og:url" content="<?=$view['router']->generate('BlogView', array('postID' => $post->getID(), 'title' => $post->getTitle()), true);?>"/>
+<meta property="og:url" content="<?=$view['router']->generate('BlogView', array('postID' => $post->getID(), 'title' => $post->getSlug()), true);?>"/>
 <meta property="og:type" content="website"> 
 <meta property="og:image" content="<?=$view['assets']->getUrl('images/opengraph.png');?>"/>
 <?php $view['slots']->stop(); ?>
