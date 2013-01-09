@@ -35,20 +35,13 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
         
         <?php
         $created = $post->getCreatedDate();
-        $content = str_replace('[split]', '', $post->getContent());
         ?>
         
         <div class="post">
             <h1 class="post-title"><?=$post->getTitle();?></h1>
             <div class="post-thumbnail"></div>
             <div class="post-content">
-                
-                <div class="social-icons">
-                    <a href="http://twitter.com/ppi_framework" target="_blank"><img src="<?= $view['assets']->getUrl('images/twitter2.png');;?>" width="48" /></a>
-                    <a href="#"><img src="<?= $view['assets']->getUrl('images/googleplus.png');?>" width="48" /></a>
-    <!--                <a href="--><?//=$view['router']->generate('BlogGetRSS');?><!--" target="_blank"><img src="--><?//= $view['assets']->getUrl('images/rss.png');;?><!--" width="48" /></a>-->
-                </div>
-                <?=$content;?>
+                <?=$post->getContent();?>
             </div>
             
             <div class="date-area">
