@@ -39,12 +39,27 @@ class Blog extends SharedController
 
     public function viewAction()
     {
-        $postID       = $this->getRouteParam('postID');
-        $post         = $this->getBlogStorage()->getByID($postID);
-        $blogPostTags = $this->getBlogTagStorage()->getAll();
+//        $postID       = $this->getRouteParam('postID');
+//        $post         = $this->getBlogStorage()->getByID($postID);
+//        $blogPostTags = $this->getBlogTagStorage()->getAll();
 
-        return $this->render('BlogModule:blog:view.html.php', compact('post', 'blogPostTags'));
+        $post = new \BlogModule\Entity\BlogPost(array(
+            'title' => 'ddd',
+            'body' => ''
+        ));
+        
+        return $this->render('BlogModule:posts:foursquare-apc.html.php', compact('post'));
     }
+    
+//    public function viewAction()
+//    {
+//        $postID       = $this->getRouteParam('postID');
+//        $post         = $this->getBlogStorage()->getByID($postID);
+//        $blogPostTags = $this->getBlogTagStorage()->getAll();
+//
+//        return $this->render('BlogModule:blog:view.html.php', compact('post', 'blogPostTags'));
+//    }
+
 
     public function getRecentCommentsAction()
     {
