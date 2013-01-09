@@ -5,9 +5,28 @@
 <link href="<?=$view['assets']->getUrl('mod/blog/blog.css');?>" rel="stylesheet">
 <?php $view['slots']->stop(); ?>
 
+<?php $view['slots']->start('include_js_head'); ?>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+<?php $view['slots']->stop(); ?>
+
 <?php $view['slots']->start('include_js_body'); ?>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/mustache.js');?>"></script>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('mod/blog/blog.js');?>"></script>
+<script type="text/javascript">stLight.options({publisher: "9a24a00b-206d-46ea-a048-c52a72e37841"});</script>
+<script>
+var options={ "publisher": "9a24a00b-206d-46ea-a048-c52a72e37841", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["googleplus", "facebook", "twitter", "linkedin", "pinterest", "email", "sharethis"]}};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
+<?php $view['slots']->stop(); ?>
+
+<?php $view['slots']->start('custom_opengraph'); ?>
+<meta property="og:title" content="PPI Framework: <?=$view->escape($post->getTitle());?>" />
+<meta property="og:site_name" content="PPI Framework: <?=$view->escape($post->getTitle());?>"/>
+<meta property="og:url" content="<?=$view['router']->generate('BlogView', array('postID' => $post->getID(), 'title' => $post->getTitle()));?>"/>
+<meta property="og:type" content="website"> 
+<meta property="og:image" content="<?=$view['assets']->getUrl('images/opengraph.png');?>"/>
 <?php $view['slots']->stop(); ?>
 
 <div id="blog-index" class="clearfix">

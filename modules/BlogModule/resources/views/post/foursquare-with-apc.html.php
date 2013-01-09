@@ -3,7 +3,7 @@
 <!--Our approach is to have a robust core, a very straightforward development process and a low learning curve, so developers around the world can benefit from it.-->
 <!---- move this to the about page ---->
 
-<h4 xmlns="http://www.w3.org/1999/html">What are we going to cover ?</h4>
+<h4>What are we going to cover ?</h4>
 <p>In this article, we're going to learn how to work with the framework as a whole by making a module, controller, routes, templates (views) and services by writing a real-world application. In order to achieve this we are going to use the foursquare API and then APC for caching the API lookups. With the venues we pull from foursquare we plot these venues on a Google Maps display.</p> 
 
 <h4>What functionality will we be achieve ?</h4>
