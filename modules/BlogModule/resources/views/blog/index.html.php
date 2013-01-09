@@ -1,4 +1,5 @@
 <?php $view->extend('::base.html.php'); ?>
+<?php $view['slots']->set('title', 'PPI Framework - Blog');?>
 
 <?php $view['slots']->start('include_css'); ?>
 <link href="<?=$view['assets']->getUrl('mod/blog/blog.css');?>" rel="stylesheet">
