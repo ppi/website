@@ -10,8 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <!--  Mobile viewport optimized: j.mp/bplateviewport -->
    	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    
-   	<title>PPI Framework: the php meta framework</title>
+       	
    	<meta name="description" content="ppi is an open source php meta-framework. we have taken the good bits from Symfony2, ZendFramework2 & Doctrine2 and combined them together to create a solid and very easy web application framework. ppi is fully PSR compliant. ppi can be considered the boilerplate of PHP frameworks">
     <meta name="keywords" content="ppi is an open source php meta-framework. we have taken the good bits from Symfony2, ZendFramework2 & Doctrine2 and combined them together to create a solid and very easy web application framework. ppi is fully PSR compliant. ppi can be considered the boilerplate of PHP frameworks">
    	<meta name="author" content="Paul Dragoonis">
