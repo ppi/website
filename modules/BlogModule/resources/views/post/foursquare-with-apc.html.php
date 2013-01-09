@@ -4,17 +4,17 @@
 <!---- move this to the about page ---->
 
 <h4>What are we going to cover ?</h4>
-<p>In this article, we're going to learn how to work with the framework as a whole by making a module, controller, routes, templates (views) and services, by writing a real-world application. In order to do so, we are going to use the foursquare API, APC for caching API lookups, Google Maps API to plot foursquare venues on the map.</p> 
+<p>In this article, we're going to learn how to work with the framework as a whole by making a module, controller, routes, templates (views) and services by writing a real-world application. In order to achieve this we are going to use the foursquare API and then APC for caching the API lookups. With the venues we pull from foursquare we plot these venues on a Google Maps display.</p> 
 
-<h4>What functionality will we be achieving ?</h4>
+<h4>What functionality will we be achieve ?</h4>
 <p>The purpose of this module is to place foursquare venues on a google map based on your current location as a user.</p>
 
-<p class="note">If you are as desperate as us to try this out, and want to see the code instead of reading the article, you can see the actual module here (https://github.com/alfrekjv/FourSquareModule).</p>
+<p class="note">If you are as desperate as us to try this out and want to see the code instead of reading the article, you can see the actual module here (https://github.com/alfrekjv/FourSquareModule).</p>
 
 <h4>Preparing the skeleton app</h4>
 <p>
-We are assuming that you already have checked out the skeleton application and have it working on your development environment before continuing. If not, then refer to the proper <a href="http://www.ppi.io/docs/getting-started.html" target="_blank" title="documentation">documentation</a> , and then come back here.
-Another assumption is that you already have the credentials in order to use the foursquare API, if not then refer to <a href="https://developer.foursquare.com" target="_blank" title="https://developer.foursquare.com">https://developer.foursquare.com</a> , and then come back here.
+We are assuming that you have already checked out the skeleton application and have it working on your development environment before continuing, if not then refer to the proper <a href="http://www.ppi.io/docs/getting-started.html" target="_blank" title="documentation">documentation</a> then come back here.
+Another assumption is that you already have the credentials in order to use the foursquare API, if not then refer to <a href="https://developer.foursquare.com" target="_blank" title="https://developer.foursquare.com">https://developer.foursquare.com</a> then come back here.
 </p>
 
 <h4>Creating the FourSquare Module</h4>
