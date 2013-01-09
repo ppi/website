@@ -36,10 +36,7 @@ Another assumption is that you already have the credentials in order to use the 
 <script src="https://gist.github.com/4491584.js"></script>
 
 <h4>Building our service</h4>
-<p>
-In the module's <b>getServiceConfig()</b> function, we construct the service by using setter methods we pass in the dependencies that this service requires in order to do its API calls. The things it needs are config data and cache drivers. Each of your services are encapsulated within a lazy-loaded Closure. This means the code will never be executed until invoked via a getService() call in a controller or via another service. 
-Make sure the following code is part of your <b>./FourSquareModule/Module.php</b> file:
-</p>
+<p>In the module's <b>getServiceConfig()</b> function, we construct the service by using setter methods we pass in the dependencies that this service requires in order to do its API calls. The things it needs are config data and cache drivers. Each of your services are encapsulated within a lazy-loaded Closure. This means the code will never be executed until invoked via a getService() call in a controller or via another service. Make sure the following code is part of your <b>./FourSquareModule/Module.php</b> file:</p>
 <script src="https://gist.github.com/4491612.js"></script>
 
 <h4>Connecting the dots</h4>
@@ -60,26 +57,25 @@ Let's edit the <b>./FourSquareModule/resources/views/index.html.php</b> view fil
 </p>
 <script src="https://gist.github.com/4491599.js"></script>
 
-<h4>Plotting the venues on a google maps</h4>
-<p>The following javascript code listed above is pretty simple, what is does is:</p>
+<h4>Plotting the venues on a google map</h4>
+<p>The following javascript code listed above is pretty simple, what this does is:</p>
 <ol>
-    <li>Get the user’s location if it can, if the browser doesn’t have that capabilities then it uses a default location.</li>
+    <li>Get the user's location if it can, if the browser doesn't have those capabilities then it uses a default location.</li>
     <li>Create a Map using the Google Maps API.</li>
-    <li>Does an AJAX call to the controller in order to fetch the venues, by giving it lat/lng coordinated</li>
-    <li>After getting the JSON Object back from the ajax call, it process it and plots each venue on the map.</li>
+    <li>Performs an AJAX call to the controller in order to fetch the venues by giving it lat/long coordinates.</li>
+    <li>After getting the JSON Object back from the ajax call it process it and plots each venue on the map.</li>
     <li>Go ahead and add the following code in the /public/foursquare/js/index.js file.</li>
 </ol>
 <script src="https://gist.github.com/4491595.js"></script>
 
 <h4>What have we learned so far?</h4>
 <p>
-In quick words, we have learned how to create and use the modules component. We also learned how to use services in order to encapsulate the API code and use it via Controllers. We have learned how to render views, specify custom css/js templates within them and extendng base views. We also learned how to integrate use javascript and run ajax calls to a controller to get json responses back.
-Hopefully, this article clarifies the development workflow of the framework, and helps you as a start point to improve your development skills in a structured, maintainable and simple way.
+To summarise, we have learned how to create and use the modules component. We also learned how to use services in order to encapsulate the API code and use it via Controllers. We have learned how to render views, specify custom css/js templates within them and extend base views. We also learned how to integrate javascript and run ajax calls to a controller to get json responses back.
+Hopefully, this article clarifies the development workflow of the framework and gives you a starting point to improve your development skills in a structured, maintainable and simple way.
 </p>
 
 <h4>References</h4>
-<p>Here are a series of links that contain information supplementary to what was covered above</p>
-
+<p>Here are a series of links that contain information supplementary to what we covered above:</p>
 <ul>
     <li>Skeleton app: <a href="http://www.ppi.io/docs/getting-started.html" target="_blank" title="http://www.ppi.io/docs/getting-started.html">http://www.ppi.io/docs/getting-started.html</a> </li>
     <li>Modules: <a href="http://www.ppi.io/docs/modules.html" target="_blank" title="http://www.ppi.io/docs/modules.html">http://www.ppi.io/docs/modules.html</a> </li>
