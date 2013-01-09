@@ -46,16 +46,6 @@ class Blog extends SharedController
         return $this->render('BlogModule:blog:view.html.php', compact('post'));
     }
     
-//    public function viewAction()
-//    {
-//        $postID       = $this->getRouteParam('postID');
-//        $post         = $this->getBlogStorage()->getByID($postID);
-//        $blogPostTags = $this->getBlogTagStorage()->getAll();
-//
-//        return $this->render('BlogModule:blog:view.html.php', compact('post', 'blogPostTags'));
-//    }
-
-
     public function getRecentCommentsAction()
     {
         $recentCommentsHelper = new \BlogModule\Classes\RecentComments($this->getService('blog.cache'));
