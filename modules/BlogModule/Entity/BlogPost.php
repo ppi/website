@@ -4,12 +4,14 @@ namespace BlogModule\Entity;
 
 class BlogPost {
 	
-	protected $_id = null;
-	protected $_title = null;
-	protected $_content = null;
-	protected $_category_id = null;
-	protected $_date_created = null;
-	protected $_tags = array();
+	protected $_id;
+	protected $_title;
+	protected $_content;
+	protected $_category_id;
+	protected $_date_created;
+    protected $_slug;
+    
+    protected $_tags = array();
 	
 	public function __construct($row) {
 		foreach($row as $key => $val) {
@@ -66,5 +68,15 @@ class BlogPost {
 	public function getTags() {
 		return $this->_tags;
 	}
+    
+    public function setContent($c)
+    {
+        $this->_content = $c;
+    }
+    
+    public function getSlug()
+    {
+        return $this->_slug;
+    }
     
 }

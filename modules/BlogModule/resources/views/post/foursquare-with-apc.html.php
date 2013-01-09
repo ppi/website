@@ -1,16 +1,3 @@
-<?php $view->extend('BlogModule:blog:view.html.php'); ?>
-
-<?php $view['slots']->start('include_css'); ?>
-<link href="<?=$view['assets']->getUrl('mod/blog/blog.css');?>" rel="stylesheet">
-<?php $view['slots']->stop(); ?>
-
-<?php $view['slots']->start('include_js_body'); ?>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/mustache.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('mod/blog/blog.js');?>"></script>
-<?php $view['slots']->stop(); ?>
-
-<?php $view['slots']->set('post_title', 'Showing local FourSquare venues with APC'); ?>
-
 <!---- move this to the about page ---->
 <!--As you may already know, PPI is a meta framework, it abstracts the best of Zend framework 2 and Symfony 2, but making the app development process very simple and yet powerful.-->
 <!--Our approach is to have a robust core, a very straightforward development process and a low learning curve, so developers around the world can benefit from it.-->

@@ -39,16 +39,11 @@ class Blog extends SharedController
 
     public function viewAction()
     {
-//        $postID       = $this->getRouteParam('postID');
-//        $post         = $this->getBlogStorage()->getByID($postID);
+        $postID       = $this->getRouteParam('postID');
+        $post         = $this->getBlogStorage()->getByID($postID);
 //        $blogPostTags = $this->getBlogTagStorage()->getAll();
-
-        $post = new \BlogModule\Entity\BlogPost(array(
-            'title' => 'ddd',
-            'body' => ''
-        ));
-        
-        return $this->render('BlogModule:posts:foursquare-apc.html.php', compact('post'));
+        $post->setContent($this->render('BlogModule:post:' . $post->getSlug() . '.html.php', compact('post')));
+        return $this->render('BlogModule:blog:view.html.php', compact('post'));
     }
     
 //    public function viewAction()

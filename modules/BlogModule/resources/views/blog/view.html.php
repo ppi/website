@@ -19,7 +19,7 @@
         ?>
         
         <div class="post">
-            <h1 class="post-title"><a href="" title="<?=$post->getTitle();?>"><?$view['slots']->output('post_title');?></a></h1>
+            <h1 class="post-title"><?=$post->getTitle();?></h1>
             <div class="post-thumbnail"></div>
             <div class="post-content">
                 
@@ -28,9 +28,7 @@
                     <a href="#"><img src="<?= $view['assets']->getUrl('images/googleplus.png');?>" width="48" /></a>
     <!--                <a href="--><?//=$view['router']->generate('BlogGetRSS');?><!--" target="_blank"><img src="--><?//= $view['assets']->getUrl('images/rss.png');;?><!--" width="48" /></a>-->
                 </div>
-                
-<!--                --><?//=$content;?>
-                <?php $view['slots']->output('_content'); ?>
+                <?=$content;?>
             </div>
             
             <div class="date-area">
@@ -72,11 +70,11 @@
 <!--<!--        </div>-->
 <!---->
 <!--        <div class="section">-->
-            <div class="social-icons">
-                <a href="http://twitter.com/ppi_framework" target="_blank"><img src="<?= $view['assets']->getUrl('images/twitter2.png');;?>" width="48" /> </a>
-                <a href="#"><img src="<?= $view['assets']->getUrl('images/googleplus.png');?>" width="48" /></a>
+<!--            <div class="social-icons">-->
+<!--                <a href="http://twitter.com/ppi_framework" target="_blank"><img src="--><?//= $view['assets']->getUrl('images/twitter2.png');;?><!--" width="48" /> </a>-->
+<!--                <a href="#"><img src="--><?//= $view['assets']->getUrl('images/googleplus.png');?><!--" width="48" /></a>-->
 <!--                <a href="--><?//=$view['router']->generate('BlogGetRSS');?><!--" target="_blank"><img src="--><?//= $view['assets']->getUrl('images/rss.png');;?><!--" width="48" /></a>-->
-            </div>
+<!--            </div>-->
 <!--        </div>-->
 <!---->
 <!--        <div class="section">-->
