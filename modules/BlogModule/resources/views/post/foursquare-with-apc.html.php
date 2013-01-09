@@ -3,7 +3,7 @@
 <!--Our approach is to have a robust core, a very straightforward development process and a low learning curve, so developers around the world can benefit from it.-->
 <!---- move this to the about page ---->
 
-<h4>What are we going to cover ?</h4>
+<h4 xmlns="http://www.w3.org/1999/html">What are we going to cover ?</h4>
 <p>In this article, we're going to learn how to work with the framework as a whole by making a module, controller, routes, templates (views) and services by writing a real-world application. In order to achieve this we are going to use the foursquare API and then APC for caching the API lookups. With the venues we pull from foursquare we plot these venues on a Google Maps display.</p> 
 
 <h4>What functionality will we be achieve ?</h4>
@@ -23,31 +23,29 @@ Another assumption is that you already have the credentials in order to use the 
 
 <h4>Adding foursquare credentials</h4>
 <p>So we have our controller and it’s using a service named ‘foursquare.handler’, but where does this exist? We create this in our module’s Module.php class. Definitely familiarise yourself with the Modules <a href="http://www.ppi.io/docs/modules.html" target="_blank" title="documentation">documentation</a>.</p>
-<p>Before we jump right into making our service, it needs some config data i.e: your foursquare secure credentials to talk to foursquare, so in your <b>./FourSquareModule/resources/config/config.php</b> file add the following code</p>
+<p>Before we jump into making our service it needs some config data i.e: your foursquare secure credentials to talk to foursquare, so in your <b>./FourSquareModule/resources/config/config.php</b> file add the following code:</p>
 
-<p class="note">obviously replace the placeholders with your actual foursquare credentials.</p>
+<p class="note">Replace the placeholders with your own foursquare credentials.</p>
 <script src="https://gist.github.com/4491440.js"></script>
 
-
-
 <h4>Implementing the API calls</h4>
-<p>The majority of our work is not going to be done in a framework-specific layer, like a controller. It’s going to be in a generic PHP class that can be used from any part of the project. You can even take this class and use it in any PHP project as long as you pass in the dependencies it requires, such as config keys and the cache library, read on to understand more. </p>
-<p>In the following ApiHandler class we have pre-selected some random categoryids to fetch some venues from, from foursquare. In our getVenues() function we're actually doing the call to foursquare's API and fetching the venues from a given location. We store the results in our injected $this->cache  object for later re-use. If this lookup occurs twice, the cache key will match and the cache->exists() call will be true and it will fetch from the cache rather than perform another live API lookup.</p>
+<p>The majority of our work  will not be done in a framework-specific layer, like a controller. It's will be in a generic PHP class that can be used from any part of the project. You can even take this class and use it in any PHP project as long as you pass in the dependencies it requires, such as config keys and the cache library, read on to understand more. </p>
+<p>In the following <b>ApiHandler</b> class we have pre-selected some random categoryids for you, to fetch some venues from foursquare. In our getVenues() function we're making the calls to foursquare's API and fetching the venues from a given location. We then store the results in our injected <b>$this->cache</b> object for later re-use. If this lookup occurs twice, the cache key will match and the <b>cache->exists()</b> call will be true therefore it will fetch the venues from the cache rather than perform another live API lookup.</p>
     
 <p>Go ahead and create the file: <b>./FourSquareModule/Classes/ApiHandler.php</b> put the following contents into it:</p></p>
 <script src="https://gist.github.com/4491584.js"></script>
 
 <h4>Building our service</h4>
 <p>
-In the module’s getServiceConfig() function, we construct the service, by using setter methods we pass in the dependencies that this service requires in order to do its API calls. Some things it needs are config data and cache drivers. Each of your services are encapsulated within a lazy-loaded Closure. This means the code will never be executed until invoked via a getService() call in a controller or via another service. 
-Now make sure the following code is part of your <b>./FourSquareModule/Module.php</b> file:
+In the module's <b>getServiceConfig()</b> function, we construct the service by using setter methods we pass in the dependencies that this service requires in order to do its API calls. The things it needs are config data and cache drivers. Each of your services are encapsulated within a lazy-loaded Closure. This means the code will never be executed until invoked via a getService() call in a controller or via another service. 
+Make sure the following code is part of your <b>./FourSquareModule/Module.php</b> file:
 </p>
 <script src="https://gist.github.com/4491612.js"></script>
 
 <h4>Connecting the dots</h4>
 <p><b>Implementing the controller and routes</b></p>
 <p>
-We need a controller that can respond to the user's request and initiate the API calls. We are going to create two actions in our controller, the first is the action just loads the page. The second is an AJAX call that the javascript makes to lazy-load in some venues.
+We need a controller that can respond to the user's request and initiate the API calls. To do this we are going to create two actions in our controller, the first action is responsible for initially loading the page. The second action is an AJAX call that the javascript makes to lazy-load in some venues.
 Here are our routes, update your <b>./FourSquareModule/resources/config/routes.yml</b> file by adding:
 </p>
 <script src="https://gist.github.com/4491607.js"></script>
@@ -57,8 +55,8 @@ Here are our routes, update your <b>./FourSquareModule/resources/config/routes.y
 
 <h4>Creating the Views</h4>
 <p>
-In the following template file we have a few distinct sections here. The first i the extend call, which extends the base template defined in ./app/views/base.html.php. The second is us extending the include_css and include_js_body blocks to inject custom stylesheets and javascript in the parent base template. The last part is plain old HTML with an id=”map” which is the target element for our mapping Javascript.
-Let’s edit the <b>./FourSquareModule/resources/views/index.html.php</b> view file and add the following code:
+In the following template file we have a few distinct sections here. The first section is the extends call which extends the base template defined in <b>./app/views/base.html.php</b>. The second section is extending the <b>include_css</b> and <b>include_js_body</b> blocks to inject custom stylesheets and javascript includes in the parent base template. The last part is plain old HTML with an <b>id="map"</b> which is the target element for our mapping JavaScript.
+Let's edit the <b>./FourSquareModule/resources/views/index.html.php</b> view file and add the following code:
 </p>
 <script src="https://gist.github.com/4491599.js"></script>
 
