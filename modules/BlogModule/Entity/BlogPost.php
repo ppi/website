@@ -10,6 +10,7 @@ class BlogPost {
 	protected $_category_id;
 	protected $_date_created;
     protected $_slug;
+    protected $_description;
     
     protected $_tags = array();
 	
@@ -32,6 +33,10 @@ class BlogPost {
 	public function getTitle() {
 		return $this->_title;
 	}
+    
+    public function getDescription() {
+        return $this->_description;
+    }
     
     public function getTitleForLink() {
         return strtolower(str_replace(' ', '-', $this->getTitle()));

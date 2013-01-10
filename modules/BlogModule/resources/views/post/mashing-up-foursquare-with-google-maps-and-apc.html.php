@@ -6,7 +6,7 @@
 <h4>What are we going to cover ?</h4>
 <p>In this article, we're going to learn how to work with the framework as a whole by making a module, controller, routes, templates (views) and services by writing a real-world application. In order to achieve this we are going to use the foursquare API and then APC for caching the API lookups. With the venues we pull from foursquare we plot these venues on a Google Maps display.</p> 
 
-<h4>What functionality will we be achieve ?</h4>
+<h4>What functionality will we achieve ?</h4>
 <p>The purpose of this module is to place foursquare venues on a google map based on your current location as a user.</p>
 
 <p class="note">If you are as desperate as us to try this out and want to see the code instead of reading the article, you can see the actual module here (https://github.com/alfrekjv/FourSquareModule).</p>

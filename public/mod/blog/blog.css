@@ -26,9 +26,16 @@
 	position: relative;
 }
 
-#blog-index .left-side .post .post-title a {
-	font-size: 0.9em;
+#blog-index .left-side .post .post-title {
+	font-size: 2.0em;
 	text-align: left;
+	color: #406C6C;
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+}
+
+#blog-index .left-side .post h4 {
+	margin-top: 30px;
+	font-size: 1.5em;
 	color: #406C6C;
 	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 }

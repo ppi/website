@@ -27,6 +27,7 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 <meta property="og:url" content="<?=$view['router']->generate('BlogView', array('postID' => $post->getID(), 'title' => $post->getSlug()), true);?>"/>
 <meta property="og:type" content="website"> 
 <meta property="og:image" content="<?=$view['assets']->getUrl('images/opengraph.png');?>"/>
+<meta property="og:description" content="<?=$view->escape($post->getDescription());?>">
 <?php $view['slots']->stop(); ?>
 
 <div id="blog-index" class="clearfix">

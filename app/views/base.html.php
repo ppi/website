@@ -21,7 +21,7 @@
     <meta property="og:title" content="PPI Framework: the php meta framework" />
     <meta property="og:site_name" content="PPI Framework: the php meta framework"/>
     <meta property="og:url" content="http://www.ppi.io"/>
-    <meta property="og:type" content="website"> 
+    <meta property="og:type" content="website">  
     <meta property="og:image" content="<?=$view['assets']->getUrl('images/opengraph.png');?>"/>
     <?php endif; ?>
     
