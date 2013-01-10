@@ -9,7 +9,7 @@
 <h4>What functionality will we achieve ?</h4>
 <p>The purpose of this module is to place foursquare venues on a google map based on your current location as a user.</p>
 
-<p class="note">If you are as desperate as us to try this out and want to see the code instead of reading the article, you can see the actual module here (https://github.com/alfrekjv/FourSquareModule).</p>
+<p class="note">If you are as desperate as us to try this out and want to see the code instead of reading the article, you can see the actual module here: <a href="https://github.com/ppi/foursquare-tutorial-module" title="https://github.com/ppi/foursquare-tutorial-module" target="_blank">https://github.com/ppi/foursquare-tutorial-module</a>.</p>
 
 <h4>Preparing the skeleton app</h4>
 <p>
