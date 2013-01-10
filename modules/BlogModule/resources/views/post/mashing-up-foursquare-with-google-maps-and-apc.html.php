@@ -19,7 +19,7 @@ Another assumption is that you already have the credentials in order to use the 
 
 <h4>Creating the FourSquare Module</h4>
 <p>First of all, let's create the foursquare module, for that, open your terminal, change to your ppi skeleton app’s directory and run the following command:</p>
-<p class="well">./app/console module:create FourSquareModule</p>
+<script src="https://gist.github.com/4498280.js"></script>
 
 <h4>Adding foursquare credentials</h4>
 <p>So we have our controller and it’s using a service named ‘foursquare.handler’, but where does this exist? We create this in our module’s Module.php class. Definitely familiarise yourself with the Modules <a href="http://www.ppi.io/docs/modules.html" target="_blank" title="documentation">documentation</a>.</p>
@@ -67,6 +67,10 @@ Let's edit the <b>./FourSquareModule/resources/views/index.html.php</b> view fil
     <li>Go ahead and add the following code in the /public/foursquare/js/index.js file.</li>
 </ol>
 <script src="https://gist.github.com/4491595.js"></script>
+
+<h4>Adding some styles</h4>
+<p>We need to add a height and width for our Map container, so, go ahead and add the following CSS line to the <strong>/public/foursquare/css/index.css</strong> file.</p>
+<script src="https://gist.github.com/4498274.js"></script>
 
 <h4>What have we learned so far?</h4>
 <p>
