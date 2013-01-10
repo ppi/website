@@ -16,7 +16,7 @@
 <script type="text/javascript" src="<?=$view['assets']->getUrl('mod/blog/blog.js');?>"></script>
 <script type="text/javascript">stLight.options({publisher: "9a24a00b-206d-46ea-a048-c52a72e37841"});</script>
 <script>
-var options={ "publisher": "9a24a00b-206d-46ea-a048-c52a72e37841", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["googleplus", "facebook", "twitter", "linkedin", "pinterest"]}};
+var options={ "publisher": "9a24a00b-206d-46ea-a048-c52a72e37841", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["googleplus", "facebook", "twitter", "linkedin"]}};
 var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 </script>
 <?php $view['slots']->stop(); ?>
