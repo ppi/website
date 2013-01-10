@@ -68,7 +68,7 @@ Let's edit the <b>./FourSquareModule/resources/views/index.html.php</b> view fil
 </ol>
 <script src="https://gist.github.com/4491595.js"></script>
 
-<h4>Adding some styles</h4>
+<h4>Adding some style</h4>
 <p>We need to add a height and width for our Map container, so, go ahead and add the following CSS line to the <strong>/public/foursquare/css/index.css</strong> file.</p>
 <script src="https://gist.github.com/4498274.js"></script>
 
