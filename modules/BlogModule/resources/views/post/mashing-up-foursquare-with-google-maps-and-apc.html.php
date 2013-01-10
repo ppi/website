@@ -71,6 +71,10 @@ Let's edit the <b>./FourSquareModule/resources/views/index.html.php</b> view fil
 <h4>Adding some style</h4>
 <p>We need to add a height and width for our Map container so go ahead and add the following CSS to the <b>./public/foursquare/css/index.css</b> file:</p>
 <script src="https://gist.github.com/4498274.js"></script>
+    
+    
+<h4>Let's make it happen!!</h4>
+<p>Now browse to <b>/foursquare/</b> in your application. This will trigger <b>Foursquare_Index</b> route and load the map for you. An ajax call occurs in the background and within a few seconds you'll see the markets drop onto the map.</p>
 
 <h4>What have we learned so far?</h4>
 <p>
