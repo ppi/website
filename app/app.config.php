@@ -2,6 +2,7 @@
 $config = array(
     'environment'            => 'development',
     'templating.engines'     => array('php', 'smarty', 'twig'),
+    'skeleton.module.path'   => './utils/skeleton_module',
     'templating.globals'     => array(
         'ga_tracking' => 'UA-XXXXX-X'
     ),
