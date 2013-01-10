@@ -19,6 +19,7 @@
 var options={ "publisher": "9a24a00b-206d-46ea-a048-c52a72e37841", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["googleplus", "facebook", "twitter", "linkedin"]}};
 var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 </script>
+    
 <?php $view['slots']->stop(); ?>
 
 <?php $view['slots']->start('custom_opengraph'); ?>
