@@ -26,7 +26,7 @@
 			<h1 class="post-title"><a href="<?=$urlLink;?>" title="<?=$post->getTitle();?>"><?=$post->getTitle();?></a></h1>
 			<div class="post-thumbnail"></div>
 			<div class="post-content">
-				<?=$post->getShortContent();?>
+<!--				--><?//=$post->getShortContent();?>
 			</div>
 			
 			<div class="post-meta">

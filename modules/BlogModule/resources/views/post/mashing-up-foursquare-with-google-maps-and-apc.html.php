@@ -20,7 +20,7 @@ Another assumption is that you already have the credentials in order to use the 
 <h4>Creating the FourSquare Module</h4>
 <p>First of all, let's create the foursquare module, for that, open your terminal, change to your ppi skeleton app’s directory and run the following command:</p>
 <script src="https://gist.github.com/4498280.js"></script>
-
+    
 <h4>Adding foursquare credentials</h4>
 <p>So we have our controller and it’s using a service named ‘foursquare.handler’, but where does this exist? We create this in our module’s Module.php class. Definitely familiarise yourself with the Modules <a href="http://www.ppi.io/docs/modules.html" target="_blank" title="documentation">documentation</a>.</p>
 <p>Before we jump into making our service it needs some config data i.e: your foursquare secure credentials to talk to foursquare, so in your <b>./FourSquareModule/resources/config/config.php</b> file add the following code:</p>
@@ -30,7 +30,7 @@ Another assumption is that you already have the credentials in order to use the 
 
 <h4>Implementing the API calls</h4>
 <p>The majority of our work  will not be done in a framework-specific layer, like a controller. It's will be in a generic PHP class that can be used from any part of the project. You can even take this class and use it in any PHP project as long as you pass in the dependencies it requires, such as config keys and the cache library, read on to understand more. </p>
-<p>In the following <b>ApiHandler</b> class we have pre-selected some random categoryids for you, to fetch some venues from foursquare. In our getVenues() function we're making the calls to foursquare's API and fetching the venues from a given location. We then store the results in our injected <b>$this->cache</b> object for later re-use. If this lookup occurs twice, the cache key will match and the <b>cache->exists()</b> call will be true therefore it will fetch the venues from the cache rather than perform another live API lookup.</p>
+<p>In the following <b>ApiHandler</b> class we have pre-selected some random categoryids for you, to fetch some venues from foursquare. In our getVenues() function we're making the calls to foursquare's API and fetching the venues from a given location. We then store the results in our injected <b>$this->cache</b> object for later re-use.</p>
     
 <p>Go ahead and create the file: <b>./FourSquareModule/Classes/ApiHandler.php</b> put the following contents into it:</p></p>
 <script src="https://gist.github.com/4491584.js"></script>
@@ -41,10 +41,8 @@ Another assumption is that you already have the credentials in order to use the 
 
 <h4>Connecting the dots</h4>
 <p><b>Implementing the controller and routes</b></p>
-<p>
-We need a controller that can respond to the user's request and initiate the API calls. To do this we are going to create two actions in our controller, the first action is responsible for initially loading the page. The second action is an AJAX call that the javascript makes to lazy-load in some venues.
-Here are our routes, update your <b>./FourSquareModule/resources/config/routes.yml</b> file by adding:
-</p>
+<p>We need a controller that can respond to the user's request and initiate the API calls. To do this we are going to create two actions in our controller, the first action is responsible for initially loading the page. The second action is an AJAX call that the javascript makes to lazy-load in some venues.</p>
+<p>Here are our routes, update your <b>./FourSquareModule/resources/config/routes.yml</b> file by adding:</p>
 <script src="https://gist.github.com/4491607.js"></script>
 
 <p>Here are our controller actions, update the following file: <b>./FourSquareModule/Controller/Index.php</b> file by adding:</p>

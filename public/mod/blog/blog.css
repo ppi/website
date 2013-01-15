@@ -113,19 +113,25 @@
 }
 #blog-index .right-side {
 	float: left;
-	width: 300px;
+	width: 26%;
 	
 }
 
 #blog-index .left-side {
-	width: 100%;
+	width: 60%;
 	float: left;
 	margin-right: 25px;
+	margin-left: 5%;
 }
 
 #blog-index {
 	margin-top: 25px;
 	margin-bottom: 25px;
+}
+
+#blog-index.blog-view .left-side {
+	width: 90%;
+	margin-left: 9%;
 }
 
 .post-content .social-icons {

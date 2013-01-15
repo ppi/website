@@ -95,7 +95,7 @@
         </div>
     </div>
 
-    <div class="container" id="page-content">
+    <div class="container-fluid" id="page-content">
         
         <!-- Begin Flash Message Injection -->
         <?php
