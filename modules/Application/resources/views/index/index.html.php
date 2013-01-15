@@ -41,9 +41,8 @@
             </div>
             
             <ul>
-                <li><a href="" title="">NHS Local now using PPI</a></li>
+                <li><a href="" title="">Mashing up FourSquare and Google Maps with GeoLocation and APC</a></li>
                 <li><a href="" title="">Google plus community launched</a></li>
-                <li><a href="" title="">Blog released</a></li>
                 <li><a href="" title="">New homepage theme released</a></li>
                 <li><a href="" title="">New documentation theme released</a></li>
             </ul>
