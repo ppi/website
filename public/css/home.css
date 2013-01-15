@@ -50,10 +50,10 @@
 
 #page-content .top .intro .heading {
     font-size:   2.2em;
-	padding:     15px 12px 15px 12px;
+    padding:     15px 12px 15px 12px;
     font-weight: normal;
     color:       white;
-	background-color: #406C6C;
+    background-color: #406C6C;
     text-align:  center;
     font-family: "FertigoProRegular", "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
@@ -65,7 +65,7 @@
     z-index:       10;
     font-family:   'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
     border:        1px solid #E5E5E5;
-	border-top:    none;
+    border-top:    none;
     background:    #ffffff; /* Old browsers */
     background:    -moz-linear-gradient(top, #ffffff 0%, #F9F9F0 100%); /* FF3.6+ */
     background:    -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #F9F9F0)); /* Chrome,Safari4+ */
@@ -138,23 +138,23 @@
 }
 
 #page-content .top-container .news-area {
-	width: 412px;
-	height: 279px;
-	margin-left: 30px;
-	margin-top: 25px;
-	float: left;
-	border: 1px solid #E5E5E5;
-	position: relative;
-	
-	background: white;
-	background: -moz-linear-gradient(top, white 0%, #F9F9F0 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #F9F9F0));
-	background: -webkit-linear-gradient(top, white 0%, #F9F9F0 100%);
-	background: -o-linear-gradient(top, white 0%, #F9F9F0 100%);
-	background: -ms-linear-gradient(top, white 0%, #F9F9F0 100%);
-	background: linear-gradient(to bottom, white 0%, #F9F9F0 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#F9F9F0', GradientType = 0);
-	
+    width: 412px;
+    height: 279px;
+    margin-left: 30px;
+    margin-top: 25px;
+    float: left;
+    border: 1px solid #E5E5E5;
+    position: relative;
+    
+    background: white;
+    background: -moz-linear-gradient(top, white 0%, #F9F9F0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #F9F9F0));
+    background: -webkit-linear-gradient(top, white 0%, #F9F9F0 100%);
+    background: -o-linear-gradient(top, white 0%, #F9F9F0 100%);
+    background: -ms-linear-gradient(top, white 0%, #F9F9F0 100%);
+    background: linear-gradient(to bottom, white 0%, #F9F9F0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#F9F9F0', GradientType = 0);
+    
 }
 
 
@@ -168,7 +168,7 @@
     top:                0;
     bottom:             8px;
     left:               10px;
-    right:              10px;	
+    right:              10px;    
     -moz-border-radius: 100px / 10px;
     border-radius:      100px / 10px;
 }
@@ -185,55 +185,55 @@
 
 
 #page-content .news-area .heading {
-	position: relative;
-	font-size: 2.0em;
-	background-color: #406C6C;
-	margin-bottom: 12px;
-	padding: 14px 12px 15px 18px;
-	font-weight: normal;
-	color: white;
-	font-family: "FertigoProRegular", "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    position: relative;
+    font-size: 2.0em;
+    background-color: #406C6C;
+    margin-bottom: 12px;
+    padding: 14px 12px 15px 18px;
+    font-weight: normal;
+    color: white;
+    font-family: "FertigoProRegular", "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 
 #page-content .news-area .heading .social-icons {
-	position: absolute;
-	right: 12px;
-	top: 4px;
+    position: absolute;
+    right: 12px;
+    top: 4px;
 }
 
 #page-content .news-area ul {
-	margin-left: 0;
-	list-style: none;
-	/*list-style-type: none;*/
+    margin-left: 0;
+    list-style: none;
+    /*list-style-type: none;*/
 }
 
 #page-content .news-area ul li a {
-	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
-	font-size: 1.1em;
+    font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
 }
 #page-content .news-area ul li {
-	padding-bottom: 22px;
-	padding-top: 3px;
-	padding-left: 18px;
-	background: url(../images/whats-new-separator2.png) left bottom no-repeat;
+    padding-bottom: 22px;
+    padding-top: 3px;
+    padding-left: 18px;
+    background: url(../images/whats-new-separator2.png) left bottom no-repeat;
 }
 
 #page-content .news-area ul li:last-child {
-	background: none;
+    background: none;
 }
 
 #page-content .top-container .news-area .top-color {
-	/*height: 40px;*/
-	/*background-color: #4C7F7F;*/
+    /*height: 40px;*/
+    /*background-color: #4C7F7F;*/
 }
 
 #page-content .top {
-	position: relative;
-	float:    left;
-	height:   277px;
-	width:    521px;
-	z-index:  1000;
-	margin:   25px 0 25px 0;
+    position: relative;
+    float:    left;
+    height:   277px;
+    width:    521px;
+    z-index:  1000;
+    margin:   25px 0 25px 0;
     position:           relative;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     -moz-box-shadow:    0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -440,10 +440,10 @@
     margin-bottom:    12px;
     margin-top:       12px;
     width:            951px;
-	height:           117px;
-	background-color: #F9F9F0;
-	border:           1px solid #e5e5e5;
-	position:         relative;
+    height:           117px;
+    background-color: #F9F9F0;
+    border:           1px solid #e5e5e5;
+    position:         relative;
     padding-top:      12px;
     padding-left:     12px;
 }
@@ -473,11 +473,11 @@
 }
 
 .whos-using-ppi .nhs img {
-	width: 130px;
+    width: 130px;
 }
 
 .whos-using-ppi .cumbernauld img {
-	width: 175px;
+    width: 175px;
 }
 
 .whos-using-ppi img {
@@ -485,8 +485,8 @@
     filter:         gray; /* IE6-9 */
     -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
     opacity:        0.4;
-	width: 200px;
-	height: 50px;
+    width: 200px;
+    height: 50px;
 }
 
 .whos-using-ppi img:hover {
@@ -499,18 +499,18 @@
 }
 
 @-webkit-keyframes who-opac {
-	0%   { opacity:0.4; }
-	100% { opacity: 1; }
+    0%   { opacity:0.4; }
+    100% { opacity: 1; }
 }
 @-moz-keyframes who-opac {
-	0%   { opacity:0.4; }
-	100% { opacity: 1; }
+    0%   { opacity:0.4; }
+    100% { opacity: 1; }
 }
 @-ms-keyframes who-opac {
-	0%   { opacity:0.4; }
-	100% { opacity: 1; }
+    0%   { opacity:0.4; }
+    100% { opacity: 1; }
 }
 @-o-keyframes who-opac {
-	0%   { opacity:0.4; }
-	100% { opacity: 1; }
+    0%   { opacity:0.4; }
+    100% { opacity: 1; }
 }
