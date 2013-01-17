@@ -20,7 +20,31 @@ Another assumption is that you already have the credentials in order to use the 
 <h4>Creating the FourSquare Module</h4>
 <p>First of all, let's create the foursquare module, for that, open your terminal, change to your ppi skeleton app’s directory and run the following command:</p>
 <script src="https://gist.github.com/4498280.js"></script>
-    
+
+<h4>Creating the Map</h4>
+
+<img src="<?=$view['assets']->getUrl('blog/images/foursquare-1.jpg');?>" />
+
+<h5>The Controller</h5>
+<p>First of all, we are going to load the Map on our view, so, let's edit our Controller's index action for that matter:</p>
+<script src="https://gist.github.com/4558710.js"></script>
+
+<h5>Creating the Views</h5>
+<p>
+    In the following template file we have a few distinct sections here. The first section is the extends call which extends the base template defined in <b>./app/views/base.html.php</b>. The second section is extending the <b>include_css</b> and <b>include_js_body</b> blocks to inject custom stylesheets and javascript includes in the parent base template. The last part is plain old HTML with an <b>id="map"</b> which is the target element for our mapping JavaScript.
+    Let's edit the <b>./FourSquareModule/resources/views/index.html.php</b> view file and add the following code:
+</p>
+<script src="https://gist.github.com/4491599.js"></script>
+
+<h5>Adding some style</h5>
+<p>We need to add a height and width for our Map container so go ahead and add the following CSS to the <b>./public/foursquare/css/index.css</b> file:</p>
+<script src="https://gist.github.com/4498274.js"></script>
+
+<h5>Implementing the Google Maps API </h5>
+
+<p>Now, lets implement the Google Maps API in order to show the map on our view:</p>
+<script src="https://gist.github.com/4558785.js"></script>
+
 <h4>Adding foursquare credentials</h4>
 <p>So we have our controller and it’s using a service named ‘foursquare.handler’, but where does this exist? We create this in our module’s Module.php class. Definitely familiarise yourself with the Modules <a href="http://www.ppi.io/docs/modules.html" target="_blank" title="documentation">documentation</a>.</p>
 <p>Before we jump into making our service it needs some config data i.e: your foursquare secure credentials to talk to foursquare, so in your <b>./FourSquareModule/resources/config/config.php</b> file add the following code:</p>
@@ -48,14 +72,8 @@ Another assumption is that you already have the credentials in order to use the 
 <p>Here are our controller actions, update the following file: <b>./FourSquareModule/Controller/Index.php</b> file by adding:</p>
 <script src="https://gist.github.com/4491602.js"></script>
 
-<h4>Creating the Views</h4>
-<p>
-In the following template file we have a few distinct sections here. The first section is the extends call which extends the base template defined in <b>./app/views/base.html.php</b>. The second section is extending the <b>include_css</b> and <b>include_js_body</b> blocks to inject custom stylesheets and javascript includes in the parent base template. The last part is plain old HTML with an <b>id="map"</b> which is the target element for our mapping JavaScript.
-Let's edit the <b>./FourSquareModule/resources/views/index.html.php</b> view file and add the following code:
-</p>
-<script src="https://gist.github.com/4491599.js"></script>
-
 <h4>Plotting the venues on a google map</h4>
+<img src="<?=$view['assets']->getUrl('blog/images/foursquare-2.jpg');?>" />
 <p>The following javascript code listed above is pretty simple, what this does is:</p>
 <ol>
     <li>Get the user's location if it can, if the browser doesn't have those capabilities then it uses a default location.</li>
@@ -66,11 +84,6 @@ Let's edit the <b>./FourSquareModule/resources/views/index.html.php</b> view fil
 </ol>
 <script src="https://gist.github.com/4491595.js"></script>
 
-<h4>Adding some style</h4>
-<p>We need to add a height and width for our Map container so go ahead and add the following CSS to the <b>./public/foursquare/css/index.css</b> file:</p>
-<script src="https://gist.github.com/4498274.js"></script>
-    
-    
 <h4>Let's make it happen!!</h4>
 <p>Now browse to <b>/foursquare/</b> in your application. This will trigger <b>Foursquare_Index</b> route and load the map for you. An ajax call occurs in the background and within a few seconds you'll see the markets drop onto the map.</p>
 
