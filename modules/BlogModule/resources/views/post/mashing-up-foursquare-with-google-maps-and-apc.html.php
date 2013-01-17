@@ -97,8 +97,8 @@ Another assumption is that you already have the credentials in order to use the 
 </ol>
 <script src="https://gist.github.com/4491595.js"></script>
 
-<h4>Let's make it happen!!</h4>
-<p>Now browse to <b>/foursquare/</b> in your application. This will trigger <b>Foursquare_Index</b> route and load the map for you. An ajax call occurs in the background and within a few seconds you'll see the markets drop onto the map.</p>
+<h4>Let's make it happen!</h4>
+<p>Now browse to <b>/foursquare/</b> in your application. This will trigger <b>Foursquare_Index</b> route and load the map for you. An ajax call occurs in the background and within a few seconds you'll see the markets drop onto the map. You should see something similar to Figure 2.</p>
 
 <h4>What have we learned so far?</h4>
 <p>
