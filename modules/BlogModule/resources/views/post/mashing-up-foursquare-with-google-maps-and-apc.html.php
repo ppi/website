@@ -31,7 +31,6 @@ Another assumption is that you already have the credentials in order to use the 
 
 <h5>Creating the Views</h5>
 <p>
-    In the following template file we have a few distinct sections here. The first section is the extends call which extends the base template defined in <b>./app/views/base.html.php</b>. The second section is extending the <b>include_css</b> and <b>include_js_body</b> blocks to inject custom stylesheets and javascript includes in the parent base template. The last part is plain old HTML with an <b>id="map"</b> which is the target element for our mapping JavaScript.
     Let's edit the <b>./FourSquareModule/resources/views/index.html.php</b> view file and add the following code:
 </p>
 <script src="https://gist.github.com/4491599.js"></script>
@@ -43,7 +42,7 @@ Another assumption is that you already have the credentials in order to use the 
 <h5>Implementing the Google Maps API </h5>
 
 <p>Now, lets implement the Google Maps API in order to show the map on our view:</p>
-<script src="https://gist.github.com/4558785.js"></script>
+<script src="https://gist.github.com/4559462.js"></script>
 
 <h4>Adding foursquare credentials</h4>
 <p>So we have our controller and it’s using a service named ‘foursquare.handler’, but where does this exist? We create this in our module’s Module.php class. Definitely familiarise yourself with the Modules <a href="http://www.ppi.io/docs/modules.html" target="_blank" title="documentation">documentation</a>.</p>
