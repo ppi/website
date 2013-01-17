@@ -208,9 +208,10 @@ div.navbar .nav .active > a, div.navbar .nav .active > a:hover {
 	padding: 7px 0 0 0px;
 }
 
-#header .nav {
-	width: 700px;
+#header ul.nav {
+	width: 600px;
 	left: 15px;
+        margin-right: 0;
 }
 
 #header div.inside {
