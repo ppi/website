@@ -30,11 +30,11 @@ Another assumption is that you already have the credentials in order to use the 
 
 <h5>Adding the Route</h5>
 
-<p>In order to make it work, we need to add a route, so go ahead and edit your <b>./FourSquareModule/resources/config/routes.yml</b> file</p>
+<p>First of all, we need to add a route, so go ahead and edit your <b>./FourSquareModule/resources/config/routes.yml</b> file</p>
 <script src="https://gist.github.com/4559285.js"></script>
 
 <h5>The Controller</h5>
-<p>First of all, we are going to load the Map on our view, so, let's edit our Controller's index action for that matter:</p>
+<p>Now, we are going to load the Map on our view, so, let's edit our Controller's index action for that matter:</p>
 <script src="https://gist.github.com/4559122.js"></script>
 
 <h5>Creating the Views</h5>
