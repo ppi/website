@@ -23,12 +23,15 @@ Another assumption is that you already have the credentials in order to use the 
 
 <h4>Creating the Map</h4>
 
-<figcaption></figcaption>
-
 <figure>
     <img src="<?=$view['assets']->getUrl('blog/images/foursquare-1.jpg');?>" />
     <figcaption>Figure 1 - Google Maps API</figcaption>
 </figure>
+
+<h5>Adding the Route</h5>
+
+<p>In order to make it work, we need to add a route, so go ahead and edit your <b>./FourSquareModule/resources/config/routes.yml</b> file</p>
+<script src="https://gist.github.com/4559285.js"></script>
 
 <h5>The Controller</h5>
 <p>First of all, we are going to load the Map on our view, so, let's edit our Controller's index action for that matter:</p>
@@ -49,11 +52,6 @@ Another assumption is that you already have the credentials in order to use the 
 
 <p>Now, lets implement the Google Maps API in order to show the map on our view:</p>
 <script src="https://gist.github.com/4558785.js"></script>
-
-<h5>Adding the Route</h5>
-
-<p>In order to make it work, we need to add a route, so go ahead and edit your <b>./FourSquareModule/resources/config/routes.yml</b> file</p>
-<script src="https://gist.github.com/4559285.js"></script>
 
 <p>Now, you can point your browser to <b>http://yourhost/foursquare-tutorial/public/foursquare/</b>. You should see a page similar to Figure 1.</p>
 
