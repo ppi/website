@@ -32,7 +32,7 @@ Another assumption is that you already have the credentials in order to use the 
 
 <h5>The Controller</h5>
 <p>First of all, we are going to load the Map on our view, so, let's edit our Controller's index action for that matter:</p>
-<script src="https://gist.github.com/4558710.js"></script>
+<script src="https://gist.github.com/4559122.js"></script>
 
 <h5>Creating the Views</h5>
 <p>
