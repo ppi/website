@@ -23,10 +23,18 @@ Another assumption is that you already have the credentials in order to use the 
 
 <h4>Creating the Map</h4>
 
-<img src="<?=$view['assets']->getUrl('blog/images/foursquare-1.jpg');?>" />
+<figure>
+    <img src="<?=$view['assets']->getUrl('blog/images/foursquare-1.jpg');?>" />
+    <figcaption>Figure 1 - Google Maps API</figcaption>
+</figure>
+
+<h5>Adding the Route</h5>
+
+<p>First of all, we need to add a route, so go ahead and edit your <b>./FourSquareModule/resources/config/routes.yml</b> file</p>
+<script src="https://gist.github.com/4559285.js"></script>
 
 <h5>The Controller</h5>
-<p>First of all, we are going to load the Map on our view, so, let's edit our Controller's index action for that matter:</p>
+<p>Now, we are going to load the Map on our view, so, let's edit our Controller's index action for that matter:</p>
 <script src="https://gist.github.com/4559122.js"></script>
 
 <h5>Creating the Views</h5>
@@ -43,6 +51,8 @@ Another assumption is that you already have the credentials in order to use the 
 
 <p>Now, lets implement the Google Maps API in order to show the map on our view:</p>
 <script src="https://gist.github.com/4559462.js"></script>
+
+<p>Now, you can point your browser to <b>http://yourhost/foursquare-tutorial/public/foursquare/</b>. You should see a page similar to Figure 1.</p>
 
 <h4>Adding foursquare credentials</h4>
 <p>So we have our controller and it’s using a service named ‘foursquare.handler’, but where does this exist? We create this in our module’s Module.php class. Definitely familiarise yourself with the Modules <a href="http://www.ppi.io/docs/modules.html" target="_blank" title="documentation">documentation</a>.</p>
@@ -72,7 +82,11 @@ Another assumption is that you already have the credentials in order to use the 
 <script src="https://gist.github.com/4491602.js"></script>
 
 <h4>Plotting the venues on a google map</h4>
-<img src="<?=$view['assets']->getUrl('blog/images/foursquare-2.jpg');?>" />
+<figure>
+    <img src="<?=$view['assets']->getUrl('blog/images/foursquare-2.jpg');?>" />
+    <figcaption>Figure 2 - Plotting Foursquare venues using the Google Maps API.</figcaption>
+</figure>
+
 <p>The following javascript code listed above is pretty simple, what this does is:</p>
 <ol>
     <li>Get the user's location if it can, if the browser doesn't have those capabilities then it uses a default location.</li>
