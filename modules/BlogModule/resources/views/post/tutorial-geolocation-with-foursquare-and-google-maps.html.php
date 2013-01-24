@@ -27,16 +27,16 @@
 <h4>Creating the Map</h4>
     
 <h5>Adding the Route</h5>
-<p>First of all, we need to add a route. Go ahead and edit your <b>./FoursquareModule/resources/config/routes.yml</b> file</p>
+<p>First of all, we need to add a route. Go ahead and edit your <b>./modules/FoursquareModule/resources/config/routes.yml</b> file</p>
 <script src="https://gist.github.com/4617315.js"></script>
 
 <h5>The Controller</h5>
-<p>Now, we are going to load the Map on our view, so edit your Controller's index action by updating the <b>./FoursquareModule/Controller/Index.php</b> file.</p>
+<p>Now, we are going to load the Map on our view, so edit your Controller's index action by updating the <b>./modules/FoursquareModule/Controller/Index.php</b> file.</p>
 <script src="https://gist.github.com/4559122.js"></script>
 
 <h5>Creating the Views</h5>
 <p>
-    Let's edit the <b>./FoursquareModule/resources/views/index.html.php</b> view file and add the following code:
+    Let's edit the <b>./modules/FoursquareModule/resources/views/index.html.php</b> view file and add the following code:
 </p>
 <script src="https://gist.github.com/4491599.js"></script>
 
@@ -60,7 +60,7 @@
 
 <h4>Setting up Foursquare: Adding Foursquare credentials</h4>
 <!--<p>So we have our controller and it’s using a service named ‘foursquare.handler’, but where does this exist? We create this in our module’s Module.php class. Definitely familiarise yourself with the Modules <a href="http://www.ppi.io/docs/modules.html" target="_blank" title="documentation">documentation</a>.</p>-->
-<p>First, lets update our <b>config.php</b> file to store your Foursquare secure credentials to talk to the Foursquare API. So in your <b>./FoursquareModule/resources/config/config.php</b> file add the following code:</p>
+<p>First, lets update our <b>config.php</b> file to store your Foursquare secure credentials to talk to the Foursquare API. So in your <b>./modules/FoursquareModule/resources/config/config.php</b> file add the following code:</p>
 
 <p class="note">Replace the placeholders with your own Foursquare credentials.</p>
 <script src="https://gist.github.com/4491440.js"></script>
@@ -69,7 +69,7 @@
 <p>The majority of our work  will not be done in a framework-specific layer, like a controller. It's will be in a generic PHP class which can be used from any part of the project. You can even take this class and use it in any PHP project as long as you pass in the dependencies it requires — such as config keys and the cache library. Read on to understand more.</p>
 <p>In the following <b>ApiHandler</b> class we have pre-selected some random categoryids for you, so you can fetch some venues from Foursquare. In our getVenues() function we're making the calls to Foursquare's API and fetching the venues from a given location. We then store the results in our injected <b>$this->cache</b> object for later re-use.</p>
     
-<p>Go ahead and create the file: <b>./FoursquareModule/Classes/ApiHandler.php</b>, and put the following contents into it:</p></p>
+<p>Go ahead and create the file: <b>./modules/FoursquareModule/Classes/ApiHandler.php</b>, and put the following contents into it:</p></p>
 <script src="https://gist.github.com/4491584.js"></script>
 
 <h4>Building our service</h4>
