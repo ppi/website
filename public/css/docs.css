@@ -47,6 +47,7 @@
 }
 
 div.toc-mobile {
+	margin-top: 50px;
     width: 23%;
 	max-width: 300px;
 	height: 100%;
