@@ -47,10 +47,11 @@
 }
 
 div.toc-mobile {
+	margin-top: 50px;
     width: 23%;
 	max-width: 300px;
 	height: 100%;
-	background-color: #406C6C;
+	background-color: #E1EDED;
 	right: 0px;
 	position: fixed;
 	display: block;
@@ -60,13 +61,13 @@ div.toc-mobile {
 }
 
 .toc-mobile .heading {
-	color: white;
+	color: #244D4D;
 	font-size: 1.5em;
 	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 	margin-bottom: 5px;
 }
 .toc-mobile .items li a {
-	color: white;
+	color: #244D4D;
 	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 
@@ -91,12 +92,12 @@ div.toc-mobile {
 }
 
 .toc-mobile .items li a:hover {
-	background-color: #345958;
+	background-color: #C1DBDB;
 	text-decoration: none;
 }
 
 .toc-mobile .items li.active {
-	background-color: #345958;
+	background-color: #C1DBDB;
 }
 
 .docs-page code {

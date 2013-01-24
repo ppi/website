@@ -42,3 +42,5 @@ jQuery(document).ready(function ($) {
     }, 'json');
 
 });
+
+$(window).load(function() { $('.gist-meta a').attr('target', '_blank'); });

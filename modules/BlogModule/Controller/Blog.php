@@ -41,11 +41,11 @@ class Blog extends SharedController
     {
         $postID       = $this->getRouteParam('postID');
         $post         = $this->getBlogStorage()->getByID($postID);
-        $blogPostTags = $this->getBlogTagStorage()->getAll();
-
-        return $this->render('BlogModule:blog:view.html.php', compact('post', 'blogPostTags'));
+//        $blogPostTags = $this->getBlogTagStorage()->getAll();
+        $post->setContent($this->render('BlogModule:post:' . $post->getSlug() . '.html.php', compact('post')));
+        return $this->render('BlogModule:blog:view.html.php', compact('post'));
     }
-
+    
     public function getRecentCommentsAction()
     {
         $recentCommentsHelper = new \BlogModule\Classes\RecentComments($this->getService('blog.cache'));

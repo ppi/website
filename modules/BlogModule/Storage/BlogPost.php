@@ -68,7 +68,6 @@ class BlogPost extends BaseStorage
     
     public function getByID($id)
     {
-        
         $row = $this->_conn->createQueryBuilder()
             ->select('bp.*')
             ->from($this->_meta['table'], 'bp')

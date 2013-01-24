@@ -1,28 +1,49 @@
 <?php $view->extend('::base.html.php'); ?>
+<?php $view['slots']->set('title', 'PPI Framework Blog: ' . $view->escape($post->getTitle()));?>
 
 <?php $view['slots']->start('include_css'); ?>
-<link href="<?=$view['assets']->getUrl('mod/blog/blog.css');?>" rel="stylesheet">
+<link href="<?=$view['assets']->getUrl('blog/css/blog.css');?>" rel="stylesheet">
+<?php $view['slots']->stop(); ?>
+
+<?php $view['slots']->start('include_js_head'); ?>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
 <?php $view['slots']->stop(); ?>
 
 <?php $view['slots']->start('include_js_body'); ?>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/mustache.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('mod/blog/blog.js');?>"></script>
+<script type="text/javascript" src="<?=$view['assets']->getUrl('blog/js/blog.js');?>"></script>
+<script type="text/javascript">stLight.options({publisher: "9a24a00b-206d-46ea-a048-c52a72e37841"});</script>
+<script>
+var options={ "publisher": "9a24a00b-206d-46ea-a048-c52a72e37841", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["googleplus", "facebook", "twitter", "linkedin"]}};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
+    
 <?php $view['slots']->stop(); ?>
 
-<div id="blog-index" class="clearfix">
+<?php $view['slots']->start('custom_opengraph'); ?>
+<meta property="og:title" content="PPI Framework: <?=$view->escape($post->getTitle());?>" />
+<meta property="og:site_name" content="PPI Framework: <?=$view->escape($post->getTitle());?>"/>
+<meta property="og:url" content="<?=$view['router']->generate('BlogView', array('postID' => $post->getID(), 'title' => $post->getSlug()), true);?>"/>
+<meta property="og:type" content="website"> 
+<meta property="og:image" content="<?=$view['assets']->getUrl('images/opengraph.png');?>"/>
+<meta property="og:description" content="<?=$view->escape($post->getDescription());?>">
+<?php $view['slots']->stop(); ?>
+
+<div id="blog-index" class="clearfix blog-view">
     
     <div class="left-side">
         
         <?php
         $created = $post->getCreatedDate();
-        $content = str_replace('[split]', '', $post->getContent());
         ?>
         
         <div class="post">
-            <h1 class="post-title"><a href="" title="<?=$post->getTitle();?>"><?=$post->getTitle();?></a></h1>
+            <h1 class="post-title"><?=$post->getTitle();?></h1>
             <div class="post-thumbnail"></div>
             <div class="post-content">
-                <?=$content;?>
+                <?=$post->getContent();?>
             </div>
             
             <div class="date-area">
@@ -55,45 +76,45 @@
         </div>
         
     </div>
-    <div class="right-side">
-        
+<!--    <div class="right-side">-->
+<!--        -->
+<!--<!--        <div class="section">-->
+<!--<!--            <form>-->
+<!--<!--                <input type="text" name="search"> <input type="submit" value="Search">-->
+<!--<!--            </form>-->
+<!--<!--        </div>-->
+<!---->
 <!--        <div class="section">-->
-<!--            <form>-->
-<!--                <input type="text" name="search"> <input type="submit" value="Search">-->
-<!--            </form>-->
+<!--            <div class="social-icons">-->
+<!--                <a href="http://twitter.com/ppi_framework" target="_blank"><img src="--><?//= $view['assets']->getUrl('images/twitter2.png');;?><!--" width="48" /> </a>-->
+<!--                <a href="#"><img src="--><?//= $view['assets']->getUrl('images/googleplus.png');?><!--" width="48" /></a>-->
+<!--                <a href="--><?//=$view['router']->generate('BlogGetRSS');?><!--" target="_blank"><img src="--><?//= $view['assets']->getUrl('images/rss.png');;?><!--" width="48" /></a>-->
+<!--            </div>-->
 <!--        </div>-->
-
-        <div class="section">
-            <div class="social-icons">
-                <a href="http://twitter.com/ppi_framework" target="_blank"><img src="<?= $view['assets']->getUrl('images/twitter2.png');;?>" width="48" /> </a>
-                <a href="#"><img src="<?= $view['assets']->getUrl('images/googleplus.png');?>" width="48" /></a>
-                <a href="<?=$view['router']->generate('BlogGetRSS');?>" target="_blank"><img src="<?= $view['assets']->getUrl('images/rss.png');;?>" width="48" /></a>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>Related Posts</h3>
-            <ul id="related-posts-content" data-rel="<?=$post->getID();?>">
-                <li class="ajax-loader"></li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h3>Popular Tags</h3>
-            <ul id="popular-tags-content">
-                <li class="ajax-loader"></li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h3>Recent Comments</h3>
-            <ul id="recent-comments-content">
-                <li class="ajax-loader"></li>
-            </ul>
-        </div>
-
-
-    </div>
+<!---->
+<!--        <div class="section">-->
+<!--            <h3>Related Posts</h3>-->
+<!--            <ul id="related-posts-content" data-rel="--><?//=$post->getID();?><!--">-->
+<!--                <li class="ajax-loader"></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        -->
+<!--        <div class="section">-->
+<!--            <h3>Popular Tags</h3>-->
+<!--            <ul id="popular-tags-content">-->
+<!--                <li class="ajax-loader"></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="section">-->
+<!--            <h3>Recent Comments</h3>-->
+<!--            <ul id="recent-comments-content">-->
+<!--                <li class="ajax-loader"></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!---->
+<!---->
+<!--    </div>-->
     
 </div>
 

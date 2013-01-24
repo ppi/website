@@ -18,12 +18,16 @@
     
     <title><?php $view['slots']->output('title', 'PPI Framework') ?></title>
     
+    <link href="<?=$view['assets']->getUrl('css/libs/bootstrap.css');?>" rel="stylesheet">
+    <link href="<?=$view['assets']->getUrl('css/main.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/docs-frame.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
     
 </head>
 
 <body>
+
+<?= $view->render('::header.html.php'); ?>
 
 <div class="toc-mobile meny" style="">
     <div class="toc-mobile-content">

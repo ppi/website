@@ -1,5 +1,5 @@
 #blog-index .left-side .post .post-content {
-	
+	position: relative;
 }
 
 #blog-index .left-side .post .post-thumbnail {
@@ -26,9 +26,16 @@
 	position: relative;
 }
 
-#blog-index .left-side .post .post-title a {
-	font-size: 0.7em;
+#blog-index .left-side .post .post-title {
+	font-size: 2.0em;
 	text-align: left;
+	color: #406C6C;
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+}
+
+#blog-index .left-side .post h4 {
+	margin-top: 30px;
+	font-size: 1.5em;
 	color: #406C6C;
 	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 }
@@ -106,14 +113,15 @@
 }
 #blog-index .right-side {
 	float: left;
-	width: 300px;
+	width: 26%;
 	
 }
 
 #blog-index .left-side {
-	width: 600px;
+	width: 60%;
 	float: left;
 	margin-right: 25px;
+	margin-left: 5%;
 }
 
 #blog-index {
@@ -121,6 +129,34 @@
 	margin-bottom: 25px;
 }
 
-.section .social-icons {
+#blog-index.blog-view .left-side {
+	width: 90%;
+	margin-left: 6%;
+}
+
+.post-content .social-icons {
     text-align: center;
+	position: absolute;
+	top: -51px;
+	right: -5px;
+}
+
+#blog-index .foursquare-figure-1 {
+	margin-top: -23px;
+	margin-left: 34px;
+}
+
+#blog-index .foursquare-figure-2 {
+	margin-top: -18px;
+	margin-left: 15px;
+}
+
+#blog-index .note {
+	min-height: 35px;
+	background: url(../images/note.png) 1% 12px no-repeat #E1EDED;
+	padding: 12px 12px 12px 58px;
+}
+
+#blog-index .index-js-link {
+	font-size: 1.3em;
 }

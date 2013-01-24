@@ -10,15 +10,22 @@
     <meta name="viewport" content="width=device-width">
     <!--  Mobile viewport optimized: j.mp/bplateviewport -->
    	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    
-   	<title>PPI Framework</title>
+
    	<meta name="description" content="ppi is an open source php meta-framework. we have taken the good bits from Symfony2, ZendFramework2 & Doctrine2 and combined them together to create a solid and very easy web application framework. ppi is fully PSR compliant. ppi can be considered the boilerplate of PHP frameworks">
     <meta name="keywords" content="ppi is an open source php meta-framework. we have taken the good bits from Symfony2, ZendFramework2 & Doctrine2 and combined them together to create a solid and very easy web application framework. ppi is fully PSR compliant. ppi can be considered the boilerplate of PHP frameworks">
    	<meta name="author" content="Paul Dragoonis">
     
+    <?php if($view['slots']->has('custom_opengraph')): ?>
+    <?php $view['slots']->output('custom_opengraph');?>
+    <?php else: ?>
+    <meta property="og:title" content="PPI Framework: the php meta framework" />
+    <meta property="og:site_name" content="PPI Framework: the php meta framework"/>
+    <meta property="og:url" content="http://www.ppi.io"/>
+    <meta property="og:type" content="website">  
+    <meta property="og:image" content="<?=$view['assets']->getUrl('images/opengraph.png');?>"/>
+    <?php endif; ?>
     
-    
-    <title><?php $view['slots']->output('title', 'PPI Skeleton Application') ?></title>
+    <title><?php $view['slots']->output('title', 'PPI Framework: The PHP Meta Framework') ?></title>
     
     <!-- CSS Stuff -->
     <link href="<?=$view['assets']->getUrl('css/libs/bootstrap.min.css');?>" rel="stylesheet">
@@ -43,51 +50,9 @@
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6. -->
     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
     
-    <div class="topbar clearfix" data-dropdown="dropdown" id="header">
-        
-        <div class="topbar-inner">
-            
-            <div class="navbar navbar-fixed-top">
-                
-                <div class="navbar-inner">
-                    
-                    <div class="container">
-                        
-                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-                        
-                        <div class="nav-collapse">
-                            <ul class="nav">
-                                <li class="logo-item"><a class="logo" href="<?=$view['router']->generate('Homepage');?>" title="PPI"><img src="<?=$view['assets']->getUrl('images/ppi-white.png');?>" alt="Logo" height="25"></a></li>
-                                <li class=""><a href="<?=$view['router']->generate('Homepage');?>">Home</a></li>
-                                <li><a href="<?=$view['router']->generate('About');?>">About</a></li>
-<!--                                <li><a href="<?=$view['router']->generate('Blog');?>">Blog</a></li> -->
-    <!--							<li class="--><?//=$request['controller'] == 'blog' ? 'active' : '';?><!--"><a href="--><?//= $baseUrl; ?><!--blog">Blog</a></li>-->
-                                <li class=""><a href="<?=$view['router']->generate('Homepage');?>community">Community</a></li>
-                                <li class=""><a href="<?=$view['router']->generate('Projects');?>">Projects</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret icon-white"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting-started'));?>">Getting Started</a></li>
-                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">The Skeleton Application</a></li>
-                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>">Modules</a></li>
-                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">Routing</a></li>
-                                        <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">Controllers</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?= $view->render('::header.html.php'); ?>
 
-    <div class="container" id="page-content">
+    <div class="container-fluid" id="page-content">
         
         <!-- Begin Flash Message Injection -->
         <?php

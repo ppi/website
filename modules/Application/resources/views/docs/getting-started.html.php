@@ -35,7 +35,12 @@ $toc = array(
 
             <p class="section-title" id='downloading-ppi'>Downloading PPI</p>
 
-            <p>You can download the ppi skeletonaapp from the <a href="<?=$view['router']->generate('Homepage');?>" title="Homepage">Homepage</a>. If you just want everything in one folder ready to go, you should choose the <b>"ppi skeletonapp with vendors"</b> option. If you are comfortable with using <b>git</b> then you can download the <b>"skeleton app without vendors"</b> option and run <b>composer install</b> yourself.</p>
+            <p>You can download the ppi skeletonaapp from the <a href="<?=$view['router']->generate('Homepage');?>" title="Homepage">Homepage</a>. If you just want everything in one folder ready to go, you should choose the <b>"ppi skeletonapp with vendors"</b> option.</p>
+            <p>If you are comfortable with using <b>git</b> then you can download the <b>"skeleton app without vendors"</b> option and run the following commands:
+            <pre><code>
+curl -s http://getcomposer.org/installer | php
+php composer.phar install
+            </code></pre>
 
             <p id='system-requirements' class="section-title">System requirements</p>
             <p>A web server with its rewrite module enabled. (mod_rewrite for apache)</p>

@@ -1,9 +1,10 @@
-# Eclipse meta files
+.DS_Store
 .buildpath
 .project
 .settings
-
+.idea
+.idea/*
 composer.lock
-
+composer.phar
 vendor/
 app/cache/
