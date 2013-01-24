@@ -12,6 +12,9 @@
 
 <div id="blog-index" class="clearfix">
 	
+    
+    <div style="display: none"><img src="<?=$view['assets']->getUrl('images/opengraph.png');?>" alt="PPI Framework"></div>
+    
 	<div class="left-side">
 		
 		<?php
