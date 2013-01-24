@@ -26,6 +26,7 @@
                                     <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>">Modules</a></li>
                                     <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">Routing</a></li>
                                     <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">Controllers</a></li>
+                                    <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'templating'));?>">Templating</a></li>
                                 </ul>
                             </li>
                         </ul>
