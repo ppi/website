@@ -24,8 +24,6 @@ $toc = array(
 
 <div class="content-box docs-page">
 
-    <div class="row-fluid">
-        
         <section>
             
         <p class="section-title" id='introduction'>Introduction</p>
@@ -265,9 +263,8 @@ Welcome to the blog page
     &lt;li&gt;&lt;a href="/user/profile?id=87675"&gt;Another PPI User&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
     
-</code></pre>
+        </code></pre>
+        
         </section>
         
-    </div>
-
 </div>
