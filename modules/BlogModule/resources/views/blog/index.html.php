@@ -2,12 +2,12 @@
 <?php $view['slots']->set('title', 'PPI Framework - Blog');?>
 
 <?php $view['slots']->start('include_css'); ?>
-<link href="<?=$view['assets']->getUrl('mod/blog/blog.css');?>" rel="stylesheet">
+<link href="<?=$view['assets']->getUrl('blog/css/blog.css');?>" rel="stylesheet">
 <?php $view['slots']->stop(); ?>
 
 <?php $view['slots']->start('include_js_body'); ?>
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/mustache.js');?>"></script>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('mod/blog/blog.js');?>"></script>
+<script type="text/javascript" src="<?=$view['assets']->getUrl('blog/js/blog.js');?>"></script>
 <?php $view['slots']->stop(); ?>
 
 <div id="blog-index" class="clearfix">
