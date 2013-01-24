@@ -95,7 +95,7 @@
     <li>After getting a JSON object back from the Ajax call, process it and plot each venue on the map.</li>
 </ol>
     
-<p>Now replace your <b>/public/foursquare/js/index.js</b> file with the content of the following gist link:</p>
+<p>Now replace your <b>./public/foursquare/js/index.js</b> file with the content of the following gist link:</p>
 <p class="note">As the size of the Javascript file is now very large we don't want to include it in this article. You can <a href="https://gist.github.com/4491595" title="View index.js" target="_blank">view it here</a></p>
 
 <h4>Let's make it happen!</h4>
