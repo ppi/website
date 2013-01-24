@@ -4,7 +4,7 @@
 <!---- move this to the about page ---->
 
 <h4>What are we going to cover ?</h4>
-<p>In this article, we're going to learn how to work with the framework as a whole by making a module, controller, routes, templates (views) and services by writing a real-world application. In order to achieve this we are going to use the foursquare API and then APC for caching the API lookups. We will plot the venues from FourSquare in Google Maps for display.</p> 
+<p>In this article, we're going to learn how to work with the framework as a whole by making a module, controller, routes, templates (views) and services by writing a real-world application. In order to achieve this we are going to use the foursquare API and then APC for caching the API lookups. We will plot the venues from Foursquare in Google Maps for display.</p> 
 
 <h4>What functionality will we achieve ?</h4>
 <p>The purpose of this module is to place foursquare venues on a google map based on your current location as a user.</p>
@@ -12,9 +12,9 @@
 <p class="note">If you are as desperate as us to try this out and want to see the code instead of reading the article, you can grab the actual module here: <a href="https://github.com/ppi/foursquare-tutorial-module" title="https://github.com/ppi/foursquare-tutorial-module" target="_blank">https://github.com/ppi/foursquare-tutorial-module</a>.</p>
 
 <h4>Preparing the skeleton app</h4>
-<p>We are assuming that you have already setup the skeleton application (<a href="http://www.ppi.io/docs/getting-started.html" title="details here">details here</a>) and that you already have the credentials in order to use the FourSquare API (If not, grab them here: <a href="https://developer.foursquare.com" target="_blank">https://developer.foursquare.com</a>).</p>
+<p>We are assuming that you have already setup the skeleton application (<a href="http://www.ppi.io/docs/getting-started.html" title="details here">details here</a>) and that you already have the credentials in order to use the Foursquare API (If not, grab them here: <a href="https://developer.foursquare.com" target="_blank">https://developer.foursquare.com</a>).</p>
 
-<h4>Creating the FourSquare Module</h4>
+<h4>Creating the Foursquare Module</h4>
 <p>First of all, let's create the foursquare module, for that, open your terminal, change to your ppi skeleton app’s directory and run the following command:</p>
 <script src="https://gist.github.com/4498280.js"></script>
     
@@ -103,7 +103,7 @@
 
 <figure>
     <img src="<?=$view['assets']->getUrl('blog/images/foursquare-2.png');?>" />
-    <figcaption class="foursquare-figure-2">Figure 2 - Plotting FourSquare venues using the Google Maps API.</figcaption>
+    <figcaption class="foursquare-figure-2">Figure 2 - Plotting Foursquare venues using the Google Maps API.</figcaption>
 </figure>
 
 <h4>What have we learned so far?</h4>
