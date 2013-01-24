@@ -25,9 +25,7 @@
 		<div class="post">
 			<h1 class="post-title"><a href="<?=$urlLink;?>" title="<?=$post->getTitle();?>"><?=$post->getTitle();?></a></h1>
 			<div class="post-thumbnail"></div>
-			<div class="post-content">
-<!--				--><?//=$post->getShortContent();?>
-			</div>
+			<div class="post-content"><?=$post->getDescription();?></div>
 			
 			<div class="post-meta">
 				<a href="<?=$urlLink;?>" title="Continue Reading" class="more-link">Continue Reading &raquo;</a>
@@ -35,7 +33,6 @@
 				<div class="tags">
 					<?php
                     foreach($post->getTags() as $tag):
-                        
                         $tagLink = $view['router']->generate('BlogTagView', array('tagID' => $tag->getID(), 'title' => strtolower($tag->getTitle())));
                     ?>
 					<a href="<?=$tagLink;?>" title="Tags" class="label label-success"><?=$view->escape($tag->getTitle());?></a>
