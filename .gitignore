@@ -2,8 +2,9 @@
 .buildpath
 .project
 .settings
-
+.idea
+.idea/*
 composer.lock
-
+composer.phar
 vendor/
 app/cache/
