@@ -79,10 +79,10 @@
 <h4>Connecting the dots</h4>
 <p><b>The controller and routes</b></p>
 <p>We need a route and corresponding controller action that can respond to the user's Ajax call once the Google Map loads. It will initiate API calls to Foursquare and return venues to be placed onto the map.</p>
-<p>Here is our new route. Update your <b>./FourSquareModule/resources/config/routes.yml</b> file by adding:</p>
+<p>Here is our new route. Update your <b>./modules/FoursquareModule/resources/config/routes.yml</b> file by adding:</p>
 <script src="https://gist.github.com/4491607.js"></script>
 
-<p>Here is our updated controller with our new <b>getVenuesAction()</b> action. Update <b>./FourSquareModule/Controller/Index.php</b> replacing what is already in there:</p>
+<p>Here is our updated controller with our new <b>getVenuesAction()</b> action. Update <b>./modules/FoursquareModule/Controller/Index.php</b> replacing what is already in there:</p>
 <script src="https://gist.github.com/4491602.js"></script>
 
 <h4>Plotting the venues on a Google Map</h4>
