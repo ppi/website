@@ -46,7 +46,8 @@ Another assumption is that you already have the credentials in order to use the 
 <p>Now, lets implement the Google Maps API in order to show the map on our view:</p>
 <script src="https://gist.github.com/4559462.js"></script>
 
-<p>Now, you can point your browser to <b>http://yourhost/foursquare-tutorial/public/foursquare/</b>. You should see a page similar to Figure 1 below. We are essentially loading a google map with geolocation enabled and you should hopefully be taken to where you live on the map with no foursquare integration yet.</p>
+<p>Now, you can point your browser to <b>http://yourhost/foursquare-tutorial/public/foursquare/</b>. You should see a page similar to Figure 1 below.</p>
+<p class="note">We are essentially loading a google map with geolocation enabled and you should hopefully be taken to where you live on the map with no foursquare integration yet.</p>
 <figure>
     <img src="<?=$view['assets']->getUrl('blog/images/foursquare-1.png');?>" />
     <figcaption class="foursquare-figure-1">Figure 1 - Google Maps API</figcaption>
