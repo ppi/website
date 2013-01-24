@@ -36,7 +36,7 @@
 
 <h5>Creating the Views</h5>
 <p>
-    Let's edit the <b>./modules/FoursquareModule/resources/views/index.html.php</b> view file and add the following code:
+    Let's edit the <b>./modules/FoursquareModule/resources/views/index/index.html.php</b> view file and add the following code:
 </p>
 <script src="https://gist.github.com/4491599.js"></script>
 
