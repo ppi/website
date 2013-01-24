@@ -41,7 +41,7 @@
             </div>
             
             <ul>
-                <li><a href="<?=$view['router']->generate('BlogView', array('postID' => '1', 'title' => 'tutorial-geolocation-with-foursquare-and-google-maps'));?>" title="">Tutorial: GeoLocation with FourSquare and Google Maps</a></li>
+                <li><a href="<?=$view['router']->generate('BlogView', array('postID' => '1', 'title' => 'tutorial-geolocation-with-foursquare-and-google-maps'));?>" title="">Tutorial: GeoLocation with Foursquare and Google Maps</a></li>
                 <li><a href="https://plus.google.com/communities/100606932222119087997" title="Google plus community launched">Google plus community launched</a></li>
                 <li><a href="https://twitter.com/smashingmag/status/250490134590545920" title="Smashing Magazine mentions PPI" target="_blank">Smashing Magazine mentions PPI</a></li>
                 <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting-started'));?>" title="New documentation theme released">New documentation theme released</a></li>
@@ -107,7 +107,7 @@
         <ul class="clearfix">
             <li><a href="http://www.bestbuys.com" title="BestBuys" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/bestbuys.png');?>" alt=""></a></li>
             <li><a href="http://store.tomorrowland.com" title="Tomorrowland" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/tomorrowland.png');?>" alt=""></a></li>
-            <li class="nhs"><a href="#" onclick="javascript: void(0);" title="NHS Local" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/nhslocal.gif');?>" alt=""></a></li>
+            <li class="nhs"><a href="#" onclick="javascript: void(0);" title="NHS Local" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/nhs.jpg');?>" alt=""></a></li>
 <!--            <li class="cumbernauld"><a href="#" onclick="javascript: void(0);" title="NHS Local" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/cumbernauld.png');?>" alt=""></a></li> -->
         </ul>
     </div>

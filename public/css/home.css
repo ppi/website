@@ -40,20 +40,21 @@
 }
 
 #page-content .top .intro .desc {
-    font-size:   1.2em;
     line-height: 22px;
-    margin:      20px auto 0 auto;
+    width:       468px;
+    color:       #000;
+    font-size:   1.2em;
     text-align:  center;
-    width:      468px;
+    margin:      20px auto 0 auto;
     font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
 
 #page-content .top .intro .heading {
-    font-size:   2.2em;
+    background-color: #406C6C;
     padding:     15px 12px 15px 12px;
+    font-size:   2.2em;
     font-weight: normal;
     color:       white;
-    background-color: #406C6C;
     text-align:  center;
     font-family: "FertigoProRegular", "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
@@ -275,8 +276,8 @@
 }
 
 #page-content .middle .list li .desc {
-    color:     #565656;
-    font-size: 0.9em;
+	color:     #000;
+    font-size: 1.05em;
     width:     220px;
 }
 
@@ -286,7 +287,7 @@
 }
 
 #page-content .middle .list li .title {
-    color:         #565656;
+    color:         #000;
     font-size:     1.4em;
     font-family:   'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
     margin-top:    5px;

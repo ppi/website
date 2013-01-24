@@ -28,7 +28,7 @@
     
 <h5>Adding the Route</h5>
 <p>First of all, we need to add a route. Go ahead and edit your <b>./FoursquareModule/resources/config/routes.yml</b> file</p>
-<script src="https://gist.github.com/4559285.js"></script>
+<script src="https://gist.github.com/4617315.js"></script>
 
 <h5>The Controller</h5>
 <p>Now, we are going to load the Map on our view, so edit your Controller's index action by updating the <b>./FoursquareModule/Controller/Index.php</b> file.</p>
