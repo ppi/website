@@ -24,8 +24,6 @@ $toc = array(
     
 <div class="content-box docs-page">
 
-    <div class="row-fluid">
-
         <section class='content'>
 
             <p id='introduction' class="section-title">Introduction</p>
@@ -166,14 +164,7 @@ class Module extends BaseModule {
                     matching route is found it dispatches the controller specified in that route.</p>
 
                 <p>Lets move onto the <b>Routing</b> section to check out what happens next.</p>
-            </article>
-
-<!--            <a class="prev-article btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'application'));?><!--"><i class="icon-arrow-left icon-white"></i> The Skeleton Application</a>-->
-<!--            <a class="next-article bottom btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'routing'));?><!--">Routing <i class="icon-arrow-right icon-white"></i></a>-->
-
-		<div class="spacer"></div>
-
+            
         </section>
 
-    </div>
 </div>

@@ -403,12 +403,6 @@ class Blog extends BaseController {
 }
     </code></pre>
     
-    <!--<a class="prev-article btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'routing'));?><!--"><i class="icon-arrow-left icon-white"></i> Routing</a>-->
-    <!--<a class="next-article bottom btn btn-green" href="--><?//=$view['router']->generate('DocsIndex', array('page' => 'templating'));?><!--" title="templating">Templating <i class="icon-arrow-right icon-white"></i></a>-->
-    
-    <div class="spacer"></div>
-    
     </section>
 
-</div>
 </div>
