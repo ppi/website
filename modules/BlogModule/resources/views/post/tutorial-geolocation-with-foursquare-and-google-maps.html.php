@@ -46,7 +46,7 @@
 
 <h5>Using the Google Maps API </h5>
 
-<p>Next, lets use the Google Maps API in order to show the map on our view:</p>
+<p>Next, lets use the Google Maps API in order to show the map on our view, add the following Javascript to the <b>./public/foursquare/js/index.js</b> file:</p>
 <script src="https://gist.github.com/4559462.js"></script>
 
 <p>Now, you can point your browser to <b>http://yourhost/foursquare-tutorial/public/foursquare/</b>. You should see a page similar to Figure 1 below.</p>
