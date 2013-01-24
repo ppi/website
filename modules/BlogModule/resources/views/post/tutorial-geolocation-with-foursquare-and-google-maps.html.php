@@ -4,7 +4,7 @@
 <!---- move this to the about page ---->
 
 <h4>What are we going to cover ?</h4>
-<p>In this article, we're going to learn how to work with the framework as a whole by making a module, controller, routes, templates (views) and services by writing a real-world application. In order to achieve this we are going to use the foursquare API and then APC for caching the API lookups. With the venues we pull from foursquare we plot these venues on a Google Maps display.</p> 
+<p>In this article, we're going to learn how to work with the framework as a whole by making a module, controller, routes, templates (views) and services by writing a real-world application. In order to achieve this we are going to use the foursquare API and then APC for caching the API lookups. We will plot the venues from FourSquare in Google Maps for display.</p> 
 
 <h4>What functionality will we achieve ?</h4>
 <p>The purpose of this module is to place foursquare venues on a google map based on your current location as a user.</p>
@@ -12,10 +12,7 @@
 <p class="note">If you are as desperate as us to try this out and want to see the code instead of reading the article, you can grab the actual module here: <a href="https://github.com/ppi/foursquare-tutorial-module" title="https://github.com/ppi/foursquare-tutorial-module" target="_blank">https://github.com/ppi/foursquare-tutorial-module</a>.</p>
 
 <h4>Preparing the skeleton app</h4>
-<p>
-We are assuming that you have already checked out the skeleton application and have it working on your development environment before continuing, if not then refer to the proper <a href="http://www.ppi.io/docs/getting-started.html" target="_blank" title="documentation">documentation</a> then come back here.
-Another assumption is that you already have the credentials in order to use the foursquare API, if not then refer to <a href="https://developer.foursquare.com" target="_blank" title="https://developer.foursquare.com">https://developer.foursquare.com</a> then come back here.
-</p>
+<p>We are assuming that you have already setup the skeleton application (<a href="http://www.ppi.io/docs/getting-started.html" title="details here">details here</a>) and that you already have the credentials in order to use the FourSquare API (If not, grab them here: <a href="https://developer.foursquare.com" target="_blank">https://developer.foursquare.com</a>).</p>
 
 <h4>Creating the FourSquare Module</h4>
 <p>First of all, let's create the foursquare module, for that, open your terminal, change to your ppi skeleton app’s directory and run the following command:</p>
@@ -28,7 +25,7 @@ Another assumption is that you already have the credentials in order to use the 
 <script src="https://gist.github.com/4559285.js"></script>
 
 <h5>The Controller</h5>
-<p>Now, we are going to load the Map on our view, so, let's edit our Controller's index action for that matter:</p>
+<p>Now, we are going to load the Map on our view, so, let's edit our Controller's index action by updating your <b>./FourSquareModule/Controller/Index.php</b> file.</p>
 <script src="https://gist.github.com/4559122.js"></script>
 
 <h5>Creating the Views</h5>
@@ -43,7 +40,7 @@ Another assumption is that you already have the credentials in order to use the 
 
 <h5>Implementing the Google Maps API </h5>
 
-<p>Now, lets implement the Google Maps API in order to show the map on our view:</p>
+<p>Next, lets implement the Google Maps API in order to show the map on our view:</p>
 <script src="https://gist.github.com/4559462.js"></script>
 
 <p>Now, you can point your browser to <b>http://yourhost/foursquare-tutorial/public/foursquare/</b>. You should see a page similar to Figure 1 below.</p>
@@ -57,7 +54,7 @@ Another assumption is that you already have the credentials in order to use the 
 
 <h4>Setting up foursquare: Adding foursquare credentials</h4>
 <!--<p>So we have our controller and it’s using a service named ‘foursquare.handler’, but where does this exist? We create this in our module’s Module.php class. Definitely familiarise yourself with the Modules <a href="http://www.ppi.io/docs/modules.html" target="_blank" title="documentation">documentation</a>.</p>-->
-<p>Before we progress, lets update our config.php file to store your foursquare secure credentials to talk to the foursquare API. So in your <b>./FourSquareModule/resources/config/config.php</b> file add the following code:</p>
+<p>First, lets update our config.php file to store your foursquare secure credentials to talk to the foursquare API. So in your <b>./FourSquareModule/resources/config/config.php</b> file add the following code:</p>
 
 <p class="note">Replace the placeholders with your own foursquare credentials.</p>
 <script src="https://gist.github.com/4491440.js"></script>
@@ -70,7 +67,7 @@ Another assumption is that you already have the credentials in order to use the 
 <script src="https://gist.github.com/4491584.js"></script>
 
 <h4>Building our service</h4>
-<p>We're not going to directly access ApiHandler from our controller class, it's going to be set up as a service. In your <b>./modules/FourSquareModule/Module.php</b> file's <b>getServiceConfig()</b> method add the following code:</p>
+<p>We're not going to directly access ApiHandler from our controller class, it's going to be set up as a <a href="<?=$view['router']->generate('DocsIndex', array('page' => 'services'));?>" title="" target="_blank">service</a>. In your <b>./modules/FourSquareModule/Module.php</b> file's <b>getServiceConfig()</b> method add the following code:</p>
 <script src="https://gist.github.com/4491612.js"></script>
 
 <h4>Connecting the dots</h4>
@@ -93,15 +90,14 @@ Another assumption is that you already have the credentials in order to use the 
 </ol>
     
 <p>Go ahead and click on the following link and replace what's in your <b>/public/foursquare/js/index.js</b> file with the content of the following gist link.</li></p>
-<p class="note">As the size of the javascript file is now very large we don't want to include it in this article</p>
-<p><a href="https://gist.github.com/4491595" target="_blank" class="index-js-link"><b>Index.js:</b> https://gist.github.com/4491595</a></p>
+<p class="note">As the size of the javascript file is now very large we don't want to include it in this article. You can view it <a href="https://gist.github.com/4491595" title="View index.js" target="_blank">here</a></p>
 
 <h4>Let's make it happen!</h4>
 <p>Now browse to <b>/foursquare/</b> in your application. This will trigger <b>Foursquare_Index</b> route and load the map for you. An ajax call occurs in the background and within a few seconds you'll see the markets drop onto the map. You should see something similar to Figure 2 shown below:</p>
 
 <figure>
     <img src="<?=$view['assets']->getUrl('blog/images/foursquare-2.png');?>" />
-    <figcaption class="foursquare-figure-2">Figure 2 - Plotting Foursquare venues using the Google Maps API.</figcaption>
+    <figcaption class="foursquare-figure-2">Figure 2 - Plotting FourSquare venues using the Google Maps API.</figcaption>
 </figure>
 
 <h4>What have we learned so far?</h4>
