@@ -140,3 +140,23 @@
 	top: -51px;
 	right: -5px;
 }
+
+#blog-index .foursquare-figure-1 {
+	margin-top: -23px;
+	margin-left: 34px;
+}
+
+#blog-index .foursquare-figure-2 {
+	margin-top: -18px;
+	margin-left: 15px;
+}
+
+#blog-index .note {
+	min-height: 35px;
+	background: url(../images/note.png) 1% 12px no-repeat #E1EDED;
+	padding: 12px 12px 12px 58px;
+}
+
+#blog-index .index-js-link {
+	font-size: 1.3em;
+}
