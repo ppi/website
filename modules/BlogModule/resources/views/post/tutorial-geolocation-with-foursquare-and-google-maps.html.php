@@ -17,6 +17,12 @@
 <h4>Creating the FourSquare Module</h4>
 <p>First of all, let's create the foursquare module, for that, open your terminal, change to your ppi skeleton app’s directory and run the following command:</p>
 <script src="https://gist.github.com/4498280.js"></script>
+    
+<p>This will ask you to confirm the modules directory path, just press enter and you should see something like this</p>
+<script src="https://gist.github.com/4617112.js"></script>
+    
+<p>Now update your <b>./app/modules.config.php</b> file by adding <b>FourSquareModule</b> onto the end, it should look something like this:</p>
+<script src="https://gist.github.com/4617134.js"></script>
 
 <h4>Creating the Map</h4>
     
