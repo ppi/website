@@ -293,7 +293,7 @@ body.docsbase {
 	top: 5px;
 }
 
-h2 a {
+h2 a, h3 a {
 	display: none;
 }
 

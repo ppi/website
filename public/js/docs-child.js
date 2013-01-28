@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 	h1 = $('h1');
 	
 	var prev = {
-		link:  ppi.baseUrl + 'docs/' + actionContent.data('prevlink').replace('.php', ''),
+		link:  ppi.baseUrl + 'docs/' + actionContent.data('prevlink'),
 		title: actionContent.data('prevpage')
 	};
 	
@@ -16,7 +16,7 @@ jQuery(document).ready(function ($) {
 	h1.find('a').remove();
 	
 	var newhtml = '<div class="section-subbar clearfix">';
-	if(prev.link !== undefined) {
+	if(actionContent.data('prevlink') !== undefined) {
 		prev.link = prev.link.replace('.php', '');
 		newhtml += 
 		'<a class="prev-page btn" title="' + prev.link + '" href="' + prev.link + '">' +
@@ -25,8 +25,8 @@ jQuery(document).ready(function ($) {
 	}
 	
 	newhtml += '<h1>' + h1.html() + '</h1>';
-	
-	if(next.link !== undefined) {
+	console.log(actionContent.data('nextlink'));
+	if(actionContent.data('nextlink') !== undefined) {
 		next.link = next.link.replace('.php', '');
 		newhtml += 
 		'<a class="next-page btn" title="' + next.link + '" href="' + next.link + '">' +
