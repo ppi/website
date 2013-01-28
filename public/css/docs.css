@@ -11,6 +11,11 @@ body {
 	background: url(../images/bg.png);
 }
 
+
+#header .navbar-inner div.container {
+	margin: 0;
+}
+
 #docspage-content {
 	width: 98.7%;
 	position: absolute;
