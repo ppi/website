@@ -9,7 +9,7 @@ community:
         
 docs:
     pages:
-        - getting-started
+        - getting_started
         - application
         - controllers
         - modules
