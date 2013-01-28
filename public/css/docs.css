@@ -296,3 +296,9 @@ body.docsbase {
 h2 a {
 	display: none;
 }
+
+h3 {
+	line-height: 1.5em;
+	font-size: 1.3em;
+	font-weight: bold;
+}
