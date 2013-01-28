@@ -136,6 +136,12 @@
 	border: 0;
 	padding: 0;
 }
+.community-page .content-box .activity-stream .feeds .feed .date {
+	position: absolute;
+	bottom: 5px;
+	left: 65px;
+	color: #a9a9a9;
+}
 .community-page .content-box .activity-stream .feeds .feed .content {
 	float: left;
 	width: 500px;

@@ -35,6 +35,7 @@
 					</div>
 					<div class="content">
 						<div class="description"><?= $feedDesc; ?></div>
+                        <div class="date"><?=$item['date'];?></div>
 
 						<div class="actions">
 							<a href="<?= $item["url"];?>" target="_blank" class="readmore">Learn More...</a>
