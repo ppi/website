@@ -9,6 +9,7 @@ community:
         
 docs:
     pages:
+        - index
         - getting_started
         - application
         - controllers
