@@ -56,7 +56,6 @@
     <div class="middle">
 
         <p class="heading">What is ppi made of?</p>
-        <p class="download-count">Downloaded <b><?=$downloadCount;?></b> times</p>
 
         <ul class="list">
             <li>

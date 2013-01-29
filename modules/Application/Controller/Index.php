@@ -7,11 +7,7 @@ class Index extends SharedController
 {
     public function indexAction()
     {
-        $downloadCounter = $this->getService('download.counter');
-        $downloadCounter->setIP($this->getIP());
-        
-        $downloadCount = $downloadCounter->getDownloadCount();
-        return $this->render('Application:index:index.html.php', compact('downloadCount'));
+        return $this->render('Application:index:index.html.php');
     }
     
     public function downloadAction()
