@@ -60,36 +60,36 @@
 
         <ul class="list">
             <li>
-                <a class="icon" href="<?=$view['router']->generate('Homepage');?>docs/modules.html" title="">
+                <a class="icon" href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>" title="">
                     <img src="<?=$view['assets']->getUrl('images/components.png');?>" alt="Icon">
                 </a>
-                <a class="title" href="<?=$view['router']->generate('Homepage');?>docs/modules.html" title="">Modules</a>
+                <a class="title" href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>" title="">Modules</a>
                 
                 <p class="desc">New and easy modular framework, leveraging the ZendFramework2 ModuleManager component.</p>
             </li>
             <li>
-                <a class="icon" href="<?=$view['router']->generate('Homepage');?>docs/routing.html" title="">
+                <a class="icon" href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>" title="">
                     <img src="<?=$view['assets']->getUrl('images/routing.png');?>" alt="Icon">
                 </a>
-                <a class="title" href="<?=$view['router']->generate('Homepage');?>docs/routing.html" title="">Routing</a>
+                <a class="title" href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>" title="">Routing</a>
                 <p class="desc">Simple and powerful routing based on the Symfony2 Routing component</p>
             </li>
             <li style="margin-right: 0;">
-                <a class="icon" href="<?=$view['router']->generate('Homepage');?>docs/templating.html" title="">
+                <a class="icon" href="<?=$view['router']->generate('DocsIndex', array('page' => 'templating'));?>" title="">
                     <img src="<?=$view['assets']->getUrl('images/home_templating.png');?>" alt="Icon">
                 </a>
-                <a class="title" href="<?=$view['router']->generate('Homepage');?>docs/templating.html" title="">Templating</a>
+                <a class="title" href="<?=$view['router']->generate('DocsIndex', array('page' => 'templating'));?>" title="">Templating</a>
 
                 <p class="desc">Awesome templating based on the Symfony2 Templating Component. We support PHP, Twig and Smarty</p>
             </li>
             <li>
-                <a class="icon" href="<?=$view['router']->generate('Homepage');?>docs/getting-started.html" title=""><img src="<?=$view['assets']->getUrl('images/config.png');?>" alt="Icon"></a>
-                <a class="title" href="<?=$view['router']->generate('Homepage');?>docs/getting-started.html" title="">Databases</a>
+                <a class="icon" href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting_started'));?>" title=""><img src="<?=$view['assets']->getUrl('images/config.png');?>" alt="Icon"></a>
+                <a class="title" href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting_started'));?>" title="">Databases</a>
                 <p class="desc">Simple and powerful DataSource component based on the Doctrine2 DBAL component</p>
             </li>
                 <li>
-                <a class="icon" href="<?=$view['router']->generate('Homepage');?>docs/getting-started.html" title=""><img src="<?=$view['assets']->getUrl('images/composer.png');?>" alt="Icon"></a>
-                <a class="title" href="<?=$view['router']->generate('Homepage');?>docs/getting-started.html" title="">Composer Based</a>
+                <a class="icon" href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting_started'));?>" title=""><img src="<?=$view['assets']->getUrl('images/composer.png');?>" alt="Icon"></a>
+                <a class="title" href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting_started'));?>" title="">Composer Based</a>
                 <p class="desc">ppi itself is a composer package, and all of its dependencies are also composer packages. installation has never been so easy!</p>
             </li>
             <li style="margin-right: 0;">
