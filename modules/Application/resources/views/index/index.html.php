@@ -75,21 +75,21 @@
                 <p class="desc">Simple and powerful routing based on the Symfony2 Routing component</p>
             </li>
             <li style="margin-right: 0;">
-                <a class="icon" href="<?=$view['router']->generate('Homepage');?>" title="">
+                <a class="icon" href="<?=$view['router']->generate('Homepage');?>docs/templating.html" title="">
                     <img src="<?=$view['assets']->getUrl('images/home_templating.png');?>" alt="Icon">
                 </a>
-                <a class="title" href="<?=$view['router']->generate('Homepage');?>" title="">Templating</a>
+                <a class="title" href="<?=$view['router']->generate('Homepage');?>docs/templating.html" title="">Templating</a>
 
                 <p class="desc">Awesome templating based on the Symfony2 Templating Component. We support PHP, Twig and Smarty</p>
             </li>
             <li>
-                <a class="icon" href="<?=$view['router']->generate('Homepage');?>" title=""><img src="<?=$view['assets']->getUrl('images/config.png');?>" alt="Icon"></a>
-                <a class="title" href="<?=$view['router']->generate('Homepage');?>" title="">Databases</a>
+                <a class="icon" href="<?=$view['router']->generate('Homepage');?>docs/getting-started.html" title=""><img src="<?=$view['assets']->getUrl('images/config.png');?>" alt="Icon"></a>
+                <a class="title" href="<?=$view['router']->generate('Homepage');?>docs/getting-started.html" title="">Databases</a>
                 <p class="desc">Simple and powerful DataSource component based on the Doctrine2 DBAL component</p>
             </li>
                 <li>
-                <a class="icon" href="<?=$view['router']->generate('Homepage');?>" title=""><img src="<?=$view['assets']->getUrl('images/composer.png');?>" alt="Icon"></a>
-                <a class="title" href="<?=$view['router']->generate('Homepage');?>" title="">Composer Based</a>
+                <a class="icon" href="<?=$view['router']->generate('Homepage');?>docs/getting-started.html" title=""><img src="<?=$view['assets']->getUrl('images/composer.png');?>" alt="Icon"></a>
+                <a class="title" href="<?=$view['router']->generate('Homepage');?>docs/getting-started.html" title="">Composer Based</a>
                 <p class="desc">ppi itself is a composer package, and all of its dependencies are also composer packages. installation has never been so easy!</p>
             </li>
             <li style="margin-right: 0;">
