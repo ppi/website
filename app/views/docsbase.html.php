@@ -25,7 +25,7 @@
     <title><?php $view['slots']->output('title', 'PPI Skeleton Application') ?></title>
     
     <!-- CSS Stuff -->
-    <link href="<?=$view['assets']->getUrl('css/libs/github-highlight.css');?>" rel="stylesheet">
+    <link href="<?=$view['assets']->getUrl('css/libs/pygments.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/libs/bootstrap.min.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/main.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/docs.css');?>" rel="stylesheet">
@@ -37,6 +37,12 @@
     <?php $view['slots']->output('include_js_head'); ?>
     <!-- /JS Head Stuff -->
     
+    <script type="text/javascript">
+        var ppi = {
+            baseUrl: '<?=$view['assets']->getUrl('');?>'
+        };
+    </script>
+    
 </head>
 
 <body class="docsbase">
@@ -44,63 +50,15 @@
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6. -->
     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-    <div class="container" id="docspage-content">
-        
-        <!-- Begin Flash Message Injection -->
-        <?php
-        $flashNames = array('info' => 'info', 'success' => 'success', 'error' => 'error', 'warning' => 'block', 'notice' => 'block');
-        $flashHeadings = array('info' => 'Heads Up!', 'error' => 'Oops!', 'success' => 'Well done!', 'block' => 'Warning!');
-        
-        if($view['session']->hasFlashes()):
-        ?>
-        <div class="flashes">
-        <?php
-            foreach($view['session']->getFlashes() as $flashName => $flashes):
-                $alertClass = isset($flashNames[$flashName]) ? $flashNames[$flashName] : 'info';
-                foreach($flashes as $flash):
-        ?>
-                <div class="alert alert-<?=$alertClass?>">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
-                    <i class="icon-info-sign"></i>
-                    <strong class="alert-heading"><?=$flashHeadings[$alertClass];?></strong>
-                    <span><?=$flash;?></span>
-                </div>    
-        <?php
-                    endforeach;
-            endforeach;
-        ?>
-        </div>
-        <!-- End of Flash Message Injection -->
-        <?php
-        endif;
-        ?>
-        
         <!-- Begin dynamic page output -->
-        <div id="action-content">
         <?php $view['slots']->output('_content'); ?>
-        </div>
         <!-- End dynamic page output -->
-        
-    </div>
-    
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-20964741-1']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
     
 <!--    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>-->
     <script>window.jQuery || document.write('<script src="<?=$view['assets']->getUrl('js/libs/jquery-1.8.0.min.js');?>"><\/script>')</script>
     
     <!-- JS Body Stuff -->
     <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/bootstrap.min.js');?>"></script>
-    <script type="text/javascript" src="<?=$view['assets']->getUrl('js/libs/highlight.js');?>"></script>
     <script type="text/javascript" src="<?=$view['assets']->getUrl('js/docs-child.js');?>"></script>
     <!-- /JS Body Stuff -->
 
