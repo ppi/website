@@ -1,3 +1,2 @@
 <?php $view->extend('::docsbase.html.php'); ?>
-
-<?=$view->render('Application:docs_content:' . $page . '.html.php');?>
+<?=$view->render('Application:' . $docsFolder . ':' . $page . '.html.php');?>

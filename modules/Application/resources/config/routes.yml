@@ -31,9 +31,9 @@ NewsletterSubmit:
     defaults: { _controller: "Application:Index:newsletterSubmit"}
     
 DocsIndex:
-    pattern:  /docs/{page}.html
-    defaults: { _controller: "Application:Docs:index"}
+    pattern:  /docs/{ver}/{page}.html
+    defaults: { _controller: "Application:Docs:index", ver: "2.0"}
     
 DocsViewFile:
-    pattern:  /docs/view/{page}.html
-    defaults: { _controller: "Application:Docs:view"}
+    pattern:  /docs/view/{ver}/{page}.html
+    defaults: { _controller: "Application:Docs:view", ver: "2.0"}

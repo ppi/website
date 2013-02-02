@@ -37,7 +37,7 @@
 </div>
 
 <div class="contents" id="frame-container">
-    <iframe src="<?=$view['router']->generate('DocsViewFile', array('page' => $page));?>"></iframe>
+    <iframe src="<?=$view['router']->generate('DocsViewFile', array('page' => $page, 'ver' => $version));?>"></iframe>
 </div>
 
 <script type="text/javascript">
