@@ -16,7 +16,7 @@ jQuery(document).ready(function ($) {
 	h1.find('a').remove();
 	
 	var newhtml = '<div class="section-subbar clearfix">';
-	if(actionContent.data('prevlink') !== undefined) {
+	if(actionContent.data('prevlink') !== undefined && actionContent.data('prevpage') != "The Book") {
 		prev.link = prev.link.replace('.php', '');
 		newhtml += 
 		'<a class="prev-page btn" title="' + prev.link + '" href="' + prev.link + '">' +
