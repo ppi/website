@@ -20,7 +20,7 @@ jQuery(document).ready(function ($) {
 		prev.link = prev.link.replace('.php', '');
 		newhtml += 
 		'<a class="prev-page btn" title="' + prev.link + '" href="' + prev.link + '">' +
-				'<img src="../../images/docs/previous-page.png" alt="Previous">&nbsp;&nbsp;' + prev.title + 
+				'<img src="' + ppi.baseUrl + 'images/docs/previous-page.png" alt="Previous">&nbsp;&nbsp;' + prev.title + 
 		'</a>';
 	}
 	
@@ -30,7 +30,7 @@ jQuery(document).ready(function ($) {
 		next.link = next.link.replace('.php', '');
 		newhtml += 
 		'<a class="next-page btn" title="' + next.link + '" href="' + next.link + '">' +
-			  '' + next.title + '&nbsp;&nbsp;<img src="../../images/docs/next-page.png" alt="Next">' +
+			  '' + next.title + '&nbsp;&nbsp;<img src="' + ppi.baseUrl + 'images/docs/next-page.png" alt="Next">' +
 		'</a>';
 	}
 	
