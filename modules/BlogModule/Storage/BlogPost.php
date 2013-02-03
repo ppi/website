@@ -50,6 +50,7 @@ class BlogPost extends BaseStorage
             ->select('bp.*')
             ->from($this->_meta['table'], 'bp')
             ->andWhere('bp.published = 1')
+            ->orderBy('bp.date_created', 'desc')
             ->execute()->fetchAll($this->getFetchMode());
         
         if($rows === false) {
