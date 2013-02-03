@@ -21,7 +21,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret icon-white"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting-started'));?>">Getting Started</a></li>
+                                    <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting_started'));?>">Getting Started</a></li>
                                     <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">The Skeleton Application</a></li>
                                     <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>">Modules</a></li>
                                     <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">Routing</a></li>

@@ -16,9 +16,14 @@ jQuery('.contents iframe').load(function() {
 	var tocData = $.parseJSON(iframe.find("#toc-data").html());
 	var tocContent = '';
 	
-	for(var i in tocData) {
-		tocContent += '<li><a href="#' + i + '" title="">' + tocData[i] + '</a></li>';
-	}
+	iframe.find('h2').each(function() {
+		var h2 = $(this);
+		var anchor = h2.find('a').attr('href');
+		h2.find('a').remove();
+		var anchorTitle = h2.html();
+		tocContent += '<li><a href="' + anchor + '" title="' + anchorTitle + '">' + anchorTitle + '</a></li>';
+	});
+	
 	jQuery('.toc-mobile .items').html(tocContent);
 	
 	// ** Binding to some links within the iframe to make sure they update the parent frame and not the child

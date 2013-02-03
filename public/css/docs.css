@@ -6,10 +6,20 @@
   src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
 }
 
+body {
+	height: 100%;
+	background: url(../images/bg.png);
+}
+
+
+#header .navbar-inner div.container {
+	margin: 0;
+}
+
 #docspage-content {
-	width: 90%;
+	width: 98.7%;
 	position: absolute;
-	left: 2%;
+	left: 0.5%;
 }
 
 .docs-page {
@@ -122,13 +132,13 @@ div.toc-mobile {
 	margin-bottom: 5px;
 }
 
-#docspage-content .docs-page section {
+#docspage-content .docs-page {
 	padding: 15px;
 	margin-left: 0;
-	width: 100%;
 	border: 1px solid #9f9f9f;
     position: relative;
 	background-color: white;
+	margin-top: 122px;
 }
 
 .docs-page section a.next-article i {
@@ -159,8 +169,8 @@ div.toc-mobile {
 }
 
 #docspage-content pre {
-	padding: 0 0 0 12px;
-	margin: 5px 5px 5px 0;
+	padding: 12px;
+	margin: 5px 0px 5px 0;
 }
 #docspage-content code {
 	background: none;
@@ -177,7 +187,7 @@ p.section-title span {
 	display: none;
 }
 
-p.section-title {
+.section h2 {
 	font-size: 1.3em;
 	background-color: #E1EDED;
 	color: #244D4D;
@@ -232,11 +242,12 @@ body.docsbase {
 	background-color: #E1EDED; 
 	height: 50px; 
 	border-bottom: 1px solid #909090; 
-	width: 100%; 
+	width: 98.3%; 
 	position:fixed; 
+	left: 39px;
 	top: 52px; 
 	z-index: 999; 
-	margin-left: -20px; 
+	margin-left: -32px; 
 	opacity: 0.9;
 }
 
@@ -247,17 +258,18 @@ body.docsbase {
 .section-subbar .buttons-container {
 }
 
-.section-subbar .main-title {
+.section-subbar h1 {
 	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 	padding: 0;
 	font-size: 1.8em;
+	line-height: 1.0em;
 	min-width: 300px;
 	width: auto;
 	text-align: center;
 	margin: 15px auto 0 -20px;
 }
 
-.section-subbar .main-title span {
+.section-subbar h1 span {
 	opacity: 1.0 !important;
 }
 
@@ -284,4 +296,14 @@ body.docsbase {
 	display: block;
 	right: 42px;
 	top: 5px;
+}
+
+h2 a, h3 a {
+	display: none;
+}
+
+h3 {
+	line-height: 1.5em;
+	font-size: 1.3em;
+	font-weight: bold;
 }

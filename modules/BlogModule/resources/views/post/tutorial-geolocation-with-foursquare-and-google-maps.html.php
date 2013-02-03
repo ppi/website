@@ -56,6 +56,10 @@
     <figcaption class="foursquare-figure-1">Figure 1 - Google Maps API</figcaption>
 </figure>
 
+<p class="note">
+    You can see a live demonstration of Figure 1 by clicking <a href="http://demos.ppi.io/foursquare/" target="_blank">here</a>
+</p>
+
 <h3></h3>
 
 <h4>Setting up Foursquare: Adding Foursquare credentials</h4>
@@ -105,6 +109,10 @@
     <img src="<?=$view['assets']->getUrl('blog/images/foursquare-2.png');?>" />
     <figcaption class="foursquare-figure-2">Figure 2 - Plotting Foursquare venues using the Google Maps API.</figcaption>
 </figure>
+
+<p class="note">
+    You can see a live demonstration of Figure 2 by clicking <a href="http://demos.ppi.io/foursquare/venues" target="_blank">here</a>
+</p>
 
 <h4>What have we learned so far?</h4>
 <p>

@@ -81,7 +81,7 @@ body {
 
 #header .navbar-inner .container {
 	width: 600px;
-	margin: 0 auto;
+	margin: 0 auto 0 102px;
 	position: relative;
 }
 

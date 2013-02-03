@@ -1,5 +1,5 @@
 .community-page .left-side {
-    width: 26.05%;
+    width: 20%;
 }
 
 .community-page .left-side nav li a.first:hover {
@@ -135,6 +135,12 @@
 	margin-top: 0;
 	border: 0;
 	padding: 0;
+}
+.community-page .content-box .activity-stream .feeds .feed .date {
+	position: absolute;
+	bottom: 5px;
+	left: 60px;
+	color: #a9a9a9;
 }
 .community-page .content-box .activity-stream .feeds .feed .content {
 	float: left;

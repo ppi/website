@@ -33,9 +33,10 @@ class CommunityActivity {
                         }
                         $title = htmlentities($title);
                         $activity[$timestamp] = array(
-                            'source' => 'github',
-                            'url'	 => (string) $commit->link['href'],
-                            'title'	 => $title . ' on ' . date('jS M Y \a\t g:i a', $timestamp)
+                            'source'  => 'github',
+                            'url'     => (string) $commit->link['href'],
+                            'title'   => $title,
+                            'date'    => date('jS M Y \a\t g:i a', $timestamp)
                         );
                     }
                 }
@@ -102,7 +103,7 @@ class CommunityActivity {
     
                 //Store tweet and time into the array
                 $tweet_item = array(
-                    'title'  => $twit . date('jS M Y \a\t g:i a', $pubdate),
+                    'title'  => $twit,
                     'url'    => $status,
                     'date'   => $propertime,
                     'source' => 'twitter'
