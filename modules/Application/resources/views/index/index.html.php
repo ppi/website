@@ -41,11 +41,11 @@
             </div>
             
             <ul>
+                <li><a href="<?=$view['router']->generate('BlogView', array('postID' => '4', 'title' => 'the-official-interview'));?>" title="">The Official PPI Interview</a></li>
                 <li><a href="<?=$view['router']->generate('BlogView', array('postID' => '3', 'title' => 'new-sphinx-powered-documentation-system'));?>" title="">New Sphinx Powered Documentation System</a></li>
                 <li><a href="<?=$view['router']->generate('BlogView', array('postID' => '1', 'title' => 'tutorial-geolocation-with-foursquare-and-google-maps'));?>" title="">Tutorial: GeoLocation with Foursquare and Google Maps</a></li>
                 <li><a href="<?=$view['router']->generate('Blog');?>" title="New Blog Launched">New Blog Launched</a></li>
                 <li><a href="https://plus.google.com/communities/100606932222119087997" title="Google plus community launched">Google plus community launched</a></li>
-                <li><a href="https://twitter.com/smashingmag/status/250490134590545920" title="Smashing Magazine mentions PPI" target="_blank">Smashing Magazine mentions PPI</a></li>
                 
             </ul>
             
