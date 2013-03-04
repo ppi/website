@@ -1,8 +1,3 @@
-<!---- move this to the about page ---->
-<!--As you may already know, PPI is a meta framework, it abstracts the best of Zend framework 2 and Symfony 2, but making the app development process very simple and yet powerful.-->
-<!--Our approach is to have a robust core, a very straightforward development process and a low learning curve, so developers around the world can benefit from it.-->
-<!---- move this to the about page ---->
-
 <h4>What are we going to cover?</h4>
 <p>In this article, we're going to learn how to work with the framework as a whole by writing a real-world application: making a module, controller, routes, templates (views) and services. In order to achieve this we are will use the Foursquare API, and APC for caching the API lookups. We will plot venues from Foursquare in Google Maps for display.</p> 
 
@@ -12,7 +7,7 @@
 <p class="note">If you are as desperate to try this out as we are, and want to see the code instead of reading the article, you can grab the actual module here: <a href="https://github.com/ppi/foursquare-tutorial-module" title="https://github.com/ppi/foursquare-tutorial-module" target="_blank">https://github.com/ppi/foursquare-tutorial-module</a>.</p>
 
 <h4>Preparing the skeleton app</h4>
-<p>We assume that you have already set up the skeleton application (<a href="http://www.ppi.io/docs/getting-started.html" title="details here">details here</a>) and that you have the credentials for the Foursquare API (If not, grab them here: <a href="https://developer.foursquare.com" target="_blank">https://developer.foursquare.com</a>).</p>
+<p>We assume that you have already set up the skeleton application (<a href="http://www.ppi.io/docs/2.0/getting_started.html" title="details here">details here</a>) and that you have the credentials for the Foursquare API (If not, grab them here: <a href="https://developer.foursquare.com" target="_blank">https://developer.foursquare.com</a>).</p>
 
 <h4>Creating the Foursquare Module</h4>
 <p>First of all, let's create the Foursquare module. For that, open your terminal, change to your ppi skeleton app’s directory and run the following command:</p>
@@ -63,7 +58,6 @@
 <h3></h3>
 
 <h4>Setting up Foursquare: Adding Foursquare credentials</h4>
-<!--<p>So we have our controller and it’s using a service named ‘foursquare.handler’, but where does this exist? We create this in our module’s Module.php class. Definitely familiarise yourself with the Modules <a href="http://www.ppi.io/docs/modules.html" target="_blank" title="documentation">documentation</a>.</p>-->
 <p>First, lets update our <b>config.php</b> file to store your Foursquare secure credentials to talk to the Foursquare API. So in your <b>./modules/FoursquareModule/resources/config/config.php</b> file add the following code:</p>
 
 <p class="note">Replace the placeholders with your own Foursquare credentials.</p>
@@ -123,10 +117,10 @@ Hopefully, this article clarifies the development workflow of the PPI framework,
 <h4>References</h4>
 <p>Here is a series of links that contain information supplementary to what we covered above:</p>
 <ul>
-    <li>Skeleton app: <a href="http://www.ppi.io/docs/getting-started.html" target="_blank" title="http://www.ppi.io/docs/getting-started.html">http://www.ppi.io/docs/getting-started.html</a> </li>
-    <li>Modules: <a href="http://www.ppi.io/docs/modules.html" target="_blank" title="http://www.ppi.io/docs/modules.html">http://www.ppi.io/docs/modules.html</a> </li>
-    <li>Routing: <a href="http://www.ppi.io/docs/routing.html" target="_blank" title="http://www.ppi.io/docs/routing.html">http://www.ppi.io/docs/routing.html</a> </li>
-    <li>Controllers: <a href="http://www.ppi.io/docs/controllers.html" target="_blank" title="http://www.ppi.io/docs/controllers.html">http://www.ppi.io/docs/controllers.html</a> </li>
-    <li>Templating: <a href="http://www.ppi.io/docs/templating.html" target="_blank" title="http://www.ppi.io/docs/templating.html">http://www.ppi.io/docs/templating.html</a> </li>
+    <li>Skeleton app: <a href="http://www.ppi.io/docs/2.0/getting_started.html" target="_blank" title="http://www.ppi.io/docs/2.0/getting_started.html">http://www.ppi.io/docs/2.0/getting-started.html</a> </li>
+    <li>Modules: <a href="http://www.ppi.io/docs/2.0/modules.html" target="_blank" title="http://www.ppi.io/docs/2.0/modules.html">http://www.ppi.io/docs/2.0/modules.html</a> </li>
+    <li>Routing: <a href="http://www.ppi.io/docs/2.0/routing.html" target="_blank" title="http://www.ppi.io/docs/2.0/routing.html">http://www.ppi.io/docs/2.0/routing.html</a> </li>
+    <li>Controllers: <a href="http://www.ppi.io/docs/2.0/controllers.html" target="_blank" title="http://www.ppi.io/docs/2.0/controllers.html">http://www.ppi.io/docs/2.0/controllers.html</a> </li>
+    <li>Templating: <a href="http://www.ppi.io/docs/2.0/templating.html" target="_blank" title="http://www.ppi.io/docs/2.0/templating.html">http://www.ppi.io/docs/2.0/templating.html</a> </li>
 <!--Services: -->
 </ul>
