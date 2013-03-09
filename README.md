@@ -28,7 +28,7 @@ Ideally you'll want to set up a vhost on your httpd web server to point your dom
 
 Documentation
 -------------
-We have began documenting ppi2, you can see how far we've gotten at http://www.ppi.io/docs
+We have begun documenting ppi2, you can see how far we've gotten at http://www.ppi.io/docs/2.0/getting_started.html
 
 Contributing
 ------------
