@@ -115,6 +115,14 @@ class Index extends SharedController
                 'download'    => 'https://github.com/ppi/website/downloads',
                 'tracker'     => 'https://github.com/ppi/website/issues?labels=Bug&sort=created&direction=desc&state=open&page=1',
                 'discussions' => 'https://github.com/ppi/website/issues?labels=Bug%2Cdiscussion&sort=created&direction=desc&state=open&page=1'
+            ),
+            array(
+                'title' => 'Docs',
+                'desc'  => 'The PPI Docs is the official repository for the documentation of the PPI Framework, you can always fork it and contribute improving the docs.',
+                'source'      => 'https://github.com/ppi/docs',
+                'download'    => 'https://github.com/ppi/docs/downloads',
+                'tracker'     => 'https://github.com/ppi/docs/issues?labels=Bug&sort=created&direction=desc&state=open&page=1',
+                'discussions' => 'https://github.com/ppi/docs/issues?labels=Bug%2Cdiscussion&sort=created&direction=desc&state=open&page=1'
             )
         );
         
