@@ -60,6 +60,11 @@
                 <div class="title">Doctrine Project</div>
                 <p>Guilherme Blanco (<a target="_blank" href="http://twitter.com/#!/guilhermeblanco" title="twitter">@guilhermeblanco</a>)</p>
             </div>
+
+            <div class="project">
+                <div class="title">Laravel Project</div>
+                <p>Taylor Otwell (<a target="_blank" href="http://twitter.com/#!/taylorotwell" title="twitter">@taylorotwell</a>)</p>
+            </div>
             
             <div class="project">
                 <div class="title">PHP Community Members</div>
