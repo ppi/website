@@ -47,11 +47,12 @@ class Module extends BaseModule
             
             'download.entry.storage' => function($sm) {
                 return new \Application\Storage\DownloadEntry($sm->get('datasource'));
+            },
+
+            'download.item.storage' => function($sm) {
+                return new \Application\Storage\DownloadItem($sm->get('datasource'));
             }
-            
-        
-            
-            
+
         ));
     }
 

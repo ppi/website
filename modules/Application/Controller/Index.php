@@ -9,7 +9,14 @@ class Index extends SharedController
     {
         return $this->render('Application:index:index.html.php');
     }
-    
+
+    public function downloadsAction()
+    {
+        $downloadItemStorage = $this->getService('download.item.storage');
+        $downloadItems = $downloadItemStorage->getAll();
+        return $this->render('Application:index:downloads.html.php', compact('downloadItems'));
+    }
+
     public function downloadAction()
     {
         $downloadCounter = $this->getService('download.counter');
@@ -86,7 +93,6 @@ class Index extends SharedController
         return new \Application\Storage\NewsletterEntry($this->getService('DataSource'));
     }
 
-    
     protected function getProjects()
     {
         
