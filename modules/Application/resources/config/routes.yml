@@ -17,7 +17,7 @@ About:
 Community:
     pattern:  /community
     defaults: { _controller: "Application:Index:community"}
-    
+
 Contributors:
     pattern:  /contributors
     defaults: { _controller: "Application:Index:contributors"}
@@ -25,19 +25,31 @@ Contributors:
 Chat:
     pattern:  /chat
     defaults: { _controller: "Application:Index:chat"}
-    
+
 Projects:
     pattern:  /projects
     defaults: { _controller: "Application:Index:projects"}
-    
+
 NewsletterSubmit:
     pattern:  /newsletter_submit
     defaults: { _controller: "Application:Index:newsletterSubmit"}
-    
+
 DocsIndex:
     pattern:  /docs/{ver}/{page}.html
     defaults: { _controller: "Application:Docs:index", ver: "2.0"}
-    
+
 DocsViewFile:
     pattern:  /docs/view/{ver}/{page}.html
     defaults: { _controller: "Application:Docs:view", ver: "2.0"}
+
+GooglePlus:
+    pattern: /gplus
+    defaults: { _controller: "Application:Links:gplus"}
+
+Facebook:
+    pattern: /facebook
+    defaults: { _controller: "Application:Links:facebook"}
+
+Twitter:
+    pattern: /twitter
+    defaults: { _controller: "Application:Links:twitter"}
