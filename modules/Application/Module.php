@@ -51,8 +51,24 @@ class Module extends BaseModule
 
             'download.item.storage' => function($sm) {
                 return new \Application\Storage\DownloadItem($sm->get('datasource'));
-            }
+            },
 
+            'community.helper' => function($sm) {
+
+                $config   = $sm->get('config');
+                $tmhOAuth = new \tmhOAuth(array(
+                    'consumer_key'    => $config['oauth']['consumer_key'],
+                    'consumer_secret' => $config['oauth']['consumer_secret'],
+                    'user_token'      => $config['oauth']['user_token'],
+                    'user_secret'     => $config['oauth']['user_secret'],
+                ));
+
+                $helper = new \Application\Classes\CommunityHelper();
+                $helper->setOAuthDriver($tmhOAuth); 
+                $helper->setCache($sm->get('community.cache'));
+
+                return $helper;
+            }
         ));
     }
 

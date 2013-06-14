@@ -48,12 +48,15 @@ class Index extends SharedController
     
     public function communityAction()
     {
-        $activityHelper = new \Application\Classes\CommunityActivity($this->getService('community.cache'));
-        $github = $activityHelper->getGithub($this->getGithubActivityFeeds());
-        $tweets = $activityHelper->getTweets($this->getTwitterActivityUsernames());
-        $activity = $tweets + $github;
+        $filtered        = false;
+        $communityHelper = $this->getService('community.helper');
+        $activityHelper  = new \Application\Classes\CommunityActivity($this->getService('community.cache'));
+        $github          = $activityHelper->getGithub($this->getGithubActivityFeeds());
+        $tweets          = $communityHelper->getTweetsFromUsername('ppi_framework');
+        $activity        = $tweets + $github;
+        
         krsort($activity);
-        $filtered = false;
+        
         return $this->render('Application:index:community.html.php', compact('activity', 'filtered'));
     }
     
