@@ -36,17 +36,16 @@
 
 					<h3><strong><?= $view->escape($downloadItem->getName()); ?></strong></h3>
 					<div class="download-description span5">
-						<p>Ubuntu 12.04.2 LTS is a long-term support release. It has continuous hardware support improvements as well as guaranteed security and support updates until April 2017.</p>
+						<p><?=$view->escape($downloadItem->getDesc());?></p>
 						<p><a class="link-arrow" href="/download/desktop/install-desktop-long-term-support">Read the full installation instructions</a></p>
 					</div>
 					<div class="span3 last-col download-button-area">
 						<form class="form-download" action="download page here" method="post">
 							<fieldset>
-								<p class="smaller">Describe vendor stuff here. <br><a href="https://help.ubuntu.com/community/UEFI">Read more ›</a></p>
-								<label for="dl-item-<?=$downloadItem->getID();?>">Choose your flavour</label>
+								<p class="smaller">If you choose <strong>without vendor</strong> then you will have to run composer yourself. <br><a href="https://help.ubuntu.com/community/UEFI">Read more ›</a></p>
 								<select id="dl-item-<?=$downloadItem->getID();?>" name="bits">
-									<option value="32" selected="selected">with vendor (<?= $view->escape($downloadItem->getFilesizeHuman()); ?>)</option>
-									<option value="64">without vendor (<?= $view->escape($downloadItem->getFilesizeHuman()); ?>)</option>
+									<option value="no" selected="selected">without vendor (<?= $view->escape($downloadItem->getFilesizeHuman()); ?>)</option>
+									<option value="yes">with vendor (<?= $view->escape($downloadItem->getVendorFilesizeHuman()); ?>)</option>
 								</select>
 							</fieldset>
 							<div>

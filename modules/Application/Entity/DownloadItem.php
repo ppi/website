@@ -8,9 +8,11 @@ class DownloadItem {
     protected $name;
     protected $filename;
     protected $filesize;
+    protected $vendor_filesize;
     protected $archive_type;
     protected $num_downloads;
     protected $created;
+    protected $description;
 
     public function __construct($row) {
         foreach($row as $key => $val) {
@@ -45,10 +47,7 @@ class DownloadItem {
     }
 
     public function getFilesizeHuman() {
-        $units = array('B', 'KB', 'MB', 'GB', 'TB');
-        $size = $this->getFilesize();
-        for ($i = 0; $size > 1024; $i++) { $size /= 1024; }
-        return round($size, 2).$units[$i];
+        return $this->convertFileSize($this->filesize);
     }
 
     public function getFilesize()
@@ -61,6 +60,16 @@ class DownloadItem {
         $this->filesize = $filesize;
     }
 
+    public function getVendorFilesize()
+    {
+        return $this->vendor_filesize;
+    }
+
+    public function getVendorFilesizeHuman()
+    {
+        return $this->convertFileSize($this->vendor_filesize);
+    }
+
     public function getName()
     {
         return $this->name;
@@ -71,6 +80,11 @@ class DownloadItem {
         $this->name = $name;
     }
 
+    public function getDesc()
+    {
+        return $this->description;
+    }
+
     public function getNumDownloads()
     {
         return $this->num_downloads;
@@ -79,6 +93,13 @@ class DownloadItem {
     public function setNumDownloads($numDownloads)
     {
         $this->num_downloads = $numDownloads;
+    }
+
+    protected function convertFileSize($size)
+    {
+        $units = array('B', 'KB', 'MB', 'GB', 'TB');
+        for ($i = 0; $size > 1024; $i++) { $size /= 1024; }
+        return round($size, 2).$units[$i];
     }
 
 }
