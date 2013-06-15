@@ -1,10 +1,4 @@
 /* Font Face */
-@font-face {
-  font-family: 'Droid Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
-}
 
 body {
 	height: 100%;
@@ -34,7 +28,7 @@ body {
 }
 
 .docs-page p {
-	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+	font-family: Ubuntu, Arial, "libra sans", sans-serif;
 	font-size: 1.1em;
 	font-weight: normal;
 }
@@ -73,12 +67,12 @@ div.toc-mobile {
 .toc-mobile .heading {
 	color: #244D4D;
 	font-size: 1.5em;
-	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+	font-family: Ubuntu, Arial, "libra sans", sans-serif;
 	margin-bottom: 5px;
 }
 .toc-mobile .items li a {
 	color: #244D4D;
-	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+	font-family: Ubuntu, Arial, "libra sans", sans-serif;
 }
 
 .toc-mobile .items li {
@@ -116,7 +110,7 @@ div.toc-mobile {
 }
 
 .docs-page h1, .docs-page h2, .docs-page h3 {
-	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+	font-family: Ubuntu, Arial, "libra sans", sans-serif;
 	font-weight: normal;
 }
 
@@ -193,11 +187,11 @@ p.section-title span {
 	color: #244D4D;
 	padding: 5px;
 	margin-top: 12px;
-	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+	font-family: Ubuntu, Arial, "libra sans", sans-serif;
 }
 
 .docs-page ul li {
-	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+	font-family: Ubuntu, Arial, "libra sans", sans-serif;
 }
 
 .toc-container {
@@ -259,7 +253,7 @@ body.docsbase {
 }
 
 .section-subbar h1 {
-	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+	font-family: Ubuntu, Arial, "libra sans", sans-serif;
 	padding: 0;
 	font-size: 1.8em;
 	line-height: 1.0em;

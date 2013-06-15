@@ -4,49 +4,44 @@ namespace Application\Entity;
 
 class DownloadItem {
 
-    protected $_id = NULL;
-    protected $_name = NULL;
-    protected $_filename = NULL;
-    protected $_filesize = NULL;
-    protected $_archive_type = NULL;
-    protected $_num_downloads = NULL;
-    protected $_created = NULL;
-/*
- *
-CREATE TABLE download_item
+    protected $id;
+    protected $name;
+    protected $filename;
+    protected $filesize;
+    protected $archive_type;
+    protected $num_downloads;
+    protected $created;
 
- *
- */
     public function __construct($row) {
         foreach($row as $key => $val) {
-            if(property_exists($this, '_' . $key)) {
-                $this->{'_' . $key} = $val;
+            if(property_exists($this, $key)) {
+                $this->{$key} = $val;
             }
         }
     }
 
     public function getId() {
-        return $this->_id;
+        return $this->id;
     }
 
     public function getArchiveType()
     {
-        return $this->_archive_type;
+        return $this->archive_type;
     }
 
-    public function setArchiveType($archive_type)
+    public function setArchiveType($archiveType)
     {
-        $this->_archive_type = $archive_type;
+        $this->archive_type = $archiveType;
     }
 
     public function getFilename()
     {
-        return $this->_filename;
+        return $this->filename;
     }
 
     public function setFilename($filename)
     {
-        $this->_filename = $filename;
+        $this->filename = $filename;
     }
 
     public function getFilesizeHuman() {
@@ -58,32 +53,32 @@ CREATE TABLE download_item
 
     public function getFilesize()
     {
-        return $this->_filesize;
+        return $this->filesize;
     }
 
     public function setFilesize($filesize)
     {
-        $this->_filesize = $filesize;
+        $this->filesize = $filesize;
     }
 
     public function getName()
     {
-        return $this->_name;
+        return $this->name;
     }
 
     public function setName($name)
     {
-        $this->_name = $name;
+        $this->name = $name;
     }
 
     public function getNumDownloads()
     {
-        return $this->_num_downloads;
+        return $this->num_downloads;
     }
 
-    public function setNumDownloads($num_downloads)
+    public function setNumDownloads($numDownloads)
     {
-        $this->_num_downloads = $num_downloads;
+        $this->num_downloads = $numDownloads;
     }
 
 }

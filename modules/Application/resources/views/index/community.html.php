@@ -8,47 +8,52 @@
 <script type="text/javascript" src="<?=$view['assets']->getUrl('js/community.js');?>"></script>
 <?php $view['slots']->stop(); ?>
 
-<div class="community-page">
-	<div class="left-side">
-        <?=$view->render('Application:index:community_leftnav.html.php');?>
-	</div>
-    
-	<div class="content-box">
-		
-		<ul class="breadcrumb">
-			<li><a href="#">Home</a> <span class="divider">/</span></li>
+<div class="community-page content-box">
+
+	<div class="breadcrumbs">
+		<ul class=" clearfix">
+			<li><a href="/">Home</a></li>
+			<li><span class="divider">&rsaquo;</span></li>
 			<li class="active">Community</li>
 		</ul>
-		
-		<h1>Community</h1>
+	</div>
 
-		<div class="activity-stream <?= $filtered ? 'filtered' : ''; ?>">
-			<div class="feeds">
-			<?php
-			foreach($activity as $item):
-				$feedImage  =  $view['assets']->getUrl('images/' . $item['source'] . '.png');
-				$feedDesc = $item['title'];
-			?>
-				<div class="feed source-<?= $item['source']; ?>">
-					<div class="image">
-						<img class="fl <?= $item['source']; ?>" src="<?= $feedImage; ?>" alt="<?= $item['source']; ?>" />
-					</div>
-					<div class="content">
-						<div class="description"><?= $feedDesc; ?></div>
-                        <div class="date"><?=$item['date'];?></div>
+	<div class="content-container clearfix">
 
-						<div class="actions">
-							<a href="<?= $item["url"];?>" target="_blank" class="readmore">Learn More...</a>
+		<div class="left-side">
+	        <?=$view->render('Application:index:community_leftnav.html.php');?>
+		</div>
+    
+		<div class="inner-content">
+			
+			<h1>Community</h1>
+
+			<div class="activity-stream <?= $filtered ? 'filtered' : ''; ?>">
+				<div class="feeds">
+				<?php
+				foreach($activity as $item):
+					$feedImage  =  $view['assets']->getUrl('images/' . $item['source'] . '.png');
+					$feedDesc = $item['title'];
+				?>
+					<div class="feed source-<?= $item['source']; ?> clearfix">
+						<div class="image">
+							<img class="fl <?= $item['source']; ?>" src="<?= $feedImage; ?>" alt="<?= $item['source']; ?>" />
 						</div>
+						<div class="content">
+							<div class="description"><?= $feedDesc; ?></div>
+	                        <div class="date"><?=$item['date'];?></div>
 
+							<div class="actions">
+								<a href="<?= $item["url"];?>" target="_blank" class="readmore">Read More...</a>
+							</div>
+
+						</div>
 					</div>
-					<div class="clear"></div>
+				<?php
+				endforeach;
+				?>
 				</div>
-			<?php
-			endforeach;
-			?>
 			</div>
 		</div>
 	</div>
-	<div class="clear"></div>
 </div>

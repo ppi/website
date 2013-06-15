@@ -1,17 +1,17 @@
 
-.contributors-page .content-box .projects-list .project .title {
+.contributors-page.content-box .projects-list .project .title {
 	font-size: 1.3em;
 	color: #406C6C;
 	margin-bottom: 5px;
 	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
 }
-.contributors-page .content-box .projects-list .project p {
+.contributors-page.content-box .projects-list .project p {
 	margin-bottom: 5px;
 }
-.contributors-page .content-box .projects-list .project .description {
+.contributors-page.content-box .projects-list .project .description {
 	margin-bottom: 12px;
 }
-.contributors-page .content-box .projects-list .project {
+.contributors-page.content-box .projects-list .project {
 	border: 1px solid #C7C7C7;
 	padding: 12px;
 	min-height: 75px;
@@ -19,13 +19,7 @@
 	margin-bottom: 12px;
 	background-color: white;
 }
-.contributors-page .content-box .projects-list {
-	
-}
-.contributors-page .content-box {
-	float: left;
-    width: 71.95833333333333%; /* RWD */
-	padding-left: 18px;
-	border-left: none;
-	position: relative;
+.contributors-page .intro {
+	font-size: 1.1em;
+	line-height: 1.6;
 }

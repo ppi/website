@@ -11,7 +11,7 @@
 
 #page-content .top .intro .buttons a {
     font-size:   1.2em;
-    font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
 }
 
 #page-content .top .intro .docs-button {
@@ -46,7 +46,7 @@
     font-size:   1.2em;
     text-align:  center;
     margin:      20px auto 0 auto;
-    font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
 }
 
 #page-content .top .intro .heading {
@@ -56,7 +56,7 @@
     font-weight: normal;
     color:       white;
     text-align:  center;
-    font-family: "FertigoProRegular", "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
 }
 
 #page-content .top .intro {
@@ -64,7 +64,7 @@
     margin:        0px auto -1px -5px;
     padding:       0 0 20px 0;
     z-index:       10;
-    font-family:   'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
     border:        1px solid #E5E5E5;
     border-top:    none;
     background:    #ffffff; /* Old browsers */
@@ -82,7 +82,7 @@
     height:      30px;
     width:       105px;
     font-size:   1.5em;
-    font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
     padding-top: 15px;
     position:    absolute;
     left:        63px;
@@ -92,7 +92,7 @@
 #page-content .top .get-ppi-now .list a {
     color:       #4C7F7F;
     font-size:   1.3em;
-    font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
 }
 
 #page-content .top .get-ppi-now .list li:first-child {
@@ -193,7 +193,7 @@
     padding: 14px 12px 15px 18px;
     font-weight: normal;
     color: white;
-    font-family: "FertigoProRegular", "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
 }
 
 #page-content .news-area .heading .social-icons {
@@ -209,7 +209,7 @@
 }
 
 #page-content .news-area ul li a {
-    font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
     font-size: 1.1em;
 }
 #page-content .news-area ul li {
@@ -270,7 +270,7 @@
     font-size:   2.0em;
     position:    absolute;
     top:         27px;
-    font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
     left:        23px;
     color:       #4C7F7F;
 }
@@ -289,7 +289,7 @@
 #page-content .middle .list li .title {
     color:         #000;
     font-size:     1.4em;
-    font-family:   'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
     margin-top:    5px;
     margin-bottom: 5px;
     display:       block;
@@ -320,7 +320,7 @@
     top:         27px;
     right:       32px;
     width:       300px;
-    font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
     font-size:   1.8em;
     color:       #4C7F7F;
 }
@@ -351,7 +351,7 @@
 
 #page-content .bottom .list li .title {
     color:       #FFFFFF;
-    font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
     font-size:   1.3em;
 }
 
@@ -407,7 +407,7 @@
 #page-content .bottom .header {
     font-size:   2.3em;
     top:         20px;
-    font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
     color:       #FFFFFF;
     left:        110px;
     position:    absolute;
@@ -467,7 +467,7 @@
 
 .whos-using-ppi .heading {
     font-size:     2.0em;
-    font-family:   'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
     left:          23px;
     color:         #4C7F7F;
     margin-bottom: 12px;

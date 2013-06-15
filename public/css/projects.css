@@ -2,7 +2,7 @@
 	font-size: 1.3em;
 	color: #406C6C;
 	margin-bottom: 5px;
-	font-family: 'Museo_Slab_500';
+	font-family: Ubuntu, Arial, "libra sans", sans-serif;
 }
 .projects-list .project p {
 	margin-bottom: 5px;
@@ -39,7 +39,7 @@
 .projects-page .content-box h1 {
 	color: #6F6F6F;
 	font-size: 2.0em;
-	font-family: "Museo_Slab_500"; 
+	font-family: Ubuntu, Arial, "libra sans", sans-serif;
 }
 .projects-list .project .actions a {
 	text-align: center;
@@ -55,7 +55,7 @@
 	font-size: 1.3em;
 	color: #406C6C;
 	margin-bottom: 5px;
-	font-family: 'Museo_Slab_500';
+	font-family: Ubuntu, Arial, "libra sans", sans-serif;
 }
 .projects-list .project .actions {
 	top: 0;

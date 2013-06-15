@@ -28,6 +28,7 @@
     <title><?php $view['slots']->output('title', 'PPI Framework: The PHP Meta Framework') ?></title>
     
     <!-- CSS Stuff -->
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
     <link href="<?=$view['assets']->getUrl('css/libs/bootstrap.min.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/main.css');?>" rel="stylesheet">
     <?php $view['slots']->output('include_css'); ?>

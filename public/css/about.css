@@ -1,4 +1,5 @@
 .about-page .desc ul li {font-size:1.1em;margin-bottom: 12px; }
 .about-page .desc {padding: 12px 12px 0 12px;}
-.about-page ul li {font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Lucida, Arial, Helvetica, sans-serif;}
+.about-page ul li { font-family: Ubuntu, Arial, "libra sans", sans-serif;}
 .about-page ul {margin-left: 18px;}
+.desc {  padding: 12px; min-height: 75px; position: relative; margin-bottom: 12px; background-color: white; }

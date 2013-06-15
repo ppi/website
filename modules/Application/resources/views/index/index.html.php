@@ -11,15 +11,9 @@
                 <p class="desc">ppi can be considered the boilerplate of PHP frameworks</p>
     
                 <div class="buttons">
-                    <div class="btn-group">
-                        <button class="btn btn-green btn-large dropdown-toggle" data-toggle="dropdown">
-                            <span class="icon-circle-arrow-down icon-white"></span> Download
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#download" id="download-skeleton-without-vendors">Skeleton App (without vendors).tar.gz</a></li>
-                            <li><a href="#download" id="download-skeleton-with-vendors">Skeleton App (with vendors) .tar.gz</a></li>
-                        </ul>
-                    </div>
+                    <a class="btn btn-green btn-large" href="<?=$view['router']->generate('Downloads');?>">
+                        <span class="icon-circle-arrow-down icon-white"></span> Download
+                    </a>
                     <a class="main-button docs-button btn btn-large" href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting_started'));?>">Documentation</a>
                     <a class="main-button github-button btn btn-large" href="http://www.github.com/ppi">GitHub</a>
                 </div>
