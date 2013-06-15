@@ -14,10 +14,11 @@
                         <ul class="nav">
                             <li class="logo-item"><a class="logo" href="<?=$view['router']->generate('Homepage');?>" title="PPI"><img src="<?=$view['assets']->getUrl('images/ppi-white.png');?>" alt="Logo" height="25"></a></li>
                             <li class=""><a href="<?=$view['router']->generate('Homepage');?>">Home</a></li>
-                            <li><a href="<?=$view['router']->generate('About');?>">About</a></li>
+                            <li class=""><a href="<?=$view['router']->generate('About');?>">About</a></li>
                             <li class=""><a href="<?=$view['router']->generate('Blog');?>">Blog</a></li>
                             <li class=""><a href="<?=$view['router']->generate('Community');?>">Community</a></li>
                             <li class=""><a href="<?=$view['router']->generate('Downloads');?>">Downloads</a></li>
+                            <li class=""><a href="http://forum.ppi.io" target="_blank">Forum</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret icon-white"></b></a>
                                 <ul class="dropdown-menu">

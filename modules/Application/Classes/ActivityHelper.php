@@ -1,14 +1,28 @@
 <?php
+
 namespace Application\Classes;
 
-class CommunityHelper {
+class ActivityHelper {
+    
+    protected $cache;
+    protected $githubFeeds;
+    protected $twitterUsername;
 
     protected $oauthDriver;
-    protected $cache;
 
     public function setOAuthDriver($driver)
     {
         $this->oauthDriver = $driver;
+    }
+    
+    public function setGithubFeeds($feeds)
+    {
+         $this->githubFeeds = $feeds;
+    }
+
+    public function setTwitterUsername($username)
+    {
+        $this->twitterUsername = $username;
     }
 
     public function setCache($cache)
@@ -16,13 +30,24 @@ class CommunityHelper {
         $this->cache = $cache;
     }
 
-    public function getTweetsFromUsername($username)
+    public function getGithubActivity()
     {
+       $activity = array();
+        if(!empty($this->githubFeeds)) {
+            $activity = $this->parseGithubFeeds($this->githubFeeds);
+        }
+    
+        return $activity;
+    }
 
-        $cacheName = 'twitter-feeds';
+    public function getTwitterActivity()
+    {
+        $cacheName = 'ppi-twitter-feeds';
         if($this->cache->contains($cacheName)) {
             return $this->cache->fetch($cacheName);
         }
+
+        $username = $this->twitterUsername;
 
         $this->oauthDriver->request('GET', $this->oauthDriver->url('1.1/statuses/user_timeline'), array(
             'screen_name' => $username
@@ -84,4 +109,46 @@ class CommunityHelper {
         return $activity;
     }
 
+
+    public function parseGithubFeeds($feeds)
+    {
+   
+        $cacheName = 'ppi-website-github-activity';
+        if($this->cache->contains($cacheName)) {
+            return $this->cache->fetch($cacheName);
+        }
+        
+        $activity = array();
+        foreach($feeds as $feed) {
+            $xml = simplexml_load_file($feed);
+            if(isset($xml->entry)) {
+                foreach($xml->entry as $commit) {
+                    $timestamp = strtotime( (string) $commit->updated);
+                    $title = (string) $commit->title;
+                    if(strlen($title) > 70) {
+                        $title = trim(substr($title, 0, 70)). '..';
+                    }
+                    $title = htmlentities($title);
+                    $activity[$timestamp] = array(
+                        'source'  => 'github',
+                        'url'     => (string) $commit->link['href'],
+                        'title'   => $title,
+                        'date'    => date('jS M Y \a\t g:i a', $timestamp)
+                    );
+                }
+            }
+        }
+        
+        krsort($activity);
+    
+        $this->cache->save($cacheName, $activity, 60*60);
+    
+        return $activity;
+           
+    }
+    
+
+       
+
+    
 }

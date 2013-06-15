@@ -26,7 +26,7 @@
     
 		<div class="inner-content">
 			
-			<h1>Community</h1>
+			<h1>Community Activity</h1>
 
 			<div class="activity-stream <?= $filtered ? 'filtered' : ''; ?>">
 				<div class="feeds">
@@ -36,17 +36,10 @@
 					$feedDesc = $item['title'];
 				?>
 					<div class="feed source-<?= $item['source']; ?> clearfix">
-						<div class="image">
-							<img class="fl <?= $item['source']; ?>" src="<?= $feedImage; ?>" alt="<?= $item['source']; ?>" />
-						</div>
+						<div class="image"><img class="fl <?= $item['source']; ?>" src="<?= $feedImage; ?>" alt="<?= $item['source']; ?>" /></div>
 						<div class="content">
-							<div class="description"><?= $feedDesc; ?></div>
-	                        <div class="date"><?=$item['date'];?></div>
-
-							<div class="actions">
-								<a href="<?= $item["url"];?>" target="_blank" class="readmore">Read More...</a>
-							</div>
-
+							<p class="description"><?= $feedDesc	; ?></p>
+	                        <p class="date"><?=$item['date'];?> - <a href="<?= $item["url"];?>" target="_blank" class="readmore">Read More</a></p>
 						</div>
 					</div>
 				<?php

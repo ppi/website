@@ -78,13 +78,7 @@
                     <p>Taylor Otwell (<a target="_blank" href="http://twitter.com/taylorotwell" title="twitter">@taylorotwell</a>)</p>
                 </div>
                 
-                <div class="project">
-                    <div class="title">PHP Community Members</div>
-                    <p>Beau D. Simensen (<a target="_blank" href="http://twitter.com/kirkryyn" title="twitter">@kirkryyn</a>)</p>
-                    <p>Stefan Koopmanschap  (<a target="_blank" href="http://twitter.com/skoop" title="twitter">@skoop</a>)</p>
-                </div>
-                
-                <p>Special thanks to these guys who are early adopters of ppi2, the project's you've made on ppi2 have helped us solidify the core framework and make a feature-rich framework stack.</p>
+                <p>Special thanks to these guys who are early adopters of PPI, the project's you've made on ppi2 have helped us solidify the core and make a feature-rich framework.</p>
                 
                 <div class="project">
                     <div class="title">Early Adopters</div>

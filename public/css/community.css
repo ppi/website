@@ -7,8 +7,8 @@
 .community-page .left-side {
     width: 20%;
     margin-right: 2%;
-    margin-top: 35px;
     float: left;
+    border-right: 1px dotted #aea79f
 }
 
 
@@ -76,7 +76,7 @@
 .community-page h1 {
     font-size: 2.813em;
     margin-bottom: 0.267em;
-    margin-top: 37px;
+    margin-top: 18px;
 }
 
 .community-page .left-side nav li a.first:hover {
@@ -163,49 +163,20 @@
 	height: 22px;
 }
 
-.community-page.content-box .activity-stream .feed .actions a {
-	text-align: center;
-	color: white;
-	font-size: 0.9em;
-	display: block;
-	padding-top: 6px;
-	width: 100px;
-	height: 22px;
-}
-
-.community-page.content-box .activity-stream .feed .actions a:hover {
-    text-decoration: none;
-    background: #345958;
-}
-
-.community-page.content-box .activity-stream .feed .actions {
-	top: 0;
-	right: 0;
-	border-radius: 0;
-	-webkit-border-radius: none;
-	-moz-border-radius: none;
-	position: absolute;
-	background-color: #518787;
-	margin-top: 0;
-	border: 0;
-	padding: 0;
-}
-.community-page.content-box .activity-stream .feeds .feed .date {
-	position: absolute;
-	bottom: 5px;
-	left: 60px;
+.community-page .activity-stream .feeds .feed .date {
 	color: #a9a9a9;
 }
-.community-page.content-box .activity-stream .feeds .feed .content {
+.community-page .activity-stream .feeds .feed .content {
+	width: 85%;
 	float: left;
-	width: 500px;
 }
-.community-page.content-box .activity-stream .feeds .feed .image {
+.community-page .activity-stream .feeds .feed .image {
 	float: left;
+	width: 54px;
 	margin-right: 12px;
 	margin-left: 12px;
 }
-.community-page.content-box .activity-stream .feeds .feed {
+.community-page .activity-stream .feeds .feed {
 	border-bottom: 1px dotted #aea79f;
 	height: 68px;
 	background-color: white;
@@ -213,6 +184,6 @@
 	position: relative;
 	margin-bottom: 1.0em;
 }
-.community-page.content-box .activity-stream {
-	
+.community-page .activity-stream img.twitter {
+	margin-left: 7px;
 }

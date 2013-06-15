@@ -37,8 +37,29 @@ class Module extends BaseModule
     {
         return array('factories' => array(
             
-            'community.cache' => function($sm) {
+            'activity.cache' => function($sm) {
                 return new \Doctrine\Common\Cache\ApcCache();
+            },
+
+            'activity.helper' => function($sm)
+            {
+                $config = $sm->get('config');
+                $feeds  = isset($config['community']['githubFeeds']) ? $config['community']['githubFeeds'] : array();
+                $helper = new \Application\Classes\ActivityHelper();
+
+                $tmhOAuth = new \tmhOAuth(array(
+                    'consumer_key'    => $config['oauth']['consumer_key'],
+                    'consumer_secret' => $config['oauth']['consumer_secret'],
+                    'user_token'      => $config['oauth']['user_token'],
+                    'user_secret'     => $config['oauth']['user_secret'],
+                ));
+
+                $helper->setTwitterUsername($config['community']['twitterUsername']);
+                $helper->setGithubFeeds($config['community']['githubFeeds']);
+                $helper->setCache($sm->get('activity.cache'));
+                $helper->setOAuthDriver($tmhOAuth); 
+
+                return $helper;
             },
             
             'download.counter' => function($sm) {
@@ -51,24 +72,8 @@ class Module extends BaseModule
 
             'download.item.storage' => function($sm) {
                 return new \Application\Storage\DownloadItem($sm->get('datasource'));
-            },
-
-            'community.helper' => function($sm) {
-
-                $config   = $sm->get('config');
-                $tmhOAuth = new \tmhOAuth(array(
-                    'consumer_key'    => $config['oauth']['consumer_key'],
-                    'consumer_secret' => $config['oauth']['consumer_secret'],
-                    'user_token'      => $config['oauth']['user_token'],
-                    'user_secret'     => $config['oauth']['user_secret'],
-                ));
-
-                $helper = new \Application\Classes\CommunityHelper();
-                $helper->setOAuthDriver($tmhOAuth); 
-                $helper->setCache($sm->get('community.cache'));
-
-                return $helper;
             }
+
         ));
     }
 

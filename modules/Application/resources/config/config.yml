@@ -1,12 +1,11 @@
 community:
     githubFeeds:
-        - https://github.com/ppi/framework/commits/master.atom
-        - https://github.com/ppi/skeletonapp/commits/master.atom
+        - https://github.com/ppi/framework/commits/2.1.atom
+        - https://github.com/ppi/skeletonapp/commits/2.1.atom
         - https://github.com/ppi/website/commits/master.atom
-        
-    twitterUsernames:
-        - ppi_framework
-        
+
+    twitterUsername: ppi_framework
+
 docs:
     pages:
         - index
@@ -16,5 +15,3 @@ docs:
         - modules
         - routing
         - templating
-
-oauth:

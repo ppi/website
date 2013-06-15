@@ -68,13 +68,6 @@
     border:        1px solid #E5E5E5;
     border-top:    none;
     background:    #ffffff; /* Old browsers */
-    background:    -moz-linear-gradient(top, #ffffff 0%, #F9F9F0 100%); /* FF3.6+ */
-    background:    -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #F9F9F0)); /* Chrome,Safari4+ */
-    background:    -webkit-linear-gradient(top, #ffffff 0%, #F9F9F0 100%); /* Chrome10+,Safari5.1+ */
-    background:    -o-linear-gradient(top, #ffffff 0%, #F9F9F0 100%); /* Opera 11.10+ */
-    background:    -ms-linear-gradient(top, #ffffff 0%, #F9F9F0 100%); /* IE10+ */
-    background:    linear-gradient(to bottom, #ffffff 0%, #F9F9F0 100%); /* W3C */
-    filter:        progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#F9F9F0', GradientType = 0); /* IE6-9 */
 }
 
 #page-content .top .get-ppi-now .icon {
@@ -148,13 +141,6 @@
     position: relative;
     
     background: white;
-    background: -moz-linear-gradient(top, white 0%, #F9F9F0 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #F9F9F0));
-    background: -webkit-linear-gradient(top, white 0%, #F9F9F0 100%);
-    background: -o-linear-gradient(top, white 0%, #F9F9F0 100%);
-    background: -ms-linear-gradient(top, white 0%, #F9F9F0 100%);
-    background: linear-gradient(to bottom, white 0%, #F9F9F0 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#F9F9F0', GradientType = 0);
     
 }
 
@@ -213,14 +199,14 @@
     font-size: 1.1em;
 }
 #page-content .news-area ul li {
-    padding-bottom: 22px;
-    padding-top: 3px;
+    padding-bottom: 8px;
+    padding-top: 8px;
     padding-left: 18px;
-    background: url(../images/whats-new-separator2.png) left bottom no-repeat;
+    border-bottom: 1px dotted #aea79f;
 }
 
 #page-content .news-area ul li:last-child {
-    background: none;
+    border: none;
 }
 
 #page-content .top-container .news-area .top-color {
@@ -327,7 +313,7 @@
 
 #page-content .middle {
     width:            963px;
-    background-color: #F9F9F0;
+    background-color: #fff;
     border:           1px solid #e5e5e5;
     position:         relative;
     height:           400px;
@@ -442,7 +428,7 @@
     margin-top:       12px;
     width:            951px;
     height:           117px;
-    background-color: #F9F9F0;
+    background-color: #fff;
     border:           1px solid #e5e5e5;
     position:         relative;
     padding-top:      12px;
@@ -475,10 +461,6 @@
 
 .whos-using-ppi .nhs img {
     width: 130px;
-}
-
-.whos-using-ppi .cumbernauld img {
-    width: 175px;
 }
 
 .whos-using-ppi img {

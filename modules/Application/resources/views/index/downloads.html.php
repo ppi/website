@@ -34,7 +34,7 @@
 			<?php foreach($downloadItems as $downloadItem): ?>
 				<div class="download-item clearfix">
 
-					<h3><strong>For the latest and greatest,</strong><br>choose PPI Framework 2.1</h3>
+					<h3><strong><?= $view->escape($downloadItem->getName()); ?></strong></h3>
 					<div class="download-description span5">
 						<p>Ubuntu 12.04.2 LTS is a long-term support release. It has continuous hardware support improvements as well as guaranteed security and support updates until April 2017.</p>
 						<p><a class="link-arrow" href="/download/desktop/install-desktop-long-term-support">Read the full installation instructions</a></p>
