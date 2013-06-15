@@ -97,7 +97,8 @@
         <ul class="clearfix">
             <li><a href="http://www.bestbuys.com" title="BestBuys" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/bestbuys.png');?>" alt=""></a></li>
             <li><a href="http://store.tomorrowland.com" title="Tomorrowland" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/tomorrowland.png');?>" alt=""></a></li>
-            <li class="nhs"><a href="#" onclick="javascript: void(0);" title="NHS Local" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/nhs.jpg');?>" alt=""></a></li>
+            <li><a href="#" onclick="javascript: void(0);" title="NHS Local" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/nhs.jpg');?>" alt=""></a></li>
+            <li><a href="http://www.talentize.com" title="Talentize" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/talentize.png');?>" alt=""></a></li>
 <!--            <li class="cumbernauld"><a href="#" onclick="javascript: void(0);" title="NHS Local" target="_blank"><img src="<?=$view['assets']->getUrl('images/who/cumbernauld.png');?>" alt=""></a></li> -->
         </ul>
     </div>

@@ -9,22 +9,6 @@ class Index extends SharedController
     {
         return $this->render('Application:index:index.html.php');
     }
-
-    public function downloadsAction()
-    {
-        $downloadItemStorage = $this->getService('download.item.storage');
-        $downloadItems = $downloadItemStorage->getAll();
-        return $this->render('Application:index:downloads.html.php', compact('downloadItems'));
-    }
-
-    public function downloadAction()
-    {
-        $file = $this->getRouteParam('file');
-        $downloadCounter = $this->getService('download.counter');
-        $downloadCounter->setIP($this->getIP());
-        $downloadCounter->incrementDownloadCount();
-        return 'OK';
-    }
     
     public function aboutAction()
     {
@@ -45,6 +29,22 @@ class Index extends SharedController
     {
         $projects = $this->getProjects();
         return $this->render('Application:index:projects.html.php', compact('projects'));
+    }
+
+    public function downloadsAction()
+    {
+        $downloadItemStorage = $this->getService('download.item.storage');
+        $downloadItems = $downloadItemStorage->getAll();
+        return $this->render('Application:index:downloads.html.php', compact('downloadItems'));
+    }
+
+    public function downloadAction()
+    {
+        $file = $this->getRouteParam('file');
+        $downloadCounter = $this->getService('download.counter');
+        $downloadCounter->setIP($this->getIP());
+        $downloadCounter->incrementDownloadCount();
+        return 'OK';
     }
     
     public function communityAction()
@@ -92,27 +92,6 @@ class Index extends SharedController
         $ns->create($name, $emailAddress);
         
         die(json_encode('OK'));
-    }
-
-    protected function getUserStorage()
-    {
-        return new \UserModule\Storage\User($this->getService('DataSource'));
-    }
-    
-    /**
-     * Get the news letter storage
-     * 
-     * @return \Application\Storage\NewsletterEntry
-     */
-    public function getNewsletterStorage()
-    {
-        return new \Application\Storage\NewsletterEntry($this->getService('DataSource'));
-    }
-
-    protected function getTwitterActivityUsernames()
-    {
-        $config = $this->getConfig();
-        return isset($config['community']['twitterUsernames']) ? $config['community']['twitterUsernames'] : array();
     }
 
 }
