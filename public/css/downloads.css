@@ -23,6 +23,7 @@
 #downloads-page h3 {
     font-size: 1.438em;
     margin-bottom: .522em;
+    font-family: Ubuntu,Arial,"libra sans",sans-serif;
 }
 
 #downloads-page .download-item select {

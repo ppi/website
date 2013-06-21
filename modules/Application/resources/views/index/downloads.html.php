@@ -27,14 +27,13 @@
 
 		<div class="inner-content">
 
-
 			<h1>Download PPI Framework</h1>
 
 			<div class="projects-list downloads-container">
 			<?php foreach($downloadItems as $downloadItem): ?>
 				<div class="download-item clearfix">
 
-					<h3><strong><?= $view->escape($downloadItem->getName()); ?></strong></h3>
+					<h3><?= $view->escape($downloadItem->getName()); ?></h3>
 					<div class="download-description span5">
 						<p><?=$view->escape($downloadItem->getDesc());?></p>
 						<p><a class="link-arrow" href="/download/desktop/install-desktop-long-term-support">Read the full installation instructions</a></p>
