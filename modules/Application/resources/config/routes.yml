@@ -7,8 +7,10 @@ Downloads:
     defaults: { _controller: "Application:Index:downloads"}
 
 Download:
-    pattern:  /download/{type}
+    pattern:  /download/{fileID}
     defaults: { _controller: "Application:Index:download"}
+    requirements:
+        _method: POST
 
 About:
     pattern:  /about

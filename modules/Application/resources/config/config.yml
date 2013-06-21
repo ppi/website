@@ -16,4 +16,6 @@ docs:
         - routing
         - templating
 
-oauth:
+downloads:
+    base_path: ./downloads/
+

@@ -61,6 +61,15 @@ class Module extends BaseModule
 
                 return $helper;
             },
+
+            'download.helper' => function($sm)
+            {
+                $config = $sm->get('config');
+                $helper = new \Application\Classes\DownloadsHelper();
+                $helper->setDownloadStorage($sm->get('download.item.storage'));
+                $helper->setDownloadsBasePath(realpath($config['downloads']['base_path']));
+                return $helper;
+            },
             
             'download.counter' => function($sm) {
                 return new \Application\Classes\DownloadCounter($sm->get('download.entry.storage'));
