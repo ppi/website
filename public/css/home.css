@@ -133,7 +133,7 @@
 
 #page-content .top-container .news-area {
     width: 412px;
-    height: 279px;
+    height: 300px;
     margin-left: 30px;
     margin-top: 25px;
     float: left;
@@ -312,6 +312,7 @@
 }
 
 #page-content .middle {
+    margin-top:       12px;
     width:            963px;
     background-color: #fff;
     border:           1px solid #e5e5e5;

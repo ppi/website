@@ -54,7 +54,7 @@
                 </a>
                 <a class="title" href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>" title="">Modules</a>
                 
-                <p class="desc">New and easy modular framework, leveraging the ZendFramework2 ModuleManager component.</p>
+                <p class="desc">Light and simple modules, leveraging the ZF2 ModuleManager component.</p>
             </li>
             <li>
                 <a class="icon" href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>" title="">
@@ -69,24 +69,24 @@
                 </a>
                 <a class="title" href="<?=$view['router']->generate('DocsIndex', array('page' => 'templating'));?>" title="">Templating</a>
 
-                <p class="desc">Awesome templating based on the Symfony2 Templating Component. We support PHP, Twig and Smarty</p>
+                <p class="desc">Awesome templating based on the Symfony2 Templating Component. We support PHP, Twig, Smarty and Mustache</p>
             </li>
             <li>
                 <a class="icon" href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting_started'));?>" title=""><img src="<?=$view['assets']->getUrl('images/config.png');?>" alt="Icon"></a>
                 <a class="title" href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting_started'));?>" title="">Databases</a>
-                <p class="desc">Simple and powerful DataSource component based on the Doctrine2 DBAL component</p>
+                <p class="desc">Our powerful DataSource component bootstraps the best DB libraries such as: DoctrineDBAL, DoctrineMongoDB, ZendDB, LaravelDB, Eloquent, Monga</p>
             </li>
                 <li>
                 <a class="icon" href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting_started'));?>" title=""><img src="<?=$view['assets']->getUrl('images/composer.png');?>" alt="Icon"></a>
                 <a class="title" href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting_started'));?>" title="">Composer Based</a>
-                <p class="desc">ppi itself is a composer package, and all of its dependencies are also composer packages. installation has never been so easy!</p>
+                <p class="desc">PPI is fully utilising composer for every dependency!</p>
             </li>
             <li style="margin-right: 0;">
                 <a class="icon" href="<?=$view['router']->generate('Community');?>" title="">
                     <img src="<?=$view['assets']->getUrl('images/community2.png');?>" alt="Icon">
                 </a>
                 <a class="title" href="<?=$view['router']->generate('Community');?>" title="">Our community rocks</a>
-                <p class="desc">Our <a href="<?=$view['router']->generate('Community');?>" title="Community">Community</a> page gives you access to what's going on in the PPI eco-system.</p>
+                <p class="desc">Join our community pages on <a href="/gplus">GooglePlus</a>, <a href="/facebook">FaceBook</a> or follow us on <a href="/twitter">Twitter</a>.</p>
             </li>
 
         </ul>
