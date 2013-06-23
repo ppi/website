@@ -40,11 +40,35 @@ class Index extends SharedController
 
     public function downloadAction()
     {
-        $file = $this->getRouteParam('file');
+        $fileID = $this->getRouteParam('fileID');
+        if(empty($fileID)) {
+            throw new \Exception('Invalid FileID');
+        }
+
+        $withVendor      = $this->post('vendor', 'no') === 'yes';
+        $downloadHelper  = $this->getService('download.helper');
         $downloadCounter = $this->getService('download.counter');
-        $downloadCounter->setIP($this->getIP());
-        $downloadCounter->incrementDownloadCount();
-        return 'OK';
+        $file            = $downloadHelper->getDownloadFileByID($fileID);
+        $filename        = $downloadHelper->normaliseFileName($file, $withVendor);
+
+        // Create download entry
+        $downloadCounter->create($this->getIP(), $file, $withVendor);
+
+        $path = $downloadHelper->getFullDownloadPath($filename);
+        if(!file_exists($path)) {
+            throw new \Exception('Unable to locate download file: ' . $filename);
+        }
+
+        // Send file back
+        $response = $this->getResponse();
+        $attachment = $response->headers->makeDisposition(
+            \Symfony\Component\HttpFoundation\ResponseHeaderBag::DISPOSITION_ATTACHMENT, $filename
+        );
+        $response->headers->set('Content-Disposition', $attachment);
+
+        return $response;
+
+
     }
     
     public function communityAction()

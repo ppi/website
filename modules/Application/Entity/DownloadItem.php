@@ -22,7 +22,7 @@ class DownloadItem {
         }
     }
 
-    public function getId() {
+    public function getID() {
         return $this->id;
     }
 

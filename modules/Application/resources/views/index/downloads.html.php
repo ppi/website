@@ -39,10 +39,10 @@
 						<p><a class="link-arrow" href="/download/desktop/install-desktop-long-term-support">Read the full installation instructions</a></p>
 					</div>
 					<div class="span3 last-col download-button-area">
-						<form class="form-download" action="download page here" method="post">
+						<form class="form-download" action="<?=$view['router']->generate('Download', array('fileID' => $downloadItem->getID()));?>" method="post">
 							<fieldset>
 								<p class="smaller">If you choose <strong>without vendor</strong> then you will have to run composer yourself. <br><a href="https://help.ubuntu.com/community/UEFI">Read more ›</a></p>
-								<select id="dl-item-<?=$downloadItem->getID();?>" name="bits">
+								<select id="dl-item-<?=$downloadItem->getID();?>" name="vendor">
 									<option value="no" selected="selected">without vendor (<?= $view->escape($downloadItem->getFilesizeHuman()); ?>)</option>
 									<option value="yes">with vendor (<?= $view->escape($downloadItem->getVendorFilesizeHuman()); ?>)</option>
 								</select>

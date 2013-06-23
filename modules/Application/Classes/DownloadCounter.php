@@ -2,10 +2,13 @@
 
 namespace Application\Classes;
 
-class DownloadCounter {
+use Application\Entity\DownloadEntry as EntryEntity;
 
-    public $storage = null;
-    public $ip = null;
+class DownloadCounter
+{
+
+    protected $storage;
+    protected $ip;
 
     public function __construct($storage)
     {
@@ -35,11 +38,22 @@ class DownloadCounter {
     /**
      * Increment the download count
      *
-     * @return void
+     * @return integer
      */
-    public function incrementDownloadCount()
+    public function create($ip, $file, $withVendor)
     {
-        return $this->storage->insert(array('ip_address' => $this->ip, 'created' => time()));
+
+        $entry = new EntryEntity();
+        $entry->setIP($ip);
+        $entry->setDownloadItemID($file->getID());
+        $entry->setWithVendor($withVendor);
+
+        return $this->storage->insert(array(
+            'ip_address'       => $entry->getIP(),
+            'download_item_id' => $entry->getDownloadItemID(),
+            'with_vendor'      => $entry->getWithVendor(),
+            'created'          => time()
+        ));
     }
 
 }

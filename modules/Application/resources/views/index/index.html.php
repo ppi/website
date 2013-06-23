@@ -7,8 +7,8 @@
         <div class="top">
             <div class="intro">
                 <p class="heading">ppi: the php meta framework!</p>
-                <p class="desc">ppi is an open source php meta-framework. we have taken the good bits from Symfony2, ZendFramework2 &amp; Doctrine2 and combined them together to create a solid and very easy web application framework.
-                <p class="desc">ppi can be considered the boilerplate of PHP frameworks</p>
+                <p class="desc">PPI is a vendor agnostic PHP meta framework that provides an equal and open platform to empower PHP developers to pick the best tools from the best PHP frameworks</p>
+                <p class="desc">PPI bootstraps framework components for you from the top frameworks such as ZendFrameworks2, Symfony2, Laravel4, FuelPHP, Doctrine2<p>
     
                 <div class="buttons">
                     <a class="btn btn-green btn-large" href="<?=$view['router']->generate('Downloads');?>">
@@ -25,7 +25,7 @@
                 <span>What's new</span>
             
                 <div class="social-icons">
-                    <a href="http://twitter.com/ppi_framework" target="_blank"><img src="<?= $view['assets']->getUrl('images/twitter2.png');?>" alt="Twitter" width="38" /></a>
+                    <a href="http://twitter.com/ppi_framework" tutorial-geolocation-with-foursquare-and-google-mapst="_blank"><img src="<?= $view['assets']->getUrl('images/twitter2.png');?>" alt="Twitter" width="38" /></a>
                     <a href="https://plus.google.com/communities/100606932222119087997" target="_blank"><img src="<?= $view['assets']->getUrl('images/googleplus.png');?>" width="38" /></a>
 <!--                    <a href="--><?//=$view['router']->generate('BlogGetRSS');?><!--"><img src="--><?//= $view['assets']->getUrl('images/rss.png');?><!--" width="38" /></a>-->
                 </div>
