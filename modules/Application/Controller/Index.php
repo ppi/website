@@ -49,10 +49,15 @@ class Index extends SharedController
         $downloadHelper  = $this->getService('download.helper');
         $downloadCounter = $this->getService('download.counter');
         $file            = $downloadHelper->getDownloadFileByID($fileID);
-        $filename        = $downloadHelper->normaliseFileName($file);
+        $filename        = $downloadHelper->normaliseFileName($file, $withVendor);
 
         // Create download entry
         $downloadCounter->create($this->getIP(), $file, $withVendor);
+
+        $path = $downloadHelper->getFullDownloadPath($filename);
+        if(!file_exists($path)) {
+            throw new \Exception('Unable to locate download file: ' . $filename);
+        }
 
         // Send file back
         $response = $this->getResponse();

@@ -25,7 +25,7 @@
                 <span>What's new</span>
             
                 <div class="social-icons">
-                    <a href="http://twitter.com/ppi_framework" target="_blank"><img src="<?= $view['assets']->getUrl('images/twitter2.png');?>" alt="Twitter" width="38" /></a>
+                    <a href="http://twitter.com/ppi_framework" tutorial-geolocation-with-foursquare-and-google-mapst="_blank"><img src="<?= $view['assets']->getUrl('images/twitter2.png');?>" alt="Twitter" width="38" /></a>
                     <a href="https://plus.google.com/communities/100606932222119087997" target="_blank"><img src="<?= $view['assets']->getUrl('images/googleplus.png');?>" width="38" /></a>
 <!--                    <a href="--><?//=$view['router']->generate('BlogGetRSS');?><!--"><img src="--><?//= $view['assets']->getUrl('images/rss.png');?><!--" width="38" /></a>-->
                 </div>

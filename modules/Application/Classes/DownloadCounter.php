@@ -56,14 +56,4 @@ class DownloadCounter
         ));
     }
 
-
-    public function normaliseFileName($file)
-    {
-        $filename = $file->getFilename();
-        if($withVendor) {
-            $filename = str_replace('.zip', '-with-vendor.zip');
-        }
-        return $filename;
-    }
-
 }

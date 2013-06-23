@@ -21,4 +21,19 @@ class DownloadsHelper {
         $this->downloadsBasePath = $path;
     }
 
+    public function getFullDownloadPath($filename)
+    {
+        return $this->downloadsBasePath . '/' . $filename;
+    }
+
+
+    public function normaliseFileName($file, $withVendor)
+    {
+        $filename = $file->getFilename();
+        if($withVendor) {
+            $filename = str_replace('.zip', '-with-vendor.zip', $filename);
+        }
+        return $filename;
+    }
+
 }
