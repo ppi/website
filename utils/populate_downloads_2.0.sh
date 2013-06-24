@@ -25,8 +25,9 @@ zip -r ppi-v2.0-with-vendor.zip 2.0
 vendorsize=$(du -b ppi-v2.0-with-vendor.zip | sed 's/\([0-9]*\)\(.*\)/\1/')
 
 # update database with filesizes
-
-
+cd ..
+php update_filesize.php -i 1 -f "$size" -v "$vendorsize"
+cd downloads_tmp
 
 # move files into production DIR once completed
 cp ppi-v2.0.zip ../../downloads/ppi-v2.0.zip
