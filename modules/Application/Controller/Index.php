@@ -61,7 +61,6 @@ class Index extends SharedController
 
         // Send file back
         $response = $this->getResponse();
-        $response->headers->set('X-Sendfile', $path);
         $response->headers->set('Content-Type', 'application/octet-stream');
         $response->headers->set('Content-Disposition', 'attachment; filename="' . $filename . '"');
         $response->setContent(readfile($path));
