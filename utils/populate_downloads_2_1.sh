@@ -8,7 +8,7 @@ rm -f downloads_tmp/ppi-v2.1-with-vendor.zip
 mkdir downloads_tmp/2.1 && cd downloads_tmp/2.1;
 
 # pull skeletonapp 2.1 from github
-git clone https://github.com/ppi/skeletonapp.git . && git checkout 2.1 && cd ..
+git clone https://github.com/ppi/skeletonapp.git . && git checkout 2.1 && rm -rf .git && cd ..
 
 # create archive
 zip -r ppi-v2.1.zip 2.1
@@ -19,7 +19,7 @@ size=$(du -b ppi-v2.1.zip | sed 's/\([0-9]*\)\(.*\)/\1/')
 # run composer
 cd 2.1
 curl -sS https://getcomposer.org/installer | php
-php composer.phar install && cd ..
+php composer.phar install && rm -f composer.phar && cd ..
 zip -r ppi-v2.1-with-vendor.zip 2.1
 
 # get size of the archive
