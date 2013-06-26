@@ -68,6 +68,7 @@ class Module extends BaseModule
                 $helper = new \Application\Classes\DownloadsHelper();
                 $helper->setDownloadStorage($sm->get('download.item.storage'));
                 $helper->setDownloadsBasePath(realpath($config['downloads']['base_path']));
+                $helper->setPublicBasePath(realpath($config['downloads']['public_base_path']));
                 return $helper;
             },
             

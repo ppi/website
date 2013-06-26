@@ -5,6 +5,7 @@ class DownloadsHelper {
 
     protected $storage;
     protected $downloadsBasePath;
+    protected $publicBasePath;
 
     public function setDownloadStorage($s)
     {
@@ -21,9 +22,22 @@ class DownloadsHelper {
         $this->downloadsBasePath = $path;
     }
 
+    public function setPublicBasePath($path)
+    {
+        $this->publicBasePath = $path;
+    }
+
     public function getFullDownloadPath($filename)
     {
         return $this->downloadsBasePath . '/' . $filename;
+    }
+
+    public function copyFileToPublicFolder($path, $filename)
+    {
+        $dir = dirname($path);
+        $newFilename = str_replace('.zip', '_' . sha1(microtime(true)) . '.zip', $filename);
+        copy($path, $this->publicBasePath . '/' . $newFilename);
+        return $newFilename;
     }
 
 

@@ -59,14 +59,10 @@ class Index extends SharedController
             throw new \Exception('Unable to locate download file: ' . $filename);
         }
 
-        // Send file back
-        $response = $this->getResponse();
-        $response->headers->set('Content-Type', 'application/octet-stream');
-        $response->headers->set('Content-Disposition', 'attachment; filename="' . $filename . '"');
-        $response->setContent(file_get_contents($path));
+        // Copy file over to public folder
+        $newPath = $downloadHelper->copyFileToPublicFolder($path, $filename);
 
-        return $response;
-
+        return $this->redirect('/downloads/' . $newPath);
 
     }
     

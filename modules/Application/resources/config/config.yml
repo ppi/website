@@ -18,3 +18,4 @@ docs:
 
 downloads:
     base_path: ./downloads/
+    public_base_path: ./public/downloads/
