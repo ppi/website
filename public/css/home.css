@@ -428,7 +428,6 @@
     margin-bottom:    12px;
     margin-top:       12px;
     width:            951px;
-    height:           117px;
     background-color: #fff;
     border:           1px solid #e5e5e5;
     position:         relative;
@@ -450,6 +449,14 @@
     list-style-type: none;
     margin-left:     12px;
     padding:         10px;
+}
+
+.whos-using-ppi li a {
+    display: block;
+}
+
+.whos-using-ppi li.twland {
+    padding-top: 0;
 }
 
 .whos-using-ppi .heading {
