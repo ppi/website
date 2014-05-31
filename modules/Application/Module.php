@@ -82,6 +82,16 @@ class Module extends BaseModule
 
             'download.item.storage' => function($sm) {
                 return new \Application\Storage\DownloadItem($sm->get('datasource'));
+            },
+
+            'newsletter.storage' => function($sm) {
+                return new \Application\Storage\NewsletterEntry($sm->get('datasource'));
+            },
+
+            'newsletter.helper' => function($sm) {
+                $helper = new \Application\Classes\Newsletter();
+                $helper->setStorage($sm->get('newsletter.storage'));
+                return $helper;
             }
 
         ));

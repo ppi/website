@@ -101,7 +101,7 @@ class Index extends SharedController
            die(json_encode('E_INVALID')); 
         }
         
-        $ns = $this->getNewsletterStorage();
+        $ns = $this->getService('newsletter.helper');
         
         // Duplication check
         if($ns->existsByEmail($emailAddress)) {
