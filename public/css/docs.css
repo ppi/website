@@ -30,7 +30,7 @@ body {
 .docs-page p {
 	font-family: Ubuntu, Arial, "libra sans", sans-serif;
 	font-size: 1.1em;
-	font-weight: normal;
+	font-weight: 300;
 }
 
 .docs-page .toc ul {
@@ -192,6 +192,7 @@ p.section-title span {
 
 .docs-page ul li {
 	font-family: Ubuntu, Arial, "libra sans", sans-serif;
+    font-size: 1.0em;
 }
 
 .toc-container {
