@@ -13,6 +13,7 @@ class DownloadItem {
     protected $num_downloads;
     protected $created;
     protected $description;
+    protected $version;
 
     public function __construct($row) {
         foreach($row as $key => $val) {
@@ -93,6 +94,11 @@ class DownloadItem {
     public function setNumDownloads($numDownloads)
     {
         $this->num_downloads = $numDownloads;
+    }
+
+    public function getVersion()
+    {
+        return $this->version;
     }
 
     protected function convertFileSize($size)

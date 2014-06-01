@@ -36,7 +36,7 @@
 					<h3><?= $view->escape($downloadItem->getName()); ?></h3>
 					<div class="download-description span5">
 						<p><?=$view->escape($downloadItem->getDesc());?></p>
-						<p><a class="link-arrow" href="/download/desktop/install-desktop-long-term-support">Read the full installation instructions</a></p>
+						<p><a class="link-arrow" target="_blank" href="https://github.com/ppi/skeletonapp/tree/<?=$view->escape($downloadItem->getVersion());?>#installation">Read the full installation instructions</a></p>
 					</div>
 					<div class="span3 last-col download-button-area">
 						<form class="form-download" action="<?=$view['router']->generate('Download', array('fileID' => $downloadItem->getID()));?>" method="post">

@@ -29,7 +29,7 @@
             
             <div class="desc">
                 <h2>What is PPI?</h2>
-                <p>PPI is a vendor agnostic PHP meta framework that provides an equal and open platform to empower PHP developers to pick the best tools from the best PHP frameworks</p>
+                <p>PPI is the the PHP Interoperability Framework. It provides an equal and open platform to empower PHP developers to pick the best tools from the best PHP frameworks</p>
                 <p>PPI bootstraps framework components for you from the top frameworks such as ZendFrameworks2, Symfony2, Laravel4, FuelPHP, Doctrine2</p>
             </div>
             
