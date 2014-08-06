@@ -8,7 +8,7 @@
             <div class="intro">
                 <p class="heading">ppi: the php interoperability framework!</p>
                 <p class="desc">PPI is the PHP Interoperability Framework. It provides an equal and open platform to empower PHP developers to pick the best tools from the best PHP frameworks</p>
-                <p class="desc">PPI bootstraps framework components for you from the top frameworks such as ZendFrameworks2, Symfony2, Laravel4, FuelPHP, Doctrine2<p>
+                <p class="desc">PPI bootstraps framework components for you from the top frameworks such as ZendFramework2, Symfony2, Laravel4, FuelPHP, Doctrine2<p>
     
                 <div class="buttons">
                     <a class="btn btn-green btn-large" href="<?=$view['router']->generate('Downloads');?>">
