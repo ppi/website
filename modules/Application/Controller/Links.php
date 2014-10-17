@@ -5,7 +5,7 @@ use Application\Controller\Shared as SharedController;
 
 class Links extends SharedController
 {
-    public function indexAction()
+    public function gplusAction()
     {
         return $this->redirect('https://plus.google.com/communities/100606932222119087997');
     }
@@ -19,5 +19,4 @@ class Links extends SharedController
     {
         return $this->redirect('http://www.twitter.com/ppi_framework');
     }
-
 }
