@@ -6,13 +6,10 @@ class DownloadItem {
 
     protected $id;
     protected $name;
-    protected $filename;
-    protected $filesize;
-    protected $vendor_filesize;
-    protected $archive_type;
     protected $num_downloads;
     protected $created;
     protected $description;
+    protected $url;
     protected $version;
 
     public function __construct($row) {
@@ -25,45 +22,6 @@ class DownloadItem {
 
     public function getID() {
         return $this->id;
-    }
-
-    public function getArchiveType()
-    {
-        return $this->archive_type;
-    }
-
-    public function setArchiveType($archiveType)
-    {
-        $this->archive_type = $archiveType;
-    }
-
-    public function getFilename()
-    {
-        return $this->filename;
-    }
-
-    public function setFilename($filename)
-    {
-        $this->filename = $filename;
-    }
-
-    public function getFilesizeHuman() {
-        return $this->convertFileSize($this->filesize);
-    }
-
-    public function getFilesize()
-    {
-        return $this->filesize;
-    }
-
-    public function setFilesize($filesize)
-    {
-        $this->filesize = $filesize;
-    }
-
-    public function getVendorFilesize()
-    {
-        return $this->vendor_filesize;
     }
 
     public function getVendorFilesizeHuman()
@@ -96,9 +54,14 @@ class DownloadItem {
         $this->num_downloads = $numDownloads;
     }
 
-    public function getVersion()
+    public function getUrl()
     {
-        return $this->version;
+        return $this->url;
+    }
+
+    public function setUrl($url)
+    {
+        $this->url = $url;
     }
 
     protected function convertFileSize($size)
@@ -106,6 +69,16 @@ class DownloadItem {
         $units = array('B', 'KB', 'MB', 'GB', 'TB');
         for ($i = 0; $size > 1024; $i++) { $size /= 1024; }
         return round($size, 2).$units[$i];
+    }
+
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+    public function setVersion($version)
+    {
+        $this->version = $version;
     }
 
 }
