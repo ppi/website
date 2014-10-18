@@ -48,9 +48,6 @@
                                   class="btn btn-green download-button"
                                   data-trigger-url="<?=$view['router']->generate('Download', array('fileID' => $downloadItem->getID()));?>">Download</a>
                             </p>
-
-
-                            </form>
                         </div>
                         <!-- /.four-col -->
 
