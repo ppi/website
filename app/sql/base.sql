@@ -122,22 +122,22 @@ CREATE TABLE `download_entry` (
 -- Table structure for table `download_item`
 --
 
-DROP TABLE IF EXISTS `download_item`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `download_item` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
-  `filename` varchar(255) DEFAULT NULL,
-  `filesize` double DEFAULT NULL,
-  `vendor_filesize` double DEFAULT NULL,
-  `archive_type` varchar(255) DEFAULT NULL,
+  `url` varchar(255) DEFAULT NULL,
   `num_downloads` int(11) DEFAULT NULL,
   `created` datetime DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
+  `version` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+INSERT INTO `download_item` (`id`, `name`, `url`, `num_downloads`, `created`, `description`, `version`)
+VALUES
+	(1, 'PPI 2.1 Skeleton Application', 'https://github.com/ppi/skeletonapp/archive/2.1.0-alpha.zip', 0, '2013-06-15 17:07:34', NULL, '2.1');
+
+
 
 --
 -- Table structure for table `newsletter_entries`
