@@ -86,7 +86,7 @@
                     <img src="<?=$view['assets']->getUrl('images/community2.png');?>" alt="Icon">
                 </a>
                 <a class="title" href="<?=$view['router']->generate('Community');?>" title="">Our community rocks</a>
-                <p class="desc">Join our community pages on <a href="/gplus">GooglePlus</a>, <a href="/facebook">FaceBook</a> or follow us on <a href="/twitter">Twitter</a>.</p>
+                <p class="desc">Join our community pages on <a href="/gplus">Google</a>, <a href="/facebook">Facebook</a> or follow us on <a href="/twitter">Twitter</a>.</p>
             </li>
 
         </ul>
