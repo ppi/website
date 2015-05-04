@@ -4,12 +4,8 @@
     <li><a class="first" href="http://www.github.com/ppi" target="_blank">GitHub</a></li>
     <li><a class="first" href="http://www.twitter.com/#!/ppi_framework" target="_blank">Twitter Feed</a></li>
     <li class="box">
-        <p class="title">PPI IRC Network</p>
-        <p class="details">
-            <strong>Server:</strong> irc.freenode.org<br>
-            <strong>Channel:</strong> #ppi
-        </p>
-        <p><a class="btn success" href="<?= $view['router']->generate('Chat');?>" target="_blank">Connect</a></p>
+        <p class="title">Chat Room</p>
+        <p><a class="btn success" href="https://gitter.im/ppi/framework" target="_blank">Connect</a></p>
     </li>
     <li class="box newsletter-box">
         <p class="title">PPI Newsletter</p>
