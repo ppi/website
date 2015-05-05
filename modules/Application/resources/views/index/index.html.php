@@ -108,8 +108,8 @@
                 <p class="desc">Chat with the ppi team on our <a href="https://gitter.im/ppi/framework" target="_blank">chat room</a></p>
             </li>
             <li>
-                <a class="icon" target="_blank" href="http://www.github.com/ppi/skeletonapp" title="" style="margin-top: -3px;"><img src="<?=$view['assets']->getUrl('images/github.png');?>" alt="Icon"></a>
-                <a class="title" target="_blank" href="http://www.github.com/ppi/skeletonapp" title="GitHub">GitHub</a>
+                <a class="icon" target="_blank" href="http://www.github.com/ppi" title="" style="margin-top: -3px;"><img src="<?=$view['assets']->getUrl('images/github.png');?>" alt="Icon"></a>
+                <a class="title" target="_blank" href="http://www.github.com/ppi" title="GitHub">GitHub</a>
                 <p class="desc">The easiest way to contribute to ppi is to fork us on GitHub</p>
             </li>
         </ul>
