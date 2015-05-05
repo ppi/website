@@ -58,7 +58,7 @@
             </li>
             <li>
                 <a class="icon" href="http://ppi.readthedocs.org/en/2.1/book/routing.html" title="">
-                    <img src="http://ppi.readthedocs.org/en/2.1/book/routing.html" alt="Icon">
+                    <img src="<?=$view['assets']->getUrl('images/routing.png');?>" alt="Icon">
                 </a>
                 <a class="title" href="http://ppi.readthedocs.org/en/2.1/book/routing.html" title="">Routing</a>
                 <p class="desc">Simple and powerful routing based on the Symfony2 Routing component</p>
