@@ -24,10 +24,6 @@ Contributors:
     pattern:  /contributors
     defaults: { _controller: "Application:Index:contributors"}
 
-Chat:
-    pattern:  /chat
-    defaults: { _controller: "Application:Index:chat"}
-
 Projects:
     pattern:  /projects
     defaults: { _controller: "Application:Index:projects"}

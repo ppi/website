@@ -101,11 +101,11 @@
 
         <ul class="list">
             <li>
-                <a class="icon" target="_blank" href="<?=$view['router']->generate('Chat');?>" title="">
+                <a class="icon" target="_blank" href="https://gitter.im/ppi/framework" title="Team Chat">
                     <img src="<?=$view['assets']->getUrl('images/chat.png');?>" alt="Icon">
                 </a>
-                <a class="title" target="_blank" href="<?=$view['router']->generate('Chat');?>" title="IRC Chat">IRC</a>
-                <p class="desc">Chat with the ppi community at #ppi on freenode.</p>
+                <a class="title" target="_blank" href="https://gitter.im/ppi/framework" title="Team Chat">Team Chat</a>
+                <p class="desc">Chat with the ppi team on our <a href="https://gitter.im/ppi/framework" target="_blank">chat room</a></p>
             </li>
             <li>
                 <a class="icon" target="_blank" href="http://www.github.com/ppi/skeletonapp" title="" style="margin-top: -3px;"><img src="<?=$view['assets']->getUrl('images/github.png');?>" alt="Icon"></a>
@@ -113,16 +113,6 @@
                 <p class="desc">The easiest way to contribute to ppi is to fork us on GitHub</p>
             </li>
         </ul>
-
-        <div class="newsletter newsletter-box">
-            <p class="title">PPI Newsletter</p>
-
-            <form action="#submit" class="newsletter-form" method="post">
-                <p><label for="newsletterName">Name</label><input name="name" type="text" class="name" id="newsletterName"></p>
-                <p><label for="newsletterEmail">Email</label><input name="email" type="text" class="email" id="newsletterEmail"></p>
-                <input type="submit" class="btn success submit" href="<?= $view['router']->generate('Chat'); ?>" target="_blank" value="Subscribe to the newsletter">
-            </form>
-        </div>
     </div>
 
 </div> <!-- /#home-page -->
