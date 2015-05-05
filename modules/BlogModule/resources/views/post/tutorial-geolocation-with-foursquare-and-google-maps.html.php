@@ -71,7 +71,7 @@
 <script src="https://gist.github.com/4491584.js"></script>
 
 <h4>Building our service</h4>
-<p>We're not going to directly access ApiHandler from our controller class, it's going to be set up as a <a href="<?=$view['router']->generate('DocsIndex', array('page' => 'services'));?>" title="" target="_blank">service</a>. In your <b>./modules/FourSquareModule/Module.php</b> file's <b>getServiceConfig()</b> method add the following code:</p>
+<p>We're not going to directly access ApiHandler from our controller class, it's going to be set up as a <a href="http://ppi.readthedocs.org/en/2.1/book/services.html" title="" target="_blank">service</a>. In your <b>./modules/FourSquareModule/Module.php</b> file's <b>getServiceConfig()</b> method add the following code:</p>
 <script src="https://gist.github.com/4491612.js"></script>
 
 <h4>Connecting the dots</h4>

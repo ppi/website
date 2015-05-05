@@ -21,12 +21,13 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret icon-white"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'getting_started'));?>">Getting Started</a></li>
-                                    <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'application'));?>">The Skeleton Application</a></li>
-                                    <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'modules'));?>">Modules</a></li>
-                                    <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'routing'));?>">Routing</a></li>
-                                    <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'controllers'));?>">Controllers</a></li>
-                                    <li><a href="<?=$view['router']->generate('DocsIndex', array('page' => 'templating'));?>">Templating</a></li>
+                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/getting_started.html">Getting Started</a></li>
+                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/application.html">The Skeleton App</a></li>
+                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/modules.html">Modules</a></li>
+                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/routing.html">Routing</a></li>
+                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/controllers.html">Controllers</a></li>
+                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/templating.html">Templating</a></li>
+                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/services.html">Services</a></li>
                                 </ul>
                             </li>
                         </ul>
