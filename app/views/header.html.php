@@ -18,18 +18,7 @@
                             <li class=""><a href="<?=$view['router']->generate('Blog');?>">Blog</a></li>
                             <li class=""><a href="<?=$view['router']->generate('Community');?>">Community</a></li>
                             <li class=""><a href="<?=$view['router']->generate('Downloads');?>">Downloads</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret icon-white"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="http://docs.ppi.io/latest/book/getting_started.html">Getting Started</a></li>
-                                    <li><a href="http://docs.ppi.io/latest/book/application.html">The Skeleton App</a></li>
-                                    <li><a href="http://docs.ppi.io/latest/book/modules.html">Modules</a></li>
-                                    <li><a href="http://docs.ppi.io/latest/book/routing.html">Routing</a></li>
-                                    <li><a href="http://docs.ppi.io/latest/book/controllers.html">Controllers</a></li>
-                                    <li><a href="http://docs.ppi.io/latest/book/templating.html">Templating</a></li>
-                                    <li><a href="http://docs.ppi.io/latest/book/services.html">Services</a></li>
-                                </ul>
-                            </li>
+                            <li class=""><a href="http://docs.ppi.io/latest/" title="Documentation">Documentation</a></li>
                         </ul>
                     </div>
                     
