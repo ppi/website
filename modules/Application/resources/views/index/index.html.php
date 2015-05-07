@@ -14,7 +14,7 @@
                     <a class="btn btn-green btn-large" href="<?=$view['router']->generate('Downloads');?>">
                         <span class="icon-circle-arrow-down icon-white"></span> Download
                     </a>
-                    <a class="main-button docs-button btn btn-large" href="http://docs.ppi.io/latest/book/getting_started.html">Documentation</a>
+                    <a class="main-button docs-button btn btn-large" href="http://docs.ppi.io/latest/">Documentation</a>
                     <a class="main-button github-button btn btn-large" href="http://www.github.com/ppi">GitHub</a>
                 </div>
             </div>
