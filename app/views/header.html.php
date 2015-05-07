@@ -21,13 +21,13 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret icon-white"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/getting_started.html">Getting Started</a></li>
-                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/application.html">The Skeleton App</a></li>
-                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/modules.html">Modules</a></li>
-                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/routing.html">Routing</a></li>
-                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/controllers.html">Controllers</a></li>
-                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/templating.html">Templating</a></li>
-                                    <li><a href="http://ppi.readthedocs.org/en/2.1/book/services.html">Services</a></li>
+                                    <li><a href="http://docs.ppi.io/latest/book/getting_started.html">Getting Started</a></li>
+                                    <li><a href="http://docs.ppi.io/latest/book/application.html">The Skeleton App</a></li>
+                                    <li><a href="http://docs.ppi.io/latest/book/modules.html">Modules</a></li>
+                                    <li><a href="http://docs.ppi.io/latest/book/routing.html">Routing</a></li>
+                                    <li><a href="http://docs.ppi.io/latest/book/controllers.html">Controllers</a></li>
+                                    <li><a href="http://docs.ppi.io/latest/book/templating.html">Templating</a></li>
+                                    <li><a href="http://docs.ppi.io/latest/book/services.html">Services</a></li>
                                 </ul>
                             </li>
                         </ul>

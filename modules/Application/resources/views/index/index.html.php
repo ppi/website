@@ -14,7 +14,7 @@
                     <a class="btn btn-green btn-large" href="<?=$view['router']->generate('Downloads');?>">
                         <span class="icon-circle-arrow-down icon-white"></span> Download
                     </a>
-                    <a class="main-button docs-button btn btn-large" href="http://ppi.readthedocs.org/en/2.1/book/getting_started.html">Documentation</a>
+                    <a class="main-button docs-button btn btn-large" href="http://docs.ppi.io/latest/book/getting_started.html">Documentation</a>
                     <a class="main-button github-button btn btn-large" href="http://www.github.com/ppi">GitHub</a>
                 </div>
             </div>
@@ -49,36 +49,36 @@
 
         <ul class="list">
             <li>
-                <a class="icon" href="http://ppi.readthedocs.org/en/2.1/book/modules.html" title="">
+                <a class="icon" href="http://docs.ppi.io/latest/book/modules.html" title="">
                     <img src="<?=$view['assets']->getUrl('images/components.png');?>" alt="Icon">
                 </a>
-                <a class="title" href="http://ppi.readthedocs.org/en/2.1/book/modules.html" title="">Modules</a>
+                <a class="title" href="http://docs.ppi.io/latest/book/modules.html" title="">Modules</a>
                 
                 <p class="desc">Light and simple modules, leveraging the ZF2 ModuleManager component.</p>
             </li>
             <li>
-                <a class="icon" href="http://ppi.readthedocs.org/en/2.1/book/routing.html" title="">
+                <a class="icon" href="http://docs.ppi.io/latest/book/routing.html" title="">
                     <img src="<?=$view['assets']->getUrl('images/routing.png');?>" alt="Icon">
                 </a>
-                <a class="title" href="http://ppi.readthedocs.org/en/2.1/book/routing.html" title="">Routing</a>
+                <a class="title" href="http://docs.ppi.io/latest/book/routing.html" title="">Routing</a>
                 <p class="desc">Simple and powerful routing based on the Symfony2 Routing component</p>
             </li>
             <li style="margin-right: 0;">
-                <a class="icon" href="http://ppi.readthedocs.org/en/2.1/book/templating.html" title="">
+                <a class="icon" href="http://docs.ppi.io/latest/book/templating.html" title="">
                     <img src="<?=$view['assets']->getUrl('images/home_templating.png');?>" alt="Icon">
                 </a>
-                <a class="title" href="http://ppi.readthedocs.org/en/2.1/book/templating.html" title="">Templating</a>
+                <a class="title" href="http://docs.ppi.io/latest/book/templating.html" title="">Templating</a>
 
                 <p class="desc">Awesome templating based on the Symfony2 Templating Component. We support PHP, Twig, Smarty and Mustache</p>
             </li>
             <li>
-                <a class="icon" href="http://ppi.readthedocs.org/en/2.1/book/getting_started.html" title=""><img src="<?=$view['assets']->getUrl('images/config.png');?>" alt="Icon"></a>
-                <a class="title" href="http://ppi.readthedocs.org/en/2.1/book/getting_started.html" title="">Databases</a>
+                <a class="icon" href="http://docs.ppi.io/latest/book/getting_started.html" title=""><img src="<?=$view['assets']->getUrl('images/config.png');?>" alt="Icon"></a>
+                <a class="title" href="http://docs.ppi.io/latest/book/getting_started.html" title="">Databases</a>
                 <p class="desc">Our powerful DataSource component bootstraps the best DB libraries such as: DoctrineDBAL, DoctrineMongoDB, ZendDB, LaravelDB, Eloquent, Monga</p>
             </li>
                 <li>
-                <a class="icon" href="http://ppi.readthedocs.org/en/2.1/book/getting_started.html" title=""><img src="<?=$view['assets']->getUrl('images/composer.png');?>" alt="Icon"></a>
-                <a class="title" href="http://ppi.readthedocs.org/en/2.1/book/getting_started.html" title="">Composer Based</a>
+                <a class="icon" href="http://docs.ppi.io/latest/book/getting_started.html" title=""><img src="<?=$view['assets']->getUrl('images/composer.png');?>" alt="Icon"></a>
+                <a class="title" href="http://docs.ppi.io/latest/book/getting_started.html" title="">Composer Based</a>
                 <p class="desc">PPI is fully utilising composer for every dependency!</p>
             </li>
             <li style="margin-right: 0;">
