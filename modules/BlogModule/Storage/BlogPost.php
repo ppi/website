@@ -2,116 +2,52 @@
 
 namespace BlogModule\Storage;
 
-use BlogModule\Storage\Base as BaseStorage;
 use BlogModule\Entity\BlogPost as BlogPostEntity;
     
-class BlogPost extends BaseStorage
+class BlogPost
 {
-    
-    protected $_meta = array(
-        'conn'      => 'main',
-        'primary'   => 'id',
-        'table'     => 'blog_post',
-        'fetchMode' => \PDO::FETCH_ASSOC
-    );
+
+    /**
+     * @var array BlogPostEntity[]
+     */
+    protected $posts;
 
 
     /**
-     * Create the newsletter entry
-     * 
-     * @param string $name
-     * @param string $email
-     * @return integer
+     * @param array $posts
      */
-    public function create($title, $content)
+    public function __construct(array $posts)
     {
-        
-        if(!isset($data['date_created'])) {
-            $data['date_created'] = time();
+        if(!empty($posts)) {
+            $this->setPosts($posts);
         }
+    }
 
-        $data['title'] = $title;
-        $data['content'] = $content;
-        
-        return parent::insert($data);
-            
-    }
-    
     /**
-     * Get all the newsletter entries in the system
-     * 
-     * @return array
-     * @throws \Exception When no rows exist
+     * @param array $posts
      */
-    public function getAllPublished()
+    public function setPosts(array $posts)
     {
-        
-        $rows = $this->_conn->createQueryBuilder()
-            ->select('bp.*')
-            ->from($this->_meta['table'], 'bp')
-            ->andWhere('bp.published = 1')
-            ->orderBy('bp.date_created', 'desc')
-            ->execute()->fetchAll($this->getFetchMode());
-        
-        if($rows === false) {
-            throw new \Exception('No blog entries found');
+        foreach($posts as $post) {
+            $this->posts[$post['id']] = new BlogPostEntity($post);
         }
-        
-        $entities = array();
-        
-        foreach($rows as $row) {
-            $entities[] = new BlogPostEntity($row);
-        }
-        
-        return $entities;
-        
     }
-    
+
     public function getByID($id)
     {
-        $row = $this->_conn->createQueryBuilder()
-            ->select('bp.*')
-            ->from($this->_meta['table'], 'bp')
-            ->andWhere('bp.id = :id')
-            ->setParameter(':id', $id)
-            ->execute()->fetch($this->getFetchMode());
-        
-        if($row === false) {
-            throw new \Exception();
+        if(!isset($this->posts[$id])) {
+            throw new \InvalidArgumentException('Unable to locate blog post id: ' . $id);
         }
-        
-        return new BlogPostEntity($row);
-        
+
+        return $this->posts[$id];
     }
-    
-    public function getRelatedPostsByTag($id, $blogPostTagStorage)
+
+    /**
+     * @return array
+     */
+    public function getAll()
     {
-        
-        $tags = $blogPostTagStorage->getTagsByPostID($id);
-        
-        $related = array();
-        foreach ($tags as $tag) {
-            $posts = $blogPostTagStorage->getPostsByTagID($tag->getTagID());
-            foreach ($posts as $post) {
-                $postID = $post->getID();
-                if ($id == $postID) {
-                    continue;
-                }
-                $related[$post->getID()] = $post;
-            }
-        }
-        
-        return $related;
-    }
-    
-    public function getTagsGroupedByPostID($posts, $blogPostTagStorage)
-    {
-        
-        $map = array();
-        foreach($posts as $post) {
-            $map[$post->getID()] = $blogPostTagStorage->getTagsByPostID($post->getID());
-        }
-        return $map;
+        return $this->posts;
     }
     
 }

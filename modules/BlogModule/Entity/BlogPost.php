@@ -4,38 +4,38 @@ namespace BlogModule\Entity;
 
 class BlogPost {
 	
-	protected $_id;
-	protected $_title;
-	protected $_content;
-	protected $_category_id;
-	protected $_date_created;
-    protected $_slug;
-    protected $_description;
+	protected $id;
+	protected $title;
+	protected $content;
+	protected $category_id;
+	protected $date_created;
+    protected $slug;
+    protected $desc;
     
-    protected $_tags = array();
+    protected $tags = array();
 	
 	public function __construct($row) {
 		foreach($row as $key => $val) {
-			if(property_exists($this, '_' . $key)) {
-				$this->{'_' . $key} = $val;
+			if(property_exists($this, $key)) {
+				$this->{$key} = $val;
 			}
 		}
 	}
 	
 	public function getID() {
-		return $this->_id;
+		return $this->id;
 	}
 	
 	public function getCategoryID() {
-		return $this->_category_id;
+		return $this->category_id;
 	}
 	
 	public function getTitle() {
-		return $this->_title;
+		return $this->title;
 	}
     
     public function getDescription() {
-        return $this->_description;
+        return $this->desc;
     }
     
     public function getTitleForLink() {
@@ -48,7 +48,7 @@ class BlogPost {
 	}
     
     public function getContent() {
-        return $this->_content;
+        return $this->content;
     }
 
 	/**
@@ -58,30 +58,30 @@ class BlogPost {
 	 */
 	public function getCreatedDate() {
 		$dt = new \DateTime();
-		$dt->setTimestamp($this->_date_created);
+		$dt->setTimestamp($this->date_created);
 		return $dt;
 	}
 	
 	public function setTags($tags) {
-		$this->_tags = $tags;
+		$this->tags = $tags;
 	}
 	
 	public function hasTags() {
-		return !empty($this->_tags);
+		return !empty($this->tags);
 	}
 	
 	public function getTags() {
-		return $this->_tags;
+		return $this->tags;
 	}
     
     public function setContent($c)
     {
-        $this->_content = $c;
+        $this->content = $c;
     }
     
     public function getSlug()
     {
-        return $this->_slug;
+        return $this->slug;
     }
     
 }

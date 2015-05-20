@@ -30,7 +30,7 @@ class Module extends BaseModule
      */
     public function getConfig()
     {
-        return $this->loadYamlConfig(__DIR__ . '/resources/config/config.yml');
+        return $this->loadConfig(__DIR__ . '/resources/config/config.yml');
     }
     
     public function getServiceConfig()
@@ -39,6 +39,15 @@ class Module extends BaseModule
             
             'blog.cache' => function($sm) {
                 return new \Doctrine\Common\Cache\ApcCache();
+            },
+            'blog.storage' => function($sm) {
+                $config = $sm->get('config');
+                if(!isset($config['blog']['posts'])) {
+                    throw new \Exception('Missing configuraiton for blog posts');
+                }
+                return new \BlogModule\Storage\BlogPost(
+                    $config['blog']['posts']
+                );
             }
             
         ));
