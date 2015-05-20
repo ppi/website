@@ -61,16 +61,6 @@ class Module extends BaseModule
 
                 return $helper;
             },
-
-            'download.helper' => function($sm)
-            {
-                $config = $sm->get('config');
-                $helper = new \Application\Classes\DownloadsHelper();
-                $helper->setDownloadStorage($sm->get('download.item.storage'));
-                $helper->setDownloadsBasePath(realpath($config['downloads']['base_path']));
-                $helper->setPublicBasePath(realpath($config['downloads']['public_base_path']));
-                return $helper;
-            },
             
             'download.counter' => function($sm) {
                 return new \Application\Classes\DownloadCounter($sm->get('download.entry.storage'));
@@ -81,7 +71,11 @@ class Module extends BaseModule
             },
 
             'download.item.storage' => function($sm) {
-                return new \Application\Storage\DownloadItem($sm->get('datasource'));
+                $config = $sm->get('config');
+                if(!isset($config['downloads']['items'])) {
+                    throw new \Exception('Unable to locate any download items');
+                }
+                return new \Application\Storage\DownloadItem($config['downloads']['items']);
             },
 
             'newsletter.storage' => function($sm) {

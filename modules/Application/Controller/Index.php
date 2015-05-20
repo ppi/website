@@ -46,7 +46,7 @@ class Index extends SharedController
         }
 
         $withVendor      = $this->post('vendor', 'no') === 'yes';
-        $downloadHelper  = $this->getService('download.helper');
+        $downloadHelper  = $this->getService('download.item.storage');
         $downloadCounter = $this->getService('download.counter');
         $file            = $downloadHelper->getDownloadFileByID($fileID);
         $filename        = $downloadHelper->normaliseFileName($file, $withVendor);

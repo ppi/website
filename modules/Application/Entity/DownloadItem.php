@@ -7,10 +7,10 @@ class DownloadItem {
     protected $id;
     protected $name;
     protected $num_downloads;
-    protected $created;
-    protected $description;
     protected $url;
     protected $version;
+    protected $description;
+    protected $date_released;
 
     public function __construct($row) {
         foreach($row as $key => $val) {
@@ -22,11 +22,6 @@ class DownloadItem {
 
     public function getID() {
         return $this->id;
-    }
-
-    public function getVendorFilesizeHuman()
-    {
-        return $this->convertFileSize($this->vendor_filesize);
     }
 
     public function getName()
@@ -44,16 +39,6 @@ class DownloadItem {
         return $this->description;
     }
 
-    public function getNumDownloads()
-    {
-        return $this->num_downloads;
-    }
-
-    public function setNumDownloads($numDownloads)
-    {
-        $this->num_downloads = $numDownloads;
-    }
-
     public function getUrl()
     {
         return $this->url;
@@ -64,13 +49,6 @@ class DownloadItem {
         $this->url = $url;
     }
 
-    protected function convertFileSize($size)
-    {
-        $units = array('B', 'KB', 'MB', 'GB', 'TB');
-        for ($i = 0; $size > 1024; $i++) { $size /= 1024; }
-        return round($size, 2).$units[$i];
-    }
-
     public function getVersion()
     {
         return $this->version;
@@ -79,6 +57,14 @@ class DownloadItem {
     public function setVersion($version)
     {
         $this->version = $version;
+    }
+
+    public function getDateReleased()
+    {
+        if($this->date_released !== null && !($this->date_released instanceof \DateTime)) {
+            $this->date_released = \DateTime::createFromFormat('Y-m-d', $this->date_released);
+        }
+        return $this->date_released;
     }
 
 }

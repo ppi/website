@@ -34,6 +34,7 @@
                     <div class="download-item clearfix">
                         <div class="download-description span4">
                             <h3><?= $view->escape($downloadItem->getName()); ?></h3>
+                            <p>Released: <?= $view->escape($downloadItem->getDateReleased()->format('jS F Y')); ?></p>
                             <p><?= $view->escape($downloadItem->getDesc()); ?></p>
                             <p>
                                 <a
