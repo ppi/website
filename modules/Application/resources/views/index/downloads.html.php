@@ -39,7 +39,7 @@
                             <p>
                                 <a
                                     class="link-arrow"
-                                    href="/docs/<?= $downloadItem->getVersion(); ?>/getting_started.html">
+                                    href="http://docs.ppi.io/latest/setup/install.html">
                                     Read the full installation instructions</a>
                             </p>
                         </div>
