@@ -1,19 +1,19 @@
 Blog:
     pattern:  /blog/
     defaults: { _controller: "BlogModule:Blog:index"}
-    
+
 BlogGetRelatedPosts:
     pattern:  /blog/get_related_posts/{postID}
     defaults: { _controller: "BlogModule:Blog:getRelatedPosts"}
-    
+
 BlogView:
     pattern:  /blog/{postID}/{title}
     defaults: { _controller: "BlogModule:Blog:view"}
-    
+
 BlogTagView:
     pattern:  /blog/tag/{tagID}/{title}
     defaults: { _controller: "BlogModule:Blog:tagview"}
-    
+
 BlogGetPopular:
     pattern:  /blog/get_popular_tags
     defaults: { _controller: "BlogModule:Blog:getPopularTags"}
@@ -21,7 +21,7 @@ BlogGetPopular:
 BlogGetRecentComments:
     pattern:  /blog/get_recent_comments
     defaults: { _controller: "BlogModule:Blog:getRecentComments"}
-    
+
 BlogGetRSS:
     pattern:  /blog/get_rss
     defaults: { _controller: "BlogModule:Blog:getRSS"}
