@@ -5,8 +5,7 @@ $config['modules'] = array(
     'active_modules' => array(
         'Framework',
         'Application',
-        'UserModule',
-        'BlogModule',
+        'BlogModule'
     ),
     'module_listener_options' => array(
         'cache_dir'                => '%app.cache_dir%',
