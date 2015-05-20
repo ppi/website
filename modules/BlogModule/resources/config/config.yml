@@ -5,15 +5,18 @@ blog:
       title: "An interview with 7php"
       slug: "the-official-interview"
       desc: "Take a look at our exclusive interview with 7php.com which takes a thorough look of the history of PPI, what it is today and why PPI is beneficial for you."
+      date_created: "1361153377"
 
     -
       id: 3
       title: "New Sphinx Powered Documentation System"
       slug: "new-sphinx-powered-documentation-system"
+      date_created: "1359857614"
       desc: "We have been working really hard on porting our documentation system to a new maintainable, decoupled and multi-version documentation system. It rocks!"
 
     -
       id: 1
       title: "Tutorial: GeoLocation with FourSquare and Google Maps"
       slug: "tutorial-geolocation-with-foursquare-and-google-maps"
+      date_created: "1359001062"
       desc: "In this article, we're going to learn how to work with the framework as a whole by writing a real-world application: making a module, controller, routes, templates (views) and services. In order to achieve this we are will use the Foursquare API, and APC"
