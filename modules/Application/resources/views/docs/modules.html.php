@@ -64,7 +64,7 @@ modules/
 &lt;?php
 namespace Application;
 
-use PPI\Module\Module as BaseModule
+use PPI\Framework\Module\Module as BaseModule
 use PPI\Autoload;
 
 class Module extends BaseModule {

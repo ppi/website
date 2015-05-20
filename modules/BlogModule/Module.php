@@ -1,8 +1,8 @@
 <?php
 namespace BlogModule;
 
-use PPI\Module\Module as BaseModule;
-use PPI\Autoload;
+use PPI\Framework\Module\Module as BaseModule;
+use PPI\Framework\Autoload;
 
 class Module extends BaseModule
 {

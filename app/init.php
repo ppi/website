@@ -13,7 +13,7 @@ if (!file_exists($composerPath)) {
 $composer = require $composerPath;
 
 // Adding PPI autoloader so modules may add themself to the autoload process on-the-fly
-PPI\Autoload::config(array(
+PPI\Framework\Autoload::config(array(
     'loader'    => $composer
 ));
-PPI\Autoload::register();
+PPI\Framework\Autoload::register();
