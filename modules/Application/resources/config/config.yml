@@ -22,10 +22,10 @@ downloads:
     items:
         -
             id: 1
-            name: "PPI Skeleton App - Version 2.1-alpha2"
-            url: "https://github.com/ppi/skeletonapp/archive/2.1.0-alpha2.zip"
+            name: "PPI Skeleton App - Version 2.1.0-Alpha3"
+            url: "https://github.com/ppi/skeletonapp/archive/2.1.0-alpha3.tar.gz"
             version: "2.1"
-            date_released: "2015-02-01"
+            date_released: "2015-07-20"
 
 oauth:
     consumer_key: 8ruiMaLE0DqdPcf06ERnA
