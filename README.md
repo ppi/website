@@ -1,7 +1,7 @@
 README
 ======
 
-This is the repository for the www.ppi.io website
+Code behing the `www.ppi.io` website using PPI framework.
 
 Installation
 ------------
