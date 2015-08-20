@@ -1,7 +1,7 @@
 README
 ======
 
-Code behing the `www.ppi.io` website using PPI framework.
+Code behind the `www.ppi.io` website using PPI framework.
 
 Installation
 ------------
