@@ -21,9 +21,8 @@
   ],
   "require": {
     "swiftmailer/swiftmailer": ">=4.2.0,<4.3-dev",
-    "ppi/framework": "dev-master",
-    "themattharris/tmhoauth": "dev-master",
-    "ppi/datasource-module": "dev-master"
+    "ppi/framework": "2.1.0-alpha2",
+    "themattharris/tmhoauth": "dev-master"
   },
   "minimum-stability": "dev",
   "prefer-stable": true
