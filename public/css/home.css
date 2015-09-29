@@ -1,88 +1,90 @@
 #wrapper {
 }
 
-#page-content .top .intro .buttons i {
+#page-content .buttons-container i {
     margin-top: 3px;
 }
 
-#page-content .top .intro .buttons .main-button {
+#page-content .buttons-container .main-button {
     margin-right: 12px;
 }
 
-#page-content .top .intro .buttons a {
-    font-size:   1.2em;
+#page-content .buttons-container {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+#page-content .buttons-container a {
+    font-size: 1.2em;
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
+    width: 25%;
 }
 
-#page-content .top .intro .docs-button {
-    position: absolute;
-    right:    100px;
-    bottom:   0;
+#page-content .buttons-container .docs-button {
 }
 
-#page-content .top .intro .github-button {
-    position: absolute;
-    right:    0;
-    bottom:   0;
-}
-
-#page-content .top .intro .btn-group {
-    position: absolute;
-    bottom:   0;
-    left:     0;
+#page-content .buttons-container .github-button img {
+    width: 20px;
+    height: 20px;
 }
 
 #page-content .top .intro .desc {
     line-height: 22px;
-    color:       #000;
-    font-size:   1.2em;
-    text-align:  left;
+    color: #000;
+    font-size: 1.2em;
+    text-align: left;
     padding: 12px;
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
 }
 
 #page-content .top .intro .heading-text {
-    padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
 }
+
 #page-content .top .intro .heading {
     background-color: #406C6C;
-    padding:     15px 12px 15px 12px;
-    font-size:   1.9em;
+    padding: 15px 12px 15px 12px;
+    font-size: 1.9em;
     font-weight: normal;
-    color:       white;
-    text-align:  left;
+    color: white;
+    text-align: left;
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
     position: relative;
 }
 
 #page-content .top .intro {
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
-    border:        1px solid #E5E5E5;
-    border-top:    none;
-    background:    #ffffff; /* Old browsers */
+    border: 1px solid #E5E5E5;
+    border-top: none;
+    background: #ffffff; /* Old browsers */
 }
 
 #page-content .top .get-ppi-now .icon {
-    display:     block;
-    height:      30px;
-    width:       105px;
-    font-size:   1.5em;
+    display: block;
+    height: 30px;
+    width: 105px;
+    font-size: 1.5em;
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
     padding-top: 15px;
-    position:    absolute;
-    left:        63px;
-    top:         28px;
+    position: absolute;
+    left: 63px;
+    top: 28px;
 }
 
 #page-content .top .get-ppi-now .list a {
-    color:       #4C7F7F;
-    font-size:   1.3em;
+    color: #4C7F7F;
+    font-size: 1.3em;
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
 }
 
 #page-content .top .get-ppi-now .list li:first-child {
     margin-bottom: 5px;
-    margin-right:  12px;
+    margin-right: 12px;
 }
 
 #page-content .top .get-ppi-now .list li {
@@ -91,9 +93,9 @@
 
 #page-content .top .get-ppi-now .list {
     list-style-type: none;
-    left:            55px;
-    top:             120px;
-    position:        absolute;
+    left: 55px;
+    top: 120px;
+    position: absolute;
 }
 
 #page-content .top .get-ppi-now .other a:first-child {
@@ -106,21 +108,21 @@
 
 #page-content .top .get-ppi-now .other {
     position: absolute;
-    bottom:   32px;
-    left:     137px;
+    bottom: 32px;
+    left: 137px;
 }
 
 #page-content .top .get-ppi-now-inner {
     position: relative;
-    height:   194px;
+    height: 194px;
 }
 
 #page-content .top .get-ppi-now {
-    width:    385px;
-    height:   214px;
+    width: 385px;
+    height: 214px;
     position: absolute;
-    right:    12px;
-    top:      20px;
+    right: 12px;
+    top: 20px;
 }
 
 #page-content .news-area {
@@ -156,6 +158,7 @@
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
     font-size: 1.1em;
 }
+
 #page-content .news-area .posts-list li {
     padding-bottom: 8px;
     padding-top: 8px;
@@ -168,32 +171,32 @@
 }
 
 #page-content .middle .list li .desc {
-	color:     #000;
+    color: #000;
     font-size: 1.05em;
-    width:     220px;
+    width: 220px;
 }
 
 #page-content .middle .list li .icon {
-    float:       left;
+    float: left;
     margin-left: -61px;
 }
 
 #page-content .middle .list li .title {
-    color:         #000;
-    font-size:     1.4em;
+    color: #000;
+    font-size: 1.4em;
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
-    margin-top:    5px;
+    margin-top: 5px;
     margin-bottom: 5px;
-    display:       block;
+    display: block;
 }
 
 #page-content .middle .list li {
-    float:         left;
-    width:         245px;
-    height:        85px;
-    margin-right:  5px;
+    float: left;
+    width: 245px;
+    height: 85px;
+    margin-right: 5px;
     margin-bottom: 30px;
-    padding:       12px 0px 12px 67px;
+    padding: 12px 0px 12px 67px;
 }
 
 #page-content .middle .list .no-bottom {
@@ -202,86 +205,86 @@
 
 #page-content .middle .list {
     list-style-type: none;
-    margin-left:     0;
+    margin-left: 0;
 }
 
 #page-content .middle .download-count {
-    position:    absolute;
-    text-align:  right;
-    top:         27px;
-    right:       32px;
-    width:       300px;
+    position: absolute;
+    text-align: right;
+    top: 27px;
+    right: 32px;
+    width: 300px;
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
-    font-size:   1.8em;
-    color:       #4C7F7F;
+    font-size: 1.8em;
+    color: #4C7F7F;
 }
 
 #page-content .middle {
-    margin-top:       12px;
-    width:            963px;
+    margin-top: 12px;
+    width: 963px;
     background-color: #fff;
-    border:           1px solid #e5e5e5;
-    position:         relative;
-    height:           380px;
+    border: 1px solid #e5e5e5;
+    position: relative;
+    height: 380px;
 }
 
 #page-content .bottom .fork {
     position: absolute;
-    left:     0;
-    top:      0;
-    display:  block;
-    width:    104px;
-    height:   104px;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 104px;
+    height: 104px;
 }
 
 #page-content .bottom .list li .icon {
-    display:     block;
-    float:       left;
+    display: block;
+    float: left;
     margin-left: -50px;
-    margin-top:  -5px;
+    margin-top: -5px;
 }
 
 #page-content .bottom .list li .title {
-    color:       #FFFFFF;
+    color: #FFFFFF;
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
-    font-size:   1.3em;
+    font-size: 1.3em;
 }
 
 #page-content .bottom .list li .desc {
-    color:       #FFFFFF;
+    color: #FFFFFF;
     line-height: 18px;
-    font-size:   0.9em;
+    font-size: 0.9em;
 }
 
 #page-content .bottom .list li {
-    width:        175px;
-    float:        left;
+    width: 175px;
+    float: left;
     margin-right: 5px;
-    padding:      12px 0px 12px 70px;
+    padding: 12px 0px 12px 70px;
 }
 
 #page-content .bottom .list {
-    position:        absolute;
+    position: absolute;
     list-style-type: none;
-    margin-left:     0;
-    left:            86px;
-    top:             60px;
+    margin-left: 0;
+    left: 86px;
+    top: 60px;
 }
 
 #page-content .bottom .newsletter {
     position: absolute;
-    top:      30px;
-    left:     720px;
+    top: 30px;
+    left: 720px;
 }
 
 #page-content .bottom .newsletter .title {
-    color:     #fff;
+    color: #fff;
     font-size: 1.3em;
 }
 
 #page-content .newsletter-box input[type="text"] {
-    width:       158px;
-    height:      22px;
+    width: 158px;
+    height: 22px;
     margin-left: 5px;
 }
 
@@ -290,34 +293,34 @@
 }
 
 #page-content .newsletter-box label {
-    float:      left;
+    float: left;
     margin-top: 5px;
-    color:      #fff;
-    width:      40px;
+    color: #fff;
+    width: 40px;
 }
 
 #page-content .bottom .header {
-    font-size:   2.3em;
-    top:         20px;
+    font-size: 2.3em;
+    top: 20px;
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
-    color:       #FFFFFF;
-    left:        110px;
-    position:    absolute;
+    color: #FFFFFF;
+    left: 110px;
+    position: absolute;
 }
 
 #page-content .bottom {
-    width:            965px;
-    height:           220px;
-    position:         relative;
+    width: 965px;
+    height: 220px;
+    position: relative;
     background-color: #406C6C;
-    filter:           progid:DXImageTransform.Microsoft.gradient(startColorstr = '#406C6C', endColorstr = '#305050'); /* for IE */
-    background:       -webkit-gradient(linear, left top, left bottom, from(#406C6C), to(#305050)); /* for webkit browsers */
-    background:       -moz-linear-gradient(top, #406C6C, #305050); /* for firefox 3.6+ */
-    border-bottom:    1px solid #202020;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#406C6C', endColorstr='#305050'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#406C6C), to(#305050)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #406C6C, #305050); /* for firefox 3.6+ */
+    border-bottom: 1px solid #202020;
 }
 
 #home-page {
-    width:  967px;
+    width: 967px;
     margin: 0 auto 25px auto;
 }
 
@@ -326,18 +329,37 @@
 }
 
 @-webkit-keyframes who-opac {
-    0%   { opacity:0.4; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 @-moz-keyframes who-opac {
-    0%   { opacity:0.4; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 @-ms-keyframes who-opac {
-    0%   { opacity:0.4; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 @-o-keyframes who-opac {
-    0%   { opacity:0.4; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
 }

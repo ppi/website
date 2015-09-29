@@ -26,16 +26,18 @@
             </div>
         </div>
 
-        <div class="buttons-container" style=" background-color: #fff;
-    border: 1px solid #e5e5e5; padding: 12px; margin-top: 12px;">
+        <div class="buttons-container">
 
 
             <div class="buttons">
-                <a class="btn btn-green btn-large" href="<?= $view['router']->generate('Downloads'); ?>">
-                    <span class="icon-circle-arrow-down icon-white"></span> Download
+                <a class="main-button btn btn-large" href="<?= $view['router']->generate('Downloads'); ?>">
+                    <span class="icon-circle-arrow-down"></span> Download
                 </a>
-                <a class="main-button docs-button btn btn-large" href="http://docs.ppi.io/latest/">Documentation</a>
-                <a class="main-button github-button btn btn-large" href="http://www.github.com/ppi">GitHub</a>
+                <a class="main-button docs-button btn btn-large" href="http://docs.ppi.io/latest/" style="margin-right: 0">Documentation</a>
+                <a class="main-button github-button btn btn-large" href="http://www.github.com/ppi">
+                    <img src="<?= $view['assets']->getUrl('images/github.png'); ?>" alt="github" /> GitHub
+
+                </a>
             </div>
 
         </div>
