@@ -5,9 +5,6 @@
     margin-top: 3px;
 }
 
-#page-content .buttons-container .main-button {
-    margin-right: 12px;
-}
 
 #page-content .buttons-container {
     margin: 0 auto;
@@ -192,7 +189,7 @@
 
 #page-content .middle .list li {
     float: left;
-    width: 245px;
+    width: 25%;
     height: 85px;
     margin-right: 5px;
     margin-bottom: 30px;
@@ -221,7 +218,6 @@
 
 #page-content .middle {
     margin-top: 12px;
-    width: 963px;
     background-color: #fff;
     border: 1px solid #e5e5e5;
     position: relative;
@@ -320,7 +316,6 @@
 }
 
 #home-page {
-    width: 967px;
     margin: 0 auto 25px auto;
 }
 

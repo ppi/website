@@ -28,12 +28,11 @@
 
         <div class="buttons-container">
 
-
             <div class="buttons">
                 <a class="main-button btn btn-large" href="<?= $view['router']->generate('Downloads'); ?>">
                     <span class="icon-circle-arrow-down"></span> Download
                 </a>
-                <a class="main-button docs-button btn btn-large" href="http://docs.ppi.io/latest/" style="margin-right: 0">Documentation</a>
+                <a class="main-button docs-button btn btn-large" href="http://docs.ppi.io/latest/">Documentation</a>
                 <a class="main-button github-button btn btn-large" href="http://www.github.com/ppi">
                     <img src="<?= $view['assets']->getUrl('images/github.png'); ?>" alt="github" /> GitHub
 
@@ -47,7 +46,7 @@
 
     <div class="middle clearfix">
 
-        <ul class="list">
+        <ul class="list clearfix">
             <li>
                 <a class="icon" href="http://docs.ppi.io/latest/book/modules.html" title="">
                     <img src="<?= $view['assets']->getUrl('images/components.png'); ?>" alt="Icon">
