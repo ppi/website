@@ -1,127 +1,153 @@
 <?php $view->extend('::base.html.php'); ?>
 
 <div id="home-page">
-    
+
     <div class="top-container clearfix">
-    
+
         <div class="top">
             <div class="intro">
-                <p class="heading">ppi: the php interoperability framework!</p>
-                <p class="desc">PPI is the PHP Interoperability Framework. It provides an equal and open platform to empower PHP developers to pick the best tools from the best PHP frameworks</p>
-                <p class="desc">PPI bootstraps framework components for you from the top frameworks such as ZendFramework2, Symfony2, Laravel4, FuelPHP, Doctrine2<p>
-    
-                <div class="buttons">
-                    <a class="btn btn-green btn-large" href="<?=$view['router']->generate('Downloads');?>">
-                        <span class="icon-circle-arrow-down icon-white"></span> Download
-                    </a>
-                    <a class="main-button docs-button btn btn-large" href="http://docs.ppi.io/latest/">Documentation</a>
-                    <a class="main-button github-button btn btn-large" href="http://www.github.com/ppi">GitHub</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="news-area">
-            <div class="heading">
-                <span>What's new</span>
-            
-                <div class="social-icons">
-                    <a href="http://twitter.com/ppi_framework" tutorial-geolocation-with-foursquare-and-google-mapst="_blank"><img src="<?= $view['assets']->getUrl('images/twitter2.png');?>" alt="Twitter" width="38" /></a>
-                    <a href="https://plus.google.com/communities/100606932222119087997" target="_blank"><img src="<?= $view['assets']->getUrl('images/googleplus.png');?>" width="38" /></a>
-<!--                    <a href="--><?//=$view['router']->generate('BlogGetRSS');?><!--"><img src="--><?//= $view['assets']->getUrl('images/rss.png');?><!--" width="38" /></a>-->
-                </div>
-            
-            </div>
-            
-            <ul>
-                <li><a href="<?=$view['router']->generate('BlogView', array('postID' => '4', 'title' => 'the-official-interview'));?>" title="">The Official PPI Interview</a></li>
-                <li><a href="<?=$view['router']->generate('BlogView', array('postID' => '3', 'title' => 'new-sphinx-powered-documentation-system'));?>" title="">New Sphinx Powered Documentation System</a></li>
-                <li><a href="<?=$view['router']->generate('BlogView', array('postID' => '1', 'title' => 'tutorial-geolocation-with-foursquare-and-google-maps'));?>" title="">Tutorial: GeoLocation with Foursquare and Google Maps</a></li>
-                <li><a href="<?=$view['router']->generate('Blog');?>" title="New Blog Launched">New Blog Launched</a></li>
-                <li><a href="https://plus.google.com/communities/100606932222119087997" title="Google plus community launched">Google plus community launched</a></li>
-                
-            </ul>
-        </div>
-    </div>
-        
-    <div class="middle">
+                <div class="heading">
+                    <p class="heading-text">PPI: The PHP Framework Engine</p>
 
-        <p class="heading">What is ppi made of?</p>
+                    <div class="social-icons">
+                        <a href="http://twitter.com/ppi_framework"
+                           tutorial-geolocation-with-foursquare-and-google-mapst="_blank"><img
+                                src="<?= $view['assets']->getUrl('images/twitter2.png'); ?>" alt="Twitter" width="38"/></a>
+                        <a href="https://plus.google.com/communities/100606932222119087997" target="_blank"><img
+                                src="<?= $view['assets']->getUrl('images/googleplus.png'); ?>" width="38"/></a>
+                    </div>
+                </div>
+
+                <p class="desc">PPI is a framework delivery engine. It's a simple skeleton layer that, using the concept
+                    of microservices, to let you choose which parts of frameworks you wish to use on a per-feature (per
+                    module basis). Each feature makes its own independent decisions, allowing you to pick the best tools
+                    from the best PHP frameworks</p>
+
+            </div>
+        </div>
+
+        <div class="buttons-container" style=" background-color: #fff;
+    border: 1px solid #e5e5e5; padding: 12px; margin-top: 12px;">
+
+
+            <div class="buttons">
+                <a class="btn btn-green btn-large" href="<?= $view['router']->generate('Downloads'); ?>">
+                    <span class="icon-circle-arrow-down icon-white"></span> Download
+                </a>
+                <a class="main-button docs-button btn btn-large" href="http://docs.ppi.io/latest/">Documentation</a>
+                <a class="main-button github-button btn btn-large" href="http://www.github.com/ppi">GitHub</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="middle clearfix">
 
         <ul class="list">
             <li>
                 <a class="icon" href="http://docs.ppi.io/latest/book/modules.html" title="">
-                    <img src="<?=$view['assets']->getUrl('images/components.png');?>" alt="Icon">
+                    <img src="<?= $view['assets']->getUrl('images/components.png'); ?>" alt="Icon">
                 </a>
                 <a class="title" href="http://docs.ppi.io/latest/book/modules.html" title="">Modules</a>
-                
-                <p class="desc">Light and simple modules, leveraging the ZF2 ModuleManager component.</p>
+
+                <p class="desc">Light and simple modules, extending from Zend Framework's Module system.</p>
             </li>
             <li>
                 <a class="icon" href="http://docs.ppi.io/latest/book/routing.html" title="">
-                    <img src="<?=$view['assets']->getUrl('images/routing.png');?>" alt="Icon">
+                    <img src="<?= $view['assets']->getUrl('images/routing.png'); ?>" alt="Icon">
                 </a>
                 <a class="title" href="http://docs.ppi.io/latest/book/routing.html" title="">Routing</a>
-                <p class="desc">Simple and powerful routing based on the Symfony2 Routing component</p>
+
+                <p class="desc">Each feature can pick from a variety of supported routers.</p>
             </li>
             <li style="margin-right: 0;">
                 <a class="icon" href="http://docs.ppi.io/latest/book/templating.html" title="">
-                    <img src="<?=$view['assets']->getUrl('images/home_templating.png');?>" alt="Icon">
+                    <img src="<?= $view['assets']->getUrl('images/home_templating.png'); ?>" alt="Icon">
                 </a>
                 <a class="title" href="http://docs.ppi.io/latest/book/templating.html" title="">Templating</a>
 
-                <p class="desc">Awesome templating based on the Symfony2 Templating Component. We support PHP, Twig, Smarty and Mustache</p>
+                <p class="desc">Each feature can pick from a variety of supported templating engines</p>
             </li>
             <li>
-                <a class="icon" href="http://docs.ppi.io/latest/book/getting_started.html" title=""><img src="<?=$view['assets']->getUrl('images/config.png');?>" alt="Icon"></a>
+                <a class="icon" href="http://docs.ppi.io/latest/book/getting_started.html" title=""><img
+                        src="<?= $view['assets']->getUrl('images/config.png'); ?>" alt="Icon"></a>
                 <a class="title" href="http://docs.ppi.io/latest/book/getting_started.html" title="">Databases</a>
-                <p class="desc">Our powerful DataSource component bootstraps the best DB libraries such as: DoctrineDBAL, DoctrineMongoDB, ZendDB, LaravelDB, Eloquent, Monga</p>
+
+                <p class="desc">Our powerful datasource component easily loads up popular DB libraries.</p>
             </li>
-                <li>
-                <a class="icon" href="http://docs.ppi.io/latest/book/getting_started.html" title=""><img src="<?=$view['assets']->getUrl('images/composer.png');?>" alt="Icon"></a>
-                <a class="title" href="http://docs.ppi.io/latest/book/getting_started.html" title="">Composer Based</a>
-                <p class="desc">PPI is fully utilising composer for every dependency!</p>
+            <li>
+                <a class="icon" href="http://docs.ppi.io/latest/book/getting_started.html" title=""><img
+                        src="<?= $view['assets']->getUrl('images/composer.png'); ?>" alt="Icon"></a>
+                <a class="title" href="http://docs.ppi.io/latest/book/getting_started.html" title="">Component based</a>
+
+                <p class="desc">Everything is component based, so you don't get everything by default, but gradaully
+                    slot in what you need</p>
             </li>
             <li style="margin-right: 0;">
-                <a class="icon" href="<?=$view['router']->generate('Community');?>" title="">
-                    <img src="<?=$view['assets']->getUrl('images/community2.png');?>" alt="Icon">
+                <a class="icon" href="<?= $view['router']->generate('Community'); ?>" title="">
+                    <img src="<?= $view['assets']->getUrl('images/github.png'); ?>" alt="Icon">
                 </a>
-                <a class="title" href="<?=$view['router']->generate('Community');?>" title="">Our community rocks</a>
-                <p class="desc">Join our community pages on <a href="/gplus">Google</a>, <a href="/facebook">Facebook</a> or follow us on <a href="/twitter">Twitter</a>.</p>
+                <a class="title" href="<?= $view['router']->generate('Community'); ?>" title="">Found issues?</a>
+
+                <p class="desc">Let us know on <a href="https://gitter.im/ppi/framework" target="_blank">GitHub</a></p>
+            </li>
+
+            <li class="no-bottom">
+                <a class="icon" href="<?= $view['router']->generate('Community'); ?>" title="">
+                    <img src="<?= $view['assets']->getUrl('images/chat.png'); ?>" alt="Icon">
+                </a>
+                <a class="title" href="<?= $view['router']->generate('Community'); ?>" title="">Get in touch</a>
+
+                <p class="desc">We chat on <a href="https://gitter.im/ppi/framework" target="_blank">Gitter</a></p>
+            </li>
+
+            <li class="no-bottom">
+                <a class="icon" href="<?= $view['router']->generate('Community'); ?>" title="">
+                    <img src="<?= $view['assets']->getUrl('images/community2.png'); ?>" alt="Icon">
+                </a>
+                <a class="title" href="<?= $view['router']->generate('Community'); ?>" title="">The community</a>
+
+                <p class="desc">and have <a href="/gplus">GooglePlus</a>, <a href="/facebook">Facebook</a> groups, or
+                    follow us on <a href="/twitter">Twitter</a>.</p>
+
             </li>
 
         </ul>
     </div>
-    
-    <div class="bottom">
-        <a class="fork" href="http://www.github.com/ppi/website" title="Fork me on github">
-            <img src="<?=$view['assets']->getUrl('images/fork-me.png');?>" alt="Fork me on github">
-        </a>
 
-        <p class="header">Community</p>
 
-        <ul class="list">
+    <div class="news-area">
+        <div class="heading">
+            <span>Blog posts</span>
+        </div>
+        <ul class="posts-list">
             <li>
-                <a class="icon" target="_blank" href="https://gitter.im/ppi/framework" title="Team Chat">
-                    <img src="<?=$view['assets']->getUrl('images/chat.png');?>" alt="Icon">
-                </a>
-                <a class="title" target="_blank" href="https://gitter.im/ppi/framework" title="Team Chat">Team Chat</a>
-                <p class="desc">Chat with the ppi team on our <a href="https://gitter.im/ppi/framework" target="_blank">chat room</a></p>
-            </li>
+                <a href="<?= $view['router']->generate('BlogView', array('postID' => '4', 'title' => 'the-official-interview')); ?>"
+                   title="">The Official PPI Interview</a></li>
             <li>
-                <a class="icon" target="_blank" href="http://www.github.com/ppi" title="" style="margin-top: -3px;"><img src="<?=$view['assets']->getUrl('images/github.png');?>" alt="Icon"></a>
-                <a class="title" target="_blank" href="http://www.github.com/ppi" title="GitHub">GitHub</a>
-                <p class="desc">The easiest way to contribute to ppi is to fork us on GitHub</p>
+                <a href="<?= $view['router']->generate('BlogView', array('postID' => '3', 'title' => 'new-sphinx-powered-documentation-system')); ?>"
+                   title="">New Sphinx Powered Documentation System</a></li>
+            <li>
+                <a href="<?= $view['router']->generate('BlogView', array('postID' => '1', 'title' => 'tutorial-geolocation-with-foursquare-and-google-maps')); ?>"
+                   title="">Tutorial: GeoLocation with Foursquare and Google Maps</a></li>
+            <li><a href="<?= $view['router']->generate('Blog'); ?>" title="New Blog Launched">New Blog Launched</a>
             </li>
+            <li><a href="https://plus.google.com/communities/100606932222119087997"
+                   title="Google plus community launched">Google plus community launched</a></li>
+
         </ul>
     </div>
 
-</div> <!-- /#home-page -->
+
+</div>
 
 
 <?php $view['slots']->start('include_css'); ?>
-<link href="<?=$view['assets']->getUrl('css/home.css');?>" rel="stylesheet">
+<link href="<?= $view['assets']->getUrl('css/home.css'); ?>" rel="stylesheet">
 <?php $view['slots']->stop(); ?>
 
 <?php $view['slots']->start('include_js_body'); ?>
-<script type="text/javascript" src="<?=$view['assets']->getUrl('js/home.js');?>"></script>
+<script type="text/javascript" src="<?= $view['assets']->getUrl('js/home.js'); ?>"></script>
 <?php $view['slots']->stop(); ?>
