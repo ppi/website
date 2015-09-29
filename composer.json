@@ -21,7 +21,7 @@
   ],
   "require": {
     "swiftmailer/swiftmailer": ">=4.2.0,<4.3-dev",
-    "ppi/framework": "2.1.0-alpha2",
+    "ppi/framework": "2.1.0-alpha3",
     "themattharris/tmhoauth": "dev-master"
   },
   "minimum-stability": "dev",
