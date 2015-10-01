@@ -7,9 +7,14 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
     <!--  Mobile viewport optimized: j.mp/bplateviewport -->
    	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   	<!-- Mobile Specifics -->
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="320"/>
+
+    <!-- Mobile Internet Explorer ClearType Technology -->
+    <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
 
    	<meta name="description" content="ppi is an open source php meta-framework. we have taken the good bits from Symfony2, ZendFramework2 & Doctrine2 and combined them together to create a solid and very easy web application framework. ppi is fully PSR compliant. ppi can be considered the boilerplate of PHP frameworks">
     <meta name="keywords" content="ppi is an open source php meta-framework. we have taken the good bits from Symfony2, ZendFramework2 & Doctrine2 and combined them together to create a solid and very easy web application framework. ppi is fully PSR compliant. ppi can be considered the boilerplate of PHP frameworks">
@@ -31,6 +36,7 @@
     <link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
     <link href="<?=$view['assets']->getUrl('css/libs/bootstrap.min.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/main.css');?>" rel="stylesheet">
+    <link href="<?=$view['assets']->getUrl('css/mobile.css');?>" rel="stylesheet">
     <?php $view['slots']->output('include_css'); ?>
     <!-- /CSS Stuff -->
     
