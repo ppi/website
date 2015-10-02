@@ -286,18 +286,3 @@ ul.dropdown-menu .active > a:hover {
 	background-color: #51A351;
 	background-image: none;
 }
-
-/* Disable iOS/WinMobile font size changes */
-@media screen and (max-width: 600px), screen and (max-device-width: 480px) {
-    html {
-        -ms-text-size-adjust:     none;
-        -webkit-text-size-adjust: none;
-    }
-}
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-    .container, #header, #header .navbar-inner .container {width: 100%; }
-}
