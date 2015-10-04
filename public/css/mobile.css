@@ -8,9 +8,17 @@ and (max-device-width : 480px) {
         width: 90%!important;
     }
 
+    #header a {
+        padding-top: 0!important;
+    }
+
     #header .navbar-inner .container {
         margin-left: 0!important;
         width: 100%!important;
+    }
+
+    #header ul.nav {
+        padding-top: 15px!important;
     }
 
     .navbar .btn-navbar {
@@ -19,6 +27,11 @@ and (max-device-width : 480px) {
     }
     .logoFix {
         display: inline!important;
+        float: left;
+    }
+
+    #page-content .heading .social-icons {
+        display: none!important;
     }
 
     .nav-collapse {
@@ -63,12 +76,15 @@ and (max-device-width : 480px) {
     .carousel-caption {
         position: static;
     }
-    #header {
-        width: 100%;
-    }
+
     #home-page {
         width: 98%!important;
     }
+
+    #page-content .buttons-container a {
+        width: 40%!important;
+    }
+
     #page-content .top {
         width: 100%!important;
         height: 100%!important;
@@ -119,11 +135,17 @@ and (max-device-width : 480px) {
         display: none!important;
     }
     #page-content .middle {
-        min-height: 900px;
+        min-height: 1100px;
     }
     #page-content .top .intro .buttons .main-button{
         margin-right: 0!important;
     }
+
+    #page-content .middle .list li {
+        float: none!important;
+        padding-left: 25%!important;
+    }
+
     /* About */
     .community-page {
         width: 100%!important;
@@ -153,13 +175,22 @@ and (max-device-width : 480px) {
         -ms-text-size-adjust:     none;
         -webkit-text-size-adjust: none;
     }
+
     #header {
         width: 90%!important;
+    }
+
+    #header a {
+        padding-top: 0!important;
     }
 
     #header .navbar-inner .container {
         margin-left: 0!important;
         width: 100%!important;
+    }
+
+    #header ul.nav {
+        padding-top: 15px!important;
     }
 
     .navbar .btn-navbar {
@@ -168,6 +199,7 @@ and (max-device-width : 480px) {
     }
     .logoFix {
         display: inline!important;
+        float: left;
     }
 
     .nav-collapse {
@@ -212,9 +244,7 @@ and (max-device-width : 480px) {
     .carousel-caption {
         position: static;
     }
-    #header {
-        width: 100%;
-    }
+
     #home-page {
         width: 98%!important;
     }
@@ -273,6 +303,10 @@ and (max-device-width : 480px) {
     #page-content .top .intro .buttons .main-button{
         margin-right: 0!important;
     }
+
+    #page-content .middle .list li {
+        width: 27%!important;
+    }
     /* About */
     .community-page {
         width: 100%!important;
@@ -302,9 +336,17 @@ and (max-device-width : 979px) {
         width: 90%!important;
     }
 
+    #header a {
+        padding-top: 0!important;
+    }
+
     #header .navbar-inner .container {
         margin-left: 0!important;
         width: 100%!important;
+    }
+
+    #header ul.nav {
+        padding-top: 15px!important;
     }
 
     .navbar .btn-navbar {
@@ -313,6 +355,7 @@ and (max-device-width : 979px) {
     }
     .logoFix {
         display: inline!important;
+        float: left;
     }
 
     .nav-collapse {
@@ -357,9 +400,7 @@ and (max-device-width : 979px) {
     .carousel-caption {
         position: static;
     }
-    #header {
-        width: 100%;
-    }
+
     #home-page {
         width: 98%!important;
     }
@@ -418,22 +459,37 @@ and (max-device-width : 979px) {
     #page-content .top .intro .buttons .main-button{
         margin-right: 0!important;
     }
+    #page-content .middle .list li {
+        width: 30%!important;
+        padding-left: 15%!important;
+    }
     /* About */
     .community-page {
         width: 100%!important;
     }
+
 
 }
 @media (max-width: 979px) {
     body {
         padding-top: 0;
     }
+
+    #header a {
+        padding-top: 0!important;
+    }
+
+    .logoFix {
+        display: inline!important;
+        float: left;
+    }
+
     .navbar-fixed-top,
     .navbar-fixed-bottom {
         position: static;
     }
     .navbar-fixed-top {
-        margin-bottom: 20px;
+        margin-bottom: 12px;
     }
     .navbar-fixed-bottom {
         margin-top: 20px;
@@ -549,6 +605,13 @@ and (max-device-width : 979px) {
     .navbar-static .navbar-inner {
         padding-right: 10px;
         padding-left: 10px;
+    }
+    .navbar-inner {
+        min-height: 50px!important;
+    }
+
+    #header ul.nav {
+        padding-top: 15px!important;
     }
 }
 
