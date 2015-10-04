@@ -18,7 +18,8 @@
 #page-content .buttons-container a {
     font-size: 1.2em;
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
-    width: 25%;
+    width: 15%;
+    margin-right: 12px;
 }
 
 #page-content .buttons-container .docs-button {
@@ -43,9 +44,9 @@
     margin: 0;
 }
 
-#page-content .top .intro .heading {
+#page-content .top .intro .heading, .section-heading {
     background-color: #406C6C;
-    padding: 15px 12px 15px 12px;
+    padding: 5px;
     font-size: 1.9em;
     font-weight: normal;
     color: white;
@@ -169,8 +170,8 @@
 
 #page-content .middle .list li .desc {
     color: #000;
-    font-size: 1.05em;
-    width: 220px;
+    font-size: 1.0em;
+    font-weight: 300;
 }
 
 #page-content .middle .list li .icon {
@@ -188,12 +189,17 @@
 }
 
 #page-content .middle .list li {
-    float: left;
-    width: 25%;
-    height: 85px;
+    display: block;
     margin-right: 5px;
-    margin-bottom: 30px;
-    padding: 12px 0px 12px 67px;
+    padding: 12px;
+    text-align: left;
+    font-size: 1.2em;
+    background-color: #DEEAEA;
+    border-bottom: 1px dashed #406C6C;
+}
+
+#page-content .middle .list li:last-child {
+  border-bottom: none;
 }
 
 #page-content .middle .list .no-bottom {
@@ -203,6 +209,7 @@
 #page-content .middle .list {
     list-style-type: none;
     margin-left: 0;
+    margin-bottom: 0;
 }
 
 #page-content .middle .download-count {
@@ -221,7 +228,11 @@
     background-color: #fff;
     border: 1px solid #e5e5e5;
     position: relative;
-    height: 380px;
+}
+
+.middle .section-heading .heading-text {
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 #page-content .bottom .fork {
@@ -317,6 +328,7 @@
 
 #home-page {
     margin: 0 auto 25px auto;
+    width: 800px;
 }
 
 #home-page .buttons ul.dropdown-menu a:hover {

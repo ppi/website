@@ -167,7 +167,7 @@ div.navbar .nav .active > a, div.navbar .nav .active > a:hover {
 
 #header div.inside {
     margin: 0 auto;
-    width: 960px;
+    width: 560px;
 }
 
 #header .search form input.placeholder {
@@ -285,4 +285,16 @@ ul.dropdown-menu li > a:hover,
 ul.dropdown-menu .active > a:hover {
 	background-color: #51A351;
 	background-image: none;
+}
+
+.clearfix {*zoom: 1;}
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
 }

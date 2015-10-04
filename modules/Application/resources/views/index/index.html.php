@@ -7,7 +7,10 @@
         <div class="top">
             <div class="intro">
                 <div class="heading">
-                    <p class="heading-text">PPI: The PHP Framework Engine</p>
+                    <p class="heading-text">
+                      <a class="logo" href="<?=$view['router']->generate('Homepage');?>" title="PPI"><img src="<?=$view['assets']->getUrl('images/ppi-white.png');?>" alt="Logo" style="height: 40px;"></a>
+                      <span>The PHP Framework Engine</span>
+                    </p>
 
                     <div class="social-icons">
                         <a href="http://twitter.com/ppi_framework"
@@ -27,92 +30,61 @@
         </div>
 
         <div class="buttons-container">
-
             <div class="buttons">
-                <a class="main-button btn btn-large" href="<?= $view['router']->generate('Downloads'); ?>">
-                    <span class="icon-circle-arrow-down"></span> Download
-                </a>
-                <a class="main-button docs-button btn btn-large" href="http://docs.ppi.io/latest/">Documentation</a>
-                <a class="main-button github-button btn btn-large" href="http://www.github.com/ppi">
-                    <img src="<?= $view['assets']->getUrl('images/github.png'); ?>" alt="github" /> GitHub
-
-                </a>
+                <a class="main-button btn btn-large" href="<?= $view['router']->generate('Downloads'); ?>">Download</a>
+                <a class="main-button docs-button btn btn-large" href="http://docs.ppi.io/latest/">Docs</a>
+                <a class="main-button github-button btn btn-large" href="http://www.github.com/ppi">GitHub</a>
+                <a class="main-button btn btn-large" href="<?=$view['router']->generate('Blog');?>">Blog</a>
+                <a class="main-button btn btn-large" href="<?=$view['router']->generate('Community');?>">Community</a>
+                <a class="main-button btn btn-large" href="<?=$view['router']->generate('Downloads');?>">Downloads</a>
             </div>
-
         </div>
-
     </div>
 
 
     <div class="middle clearfix">
 
+      <div class="section-heading">
+            <p class="heading-text">Key Features</p>
+      </div>
+
         <ul class="list clearfix">
             <li>
-                <a class="icon" href="http://docs.ppi.io/latest/book/modules.html" title="">
-                    <img src="<?= $view['assets']->getUrl('images/components.png'); ?>" alt="Icon">
-                </a>
-                <a class="title" href="http://docs.ppi.io/latest/book/modules.html" title="">Modules</a>
-
-                <p class="desc">Light and simple modules, extending from Zend Framework's Module system.</p>
-            </li>
-            <li>
-                <a class="icon" href="http://docs.ppi.io/latest/book/routing.html" title="">
-                    <img src="<?= $view['assets']->getUrl('images/routing.png'); ?>" alt="Icon">
-                </a>
-                <a class="title" href="http://docs.ppi.io/latest/book/routing.html" title="">Routing</a>
-
-                <p class="desc">Each feature can pick from a variety of supported routers.</p>
-            </li>
-            <li style="margin-right: 0;">
-                <a class="icon" href="http://docs.ppi.io/latest/book/templating.html" title="">
-                    <img src="<?= $view['assets']->getUrl('images/home_templating.png'); ?>" alt="Icon">
-                </a>
-                <a class="title" href="http://docs.ppi.io/latest/book/templating.html" title="">Templating</a>
-
-                <p class="desc">Each feature can pick from a variety of supported templating engines</p>
-            </li>
-            <li>
-                <a class="icon" href="http://docs.ppi.io/latest/book/getting_started.html" title=""><img
-                        src="<?= $view['assets']->getUrl('images/config.png'); ?>" alt="Icon"></a>
-                <a class="title" href="http://docs.ppi.io/latest/book/getting_started.html" title="">Databases</a>
-
-                <p class="desc">Our powerful datasource component easily loads up popular DB libraries.</p>
-            </li>
-            <li>
-                <a class="icon" href="http://docs.ppi.io/latest/book/getting_started.html" title=""><img
-                        src="<?= $view['assets']->getUrl('images/composer.png'); ?>" alt="Icon"></a>
-                <a class="title" href="http://docs.ppi.io/latest/book/getting_started.html" title="">Component based</a>
-
+                <a class="title" href="http://docs.ppi.io/latest/book/getting_started.html" title="">Lightweight</a>
                 <p class="desc">Everything is component based, so you don't get everything by default, but gradaully
                     slot in what you need</p>
             </li>
-            <li style="margin-right: 0;">
-                <a class="icon" href="<?= $view['router']->generate('Community'); ?>" title="">
-                    <img src="<?= $view['assets']->getUrl('images/github.png'); ?>" alt="Icon">
-                </a>
-                <a class="title" href="<?= $view['router']->generate('Community'); ?>" title="">Found issues?</a>
+            <li>
+                <a class="title" href="http://docs.ppi.io/latest/book/modules.html" title="">Clean Modular Design</a>
+                <p class="desc">Light and simple modules, extending from Zend Framework's Module system.</p>
+            </li>
+            <li>
+                <a class="title" href="http://docs.ppi.io/latest/book/routing.html" title="">Routing</a>
+                <p class="desc">Each feature can pick from a variety of supported routers.</p>
+            </li>
+            <li>
+                <a class="title" href="http://docs.ppi.io/latest/book/templating.html" title="">Templating</a>
+                <p class="desc">Each feature can pick from a variety of supported templating engines</p>
+            </li>
+            <li>
+                <a class="title" href="http://docs.ppi.io/latest/book/getting_started.html" title="">Databases</a>
+                <p class="desc">Our powerful datasource component easily loads up popular DB libraries.</p>
+            </li>
 
+            <li>
+                <a class="title" href="<?= $view['router']->generate('Community'); ?>" title="">Found issues?</a>
                 <p class="desc">Let us know on <a href="https://gitter.im/ppi/framework" target="_blank">GitHub</a></p>
             </li>
 
-            <li class="no-bottom">
-                <a class="icon" href="<?= $view['router']->generate('Community'); ?>" title="">
-                    <img src="<?= $view['assets']->getUrl('images/chat.png'); ?>" alt="Icon">
-                </a>
+            <li>
                 <a class="title" href="<?= $view['router']->generate('Community'); ?>" title="">Get in touch</a>
-
                 <p class="desc">We chat on <a href="https://gitter.im/ppi/framework" target="_blank">Gitter</a></p>
             </li>
 
-            <li class="no-bottom">
-                <a class="icon" href="<?= $view['router']->generate('Community'); ?>" title="">
-                    <img src="<?= $view['assets']->getUrl('images/community2.png'); ?>" alt="Icon">
-                </a>
+            <li>
                 <a class="title" href="<?= $view['router']->generate('Community'); ?>" title="">The community</a>
-
                 <p class="desc">and have <a href="/gplus">GooglePlus</a>, <a href="/facebook">Facebook</a> groups, or
                     follow us on <a href="/twitter">Twitter</a>.</p>
-
             </li>
 
         </ul>
