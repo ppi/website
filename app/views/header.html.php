@@ -9,10 +9,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    
+
                     <div class="nav-collapse">
                         <ul class="nav">
-                            <li class="logo-item"><a class="logo" href="<?=$view['router']->generate('Homepage');?>" title="PPI"><img src="<?=$view['assets']->getUrl('images/ppi-white.png');?>" alt="Logo" height="25"></a></li>
                             <li class=""><a href="<?=$view['router']->generate('Homepage');?>">Home</a></li>
                             <li class=""><a href="<?=$view['router']->generate('About');?>">About</a></li>
                             <li class=""><a href="<?=$view['router']->generate('Blog');?>">Blog</a></li>
@@ -21,7 +20,7 @@
                             <li class=""><a href="http://docs.ppi.io/latest/" title="Documentation">Documentation</a></li>
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
         </div>

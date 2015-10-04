@@ -484,12 +484,16 @@ and (max-device-width : 979px) {
         float: left;
     }
 
+    #page-content {
+      padding-top: 0;
+    }
+
     .navbar-fixed-top,
     .navbar-fixed-bottom {
         position: static;
     }
     .navbar-fixed-top {
-        margin-bottom: 12px;
+      margin-bottom: 12px;
     }
     .navbar-fixed-bottom {
         margin-top: 20px;
