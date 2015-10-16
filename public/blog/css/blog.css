@@ -79,6 +79,7 @@
 	margin-bottom: 20px;
 	background-color: white;
 	position: relative;
+	width: 98%;
 }
 
 #blog-index .right-side h3 {
@@ -119,12 +120,12 @@
 
 #blog-index .left-side {
 	margin-right: 25px;
-	margin-left: 5%;
+	margin-left: 7.8%;
 }
 
 #blog-index {
-	margin-top: 25px;
-	margin-bottom: 25px;
+	width: 800px;
+	margin: 25px auto 0 auto;
 }
 
 #blog-index.blog-view .left-side {

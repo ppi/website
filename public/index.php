@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('Europe/London');
 // All relative paths start from the main directory, not from /public/
 chdir(dirname(__DIR__));
 

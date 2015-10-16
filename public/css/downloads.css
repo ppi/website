@@ -7,14 +7,8 @@
 }
 
 #downloads-page .download-item {
-    margin-bottom: 20px;
-    -moz-box-shadow: 0 2px 2px 0 #c2c2c2;
-    -webkit-box-shadow: 0 2px 2px 0 #c2c2c2;
-    box-shadow: 0 2px 2px 0 #c2c2c2;
-    border: 1px solid #f7f7f7;
     background: #fff;
     border-radius: 4px;
-    padding: 1.333em 20px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
 }
@@ -22,7 +16,8 @@
 #downloads-page h3 {
     font-size: 1.438em;
     margin-bottom: .522em;
-    font-family: Ubuntu,Arial,"libra sans",sans-serif;
+    color: #406C6C;
+    font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
 }
 
 #downloads-page .download-item select {
@@ -34,24 +29,17 @@
     font-size: 1em;
     margin-bottom: .75em;
     line-height: 1.6;
-    width: 50%;
-    float: left;
+    width: 100%;
 }
 
 #downloads-page .download-button-area {
-    padding-left: 20px;
     margin-right: 0;
     margin-left: 0;
-    width: 40%;
-    float: left;
 }
 
 #downloads-page .download-button {
-    display: block;
     font-size: 1.8em;
-    padding: 0.7em 1.5em 0.7em 1.4em;
     vertical-align: middle;
     text-align: center;
     line-height: 1.0em;
-    margin-top: 15px;
 }

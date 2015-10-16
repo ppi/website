@@ -1,39 +1,49 @@
 #wrapper {
 }
 
-#page-content .buttons-container i {
+.buttons-container i {
     margin-top: 3px;
 }
 
 
-#page-content .buttons-container {
+.buttons-container {
     margin: 0 auto;
     text-align: center;
-    background-color: #fff;
-    border: 1px solid #e5e5e5;
-    padding: 12px;
-    margin-top: 12px;
+    width: 800px;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -399px;
+    display: block;
 }
 
-#page-content .buttons-container a {
+.buttons-container a:first-child {
+    /*border-left: 1px solid #406C6C;*/
+}
+
+.buttons-container a {
     font-size: 1.2em;
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
-    width: 15%;
-    margin-right: 12px;
-}
-
-#page-content .buttons-container .docs-button {
-}
-
-#page-content .buttons-container .github-button img {
-    width: 20px;
-    height: 20px;
+    width: 134px;
+    color: #FFF;
+    padding: 12px;
+    vertical-align: middle;
+    margin: 0;
+    /*border-top: 1px solid #406C6C;*/
+    /*border-bottom: 1px solid #406C6C;*/
+    /*border-right: 1px solid #406C6C;*/
+    /*background-color: #406C6C;*/
+    display: block;
+    float: left;
+    /*z-index: 10000;*/
 }
 
 #page-content .top .intro .desc {
-    line-height: 22px;
-    color: #000;
-    font-size: 1.2em;
+    line-height: 1.5em;
+    color: rgb(64, 108, 108);
+    font-size: 1.6em;
+    font-weight: 300;
     text-align: left;
     padding: 12px;
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
@@ -44,15 +54,24 @@
     margin: 0;
 }
 
-#page-content .top .intro .heading, .section-heading {
-    background-color: #406C6C;
-    padding: 5px;
-    font-size: 1.9em;
-    font-weight: normal;
+#page-content .top .intro .heading {
     color: white;
+    font-size: 2.0em;
+    line-height: 1.0em;
+}
+
+#page-content .top .intro .heading, .section-heading {
+    font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+    background-color: #DEEAEA;
+    padding: 5px;
     text-align: left;
-    font-family: Ubuntu, Arial, "libra sans", sans-serif;
     position: relative;
+}
+
+.section-heading {
+    color: #406C6C;
+    font-size: 2.5em;
+    line-height: 1.0em;
 }
 
 #page-content .top .intro {
@@ -154,7 +173,7 @@
 
 #page-content .news-area .posts-list li a {
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
-    font-size: 1.1em;
+    font-size: 1.4em;
 }
 
 #page-content .news-area .posts-list li {
@@ -170,8 +189,8 @@
 
 #page-content .middle .list li .desc {
     color: #000;
-    font-size: 1.0em;
-    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.5em;
 }
 
 #page-content .middle .list li .icon {
@@ -180,7 +199,7 @@
 }
 
 #page-content .middle .list li .title {
-    color: #000;
+    color: rgb(64, 108, 108);
     font-size: 1.4em;
     font-family: Ubuntu, Arial, "libra sans", sans-serif;
     margin-top: 5px;
@@ -190,7 +209,6 @@
 
 #page-content .middle .list li {
     display: block;
-    margin-right: 5px;
     padding: 12px;
     text-align: left;
     font-size: 1.2em;

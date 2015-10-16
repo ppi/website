@@ -56,8 +56,8 @@ class Module extends BaseModule
 
                 $helper->setTwitterUsername($config['community']['twitterUsername']);
                 $helper->setGithubFeeds($config['community']['githubFeeds']);
-                $helper->setCache($sm->get('activity.cache'));
-                $helper->setOAuthDriver($tmhOAuth); 
+//                $helper->setCache($sm->get('activity.cache'));
+                $helper->setOAuthDriver($tmhOAuth);
 
                 return $helper;
             },

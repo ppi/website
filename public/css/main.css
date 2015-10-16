@@ -30,12 +30,6 @@ body {
 	margin: 0 auto;
 }
 
-#header .navbar-inner .container {
-	width: 600px;
-	margin: 0 auto 0 102px;
-	position: relative;
-}
-
 #header #header-inner .logo {
 	display: block;
 	width: 50px;
@@ -53,7 +47,6 @@ body {
 }
 
 #header .container {
-	width: !important;
 	margin-left: 20px;
 }
 
@@ -160,9 +153,7 @@ div.navbar .nav .active > a, div.navbar .nav .active > a:hover {
 }
 
 #header ul.nav {
-	width: 682px;
-	left: 15px;
-    margin-right: 0;
+	margin-right: 0 !important;
 }
 
 #header div.inside {
@@ -189,6 +180,15 @@ div.navbar .nav .active > a, div.navbar .nav .active > a:hover {
 	position: absolute;
 	bottom: 6px;
 	right: 164px;
+}
+
+.heading-area {
+    background-color: #406C6C;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#406c6c', endColorstr='#284545');
+    background: -webkit-gradient(linear, left top, left bottom, from(#406c6c), to(#284545));
+    background: -moz-linear-gradient(top, #406c6c, #284545);
+    border-bottom: 1px solid #000;
 }
 
 #page-content {

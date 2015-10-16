@@ -1,18 +1,19 @@
 <?php $view->extend('::base.html.php'); ?>
-
 <div id="home-page">
 
     <div class="top-container clearfix">
 
         <div class="top">
             <div class="intro">
-                <div class="heading">
+                <div class="heading heading-area">
                     <p class="heading-text">
-                      <a class="logo" href="<?=$view['router']->generate('Homepage');?>" title="PPI"><img src="<?=$view['assets']->getUrl('images/ppi-white.png');?>" alt="Logo" style="height: 40px;"></a>
-                      <span>The PHP Framework Engine</span>
+                        <a class="logo" href="<?= $view['router']->generate('Homepage'); ?>" title="PPI"><img
+                                src="<?= $view['assets']->getUrl('images/ppi-white.png'); ?>" alt="Logo"
+                                style="height: 40px;"></a>
+                        <span>The PHP Framework Engine</span>
                     </p>
 
-                    <div class="social-icons">
+                    <div class="social-icons" style="display: none">
                         <a href="http://twitter.com/ppi_framework"
                            tutorial-geolocation-with-foursquare-and-google-mapst="_blank"><img
                                 src="<?= $view['assets']->getUrl('images/twitter2.png'); ?>" alt="Twitter" width="38"/></a>
@@ -21,68 +22,69 @@
                     </div>
                 </div>
 
-                <p class="desc">PPI is a framework delivery engine. It's a simple skeleton layer that, using the concept
-                    of microservices, to let you choose which parts of frameworks you wish to use on a per-feature (per
-                    module basis). Each feature makes its own independent decisions, allowing you to pick the best tools
-                    from the best PHP frameworks</p>
+                <p class="desc">
+                    PPI is a framework delivery engine.
+                    Using the concept of microservices, it lets you choose which parts of frameworks you wish to use on
+                    a per-feature basis.
+                    As such each feature makes its own independent decisions, allowing you to pick the best tools from
+                    the best PHP frameworks </p>
 
             </div>
         </div>
 
-        <div class="buttons-container">
-            <div class="buttons">
-                <a class="main-button btn btn-large" href="<?= $view['router']->generate('Downloads'); ?>">Download</a>
-                <a class="main-button docs-button btn btn-large" href="http://docs.ppi.io/latest/">Docs</a>
-                <a class="main-button github-button btn btn-large" href="http://www.github.com/ppi">GitHub</a>
-                <a class="main-button btn btn-large" href="<?=$view['router']->generate('Blog');?>">Blog</a>
-                <a class="main-button btn btn-large" href="<?=$view['router']->generate('Community');?>">Community</a>
-                <a class="main-button btn btn-large" href="<?=$view['router']->generate('Downloads');?>">Downloads</a>
-            </div>
-        </div>
+
     </div>
 
 
     <div class="middle clearfix">
 
-      <div class="section-heading">
+        <div class="section-heading">
             <p class="heading-text">Key Features</p>
-      </div>
+        </div>
 
         <ul class="list clearfix">
             <li>
                 <a class="title" href="http://docs.ppi.io/latest/book/getting_started.html" title="">Lightweight</a>
+
                 <p class="desc">Everything is component based, so you don't get everything by default, but gradaully
                     slot in what you need</p>
             </li>
             <li>
                 <a class="title" href="http://docs.ppi.io/latest/book/modules.html" title="">Clean Modular Design</a>
+
                 <p class="desc">Light and simple modules, extending from Zend Framework's Module system.</p>
             </li>
             <li>
                 <a class="title" href="http://docs.ppi.io/latest/book/routing.html" title="">Routing</a>
+
                 <p class="desc">Each feature can pick from a variety of supported routers.</p>
             </li>
             <li>
                 <a class="title" href="http://docs.ppi.io/latest/book/templating.html" title="">Templating</a>
+
                 <p class="desc">Each feature can pick from a variety of supported templating engines</p>
             </li>
             <li>
                 <a class="title" href="http://docs.ppi.io/latest/book/getting_started.html" title="">Databases</a>
+
                 <p class="desc">Our powerful datasource component easily loads up popular DB libraries.</p>
             </li>
 
             <li>
                 <a class="title" href="<?= $view['router']->generate('Community'); ?>" title="">Found issues?</a>
+
                 <p class="desc">Let us know on <a href="https://gitter.im/ppi/framework" target="_blank">GitHub</a></p>
             </li>
 
             <li>
                 <a class="title" href="<?= $view['router']->generate('Community'); ?>" title="">Get in touch</a>
+
                 <p class="desc">We chat on <a href="https://gitter.im/ppi/framework" target="_blank">Gitter</a></p>
             </li>
 
             <li>
                 <a class="title" href="<?= $view['router']->generate('Community'); ?>" title="">The community</a>
+
                 <p class="desc">and have <a href="/gplus">GooglePlus</a>, <a href="/facebook">Facebook</a> groups, or
                     follow us on <a href="/twitter">Twitter</a>.</p>
             </li>
@@ -92,7 +94,7 @@
 
 
     <div class="news-area">
-        <div class="heading">
+        <div class="heading heading-area">
             <span>Blog posts</span>
         </div>
         <ul class="posts-list">

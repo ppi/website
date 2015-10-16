@@ -68,15 +68,7 @@ class Index extends SharedController
     
     public function communityAction()
     {
-        $filtered        = false;
-        $activityHelper  = $this->getService('activity.helper');
-        $github          = $activityHelper->getGithubActivity();
-        $tweets          = $activityHelper->getTwitterActivity();
-        $activity        = $tweets + $github;
-        
-        krsort($activity);
-        
-        return $this->render('Application:index:community.html.php', compact('activity', 'filtered'));
+        return $this->render('Application:index:community.html.php');
     }
 
     public function activityAction()

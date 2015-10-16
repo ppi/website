@@ -11,50 +11,37 @@
 
 <div class="community-page content-box" id="downloads-page">
 
-    <div class="breadcrumbs">
-        <ul class=" clearfix">
-            <li><a href="/">Home</a></li>
-            <li><span class="divider">&rsaquo;</span></li>
-            <li class="active">Downloads</li>
-        </ul>
-    </div>
+    <h1>Downloads</h1>
 
     <div class="content-container clearfix">
+        <div class="projects-list downloads-container">
+            <?php foreach ($downloadItems as $downloadItem): ?>
+                <div class="download-item clearfix">
+                    <div class="download-description span4">
+                        <h3><?= $view->escape($downloadItem->getName()); ?></h3>
 
-        <div class="left-side">
-            <?= $view->render('Application:index:community_leftnav.html.php'); ?>
-        </div>
+                        <p>Released: <?= $view->escape($downloadItem->getDateReleased()->format('jS F Y')); ?></p>
 
-        <div class="inner-content">
+                        <p><?= $view->escape($downloadItem->getDesc()); ?></p>
 
-            <h1>Downloads</h1>
+                        <p>
+                            <a class="link-arrow" href="http://docs.ppi.io/latest/setup/install.html">
+                                Read the full installation instructions</a>
+                        </p>
 
-            <div class="projects-list downloads-container">
-                <?php foreach ($downloadItems as $downloadItem): ?>
-                    <div class="download-item clearfix">
-                        <div class="download-description span4">
-                            <h3><?= $view->escape($downloadItem->getName()); ?></h3>
-                            <p>Released: <?= $view->escape($downloadItem->getDateReleased()->format('jS F Y')); ?></p>
-                            <p><?= $view->escape($downloadItem->getDesc()); ?></p>
-                            <p>
-                                <a
-                                    class="link-arrow"
-                                    href="http://docs.ppi.io/latest/setup/install.html">
-                                    Read the full installation instructions</a>
-                            </p>
-                        </div>
                         <div class="last-col download-button-area">
                             <p>
-                                <a href="<?= $downloadItem->getUrl(); ?>"
-                                  class="btn btn-green download-button"
-                                  data-trigger-url="<?=$view['router']->generate('Download', array('fileID' => $downloadItem->getID()));?>">Download</a>
+                                <a href="<?= $downloadItem->getUrl(); ?>" class="btn btn-green download-button"
+                                   data-trigger-url="<?= $view['router']->generate('Download', array('fileID' => $downloadItem->getID())); ?>">Download</a>
                             </p>
                         </div>
-                        <!-- /.four-col -->
 
                     </div>
-                <?php endforeach; ?>
-            </div>
+
+                    <!-- /.four-col -->
+
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
     <div class="clear"></div>

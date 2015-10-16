@@ -1,188 +1,30 @@
 .community-page {
-	margin-top: 30px;
-	width: 984px;
-	margin: 30px auto 30px auto;
+	width: 800px;
+	margin: 12px auto 12px auto;
 }
-
-.community-page .left-side {
-    width: 20%;
-    margin-right: 2%;
-    float: left;
-    border-right: 1px dotted #aea79f
-}
-
 
 .community-page.content-box {
 
+	box-shadow: 0 0 10px #BDBDBD;
+	background-color: white;
 	position: relative;
-	
-	-moz-box-shadow: 0 0 3px #c9c9c9;
-	-webkit-box-shadow: 0 0 3px #c9c9c9;
-	box-shadow: 0 0 3px #c9c9c9;
-
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-
-	background: #fff;
-	display: block;
-	padding-bottom: 20px;
-	position: relative;
-	z-index: 1;
-
-}
-
-.content-box .inner-content {
-	float: left;
-	width: 76%;
-	padding-right: 12px;
-}
-
-.community-page .breadcrumbs {
-
-	border-bottom: 1px solid #dfdcd9;
-	margin-bottom: 0;
-}
-
-.community-page .breadcrumbs ul {
-	margin-left: 30px;
-	margin-bottom: 10px;
-	list-style-type: none;
-}
-
-.community-page .breadcrumbs li {
-	float: left;
-	color: #aea79f;
-	margin-right: 8px;
-	margin-top: 10px;
-	font-size: 1.1em;
-}
-
-.community-page .breadcrumbs .divider {
-	font-size: 1.0em;
-}
-
-.community-page .breadcrumbs a {
-	color: #aea79f;
-}
-
-.community-page .breadcrumbs .active {
-	color: #333;
-}
-
-.community-page h1 {
-    font-size: 2.813em;
-    margin-bottom: 0.267em;
-    margin-top: 18px;
-}
-
-.community-page .left-side nav li a.first:hover {
-	color: #333;
-}
-
-.community-page .left-side nav li a.first {
-	background-color: #fff;
-	display: block;
-	height: 30px;
-	font-size: 1.2em;
-	font-family: Ubuntu, Arial, "libra sans", sans-serif;
-	color: #406C6C;
-	padding-left: 12px;
-	padding-top: 9px;
+	width: 776px;
+	margin: 12px auto 0 auto;
+	padding: 12px;
 }
 
 .community-page h1, .community-page h2 {
-	font-family: Ubuntu, Arial, "libra sans", sans-serif;
 	color: #406C6C;
-	font-weight: 300;
+	font-size: 2.5em;
+	font-family: 'FertigoProRegular','Helvetica Neue',Helvetica,Arial,serif;
+	margin: 0 0 12px 0;
 }
 
-.community-page .left-side nav li:first-child {
+.community-page ul li {
+	font-size: 2.0em;
+	line-height: 2.0em;
 }
-
-.community-page .left-side nav li.box .title {
-	font-size: 1.2em;
-	font-family: Ubuntu, Arial, "libra sans", sans-serif;
-	color: #406C6C;
-}
-.community-page .left-side nav li.box .details a {
-	width: 64px;
-	color: white;
-	height: 18px;
-	text-align: center;
-	padding-top: 8px;
-	padding-left: 10px;
-	margin: 0;
-}
-.community-page .left-side nav li.box .details {
-	font-size: 1.1em;
-	height: 40px;
-	position: relative;
-}
-
-.community-page .left-side nav li.box input {
-	height: 30px;
-}
-
-.community-page .newsletter-box .form #newsletter-email {
-	float: left;
-	width: 173px;
-	margin-left: 12px;
-}
-
-.community-page .left-side nav li.newsletter-box label {
-	float: left;
-	margin-top: 5px;
-}
-
-.community-page .left-side nav li.box {
-	background-color: #fff;
-	padding-left: 12px;
-	padding-top: 12px;
-}
-
-.community-page .left-side nav li {
-	border-bottom: 1px dotted #aea79f;
-}
-
-.community-page .left-side nav li:last-child {
-	border-bottom: none;
-}
-
-
-.community-page .left-side nav ul {
+.community-page ul {
 	list-style-type: none;
-	margin-left: 0;
-}
-
-.left-side nav li.box input[type=text] {
-	width: 158px;
-	height: 22px;
-}
-
-.community-page .activity-stream .feeds .feed .date {
-	color: #a9a9a9;
-}
-.community-page .activity-stream .feeds .feed .content {
-	width: 85%;
-	float: left;
-}
-.community-page .activity-stream .feeds .feed .image {
-	float: left;
-	width: 54px;
-	margin-right: 12px;
 	margin-left: 12px;
-}
-.community-page .activity-stream .feeds .feed {
-	border-bottom: 1px dotted #aea79f;
-	background-color: white;
-	padding-top: 12px;
-	position: relative;
-	margin-bottom: 1.0em;
-}
-.community-page .activity-stream img.twitter {
-	margin-left: 7px;
 }
