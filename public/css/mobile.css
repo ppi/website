@@ -312,9 +312,6 @@ and (max-device-width : 480px) {
         margin-right: 0!important;
     }
 
-    #page-content .middle .list li {
-        width: 27%!important;
-    }
     /* About */
     .community-page {
         width: 100%!important;
