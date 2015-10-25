@@ -44,7 +44,7 @@
 
         <ul class="list clearfix">
             <li>
-                <a class="title" href="http://docs.ppi.io/latest/book/getting_started.html" title="">Lightweight</a>
+                <a class="title" href="http://docs.ppi.io/latest/book/application.html" title="">Lightweight</a>
 
                 <p class="desc">Everything is component based, so you don't get everything by default, but gradaully
                     slot in what you need</p>
