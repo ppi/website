@@ -488,10 +488,6 @@ and (max-device-width : 979px) {
         padding-top: 0!important;
     }
 
-    #page-content .middle .list li {
-      width: 39% !important;
-    }
-
     .logoFix {
         display: inline!important;
         float: left;
