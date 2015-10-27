@@ -27,10 +27,5 @@ downloads:
             version: "2.1"
             date_released: "2015-07-20"
 
-oauth:
-    consumer_key: 8ruiMaLE0DqdPcf06ERnA
-    consumer_secret: lPSTTc0s98ZbjP1nLOKYqUfEoXvqxYAVMl28k18SEw
-    user_token: 87676072-wIpCK7WTSFIBjlmB8qdt3GLtrvzxLyssOupRuYfo
-    user_secret: mNnG03kV1RmGF5Mo58vYrwlYsDyV3JNIBN1erQhoTg
 
 

@@ -38,52 +38,11 @@ class Index extends SharedController
         return $this->render('Application:index:downloads.html.php', compact('downloadItems'));
     }
 
-    public function downloadAction()
-    {
-        $fileID = $this->getRouteParam('fileID');
-        if(empty($fileID)) {
-            throw new \Exception('Invalid FileID');
-        }
-
-        $withVendor      = $this->post('vendor', 'no') === 'yes';
-        $downloadHelper  = $this->getService('download.item.storage');
-        $downloadCounter = $this->getService('download.counter');
-        $file            = $downloadHelper->getDownloadFileByID($fileID);
-        $filename        = $downloadHelper->normaliseFileName($file, $withVendor);
-
-        // Create download entry
-        $downloadCounter->create($this->getIP(), $file, $withVendor);
-
-        $path = $downloadHelper->getFullDownloadPath($filename);
-        if(!file_exists($path)) {
-            throw new \Exception('Unable to locate download file: ' . $filename);
-        }
-
-        // Copy file over to public folder
-        $newPath = $downloadHelper->copyFileToPublicFolder($path, $filename);
-
-        return $this->redirect('/downloads/' . $newPath);
-
-    }
-    
     public function communityAction()
     {
         return $this->render('Application:index:community.html.php');
     }
 
-    public function activityAction()
-    {
-        $filtered        = false;
-        $activityHelper  = $this->getService('activity.helper');
-        $github          = $activityHelper->getGithubActivity();
-        $tweets          = $communityHelper->getTwitterActivity();
-        $activity        = $tweets + $github;
-        
-        krsort($activity);
-        
-        return $this->render('Application:index:community.html.php', compact('activity', 'filtered'));
-    }
-    
     public function newsletterSubmitAction()
     {
         $emailAddress = $this->post('email');
