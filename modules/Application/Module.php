@@ -20,7 +20,7 @@ class Module extends BaseModule
      */
     public function getRoutes()
     {
-        return $this->loadYamlRoutes(__DIR__ . '/resources/config/routes.yml');
+        return $this->loadSymfonyRoutes(__DIR__ . '/resources/config/routes.yml');
     }
 
     /**
@@ -30,7 +30,7 @@ class Module extends BaseModule
      */
     public function getConfig()
     {
-        return $this->loadYamlConfig(__DIR__ . '/resources/config/config.yml');
+        return $this->loadSymfonyRoutes(__DIR__ . '/resources/config/config.yml');
     }
     
     public function getServiceConfig()
