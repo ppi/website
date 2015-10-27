@@ -1,17 +1,10 @@
 <?php
 namespace Application;
 
-use PPI\Framework\Module\Module as BaseModule;
-use PPI\Framework\Autoload;
+use PPI\Framework\Module\AbstractModule;
 
-class Module extends BaseModule
+class Module extends AbstractModule
 {
-    protected $_moduleName = 'Application';
-
-    public function init($e)
-    {
-        Autoload::add(__NAMESPACE__, dirname(__DIR__));
-    }
 
     /**
      * Get the routes for this module
@@ -45,6 +38,20 @@ class Module extends BaseModule
             }
 
         ));
+    }
+
+    /**
+     * @return array
+     */
+    public function getAutoloaderConfig()
+    {
+        return array(
+            'Zend\Loader\StandardAutoloader' => array(
+                'namespaces' => array(
+                    __NAMESPACE__ => __DIR__ . '/src/',
+                ),
+            ),
+        );
     }
 
 }
