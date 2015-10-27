@@ -25,12 +25,6 @@ class Index extends SharedController
         return $this->render('Application:index:livechat.html.php');
     }
     
-    public function projectsAction()
-    {
-        $projects = $this->getProjects();
-        return $this->render('Application:index:projects.html.php', compact('projects'));
-    }
-
     public function downloadsAction()
     {
         $downloadItemStorage = $this->getService('download.item.storage');

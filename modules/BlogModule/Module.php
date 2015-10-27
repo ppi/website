@@ -1,17 +1,11 @@
 <?php
 namespace BlogModule;
 
-use PPI\Framework\Module\Module as BaseModule;
+use PPI\Framework\Module\AbstractModule;
 use PPI\Framework\Autoload;
 
-class Module extends BaseModule
+class Module extends AbstractModule
 {
-    protected $_moduleName = 'BlogModule';
-
-    public function init($e)
-    {
-        Autoload::add(__NAMESPACE__, dirname(__DIR__));
-    }
 
     /**
      * Get the routes for this module
@@ -51,6 +45,20 @@ class Module extends BaseModule
             }
             
         ));
+    }
+
+    /**
+     * @return array
+     */
+    public function getAutoloaderConfig()
+    {
+        return array(
+            'Zend\Loader\StandardAutoloader' => array(
+                'namespaces' => array(
+                    __NAMESPACE__ => __DIR__ . '/src/',
+                ),
+            ),
+        );
     }
 
 }

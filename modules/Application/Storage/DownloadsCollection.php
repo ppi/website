@@ -4,7 +4,7 @@ namespace Application\Storage;
 use Application\Entity\DownloadItem as DownloadItemEntity;
 use Application\Storage\Base as BaseStorage;
 
-class DownloadItem
+class DownloadsCollection
 {
 
     /**

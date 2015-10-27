@@ -20,7 +20,7 @@ class Module extends BaseModule
      */
     public function getRoutes()
     {
-        return $this->loadSymfonyRoutes(__DIR__ . '/resources/config/routes.yml');
+        return $this->loadYamlRoutes(__DIR__ . '/resources/config/routes.yml');
     }
 
     /**
@@ -30,7 +30,21 @@ class Module extends BaseModule
      */
     public function getConfig()
     {
-        return $this->loadConfig(__DIR__ . '/resources/config/config.yml');
+        return $this->loadYamlConfig(__DIR__ . '/resources/config/config.yml');
     }
     
+    public function getServiceConfig()
+    {
+        return array('factories' => array(
+            'download.item.storage' => function($sm) {
+                $config = $sm->get('config');
+                if(!isset($config['downloads']['items'])) {
+                    throw new \Exception('Unable to locate any download items');
+                }
+                return new \Application\Storage\DownloadsCollection($config['downloads']['items']);
+            }
+
+        ));
+    }
+
 }

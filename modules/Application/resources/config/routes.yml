@@ -6,7 +6,7 @@ Downloads:
     pattern:  /downloads
     defaults: { _controller: "Application:Index:downloads"}
 
-Downloads:
+Downloads2:
     pattern:  /downloads/
     defaults: { _controller: "Application:Index:downloads"}
 
