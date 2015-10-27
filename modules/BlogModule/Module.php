@@ -2,7 +2,6 @@
 namespace BlogModule;
 
 use PPI\Framework\Module\AbstractModule;
-use PPI\Framework\Autoload;
 
 class Module extends AbstractModule
 {
