@@ -13,14 +13,14 @@ class Blog extends SharedController
      */
     public function indexAction()
     {
-        $posts = $this->getService('blog.storage')->getAll();
+        $posts = $this->getService('blog.posts')->getAll();
         return $this->render('BlogModule:blog:index.html.php', compact('posts'));
     }
 
     public function viewAction()
     {
         $postID = $this->getRouteParam('postID');
-        $post = $this->getService('blog.storage')->getByID($postID);
+        $post = $this->getService('blog.posts')->getByID($postID);
 //        $blogPostTags = $this->getBlogTagStorage()->getAll();
         $post->setContent($this->render('BlogModule:post:' . $post->getSlug() . '.html.php', compact('post')));
         return $this->render('BlogModule:blog:view.html.php', compact('post'));

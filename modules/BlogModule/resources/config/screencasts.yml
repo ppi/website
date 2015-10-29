@@ -1,0 +1,15 @@
+screencasts:
+    -
+        id: 1
+        slug: intro-to-ppi-framework-engine-2-1
+        title: Intro To PPI Framework Engine 2.1 - Skeleton App
+        date_created: "27/10/2015"
+        desc: "This is the first of the a series of screencasts covering PPI Framework Engine 2.1 - This is an introduction video on getting the skeleton application set up on your development machine and ready to follow the rest of the screencasts."
+
+    -
+        id: 2
+        slug: creating-your-first-feature
+        title: "PPI Framework Engine 2.1 - Creating your first feature"
+        date_created: "28/10/2015"
+        desc: "We cover generating your first module using the PPI console. Activating that module. Customising the routes, using symfony router, and switching the templating engine we're using from php to twig."
+

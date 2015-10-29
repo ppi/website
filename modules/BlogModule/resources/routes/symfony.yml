@@ -2,6 +2,17 @@ Blog:
     pattern:  /blog/
     defaults: { _controller: "BlogModule:Blog:index"}
 
+Screencasts_View:
+    pattern:  /screencasts/{id}/{slug}
+    defaults: { _controller: "BlogModule:Screencasts:view"}
+
+Screencasts:
+    pattern:  /screencasts/
+    defaults: { _controller: "BlogModule:Screencasts:index"}
+
+
+
+
 BlogGetRelatedPosts:
     pattern:  /blog/get_related_posts/{postID}
     defaults: { _controller: "BlogModule:Blog:getRelatedPosts"}

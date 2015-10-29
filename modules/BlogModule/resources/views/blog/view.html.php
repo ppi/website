@@ -70,52 +70,9 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
                 </script>
                 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-                
             </div>
-            
         </div>
-        
     </div>
-<!--    <div class="right-side">-->
-<!--        -->
-<!--<!--        <div class="section">-->
-<!--<!--            <form>-->
-<!--<!--                <input type="text" name="search"> <input type="submit" value="Search">-->
-<!--<!--            </form>-->
-<!--<!--        </div>-->
-<!---->
-<!--        <div class="section">-->
-<!--            <div class="social-icons">-->
-<!--                <a href="http://twitter.com/ppi_framework" target="_blank"><img src="--><?//= $view['assets']->getUrl('images/twitter2.png');;?><!--" width="48" /> </a>-->
-<!--                <a href="#"><img src="--><?//= $view['assets']->getUrl('images/googleplus.png');?><!--" width="48" /></a>-->
-<!--                <a href="--><?//=$view['router']->generate('BlogGetRSS');?><!--" target="_blank"><img src="--><?//= $view['assets']->getUrl('images/rss.png');;?><!--" width="48" /></a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="section">-->
-<!--            <h3>Related Posts</h3>-->
-<!--            <ul id="related-posts-content" data-rel="--><?//=$post->getID();?><!--">-->
-<!--                <li class="ajax-loader"></li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--        -->
-<!--        <div class="section">-->
-<!--            <h3>Popular Tags</h3>-->
-<!--            <ul id="popular-tags-content">-->
-<!--                <li class="ajax-loader"></li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="section">-->
-<!--            <h3>Recent Comments</h3>-->
-<!--            <ul id="recent-comments-content">-->
-<!--                <li class="ajax-loader"></li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!---->
-<!---->
-<!--    </div>-->
-    
 </div>
 
 <script type="text/template" id="popular-tags-template">

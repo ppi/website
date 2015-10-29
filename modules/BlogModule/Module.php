@@ -2,6 +2,7 @@
 namespace BlogModule;
 
 use PPI\Framework\Module\AbstractModule;
+use BlogModule\Collection\BlogPostsCollection;
 
 class Module extends AbstractModule
 {
@@ -15,7 +16,7 @@ class Module extends AbstractModule
     {
         return $this->loadSymfonyRoutes(__DIR__ . '/resources/routes/symfony.yml');
     }
-    
+
     /**
      * Get the configuration for this module
      *
@@ -25,24 +26,29 @@ class Module extends AbstractModule
     {
         return $this->loadConfig(__DIR__ . '/resources/config/config.yml');
     }
-    
+
     public function getServiceConfig()
     {
         return array('factories' => array(
-            
-            'blog.cache' => function($sm) {
+
+            'blog.cache' => function ($sm) {
                 return new \Doctrine\Common\Cache\ApcCache();
             },
-            'blog.storage' => function($sm) {
+            'blog.posts' => function ($sm) {
                 $config = $sm->get('config');
-                if(!isset($config['blog']['posts'])) {
-                    throw new \Exception('Missing configuraiton for blog posts');
+                if (!isset($config['blog']['posts'])) {
+                    throw new \Exception('Missing configuration for blog posts');
                 }
-                return new \BlogModule\Storage\BlogPost(
-                    $config['blog']['posts']
-                );
+                return new BlogPostsCollection($config['blog']['posts']);
+            },
+            'screencasts' => function ($sm) {
+                $config = $sm->get('config');
+                if (!isset($config['screencasts'])) {
+                    throw new \Exception('Missing configuration for screencasts');
+                }
+                return new BlogPostsCollection($config['screencasts']);
             }
-            
+
         ));
     }
 
@@ -51,13 +57,7 @@ class Module extends AbstractModule
      */
     public function getAutoloaderConfig()
     {
-        return array(
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/src/',
-                ),
-            ),
-        );
+        return array('Zend\Loader\StandardAutoloader' => array('namespaces' => array(__NAMESPACE__ => __DIR__ . '/src/',),),);
     }
 
 }

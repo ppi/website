@@ -2,6 +2,8 @@
 
 namespace BlogModule\Entity;
 
+use DateTime;
+
 class BlogPost {
 	
 	protected $id;
@@ -12,8 +14,6 @@ class BlogPost {
     protected $slug;
     protected $desc;
     
-    protected $tags = array();
-	
 	public function __construct($row) {
 		foreach($row as $key => $val) {
 			if(property_exists($this, $key)) {
@@ -57,23 +57,9 @@ class BlogPost {
 	 * @return \DateTime
 	 */
 	public function getCreatedDate() {
-		$dt = new \DateTime();
-		$dt->setTimestamp($this->date_created);
-		return $dt;
+		return DateTime::createFromFormat('d/m/Y', $this->date_created);
 	}
 	
-	public function setTags($tags) {
-		$this->tags = $tags;
-	}
-	
-	public function hasTags() {
-		return !empty($this->tags);
-	}
-	
-	public function getTags() {
-		return $this->tags;
-	}
-    
     public function setContent($c)
     {
         $this->content = $c;

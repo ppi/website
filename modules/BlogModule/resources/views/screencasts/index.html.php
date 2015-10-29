@@ -19,10 +19,8 @@
 		
 		<?php
 		foreach($posts as $post):
-			
 			$created = $post->getCreatedDate();
-			$urlLink =  'blog/' . $post->getID() . '/' . str_replace(' ', '-', strtolower($post->getTitle()));
-            $urlLink = $view['assets']->getUrl($urlLink);
+			$urlLink = $view['router']->generate('Screencasts_View', array('id' => $post->getID(), 'slug' => $post->getSlug()));
 		?>
 		
 		<div class="post">
@@ -31,9 +29,9 @@
 			<div class="post-content"><?=$post->getDescription();?></div>
 			
 			<div class="post-meta">
-				<a href="<?=$urlLink;?>" title="Continue Reading" class="more-link">Continue Reading &raquo;</a>
+				<a href="<?=$urlLink;?>" title="Watch Video" class="more-link">Watch Video &raquo;</a>
 			</div>
-
+			
 			<div class="date-area">
 				<div class="inner">
 					<span><?=$created->format('M');?></span>
