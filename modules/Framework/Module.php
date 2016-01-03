@@ -19,7 +19,7 @@ class Module extends BaseModule {
 	 * @return \Symfony\Component\Routing\RouteCollection
 	 */
 	public function getRoutes() {
-		return $this->loadYamlRoutes(__DIR__ . '/resources/config/routes.yml');
+		return $this->loadSymfonyRoutes(__DIR__ . '/resources/config/routes.yml');
 	}
 	
 }

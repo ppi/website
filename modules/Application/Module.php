@@ -23,7 +23,7 @@ class Module extends AbstractModule
      */
     public function getConfig()
     {
-        return $this->loadSymfonyRoutes(__DIR__ . '/resources/config/config.yml');
+        return $this->loadConfig(__DIR__ . '/resources/config/config.yml');
     }
     
     public function getServiceConfig()
