@@ -32,30 +32,4 @@ class Index extends SharedController
         return $this->render('Application:index:downloads.html.php', compact('downloadItems'));
     }
 
-    public function communityAction()
-    {
-        return $this->render('Application:index:community.html.php');
-    }
-
-    public function newsletterSubmitAction()
-    {
-        $emailAddress = $this->post('email');
-        $name = $this->post('name');
-
-        if(empty($emailAddress) || empty($name) || !filter_var($emailAddress, FILTER_VALIDATE_EMAIL)) {
-           die(json_encode('E_INVALID')); 
-        }
-        
-        $ns = $this->getService('newsletter.helper');
-        
-        // Duplication check
-        if($ns->existsByEmail($emailAddress)) {
-            die(json_encode('E_DUPLICATE'));
-        }
-        
-        $ns->create($name, $emailAddress);
-        
-        die(json_encode('OK'));
-    }
-
 }
