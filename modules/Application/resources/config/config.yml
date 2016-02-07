@@ -22,7 +22,14 @@ downloads:
     items:
         -
             id: 1
-            name: "PPI Skeleton App - GitHub Master"
-            url: "https://github.com/ppi/skeletonapp/archive/master.tar.gz"
-            version: "2.1"
-            date_released: "2016-01-13"
+            name: "Skeleton Application - Version 2.1.1"
+            url: "https://github.com/ppi/skeletonapp/archive/2.1.1.tar.gz"
+            version: "2.1.1"
+            date_released: "2015-02-07"
+
+        -
+            id: 2
+            name: "Framework - Version 2.1.1"
+            url: "https://github.com/ppi/framework/archive/2.1.1.tar.gz"
+            version: "2.1.1"
+            date_released: "2015-02-07"
