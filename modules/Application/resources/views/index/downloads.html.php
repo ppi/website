@@ -25,7 +25,7 @@
                         <p><?= $view->escape($downloadItem->getDesc()); ?></p>
 
                         <p>
-                            <a class="link-arrow" href="http://docs.ppi.io/latest/setup/install.html">
+                            <a class="link-arrow" href="http://docs.ppi.io/latest/book/installation.html">
                                 Read the full installation instructions</a>
                         </p>
 
