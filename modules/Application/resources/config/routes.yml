@@ -55,3 +55,7 @@ Facebook:
 Twitter:
     pattern: /twitter
     defaults: { _controller: "Application:Links:twitter"}
+
+Chat:
+    pattern: /chat
+    defaults: { _controller: "Application:Links:chat"}

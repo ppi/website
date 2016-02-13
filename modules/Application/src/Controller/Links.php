@@ -19,4 +19,10 @@ class Links extends SharedController
     {
         return $this->redirect('http://www.twitter.com/ppi_framework');
     }
+
+    public function chatAction()
+    {
+        return $this->redirect('https://gitter.im/ppi/framework');
+    }
+
 }
