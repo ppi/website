@@ -65,7 +65,7 @@
                 <p class="desc">Each feature can pick from a variety of supported templating engines</p>
             </li>
             <li>
-                <a class="title" href="http://docs.ppi.io/latest/book/getting_started.html" title="">Databases</a>
+                <a class="title" href="http://docs.ppi.io/latest/book/datasource.html" title="">Databases</a>
 
                 <p class="desc">Our powerful datasource component easily loads up popular DB libraries.</p>
             </li>

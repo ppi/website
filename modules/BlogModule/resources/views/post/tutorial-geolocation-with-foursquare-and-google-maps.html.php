@@ -113,14 +113,3 @@
 To summarise, we have learned how to create and use the modules component. We also learned how to use services in order to encapsulate API code, and how to use them in our Controllers. We have learned how to render views, specify custom css/js templates within them and extend base views. We also learned how to integrate Javascript and run Ajax calls to a controller to get JSON responses back.
 Hopefully, this article clarifies the development workflow of the PPI framework, and gives you a starting point to improve your development skills in a structured, maintainable and simple way.
 </p>
-
-<h4>References</h4>
-<p>Here is a series of links that contain information supplementary to what we covered above:</p>
-<ul>
-    <li>Skeleton app: <a href="http://www.ppi.io/docs/2.0/getting_started.html" target="_blank" title="http://www.ppi.io/docs/2.0/getting_started.html">http://www.ppi.io/docs/2.0/getting-started.html</a> </li>
-    <li>Modules: <a href="http://www.ppi.io/docs/2.0/modules.html" target="_blank" title="http://www.ppi.io/docs/2.0/modules.html">http://www.ppi.io/docs/2.0/modules.html</a> </li>
-    <li>Routing: <a href="http://www.ppi.io/docs/2.0/routing.html" target="_blank" title="http://www.ppi.io/docs/2.0/routing.html">http://www.ppi.io/docs/2.0/routing.html</a> </li>
-    <li>Controllers: <a href="http://www.ppi.io/docs/2.0/controllers.html" target="_blank" title="http://www.ppi.io/docs/2.0/controllers.html">http://www.ppi.io/docs/2.0/controllers.html</a> </li>
-    <li>Templating: <a href="http://www.ppi.io/docs/2.0/templating.html" target="_blank" title="http://www.ppi.io/docs/2.0/templating.html">http://www.ppi.io/docs/2.0/templating.html</a> </li>
-<!--Services: -->
-</ul>
