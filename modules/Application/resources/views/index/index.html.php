@@ -73,7 +73,7 @@
             <li>
                 <a class="title" href="<?= $view['router']->generate('Community'); ?>" title="">Found issues?</a>
 
-                <p class="desc">Let us know on <a href="https://gitter.im/ppi/framework" target="_blank">GitHub</a></p>
+                <p class="desc">Let us know on <a href="https://github.com/ppi" target="_blank">GitHub</a></p>
             </li>
 
             <li>
